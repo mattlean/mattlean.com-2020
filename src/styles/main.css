@@ -63,8 +63,31 @@ button:hover {
   cursor: pointer;
 }
 
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+form input, form textarea {
+  display: block;
+}
+
 hr {
   border: 2px solid #fff;
+}
+
+figure > section {
+  display: flex;
+  justify-content: center;
+}
+
+figure img {
+  margin: 10px;
+}
+
+figcaption {
+  text-align: center;
+  font-style: italic;
 }
 
 table, th, td {
