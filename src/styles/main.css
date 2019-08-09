@@ -149,6 +149,19 @@ th, td {
 }
 
 /* Home */
+/* Load In */
+@keyframes loadIn {
+  from {
+    margin-left: 50px;
+    opacity: 0;
+  }
+
+  to {
+    margin-left: 0;
+    opacity: 1;
+  }
+}
+
 #home > #main-nav hr, #home > #main-nav > div > a, #home > #main-footer > hr {
   display: none;
 }
@@ -166,9 +179,31 @@ th, td {
 }
 
 #home > main > .container > p {
+  margin-left: 80px;
   margin-block-start: 0;
   margin-block-end: 0;
   font-size: 60px;
+  opacity: 0;
+}
+
+@keyframes loadIn {
+  from {
+    margin-left: 80px;
+    opacity: 0;
+  }
+
+  to {
+    margin-left: 0;
+    opacity: 1;
+  }
+}
+
+#home > main > .container > p:first-child {
+  animation: loadIn 1s ease-out forwards;
+}
+
+#home > main > .container > p:last-child {
+  animation: loadIn 1s ease-out 2s forwards;
 }
 
 /* Blog */
