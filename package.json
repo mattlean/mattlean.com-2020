@@ -1,0 +1,35 @@
+{
+  "name": "mattlean.com-2020",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "https://github.com/mattlean/mattlean.com-2020.git",
+  "author": "Matthew Lean <matt@mattlean.com>",
+  "private": true,
+  "scripts": {
+    "build": "webpack --config webpack/config.js --env.type production",
+    "start": "webpack-dev-server --config webpack/config.js --env.type=development",
+    "format": "prettier"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.3",
+    "@babel/preset-env": "^7.10.3",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^3.6.0",
+    "eslint": "^7.3.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "html-webpack-plugin": "^4.3.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.14.1",
+    "prettier": "^2.0.5",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^4.2.2"
+  }
+}
