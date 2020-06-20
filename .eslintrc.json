@@ -1,9 +1,16 @@
 {
   "env": {
+    "browser": true,
+    "node": true,
     "es6": true
   },
-  "extends": ["plugin:prettier/recommended"],
+  "extends": [
+    "plugin:prettier/recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended"
+  ],
   "parserOptions": {
+    "ecmaVersion": 2018,
     "sourceType": "module"
   }
 }

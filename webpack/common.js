@@ -8,19 +8,20 @@ const PATHS = {
 
 module.exports = merge([
   {
-    entry: './src/index.js',
+    entry: './src/index.jsx',
 
     output: {
       filename: 'main.js',
       path: path.resolve(__dirname, '../build'),
     },
+
+    resolve: {
+      extensions: ['.js', '.jsx'],
+    },
   },
 
   compileJS({
     include: PATHS.src,
-    options: {
-      presets: ['@babel/preset-env'],
-    },
   }),
 
   injectStyles({

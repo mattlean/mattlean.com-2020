@@ -33,7 +33,7 @@ exports.compileJS = ({ exclude, include, options } = {}) => ({
   module: {
     rules: [
       {
-        test: /\.m?js$/,
+        test: /\.m?jsx?$/,
         exclude,
         include,
         use: {
