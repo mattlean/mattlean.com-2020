@@ -4,7 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 /**
  * Build styles
  */
-exports.buildStyles = ({cssLoaderOptions, sassLoaderOptions} = {}) => ({
+exports.buildStyles = ({ cssLoaderOptions, sassLoaderOptions } = {}) => ({
   plugins: [new MiniCssExtractPlugin()],
   module: {
     rules: [
@@ -14,22 +14,22 @@ exports.buildStyles = ({cssLoaderOptions, sassLoaderOptions} = {}) => ({
           MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
-            options: cssLoaderOptions
+            options: cssLoaderOptions,
           },
           {
             loader: 'sass-loader',
-            options: sassLoaderOptions
-          }
-        ]
-      }
-    ]
-  }
+            options: sassLoaderOptions,
+          },
+        ],
+      },
+    ],
+  },
 })
 
 /**
  * Compile JavaScript with Babel
  */
-exports.compileJS = ({exclude, include, options} = {}) => ({
+exports.compileJS = ({ exclude, include, options } = {}) => ({
   module: {
     rules: [
       {
@@ -38,10 +38,10 @@ exports.compileJS = ({exclude, include, options} = {}) => ({
         include,
         use: {
           loader: 'babel-loader',
-          options
-        }
-      }
-    ]
+          options,
+        },
+      },
+    ],
   },
 })
 
@@ -51,7 +51,11 @@ exports.compileJS = ({exclude, include, options} = {}) => ({
  * 2. Interprets @import and url() like import/require() and resolves them with css-loader
  * 3. Injects CSS into DOM with style-loader
  */
-exports.injectStyles = ({cssLoaderOptions, sassLoaderOptions, styleLoaderOptions} = {}) => ({
+exports.injectStyles = ({
+  cssLoaderOptions,
+  sassLoaderOptions,
+  styleLoaderOptions,
+} = {}) => ({
   module: {
     rules: [
       {
@@ -59,20 +63,20 @@ exports.injectStyles = ({cssLoaderOptions, sassLoaderOptions, styleLoaderOptions
         use: [
           {
             loader: 'style-loader',
-            options: styleLoaderOptions
+            options: styleLoaderOptions,
           },
           {
             loader: 'css-loader',
-            options: cssLoaderOptions
+            options: cssLoaderOptions,
           },
           {
             loader: 'sass-loader',
-            options: sassLoaderOptions
-          }
+            options: sassLoaderOptions,
+          },
         ],
-      }
-    ]
-  }
+      },
+    ],
+  },
 })
 
 /**
@@ -80,16 +84,13 @@ exports.injectStyles = ({cssLoaderOptions, sassLoaderOptions, styleLoaderOptions
  */
 exports.setupDevServer = (options) => ({
   devServer: {
-    ...options
-  }
+    ...options,
+  },
 })
-
 
 /**
  * Setup HTML with html-webpack-plugin
  */
 exports.setupHTML = (options) => ({
-  plugins: [
-    new HtmlWebpackPlugin({...options})
-  ]
+  plugins: [new HtmlWebpackPlugin({ ...options })],
 })

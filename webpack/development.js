@@ -5,11 +5,11 @@ console.log('🤖 INITIATING WEBPACK DEVELOPMENT BUILD 🤖')
 
 module.exports = merge([
   {
-    mode: 'development'
+    mode: 'development',
   },
 
   setupDevServer({
     host: process.env.HOST,
-    port: process.env.PORT
-  })
+    port: process.env.PORT,
+  }),
 ])

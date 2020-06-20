@@ -1,9 +1,9 @@
 const merge = require('webpack-merge')
 const path = require('path')
-const { injectStyles, setupHTML } = require('./parts')
+const { compileJS, injectStyles, setupHTML } = require('./parts')
 
 const PATHS = {
-  src: path.join(__dirname, '../src')
+  src: path.join(__dirname, '../src'),
 }
 
 module.exports = merge([
@@ -12,21 +12,21 @@ module.exports = merge([
 
     output: {
       filename: 'main.js',
-      path: path.resolve(__dirname, '../build')
-    }
+      path: path.resolve(__dirname, '../build'),
+    },
   },
 
   compileJS({
     include: PATHS.src,
     options: {
-      presets: ['@babel/preset-env']
-    }
+      presets: ['@babel/preset-env'],
+    },
   }),
 
   injectStyles({
     cssLoaderOptions: { sourceMap: true },
-    sassLoaderOptions: { sourceMap: true }
+    sassLoaderOptions: { sourceMap: true },
   }),
-  
-  setupHTML({title: 'Webpack demo'})
+
+  setupHTML({ title: 'Webpack demo' }),
 ])

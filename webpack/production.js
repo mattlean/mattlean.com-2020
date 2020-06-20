@@ -5,8 +5,8 @@ console.log('🎁 INITIATING WEBPACK PRODUCTION BUILD 🎁')
 
 module.exports = merge([
   {
-    mode: 'production'
+    mode: 'production',
   },
 
-  buildStyles()
+  buildStyles(),
 ])

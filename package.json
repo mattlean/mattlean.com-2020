@@ -8,7 +8,7 @@
   "scripts": {
     "build": "webpack --config webpack/config.js --env.type production",
     "start": "webpack-dev-server --config webpack/config.js --env.type=development",
-    "format": "prettier"
+    "format": "prettier --write ."
   },
   "dependencies": {
     "express": "^4.17.1"
