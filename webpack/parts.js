@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 /**
  * Build styles
@@ -27,6 +28,13 @@ exports.buildStyles = ({ cssLoaderOptions, sassLoaderOptions } = {}) => ({
 })
 
 /**
+ * Delete the build folder if it exists
+ */
+exports.cleanBuild = () => ({
+  plugins: [new CleanWebpackPlugin()],
+})
+
+/**
  * Compile JavaScript with Babel
  */
 exports.compileJS = ({ exclude, include, options } = {}) => ({
@@ -43,6 +51,13 @@ exports.compileJS = ({ exclude, include, options } = {}) => ({
       },
     ],
   },
+})
+
+/**
+ * Generate source maps for JavaScript
+ */
+exports.genSourceMaps = (type) => ({
+  devtool: type,
 })
 
 /**

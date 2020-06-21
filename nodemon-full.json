@@ -1,0 +1,3 @@
+{
+  "watch": ["src", "webpack", "nodemon-full.json"]
+}

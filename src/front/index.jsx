@@ -6,6 +6,8 @@ const root = document.createElement('div')
 root.setAttribute('id', 'root')
 document.body.appendChild(root)
 
+console.log('hey!!')
+
 const Counter = () => {
   const [count, setCount] = useState(0)
 

@@ -6,12 +6,18 @@
   "author": "Matthew Lean <matt@mattlean.com>",
   "private": true,
   "scripts": {
-    "build": "webpack --config webpack/config.js --env.type production",
-    "start": "webpack-dev-server --config webpack/config.js --env.type=development",
-    "format": "prettier --write ."
+    "back:dev": "nodemon --nodemon-back.json --watch src/back --exec \"yarn back:start\"",
+    "back:start": "NODE_ENV=development node src/back",
+    "back:start:production": "NODE_ENV=production node src/back",
+    "front:build": "webpack --config webpack/front/config.js --env.type development",
+    "front:build:production": "webpack --config webpack/front/config.js --env.type production",
+    "front:dev": "webpack-dev-server --config webpack/front/config.js --env.type=development",
+    "format": "prettier --write .",
+    "full:dev": "nodemon --config nodemon-full.json --exec \"yarn front:build && yarn back:start\""
   },
   "dependencies": {
     "express": "^4.17.1",
+    "morgan": "^1.10.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
@@ -20,6 +26,7 @@
     "@babel/preset-env": "^7.10.3",
     "@babel/preset-react": "^7.10.1",
     "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.6.0",
     "eslint": "^7.3.0",
     "eslint-config-prettier": "^6.11.0",
@@ -29,6 +36,7 @@
     "html-webpack-plugin": "^4.3.0",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.14.1",
+    "nodemon": "^2.0.4",
     "prettier": "^2.0.5",
     "sass-loader": "^8.0.2",
     "style-loader": "^1.2.1",
