@@ -1,19 +1,15 @@
 const merge = require('webpack-merge')
 const path = require('path')
-const { compileJS, injectStyles, setupHTML } = require('../parts')
-
-const PATHS = {
-  src: path.join(__dirname, '../../src/front'),
-  build: path.join(__dirname, '../../build/front'),
-}
+const { cleanBuild, injectStyles, setupHTML } = require('../parts')
+const { FRONT } = require('../PATHS')
 
 module.exports = merge([
   {
-    entry: `${PATHS.src}/index.jsx`,
+    entry: `${FRONT.SRC}/index.jsx`,
 
     output: {
       filename: 'main.js',
-      path: PATHS.build,
+      path: FRONT.BUILD,
     },
 
     resolve: {
@@ -21,9 +17,7 @@ module.exports = merge([
     },
   },
 
-  compileJS({
-    include: PATHS.src,
-  }),
+  cleanBuild(),
 
   injectStyles({
     cssLoaderOptions: { sourceMap: true },

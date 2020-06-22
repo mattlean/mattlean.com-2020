@@ -6,13 +6,16 @@
   "author": "Matthew Lean <matt@mattlean.com>",
   "private": true,
   "scripts": {
+    "back:build": "webpack --config webpack/back/config.js --env.type development",
+    "back:build:production": "webpack --config webpack/back/config.js --env.type production",
     "back:dev": "nodemon --nodemon-back.json --watch src/back --exec \"yarn back:start\"",
     "back:start": "NODE_ENV=development node src/back",
-    "back:start:production": "NODE_ENV=production node src/back",
+    "back:start:production": "NODE_ENV=production node build/back/server",
     "front:build": "webpack --config webpack/front/config.js --env.type development",
     "front:build:production": "webpack --config webpack/front/config.js --env.type production",
     "front:dev": "webpack-dev-server --config webpack/front/config.js --env.type=development",
     "format": "prettier --write .",
+    "full:build:production": "yarn front:build:production && yarn back:build:production",
     "full:dev": "nodemon --config nodemon-full.json --exec \"yarn front:build && yarn back:start\""
   },
   "dependencies": {
@@ -43,6 +46,7 @@
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0",
-    "webpack-merge": "^4.2.2"
+    "webpack-merge": "^4.2.2",
+    "webpack-node-externals": "^1.7.2"
   }
 }

@@ -1,15 +1,27 @@
 const merge = require('webpack-merge')
-const { buildStyles, cleanBuild, genSourceMaps } = require('../parts')
+const { buildStyles, compileJS, genSourceMaps, setMode } = require('../parts')
+const { FRONT } = require('../PATHS')
 
 // eslint-disable-next-line no-console
-console.log('🚚🎁 INITIATING WEBPACK PRODUCTION BUILD 🎁🚚')
+console.log('🚚🤡🎁 STARTING FRONTEND PRODUCTION BUILD PROCESS 🎁🤡🚚')
 
 module.exports = merge([
-  {
-    mode: 'production',
-  },
+  setMode('production'),
 
-  cleanBuild(),
+  compileJS({
+    include: FRONT.SRC,
+    options: {
+      presets: [
+        [
+          '@babel/preset-env',
+          {
+            modules: false,
+          },
+        ],
+        '@babel/preset-react',
+      ],
+    },
+  }),
 
   buildStyles(),
 

@@ -1,15 +1,24 @@
 const merge = require('webpack-merge')
-const { cleanBuild, genSourceMaps, setupDevServer } = require('../parts')
+const {
+  compileJS,
+  genSourceMaps,
+  setMode,
+  setupDevServer,
+} = require('../parts')
+const { FRONT } = require('../PATHS')
 
 // eslint-disable-next-line no-console
-console.log('🤖📦 INITIATING WEBPACK DEVELOPMENT BUILD 📦🤖')
+console.log('🤖🤡📦 STARTING FRONTEND DEVELOPMENT BUILD PROCESS 📦🤡🤖')
 
 module.exports = merge([
-  {
-    mode: 'development',
-  },
+  setMode('development'),
 
-  cleanBuild(),
+  compileJS({
+    include: FRONT.SRC,
+    options: {
+      presets: [['@babel/preset-react', { development: true }]],
+    },
+  }),
 
   setupDevServer({
     host: process.env.HOST,

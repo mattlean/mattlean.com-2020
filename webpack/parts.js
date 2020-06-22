@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const nodeExternals = require('webpack-node-externals')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 /**
@@ -61,6 +62,11 @@ exports.genSourceMaps = (type) => ({
 })
 
 /**
+ * Do not include "node_modules" directory in bundle
+ */
+exports.ignoreNodeModules = () => ({ externals: [nodeExternals()] })
+
+/**
  * Inject styles.
  * 1. Compiles Sass to CSS with sass-loader
  * 2. Interprets @import and url() like import/require() and resolves them with css-loader
@@ -92,6 +98,13 @@ exports.injectStyles = ({
       },
     ],
   },
+})
+
+/**
+ * Set mode to determine which webpack optimizations to use
+ */
+exports.setMode = (mode) => ({
+  mode,
 })
 
 /**
