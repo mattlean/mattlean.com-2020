@@ -1,7 +1,8 @@
-const { Router } = require('express')
+import { Router } from 'express'
+import createTemplate from '../render'
 
 const router = Router()
 
-router.get('/', (req, res) => res.send('Hello, world!'))
+router.get('/', (req, res) => res.send(createTemplate()))
 
-module.exports = router
+export default router

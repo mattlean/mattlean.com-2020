@@ -6,6 +6,12 @@ const { FRONT } = require('../PATHS')
 console.log('🚚🤡🎁 STARTING FRONTEND PRODUCTION BUILD PROCESS 🎁🤡🚚')
 
 module.exports = merge([
+  {
+    output: {
+      path: FRONT.BUILD_PROD,
+    },
+  },
+
   setMode('production'),
 
   compileJS({

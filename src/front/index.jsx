@@ -1,31 +1,6 @@
 import React, { useState } from 'react'
-import ReactDOM from 'react-dom'
+import { hydrate } from 'react-dom'
+import App from './App'
 import './style.scss'
 
-const root = document.createElement('div')
-root.setAttribute('id', 'root')
-document.body.appendChild(root)
-
-console.log('hey!!')
-
-const Counter = () => {
-  const [count, setCount] = useState(0)
-
-  return (
-    <div>
-      <p>{count}</p>
-      <button onClick={() => setCount(count - 1)}>-</button>
-      <button onClick={() => setCount(count + 1)}>+</button>
-    </div>
-  )
-}
-
-ReactDOM.render(
-  <>
-    <h1>Lorem Ipsum</h1>
-    <Counter />
-  </>,
-  root
-)
-
-console.log('Hello, world!')
+hydrate(<App />, document.getElementById('root'))

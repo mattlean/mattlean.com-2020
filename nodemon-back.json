@@ -1,3 +1,0 @@
-{
-  "watch": ["src/back", "nodemon-back.json", "webpack/back"]
-}

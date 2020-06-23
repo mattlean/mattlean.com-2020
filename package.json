@@ -8,15 +8,13 @@
   "scripts": {
     "back:build": "webpack --config webpack/back/config.js --env.type development",
     "back:build:production": "webpack --config webpack/back/config.js --env.type production",
-    "back:dev": "nodemon --nodemon-back.json --watch src/back --exec \"yarn back:start\"",
-    "back:start": "NODE_ENV=development node src/back",
-    "back:start:production": "NODE_ENV=production node build/back/server",
+    "back:start": "NODE_ENV=development node build/back/development/server",
+    "back:start:production": "NODE_ENV=production node build/back/production/server",
+    "build:production": "yarn front:build:production && yarn back:build:production",
+    "dev": "nodemon --exec \"yarn front:build && yarn back:build && yarn back:start\"",
     "front:build": "webpack --config webpack/front/config.js --env.type development",
     "front:build:production": "webpack --config webpack/front/config.js --env.type production",
-    "front:dev": "webpack-dev-server --config webpack/front/config.js --env.type=development",
-    "format": "prettier --write .",
-    "full:build:production": "yarn front:build:production && yarn back:build:production",
-    "full:dev": "nodemon --config nodemon-full.json --exec \"yarn front:build && yarn back:start\""
+    "format": "prettier --write ."
   },
   "dependencies": {
     "express": "^4.17.1",
@@ -36,6 +34,7 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.0",
     "eslint-plugin-react-hooks": "^4.0.4",
+    "html-loader": "^1.1.0",
     "html-webpack-plugin": "^4.3.0",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.14.1",

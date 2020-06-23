@@ -11,6 +11,12 @@ const { FRONT } = require('../PATHS')
 console.log('🤖🤡📦 STARTING FRONTEND DEVELOPMENT BUILD PROCESS 📦🤡🤖')
 
 module.exports = merge([
+  {
+    output: {
+      path: FRONT.BUILD_DEV,
+    },
+  },
+
   setMode('development'),
 
   compileJS({
@@ -18,11 +24,6 @@ module.exports = merge([
     options: {
       presets: [['@babel/preset-react', { development: true }]],
     },
-  }),
-
-  setupDevServer({
-    host: process.env.HOST,
-    port: process.env.PORT,
   }),
 
   genSourceMaps('cheap-module-eval-source-map'),

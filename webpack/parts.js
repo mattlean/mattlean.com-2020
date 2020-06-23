@@ -101,6 +101,21 @@ exports.injectStyles = ({
 })
 
 /**
+ * Load HTML file as string
+ */
+exports.loadHTMLAsString = (options) => ({
+  module: {
+    rules: [
+      {
+        test: /\.html$/i,
+        loader: 'html-loader',
+        options,
+      },
+    ],
+  },
+})
+
+/**
  * Set mode to determine which webpack optimizations to use
  */
 exports.setMode = (mode) => ({

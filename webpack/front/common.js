@@ -9,7 +9,6 @@ module.exports = merge([
 
     output: {
       filename: 'main.js',
-      path: FRONT.BUILD,
     },
 
     resolve: {
@@ -23,6 +22,4 @@ module.exports = merge([
     cssLoaderOptions: { sourceMap: true },
     sassLoaderOptions: { sourceMap: true },
   }),
-
-  setupHTML({ title: 'Webpack demo' }),
 ])
