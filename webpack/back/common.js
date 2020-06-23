@@ -1,6 +1,6 @@
 const merge = require('webpack-merge')
 const path = require('path')
-const { BACK } = require('../PATHS')
+const { BACK } = require('../../PATHS')
 const { cleanBuild, ignoreNodeModules, loadHTMLAsString } = require('../parts')
 
 module.exports = merge([

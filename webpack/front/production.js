@@ -1,6 +1,6 @@
 const merge = require('webpack-merge')
 const { buildStyles, compileJS, genSourceMaps, setMode } = require('../parts')
-const { FRONT } = require('../PATHS')
+const { FRONT } = require('../../PATHS')
 
 // eslint-disable-next-line no-console
 console.log('🚚🤡🎁 STARTING FRONTEND PRODUCTION BUILD PROCESS 🎁🤡🚚')

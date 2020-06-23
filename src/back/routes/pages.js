@@ -1,8 +1,8 @@
 import { Router } from 'express'
-import createTemplate from '../render'
+import createTemplateString from '../render'
 
 const router = Router()
 
-router.get('/', (req, res) => res.send(createTemplate()))
+router.get('/*', (req, res) => res.send(createTemplateString(req.url)))
 
 export default router

@@ -2,6 +2,7 @@ import express from 'express'
 import morgan from 'morgan'
 import path from 'path'
 import pages from './routes/pages'
+import { FRONT } from '../../PATHS'
 
 const PORT = process.env.PORT || 3000
 
@@ -12,16 +13,13 @@ if (process.env.NODE_ENV === 'development') {
   console.log('🤖🖥️🛫 INITIATING DEVELOPMENT SERVER 🛫🖥️🤖')
 
   app.use(morgan('dev'))
-  app.use(
-    '/',
-    express.static(path.join(__dirname, '../../build/front/development'))
-  )
+  app.use('/', express.static(FRONT.BUILD_DEV))
 } else if (process.env.NODE_ENV === 'production') {
   // eslint-disable-next-line no-console
   console.log('🌎🖥️🛫 INITIATING PRODUCTION SERVER 🛫🖥️🌎')
 
   app.use(morgan('common'))
-  express.static(path.join(__dirname, '../../build/front/production'))
+  express.static(FRONT.BUILD_PROD)
 } else {
   throw new Error('Server environment not set')
 }

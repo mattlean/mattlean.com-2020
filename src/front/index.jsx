@@ -1,6 +1,12 @@
 import React, { useState } from 'react'
+import { BrowserRouter } from 'react-router-dom'
 import { hydrate } from 'react-dom'
 import App from './App'
 import './style.scss'
 
-hydrate(<App />, document.getElementById('root'))
+hydrate(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
+  document.getElementById('root')
+)

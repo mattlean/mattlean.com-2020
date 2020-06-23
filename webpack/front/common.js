@@ -1,7 +1,7 @@
 const merge = require('webpack-merge')
 const path = require('path')
 const { cleanBuild, injectStyles, setupHTML } = require('../parts')
-const { FRONT } = require('../PATHS')
+const { FRONT } = require('../../PATHS')
 
 module.exports = merge([
   {

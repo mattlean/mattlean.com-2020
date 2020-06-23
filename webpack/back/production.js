@@ -1,5 +1,5 @@
 const merge = require('webpack-merge')
-const { BACK, SRC } = require('../paths')
+const { BACK, SRC } = require('../../PATHS')
 const { compileJS, genSourceMaps, setMode } = require('../parts')
 
 module.exports = merge([
