@@ -1,0 +1,28 @@
+@use 'visuals/colors' as colors;
+@use 'visuals/grid' as grid;
+@use 'visuals/typography' as typography;
+
+.main-nav {
+  align-items: flex-end;
+  display: flex;
+  height: grid.$row-height;
+  justify-content: space-between;
+  margin-bottom: typography.$body-text-line-height;
+}
+
+.main-nav > span > a {
+  color: colors.$grey-a;
+  letter-spacing: 0.1rem;
+  margin-left: 36px;
+  text-decoration: none;
+}
+
+.main-nav > span > a:hover,
+.main-nav > span > a:active,
+.main-nav > span > .main-nav-link-active {
+  text-decoration: underline;
+}
+
+.main-nav > span > a:visited {
+  color: colors.$grey-a;
+}

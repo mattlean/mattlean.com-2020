@@ -1,0 +1,51 @@
+@use 'colors' as colors;
+@use 'grid' as grid;
+@use 'typography' as typography;
+
+body {
+  font: typography.$body-text neue-haas-grotesk-text, Courier;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: neue-haas-grotesk-display, Courier;
+}
+
+p {
+  line-height: typography.$body-text-line-height;
+}
+
+.main-grid {
+  column-gap: typography.$body-text-line-height;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: grid.$row-height grid.$row-height grid.$row-height grid.$row-height grid.$row-height;
+  row-gap: typography.$body-text-line-height;
+}
+
+.cover {
+  grid-column-end: 5;
+  grid-column-start: 1;
+  grid-row-end: 4;
+  grid-row-start: 2;
+}
+
+.headline {
+  font-size: 100px;
+  font-weight: 600;
+}
+
+.large-text {
+  color: colors.$grey-a;
+  font-size: typography.$large-text;
+  line-height: typography.$large-text-line-height;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1161px;
+}
