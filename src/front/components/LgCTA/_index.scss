@@ -1,0 +1,9 @@
+@use 'visuals/typography' as typography;
+
+.lg-cta {
+  align-self: start;
+  font: 700 typography.$lg-cta typography.$display-font-family;
+  grid-column: 1 / 3;
+  grid-row: 4 / 5;
+  text-decoration: none;
+}

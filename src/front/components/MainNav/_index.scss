@@ -1,4 +1,4 @@
-@use 'visuals/colors' as colors;
+@use 'visuals/color' as color;
 @use 'visuals/grid' as grid;
 @use 'visuals/typography' as typography;
 
@@ -7,11 +7,11 @@
   display: flex;
   height: grid.$row-height;
   justify-content: space-between;
-  margin-bottom: typography.$body-text-line-height;
+  margin-bottom: typography.$body-txt-line-height;
 }
 
 .main-nav > span > a {
-  color: colors.$grey-a;
+  color: color.$grey-a;
   letter-spacing: 0.1rem;
   margin-left: 36px;
   text-decoration: none;
@@ -24,5 +24,5 @@
 }
 
 .main-nav > span > a:visited {
-  color: colors.$grey-a;
+  color: color.$grey-a;
 }

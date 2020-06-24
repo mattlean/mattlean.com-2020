@@ -1,9 +1,9 @@
-@use 'colors' as colors;
+@use 'color' as color;
 @use 'grid' as grid;
 @use 'typography' as typography;
 
 body {
-  font: typography.$body-text neue-haas-grotesk-text, Courier;
+  font: typography.$body-txt typography.$txt-font-family, Courier;
 }
 
 h1,
@@ -12,37 +12,28 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: neue-haas-grotesk-display, Courier;
+  font-family: typography.$display-font-family, Courier;
 }
 
 p {
-  line-height: typography.$body-text-line-height;
+  line-height: typography.$body-txt-line-height;
+}
+
+a {
+  color: color.$k;
 }
 
 .main-grid {
-  column-gap: typography.$body-text-line-height;
+  column-gap: typography.$body-txt-line-height;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: grid.$row-height grid.$row-height grid.$row-height grid.$row-height grid.$row-height;
-  row-gap: typography.$body-text-line-height;
+  row-gap: typography.$body-txt-line-height;
 }
 
 .cover {
-  grid-column-end: 5;
-  grid-column-start: 1;
-  grid-row-end: 4;
-  grid-row-start: 2;
-}
-
-.headline {
-  font-size: 100px;
-  font-weight: 600;
-}
-
-.large-text {
-  color: colors.$grey-a;
-  font-size: typography.$large-text;
-  line-height: typography.$large-text-line-height;
+  grid-column: 1 / 5;
+  grid-row: 2 / 4;
 }
 
 .container {

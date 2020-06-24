@@ -1,0 +1,9 @@
+@use 'typography' as typography;
+
+.margin-top-lg-txt {
+  margin-top: typography.$lg-txt;
+}
+
+.margin-bot-lg-txt {
+  margin-bottom: typography.$lg-txt;
+}

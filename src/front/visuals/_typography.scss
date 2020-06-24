@@ -1,5 +1,23 @@
-$body-text: 18px;
-$body-text-line-height: 27px;
+@use 'color' as color;
 
-$large-text: 30px;
-$large-text-line-height: 45px;
+$body-txt: 18px;
+$body-txt-line-height: 27px;
+
+$display-font-family: neue-haas-grotesk-display, Courier;
+$txt-font-family: neue-haas-grotesk-text, Courier;
+
+$lg-txt: 30px;
+$lg-txt-line-height: 45px;
+
+$lg-cta: 36px;
+
+.headline {
+  font-size: 100px;
+  font-weight: 600;
+}
+
+.lg-txt {
+  color: color.$grey-a;
+  font-size: $lg-txt;
+  line-height: $lg-txt-line-height;
+}
