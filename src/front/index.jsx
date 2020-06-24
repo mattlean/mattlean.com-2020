@@ -4,6 +4,8 @@ import { hydrate } from 'react-dom'
 import App from './App'
 import './style.scss'
 
+window.isInitLoad = true
+
 hydrate(
   <BrowserRouter>
     <App />

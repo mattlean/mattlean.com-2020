@@ -1,17 +1,26 @@
 import React from 'react'
-import { Route, Switch } from 'react-router-dom'
-import About from './About'
-import Landing from './Landing'
-import MainNav from './MainNav'
+import { AnimatePresence } from 'framer-motion'
+import { Route, Switch, useLocation } from 'react-router-dom'
+import About from './pages/About'
+import Landing from './pages/Landing'
+import MainNav from './components/MainNav'
+import RouteChange from './components/RouteChange'
 
-const App = () => (
-  <>
-    <MainNav />
-    <Switch>
-      <Route exact path="/" component={Landing} />
-      <Route path="/about" component={About} />
-    </Switch>
-  </>
-)
+const App = () => {
+  const location = useLocation()
+
+  return (
+    <>
+      <MainNav />
+      <RouteChange pathname={location.pathname} />
+      <AnimatePresence exitBeforeEnter>
+        <Switch location={location} key={location.pathname}>
+          <Route exact path="/" component={Landing} />
+          <Route path="/about" component={About} />
+        </Switch>
+      </AnimatePresence>
+    </>
+  )
+}
 
 export default App

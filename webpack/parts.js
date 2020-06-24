@@ -2,6 +2,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const nodeExternals = require('webpack-node-externals')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const { DefinePlugin } = require('webpack')
 
 /**
  * Build styles
@@ -114,6 +115,18 @@ exports.loadHTMLAsString = (options) => ({
     ],
   },
 })
+
+/**
+ * Set free variable
+ */
+exports.setFreeVariable = (key, value) => {
+  const env = {}
+  env[key] = JSON.stringify(value)
+
+  return {
+    plugins: [new DefinePlugin(env)],
+  }
+}
 
 /**
  * Set mode to determine which webpack optimizations to use

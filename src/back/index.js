@@ -1,6 +1,7 @@
 import express from 'express'
 import morgan from 'morgan'
 import pages from './routes/pages'
+import ServerErr from './util/ServerErr'
 import { FRONT } from '../../PATHS'
 
 let PORT = process.env.PORT
@@ -20,13 +21,13 @@ if (process.env.NODE_ENV === 'development') {
   console.log('🤖🛫 INITIATING PRODUCTION SERVER 🛫🤖')
 
   if (!process.env.PORT) {
-    throw new Error('')
+    throw new ServerErr('SE002')
   }
 
   app.use(morgan('common'))
   app.use('/', express.static(FRONT.BUILD_PROD))
 } else {
-  throw new Error('Server environment not set')
+  throw new ServerErr('SE001')
 }
 
 app.use('/', pages)

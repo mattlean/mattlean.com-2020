@@ -1,5 +1,5 @@
 const merge = require('webpack-merge')
-const { cleanBuild, injectStyles } = require('../parts')
+const { cleanBuild, injectStyles, setFreeVariable } = require('../parts')
 const { FRONT } = require('../../PATHS')
 
 module.exports = merge([
@@ -21,4 +21,6 @@ module.exports = merge([
     cssLoaderOptions: { sourceMap: true },
     sassLoaderOptions: { sourceMap: true },
   }),
+
+  setFreeVariable('__isServer__', false),
 ])

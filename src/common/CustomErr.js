@@ -1,6 +1,11 @@
 class CustomErr extends Error {
-  constructor(code, msg) {
-    super(msg)
+  /**
+   * Creates a new CustomErr instance
+   * @param {string} code Code corresponding to error
+   * @param {string} message Error message
+   */
+  constructor(code, message) {
+    super(message)
     this.code = code
   }
 }

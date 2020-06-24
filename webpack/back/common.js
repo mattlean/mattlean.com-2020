@@ -1,6 +1,11 @@
 const merge = require('webpack-merge')
 const { BACK } = require('../../PATHS')
-const { cleanBuild, ignoreNodeModules, loadHTMLAsString } = require('../parts')
+const {
+  cleanBuild,
+  ignoreNodeModules,
+  loadHTMLAsString,
+  setFreeVariable,
+} = require('../parts')
 
 module.exports = merge([
   {
@@ -26,4 +31,6 @@ module.exports = merge([
   ignoreNodeModules(),
 
   loadHTMLAsString({ attributes: false }),
+
+  setFreeVariable('__isServer__', true),
 ])

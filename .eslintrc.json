@@ -10,6 +10,9 @@
     "plugin:react/recommended",
     "plugin:react-hooks/recommended"
   ],
+  "globals": {
+    "__isServer__": "readonly"
+  },
   "parserOptions": {
     "ecmaVersion": 2018,
     "sourceType": "module"
