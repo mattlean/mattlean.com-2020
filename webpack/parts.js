@@ -107,7 +107,7 @@ exports.loadHTMLAsString = (options) => ({
   module: {
     rules: [
       {
-        test: /\.html$/i,
+        test: /\.(ejs|html)$/i,
         loader: 'html-loader',
         options,
       },

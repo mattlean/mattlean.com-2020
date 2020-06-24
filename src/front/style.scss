@@ -1,6 +1,28 @@
-$color: rebeccaPurple;
+$color: #fff;
 
 body {
-  background-color: rebeccaPurple;
-  color: #fff;
+  font-family: neue-haas-grotesk-display, sans-serif;
+}
+
+h1 {
+  font-weight: 600;
+}
+
+.headline {
+  font-size: 100px;
+}
+
+.large-text {
+  color: #555;
+  font-size: 30px;
+}
+
+.container {
+  width: 1161px;
+}
+
+.test {
+  background-color: #00f;
+  height: 150px;
+  width: 150px;
 }

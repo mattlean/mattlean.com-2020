@@ -2,6 +2,9 @@ const merge = require('webpack-merge')
 const { BACK, SRC } = require('../../PATHS')
 const { compileJS, genSourceMaps, setMode } = require('../parts')
 
+// eslint-disable-next-line no-console
+console.log('🤖🎁 STARTING BACKEND PRODUCTION BUILD PROCESS 🎁🤖')
+
 module.exports = merge([
   {
     output: {

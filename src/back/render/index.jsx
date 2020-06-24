@@ -1,12 +1,13 @@
+import ejs from 'ejs'
 import React from 'react'
 import { renderToString } from 'react-dom/server'
 import { StaticRouter } from 'react-router-dom'
 import App from '../../front/App'
-import template from '../../front/template.html'
+import template from '../../front/template.ejs'
 
 /**
  * Create template string from template and App React component
- * @param {*} location Current URL
+ * @param {string} location Current URL
  * @param {Object} [context={}] Information about a specific route render
  */
 const createTemplateString = (location, context = {}) => {
@@ -15,10 +16,8 @@ const createTemplateString = (location, context = {}) => {
       <App />
     </StaticRouter>
   )
-  return template.replace(
-    '<div id="root"></div>',
-    `<div id="root">${app}</div>`
-  )
+
+  return ejs.render(template, { app, NODE_ENV: process.env.NODE_ENV })
 }
 
 export default createTemplateString

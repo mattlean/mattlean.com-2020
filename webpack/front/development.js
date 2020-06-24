@@ -1,14 +1,9 @@
 const merge = require('webpack-merge')
-const {
-  compileJS,
-  genSourceMaps,
-  setMode,
-  setupDevServer,
-} = require('../parts')
+const { compileJS, genSourceMaps, setMode } = require('../parts')
 const { FRONT } = require('../../PATHS')
 
 // eslint-disable-next-line no-console
-console.log('🤖🤡📦 STARTING FRONTEND DEVELOPMENT BUILD PROCESS 📦🤡🤖')
+console.log('🤡📦 STARTING FRONTEND DEVELOPMENT BUILD PROCESS 📦🤡')
 
 module.exports = merge([
   {
