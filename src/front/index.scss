@@ -1,7 +1,7 @@
 @use 'visuals/reset';
-@use 'visuals/spacing';
 @use 'visuals/style';
 
 /* Components */
-@use 'components/LgCTA';
+@use 'pages/Landing';
+@use 'components/CTA';
 @use 'components/MainNav';

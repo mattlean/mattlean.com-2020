@@ -1,0 +1,15 @@
+@use 'visuals/typography' as typography;
+
+%cta {
+  text-decoration: none;
+}
+
+.cta-lg {
+  @extend %cta;
+  font: typography.$bold typography.$cta-lg typography.$display-font-family;
+}
+
+.cta-sm {
+  @extend %cta;
+  font: typography.$bold typography.$body-txt typography.$display-font-family;
+}

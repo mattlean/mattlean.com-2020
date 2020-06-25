@@ -6,18 +6,29 @@ $body-txt-line-height: 27px;
 $display-font-family: neue-haas-grotesk-display, Courier;
 $txt-font-family: neue-haas-grotesk-text, Courier;
 
-$lg-txt: 30px;
-$lg-txt-line-height: 45px;
+$medium: 600;
+$bold: 700;
 
-$lg-cta: 36px;
+$headline: 100px;
+
+$txt-lg: 30px;
+$txt-lg-line-height: 45px;
+
+$cta-lg: 36px;
 
 .headline {
-  font-size: 100px;
-  font-weight: 600;
+  font-size: $headline;
+  font-weight: $medium;
 }
 
-.lg-txt {
+.tracked-header {
+  font: $bold $txt-lg neue-haas-grotesk-display, Courier;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.txt-lg {
   color: color.$grey-a;
-  font-size: $lg-txt;
-  line-height: $lg-txt-line-height;
+  font-size: $txt-lg;
+  line-height: $txt-lg-line-height;
 }

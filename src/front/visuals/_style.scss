@@ -1,9 +1,9 @@
 @use 'color' as color;
-@use 'grid' as grid;
 @use 'typography' as typography;
 
 body {
   font: typography.$body-txt typography.$txt-font-family, Courier;
+  text-rendering: optimizeLegibility;
 }
 
 h1,
@@ -23,20 +23,11 @@ a {
   color: color.$k;
 }
 
-.main-grid {
-  column-gap: typography.$body-txt-line-height;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: grid.$row-height grid.$row-height grid.$row-height grid.$row-height grid.$row-height;
-  row-gap: typography.$body-txt-line-height;
-}
-
-.cover {
-  grid-column: 1 / 5;
-  grid-row: 2 / 4;
-}
-
 .container {
   margin: 0 auto;
   max-width: 1161px;
+}
+
+.img-placeholder {
+  background-color: color.$grey-b;
 }

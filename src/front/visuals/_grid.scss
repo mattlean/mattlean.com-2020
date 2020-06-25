@@ -1,1 +1,14 @@
+@use 'typography' as typography;
+
 $row-height: 157px;
+
+@mixin grid-gap {
+  column-gap: typography.$body-txt-line-height;
+  display: grid;
+  row-gap: typography.$body-txt-line-height;
+}
+
+@mixin grid-main {
+  @include grid-gap;
+  grid-template-columns: repeat(6, 1fr);
+}
