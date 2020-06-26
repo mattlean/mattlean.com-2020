@@ -1,15 +1,31 @@
 @use 'visuals/typography' as typography;
 
 %cta {
+  font-family: typography.$display-font-family;
+  font-weight: typography.$bold;
   text-decoration: none;
+}
+
+%cta-arrow {
+  margin-left: 0.5em;
 }
 
 .cta-lg {
   @extend %cta;
-  font: typography.$bold typography.$cta-lg typography.$display-font-family;
+  font-size: typography.$cta-lg;
+
+  > svg {
+    @extend %cta-arrow;
+    width: 34.74px;
+  }
 }
 
 .cta-sm {
   @extend %cta;
-  font: typography.$bold typography.$txt-body typography.$display-font-family;
+  font-size: typography.$txt-body;
+
+  > svg {
+    @extend %cta-arrow;
+    width: 17.3px;
+  }
 }

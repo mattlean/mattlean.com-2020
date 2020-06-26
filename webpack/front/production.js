@@ -1,5 +1,11 @@
 const merge = require('webpack-merge')
-const { buildStyles, compileJS, genSourceMaps, setMode } = require('../parts')
+const {
+  buildStyles,
+  compileJS,
+  genSourceMaps,
+  loadImgs,
+  setMode,
+} = require('../parts')
 const { FRONT } = require('../../PATHS')
 
 // eslint-disable-next-line no-console
@@ -36,4 +42,6 @@ module.exports = merge([
   }),
 
   genSourceMaps('source-map'),
+
+  loadImgs(),
 ])

@@ -4,6 +4,7 @@ const {
   cleanBuild,
   ignoreNodeModules,
   loadHTMLAsString,
+  loadSVGs,
   setFreeVariable,
 } = require('../parts')
 
@@ -31,6 +32,8 @@ module.exports = merge([
   ignoreNodeModules(),
 
   loadHTMLAsString({ attributes: false }),
+
+  loadSVGs(),
 
   setFreeVariable('__isServer__', true),
 ])

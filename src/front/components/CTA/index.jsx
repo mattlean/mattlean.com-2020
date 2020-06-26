@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import Arrow from '../../assets/arrow.svg'
 
 /**
  * Call-To-Action
@@ -24,7 +25,7 @@ const CTA = ({ children, className, to, type }) => {
 
   return (
     <NavLink to={to} className={cn}>
-      {children}
+      {children} <Arrow />
     </NavLink>
   )
 }

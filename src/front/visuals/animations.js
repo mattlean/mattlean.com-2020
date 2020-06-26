@@ -5,7 +5,7 @@ export const pageVariants = {
   },
   out: {
     opacity: 0,
-    y: '100%',
+    y: '200px',
   },
 }
 

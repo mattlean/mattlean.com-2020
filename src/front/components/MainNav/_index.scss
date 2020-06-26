@@ -10,6 +10,10 @@
   margin-bottom: typography.$txt-body-line-height;
 }
 
+.main-nav > a > .logo {
+  height: 44px;
+}
+
 .main-nav > span > a {
   color: color.$grey-a;
   letter-spacing: 0.1rem;

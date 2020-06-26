@@ -120,6 +120,30 @@ exports.injectStyles = ({
 })
 
 /**
+ * Inline images for development environment.
+ * If images are too large, then emit images into output directory.
+ */
+exports.loadDevImgs = (
+  exclude,
+  include,
+  options = { limit: 15000, name: '[name].[ext]' }
+) => ({
+  module: {
+    rules: [
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        exclude,
+        include,
+        use: {
+          loader: 'url-loader',
+          options,
+        },
+      },
+    ],
+  },
+})
+
+/**
  * Load HTML file as string
  */
 exports.loadHTMLAsString = (options) => ({
@@ -129,6 +153,42 @@ exports.loadHTMLAsString = (options) => ({
         test: /\.(ejs|html)$/i,
         loader: 'html-loader',
         options,
+      },
+    ],
+  },
+})
+
+/**
+ * Emit images into output directory.
+ */
+exports.loadImgs = (exclude, include, options = { name: '[name].[ext]' }) => ({
+  module: {
+    rules: [
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        exclude,
+        include,
+        use: {
+          loader: 'file-loader',
+          options,
+        },
+      },
+    ],
+  },
+})
+
+/**
+ * Load SVGs as inline SVGs.
+ */
+exports.loadSVGs = (options) => ({
+  module: {
+    rules: [
+      {
+        test: /\.svg$/,
+        use: {
+          loader: '@svgr/webpack',
+          options,
+        },
       },
     ],
   },
