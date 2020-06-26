@@ -1,5 +1,5 @@
 const merge = require('webpack-merge')
-const { compileJS, genSourceMaps, setMode } = require('../parts')
+const { compileJS, genSourceMaps, injectStyles, setMode } = require('../parts')
 const { FRONT } = require('../../PATHS')
 
 // eslint-disable-next-line no-console
@@ -22,4 +22,10 @@ module.exports = merge([
   }),
 
   genSourceMaps('cheap-module-eval-source-map'),
+
+  injectStyles({
+    cssLoaderOptions: { sourceMap: true },
+    postCSSLoaderOptions: { config: { path: 'webpack' }, sourceMap: true },
+    sassLoaderOptions: { sourceMap: true },
+  }),
 ])

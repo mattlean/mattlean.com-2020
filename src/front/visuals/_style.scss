@@ -2,7 +2,7 @@
 @use 'typography' as typography;
 
 body {
-  font: typography.$body-txt typography.$txt-font-family, Courier;
+  font: typography.$txt-body typography.$txt-font-family, Courier;
   text-rendering: optimizeLegibility;
 }
 
@@ -13,14 +13,33 @@ h4,
 h5,
 h6 {
   font-family: typography.$display-font-family, Courier;
+  font-weight: typography.$bold;
 }
 
 p {
-  line-height: typography.$body-txt-line-height;
+  line-height: typography.$txt-body-line-height;
+  margin-bottom: typography.$txt-body-line-height;
 }
 
 a {
   color: color.$k;
+}
+
+ol {
+  counter-reset: ordered-list;
+  list-style: none;
+  padding-left: 3em;
+}
+
+ol > li::before {
+  content: '0' counter(featured-posts-list);
+  left: -3em;
+  position: absolute;
+}
+
+ol > li {
+  counter-increment: featured-posts-list;
+  position: relative;
 }
 
 .container {

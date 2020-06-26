@@ -11,5 +11,5 @@
 
 .cta-sm {
   @extend %cta;
-  font: typography.$bold typography.$body-txt typography.$display-font-family;
+  font: typography.$bold typography.$txt-body typography.$display-font-family;
 }

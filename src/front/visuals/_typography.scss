@@ -1,7 +1,7 @@
 @use 'color' as color;
 
-$body-txt: 18px;
-$body-txt-line-height: 27px;
+$txt-body: 18px;
+$txt-body-line-height: 27px;
 
 $display-font-family: neue-haas-grotesk-display, Courier;
 $txt-font-family: neue-haas-grotesk-text, Courier;
@@ -14,10 +14,17 @@ $headline: 100px;
 $txt-lg: 30px;
 $txt-lg-line-height: 45px;
 
+$txt-xs: 12px;
+
 $cta-lg: 36px;
 
 .headline {
   font-size: $headline;
+  font-weight: $medium;
+}
+
+.header-md {
+  font-size: $txt-lg;
   font-weight: $medium;
 }
 
@@ -31,4 +38,17 @@ $cta-lg: 36px;
   color: color.$grey-a;
   font-size: $txt-lg;
   line-height: $txt-lg-line-height;
+}
+
+.txt-xs {
+  font-size: $txt-xs;
+}
+
+@mixin txt-outline {
+  color: transparent;
+  -webkit-text-stroke: 1px color.$grey-d;
+}
+
+.txt-outline {
+  @include txt-outline;
 }

@@ -3,9 +3,9 @@
 $row-height: 157px;
 
 @mixin grid-gap {
-  column-gap: typography.$body-txt-line-height;
+  column-gap: typography.$txt-body-line-height;
   display: grid;
-  row-gap: typography.$body-txt-line-height;
+  row-gap: typography.$txt-body-line-height;
 }
 
 @mixin grid-main {

@@ -10,11 +10,7 @@ $default-font-size: 16px;
 
 body {
   font: $default-font-size 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  line-height: math.floor($default-font-size * 1.25);
-  margin: 0;
-}
-
-%heading {
+  line-height: 1.25em;
   margin: 0;
 }
 
@@ -24,7 +20,8 @@ h3,
 h4,
 h5,
 h6 {
-  @extend %heading;
+  font-weight: bold;
+  margin: 0;
 }
 
 p {
@@ -34,4 +31,10 @@ p {
 
 figure {
   margin: 0;
+}
+
+ol,
+ul {
+  margin: 0;
+  padding: 0;
 }

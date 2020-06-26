@@ -29,7 +29,11 @@ module.exports = merge([
     },
   }),
 
-  buildStyles(),
+  buildStyles({
+    cssLoaderOptions: { sourceMap: true },
+    postCSSLoaderOptions: { config: { path: 'webpack' }, sourceMap: true },
+    sassLoaderOptions: { sourceMap: true },
+  }),
 
   genSourceMaps('source-map'),
 ])

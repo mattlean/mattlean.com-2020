@@ -6,8 +6,16 @@ const { DefinePlugin } = require('webpack')
 
 /**
  * Build styles
+ * 1. Compiles Sass to CSS with sass-loader
+ * 2. Runs PostCSS with Autoprefixer plugin
+ * 3. Interprets @import and url() like import/require() and resolves them with css-loader
+ * 4. Extracts CSS into separate file
  */
-exports.buildStyles = ({ cssLoaderOptions, sassLoaderOptions } = {}) => ({
+exports.buildStyles = ({
+  cssLoaderOptions,
+  postCSSLoaderOptions,
+  sassLoaderOptions,
+} = {}) => ({
   plugins: [new MiniCssExtractPlugin()],
   module: {
     rules: [
@@ -18,6 +26,10 @@ exports.buildStyles = ({ cssLoaderOptions, sassLoaderOptions } = {}) => ({
           {
             loader: 'css-loader',
             options: cssLoaderOptions,
+          },
+          {
+            loader: 'postcss-loader',
+            options: postCSSLoaderOptions,
           },
           {
             loader: 'sass-loader',
@@ -70,11 +82,13 @@ exports.ignoreNodeModules = () => ({ externals: [nodeExternals()] })
 /**
  * Inject styles.
  * 1. Compiles Sass to CSS with sass-loader
- * 2. Interprets @import and url() like import/require() and resolves them with css-loader
- * 3. Injects CSS into DOM with style-loader
+ * 2. Runs PostCSS with Autoprefixer plugin
+ * 3. Interprets @import and url() like import/require() and resolves them with css-loader
+ * 4. Injects CSS into DOM with style-loader
  */
 exports.injectStyles = ({
   cssLoaderOptions,
+  postCSSLoaderOptions,
   sassLoaderOptions,
   styleLoaderOptions,
 } = {}) => ({
@@ -90,6 +104,10 @@ exports.injectStyles = ({
           {
             loader: 'css-loader',
             options: cssLoaderOptions,
+          },
+          {
+            loader: 'postcss-loader',
+            options: postCSSLoaderOptions,
           },
           {
             loader: 'sass-loader',
