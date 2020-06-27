@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const MainFooter = () => {
   return (
-    <footer className="main-footer">
+    <footer className="main-footer link-grey-b txt-grey-b">
       <ul className="personal-title">
         <li>
           <strong>Matt Lean</strong>
@@ -52,7 +52,7 @@ const MainFooter = () => {
           </li>
         </ul>
       </nav>
-      <p className="txt-xs">
+      <p className="txt-xs txt-grey-c">
         Made with too much boba in the San Francisco Bay Area.
       </p>
     </footer>

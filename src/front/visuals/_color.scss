@@ -5,12 +5,62 @@ $grey-c: #999;
 $grey-d: #aaa;
 $w: #fff;
 
+.link-grey-a,
+.link-grey-a:hover,
+.link-grey-a:visited {
+  color: $grey-a;
+}
+
+.link-grey-a {
+  a,
+  a:hover,
+  a:visited {
+    color: $grey-a;
+  }
+}
+
+.dark .link-grey-a,
+.link-grey-a:hover,
+.link-grey-a:visited {
+  color: $grey-c;
+}
+
+.dark .link-grey-a {
+  a,
+  a:hover,
+  a:visited {
+    color: $grey-c;
+  }
+}
+
+.link-grey-b,
+.link-grey-b:hover,
+.link-grey-b:visited {
+  color: $grey-b;
+}
+
+.link-grey-b {
+  a,
+  a:hover,
+  a:visited {
+    color: $grey-b;
+  }
+}
+
 .txt-primary {
   color: $k;
 }
 
+.dark .txt-primary {
+  color: $w;
+}
+
 .txt-grey-a {
   color: $grey-a;
+}
+
+.dark .txt-grey-a {
+  color: $grey-c;
 }
 
 .txt-grey-b {
@@ -21,12 +71,20 @@ $w: #fff;
   color: $grey-c;
 }
 
+.dark .txt-grey-c {
+  color: $grey-a;
+}
+
 .txt-grey-d {
   color: $grey-d;
 }
 
 .svg-grey-a {
   fill: $grey-a;
+}
+
+.dark .svg-grey-a {
+  fill: $grey-c;
 }
 
 .svg-grey-b {
@@ -37,6 +95,18 @@ $w: #fff;
   fill: $grey-c;
 }
 
+.dark .svg-grey-c {
+  fill: $grey-a;
+}
+
 .svg-grey-d {
   fill: $grey-d;
+}
+
+.svg-primary {
+  fill: $k;
+}
+
+.dark .svg-primary {
+  fill: $w;
 }

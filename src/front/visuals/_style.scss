@@ -1,9 +1,25 @@
 @use 'color' as color;
 @use 'typography' as typography;
 
+%transition {
+  transition-duration: 2s;
+  transition-property: background-color, color, fill;
+  transition-timing-function: ease-out;
+}
+
 body {
+  @extend %transition;
   font: typography.$txt-body typography.$txt-font-family, Courier;
   text-rendering: optimizeLegibility;
+}
+
+a {
+  @extend %transition;
+}
+
+.dark {
+  background-color: color.$k;
+  color: color.$w;
 }
 
 h1,
@@ -21,7 +37,9 @@ p {
   margin-bottom: typography.$txt-body-line-height;
 }
 
-a {
+a,
+a:hover,
+a:visited {
   color: color.$k;
 }
 

@@ -22,12 +22,12 @@ const Landing = () => {
     >
       <section className="cover">
         <h1 className="headline">Hi, I&apos;m Matt Lean!</h1>
-        <p className="txt-lg">
+        <p className="txt-lg txt-grey-a">
           I’m a developer who works at the intersection of engineering and
           design. I’ve been building web-based products for Silicon Valley since
           2015 and am currently looking for new opportunities.
         </p>
-        <CTA to="/about" type="lg">
+        <CTA to="/about" type="lg" className="svg-primary txt-primary">
           Learn more about me
         </CTA>
       </section>
@@ -43,7 +43,9 @@ const Landing = () => {
           />
           <figcaption>
             <h3 className="header-md">Gridnik</h3>
-            <p>Extend Adobe XD&apos;s grid generation capabilities.</p>
+            <p className="txt-grey-a">
+              Extend Adobe XD&apos;s grid generation capabilities.
+            </p>
           </figcaption>
         </figure>
         <figure className="featured-b">
@@ -53,14 +55,18 @@ const Landing = () => {
           />
           <figcaption>
             <h3 className="header-md">eswiss</h3>
-            <p>
+            <p className="txt-grey-a">
               A design system built on Swiss/International style design
               principles.
             </p>
           </figcaption>
         </figure>
       </section>
-      <CTA to="/about" type="sm" className="view-more-projects svg-grey-c">
+      <CTA
+        to="/about"
+        type="sm"
+        className="view-more-projects svg-grey-c txt-grey-c"
+      >
         View all projects
       </CTA>
       <h2 className="tracked-header featured-case-studies-header">
@@ -74,7 +80,9 @@ const Landing = () => {
           />
           <figcaption>
             <h3 className="header-md">Spectral Overlay Tool</h3>
-            <p>Building a biotech data visualization tool.</p>
+            <p className="txt-grey-a">
+              Building a biotech data visualization tool.
+            </p>
           </figcaption>
         </figure>
         <figure className="featured-b">
@@ -84,11 +92,17 @@ const Landing = () => {
           />
           <figcaption>
             <h3 className="header-md">Lean Space</h3>
-            <p>Learnings from building my personal website in 2015.</p>
+            <p className="txt-grey-a">
+              Learnings from building my personal website in 2015.
+            </p>
           </figcaption>
         </figure>
       </section>
-      <CTA to="/about" type="sm" className="view-more-case-studies svg-grey-c">
+      <CTA
+        to="/about"
+        type="sm"
+        className="view-more-case-studies txt-grey-c svg-grey-c"
+      >
         View all case studies
       </CTA>
       <h2 className="tracked-header featured-posts-header">Featured Posts</h2>
@@ -98,36 +112,40 @@ const Landing = () => {
             <h4 className="header-md">
               Cat Proofing Your Computer Work Station
             </h4>
-            <p className="time">January 11, 2020 • 5 min read</p>
-            <p>How to cat proof your computer work station.</p>
+            <p className="time txt-grey-a">January 11, 2020 • 5 min read</p>
+            <p className="txt-grey-a">
+              How to cat proof your computer work station.
+            </p>
           </li>
           <li>
             <h4 className="header-md">Exploring China: Sichuan</h4>
-            <p className="time">January 11, 2020 • 5 min read</p>
-            <p>My visual journey through the Sichuan province.</p>
+            <p className="time txt-grey-a">January 11, 2020 • 5 min read</p>
+            <p className="txt-grey-a">
+              My visual journey through the Sichuan province.
+            </p>
           </li>
           <li>
             <h4 className="header-md">
               Neopets: Strange Origins of a New Generation of Designers &
               Developers
             </h4>
-            <p className="time">January 11, 2020 • 5 min read</p>
-            <p>
+            <p className="time txt-grey-a">January 11, 2020 • 5 min read</p>
+            <p className="txt-grey-a">
               How a kids game spawned a new generation of designers and
               developers.
             </p>
           </li>
           <li>
             <h4 className="header-md">Falling in Love with Zelda Again</h4>
-            <p className="time">January 11, 2020 • 5 min read</p>
-            <p>
+            <p className="time txt-grey-a">January 11, 2020 • 5 min read</p>
+            <p className="txt-grey-a">
               How Breath of the Wild revitalized my love for Zelda games again.
             </p>
           </li>
           <li>
             <h4 className="header-md">Amerikajin Ramen</h4>
-            <p className="time">January 11, 2020 • 5 min read</p>
-            <p>
+            <p className="time txt-grey-a">January 11, 2020 • 5 min read</p>
+            <p className="txt-grey-a">
               How to make filthily American ramen using only stuff from Costco.
             </p>
           </li>
@@ -135,7 +153,7 @@ const Landing = () => {
         <CTA
           to="/about"
           type="sm"
-          className="view-latest-blog-posts svg-grey-c"
+          className="view-latest-blog-posts txt-grey-c svg-grey-c"
         >
           View latest blog posts
         </CTA>

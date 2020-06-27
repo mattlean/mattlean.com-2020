@@ -1,6 +1,6 @@
 import express from 'express'
 import morgan from 'morgan'
-import pages from './routes/pages'
+import route from './route'
 import ServerErr from './util/ServerErr'
 import { FRONT } from '../../PATHS'
 
@@ -30,7 +30,7 @@ if (process.env.NODE_ENV === 'development') {
   throw new ServerErr('SE001')
 }
 
-app.use('/', pages)
+app.use('/', route)
 
 // eslint-disable-next-line no-console
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`))

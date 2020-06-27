@@ -2,7 +2,6 @@
 
 %cta {
   font-family: typography.$display-font-family;
-  font-weight: typography.$bold;
   text-decoration: none;
 }
 
@@ -13,6 +12,7 @@
 .cta-lg {
   @extend %cta;
   font-size: typography.$cta-lg;
+  font-weight: typography.$medium;
 
   > svg {
     @extend %cta-arrow;
@@ -23,6 +23,7 @@
 .cta-sm {
   @extend %cta;
   font-size: typography.$txt-body;
+  font-weight: typography.$bold;
 
   > svg {
     @extend %cta-arrow;

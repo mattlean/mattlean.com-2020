@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import createTemplateString from '../render'
+import createTemplateString from './render'
 
 const router = Router()
 

@@ -35,7 +35,6 @@ $cta-lg: 36px;
 }
 
 .txt-lg {
-  color: color.$grey-a;
   font-size: $txt-lg;
   line-height: $txt-lg-line-height;
 }
@@ -45,6 +44,7 @@ $cta-lg: 36px;
 }
 
 @mixin txt-outline {
+  /* TODO: have color class handle this */
   color: transparent;
   -webkit-text-stroke: 1px color.$grey-d;
 }
