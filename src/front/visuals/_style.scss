@@ -13,14 +13,19 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-a {
+a,
+path,
+polygon,
+rect {
   @extend %transition;
 }
 
-.dark {
+/* stylelint-disable selector-no-qualifying-type */
+body.dark {
   background-color: color.$k;
   color: color.$w;
 }
+/* stylelint-enable selector-no-qualifying-type */
 
 h1,
 h2,

@@ -27,7 +27,7 @@ const Landing = () => {
           design. I’ve been building web-based products for Silicon Valley since
           2015 and am currently looking for new opportunities.
         </p>
-        <CTA to="/about" type="lg" className="svg-primary txt-primary">
+        <CTA to="/about" type="lg" className="svg-primary link-primary">
           Learn more about me
         </CTA>
       </section>
@@ -65,7 +65,7 @@ const Landing = () => {
       <CTA
         to="/about"
         type="sm"
-        className="view-more-projects svg-grey-c txt-grey-c"
+        className="view-more-projects svg-grey-c link-grey-c"
       >
         View all projects
       </CTA>
@@ -101,7 +101,7 @@ const Landing = () => {
       <CTA
         to="/about"
         type="sm"
-        className="view-more-case-studies txt-grey-c svg-grey-c"
+        className="view-more-case-studies link-grey-c svg-grey-c"
       >
         View all case studies
       </CTA>
@@ -153,7 +153,7 @@ const Landing = () => {
         <CTA
           to="/about"
           type="sm"
-          className="view-latest-blog-posts txt-grey-c svg-grey-c"
+          className="view-latest-blog-posts link-grey-c svg-grey-c"
         >
           View latest blog posts
         </CTA>

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const MainFooter = () => {
   return (
-    <footer className="main-footer link-grey-b txt-grey-b">
+    <footer className="main-footer txt-grey-b">
       <ul className="personal-title">
         <li>
           <strong>Matt Lean</strong>
@@ -14,7 +14,9 @@ const MainFooter = () => {
       <nav className="internal-nav">
         <ul>
           <li>
-            <Link to="/about">About</Link>
+            <Link to="/about" className="link-grey-b">
+              About
+            </Link>
           </li>
           <li>
             <a href="#">Projects</a>
@@ -37,6 +39,7 @@ const MainFooter = () => {
               href="https://github.com/mattlean"
               rel="noreferrer"
               target="_blank"
+              className="link-grey-b"
             >
               GitHub
             </a>
@@ -46,6 +49,7 @@ const MainFooter = () => {
               href="https://linkedin.com/in/mattlean"
               rel="noreferrer"
               target="_blank"
+              className="link-grey-b"
             >
               LinkedIn
             </a>

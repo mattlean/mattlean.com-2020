@@ -5,32 +5,28 @@ $grey-c: #999;
 $grey-d: #aaa;
 $w: #fff;
 
+.link-primary,
+.link-primary:hover,
+.link-primary:visited {
+  color: $k;
+}
+
+.dark .link-primary,
+.dark .link-primary:hover,
+.dark .link-primary:visited {
+  color: $w;
+}
+
 .link-grey-a,
 .link-grey-a:hover,
 .link-grey-a:visited {
   color: $grey-a;
 }
 
-.link-grey-a {
-  a,
-  a:hover,
-  a:visited {
-    color: $grey-a;
-  }
-}
-
 .dark .link-grey-a,
-.link-grey-a:hover,
-.link-grey-a:visited {
+.dark .link-grey-a:hover,
+.dark .link-grey-a:visited {
   color: $grey-c;
-}
-
-.dark .link-grey-a {
-  a,
-  a:hover,
-  a:visited {
-    color: $grey-c;
-  }
 }
 
 .link-grey-b,
@@ -39,12 +35,22 @@ $w: #fff;
   color: $grey-b;
 }
 
-.link-grey-b {
-  a,
-  a:hover,
-  a:visited {
-    color: $grey-b;
-  }
+.link-grey-c,
+.link-grey-c:hover,
+.link-grey-c:visited {
+  color: $grey-c;
+}
+
+.dark .link-grey-c,
+.dark .link-grey-c:hover,
+.dark .link-grey-c:visited {
+  color: $grey-a;
+}
+
+.link-grey-d,
+.link-grey-d:hover,
+.link-grey-d:visited {
+  color: $grey-d;
 }
 
 .txt-primary {

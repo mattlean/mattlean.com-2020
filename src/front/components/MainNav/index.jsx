@@ -13,9 +13,13 @@ const MainNav = () => {
         <NavLink to="/" activeClassName="main-nav-link-active">
           <Logo className="logo" />
         </NavLink>
-        <ul className="link-grey-a">
+        <ul>
           <li>
-            <NavLink to="/about" activeClassName="main-nav-link-active">
+            <NavLink
+              to="/about"
+              activeClassName="main-nav-link-active"
+              className="link-grey-a"
+            >
               about
             </NavLink>
           </li>
@@ -29,13 +33,8 @@ const MainNav = () => {
             <a href="#">contact</a>
           </li>
           <li>
-            <button className="btn-light">
-              <SunMoon
-                className="sun-moon_svg svg-grey-a"
-                onClick={() => {
-                  toggle()
-                }}
-              />
+            <button className="btn-light" onClick={() => toggle()}>
+              <SunMoon className="sun-moon_svg svg-grey-a" />
             </button>
           </li>
         </ul>
