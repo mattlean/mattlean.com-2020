@@ -1,6 +1,7 @@
 {
   "extends": "stylelint-config-sass-guidelines",
   "rules": {
+    "max-nesting-depth": null,
     "selector-max-compound-selectors": null
   }
 }

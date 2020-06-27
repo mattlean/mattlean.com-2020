@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { pageTransition, pageVariants } from '../visuals/animations'
+import { pageTransition, pageVariants } from '../visuals/animation'
 
 const About = () => {
   const initAnimState = __isServer__ || window.isInitLoad ? 'in' : 'out'

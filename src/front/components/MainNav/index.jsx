@@ -1,6 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import Logo from '../../assets/logo.svg'
+import SunMoon from '../../assets/sun-moon.svg'
 
 const MainNav = () => (
   <header className="main-header">
@@ -8,14 +9,27 @@ const MainNav = () => (
       <NavLink to="/" activeClassName="main-nav-link-active">
         <Logo className="logo" />
       </NavLink>
-      <span>
-        <NavLink to="/about" activeClassName="main-nav-link-active">
-          about
-        </NavLink>
-        <a href="#">projects</a>
-        <a href="#">blog</a>
-        <a href="#">contact</a>
-      </span>
+      <ul>
+        <li>
+          <NavLink to="/about" activeClassName="main-nav-link-active">
+            about
+          </NavLink>
+        </li>
+        <li>
+          <a href="#">projects</a>
+        </li>
+        <li>
+          <a href="#">blog</a>
+        </li>
+        <li>
+          <a href="#">contact</a>
+        </li>
+        <li>
+          <button className="btn-light">
+            <SunMoon className="sun-moon_svg" />
+          </button>
+        </li>
+      </ul>
     </nav>
   </header>
 )

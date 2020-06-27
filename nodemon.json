@@ -1,4 +1,4 @@
 {
-  "ext": "css,ejs,js,jsx,scss",
+  "ext": "css,ejs,js,jsx,scss,svg",
   "watch": ["src", "webpack", "nodemon.json"]
 }

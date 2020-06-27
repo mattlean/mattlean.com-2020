@@ -1,5 +1,6 @@
 @use 'visuals/color' as color;
 @use 'visuals/grid' as grid;
+@use 'visuals/size' as size;
 @use 'visuals/typography' as typography;
 
 .main-nav {
@@ -8,25 +9,56 @@
   height: grid.$row-height;
   justify-content: space-between;
   margin-bottom: typography.$txt-body-line-height;
+
+  > a > .logo {
+    height: 44px;
+  }
+
+  > ul {
+    list-style: none;
+
+    > li {
+      display: inline-block;
+      margin-left: size.$size-36;
+
+      > a {
+        color: color.$grey-a;
+        letter-spacing: 0.1rem;
+        text-decoration: none;
+      }
+
+      > a:active,
+      > a:hover,
+      > .main-nav-link-active {
+        text-decoration: underline;
+      }
+
+      > a:visited {
+        color: color.$grey-a;
+      }
+    }
+  }
 }
 
-.main-nav > a > .logo {
-  height: 44px;
+.btn-light {
+  background: none;
+  border: 0;
+  cursor: pointer;
+  position: relative;
+
+  > svg {
+    position: absolute;
+    top: -15px;
+    width: 19.24px;
+  }
 }
 
-.main-nav > span > a {
-  color: color.$grey-a;
-  letter-spacing: 0.1rem;
-  margin-left: 36px;
-  text-decoration: none;
-}
+/* stylelint-disable selector-class-pattern */
+.sun-moon_svg {
+  fill: color.$grey-a;
 
-.main-nav > span > a:hover,
-.main-nav > span > a:active,
-.main-nav > span > .main-nav-link-active {
-  text-decoration: underline;
+  &__sun {
+    display: none;
+  }
 }
-
-.main-nav > span > a:visited {
-  color: color.$grey-a;
-}
+/* stylelint-enable selector-class-pattern  */
