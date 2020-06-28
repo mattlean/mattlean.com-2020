@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import Blind from '../../components/Blind'
 import CTA from '../../components/CTA'
 import MainFooter from '../../components/MainFooter'
 import { pageTransition, pageVariants } from '../../visuals/animation'
@@ -9,11 +10,11 @@ import FeaturedLS from '../../assets/lean-space-featured-project.jpg'
 import FeaturedSOT from '../../assets/spectral-overlay-tool-featured-project.jpg'
 
 const Landing = () => {
-  const initAnimState = __isServer__ || window.isInitLoad ? 'in' : 'out'
+  // const initAnimState = __isServer__ || window.isInitLoad ? 'in' : 'out'
 
   return (
     <motion.main
-      initial={initAnimState}
+      initial="in"
       animate="in"
       exit="out"
       variants={pageVariants}
@@ -21,15 +22,24 @@ const Landing = () => {
       className="container grid-landing"
     >
       <section className="cover">
-        <h1 className="headline">Hi, I&apos;m Matt Lean!</h1>
-        <p className="txt-lg txt-grey-a">
-          I’m a developer who works at the intersection of engineering and
-          design. I’ve been building web-based products for Silicon Valley since
-          2015 and am currently looking for new opportunities.
-        </p>
-        <CTA to="/about" type="lg" className="svg-primary link-primary">
-          Learn more about me
-        </CTA>
+        <span className="blind-frame">
+          <Blind />
+          <h1 className="headline">Hi, I&apos;m Matt Lean!</h1>
+        </span>
+        <span className="blind-frame">
+          <Blind delay={0.3} />
+          <p className="txt-lg txt-grey-a">
+            I’m a developer who works at the intersection of engineering and
+            design. I’ve been building web-based products for Silicon Valley
+            since 2015 and am currently looking for new opportunities.
+          </p>
+        </span>
+        <span className="blind-frame">
+          <Blind delay={0.8} />
+          <CTA to="/about" type="lg" className="svg-primary link-primary">
+            Learn more about me
+          </CTA>
+        </span>
       </section>
       <h2 className="tracked-header featured-projects-header">
         Featured Projects

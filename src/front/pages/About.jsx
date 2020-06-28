@@ -3,11 +3,11 @@ import { motion } from 'framer-motion'
 import { pageTransition, pageVariants } from '../visuals/animation'
 
 const About = () => {
-  const initAnimState = __isServer__ || window.isInitLoad ? 'in' : 'out'
+  // const initAnimState = __isServer__ || window.isInitLoad ? 'in' : 'out'
 
   return (
     <motion.main
-      initial={initAnimState}
+      initial="initial"
       animate="in"
       exit="out"
       variants={pageVariants}

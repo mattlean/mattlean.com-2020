@@ -1,3 +1,15 @@
+export const blindVariants = {
+  animate: (delay) => ({
+    height: '0%',
+    transition: {
+      delay,
+      duration: 0.4,
+      ease: 'easeOut',
+    },
+  }),
+  initial: { height: '100%' },
+}
+
 export const pageVariants = {
   in: {
     opacity: 1,
@@ -5,7 +17,6 @@ export const pageVariants = {
   },
   out: {
     opacity: 0,
-    y: '200px',
   },
 }
 
