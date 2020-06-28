@@ -1,0 +1,18 @@
+@use 'visuals/color' as color;
+
+.blind-frame {
+  display: block;
+  position: relative;
+}
+
+.blind-frame > span {
+  background-color: color.$w;
+  display: block;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.dark .blind-frame > span {
+  background-color: color.$k;
+}

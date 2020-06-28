@@ -53,8 +53,22 @@
 
 /* stylelint-disable selector-class-pattern */
 .sun-moon_svg {
+  &__moon {
+    opacity: 1;
+  }
+
   &__sun {
-    display: none;
+    opacity: 0;
+  }
+}
+
+.dark .sun-moon_svg {
+  &__moon {
+    opacity: 0;
+  }
+
+  &__sun {
+    opacity: 1;
   }
 }
 /* stylelint-enable selector-class-pattern  */

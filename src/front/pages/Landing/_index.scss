@@ -69,8 +69,7 @@
 }
 
 .featured > figure {
-  > img,
-  > .img-placeholder {
+  > .blind-frame {
     grid-column: 1/4;
     grid-row: 1/3;
   }

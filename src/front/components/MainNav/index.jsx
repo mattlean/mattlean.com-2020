@@ -5,28 +5,28 @@ import { ThemeCtx } from '../../visuals/theme'
 import Logo from '../../assets/logo.svg'
 import SunMoon from '../../assets/sun-moon.svg'
 
+const variants = {
+  in: {
+    opacity: 1,
+    transition: {
+      duration: 0.4,
+      ease: 'easeOut',
+    },
+  },
+  initial: {
+    opacity: 0,
+  },
+}
+
 const MainNav = () => {
   const { toggle } = useContext(ThemeCtx)
-
-  const mainNavVariants = {
-    in: {
-      opacity: 1,
-      transition: {
-        duration: 1,
-        ease: 'easeOut',
-      },
-    },
-    initial: {
-      opacity: 0,
-    },
-  }
 
   return (
     <header className="main-header">
       <motion.nav
         initial="initial"
         animate="in"
-        variants={mainNavVariants}
+        variants={variants}
         className="container main-nav"
       >
         <NavLink to="/" activeClassName="main-nav-link-active">

@@ -3,7 +3,7 @@
 
 %transition {
   transition-duration: 2s;
-  transition-property: background-color, color, fill;
+  transition-property: background-color, color, fill, opacity;
   transition-timing-function: ease-out;
 }
 
@@ -73,17 +73,4 @@ ol > li {
 /* TODO: remove */
 .img-placeholder {
   background-color: color.$grey-b;
-}
-
-.blind-frame {
-  display: block;
-  position: relative;
-}
-
-.blind-frame > span {
-  background-color: color.$w;
-  display: block;
-  height: 100%;
-  position: absolute;
-  width: 100%;
 }

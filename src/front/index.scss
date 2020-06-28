@@ -4,7 +4,8 @@
 @use 'visuals/style';
 
 /* Components */
-@use 'pages/Landing';
+@use 'components/Blind';
 @use 'components/CTA';
 @use 'components/MainFooter';
 @use 'components/MainNav';
+@use 'pages/Landing';
