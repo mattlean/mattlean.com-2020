@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import Blind from '../../components/Blind'
 import CTA from '../../components/CTA'
 import MainFooter from '../../components/MainFooter'
-import { pageTransition, pageVariants } from '../../visuals/animation'
+import { pageVariants } from '../../visuals/animation'
 import FeaturedES from '../../assets/eswiss-featured-project.jpg'
 import FeaturedG from '../../assets/gridnik-featured-project.jpg'
 import FeaturedLS from '../../assets/lean-space-featured-project.jpg'
@@ -14,11 +14,11 @@ const Landing = () => {
 
   return (
     <motion.main
-      initial="in"
-      animate="in"
+      animate="initial"
+      in="initial"
       exit="out"
+      initial="initial"
       variants={pageVariants}
-      transition={pageTransition}
       className="container grid-landing"
     >
       <section className="cover">

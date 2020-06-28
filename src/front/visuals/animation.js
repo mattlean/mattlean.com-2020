@@ -11,16 +11,16 @@ export const blindVariants = {
 }
 
 export const pageVariants = {
-  in: {
+  initial: {
     opacity: 1,
     y: 0,
   },
   out: {
     opacity: 0,
+    transition: {
+      duration: 0.4,
+      ease: 'easeIn',
+    },
+    y: '100px',
   },
-}
-
-export const pageTransition = {
-  transition: 'tween',
-  ease: 'easeIn',
 }
