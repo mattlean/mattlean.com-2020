@@ -6,22 +6,28 @@ $display-font-family: neue-haas-grotesk-display, 'Helvetica Neue', Helvetica,
 $txt-font-family: neue-haas-grotesk-text, 'Helvetica Neue', Helvetica, Arial,
   sans-serif;
 
-$medium: 600;
+$txt-medium: 500;
+$display-medium: 600;
 $bold: 700;
 
 .headline {
   font-size: size.$size-100;
-  font-weight: $medium;
+  font-weight: $display-medium;
 }
 
 .header-lg {
   font-size: size.$size-63;
-  font-weight: $medium;
+  font-weight: $display-medium;
 }
 
 .header-md {
   font-size: size.$size-30;
-  font-weight: $medium;
+  font-weight: $display-medium;
+}
+
+.header-sm {
+  font-size: size.$size-14;
+  text-transform: uppercase;
 }
 
 .tracked-header {
@@ -33,7 +39,10 @@ $bold: 700;
 
 .txt-lg {
   font-size: size.$size-30;
-  line-height: size.$size-45;
+}
+
+.txt-sm {
+  font-size: size.$size-14;
 }
 
 .txt-xs {

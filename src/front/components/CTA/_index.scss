@@ -13,7 +13,7 @@
 .cta-lg {
   @extend %cta;
   font-size: size.$size-36;
-  font-weight: typography.$medium;
+  font-weight: typography.$display-medium;
 
   > svg {
     @extend %cta-arrow;

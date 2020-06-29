@@ -2,7 +2,6 @@ import React, { useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import { useIntersection } from 'react-use'
 
-const THRESHOLD = 0.5
 const variants = {
   animate: (delay) => ({
     height: '0%',
@@ -18,20 +17,24 @@ const variants = {
 /**
  * Blind animation
  * Must be used within a BlindFrame component
- * @prop {number} delay Delay in seconds
+ * @prop {number} [delay=0] Delay in seconds
+ * @prop {number} [threshold=1] Threshold value between 0 & 1 used by Intersection Observer
  */
-const Blind = ({ delay }) => {
+const Blind = ({ delay, threshold }) => {
+  if (!delay) delay = 0
+  if (!threshold) threshold = 1
+
   const intersectionRef = useRef(null)
   const intersection = useIntersection(intersectionRef, {
     root: null,
     rootMargin: '0px',
-    threshold: THRESHOLD,
+    threshold,
   })
   const [isDone, setIsDone] = useState(false)
 
   const isHidden =
     __isServer__ ||
-    (intersection && intersection.intersectionRatio < THRESHOLD) ||
+    (intersection && intersection.intersectionRatio < threshold) ||
     !intersection
       ? true
       : false
