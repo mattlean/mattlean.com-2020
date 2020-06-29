@@ -1,25 +1,32 @@
 import React, { useContext } from 'react'
 import { motion } from 'framer-motion'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
 import { ThemeCtx } from '../../visuals/theme'
 import Logo from '../../assets/logo.svg'
 import SunMoon from '../../assets/sun-moon.svg'
 
-const variants = {
-  in: {
-    opacity: 1,
-    transition: {
-      duration: 0.4,
-      ease: 'easeOut',
-    },
-  },
-  initial: {
-    opacity: 0,
-  },
-}
-
 const MainNav = () => {
+  const location = useLocation()
   const { toggle } = useContext(ThemeCtx)
+
+  const variants = {
+    in: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        ease: 'easeOut',
+      },
+    },
+    initial: {
+      opacity: 0,
+      y: '-100px',
+    },
+  }
+
+  if (location.pathname === '/') {
+    variants.in.transition.delay = 0.5
+  }
 
   return (
     <header className="main-header">

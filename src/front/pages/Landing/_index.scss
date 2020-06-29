@@ -3,135 +3,133 @@
 @use 'visuals/typography' as typography;
 
 .grid-landing {
-  @include grid.grid-main;
   grid-template-rows: repeat(22, grid.$row-height);
-}
 
-.cover {
-  grid-column: 1/5;
-  grid-row: 2/5;
+  .cover {
+    grid-column: 1/5;
+    grid-row: 2/5;
 
-  > .headline {
-    margin-bottom: typography.$txt-lg;
-  }
-
-  > .txt-lg {
-    margin-bottom: typography.$txt-lg-line-height;
-  }
-}
-
-%featured-header {
-  align-self: end;
-  grid-column: 1/7;
-}
-
-.featured-projects-header {
-  @extend %featured-header;
-  grid-row: 5/6;
-}
-
-.featured-case-studies-header {
-  @extend %featured-header;
-  grid-row: 9/10;
-}
-
-.featured-posts-header {
-  @extend %featured-header;
-  grid-column: 2/4;
-  grid-row: 13/14;
-}
-
-.featured {
-  @include grid.grid-main;
-  grid-column: 1/7;
-  grid-template-rows: repeat(3, 1fr);
-}
-
-.featured-projects {
-  grid-row: 6/9;
-}
-
-%featured-project-grid {
-  @include grid.grid-gap;
-  grid-row: 1/4;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-}
-
-.featured-a {
-  @extend %featured-project-grid;
-  grid-column: 1/4;
-}
-
-.featured-b {
-  @extend %featured-project-grid;
-  grid-column: 4/7;
-}
-
-.featured > figure {
-  > .blind-frame {
-    grid-column: 1/4;
-    grid-row: 1/3;
-  }
-
-  > figcaption {
-    grid-column: 1/4;
-    grid-row: 3/4;
-  }
-}
-
-.featured-case-studies {
-  grid-row: 10/13;
-}
-
-.featured-gridnik {
-  border: 1px solid #ff4fff;
-}
-
-%view-more {
-  align-self: end;
-  grid-column: 1/7;
-  justify-self: center;
-}
-
-.view-more-projects {
-  @extend %view-more;
-  grid-row: 8/9;
-}
-
-.view-more-case-studies {
-  @extend %view-more;
-  grid-row: 12/13;
-}
-
-.view-latest-blog-posts {
-  @extend %view-more;
-  display: block;
-  text-align: center;
-}
-
-.featured-posts {
-  grid-column: 2/6;
-  grid-row: 14/19;
-
-  > ol {
-    font-size: typography.$txt-lg;
-
-    > li::before {
-      @include typography.txt-outline;
-      font: typography.$bold typography.$txt-lg typography.$display-font-family;
+    > .headline {
+      margin-bottom: size.$size-30;
     }
 
-    > li {
-      margin-bottom: size.$size-54;
+    > .txt-lg {
+      margin-bottom: size.$size-45;
+    }
+  }
 
-      > p {
-        font-size: typography.$txt-body;
+  %featured-header {
+    align-self: end;
+    grid-column: 1/7;
+  }
+
+  .featured-projects-header {
+    @extend %featured-header;
+    grid-row: 5/6;
+  }
+
+  .featured-case-studies-header {
+    @extend %featured-header;
+    grid-row: 9/10;
+  }
+
+  .featured-posts-header {
+    @extend %featured-header;
+    grid-column: 2/4;
+    grid-row: 13/14;
+  }
+
+  .subgrid-featured {
+    grid-column: 1/7;
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .featured-projects {
+    grid-row: 6/9;
+  }
+
+  %subgrid-featured-project {
+    @include grid.grid-gap;
+    grid-row: 1/4;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .subgrid-featured-a {
+    @extend %subgrid-featured-project;
+    grid-column: 1/4;
+  }
+
+  .subgrid-featured-b {
+    @extend %subgrid-featured-project;
+    grid-column: 4/7;
+  }
+
+  .subgrid-featured > figure {
+    > .blind-frame {
+      grid-column: 1/4;
+      grid-row: 1/3;
+    }
+
+    > figcaption {
+      grid-column: 1/4;
+      grid-row: 3/4;
+    }
+  }
+
+  .featured-case-studies {
+    grid-row: 10/13;
+  }
+
+  .featured-gridnik {
+    border: 1px solid #ff4fff;
+  }
+
+  %view-more {
+    align-self: end;
+    grid-column: 1/7;
+    justify-self: center;
+  }
+
+  .view-more-projects {
+    @extend %view-more;
+    grid-row: 8/9;
+  }
+
+  .view-more-case-studies {
+    @extend %view-more;
+    grid-row: 12/13;
+  }
+
+  .view-latest-blog-posts {
+    @extend %view-more;
+    display: block;
+    text-align: center;
+  }
+
+  .featured-posts {
+    grid-column: 2/6;
+    grid-row: 14/19;
+
+    > ol {
+      font-size: size.$size-30;
+
+      > li::before {
+        @include typography.txt-outline;
+        font: typography.$bold size.$size-30 typography.$display-font-family;
       }
 
-      > .time {
-        font-size: typography.$txt-xs;
-        margin-bottom: 0;
+      > li {
+        margin-bottom: size.$size-54;
+
+        > p {
+          font-size: size.$size-18;
+        }
+
+        > .time {
+          font-size: size.$size-12;
+          margin-bottom: 0;
+        }
       }
     }
   }

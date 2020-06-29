@@ -5,8 +5,6 @@ const RouteChange = ({ pathname }) => {
     if (window.isInitLoad) {
       window.isInitLoad = false
     }
-
-    window.scroll(0, 0)
   }, [pathname])
 
   return null

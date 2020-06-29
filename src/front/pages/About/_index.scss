@@ -1,0 +1,10 @@
+@use 'visuals/grid' as grid;
+
+.grid-about {
+  grid-template-rows: repeat(10, grid.$row-height);
+
+  .cover {
+    grid-column: 1/5;
+    grid-row: 2/4;
+  }
+}

@@ -1,15 +1,16 @@
 @use 'color' as color;
+@use 'size' as size;
 @use 'typography' as typography;
 
 %transition {
-  transition-duration: 2s;
+  transition-duration: 1s;
   transition-property: background-color, color, fill, opacity;
   transition-timing-function: ease-out;
 }
 
 body {
   @extend %transition;
-  font: typography.$txt-body typography.$txt-font-family, Courier;
+  font: size.$size-18 typography.$txt-font-family;
   text-rendering: optimizeLegibility;
 }
 
@@ -33,13 +34,13 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: typography.$display-font-family, Courier;
+  font-family: typography.$display-font-family;
   font-weight: typography.$bold;
 }
 
 p {
-  line-height: typography.$txt-body-line-height;
-  margin-bottom: typography.$txt-body-line-height;
+  line-height: size.$size-27;
+  margin-bottom: size.$size-27;
 }
 
 a,

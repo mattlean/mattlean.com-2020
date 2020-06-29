@@ -5,14 +5,15 @@
   position: relative;
 }
 
-.blind-frame > span {
+.blind-frame > .blind {
   background-color: color.$w;
   display: block;
   height: 100%;
   position: absolute;
   width: 100%;
+  z-index: 1;
 }
 
-.dark .blind-frame > span {
+.dark .blind-frame > .blind {
   background-color: color.$k;
 }

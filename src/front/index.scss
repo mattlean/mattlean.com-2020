@@ -1,11 +1,14 @@
 @use 'visuals/color';
+@use 'visuals/grid';
 @use 'visuals/logo';
 @use 'visuals/reset';
 @use 'visuals/style';
+@use 'visuals/typography';
 
 /* Components */
 @use 'components/Blind';
 @use 'components/CTA';
 @use 'components/MainFooter';
 @use 'components/MainNav';
+@use 'pages/About';
 @use 'pages/Landing';

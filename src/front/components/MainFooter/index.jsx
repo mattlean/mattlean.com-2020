@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const MainFooter = () => {
   return (
-    <footer className="main-footer txt-grey-b">
+    <footer className="main-footer grid txt-grey-b">
       <ul className="personal-title">
         <li>
           <strong>Matt Lean</strong>

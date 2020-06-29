@@ -1,13 +1,12 @@
 @use 'visuals/grid' as grid;
 @use 'visuals/size' as size;
-@use 'visuals/typography' as typography;
 
 .main-nav {
   align-items: flex-end;
   display: flex;
   height: grid.$row-height;
   justify-content: space-between;
-  margin-bottom: typography.$txt-body-line-height;
+  margin-bottom: size.$size-27;
 
   > a > .logo {
     height: 44px;

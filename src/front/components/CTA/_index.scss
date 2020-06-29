@@ -1,3 +1,4 @@
+@use 'visuals/size' as size;
 @use 'visuals/typography' as typography;
 
 %cta {
@@ -11,7 +12,7 @@
 
 .cta-lg {
   @extend %cta;
-  font-size: typography.$cta-lg;
+  font-size: size.$size-36;
   font-weight: typography.$medium;
 
   > svg {
@@ -22,7 +23,7 @@
 
 .cta-sm {
   @extend %cta;
-  font-size: typography.$txt-body;
+  font-size: size.$size-18;
   font-weight: typography.$bold;
 
   > svg {

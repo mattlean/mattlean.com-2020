@@ -1,48 +1,43 @@
 @use 'color' as color;
+@use 'size' as size;
 
-$txt-body: 18px;
-$txt-body-line-height: 27px;
-
-$display-font-family: neue-haas-grotesk-display, 'Helveitca Neue', Helvetica,
+$display-font-family: neue-haas-grotesk-display, 'Helvetica Neue', Helvetica,
   Arial, sans-serif;
-$txt-font-family: neue-haas-grotesk-text, 'Helveitca Neue', Helvetica, Arial,
+$txt-font-family: neue-haas-grotesk-text, 'Helvetica Neue', Helvetica, Arial,
   sans-serif;
 
 $medium: 600;
 $bold: 700;
 
-$headline: 100px;
-
-$txt-lg: 30px;
-$txt-lg-line-height: 45px;
-
-$txt-xs: 12px;
-
-$cta-lg: 36px;
-
 .headline {
-  font-size: $headline;
+  font-size: size.$size-100;
+  font-weight: $medium;
+}
+
+.header-lg {
+  font-size: size.$size-63;
   font-weight: $medium;
 }
 
 .header-md {
-  font-size: $txt-lg;
+  font-size: size.$size-30;
   font-weight: $medium;
 }
 
 .tracked-header {
-  font: $bold $txt-lg neue-haas-grotesk-display, Courier;
+  font-size: size.$size-30;
+  font-weight: $bold;
   letter-spacing: 0.15em;
   text-transform: uppercase;
 }
 
 .txt-lg {
-  font-size: $txt-lg;
-  line-height: $txt-lg-line-height;
+  font-size: size.$size-30;
+  line-height: size.$size-45;
 }
 
 .txt-xs {
-  font-size: $txt-xs;
+  font-size: size.$size-12;
 }
 
 @mixin txt-outline {
