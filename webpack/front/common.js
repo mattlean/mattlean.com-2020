@@ -1,5 +1,5 @@
 const merge = require('webpack-merge')
-const { cleanBuild, loadSVGs, setFreeVariable } = require('../parts')
+const { cleanBuild, copyFiles, loadSVGs, setFreeVariable } = require('../parts')
 const { FRONT } = require('../../PATHS')
 
 module.exports = merge([
@@ -16,6 +16,8 @@ module.exports = merge([
   },
 
   cleanBuild(),
+
+  copyFiles([{ from: 'src/front/assets/favicon.ico' }]),
 
   loadSVGs(),
 

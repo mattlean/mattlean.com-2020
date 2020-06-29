@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { useIntersection } from 'react-use'
 
-const THRESHOLD = 0.5
+const THRESHOLD = 0.25
 const variants = {
   animate: {
     opacity: 1,
@@ -16,6 +16,10 @@ const variants = {
   initial: {
     opacity: 0,
     y: '100px',
+    transition: {
+      duration: 0.5,
+      ease: 'easeIn',
+    },
   },
 }
 

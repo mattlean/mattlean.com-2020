@@ -38,17 +38,22 @@ const MainNav = () => {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.5,
+        duration: 0.4,
         ease: 'easeOut',
       },
     },
     initial: {
       opacity: 0,
       y: '-100px',
+      transition: {
+        duration: 0.5,
+        ease: 'easeIn',
+      },
     },
   }
 
   if (isFirst && location.pathname === '/') {
+    variants.animate.transition.duration = 0.5
     variants.animate.transition.delay = 0.8
   }
 

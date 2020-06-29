@@ -1,3 +1,4 @@
+const CopyPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const nodeExternals = require('webpack-node-externals')
@@ -65,6 +66,18 @@ exports.compileJS = ({ exclude, include, options } = {}) => ({
       },
     ],
   },
+})
+
+/**
+ * Copy files from one location to another
+ */
+exports.copyFiles = (patterns, options) => ({
+  plugins: [
+    new CopyPlugin({
+      patterns,
+      options,
+    }),
+  ],
 })
 
 /**
