@@ -24,13 +24,13 @@ const Blind = ({ delay, threshold }) => {
   if (!delay) delay = 0
   if (!threshold) threshold = 1
 
+  const [isDone, setIsDone] = useState(false)
   const intersectionRef = useRef(null)
   const intersection = useIntersection(intersectionRef, {
     root: null,
     rootMargin: '0px',
     threshold,
   })
-  const [isDone, setIsDone] = useState(false)
 
   const isHidden =
     __isServer__ ||
@@ -39,17 +39,17 @@ const Blind = ({ delay, threshold }) => {
       ? true
       : false
 
-  let animateVal
+  let animate
   if ((!isDone && !isHidden) || isDone) {
-    animateVal = 'animate'
+    animate = 'animate'
   } else {
-    animateVal = 'initial'
+    animate = 'initial'
   }
 
   return (
     <motion.span
       ref={intersectionRef}
-      animate={animateVal}
+      animate={animate}
       aria-hidden={true}
       custom={delay}
       initial="initial"

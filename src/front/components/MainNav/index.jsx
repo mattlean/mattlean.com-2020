@@ -1,16 +1,40 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState, useRef } from 'react'
 import { motion } from 'framer-motion'
+import { useIntersection } from 'react-use'
 import { NavLink, useLocation } from 'react-router-dom'
 import { ThemeCtx } from '../../visuals/theme'
 import Logo from '../../assets/logo.svg'
 import SunMoon from '../../assets/sun-moon.svg'
 
+const THRESHOLD = 0.5
+
 const MainNav = () => {
   const location = useLocation()
+  const [isFirst, setIsFirst] = useState(true)
   const { toggle } = useContext(ThemeCtx)
+  const intersectionRef = useRef(null)
+  const intersection = useIntersection(intersectionRef, {
+    root: null,
+    rootMargin: '0px',
+    threshold: THRESHOLD,
+  })
+
+  const isHidden =
+    __isServer__ ||
+    (intersection && intersection.intersectionRatio < THRESHOLD) ||
+    !intersection
+      ? true
+      : false
+
+  let animate
+  if (isHidden) {
+    animate = 'initial'
+  } else {
+    animate = 'animate'
+  }
 
   const variants = {
-    in: {
+    animate: {
       opacity: 1,
       y: 0,
       transition: {
@@ -24,16 +48,17 @@ const MainNav = () => {
     },
   }
 
-  if (location.pathname === '/') {
-    variants.in.transition.delay = 0.5
+  if (isFirst && location.pathname === '/') {
+    variants.animate.transition.delay = 0.8
   }
 
   return (
-    <header className="main-header">
+    <header ref={intersectionRef} className="main-header">
       <motion.nav
+        animate={animate}
         initial="initial"
-        animate="in"
         variants={variants}
+        onAnimationComplete={() => setIsFirst(false)}
         className="container main-nav"
       >
         <NavLink to="/" activeClassName="main-nav-link-active">
