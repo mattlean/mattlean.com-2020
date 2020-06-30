@@ -53,8 +53,7 @@ const MainNav = () => {
   }
 
   if (isFirst && location.pathname === '/') {
-    variants.animate.transition.duration = 0.8
-    variants.animate.transition.delay = 1.8
+    variants.animate.transition.delay = 0.8
   }
 
   return (
@@ -83,7 +82,13 @@ const MainNav = () => {
             <a href="#">projects</a>
           </li>
           <li>
-            <a href="#">blog</a>
+            <NavLink
+              to="/blog"
+              activeClassName="main-nav-link-active"
+              className="link-grey-a"
+            >
+              blog
+            </NavLink>
           </li>
           <li>
             <NavLink

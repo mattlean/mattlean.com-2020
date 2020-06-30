@@ -7,6 +7,9 @@ const ROUTES = {
   '/about': {
     title: 'About ' + SUFFIX,
   },
+  '/blog': {
+    title: 'Blog ' + SUFFIX,
+  },
   '/contact': {
     title: 'Contact ' + SUFFIX,
   },

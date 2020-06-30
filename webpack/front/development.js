@@ -1,6 +1,7 @@
 const merge = require('webpack-merge')
 const {
   compileJS,
+  copyFiles,
   genSourceMaps,
   injectStyles,
   loadDevImgs,
@@ -26,6 +27,8 @@ module.exports = merge([
       presets: [['@babel/preset-react', { development: true }]],
     },
   }),
+
+  copyFiles([{ from: 'src/front/dev.js' }]),
 
   genSourceMaps('cheap-module-eval-source-map'),
 
