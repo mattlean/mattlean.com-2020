@@ -3,7 +3,7 @@
 @use 'visuals/typography' as typography;
 
 .grid-about {
-  grid-template-rows: repeat(19, grid.$row-height);
+  grid-template-rows: repeat(17, grid.$row-height);
 
   .cover {
     grid-column: 1/5;

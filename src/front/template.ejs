@@ -4,10 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://use.typekit.net/qov4dzl.css" />
-    <% if (NODE_ENV === 'production') { %>
-    <link rel="stylesheet" href="/main.css" />
-    <% } %>
-    <title>MattLean.com</title>
+    <% if (NODE_ENV === 'production') { %><link rel="stylesheet" href="/main.css" /><% } %>
+    <title><% if (title) { %><%- title %><% } %></title>
   </head>
   <body>
     <div id="root"><% if (app) { %><%- app %><% } %></div>

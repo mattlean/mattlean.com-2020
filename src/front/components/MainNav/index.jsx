@@ -38,13 +38,13 @@ const MainNav = () => {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.4,
+        duration: 0.5,
         ease: 'easeOut',
       },
     },
     initial: {
       opacity: 0,
-      y: '-100px',
+      y: '-10%',
       transition: {
         duration: 0.5,
         ease: 'easeIn',
@@ -53,8 +53,8 @@ const MainNav = () => {
   }
 
   if (isFirst && location.pathname === '/') {
-    variants.animate.transition.duration = 0.5
-    variants.animate.transition.delay = 0.8
+    variants.animate.transition.duration = 0.8
+    variants.animate.transition.delay = 1.8
   }
 
   return (
@@ -86,7 +86,13 @@ const MainNav = () => {
             <a href="#">blog</a>
           </li>
           <li>
-            <a href="#">contact</a>
+            <NavLink
+              to="/contact"
+              activeClassName="main-nav-link-active"
+              className="link-grey-a"
+            >
+              contact
+            </NavLink>
           </li>
           <li>
             <button className="btn-light" onClick={() => toggle()}>

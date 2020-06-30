@@ -1,0 +1,44 @@
+@use 'visuals/grid' as grid;
+@use 'visuals/size' as size;
+@use 'visuals/typography' as typography;
+
+.grid-contact {
+  grid-template-rows: repeat(8, grid.$row-height);
+
+  .cover {
+    grid-column: 1/5;
+    grid-row: 2/3;
+
+    .header-lg {
+      margin-bottom: size.$size-30;
+    }
+  }
+
+  > ul {
+    grid-column: 1/4;
+    grid-row: 4/5;
+    list-style: none;
+
+    > li {
+      margin-bottom: size.$size-27;
+
+      a {
+        align-items: center;
+        display: flex;
+        font: typography.$display-medium size.$size-36
+          typography.$display-font-family;
+        text-decoration: none;
+
+        > img {
+          height: size.$size-30;
+          margin-right: size.$size-36;
+        }
+
+        > svg {
+          margin-right: size.$size-36;
+          width: size.$size-30;
+        }
+      }
+    }
+  }
+}

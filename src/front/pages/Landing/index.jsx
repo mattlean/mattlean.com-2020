@@ -19,17 +19,17 @@ const Landing = () => (
     className="container grid-landing grid"
   >
     <section className="cover">
-      <BlindFrame threshold={0.5}>
+      <BlindFrame delay={0.2} duration={0.8} threshold={0.5}>
         <h1 className="headline">Hi, I&apos;m Matt Lean!</h1>
       </BlindFrame>
-      <BlindFrame delay={0.3} threshold={0.5}>
+      <BlindFrame delay={1} duration={0.8} threshold={0.5}>
         <p className="txt-lg txt-grey-a">
           I’m a developer who works at the intersection of engineering and
           design. I’ve been building web-based products for Silicon Valley since
           2015 and am currently looking for new opportunities.
         </p>
       </BlindFrame>
-      <BlindFrame delay={0.8} threshold={0.5}>
+      <BlindFrame delay={1.8} duration={0.8} threshold={0.8}>
         <CTA to="/about" type="lg" className="svg-primary link-primary">
           Learn more about me
         </CTA>

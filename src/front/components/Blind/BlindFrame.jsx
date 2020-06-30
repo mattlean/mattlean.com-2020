@@ -5,10 +5,18 @@ import React from 'react'
  * Frame used for positioning blind animation
  * @prop {string} [className] Class attribute to append to default value
  * @prop {number} [delay] Delay in seconds
+ * @prop {number} [duration] Duration in seconds
  * @prop {number} [threshold] Threshold value between 0 & 1 used by Intersection Observer
  * @prop {string} [nodeType=span] Type of node frame should be
  */
-const BlindFrame = ({ className, children, delay, nodeType, threshold }) => {
+const BlindFrame = ({
+  className,
+  children,
+  delay,
+  duration,
+  nodeType,
+  threshold,
+}) => {
   let cn = 'blind-frame'
   if (className) cn += ` ${className}`
 
@@ -16,7 +24,7 @@ const BlindFrame = ({ className, children, delay, nodeType, threshold }) => {
 
   return (
     <Node className={cn}>
-      <Blind delay={delay} threshold={threshold} />
+      <Blind delay={delay} duration={duration} threshold={threshold} />
       {children}
     </Node>
   )

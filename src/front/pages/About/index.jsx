@@ -11,6 +11,7 @@ const About = () => (
     exit="out"
     initial="initial"
     variants={variants}
+    onAnimationComplete={() => window.scroll(0, 0)}
     className="container grid-about grid"
   >
     <section className="cover">
@@ -92,7 +93,7 @@ const About = () => (
         </p>
       </BlindFrame>
       <BlindFrame>
-        <CTA to="/about" type="lg" className="link-primary svg-primary">
+        <CTA to="/contact" type="lg" className="link-primary svg-primary">
           Let&apos;s start a conversation
         </CTA>
       </BlindFrame>
@@ -112,7 +113,7 @@ const About = () => (
               <br />
               Frontend Web Developer
               <br />
-              2016 – 2018
+              2016 &ndash; 2018
             </p>
           </li>
           <li>
@@ -121,7 +122,7 @@ const About = () => (
               <br />
               Web Developer Consultant
               <br />
-              2014 – Present
+              2014 &ndash; Present
             </p>
           </li>
           <li>
@@ -130,7 +131,7 @@ const About = () => (
               <br />
               Frontend Engineer
               <br />
-              2015 – 2016
+              2015 &ndash; 2016
             </p>
           </li>
           <li>
@@ -139,7 +140,7 @@ const About = () => (
               <br />
               Frontend Developer
               <br />
-              2015 – 2015
+              2015 &ndash; 2015
             </p>
           </li>
           <li>
@@ -148,7 +149,7 @@ const About = () => (
               <br />
               Freelance Web Designer/Developer
               <br />
-              2008 – 2014
+              2008 &ndash; 2014
             </p>
           </li>
         </ul>

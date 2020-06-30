@@ -15,7 +15,7 @@ const variants = {
   },
   initial: {
     opacity: 0,
-    y: '100px',
+    y: '10%',
     transition: {
       duration: 0.5,
       ease: 'easeIn',
@@ -73,7 +73,9 @@ const MainFooter = () => {
             <a href="#">Blog</a>
           </li>
           <li>
-            <a href="#">Contact</a>
+            <Link to="/contact" className="link-grey-b">
+              Contact
+            </Link>
           </li>
         </motion.ul>
       </nav>
