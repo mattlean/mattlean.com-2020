@@ -70,7 +70,9 @@ const MainFooter = () => {
             </Link>
           </li>
           <li>
-            <a href="#">Projects</a>
+            <Link to="/projects" className="link-grey-b">
+              Projects
+            </Link>
           </li>
           <li>
             <Link to="/blog" className="link-grey-b">
@@ -87,7 +89,14 @@ const MainFooter = () => {
       <nav className="external-nav">
         <motion.ul animate={animate} initial="initial" variants={variants}>
           <li>
-            <a href="#">Behance</a>
+            <a
+              href="http://be.net/mattlean"
+              rel="noreferrer"
+              target="_blank"
+              className="link-grey-b"
+            >
+              Behance
+            </a>
           </li>
           <li>
             <a

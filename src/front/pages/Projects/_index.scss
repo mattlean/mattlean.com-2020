@@ -1,7 +1,7 @@
 @use 'visuals/grid' as grid;
 @use 'visuals/size' as size;
 
-.grid-blog {
+.grid-projects {
   grid-template-rows: repeat(9, grid.$row-height);
 
   > header {
@@ -19,7 +19,7 @@
     list-style: none;
     transform: translateY(-7px);
 
-    .post {
+    .project {
       margin-bottom: size.$size-81;
 
       p {

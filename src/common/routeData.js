@@ -13,14 +13,23 @@ const ROUTES = {
   '/contact': {
     title: 'Contact ' + SUFFIX,
   },
+  '/projects': {
+    title: 'Projects ' + SUFFIX,
+  },
 }
 
 /**
- * Get route title if it exists.
+ * Get all route data
+ * @return {Object} Array route data
+ */
+export const getAllRouteData = () => ROUTES
+
+/**
+ * Get route title with given pathname
  * @param {string} pathname Current URL from Express req object or pathname from React Router location object
  * @return {string|'MattLean.com'} Returns route title or "MattLean.com" if route was not found
  */
-const getRoute = (pathname) => {
+export const getRouteTitle = (pathname) => {
   if (ROUTES[pathname]) {
     return ROUTES[pathname].title
   }
@@ -29,5 +38,3 @@ const getRoute = (pathname) => {
   console.warn('Route not found. Setting generic title.')
   return 'MattLean.com'
 }
-
-export default getRoute

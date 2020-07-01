@@ -7,7 +7,8 @@ import Blog from './pages/Blog'
 import Contact from './pages/Contact'
 import Landing from './pages/Landing'
 import MainNav from './components/MainNav'
-import getRoute from '../common/getRoute'
+import Projects from './pages/Projects'
+import { getRouteTitle } from '../common/routeData'
 
 const App = () => {
   const location = useLocation()
@@ -22,7 +23,7 @@ const App = () => {
   })
 
   useEffect(() => {
-    document.title = getRoute(location.pathname)
+    document.title = getRouteTitle(location.pathname)
   }, [location.pathname])
 
   return (
@@ -34,6 +35,7 @@ const App = () => {
           <Route path="/about" component={About} />
           <Route path="/blog" component={Blog} />
           <Route path="/contact" component={Contact} />
+          <Route path="/projects" component={Projects} />
         </Switch>
       </AnimatePresence>
     </ThemeCtx.Provider>

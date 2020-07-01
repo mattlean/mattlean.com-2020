@@ -82,7 +82,13 @@ const MainNav = () => {
             </NavLink>
           </li>
           <li>
-            <a href="#">projects</a>
+            <NavLink
+              to="/projects"
+              activeClassName="main-nav-link-active"
+              className="link-grey-a"
+            >
+              projects
+            </NavLink>
           </li>
           <li>
             <NavLink

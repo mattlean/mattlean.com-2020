@@ -11,4 +11,6 @@ router.get('/blog', (req, res) => res.send(createTemplateString(req.url)))
 
 router.get('/contact', (req, res) => res.send(createTemplateString(req.url)))
 
+router.get('/projects', (req, res) => res.send(createTemplateString(req.url)))
+
 export default router

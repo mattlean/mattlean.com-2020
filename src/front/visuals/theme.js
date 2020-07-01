@@ -8,7 +8,7 @@ export const ThemeCtx = createContext({
 /**
  * Custom hook for theme state
  * @param {boolean} defaultIsDarkVal Sets default value for isDark
- * @returns {Object} Object with shape compatible for ThemeCtx
+ * @return {Object} Object with shape compatible for ThemeCtx
  */
 export const useThemeState = (defaultIsDarkVal = false) => {
   const [isDark, setIsDark] = useState(defaultIsDarkVal)
