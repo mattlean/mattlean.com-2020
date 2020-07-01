@@ -5,6 +5,9 @@ import CTA from '../../components/CTA'
 import MainFooter from '../../components/MainFooter'
 import variants from '../variants'
 
+/**
+ * About Page
+ */
 const About = () => (
   <motion.main
     animate="initial"
@@ -106,74 +109,53 @@ const About = () => (
     >
       <section className="work-edu">
         <h2 className="header-sm">Work</h2>
-        <ul>
-          <li>
-            <p>
-              <strong>Medable</strong>
-              <br />
-              Frontend Web Developer
-              <br />
-              2016 &ndash; 2018
-            </p>
-          </li>
-          <li>
-            <p>
-              <strong>LGC Biosearch Technologies</strong>
-              <br />
-              Web Developer Consultant
-              <br />
-              2014 &ndash; Present
-            </p>
-          </li>
-          <li>
-            <p>
-              <strong>Miles & Company</strong>
-              <br />
-              Frontend Engineer
-              <br />
-              2015 &ndash; 2016
-            </p>
-          </li>
-          <li>
-            <p>
-              <strong>Food Lovers United Company</strong>
-              <br />
-              Frontend Developer
-              <br />
-              2015 &ndash; 2015
-            </p>
-          </li>
-          <li>
-            <p>
-              <strong>MattLean.com</strong>
-              <br />
-              Freelance Web Designer/Developer
-              <br />
-              2008 &ndash; 2014
-            </p>
-          </li>
-        </ul>
+        <dl>
+          <dt>Medable</dt>
+          <dd>
+            Frontend Web Developer
+            <br />
+            2016 &ndash; 2018
+          </dd>
+          <dt>LGC Biosearch Technologies</dt>
+          <dd>
+            Web Developer Consultant
+            <br />
+            2014 &ndash; Present
+          </dd>
+          <dt>Miles & Company</dt>
+          <dd>
+            Frontend Engineer
+            <br />
+            2015 &ndash; 2016
+          </dd>
+          <dt>Food Lovers United Company</dt>
+          <dd>
+            Frontend Developer
+            <br />
+            2015 &ndash; 2015
+          </dd>
+          <dt>MattLean.com</dt>
+          <dd>
+            Freelance Web Designer/Developer
+            <br />
+            2008 &ndash; 2014
+          </dd>
+        </dl>
         <h2 className="header-sm">Education</h2>
-        <ul>
-          <li>
-            <p>
-              <strong>University of California, Santa Cruz</strong>
-              <br />
-              B.S. in Computer Science
-              <br />
-              2015
-            </p>
-          </li>
-          <li>
-            <p>
-              <strong>De Anza College</strong>
-              <br />
-              Certificate in Graphic & Interactive Design
-              <br />
-              2020
-            </p>
-          </li>
-        </ul>
+        <dl>
+          <dt>University of California, Santa Cruz</dt>
+          <dd>
+            B.S. in Computer Science
+            <br />
+            2015
+          </dd>
+          <dt>De Anza College</dt>
+          <dd>
+            Certificate in Graphic & Interactive Design
+            <br />
+            2020
+          </dd>
+        </dl>
       </section>
       <section className="subgrid-skills">
         <section>

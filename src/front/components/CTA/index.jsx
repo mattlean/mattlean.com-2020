@@ -4,10 +4,10 @@ import Arrow from '../../assets/arrow.svg'
 
 /**
  * Call-To-Action
- * @prop {children} children Children for call-to-action
+ * @prop {children} children Children
+ * @prop {string} className Class name HTML attribute that is appended after default class name
  * @prop {string} to Location for call-to-action to navigate to
  * @prop {('lg'|'sm')} type Determines whether call-to-action is large or small
- * @prop {string} className Class name HTML attribute that is appended after default class name
  */
 const CTA = ({ children, className, to, type }) => {
   let cn

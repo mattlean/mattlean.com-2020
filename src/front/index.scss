@@ -3,9 +3,11 @@
 @use 'visuals/logo';
 @use 'visuals/reset';
 @use 'visuals/style';
+@use 'visuals/trans';
 @use 'visuals/typography';
 
 /* Components */
+@use 'components/Badge';
 @use 'components/Blind';
 @use 'components/CTA';
 @use 'components/MainFooter';

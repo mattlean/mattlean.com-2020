@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { useIntersection } from 'react-use'
 
 /**
- * Blind animation
+ * Blind Animation
  * Must be used within a BlindFrame component
  * @prop {number} [delay=0] Delay in seconds
  * @prop {number} [duration=0.5] Duration in seconds

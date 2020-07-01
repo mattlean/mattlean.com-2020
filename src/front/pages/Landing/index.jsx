@@ -9,6 +9,9 @@ import FeaturedG from '../../assets/gridnik-featured-project.jpg'
 import FeaturedLS from '../../assets/lean-space-featured-project.jpg'
 import FeaturedSOT from '../../assets/spectral-overlay-tool-featured-project.jpg'
 
+/**
+ * Landing Page
+ */
 const Landing = () => (
   <motion.main
     animate="initial"

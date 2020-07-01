@@ -1,0 +1,20 @@
+$trans-duration: 1s;
+$trans-timing-fn: ease-out;
+
+body {
+  transition-duration: $trans-duration;
+  transition-property: background-color, color, fill, opacity;
+  transition-timing-function: $trans-timing-fn;
+}
+
+a {
+  transition: color $trans-duration $trans-timing-fn;
+}
+
+path,
+polygon,
+rect {
+  transition-duration: $trans-duration;
+  transition-property: fill, opacity;
+  transition-timing-function: $trans-timing-fn;
+}

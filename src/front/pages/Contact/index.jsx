@@ -6,6 +6,9 @@ import MainFooter from '../../components/MainFooter'
 import variants from '../variants'
 import LinkedInLogo from '../../assets/linkedin.png'
 
+/**
+ * Contact Page
+ */
 const Contact = () => (
   <motion.main
     animate="initial"

@@ -2,7 +2,7 @@
 @use 'visuals/size' as size;
 
 .grid-blog {
-  grid-template-rows: repeat(10, grid.$row-height);
+  grid-template-rows: repeat(9, grid.$row-height);
 
   > header {
     grid-column: 1/2;
@@ -19,12 +19,16 @@
     list-style: none;
     transform: translateY(-7px);
 
-    li {
+    .post {
       margin-bottom: size.$size-81;
 
       p {
         margin-bottom: 0;
         transform: translateY(-2px);
+      }
+
+      .badge-list {
+        margin-top: size.$size-7;
       }
     }
   }

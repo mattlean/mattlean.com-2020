@@ -2,23 +2,9 @@
 @use 'size' as size;
 @use 'typography' as typography;
 
-%transition {
-  transition-duration: 1s;
-  transition-property: background-color, color, fill, opacity;
-  transition-timing-function: ease-out;
-}
-
 body {
-  @extend %transition;
   font: size.$size-18 typography.$txt-font-family;
   text-rendering: optimizeLegibility;
-}
-
-a,
-path,
-polygon,
-rect {
-  @extend %transition;
 }
 
 /* stylelint-disable selector-no-qualifying-type */
@@ -64,6 +50,15 @@ ol > li::before {
 ol > li {
   counter-increment: featured-posts-list;
   position: relative;
+}
+
+dt {
+  font-weight: typography.$txt-medium;
+}
+
+dd {
+  line-height: 1.5em;
+  margin-bottom: 1.5em;
 }
 
 .container {

@@ -23,6 +23,9 @@ const variants = {
   },
 }
 
+/**
+ * Main Footer
+ */
 const MainFooter = () => {
   const intersectionRef = useRef(null)
   const intersection = useIntersection(intersectionRef, {
@@ -70,7 +73,9 @@ const MainFooter = () => {
             <a href="#">Projects</a>
           </li>
           <li>
-            <a href="#">Blog</a>
+            <Link to="/blog" className="link-grey-b">
+              Blog
+            </Link>
           </li>
           <li>
             <Link to="/contact" className="link-grey-b">

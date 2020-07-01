@@ -1,0 +1,23 @@
+@use 'visuals/color' as color;
+@use 'visuals/size' as size;
+
+.badge {
+  border: 1px solid color.$grey-b;
+  border-radius: 20px;
+  color: color.$grey-b;
+  display: inline-block;
+  font-size: size.$size-12;
+  padding: 0.5em 1em;
+}
+
+.badge-list {
+  list-style: none;
+
+  .badge {
+    margin-right: size.$size-12;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

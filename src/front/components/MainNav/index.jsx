@@ -8,6 +8,9 @@ import SunMoon from '../../assets/sun-moon.svg'
 
 const THRESHOLD = 0.5
 
+/**
+ * Main Navigation
+ */
 const MainNav = () => {
   const location = useLocation()
   const [isFirst, setIsFirst] = useState(true)

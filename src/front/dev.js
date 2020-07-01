@@ -1,3 +1,6 @@
+/**
+ * Spawn guide onto document body
+ */
 // eslint-disable-next-line no-unused-vars
 function spawnGuide() {
   var guide = document.createElement('div')

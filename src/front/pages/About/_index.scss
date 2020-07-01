@@ -32,17 +32,8 @@
       margin-bottom: size.$size-14;
     }
 
-    ul {
-      list-style: none;
+    dl {
       margin-bottom: size.$size-45;
-
-      strong {
-        font-weight: typography.$txt-medium;
-      }
-
-      li {
-        margin-bottom: 0.5em;
-      }
     }
 
     > .work-edu {
@@ -52,6 +43,19 @@
     > .subgrid-skills {
       @include grid.grid-gap;
       grid-template-columns: repeat(2, 1fr);
+
+      ul {
+        list-style: none;
+        margin-bottom: size.$size-45;
+
+        strong {
+          font-weight: typography.$txt-medium;
+        }
+
+        li {
+          margin-bottom: 0.5em;
+        }
+      }
     }
   }
 }
