@@ -64,18 +64,18 @@ const About = () => (
       <p>
         For college I moved to northern California to study computer science at
         the University of California, Santa Cruz. Because I had been self-taught
-        up until this point, it was here that I began to truly realize the
-        scope, diversity, and opportunities the field offered. I had been
-        completely oblivious to the importance of computer science fundamentals,
-        and I began to study topics that online tutorials never directed me to
-        like data structure and algorithm analysis, assembly, computer
-        architecture, and more. I also tried to step away from web programming
-        to explore other specializations like graphics programming, network
-        programming, game programming, virtual reality, and more. At the end of
-        my studies I realized that it made the most sense to come full circle
-        and combine my formal computer science education with my previous
-        “street” web coding experiences to find a job in Silicon Valley as a
-        specialist in web technologies.
+        up until this point, it was here that I began to truly realize the scope
+        and diversity in opportunities the field offered. I had been completely
+        oblivious to the importance of computer science fundamentals, and I
+        began to study topics that online tutorials never directed me to like
+        data structure and algorithm analysis, assembly, computer architecture,
+        and more. I also tried to step away from web programming to explore
+        other specializations like graphics programming, network programming,
+        game programming, virtual reality, and more. At the end of my studies I
+        realized that it made the most sense to come full circle and combine my
+        formal computer science education with my previous “street” web coding
+        experiences to find a job in Silicon Valley as a specialist in web
+        technologies.
       </p>
       <p>
         Since graduating and receiving my Bachelor of Science degree in Computer
@@ -194,6 +194,8 @@ const About = () => (
             <li>react-intl</li>
             <li>A11y</li>
             <li>Design Systems</li>
+            <li>SEO</li>
+            <li>BEM</li>
             <li>Backbone.js</li>
             <li>Knockout</li>
           </ul>

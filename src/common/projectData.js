@@ -21,7 +21,7 @@ const PROJECTS = {
   checkpoint: {
     name: 'Checkpoint.js',
     long: 'A data validation and transformation library.',
-    tags: ['library', 'frontend', 'backend'],
+    tags: ['lib', 'frontend', 'backend'],
   },
   crush: {
     name: 'qPCR Crush',
@@ -51,7 +51,7 @@ const PROJECTS = {
   lantern: {
     name: 'Lantern.js',
     long: 'A simple-to-use, lightweight, and customizable image lightbox.',
-    tags: ['library', 'frontend'],
+    tags: ['lib', 'frontend'],
   },
   'lean-space': {
     name: 'Lean Space',
@@ -106,8 +106,8 @@ export const getProjectData = (id) => {
 }
 
 /**
- * Get project data associated with
- * @param {string} id Propject ID
+ * Get property value in project data associated with given ID
+ * @param {string} id Project ID
  * @param {string} prop Project data property name
  * @return {Array|string} Value stored at project data property
  */

@@ -7,7 +7,7 @@ const TAGS = {
   frontend: 'Frontend',
   game: 'Game',
   'game-engine': 'Game Engine',
-  library: 'Library',
+  lib: 'Library',
   misc: 'Miscellaneous',
   template: 'Website Template',
   tooling: 'Tooling',

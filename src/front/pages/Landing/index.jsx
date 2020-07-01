@@ -82,7 +82,7 @@ const Landing = () => (
       </figure>
     </section>
     <BlindFrame className="view-more-projects">
-      <CTA to="/about" type="sm" className=" svg-grey-c link-grey-c">
+      <CTA to="/projects" type="sm" className=" svg-grey-c link-grey-c">
         View all projects
       </CTA>
     </BlindFrame>
@@ -128,7 +128,7 @@ const Landing = () => (
       </figure>
     </section>
     <BlindFrame className="view-more-case-studies">
-      <CTA to="/about" type="sm" className="link-grey-c svg-grey-c">
+      <CTA to="/blog" type="sm" className="link-grey-c svg-grey-c">
         View all case studies
       </CTA>
     </BlindFrame>

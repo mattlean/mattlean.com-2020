@@ -4,7 +4,7 @@ import { renderToString } from 'react-dom/server'
 import { StaticRouter } from 'react-router-dom'
 import App from '../../front/App'
 import template from '../../front/template.ejs'
-import { getRouteTitle } from '../../common/routeData'
+import { getRouteData } from '../../common/routeData'
 
 /**
  * Create template string from template and App React component
@@ -18,9 +18,14 @@ const createTemplateString = (location, context = {}) => {
     </StaticRouter>
   )
 
+  const { desc, keywords, title } = getRouteData(location)
+
+  // TODO: render minified HTML for production
   return ejs.render(template, {
     app,
-    title: getRouteTitle(location),
+    desc,
+    keywords,
+    title,
     NODE_ENV: process.env.NODE_ENV,
   })
 }

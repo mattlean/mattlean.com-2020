@@ -8,7 +8,7 @@ import Contact from './pages/Contact'
 import Landing from './pages/Landing'
 import MainNav from './components/MainNav'
 import Projects from './pages/Projects'
-import { getRouteTitle } from '../common/routeData'
+import { getRouteProp } from '../common/routeData'
 
 const App = () => {
   const location = useLocation()
@@ -23,7 +23,7 @@ const App = () => {
   })
 
   useEffect(() => {
-    document.title = getRouteTitle(location.pathname)
+    document.title = getRouteProp(location.pathname, 'title')
   }, [location.pathname])
 
   return (
