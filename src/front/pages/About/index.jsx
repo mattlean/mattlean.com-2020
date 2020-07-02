@@ -39,15 +39,15 @@ const About = () => (
         In elementary school, my sister introduced me to a browser game called
         Neopets. The main objective of the game was to take care of your virtual
         pets, but the most impactful feature was that it allowed users to
-        personalize and share webpages in-game with HTML, CSS, and even
-        JavaScript. I ended up building sinful pages with lots of blue Comic
-        Sans, absurdly loud autoplaying MIDI music, flashing background GIFs
-        that probably triggered epileptic seizures, and seemingly endless stacks
-        of alert dialog boxes that would “freeze” your computer and make your
-        mom think you got a virus. (I&apos;m sorry!) Despite the fact I was
-        creating stupid webpages about my Neopets, I didn&apos;t realize how
-        important it was that the game had introduced the very fabric of the web
-        to me.
+        personalize and share webpages in-game with HTML, CSS, and JavaScript. I
+        ended up building sinful pages with lots of blue Comic Sans, absurdly
+        loud autoplaying MIDI music, flashing background GIFs that probably
+        triggered epileptic seizures, and seemingly endless stacks of alert
+        dialog boxes that would “freeze” your computer and make your mom think
+        you got a virus. (I apologize if you ever fell victim to my heinous
+        crimes!) Despite the fact I was creating stupid webpages about my
+        Neopets, I didn&apos;t realize how important it was that the game had
+        introduced the very fabric of the web to me.
       </p>
       <p>
         After countless scoldings for me to stop gaming, I quit and continued to
