@@ -8,7 +8,8 @@ import Contact from './pages/Contact'
 import Landing from './pages/Landing'
 import MainNav from './components/MainNav'
 import Projects from './pages/Projects'
-import { getRouteProp } from '../common/routeData'
+import { getRouteData } from '../common/routeData'
+import { updateMeta } from './util'
 
 const App = () => {
   const location = useLocation()
@@ -22,8 +23,12 @@ const App = () => {
     }
   })
 
+  // Update document head
   useEffect(() => {
-    document.title = getRouteProp(location.pathname, 'title')
+    const { desc, keywords, title } = getRouteData(location.pathname)
+    document.title = title
+    updateMeta('description', desc)
+    updateMeta('keywords', keywords)
   }, [location.pathname])
 
   return (

@@ -28,7 +28,7 @@ module.exports = merge([
     },
   }),
 
-  copyFiles([{ from: 'src/front/dev.js' }]),
+  copyFiles([{ from: 'src/front/util/dev.js' }]),
 
   genSourceMaps('cheap-module-eval-source-map'),
 

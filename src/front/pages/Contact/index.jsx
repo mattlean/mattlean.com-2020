@@ -33,7 +33,7 @@ const Contact = () => (
     <ul>
       <li>
         <BlindFrame>
-          <a href="mailto:matt@mattlean.com">
+          <a href="mailto:matt@mattlean.com" className="link-primary">
             <MailIcon size={24} />
             matt@mattlean.com
           </a>
@@ -45,6 +45,7 @@ const Contact = () => (
             href="https://linkedin.com/in/mattlean"
             rel="noreferrer"
             target="_blank"
+            className="link-primary"
           >
             <img src={LinkedInLogo} alt="LinkedIn Icon" />
             linkedin.com/in/mattlean
