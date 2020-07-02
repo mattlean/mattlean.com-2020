@@ -15,6 +15,9 @@
     "front:build": "webpack --config webpack/front/config.js --env.type development",
     "front:build:production": "webpack --config webpack/front/config.js --env.type production",
     "format": "prettier --write .",
+    "lint": "yarn lint:js && yarn lint:styles",
+    "lint:js": "eslint --ext .js,.json,.jsx src/ webpack/",
+    "lint:styles": "stylelint \"src/**/*.scss\"",
     "start:production": "NODE_ENV=production node build/back/production/server"
   },
   "dependencies": {
