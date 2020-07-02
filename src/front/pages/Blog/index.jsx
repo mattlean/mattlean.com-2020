@@ -5,11 +5,26 @@ import BlindFrame from '../../components/Blind/BlindFrame'
 import MainFooter from '../../components/MainFooter'
 import variants from '../variants'
 import { getAllPostData } from '../../../common/postData'
+import { getTagName } from '../../../common/tagData'
 
 const allPostData = getAllPostData()
 const posts = []
 for (const i in allPostData) {
   const currPostData = allPostData[i]
+
+  const tags = []
+  for (const i in currPostData.tags) {
+    const currTagID = currPostData.tags[i]
+
+    if (currTagID) {
+      tags.push(
+        <Badge key={currTagID} nodeType="li">
+          {getTagName(currTagID)}
+        </Badge>
+      )
+    }
+  }
+
   posts.push(
     <BlindFrame
       key={currPostData.id}
@@ -23,12 +38,7 @@ for (const i in allPostData) {
         <p className="txt-xs txt-grey-a">
           January 11, 2020 &middot; 5 min read
         </p>
-        <ul className="badge-list">
-          <Badge nodeType="li">Case Study</Badge>
-          <Badge nodeType="li">Backend</Badge>
-          <Badge nodeType="li">Design</Badge>
-          <Badge nodeType="li">Frontend</Badge>
-        </ul>
+        <ul className="badge-list">{tags}</ul>
       </a>
     </BlindFrame>
   )

@@ -11,6 +11,7 @@ const ORDER = [
   'ljsas',
   'crush',
   'adam',
+  'alwp',
   'lean-space',
   'lantern',
   'themeboot',
@@ -21,6 +22,13 @@ const PROJECTS = {
     name: 'Adam Engine',
     long: 'A 2D game engine built with HTML5 Canvas.',
     tags: ['game-engine', 'frontend'],
+  },
+  alwp: {
+    id: 'alwp',
+    name: 'Asset List Webpack Plugin',
+    long:
+      'A webpack plugin that output a list of generated assets with your bundle',
+    tags: ['webpack-plugin', 'tooling'],
   },
   checkpoint: {
     id: 'checkpoint',

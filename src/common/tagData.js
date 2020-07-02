@@ -24,10 +24,10 @@ const TAGS = {
 export const getAllTagData = () => TAGS
 
 /**
- * Get tag data associated with given ID
+ * Get tag name associated with given ID
  * @param {string} id Project ID
- * @return {Object} Tag data
+ * @return {Object} Tag name
  */
-export const getTagData = (id) => {
+export const getTagName = (id) => {
   return TAGS[id]
 }

@@ -12,14 +12,14 @@ const POSTS = {
       img: FeaturedCSLeanSpace,
       alt: "Featured image for Lean Space case study: the project's logo",
     },
-    tags: ['case-study', 'design', 'frontend'],
+    tags: ['cs', 'design', 'frontend'],
   },
   'cs-ml2020': {
     id: 'cs-ml2020',
     title: 'Case Study: MattLean.com',
     subtitle: 'How I designed my 2020 personal brand and developed my website.',
     published: 'June 30, 2020',
-    tags: ['case-study', 'backend', 'design', 'frontend'],
+    tags: ['cs', 'backend', 'design', 'frontend'],
   },
   'cs-sot': {
     id: 'cs-sot',
@@ -31,7 +31,7 @@ const POSTS = {
       alt:
         "Featured image for Spectral Overlay Tool case study: a screenshot of one of the tool's charts",
     },
-    tags: ['case-study', 'design', 'frontend', 'tooling'],
+    tags: ['cs', 'design', 'frontend', 'tooling'],
   },
   'hello-world': {
     id: 'hello-world',
