@@ -49,7 +49,7 @@
   }
 
   %subgrid-featured-project {
-    @include grid.grid-gap;
+    @include grid.grid-base;
     grid-row: 1/4;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);

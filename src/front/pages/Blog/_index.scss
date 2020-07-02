@@ -22,13 +22,17 @@
     .post {
       margin-bottom: size.$size-81;
 
-      p {
-        margin-bottom: 0;
-        transform: translateY(-2px);
-      }
+      > a {
+        text-decoration: none;
 
-      .badge-list {
-        margin-top: size.$size-7;
+        &:hover > h2 {
+          text-decoration: underline;
+        }
+
+        > p {
+          margin-bottom: 0;
+          transform: translateY(-5px);
+        }
       }
     }
   }

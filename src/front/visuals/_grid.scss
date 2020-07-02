@@ -2,13 +2,12 @@
 
 $row-height: 157px;
 
-@mixin grid-gap {
-  column-gap: size.$size-27;
+@mixin grid-base {
   display: grid;
-  row-gap: size.$size-27;
+  grid-gap: size.$size-27;
 }
 
 .grid {
-  @include grid-gap;
+  @include grid-base;
   grid-template-columns: repeat(6, 1fr);
 }

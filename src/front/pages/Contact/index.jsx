@@ -22,7 +22,7 @@ const Contact = () => (
       <BlindFrame>
         <h1 className="header-lg">Let&apos;s get in touch.</h1>
       </BlindFrame>
-      <BlindFrame>
+      <BlindFrame delay={0.5}>
         <p className="txt-lg txt-grey-a">
           Have any questions? Got a project in mind for me?
           <br />
@@ -32,7 +32,7 @@ const Contact = () => (
     </section>
     <ul>
       <li>
-        <BlindFrame>
+        <BlindFrame delay={0.5}>
           <a href="mailto:matt@mattlean.com" className="link-primary">
             <MailIcon size={24} />
             matt@mattlean.com
@@ -40,7 +40,7 @@ const Contact = () => (
         </BlindFrame>
       </li>
       <li>
-        <BlindFrame>
+        <BlindFrame delay={0.5}>
           <a
             href="https://linkedin.com/in/mattlean"
             rel="noreferrer"

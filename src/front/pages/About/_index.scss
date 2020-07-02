@@ -41,7 +41,7 @@
     }
 
     > .subgrid-skills {
-      @include grid.grid-gap;
+      @include grid.grid-base;
       grid-template-columns: repeat(2, 1fr);
 
       ul {

@@ -4,6 +4,7 @@ import FeaturedCSSOT from '../front/assets/spectral-overlay-tool-featured-projec
 const ORDER = ['cs-ml2020', 'cs-sot', 'cs-lean-space', 'hello-world']
 const POSTS = {
   'cs-lean-space': {
+    id: 'cs-lean-space',
     title: 'Case Study: Lean Space',
     subtitle: 'Learnings from building my personal website in 2015.',
     published: 'June 30, 2020',
@@ -14,12 +15,14 @@ const POSTS = {
     tags: ['case-study', 'design', 'frontend'],
   },
   'cs-ml2020': {
+    id: 'cs-ml2020',
     title: 'Case Study: MattLean.com',
     subtitle: 'How I designed my 2020 personal brand and developed my website.',
     published: 'June 30, 2020',
     tags: ['case-study', 'backend', 'design', 'frontend'],
   },
   'cs-sot': {
+    id: 'cs-sot',
     title: 'Case Study: Spectral Overlay Tool',
     subtitle: 'Building a biotech data visualization tool.',
     published: 'June 30, 2020',
@@ -31,6 +34,7 @@ const POSTS = {
     tags: ['case-study', 'design', 'frontend', 'tooling'],
   },
   'hello-world': {
+    id: 'hello-world',
     title: 'Hello world!',
     subtitle: 'Another few years, another blog...',
     published: 'August 31, 2015',
@@ -44,8 +48,8 @@ const POSTS = {
  */
 export const getAllPostData = () => {
   const data = []
-  for (const id in ORDER) {
-    data.push(getPostData(id))
+  for (const i in ORDER) {
+    data.push(getPostData(ORDER[i]))
   }
   return data
 }
