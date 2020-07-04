@@ -1,10 +1,9 @@
-@use 'visuals/grid' as grid;
 @use 'visuals/size' as size;
 
 .main-nav {
   align-items: flex-end;
   display: flex;
-  height: grid.$row-height;
+  height: size.$size-157;
   justify-content: space-between;
   margin-bottom: size.$size-27;
 
@@ -30,10 +29,6 @@
         text-decoration: underline;
       }
     }
-
-    > li:last-child {
-      position: relative;
-    }
   }
 }
 
@@ -41,11 +36,9 @@
   background: none;
   border: 0;
   cursor: pointer;
-  position: absolute;
-  top: -15px;
+  vertical-align: middle;
 
   > svg {
-    vertical-align: middle;
     width: 19.24px;
   }
 }

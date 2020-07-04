@@ -41,12 +41,14 @@ const Projects = () => (
     initial="initial"
     variants={variants}
     onAnimationComplete={() => window.scroll(0, 0)}
-    className="container grid-projects grid"
+    className="container"
   >
-    <BlindFrame nodeType="header">
-      <h1 className="header-lg">Projects</h1>
-    </BlindFrame>
-    <ul className="content">{projects}</ul>
+    <main className="grid-projects grid">
+      <BlindFrame nodeType="header">
+        <h1 className="header-lg">Projects</h1>
+      </BlindFrame>
+      <ul className="content">{projects}</ul>
+    </main>
     <MainFooter />
   </motion.main>
 )

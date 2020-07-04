@@ -48,20 +48,24 @@ for (const i in allPostData) {
  * Blog Page
  */
 const Blog = () => (
-  <motion.main
+  <motion.div
     animate="initial"
     exit="out"
     initial="initial"
     variants={variants}
     onAnimationComplete={() => window.scroll(0, 0)}
-    className="container grid-blog grid"
+    className="container"
   >
-    <BlindFrame nodeType="header">
-      <h1 className="header-lg">Blog</h1>
-    </BlindFrame>
-    <ul className="content">{posts}</ul>
+    <main className="grid-blog grid">
+      <header>
+        <BlindFrame>
+          <h1 className="header-lg">Blog</h1>
+        </BlindFrame>
+      </header>
+      <ul className="content">{posts}</ul>
+    </main>
     <MainFooter />
-  </motion.main>
+  </motion.div>
 )
 
 export default Blog

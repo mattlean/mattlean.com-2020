@@ -50,18 +50,19 @@ const MainFooter = () => {
 
   return (
     <footer ref={intersectionRef} className="main-footer grid txt-grey-b">
-      <motion.ul
+      <motion.dl
         animate={animate}
         initial="initial"
         variants={variants}
         className="personal-title"
       >
-        <li>
-          <strong>Matt Lean</strong>
-        </li>
-        <li>Full-Stack Web Developer</li>
-        <li>UI/UX Designer</li>
-      </motion.ul>
+        <dt>Matt Lean</dt>
+        <dd>
+          Full-Stack Web Developer
+          <br />
+          UI/UX Designer
+        </dd>
+      </motion.dl>
       <nav className="internal-nav">
         <motion.ul animate={animate} initial="initial" variants={variants}>
           <li>

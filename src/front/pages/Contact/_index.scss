@@ -1,13 +1,13 @@
-@use 'visuals/grid' as grid;
 @use 'visuals/size' as size;
 @use 'visuals/typography' as typography;
 
 .grid-contact {
-  grid-template-rows: repeat(8, grid.$row-height);
+  grid-template-rows: repeat(3, size.$size-157);
+  margin-top: size.$size-184;
 
   .cover {
     grid-column: 1/5;
-    grid-row: 2/3;
+    grid-row: 1/2;
 
     .header-lg {
       margin-bottom: size.$size-30;
@@ -16,7 +16,7 @@
 
   > ul {
     grid-column: 1/4;
-    grid-row: 4/5;
+    grid-row: 3/4;
     list-style: none;
 
     > li {

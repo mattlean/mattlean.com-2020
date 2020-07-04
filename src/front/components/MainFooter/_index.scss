@@ -1,9 +1,8 @@
 @use 'visuals/size' as size;
 
 .main-footer {
-  grid-column: 1/7;
-  grid-row: -1/-3;
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(2, size.$size-157);
+  margin-top: size.$size-368;
 
   ul {
     list-style: none;
@@ -17,25 +16,32 @@
   nav {
     grid-row: -2/-3;
   }
-}
 
-.personal-title {
-  grid-column: 1/3;
-}
-
-.internal-nav {
-  grid-column: -2/-3;
-}
-
-.external-nav {
-  grid-column: -1/-2;
-}
-
-.main-footer {
   p {
     align-self: end;
-    grid-column: 1/7;
-    grid-row: -2/-3;
+    grid-column: 1/4;
+    grid-row-start: 1;
     margin-bottom: 0;
+  }
+
+  .personal-title {
+    grid-column: 1/3;
+    grid-row: 1;
+
+    > dt {
+      margin-bottom: size.$size-7;
+    }
+
+    > dd {
+      line-height: 1.68em;
+    }
+  }
+
+  .internal-nav {
+    grid-column: -2/-3;
+  }
+
+  .external-nav {
+    grid-column: -1/-2;
   }
 }
