@@ -29,11 +29,11 @@ for (const i in allPostData) {
     <BlindFrame
       key={currPostData.id}
       delay={0.5}
-      nodeType="li"
+      nodeType="article"
       className="post"
     >
       <a href="#">
-        <h2 className="header-md">{currPostData.title}</h2>
+        <h2 className="header-md link-primary">{currPostData.title}</h2>
         <p className="txt-grey-a">{currPostData.subtitle}</p>
         <p className="txt-xs txt-grey-a">
           January 11, 2020 &middot; 5 min read
@@ -62,7 +62,7 @@ const Blog = () => (
           <h1 className="header-lg">Blog</h1>
         </BlindFrame>
       </header>
-      <ul className="content">{posts}</ul>
+      <section className="content">{posts}</section>
     </main>
     <MainFooter />
   </motion.div>

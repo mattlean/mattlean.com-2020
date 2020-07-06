@@ -18,7 +18,7 @@ for (const i in allProjectData) {
       className="project"
     >
       <a href="#">
-        <h2 className="header-md">{currProjectData.name}</h2>
+        <h2 className="header-md link-primary">{currProjectData.name}</h2>
         <p className="txt-grey-a">{currProjectData.long}</p>
         <ul className="badge-list">
           <Badge nodeType="li">Case Study</Badge>
