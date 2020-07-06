@@ -2,7 +2,7 @@
 @use 'visuals/size' as size;
 
 .grid-blog {
-  grid-template-rows: repeat(auto-fit, minmax(size.$size-157, 1fr));
+  // grid-template-rows: repeat(auto-fit, minmax(size.$size-157, 1fr));
   margin-top: size.$size-184;
 
   > header {

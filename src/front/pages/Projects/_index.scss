@@ -1,11 +1,10 @@
 @use 'visuals/size' as size;
 
 .grid-projects {
-  grid-template-rows: repeat(9, size.$size-157);
+  margin-top: size.$size-184;
 
   > header {
     grid-column: 1/2;
-    grid-row: 2/3;
 
     .header-lg {
       transform: translateY(-17px);
@@ -13,8 +12,8 @@
   }
 
   > .content {
-    grid-column: 3/7;
-    grid-row: 2/6;
+    grid-column: 3/-1;
+    grid-row: 1;
     list-style: none;
     transform: translateY(-7px);
 

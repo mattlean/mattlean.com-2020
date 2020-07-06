@@ -35,7 +35,7 @@ for (const i in allProjectData) {
  * Projects
  */
 const Projects = () => (
-  <motion.main
+  <motion.div
     animate="initial"
     exit="out"
     initial="initial"
@@ -44,13 +44,15 @@ const Projects = () => (
     className="container"
   >
     <main className="grid-projects grid">
-      <BlindFrame nodeType="header">
-        <h1 className="header-lg">Projects</h1>
-      </BlindFrame>
+      <header>
+        <BlindFrame nodeType="header">
+          <h1 className="header-lg">Projects</h1>
+        </BlindFrame>
+      </header>
       <ul className="content">{projects}</ul>
     </main>
     <MainFooter />
-  </motion.main>
+  </motion.div>
 )
 
 export default Projects
