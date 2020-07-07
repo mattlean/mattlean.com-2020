@@ -1,7 +1,5 @@
 @use 'size' as size;
 
-$row-height: 157px;
-
 @mixin grid-base {
   display: grid;
   grid-gap: size.$size-27;
@@ -9,7 +7,7 @@ $row-height: 157px;
 
 .grid {
   @include grid-base;
-  grid-template-columns: repeat(auto-fill, minmax(159px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(size.$size-157, 1fr));
 }
 
 @media (max-width: size.$size-470) {

@@ -42,3 +42,27 @@
     }
   }
 }
+
+@media (max-width: size.$size-470) {
+  .grid-contact {
+    > ul {
+      > li {
+        margin-bottom: size.$size-24;
+
+        a {
+          font-size: size.$size-24;
+
+          > img {
+            height: size.$size-20;
+            margin-right: size.$size-24;
+          }
+
+          > svg {
+            margin-right: size.$size-24;
+            width: size.$size-20;
+          }
+        }
+      }
+    }
+  }
+}
