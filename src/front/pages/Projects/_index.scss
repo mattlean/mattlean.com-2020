@@ -1,6 +1,7 @@
 @use 'visuals/size' as size;
 
 .grid-projects {
+  margin-bottom: size.$size-27;
   margin-top: size.$size-184;
 
   > header {
@@ -36,6 +37,21 @@
         > .badge-list {
           margin-top: size.$size-7;
         }
+      }
+    }
+  }
+}
+
+@media (max-width: size.$size-960) {
+  .grid-projects {
+    margin-bottom: size.$size-24;
+
+    > .content {
+      grid-column: 1/4;
+      grid-row-start: 2;
+
+      .project {
+        margin-bottom: size.$size-72;
       }
     }
   }

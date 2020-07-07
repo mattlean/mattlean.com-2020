@@ -4,20 +4,19 @@
   grid-template-rows: repeat(2, size.$size-157);
   margin-top: size.$size-368;
 
-  ul {
-    list-style: none;
+  > nav {
+    grid-row-start: 1;
 
-    li {
-      margin-bottom: size.$size-9;
+    > ul {
+      list-style: none;
+
+      > li {
+        margin-bottom: 0.5em;
+      }
     }
   }
 
-  ul,
-  nav {
-    grid-row: -2/-3;
-  }
-
-  p {
+  > p {
     align-self: end;
     grid-column: 1/4;
     grid-row-start: 1;
@@ -43,5 +42,39 @@
 
   .external-nav {
     grid-column: -1/-2;
+  }
+}
+
+@media (max-width: 720px) {
+  .main-footer.grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, size.$size-176);
+  }
+
+  .main-footer {
+    margin-top: 200px;
+
+    > nav {
+      grid-row-start: 2;
+    }
+
+    > p {
+      align-self: auto;
+      grid-row-start: 3;
+    }
+
+    .personal-title {
+      grid-column: 1/-1;
+      grid-row: auto;
+
+      > dt {
+        margin-bottom: 0;
+      }
+    }
+
+    .external-nav,
+    .internal-nav {
+      grid-column: auto;
+    }
   }
 }

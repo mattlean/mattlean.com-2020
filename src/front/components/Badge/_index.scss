@@ -14,10 +14,16 @@
   list-style: none;
 
   .badge {
-    margin-right: size.$size-12;
+    margin-right: 1em;
 
     &:last-child {
       margin-right: 0;
     }
+  }
+}
+
+@media (max-width: size.$size-470) {
+  .badge {
+    font-size: size.$size-10;
   }
 }

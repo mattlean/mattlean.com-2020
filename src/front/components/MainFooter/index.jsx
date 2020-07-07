@@ -127,7 +127,7 @@ const MainFooter = () => {
         variants={variants}
         className="txt-xs txt-grey-c"
       >
-        Made with too much boba tea in SF Bay Area.{' '}
+        Made with too much boba tea in SF Bay Area. <br className="d-sm" />
         <a href="#" className="link-grey-c">
           Learn more about this site.
         </a>

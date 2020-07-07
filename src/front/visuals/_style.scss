@@ -4,7 +4,8 @@
 
 body {
   font: size.$size-18 typography.$txt-font-family;
-  margin: size.$size-27;
+  margin-left: size.$size-27;
+  margin-right: size.$size-27;
   text-rendering: optimizeLegibility;
 }
 
@@ -70,4 +71,20 @@ dd {
 /* TODO: remove */
 .img-placeholder {
   background-color: color.$grey-b;
+}
+
+.d-sm {
+  display: none;
+}
+
+@media (max-width: size.$size-470) {
+  body {
+    font-size: size.$size-16;
+    margin-left: size.$size-18;
+    margin-right: size.$size-18;
+  }
+
+  .d-sm {
+    display: inline;
+  }
 }

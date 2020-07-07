@@ -2,6 +2,7 @@
 @use 'visuals/size' as size;
 
 .grid-blog {
+  margin-bottom: size.$size-27;
   margin-top: size.$size-184;
 
   > header {
@@ -34,6 +35,21 @@
           margin-bottom: 0;
           transform: translateY(-5px);
         }
+      }
+    }
+  }
+}
+
+@media (max-width: size.$size-960) {
+  .grid-blog {
+    margin-bottom: size.$size-24;
+
+    > .content {
+      grid-column: 1/4;
+      grid-row-start: 2;
+
+      .post {
+        margin-bottom: size.$size-72;
       }
     }
   }

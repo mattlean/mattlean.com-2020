@@ -11,3 +11,9 @@ $row-height: 157px;
   @include grid-base;
   grid-template-columns: repeat(auto-fill, minmax(159px, 1fr));
 }
+
+@media (max-width: size.$size-470) {
+  .grid {
+    grid-gap: size.$size-18;
+  }
+}
