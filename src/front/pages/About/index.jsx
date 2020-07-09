@@ -47,8 +47,8 @@ const About = () => (
           stacks of alert dialog boxes that would “freeze” your computer and
           make your mom think you got a virus. (I apologize if you ever fell
           victim to my heinous crimes!) Despite the fact I was creating stupid
-          webpages about my Neopets, I didn&apos;t realize how important it was
-          that the game had introduced the very fabric of the web to me.
+          webpages about my Neopets, I didn’t realize how important it was that
+          the game had introduced the very fabric of the web to&nbsp;me.
         </p>
         <p>
           After countless scoldings for me to stop gaming, I quit and continued
@@ -61,7 +61,7 @@ const About = () => (
           mowing lawns or watering plants, I decided to start freelance web
           designing and built websites for small, local businesses with PHP,
           MySQL, WordPress, Magento, phpBB, jQuery, Photoshop, Illustrator, and
-          Flash.
+          &nbsp;Flash.
         </p>
         <p>
           For college I moved to northern California to study computer science
@@ -77,7 +77,7 @@ const About = () => (
           and more. At the end of my studies I realized that it made the most
           sense to come full circle and combine my formal computer science
           education with my previous “street” web coding experiences to find a
-          job in Silicon Valley as a specialist in web technologies.
+          job in Silicon Valley as a specialist in web&nbsp;technologies.
         </p>
         <p>
           Since graduating and receiving my Bachelor of Science degree in
@@ -87,7 +87,7 @@ const About = () => (
           technologies. As I currently live in South Bay, occasionally when I
           have extra time I take an online or night class at De Anza College
           where I am sluggishly working towards an associate degree in Graphic &
-          Interactive Design.
+          Interactive&nbsp;Design.
         </p>
       </BlindFrame>
       <section className="closing">
