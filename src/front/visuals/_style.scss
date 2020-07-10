@@ -4,6 +4,8 @@
 
 body {
   font: size.$size-18 typography.$txt-font-family;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
   margin-left: size.$size-27;
   margin-right: size.$size-27;
   text-rendering: optimizeLegibility;

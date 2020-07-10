@@ -1,11 +1,11 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import Badge from '../../components/Badge'
-import BlindFrame from '../../components/Blind/BlindFrame'
-import MainFooter from '../../components/MainFooter'
-import variants from '../variants'
-import { getAllPostData } from '../../../common/postData'
-import { getTagName } from '../../../common/tagData'
+import Badge from '../components/Badge'
+import BlindFrame from '../components/Blind/BlindFrame'
+import MainFooter from '../components/MainFooter'
+import variants from './variants'
+import { getAllPostData } from '../../common/postData'
+import { getTagName } from '../../common/tagData'
 
 const allPostData = getAllPostData()
 const posts = []
@@ -30,7 +30,7 @@ for (const i in allPostData) {
       key={currPostData.id}
       delay={0.5}
       nodeType="article"
-      className="post"
+      className="item"
     >
       <a href="#">
         <h2 className="header-md link-primary">{currPostData.title}</h2>
@@ -56,7 +56,7 @@ const Blog = () => (
     onAnimationComplete={() => window.scroll(0, 0)}
     className="container"
   >
-    <main className="grid-blog grid">
+    <main className="grid-feed grid">
       <header>
         <BlindFrame>
           <h1 className="header-lg">Blog</h1>

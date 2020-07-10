@@ -1,7 +1,7 @@
-@use 'visuals/grid' as grid;
-@use 'visuals/size' as size;
+@use 'grid' as grid;
+@use 'size' as size;
 
-.grid-blog {
+.grid-feed {
   margin-bottom: size.$size-27;
   margin-top: size.$size-184;
 
@@ -19,7 +19,7 @@
     list-style: none;
     transform: translateY(-7px);
 
-    .post {
+    .item {
       display: flex;
       margin-bottom: size.$size-81;
 
@@ -35,13 +35,17 @@
           margin-bottom: 0;
           transform: translateY(-5px);
         }
+
+        > .badge-list {
+          margin-top: size.$size-7;
+        }
       }
     }
   }
 }
 
 @media (max-width: size.$size-960) {
-  .grid-blog {
+  .grid-feed {
     margin-bottom: size.$size-24;
 
     > header {
@@ -62,10 +66,12 @@
 }
 
 @media (max-width: size.$size-470) {
-  > header {
-    .header-lg {
-      margin-bottom: size.$size-32;
-      transform: translateY(-15px);
+  .grid-feed {
+    > header {
+      .header-lg {
+        margin-bottom: size.$size-32;
+        transform: translateY(-15px);
+      }
     }
   }
 }
