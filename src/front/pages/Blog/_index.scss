@@ -44,6 +44,12 @@
   .grid-blog {
     margin-bottom: size.$size-24;
 
+    > header {
+      .header-lg {
+        margin-bottom: size.$size-30;
+      }
+    }
+
     > .content {
       grid-column: 1/4;
       grid-row-start: 2;
@@ -51,6 +57,15 @@
       .post {
         margin-bottom: size.$size-72;
       }
+    }
+  }
+}
+
+@media (max-width: size.$size-470) {
+  > header {
+    .header-lg {
+      margin-bottom: size.$size-32;
+      transform: translateY(-15px);
     }
   }
 }
