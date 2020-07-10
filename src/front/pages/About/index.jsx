@@ -60,8 +60,8 @@ const About = () => (
           started her own neighborhood business as a dog walker. Instead of
           mowing lawns or watering plants, I decided to start freelance web
           designing and built websites for small, local businesses with PHP,
-          MySQL, WordPress, Magento, phpBB, jQuery, Photoshop, Illustrator, and
-          &nbsp;Flash.
+          MySQL, WordPress, Magento, phpBB, jQuery, Photoshop, Illustrator,
+          and&nbsp;Flash.
         </p>
         <p>
           For college I moved to northern California to study computer science

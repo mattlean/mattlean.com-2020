@@ -31,3 +31,13 @@
     width: 17.3px;
   }
 }
+
+@media (max-width: size.$size-470) {
+  .cta-lg {
+    font-size: size.$size-24;
+
+    > svg {
+      width: 23.22px;
+    }
+  }
+}

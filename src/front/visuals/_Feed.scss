@@ -67,6 +67,8 @@
 
 @media (max-width: size.$size-470) {
   .grid-feed {
+    margin-bottom: size.$size-24;
+
     > header {
       .header-lg {
         margin-bottom: size.$size-32;
