@@ -45,11 +45,17 @@
   }
 }
 
+@media (max-width: size.$size-960) {
+  .main-footer.grid {
+    grid-template-rows: repeat(2, size.$size-147);
+  }
+}
+
 @media (max-width: size.$size-760) {
   .main-footer.grid {
     column-gap: size.$size-18;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, auto) size.$size-176;
+    grid-template-rows: repeat(2, auto) size.$size-147;
     row-gap: size.$size-32;
   }
 
@@ -79,5 +85,11 @@
     .internal-nav {
       grid-column: auto;
     }
+  }
+}
+
+@media (max-width: size.$size-470) {
+  .main-footer.grid {
+    grid-template-rows: repeat(2, auto) size.$size-176;
   }
 }

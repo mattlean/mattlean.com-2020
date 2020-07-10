@@ -13,5 +13,6 @@
 @media (max-width: size.$size-470) {
   .grid {
     grid-gap: size.$size-18;
+    grid-template-columns: 1fr;
   }
 }
