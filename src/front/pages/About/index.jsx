@@ -100,7 +100,7 @@ const About = () => (
         </BlindFrame>
         <BlindFrame>
           <CTA to="/contact" type="lg" className="link-primary svg-primary">
-            Let&apos;s start a conversation
+            Let&apos;s start talking
           </CTA>
         </BlindFrame>
       </section>

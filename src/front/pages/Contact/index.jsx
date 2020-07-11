@@ -21,13 +21,13 @@ const Contact = () => (
     <main className="grid-contact grid">
       <section className="cover">
         <BlindFrame>
-          <h1 className="header-lg">Let&apos;s get in touch.</h1>
+          <h1 className="header-lg">Let&apos;s get in&nbsp;touch.</h1>
         </BlindFrame>
         <BlindFrame delay={0.5}>
           <p className="txt-lg txt-grey-a">
-            Have any questions? Got a project in mind for me?
+            Have any questions? Got a project in mind for&nbsp;me?
             <br />
-            Let’s connect and start talking.
+            Let’s connect and start&nbsp;talking.
           </p>
         </BlindFrame>
       </section>

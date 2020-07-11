@@ -3,6 +3,7 @@
 
 .grid-contact {
   grid-template-rows: repeat(3, size.$size-157);
+  margin-bottom: size.$size-27;
   margin-top: size.$size-184;
 
   .cover {
@@ -43,8 +44,16 @@
   }
 }
 
+@media (max-width: size.$size-760) {
+  .grid-contact {
+    display: block;
+  }
+}
+
 @media (max-width: size.$size-470) {
   .grid-contact {
+    margin-bottom: size.$size-24;
+
     > ul {
       > li {
         margin-bottom: size.$size-24;
