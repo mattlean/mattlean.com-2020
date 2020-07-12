@@ -65,6 +65,18 @@
   }
 }
 
+@media (max-width: size.$size-760) {
+  .grid-feed {
+    > .header {
+      grid-column: 1/-1;
+    }
+
+    > .content {
+      grid-column: 1/-1;
+    }
+  }
+}
+
 @media (max-width: size.$size-470) {
   .grid-feed {
     margin-bottom: size.$size-24;

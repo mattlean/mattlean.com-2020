@@ -3,7 +3,8 @@
 @use 'visuals/typography' as typography;
 
 .grid-landing {
-  grid-template-rows: repeat(19, size.$size-157);
+  grid-template-rows: repeat(11, size.$size-157);
+  margin-bottom: size.$size-27;
   margin-top: size.$size-184;
 
   .cover {
@@ -21,17 +22,17 @@
 
   %featured-header {
     align-self: end;
-    grid-column: 1/7;
+    grid-column: 1/-1;
   }
 
   .featured-projects-header {
     @extend %featured-header;
-    grid-row: 5/6;
+    grid-row: 4/5;
   }
 
   .featured-case-studies-header {
     @extend %featured-header;
-    grid-row: 9/10;
+    grid-row: 8/9;
   }
 
   .featured-posts-header {
@@ -41,7 +42,7 @@
   }
 
   .subgrid-featured {
-    grid-column: 1/7;
+    grid-column: 1/-1;
     grid-template-rows: repeat(3, 1fr);
 
     img {
@@ -52,7 +53,7 @@
   }
 
   .featured-projects {
-    grid-row: 6/9;
+    grid-row: 5/8;
   }
 
   %subgrid-featured-project {
@@ -85,54 +86,61 @@
   }
 
   .featured-case-studies {
-    grid-row: 10/13;
+    grid-row: 9/12;
   }
 
   %view-more {
     align-self: end;
-    grid-column: 1/7;
+    grid-column: 1/-1;
     justify-self: center;
   }
 
   .view-more-projects {
     @extend %view-more;
-    grid-row: 8/9;
+    grid-row: 7/8;
   }
 
   .view-more-case-studies {
     @extend %view-more;
-    grid-row: 12/13;
+    grid-row: 11/12;
   }
+}
 
-  .view-latest-blog-posts {
-    @extend %view-more;
-    display: block;
-    text-align: center;
+@media (max-width: size.$size-1140) {
+  .grid-landing {
+    .subgrid-featured {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+    }
+
+    .subgrid-featured-a {
+      grid-column: 1/2;
+    }
+
+    .subgrid-featured-b {
+      grid-column: 2/3;
+    }
   }
+}
 
-  .featured-posts {
-    grid-column: 2/6;
-    grid-row: 14/19;
+@media (max-width: size.$size-960) {
+  .grid-landing {
+    grid-template-rows: repeat(12, size.$size-147);
 
-    > ol {
-      font-size: size.$size-30;
+    .cover {
+      grid-column: 1/-1;
+    }
+  }
+}
 
-      > li::before {
-        @include typography.txt-outline;
-        font: typography.$bold size.$size-30 typography.$display-font-family;
-      }
+@media (max-width: size.$size-470) {
+  .grid-landing {
+    grid-template-rows: repeat(12, size.$size-176);
+    margin-bottom: size.$size-24;
 
-      > li {
-        margin-bottom: size.$size-54;
-
-        > p {
-          font-size: size.$size-18;
-        }
-
-        > .time {
-          font-size: size.$size-12;
-          margin-bottom: 0;
-        }
+    .cover {
+      .headline {
+        margin-bottom: size.$size-20;
       }
     }
   }

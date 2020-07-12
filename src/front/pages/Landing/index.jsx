@@ -27,7 +27,7 @@ const Landing = () => (
     <main className="grid-landing grid">
       <section className="cover">
         <BlindFrame delay={0.2} threshold={0.5}>
-          <h1 className="headline">Hi, I&apos;m Matt Lean!</h1>
+          <h1 className="headline">Hi, I’m Matt&nbsp;Lean!</h1>
         </BlindFrame>
         <BlindFrame delay={0.4} threshold={0.5}>
           <p className="txt-lg txt-grey-a">
@@ -118,65 +118,6 @@ const Landing = () => (
       <BlindFrame className="view-more-case-studies">
         <CTA to="/blog" type="sm" className="link-grey-c svg-grey-c">
           View all case studies
-        </CTA>
-      </BlindFrame>
-      <BlindFrame className="featured-posts-header">
-        <h2 className="tracked-header">Featured Posts</h2>
-      </BlindFrame>
-      <BlindFrame
-        nodeType="section"
-        threshold={0.25}
-        className="featured-posts"
-      >
-        <ol>
-          <li>
-            <h4 className="header-md">
-              Cat Proofing Your Computer Work Station
-            </h4>
-            <p className="time txt-grey-a">January 11, 2020 • 5 min read</p>
-            <p className="txt-grey-a">
-              How to cat proof your computer work station.
-            </p>
-          </li>
-          <li>
-            <h4 className="header-md">Exploring China: Sichuan</h4>
-            <p className="time txt-grey-a">January 11, 2020 • 5 min read</p>
-            <p className="txt-grey-a">
-              My visual journey through the Sichuan province.
-            </p>
-          </li>
-          <li>
-            <h4 className="header-md">
-              Neopets: Strange Origins of a New Generation of Designers &
-              Developers
-            </h4>
-            <p className="time txt-grey-a">January 11, 2020 • 5 min read</p>
-            <p className="txt-grey-a">
-              How a kids game spawned a new generation of designers and
-              developers.
-            </p>
-          </li>
-          <li>
-            <h4 className="header-md">Falling in Love with Zelda Again</h4>
-            <p className="time txt-grey-a">January 11, 2020 • 5 min read</p>
-            <p className="txt-grey-a">
-              How Breath of the Wild revitalized my love for Zelda games again.
-            </p>
-          </li>
-          <li>
-            <h4 className="header-md">Amerikajin Ramen</h4>
-            <p className="time txt-grey-a">January 11, 2020 • 5 min read</p>
-            <p className="txt-grey-a">
-              How to make filthily American ramen using only stuff from Costco.
-            </p>
-          </li>
-        </ol>
-        <CTA
-          to="/about"
-          type="sm"
-          className="view-latest-blog-posts link-grey-c svg-grey-c"
-        >
-          View latest blog posts
         </CTA>
       </BlindFrame>
     </main>

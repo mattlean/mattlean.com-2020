@@ -59,6 +59,13 @@ $bold: 700;
   @include txt-outline;
 }
 
+@media (max-width: size.$size-960) {
+  .headline {
+    font-size: size.$size-63;
+    font-weight: bold;
+  }
+}
+
 @media (max-width: size.$size-470) {
   .header-lg,
   .headline {
