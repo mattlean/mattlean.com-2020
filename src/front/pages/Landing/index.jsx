@@ -43,7 +43,7 @@ const Landing = () => (
         </BlindFrame>
       </section>
       <BlindFrame className="featured-projects-header">
-        <h2 className="tracked-header">Featured Projects</h2>
+        <h2 className="tracked-header">Featured&nbsp;Projects</h2>
       </BlindFrame>
       <section className="subgrid-featured featured-projects grid">
         <figure className="subgrid-featured-a">
@@ -82,7 +82,7 @@ const Landing = () => (
         </CTA>
       </BlindFrame>
       <BlindFrame className="featured-case-studies-header">
-        <h2 className="tracked-header">Featured Case Studies</h2>
+        <h2 className="tracked-header">Featured Case&nbsp;Studies</h2>
       </BlindFrame>
       <section className="subgrid-featured featured-case-studies grid">
         <figure className="subgrid-featured-a">

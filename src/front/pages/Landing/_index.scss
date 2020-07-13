@@ -45,10 +45,22 @@
     grid-column: 1/-1;
     grid-template-rows: repeat(3, 1fr);
 
-    img {
-      height: 100%;
-      object-fit: cover;
-      width: 100%;
+    > figure {
+      > .blind-frame {
+        grid-column: 1/4;
+        grid-row: 1/3;
+      }
+
+      > figcaption {
+        grid-column: 1/4;
+        grid-row: 3/4;
+      }
+
+      img {
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+      }
     }
   }
 
@@ -71,18 +83,6 @@
   .subgrid-featured-b {
     @extend %subgrid-featured-project;
     grid-column: 4/7;
-  }
-
-  .subgrid-featured > figure {
-    > .blind-frame {
-      grid-column: 1/4;
-      grid-row: 1/3;
-    }
-
-    > figcaption {
-      grid-column: 1/4;
-      grid-row: 3/4;
-    }
   }
 
   .featured-case-studies {
@@ -125,22 +125,78 @@
 
 @media (max-width: size.$size-960) {
   .grid-landing {
-    grid-template-rows: repeat(12, size.$size-147);
+    grid-template-rows: repeat(4, size.$size-147) auto size.$size-147 auto;
 
     .cover {
       grid-column: 1/-1;
+    }
+
+    .featured-case-studies-header {
+      grid-row: 6/7;
+    }
+
+    .subgrid-featured {
+      display: block;
+
+      > figure {
+        > figcaption {
+          height: size.$size-147;
+          margin-bottom: size.$size-27;
+        }
+
+        img {
+          margin-bottom: size.$size-27;
+        }
+      }
+    }
+
+    .featured-projects,
+    .featured-case-studies {
+      grid-row: 5/6;
+
+      .subgrid-featured-a,
+      .subgrid-featured-b {
+        display: block;
+      }
+    }
+
+    .featured-case-studies {
+      grid-row: 7/8;
+    }
+
+    .view-more-projects {
+      grid-row: 5/6;
+      justify-self: start;
+    }
+
+    .view-more-case-studies {
+      grid-row: 7/8;
+      justify-self: start;
     }
   }
 }
 
 @media (max-width: size.$size-470) {
   .grid-landing {
-    grid-template-rows: repeat(12, size.$size-176);
+    grid-template-rows: repeat(4, size.$size-176) auto size.$size-176 auto;
     margin-bottom: size.$size-24;
 
     .cover {
       .headline {
         margin-bottom: size.$size-20;
+      }
+    }
+
+    .subgrid-featured {
+      > figure {
+        > figcaption {
+          height: size.$size-176;
+          margin-bottom: size.$size-24;
+        }
+
+        img {
+          margin-bottom: size.$size-24;
+        }
       }
     }
   }
