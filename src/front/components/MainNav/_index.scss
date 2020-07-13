@@ -64,3 +64,22 @@
   }
 }
 /* stylelint-enable selector-class-pattern  */
+
+@media (max-width: size.$size-960) {
+  .main-nav {
+    height: size.$size-147;
+  }
+}
+
+@media (max-width: size.$size-470) {
+  .main-nav {
+    align-items: flex-start;
+    height: size.$size-176;
+    margin-bottom: size.$size-24;
+    margin-top: size.$size-18;
+
+    > a > .logo {
+      height: 18px;
+    }
+  }
+}

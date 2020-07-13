@@ -2,7 +2,7 @@
 
 .main-footer {
   grid-template-rows: repeat(2, size.$size-157);
-  margin-top: size.$size-368;
+  margin-top: size.$size-422;
 
   > nav {
     grid-row-start: 1;
@@ -47,6 +47,8 @@
 
 @media (max-width: size.$size-960) {
   .main-footer {
+    margin-top: size.$size-422;
+
     &.grid {
       grid-template-rows: repeat(2, size.$size-147);
     }
@@ -60,8 +62,6 @@
 
 @media (max-width: size.$size-760) {
   .main-footer {
-    margin-top: size.$size-200;
-
     &.grid {
       column-gap: size.$size-18;
       grid-template-columns: repeat(2, 1fr);
@@ -95,7 +95,11 @@
 }
 
 @media (max-width: size.$size-470) {
-  .main-footer.grid {
-    grid-template-rows: repeat(2, auto) size.$size-176;
+  .main-footer {
+    margin-top: size.$size-200;
+
+    &.grid {
+      grid-template-rows: repeat(2, auto) size.$size-176;
+    }
   }
 }

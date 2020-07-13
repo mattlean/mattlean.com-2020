@@ -5,7 +5,7 @@
 .grid-landing {
   grid-template-rows: repeat(11, size.$size-157);
   margin-bottom: size.$size-27;
-  margin-top: size.$size-184;
+  margin-top: size.$size-211;
 
   .cover {
     grid-column: 1/5;
@@ -126,6 +126,7 @@
 @media (max-width: size.$size-960) {
   .grid-landing {
     grid-template-rows: repeat(4, size.$size-147) auto size.$size-147 auto;
+    margin-top: size.$size-201;
 
     .cover {
       grid-column: 1/-1;
@@ -180,6 +181,7 @@
   .grid-landing {
     grid-template-rows: repeat(4, size.$size-176) auto size.$size-176 auto;
     margin-bottom: size.$size-24;
+    margin-top: size.$size-200;
 
     .cover {
       .headline {

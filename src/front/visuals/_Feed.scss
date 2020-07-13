@@ -3,7 +3,7 @@
 
 .grid-feed {
   margin-bottom: size.$size-27;
-  margin-top: size.$size-184;
+  margin-top: size.$size-211;
 
   > header {
     grid-column: 1/2;
@@ -46,7 +46,7 @@
 
 @media (max-width: size.$size-960) {
   .grid-feed {
-    margin-bottom: size.$size-24;
+    margin-top: size.$size-201;
 
     > header {
       .header-lg {
@@ -80,6 +80,7 @@
 @media (max-width: size.$size-470) {
   .grid-feed {
     margin-bottom: size.$size-24;
+    margin-top: size.$size-200;
 
     > header {
       .header-lg {
