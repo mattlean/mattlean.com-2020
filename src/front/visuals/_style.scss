@@ -1,6 +1,6 @@
-@use 'color' as color;
-@use 'size' as size;
-@use 'typography' as typography;
+@use 'color';
+@use 'size';
+@use 'typography';
 
 body {
   font: size.$size-18 typography.$txt-font-family;

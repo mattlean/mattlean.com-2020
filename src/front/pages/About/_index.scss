@@ -1,6 +1,6 @@
-@use 'visuals/grid' as grid;
-@use 'visuals/size' as size;
-@use 'visuals/typography' as typography;
+@use 'visuals/grid';
+@use 'visuals/size';
+@use 'visuals/typography';
 
 .grid-about {
   grid-template-rows: repeat(12, size.$size-157);

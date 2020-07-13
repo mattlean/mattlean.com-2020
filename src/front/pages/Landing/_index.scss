@@ -1,6 +1,6 @@
-@use 'visuals/grid' as grid;
-@use 'visuals/size' as size;
-@use 'visuals/typography' as typography;
+@use 'visuals/grid';
+@use 'visuals/size';
+@use 'visuals/typography';
 
 .grid-landing {
   grid-template-rows: repeat(11, size.$size-157);
@@ -201,7 +201,7 @@
 
 @media (max-width: size.$size-470) {
   .grid-landing {
-    grid-template-rows: repeat(4, size.$size-176) auto size.$size-176 auto;
+    grid-template-rows: repeat(3, size.$size-176) auto size.$size-176 auto;
     margin-bottom: size.$size-24;
     margin-top: 0;
 
@@ -212,11 +212,11 @@
     }
 
     .featured-projects-header {
-      grid-row: 4/5;
+      grid-row: 3/4;
     }
 
     .featured-case-studies-header {
-      grid-row: 6/7;
+      grid-row: 5/6;
     }
 
     .subgrid-featured {
@@ -233,19 +233,19 @@
     }
 
     .featured-projects {
-      grid-row: 5/6;
+      grid-row: 4/5;
     }
 
     .featured-case-studies {
-      grid-row: 7/8;
+      grid-row: 6/7;
     }
 
     .view-more-projects {
-      grid-row: 5/6;
+      grid-row: 4/5;
     }
 
     .view-more-case-studies {
-      grid-row: 7/8;
+      grid-row: 6/7;
     }
   }
 }

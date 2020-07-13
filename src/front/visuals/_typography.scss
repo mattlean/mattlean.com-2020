@@ -1,5 +1,5 @@
-@use 'color' as color;
-@use 'size' as size;
+@use 'color';
+@use 'size';
 
 $display-font-family: neue-haas-grotesk-display, 'Helvetica Neue', Helvetica,
   Arial, sans-serif;
@@ -72,6 +72,10 @@ $bold: 700;
   }
 
   .header-md {
+    font-size: size.$size-20;
+  }
+
+  .tracked-header {
     font-size: size.$size-20;
   }
 

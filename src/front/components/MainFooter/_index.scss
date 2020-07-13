@@ -1,4 +1,4 @@
-@use 'visuals/size' as size;
+@use 'visuals/size';
 
 .main-footer {
   grid-template-rows: repeat(2, size.$size-157);

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { AnimatePresence } from 'framer-motion'
 import { Route, Switch, useLocation } from 'react-router-dom'
 import { ThemeCtx, useThemeState } from './visuals/theme'
@@ -12,9 +12,22 @@ import { getRouteData } from '../common/routeData'
 import { updateMeta } from './util'
 
 const App = () => {
+  const [initLoad, setInitLoad] = useState(false)
   const location = useLocation()
   const themeState = useThemeState()
 
+  // Set dark theme if user's computer time is between 6PM & 6AM
+  if (!__isServer__ && !initLoad) {
+    const currHour = new Date().getHours()
+
+    if (currHour <= 6 || currHour >= 18) {
+      themeState.setDark()
+    }
+
+    setInitLoad(true)
+  }
+
+  // Handle theme change
   useEffect(() => {
     if (themeState.isDark) {
       document.body.classList.add('dark')

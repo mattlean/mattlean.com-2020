@@ -2,6 +2,7 @@ import { createContext, useState } from 'react'
 
 export const ThemeCtx = createContext({
   isDark: false,
+  setDark: () => {},
   toggle: () => {},
 })
 
@@ -15,6 +16,9 @@ export const useThemeState = (defaultIsDarkVal = false) => {
 
   return {
     isDark,
+    setDark: () => {
+      setIsDark(true)
+    },
     toggle: () => {
       setIsDark(!isDark)
     },
