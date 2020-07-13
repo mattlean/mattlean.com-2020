@@ -39,7 +39,7 @@
     }
 
     > .subgrid-skills {
-      column-gap: 27px;
+      column-gap: size.$size-27;
       columns: 2;
 
       ul {
@@ -124,7 +124,7 @@
   .grid-about {
     grid-template-rows: repeat(12, size.$size-176) auto;
     margin-bottom: size.$size-24;
-    margin-top: size.$size-200;
+    margin-top: 0;
 
     .cover {
       .header-lg {
@@ -153,7 +153,7 @@
       grid-row: 13/14;
 
       > .subgrid-skills {
-        column-gap: 24px;
+        column-gap: size.$size-24;
         grid-template-columns: repeat(2, 1fr);
       }
     }
