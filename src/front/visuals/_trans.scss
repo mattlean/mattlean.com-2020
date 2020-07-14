@@ -11,6 +11,10 @@ a {
   transition: color $trans-duration $trans-timing-fn;
 }
 
+ul {
+  transition: background-color $trans-duration $trans-timing-fn;
+}
+
 path,
 polygon,
 rect {

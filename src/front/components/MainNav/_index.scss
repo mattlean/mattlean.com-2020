@@ -1,4 +1,13 @@
+@use 'visuals/color';
 @use 'visuals/size';
+@use 'visuals/typography';
+
+%btn-nav {
+  background: none;
+  border: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
 
 .main-nav {
   align-items: flex-end;
@@ -11,6 +20,11 @@
     height: 44px;
   }
 
+  > button {
+    @extend %btn-nav;
+    display: none;
+  }
+
   > ul {
     list-style: none;
 
@@ -19,32 +33,37 @@
       margin-left: size.$size-36;
 
       > a {
+        color: color.$grey-a;
         letter-spacing: 0.1rem;
         text-decoration: none;
       }
 
       > a:active,
       > a:hover,
-      > .main-nav-link-active {
+      > .active {
         text-decoration: underline;
+      }
+
+      > button {
+        @extend %btn-nav;
+        vertical-align: middle;
+
+        > svg {
+          width: 19.24px;
+        }
       }
     }
   }
 }
 
-.btn-light {
-  background: none;
-  border: 0;
-  cursor: pointer;
-  vertical-align: middle;
-
-  > svg {
-    width: 19.24px;
-  }
+.dark .main-nav > ul > li > a {
+  color: color.$grey-c;
 }
 
 /* stylelint-disable selector-class-pattern */
 .sun-moon_svg {
+  fill: color.$grey-a;
+
   &__moon {
     opacity: 1;
   }
@@ -55,6 +74,8 @@
 }
 
 .dark .sun-moon_svg {
+  fill: color.$grey-c;
+
   &__moon {
     opacity: 0;
   }
@@ -68,6 +89,74 @@
 @media (max-width: size.$size-960) {
   .main-nav {
     height: size.$size-147;
+  }
+}
+
+@media (max-width: size.$size-560) {
+  .main-nav {
+    > button {
+      display: block;
+
+      &.open {
+        z-index: 2;
+      }
+
+      > svg {
+        height: 18px;
+      }
+    }
+
+    > ul {
+      display: none;
+
+      &.open {
+        background-color: color.$w;
+        bottom: 0;
+        display: block;
+        left: 0;
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 1;
+
+        > li {
+          display: block;
+          font: typography.$display-medium size.$size-59
+            typography.$display-font-family;
+          margin-bottom: size.$size-30;
+
+          > a {
+            color: color.$k;
+            letter-spacing: normal;
+          }
+
+          > button {
+            font-size: size.$size-20;
+
+            > svg {
+              height: 14.35px;
+              margin-right: 1em;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .sun-moon_svg {
+    fill: color.$k;
+  }
+
+  .dark .main-nav > ul.open {
+    background-color: color.$k;
+
+    > li > a {
+      color: color.$w;
+    }
+  }
+
+  .dark .sun-moon_svg {
+    fill: color.$w;
   }
 }
 

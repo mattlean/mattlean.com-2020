@@ -1,10 +1,12 @@
 import React, { useContext, useState, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { useIntersection } from 'react-use'
-import { NavLink, useLocation } from 'react-router-dom'
+import { Link, NavLink, useLocation } from 'react-router-dom'
 import { ThemeCtx } from '../../visuals/theme'
 import Logo from '../../assets/logo.svg'
+import Menu from '../../assets/menu.svg'
 import SunMoon from '../../assets/sun-moon.svg'
+import X from '../../assets/x.svg'
 
 const THRESHOLD = 0.5
 
@@ -14,7 +16,8 @@ const THRESHOLD = 0.5
 const MainNav = () => {
   const location = useLocation()
   const [isFirst, setIsFirst] = useState(true)
-  const { toggle } = useContext(ThemeCtx)
+  const [isOpen, setIsOpen] = useState(false)
+  const { isDark, toggle } = useContext(ThemeCtx)
   const intersectionRef = useRef(null)
   const intersection = useIntersection(intersectionRef, {
     root: null,
@@ -59,6 +62,17 @@ const MainNav = () => {
     variants.animate.transition.delay = 0.8
   }
 
+  const openClassName = isOpen ? 'open' : ''
+  const menuIcon = isOpen ? (
+    <X className="svg-primary" />
+  ) : (
+    <Menu className="svg-primary" />
+  )
+
+  let btnLightTxt
+  if (isOpen && !isDark) btnLightTxt = 'light mode'
+  if (isOpen && isDark) btnLightTxt = 'dark mode'
+
   return (
     <header ref={intersectionRef} className="main-header">
       <motion.nav
@@ -68,49 +82,46 @@ const MainNav = () => {
         onAnimationComplete={() => setIsFirst(false)}
         className="container main-nav"
       >
-        <NavLink to="/" activeClassName="main-nav-link-active">
+        <Link to="/">
           <Logo className="logo" />
-        </NavLink>
-        <ul>
+        </Link>
+        <button className={openClassName} onClick={() => setIsOpen(!isOpen)}>
+          {menuIcon}
+        </button>
+        <ul className={openClassName}>
           <li>
-            <NavLink
-              to="/about"
-              activeClassName="main-nav-link-active"
-              className="link-grey-a"
-            >
+            <NavLink exact={true} to="/" onClick={() => setIsOpen(false)}>
+              home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/about" onClick={() => setIsOpen(false)}>
               about
             </NavLink>
           </li>
           <li>
-            <NavLink
-              to="/projects"
-              activeClassName="main-nav-link-active"
-              className="link-grey-a"
-            >
+            <NavLink to="/projects" onClick={() => setIsOpen(false)}>
               projects
             </NavLink>
           </li>
           <li>
-            <NavLink
-              to="/blog"
-              activeClassName="main-nav-link-active"
-              className="link-grey-a"
-            >
+            <NavLink to="/blog" onClick={() => setIsOpen(false)}>
               blog
             </NavLink>
           </li>
           <li>
             <NavLink
               to="/contact"
-              activeClassName="main-nav-link-active"
               className="link-grey-a"
+              onClick={() => setIsOpen(false)}
             >
               contact
             </NavLink>
           </li>
           <li>
-            <button className="btn-light" onClick={() => toggle()}>
-              <SunMoon className="sun-moon_svg svg-grey-a" />
+            <button className="txt-primary" onClick={() => toggle()}>
+              <SunMoon className="sun-moon_svg" />
+              {btnLightTxt}
             </button>
           </li>
         </ul>
