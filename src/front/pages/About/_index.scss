@@ -97,7 +97,7 @@
 
 @media (max-width: size.$size-960) {
   .grid-about {
-    grid-template-rows: repeat(12, size.$size-147) auto;
+    grid-template-rows: repeat(13, size.$size-147) auto;
     margin-top: size.$size-201;
 
     .cover {
@@ -105,11 +105,11 @@
     }
 
     .closing {
-      grid-row: 11/12;
+      grid-row: 12/13;
     }
 
     .subgrid-resume {
-      grid-row: 13;
+      grid-row: 14;
     }
   }
 }
@@ -117,6 +117,11 @@
 @media (max-width: size.$size-760) {
   .grid-about {
     display: block;
+
+    .content,
+    .closing {
+      margin-bottom: size.$size-174;
+    }
   }
 }
 
