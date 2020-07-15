@@ -1,8 +1,10 @@
 import React, { useContext, useState, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { useIntersection } from 'react-use'
+import { LG_PHONE } from '../../visuals/responsive'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { ThemeCtx } from '../../visuals/theme'
+import { useViewportWidth } from '../../util'
 import Logo from '../../assets/logo.svg'
 import Menu from '../../assets/menu.svg'
 import SunMoon from '../../assets/sun-moon.svg'
@@ -15,9 +17,11 @@ const THRESHOLD = 0.5
  */
 const MainNav = () => {
   const location = useLocation()
-  const [isFirst, setIsFirst] = useState(true)
+  const viewportWidth = useViewportWidth()
+  const [initRender, setInitRender] = useState(true)
   const [isOpen, setIsOpen] = useState(false)
   const { isDark, toggle } = useContext(ThemeCtx)
+
   const intersectionRef = useRef(null)
   const intersection = useIntersection(intersectionRef, {
     root: null,
@@ -25,10 +29,13 @@ const MainNav = () => {
     threshold: THRESHOLD,
   })
 
+  const isPhone = !__isServer__ && viewportWidth <= LG_PHONE
+
   const isHidden =
     __isServer__ ||
-    (intersection && intersection.intersectionRatio < THRESHOLD) ||
-    !intersection
+    (!isPhone &&
+      ((intersection && intersection.intersectionRatio < THRESHOLD) ||
+        !intersection))
       ? true
       : false
 
@@ -58,11 +65,21 @@ const MainNav = () => {
     },
   }
 
-  if (isFirst && location.pathname === '/') {
+  if (initRender && location.pathname === '/') {
     variants.animate.transition.delay = 0.8
   }
 
-  const openClassName = isOpen ? 'open' : ''
+  let logoClassName = 'logo'
+  if (isOpen) logoClassName += ' open'
+
+  const home = isPhone ? (
+    <li>
+      <NavLink exact={true} to="/" onClick={() => setIsOpen(false)}>
+        home
+      </NavLink>
+    </li>
+  ) : undefined
+
   const menuIcon = isOpen ? (
     <X className="svg-primary" />
   ) : (
@@ -70,8 +87,13 @@ const MainNav = () => {
   )
 
   let btnLightTxt
-  if (isOpen && !isDark) btnLightTxt = 'light mode'
-  if (isOpen && isDark) btnLightTxt = 'dark mode'
+  if (isPhone) {
+    btnLightTxt = isDark ? 'light mode' : 'dark mode'
+  } else {
+    btnLightTxt = ''
+  }
+
+  const openClassName = isOpen ? 'open' : ''
 
   return (
     <header ref={intersectionRef} className="main-header">
@@ -79,21 +101,15 @@ const MainNav = () => {
         animate={animate}
         initial="initial"
         variants={variants}
-        onAnimationComplete={() => setIsFirst(false)}
+        onAnimationComplete={() => setInitRender(false)}
         className="container main-nav"
       >
-        <Link to="/">
-          <Logo className="logo" />
+        <Link to="/" className={logoClassName} onClick={() => setIsOpen(false)}>
+          <Logo />
         </Link>
-        <button className={openClassName} onClick={() => setIsOpen(!isOpen)}>
-          {menuIcon}
-        </button>
+        <button onClick={() => setIsOpen(!isOpen)}>{menuIcon}</button>
         <ul className={openClassName}>
-          <li>
-            <NavLink exact={true} to="/" onClick={() => setIsOpen(false)}>
-              home
-            </NavLink>
-          </li>
+          {home}
           <li>
             <NavLink to="/about" onClick={() => setIsOpen(false)}>
               about

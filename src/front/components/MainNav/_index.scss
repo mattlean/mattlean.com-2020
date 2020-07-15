@@ -16,7 +16,7 @@
   justify-content: space-between;
   margin-bottom: size.$size-27;
 
-  > a > .logo {
+  > .logo > svg {
     height: 44px;
   }
 
@@ -26,6 +26,7 @@
   }
 
   > ul {
+    background-color: color.$w;
     list-style: none;
 
     > li {
@@ -56,8 +57,12 @@
   }
 }
 
-.dark .main-nav > ul > li > a {
-  color: color.$grey-c;
+.dark .main-nav > ul {
+  background-color: color.$k;
+
+  > li > a {
+    color: color.$grey-c;
+  }
 }
 
 /* stylelint-disable selector-class-pattern */
@@ -94,15 +99,19 @@
 
 @media (max-width: size.$size-560) {
   .main-nav {
+    > .logo.open {
+      position: fixed;
+      z-index: 2;
+    }
+
     > button {
       display: block;
-
-      &.open {
-        z-index: 2;
-      }
+      position: absolute;
+      right: size.$size-27;
+      z-index: 2;
 
       > svg {
-        height: 18px;
+        height: 44px;
       }
     }
 
@@ -110,10 +119,10 @@
       display: none;
 
       &.open {
-        background-color: color.$w;
         bottom: 0;
         display: block;
         left: 0;
+        padding-top: 233px;
         position: fixed;
         right: 0;
         top: 0;
@@ -124,6 +133,13 @@
           font: typography.$display-medium size.$size-59
             typography.$display-font-family;
           margin-bottom: size.$size-30;
+          margin-left: size.$size-27;
+
+          &:last-child {
+            bottom: size.$size-18;
+            margin-bottom: 0;
+            position: absolute;
+          }
 
           > a {
             color: color.$k;
@@ -132,6 +148,7 @@
 
           > button {
             font-size: size.$size-20;
+            vertical-align: bottom;
 
             > svg {
               height: 14.35px;
@@ -147,10 +164,7 @@
     fill: color.$k;
   }
 
-  .dark .main-nav > ul.open {
-    background-color: color.$k;
-
-    > li > a {
+  .dark .main-nav > ul.open > li > a {
       color: color.$w;
     }
   }
@@ -167,8 +181,26 @@
     margin-bottom: size.$size-24;
     margin-top: size.$size-18;
 
-    > a > .logo {
+    > .logo > svg {
       height: 18px;
+    }
+
+    > button {
+      position: fixed;
+      right: size.$size-18;
+      top: size.$size-18;
+
+      > svg {
+        height: 18px;
+      }
+    }
+
+    > ul.open {
+      padding-top: 91px;
+
+      > li {
+        margin-left: size.$size-18;
+      }
     }
   }
 }

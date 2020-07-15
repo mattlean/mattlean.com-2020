@@ -7,7 +7,8 @@ body {
   transition-timing-function: $trans-timing-fn;
 }
 
-a {
+a,
+button {
   transition: color $trans-duration $trans-timing-fn;
 }
 

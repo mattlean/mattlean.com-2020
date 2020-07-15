@@ -1,3 +1,5 @@
+import { useState, useEffect } from 'react'
+
 /**
  * Update meta element by updating its content attribute and add or remove element when necessary
  * @param {string} name Meta name attribute value
@@ -30,4 +32,19 @@ export const updateMeta = (name, value) => {
 
   // Set meta element content to new value
   ele.setAttribute('content', value)
+}
+
+/**
+ * Custom hook that returns viewport width (including scrollbars) as state
+ * @return {number|undefined} Viewport width. If server-side rendered, the width will be undefined.
+ */
+export const useViewportWidth = () => {
+  const widthVal = __isServer__ ? undefined : window.innerWidth
+  const [width, setWidth] = useState(widthVal)
+  useEffect(() => {
+    const handleResize = () => setWidth(window.innerWidth)
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [width])
+  return width
 }
