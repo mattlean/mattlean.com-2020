@@ -163,7 +163,7 @@ const About = () => (
           </dl>
         </section>
         <section className="subgrid-skills">
-          <section className="languages">
+          <section>
             <h2 className="header-sm">Languages</h2>
             <ul>
               <li>JavaScript</li>
@@ -177,7 +177,7 @@ const About = () => (
               <li>C, C++</li>
             </ul>
           </section>
-          <section className="testing">
+          <section>
             <h2 className="header-sm">Testing</h2>
             <ul>
               <li>Jest</li>
@@ -186,7 +186,7 @@ const About = () => (
               <li>Mocha, Chai</li>
             </ul>
           </section>
-          <section className="frontend">
+          <section>
             <h2 className="header-sm">Frontend</h2>
             <ul>
               <li>React</li>
@@ -215,7 +215,7 @@ const About = () => (
               <li>Knockout</li>
             </ul>
           </section>
-          <section className="backend">
+          <section>
             <h2 className="header-sm">Backend</h2>
             <ul>
               <li>Express</li>
@@ -229,7 +229,7 @@ const About = () => (
               <li>WordPress</li>
             </ul>
           </section>
-          <section className="databases">
+          <section>
             <h2 className="header-sm">Databases</h2>
             <ul>
               <li>PostgreSQL</li>
@@ -238,7 +238,17 @@ const About = () => (
               <li>MySQL</li>
             </ul>
           </section>
-          <section className="tooling">
+          <section>
+            <h2 className="header-sm">Servers</h2>
+            <ul>
+              <li>AWS Elastic Beanstalk</li>
+              <li>Amazon S3</li>
+              <li>Heroku</li>
+              <li>Google App Engine</li>
+              <li>Apache</li>
+            </ul>
+          </section>
+          <section>
             <h2 className="header-sm">Tooling</h2>
             <ul>
               <li>webpack</li>
@@ -250,17 +260,7 @@ const About = () => (
               <li>Subversion</li>
             </ul>
           </section>
-          <section className="servers">
-            <h2 className="header-sm">Servers</h2>
-            <ul>
-              <li>AWS Elastic Beanstalk</li>
-              <li>Amazon S3</li>
-              <li>Heroku</li>
-              <li>Google App Engine</li>
-              <li>Apache</li>
-            </ul>
-          </section>
-          <section className="design">
+          <section>
             <h2 className="header-sm">Design</h2>
             <ul>
               <li>XD</li>
