@@ -163,123 +163,115 @@ const About = () => (
           </dl>
         </section>
         <section className="subgrid-skills">
-          <section>
-            <section className="languages">
-              <h2 className="header-sm">Languages</h2>
-              <ul>
-                <li>JavaScript</li>
-                <li>Python</li>
-                <li>TypeScript</li>
-                <li>Java</li>
-                <li>CSS</li>
-                <li>Sass</li>
-                <li>HTML</li>
-                <li>PHP</li>
-                <li>C, C++</li>
-              </ul>
-            </section>
-            <section className="testing">
-              <h2 className="header-sm">Testing</h2>
-              <ul>
-                <li>Jest</li>
-                <li>Cypress</li>
-                <li>Enzyme</li>
-                <li>Mocha, Chai</li>
-              </ul>
-            </section>
+          <section className="languages">
+            <h2 className="header-sm">Languages</h2>
+            <ul>
+              <li>JavaScript</li>
+              <li>Python</li>
+              <li>TypeScript</li>
+              <li>Java</li>
+              <li>CSS</li>
+              <li>Sass</li>
+              <li>HTML</li>
+              <li>PHP</li>
+              <li>C, C++</li>
+            </ul>
           </section>
-          <section>
-            <section className="frontend">
-              <h2 className="header-sm">Frontend</h2>
-              <ul>
-                <li>React</li>
-                <li>React Router</li>
-                <li>Redux</li>
-                <li>Fetch, Axios, XMLHttpRequest</li>
-                <li>CSS Grid, Flexbox, Float</li>
-                <li>Media Queries</li>
-                <li>Framer Motion</li>
-                <li>Anime.js</li>
-                <li>CSS Animations & Transitions</li>
-                <li>Storybook</li>
-                <li>Google Charts</li>
-                <li>Canvas</li>
-                <li>Web Storage</li>
-                <li>Sass</li>
-                <li>Material Design</li>
-                <li>Bootstrap</li>
-                <li>jQuery</li>
-                <li>react-intl</li>
-                <li>A11y</li>
-                <li>Design Systems</li>
-                <li>SEO</li>
-                <li>BEM</li>
-                <li>Backbone.js</li>
-                <li>Knockout</li>
-              </ul>
-            </section>
+          <section className="testing">
+            <h2 className="header-sm">Testing</h2>
+            <ul>
+              <li>Jest</li>
+              <li>Cypress</li>
+              <li>Enzyme</li>
+              <li>Mocha, Chai</li>
+            </ul>
           </section>
-          <section>
-            <section className="backend">
-              <h2 className="header-sm">Backend</h2>
-              <ul>
-                <li>Express</li>
-                <li>webapp2</li>
-                <li>Memcached</li>
-                <li>bcrypt</li>
-                <li>web2py</li>
-                <li>REST</li>
-                <li>Cookies</li>
-                <li>HTTP</li>
-                <li>WordPress</li>
-              </ul>
-            </section>
-            <section className="databases">
-              <h2 className="header-sm">Databases</h2>
-              <ul>
-                <li>PostgreSQL</li>
-                <li>MongoDB</li>
-                <li>Google Cloud Datastore</li>
-                <li>MySQL</li>
-              </ul>
-            </section>
+          <section className="frontend">
+            <h2 className="header-sm">Frontend</h2>
+            <ul>
+              <li>React</li>
+              <li>React Router</li>
+              <li>Redux</li>
+              <li>Fetch, Axios, XMLHttpRequest</li>
+              <li>CSS Grid, Flexbox, Float</li>
+              <li>Media Queries</li>
+              <li>Framer Motion</li>
+              <li>Anime.js</li>
+              <li>CSS Animations & Transitions</li>
+              <li>Storybook</li>
+              <li>Google Charts</li>
+              <li>Canvas</li>
+              <li>Web Storage</li>
+              <li>Sass</li>
+              <li>Material Design</li>
+              <li>Bootstrap</li>
+              <li>jQuery</li>
+              <li>react-intl</li>
+              <li>A11y</li>
+              <li>Design Systems</li>
+              <li>SEO</li>
+              <li>BEM</li>
+              <li>Backbone.js</li>
+              <li>Knockout</li>
+            </ul>
           </section>
-          <section>
-            <section className="tooling">
-              <h2 className="header-sm">Tooling</h2>
-              <ul>
-                <li>webpack</li>
-                <li>GitHub</li>
-                <li>CircleCI</li>
-                <li>Git</li>
-                <li>Gulp</li>
-                <li>Grunt</li>
-                <li>Subversion</li>
-              </ul>
-            </section>
-            <section className="servers">
-              <h2 className="header-sm">Servers</h2>
-              <ul>
-                <li>AWS Elastic Beanstalk</li>
-                <li>Amazon S3</li>
-                <li>Heroku</li>
-                <li>Google App Engine</li>
-                <li>Apache</li>
-              </ul>
-            </section>
-            <section className="design">
-              <h2 className="header-sm">Design</h2>
-              <ul>
-                <li>XD</li>
-                <li>Photoshop</li>
-                <li>Illustrator</li>
-                <li>Premiere</li>
-                <li>After Effects</li>
-                <li>Audition</li>
-                <li>Blender</li>
-                <li>Flash</li>
-              </ul>
-            </section>
+          <section className="backend">
+            <h2 className="header-sm">Backend</h2>
+            <ul>
+              <li>Express</li>
+              <li>webapp2</li>
+              <li>Memcached</li>
+              <li>bcrypt</li>
+              <li>web2py</li>
+              <li>REST</li>
+              <li>Cookies</li>
+              <li>HTTP</li>
+              <li>WordPress</li>
+            </ul>
+          </section>
+          <section className="databases">
+            <h2 className="header-sm">Databases</h2>
+            <ul>
+              <li>PostgreSQL</li>
+              <li>MongoDB</li>
+              <li>Google Cloud Datastore</li>
+              <li>MySQL</li>
+            </ul>
+          </section>
+          <section className="tooling">
+            <h2 className="header-sm">Tooling</h2>
+            <ul>
+              <li>webpack</li>
+              <li>GitHub</li>
+              <li>CircleCI</li>
+              <li>Git</li>
+              <li>Gulp</li>
+              <li>Grunt</li>
+              <li>Subversion</li>
+            </ul>
+          </section>
+          <section className="servers">
+            <h2 className="header-sm">Servers</h2>
+            <ul>
+              <li>AWS Elastic Beanstalk</li>
+              <li>Amazon S3</li>
+              <li>Heroku</li>
+              <li>Google App Engine</li>
+              <li>Apache</li>
+            </ul>
+          </section>
+          <section className="design">
+            <h2 className="header-sm">Design</h2>
+            <ul>
+              <li>XD</li>
+              <li>Photoshop</li>
+              <li>Illustrator</li>
+              <li>Premiere</li>
+              <li>After Effects</li>
+              <li>Audition</li>
+              <li>Blender</li>
+              <li>Flash</li>
+            </ul>
           </section>
         </section>
       </BlindFrame>

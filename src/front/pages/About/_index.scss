@@ -86,10 +86,15 @@
       }
 
       > .subgrid-skills {
-        display: grid;
-        grid-column: 1/5;
-        grid-row-start: 2;
-        grid-template-columns: repeat(4, 1fr);
+        columns: auto;
+        display: flex;
+        flex-flow: column wrap;
+        grid-column: 1/-1;
+        height: 790px;
+
+        > section {
+          width: 21%;
+        }
       }
     }
   }
@@ -159,7 +164,11 @@
 
       > .subgrid-skills {
         column-gap: size.$size-24;
-        grid-template-columns: repeat(2, 1fr);
+        height: 960px;
+
+        > section {
+          width: 49%;
+        }
       }
     }
   }
