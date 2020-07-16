@@ -118,6 +118,7 @@
     > ul {
       display: none;
 
+      /* stylelint-disable selector-no-qualifying-type */
       &.open {
         bottom: 0;
         display: block;
@@ -127,6 +128,7 @@
         right: 0;
         top: 0;
         z-index: 1;
+        /* stylelint-enable selector-no-qualifying-type */
 
         > li {
           display: block;
@@ -160,6 +162,8 @@
     }
   }
 
+  /* stylelint-disable selector-class-pattern, selector-no-qualifying-type */
+
   .sun-moon_svg {
     fill: color.$k;
   }
@@ -171,6 +175,7 @@
   .dark .sun-moon_svg {
     fill: color.$w;
   }
+  /* stylelint-enable selector-class-pattern, selector-no-qualifying-type */
 }
 
 @media (max-width: size.$size-470) {
@@ -194,6 +199,7 @@
       }
     }
 
+    /* stylelint-disable selector-no-qualifying-type */
     > ul.open {
       padding-top: 91px;
 
@@ -201,5 +207,6 @@
         margin-left: size.$size-18;
       }
     }
+    /* stylelint-enable selector-no-qualifying-type */
   }
 }

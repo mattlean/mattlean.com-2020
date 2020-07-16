@@ -6,7 +6,7 @@
   margin-top: size.$size-211;
 
   > header {
-    grid-column: 1/2;
+    grid-column: span 2;
 
     .header-lg {
       transform: translateY(-17px);
