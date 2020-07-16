@@ -30,14 +30,14 @@
           text-decoration: underline;
         }
 
-        > p {
-          line-height: 1.25em;
-          margin-bottom: 0;
-          transform: translateY(-5px);
+        > .header-md {
+          margin-bottom: size.$size-7;
         }
 
-        > .badge-list {
-          margin-top: size.$size-7;
+        > p {
+          line-height: 1.25em;
+          margin-bottom: size.$size-7;
+          transform: translateY(-5px);
         }
       }
     }
