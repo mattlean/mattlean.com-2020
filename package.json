@@ -14,8 +14,8 @@
     "dev": "nodemon --exec \"yarn front:build && yarn back:build && yarn back:start\"",
     "front:build": "webpack --config webpack/front/config.js --env.type development",
     "front:build:production": "webpack --config webpack/front/config.js --env.type production",
-    "format": "prettier --write .",
-    "lint": "yarn lint:js && yarn lint:styles",
+    "format": "prettier --write src/ webpack/",
+    "lint": "yarn lint:styles; yarn lint:js",
     "lint:js": "eslint --ext .js,.json,.jsx src/ webpack/",
     "lint:styles": "stylelint \"src/**/*.scss\"",
     "start:production": "NODE_ENV=production node build/back/production/server"
@@ -58,7 +58,6 @@
     "style-loader": "^1.2.1",
     "stylelint": "^13.6.1",
     "stylelint-config-sass-guidelines": "^7.0.0",
-    "stylelint-config-standard": "^20.0.0",
     "url-loader": "^4.1.0",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12",
