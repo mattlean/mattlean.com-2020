@@ -253,9 +253,9 @@ const About = () => (
             <ul>
               <li>webpack</li>
               <li>GitHub</li>
-              <li>CircleCI</li>
-              <li>Git</li>
               <li>Gulp</li>
+              <li>Git</li>
+              <li>CircleCI</li>
               <li>Grunt</li>
               <li>Subversion</li>
             </ul>

@@ -7,6 +7,7 @@
 
 .grid {
   @include grid-base;
+
   grid-template-columns: repeat(auto-fill, minmax(size.$size-159, 1fr));
 }
 

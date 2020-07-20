@@ -12,22 +12,26 @@
 
 .cta-lg {
   @extend %cta;
+
   font-size: size.$size-36;
   font-weight: typography.$display-medium;
 
   > svg {
     @extend %cta-arrow;
+
     width: 34.74px;
   }
 }
 
 .cta-sm {
   @extend %cta;
+
   font-size: size.$size-18;
   font-weight: typography.$bold;
 
   > svg {
     @extend %cta-arrow;
+
     width: 17.3px;
   }
 }

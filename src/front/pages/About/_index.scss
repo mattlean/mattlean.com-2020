@@ -72,6 +72,7 @@
 
     .subgrid-resume {
       @include grid.grid-base;
+
       grid-column: 1/5;
       grid-row: 14/15;
       grid-template-columns: repeat(4, 1fr);

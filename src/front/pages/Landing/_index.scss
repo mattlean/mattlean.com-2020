@@ -23,11 +23,13 @@
 
   .featured-projects-header {
     @extend %featured-header;
+
     grid-row: 4/5;
   }
 
   .featured-case-studies-header {
     @extend %featured-header;
+
     grid-row: 8/9;
   }
 
@@ -60,6 +62,7 @@
 
   %subgrid-featured-project {
     @include grid.grid-base;
+
     grid-row: 1/4;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -67,11 +70,13 @@
 
   .subgrid-featured-a {
     @extend %subgrid-featured-project;
+
     grid-column: 1/4;
   }
 
   .subgrid-featured-b {
     @extend %subgrid-featured-project;
+
     grid-column: 4/7;
   }
 
@@ -87,11 +92,13 @@
 
   .view-more-projects {
     @extend %view-more;
+
     grid-row: 7/8;
   }
 
   .view-more-case-studies {
     @extend %view-more;
+
     grid-row: 11/12;
   }
 }

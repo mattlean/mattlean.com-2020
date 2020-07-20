@@ -36,7 +36,7 @@ export const updateMeta = (name, value) => {
 
 /**
  * Custom hook that returns viewport width (including scrollbars) as state
- * @return {number|undefined} Viewport width. If server-side rendered, the width will be undefined.
+ * @return {(number|undefined)} Viewport width. If server-side rendered, the width will be undefined.
  */
 export const useViewportWidth = () => {
   const widthVal = __isServer__ ? undefined : window.innerWidth
