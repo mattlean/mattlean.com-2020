@@ -12,6 +12,7 @@ const PATHS = {
     SRC: path.join(__dirname, 'src/front'),
   },
   SRC: path.join(__dirname, 'src'),
+  NODE_MODULES: path.join(__dirname, 'node_modules'),
 }
 
 module.exports = PATHS

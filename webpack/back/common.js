@@ -29,7 +29,7 @@ module.exports = merge([
 
   cleanBuild(),
 
-  ignoreNodeModules(),
+  ignoreNodeModules({ allowlist: ['eswiss'] }),
 
   loadHTMLAsString({ attributes: false }),
 

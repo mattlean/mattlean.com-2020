@@ -7,7 +7,7 @@ const {
   loadDevImgs,
   setMode,
 } = require('../parts')
-const { FRONT } = require('../../PATHS')
+const { FRONT, NODE_MODULES } = require('../../PATHS')
 
 // eslint-disable-next-line no-console
 console.log('🤡📦 STARTING FRONTEND DEVELOPMENT BUILD PROCESS 📦🤡')
@@ -22,7 +22,7 @@ module.exports = merge([
   setMode('development'),
 
   compileJS({
-    include: FRONT.SRC,
+    include: [FRONT.SRC, `${NODE_MODULES}/eswiss`],
     options: {
       presets: [['@babel/preset-react', { development: true }]],
     },

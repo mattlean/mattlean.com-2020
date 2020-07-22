@@ -1,4 +1,9 @@
-@use 'visuals/reset';
+/* eswiss */
+@use '~eswiss/dist/styles/reset';
+@use '~eswiss/dist/components/Btn';
+@use '~eswiss/dist/components/Modal';
+
+/* General Styles */
 @use 'visuals/color';
 @use 'visuals/grid';
 @use 'visuals/logo';

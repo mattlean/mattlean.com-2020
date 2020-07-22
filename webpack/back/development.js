@@ -1,5 +1,5 @@
 const merge = require('webpack-merge')
-const { BACK, SRC } = require('../../PATHS')
+const { BACK, NODE_MODULES, SRC } = require('../../PATHS')
 const { compileJS, genSourceMaps, loadDevImgs, setMode } = require('../parts')
 
 // eslint-disable-next-line no-console
@@ -15,7 +15,7 @@ module.exports = merge([
   setMode('development'),
 
   compileJS({
-    include: SRC,
+    include: [SRC, `${NODE_MODULES}/eswiss`],
     options: {
       presets: [['@babel/preset-react', { development: true }]],
     },

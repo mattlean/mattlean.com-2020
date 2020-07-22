@@ -90,7 +90,9 @@ exports.genSourceMaps = (type) => ({
 /**
  * Do not include "node_modules" directory in bundle
  */
-exports.ignoreNodeModules = () => ({ externals: [nodeExternals()] })
+exports.ignoreNodeModules = (options) => ({
+  externals: [nodeExternals(options)],
+})
 
 /**
  * Inject styles.

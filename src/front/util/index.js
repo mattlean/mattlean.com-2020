@@ -35,16 +35,16 @@ export const updateMeta = (name, value) => {
 }
 
 /**
- * Custom hook that returns viewport width (including scrollbars) as state
+ * Custom hook that returns viewport width (including scrollbar) as state
  * @return {(number|undefined)} Viewport width. If server-side rendered, the width will be undefined.
  */
 export const useViewportWidth = () => {
   const widthVal = __isServer__ ? undefined : window.innerWidth
   const [width, setWidth] = useState(widthVal)
   useEffect(() => {
-    const handleResize = () => setWidth(window.innerWidth)
+    const handleResize = () => setWidth(widthVal)
     window.addEventListener('resize', handleResize)
     return () => window.removeEventListener('resize', handleResize)
-  }, [width])
+  }, [width]) // eslint-disable-line react-hooks/exhaustive-deps
   return width
 }

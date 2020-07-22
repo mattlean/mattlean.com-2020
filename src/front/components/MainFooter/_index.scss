@@ -1,3 +1,4 @@
+@use 'visuals/color';
 @use 'visuals/size';
 
 .main-footer {
@@ -21,6 +22,11 @@
     grid-column: 1/4;
     grid-row-start: 1;
     margin-bottom: 0;
+
+    > button {
+      cursor: pointer;
+      text-decoration: underline;
+    }
   }
 
   .personal-title {
@@ -43,6 +49,10 @@
   .external-nav {
     grid-column: -1/-2;
   }
+}
+
+.modal {
+  color: color.$k;
 }
 
 @media (max-width: size.$size-960) {
