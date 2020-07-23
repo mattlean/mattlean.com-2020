@@ -51,8 +51,14 @@
   }
 }
 
-.modal {
-  color: color.$k;
+.modal-overlay {
+  z-index: 4;
+
+  > .modal {
+    color: color.$k;
+    max-width: 600px;
+    z-index: 4;
+  }
 }
 
 @media (max-width: size.$size-960) {
@@ -110,6 +116,12 @@
 
     &.grid {
       grid-template-rows: repeat(2, auto) size.$size-176;
+    }
+  }
+
+  .modal-overlay {
+    > .modal {
+      margin: 0;
     }
   }
 }

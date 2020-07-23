@@ -55,23 +55,55 @@ const MainFooter = () => {
   const [focusEleOnClose, setFocusEleOnClose] = useState()
   const modal = isOpen ? (
     <Modal
+      autoCenterH={true}
+      autoCenterV={true}
       closeOnOverlayClick={true}
       focusEleOnClose={focusEleOnClose}
       isOpen={isOpen}
       onClose={() => setIsOpen(false)}
     >
-      <h1 className="modal-heading heading4">Lorem Ipsum</h1>
+      <h1 className="modal-heading header-md">About MattLean.com</h1>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue enim
-        ac nibh dictum, eu hendrerit enim malesuada. Vivamus et magna dignissim
-        ipsum viverra pretium quis interdum dui. Proin eget rhoncus arcu, ut
-        feugiat est. Integer eget nulla sed orci gravida aliquet. Sed a luctus
-        metus, ac porta ligula. Lorem ipsum dolor sit amet, consectetur
-        adipiscing elit. Pellentesque non vestibulum quam. Vivamus porta
-        vulputate ultrices. Ut et congue purus. Sed id tortor et sem cursus
-        aliquet sed eget nibh. Sed scelerisque quam eleifend dolor pellentesque,
-        eget ultricies justo aliquam. Praesent eu tortor sed diam dignissim
-        accumsan. Cras sit amet ex mi.
+        MattLean.com is designed to be responsive, meaning it works on all
+        screen sizes, from large desktops to small mobile devices.
+      </p>
+      <p>
+        This site is also built with accessibility in mind, so it supports
+        keyboard and screen reader interactions.
+      </p>
+      <p>
+        Light and dark modes are supported to accomodate different viewing
+        scenarios and preferences. Light mode will automatically activate at
+        6:00 AM and dark mode will automatically activate at 6:00 PM in the
+        visitor’s time zone. Mode switching can also be controlled manually by
+        selecting the mode switch icon at the end of the main navigation.
+      </p>
+      <p>
+        The codebase was programmed with{' '}
+        <a href="https://reactjs.org" rel="noreferrer" target="_blank">
+          React
+        </a>
+        ,{' '}
+        <a href="https://expressjs.com" rel="noreferrer" target="_blank">
+          Express
+        </a>
+        , and{' '}
+        <a
+          href="https://github.com/mattlean/eswiss"
+          rel="noreferrer"
+          target="_blank"
+        >
+          eswiss
+        </a>
+        . You can find the source code online on{' '}
+        <a href="https://github.com/mattlean/mattlean.com-2020">
+          the project’s GitHub repository
+        </a>
+        .
+      </p>
+      <p>
+        If would like to learn more about the design and development process
+        that went into building this website, you can read the case study.
       </p>
     </Modal>
   ) : undefined
