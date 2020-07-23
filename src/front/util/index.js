@@ -42,7 +42,7 @@ export const useViewportWidth = () => {
   const widthVal = __isServer__ ? undefined : window.innerWidth
   const [width, setWidth] = useState(widthVal)
   useEffect(() => {
-    const handleResize = () => setWidth(widthVal)
+    const handleResize = () => setWidth(window.innerWidth)
     window.addEventListener('resize', handleResize)
     return () => window.removeEventListener('resize', handleResize)
   }, [width]) // eslint-disable-line react-hooks/exhaustive-deps

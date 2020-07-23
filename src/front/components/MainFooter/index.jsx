@@ -96,7 +96,11 @@ const MainFooter = () => {
           eswiss
         </a>
         . You can find the source code online on{' '}
-        <a href="https://github.com/mattlean/mattlean.com-2020">
+        <a
+          href="https://github.com/mattlean/mattlean.com-2020"
+          rel="noreferrer"
+          target="_blank"
+        >
           the project’s GitHub repository
         </a>
         .
