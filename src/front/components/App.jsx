@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from 'react'
 import { AnimatePresence } from 'framer-motion'
 import { Route, Switch, useLocation } from 'react-router-dom'
-import { ThemeCtx, useThemeState } from './visuals/theme'
-import About from './pages/About'
-import Blog from './pages/Blog'
-import Contact from './pages/Contact'
-import Landing from './pages/Landing'
-import MainNav from './components/MainNav'
-import Projects from './pages/Projects'
-import { getRouteData } from '../common/routeData'
-import { updateMeta } from './util'
+import { ThemeCtx, useThemeState } from '../visuals/theme'
+import About from '../pages/About'
+import Blog from '../pages/Blog'
+import Contact from '../pages/Contact'
+import Landing from '../pages/Landing'
+import MainNav from './MainNav'
+import ProjectFeed from '../pages/Projects/feed'
+import Projects from '../pages/Projects'
+import { getRootPath } from '../../common/util'
+import { getRouteData } from '../../common/routeData'
+import { updateMeta } from '../util'
 
 const App = () => {
   const [initLoad, setInitLoad] = useState(false)
@@ -38,7 +40,8 @@ const App = () => {
 
   // Update document head
   useEffect(() => {
-    const { desc, keywords, title } = getRouteData(location.pathname)
+    const rootPath = getRootPath(location.pathname)
+    const { desc, keywords, title } = getRouteData(rootPath)
     document.title = title
     updateMeta('description', desc)
     updateMeta('keywords', keywords)
@@ -53,7 +56,8 @@ const App = () => {
           <Route path="/about" component={About} />
           <Route path="/blog" component={Blog} />
           <Route path="/contact" component={Contact} />
-          <Route path="/projects" component={Projects} />
+          <Route exact path="/projects" component={ProjectFeed} />
+          <Route path="/projects/:id" component={Projects} />
         </Switch>
       </AnimatePresence>
     </ThemeCtx.Provider>

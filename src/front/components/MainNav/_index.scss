@@ -16,10 +16,6 @@
   justify-content: space-between;
   margin-bottom: size.$size-27;
 
-  > .logo > svg {
-    height: 44px;
-  }
-
   > button {
     @extend %btn-nav;
 
@@ -56,6 +52,10 @@
         }
       }
     }
+  }
+
+  > .logo > svg {
+    height: 44px;
   }
 }
 
@@ -187,10 +187,6 @@
     margin-bottom: size.$size-24;
     margin-top: size.$size-18;
 
-    > .logo > svg {
-      height: 18px;
-    }
-
     > button {
       position: fixed;
       right: size.$size-18;
@@ -199,6 +195,10 @@
       > svg {
         height: 18px;
       }
+    }
+
+    > .logo > svg {
+      height: 18px;
     }
 
     /* stylelint-disable selector-no-qualifying-type */

@@ -79,7 +79,7 @@ const ROUTES = {
     ],
   },
   '/about': {
-    title: 'About ' + SUFFIX,
+    title: 'About' + SUFFIX,
     desc:
       'About Matt Lean, a Silicon Valley full-stack web developer and UI/UX designer.',
     keywords: [
@@ -156,7 +156,7 @@ const ROUTES = {
     ],
   },
   '/blog': {
-    title: 'Blog ' + SUFFIX,
+    title: 'Blog' + SUFFIX,
     desc:
       "Matt Lean's blog, the thoughts and experiences of a Silicon Valley full-stack web developer and UI/UX designer.",
     keywords: [
@@ -233,7 +233,7 @@ const ROUTES = {
     ],
   },
   '/contact': {
-    title: 'Contact ' + SUFFIX,
+    title: 'Contact' + SUFFIX,
     desc:
       'How to contact Matt Lean, a Silicon Valley full-stack web developer and UI/UX designer.',
     keywords: [
@@ -313,7 +313,7 @@ const ROUTES = {
     ],
   },
   '/projects': {
-    title: 'Projects ' + SUFFIX,
+    title: 'Projects' + SUFFIX,
     desc:
       "Matt Lean's projects, work of a Silicon Valley full-stack web developer and UI/UX designer.",
     keywords: [

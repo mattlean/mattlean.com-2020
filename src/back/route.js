@@ -3,14 +3,12 @@ import createTemplateString from './render'
 
 const router = Router()
 
-router.get('/', (req, res) => res.send(createTemplateString(req.url)))
+router.get('/projects/:id', (req, res) =>
+  res.send(createTemplateString(req.url, req.params))
+)
 
-router.get('/about', (req, res) => res.send(createTemplateString(req.url)))
-
-router.get('/blog', (req, res) => res.send(createTemplateString(req.url)))
-
-router.get('/contact', (req, res) => res.send(createTemplateString(req.url)))
-
-router.get('/projects', (req, res) => res.send(createTemplateString(req.url)))
+router.get(/\/(about|blog|contact|projects)$|\/$/, (req, res) =>
+  res.send(createTemplateString(req.url))
+)
 
 export default router

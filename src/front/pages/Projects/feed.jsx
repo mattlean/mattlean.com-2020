@@ -1,10 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import Badge from '../components/Badge'
-import BlindFrame from '../components/Blind/BlindFrame'
-import variants from './variants'
-import MainFooter from '../components/MainFooter'
-import { getAllProjectData } from '../../common/projectData'
+import Badge from '../../components/Badge'
+import BlindFrame from '../../components/Blind/BlindFrame'
+import variants from '../variants'
+import MainFooter from '../../components/MainFooter'
+import { getAllProjectData } from '../../../common/projectData'
 
 const allProjectData = getAllProjectData()
 const projects = []
@@ -17,7 +18,7 @@ for (const i in allProjectData) {
       nodeType="li"
       className="item"
     >
-      <a href="#">
+      <Link to={`/projects/${currProjectData.id}`}>
         <h2 className="header-md link-primary">{currProjectData.name}</h2>
         <p className="txt-grey-a">{currProjectData.long}</p>
         <ul className="badge-list">
@@ -26,7 +27,7 @@ for (const i in allProjectData) {
           <Badge nodeType="li">Design</Badge>
           <Badge nodeType="li">Frontend</Badge>
         </ul>
-      </a>
+      </Link>
     </BlindFrame>
   )
 }
@@ -34,7 +35,7 @@ for (const i in allProjectData) {
 /**
  * Projects
  */
-const Projects = () => (
+const ProjectFeed = () => (
   <motion.div
     animate="initial"
     exit="out"
@@ -55,4 +56,4 @@ const Projects = () => (
   </motion.div>
 )
 
-export default Projects
+export default ProjectFeed

@@ -1,7 +1,7 @@
-import BlindFrame from '../../components/Blind/BlindFrame'
 import React from 'react'
 import { MailIcon } from '@primer/octicons-react'
 import { motion } from 'framer-motion'
+import BlindFrame from '../../components/Blind/BlindFrame'
 import MainFooter from '../../components/MainFooter'
 import variants from '../variants'
 import LinkedInLogo from '../../assets/linkedin.png'
