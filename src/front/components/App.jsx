@@ -7,7 +7,7 @@ import Blog from '../pages/Blog'
 import Contact from '../pages/Contact'
 import Landing from '../pages/Landing'
 import MainNav from './MainNav'
-import ProjectFeed from '../pages/Projects/feed'
+import Project from '../pages/Projects/Project'
 import Projects from '../pages/Projects'
 import { getRootPath } from '../../common/util'
 import { getRouteData } from '../../common/routeData'
@@ -56,8 +56,8 @@ const App = () => {
           <Route path="/about" component={About} />
           <Route path="/blog" component={Blog} />
           <Route path="/contact" component={Contact} />
-          <Route exact path="/projects" component={ProjectFeed} />
-          <Route path="/projects/:id" component={Projects} />
+          <Route exact path="/projects" component={Projects} />
+          <Route path="/projects/:id" component={Project} />
         </Switch>
       </AnimatePresence>
     </ThemeCtx.Provider>

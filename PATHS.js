@@ -1,6 +1,7 @@
 const path = require('path')
 
 const PATHS = {
+  COMMON: path.join(__dirname, 'src/common'),
   BACK: {
     BUILD_DEV: path.join(__dirname, 'build/back/development'),
     BUILD_PROD: path.join(__dirname, 'build/back/production'),

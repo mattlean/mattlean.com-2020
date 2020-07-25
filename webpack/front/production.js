@@ -6,7 +6,7 @@ const {
   loadImgs,
   setMode,
 } = require('../parts')
-const { FRONT, NODE_MODULES } = require('../../PATHS')
+const { COMMON, FRONT, NODE_MODULES } = require('../../PATHS')
 
 // eslint-disable-next-line no-console
 console.log('🤡🎁 STARTING FRONTEND PRODUCTION BUILD PROCESS 🎁🤡')
@@ -21,7 +21,7 @@ module.exports = merge([
   setMode('production'),
 
   compileJS({
-    include: [FRONT.SRC, `${NODE_MODULES}/eswiss`],
+    include: [FRONT.SRC, COMMON, `${NODE_MODULES}/eswiss`],
     options: {
       presets: [
         [

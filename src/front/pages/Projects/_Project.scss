@@ -1,0 +1,20 @@
+@use 'visuals/size';
+
+.grid-project {
+  grid-template-rows: repeat(3, size.$size-157);
+  margin-bottom: size.$size-27;
+  margin-top: size.$size-211;
+}
+
+@media (max-width: size.$size-960) {
+  .grid-project {
+    margin-top: size.$size-201;
+  }
+}
+
+@media (max-width: size.$size-470) {
+  .grid-project {
+    margin-bottom: size.$size-24;
+    margin-top: 0;
+  }
+}

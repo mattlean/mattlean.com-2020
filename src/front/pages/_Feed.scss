@@ -1,5 +1,5 @@
-@use 'grid';
-@use 'size';
+@use '../visuals/grid';
+@use '../visuals/size';
 
 .grid-feed {
   margin-bottom: size.$size-27;
