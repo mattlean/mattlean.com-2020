@@ -20,7 +20,7 @@ for (const i in allProjectData) {
     >
       <Link to={`/projects/${currProjectData.id}`}>
         <h2 className="header-md link-primary">{currProjectData.name}</h2>
-        <p className="txt-grey-a">{currProjectData.long}</p>
+        <p className="txt-grey-1">{currProjectData.long}</p>
         <ul className="badge-list">
           <Badge nodeType="li">Case Study</Badge>
           <Badge nodeType="li">Backend</Badge>

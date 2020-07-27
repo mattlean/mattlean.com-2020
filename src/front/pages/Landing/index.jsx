@@ -30,7 +30,7 @@ const Landing = () => (
           <h1 className="headline">Hi, I’m Matt&nbsp;Lean!</h1>
         </BlindFrame>
         <BlindFrame delay={0.4} threshold={0.5}>
-          <p className="txt-lg txt-grey-a">
+          <p className="txt-lg txt-grey-1">
             I’m a developer who works at the intersection of engineering and
             design. I’ve been building web-based products for Silicon Valley
             since 2015 and am currently looking for new opportunities.
@@ -58,7 +58,7 @@ const Landing = () => (
               <h3 className="header-md">{gridnikData.name}</h3>
             </BlindFrame>
             <BlindFrame>
-              <p className="txt-grey-a">{gridnikData.short}</p>
+              <p className="txt-grey-1">{gridnikData.short}</p>
             </BlindFrame>
           </figcaption>
         </figure>
@@ -71,13 +71,13 @@ const Landing = () => (
               <h3 className="header-md">{eswissData.name}</h3>
             </BlindFrame>
             <BlindFrame>
-              <p className="txt-grey-a">{eswissData.short}</p>
+              <p className="txt-grey-1">{eswissData.short}</p>
             </BlindFrame>
           </figcaption>
         </figure>
       </section>
       <BlindFrame className="view-more-projects">
-        <CTA to="/projects" type="sm" className=" svg-grey-c link-grey-c">
+        <CTA to="/projects" type="sm" className=" svg-grey-3 link-grey-3">
           View all projects
         </CTA>
       </BlindFrame>
@@ -94,7 +94,7 @@ const Landing = () => (
               <h3 className="header-md">{csSOTData.title}</h3>
             </BlindFrame>
             <BlindFrame>
-              <p className="txt-grey-a">{csSOTData.subtitle}</p>
+              <p className="txt-grey-1">{csSOTData.subtitle}</p>
             </BlindFrame>
           </figcaption>
         </figure>
@@ -110,13 +110,13 @@ const Landing = () => (
               <h3 className="header-md">{csLeanSpace.title}</h3>
             </BlindFrame>
             <BlindFrame>
-              <p className="txt-grey-a">{csLeanSpace.subtitle}</p>
+              <p className="txt-grey-1">{csLeanSpace.subtitle}</p>
             </BlindFrame>
           </figcaption>
         </figure>
       </section>
       <BlindFrame className="view-more-case-studies">
-        <CTA to="/blog" type="sm" className="link-grey-c svg-grey-c">
+        <CTA to="/blog" type="sm" className="link-grey-3 svg-grey-3">
           View all case studies
         </CTA>
       </BlindFrame>

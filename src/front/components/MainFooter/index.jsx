@@ -114,7 +114,7 @@ const MainFooter = () => {
 
   return (
     <>
-      <footer ref={intersectionRef} className="main-footer grid txt-grey-b">
+      <footer ref={intersectionRef} className="main-footer grid txt-grey-2">
         <motion.dl
           animate={animate}
           initial="initial"
@@ -131,22 +131,22 @@ const MainFooter = () => {
         <nav className="internal-nav">
           <motion.ul animate={animate} initial="initial" variants={variants}>
             <li>
-              <Link to="/about" className="link-grey-b">
+              <Link to="/about" className="link-grey-2">
                 About
               </Link>
             </li>
             <li>
-              <Link to="/projects" className="link-grey-b">
+              <Link to="/projects" className="link-grey-2">
                 Projects
               </Link>
             </li>
             <li>
-              <Link to="/blog" className="link-grey-b">
+              <Link to="/blog" className="link-grey-2">
                 Blog
               </Link>
             </li>
             <li>
-              <Link to="/contact" className="link-grey-b">
+              <Link to="/contact" className="link-grey-2">
                 Contact
               </Link>
             </li>
@@ -159,7 +159,7 @@ const MainFooter = () => {
                 href="http://be.net/mattlean"
                 rel="noreferrer"
                 target="_blank"
-                className="link-grey-b"
+                className="link-grey-2"
               >
                 Behance
               </a>
@@ -169,7 +169,7 @@ const MainFooter = () => {
                 href="https://github.com/mattlean"
                 rel="noreferrer"
                 target="_blank"
-                className="link-grey-b"
+                className="link-grey-2"
               >
                 GitHub
               </a>
@@ -179,7 +179,7 @@ const MainFooter = () => {
                 href="https://linkedin.com/in/mattlean"
                 rel="noreferrer"
                 target="_blank"
-                className="link-grey-b"
+                className="link-grey-2"
               >
                 LinkedIn
               </a>
@@ -190,7 +190,7 @@ const MainFooter = () => {
           animate={animate}
           initial="initial"
           variants={variants}
-          className="txt-xs txt-grey-c"
+          className="txt-xs txt-grey-3"
         >
           Made with too much boba tea in SF Bay Area. <br className="d-sm" />
           <button
@@ -198,7 +198,7 @@ const MainFooter = () => {
               setFocusEleOnClose(document.activeElement)
               setIsOpen(true)
             }}
-            className="txt-xs txt-grey-c"
+            className="txt-xs txt-grey-3"
           >
             Learn more about this site.
           </button>

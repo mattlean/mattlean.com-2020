@@ -2,7 +2,7 @@
 @use 'visuals/typography';
 
 %cta {
-  font-family: typography.$display-font-family;
+  font-family: typography.$disp-font-family;
   text-decoration: none;
 }
 
@@ -14,7 +14,7 @@
   @extend %cta;
 
   font-size: size.$size-36;
-  font-weight: typography.$display-medium;
+  font-weight: typography.$disp-medium;
 
   > svg {
     @extend %cta-arrow;

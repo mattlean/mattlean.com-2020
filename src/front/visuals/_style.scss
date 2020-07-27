@@ -3,6 +3,8 @@
 @use 'typography';
 
 body {
+  background-color: var(--secondary);
+  color: var(--primary);
   font: typography.$txt-roman size.$size-18 typography.$txt-font-family;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -11,12 +13,12 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-/* stylelint-disable selector-no-qualifying-type */
 body.dark {
-  background-color: color.$k;
-  color: color.$w;
+  --primary: #{color.$w};
+  --secondary: #{color.$k};
+  --grey-1: #{color.$grey-c};
+  --grey-3: #{color.$grey-a};
 }
-/* stylelint-enable selector-no-qualifying-type */
 
 h1,
 h2,
@@ -24,7 +26,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: typography.$display-font-family;
+  font-family: typography.$disp-font-family;
   font-weight: typography.$bold;
 }
 

@@ -1,4 +1,3 @@
-@use 'visuals/color';
 @use 'visuals/trans';
 
 .blind-frame {
@@ -7,15 +6,11 @@
 }
 
 .blind-frame > .blind {
-  background-color: color.$w;
+  background-color: var(--secondary);
   display: block;
   height: 100%;
   position: absolute;
   transition: background-color trans.$trans-duration trans.$trans-timing-fn;
   width: 100%;
   z-index: 1;
-}
-
-.dark .blind-frame > .blind {
-  background-color: color.$k;
 }

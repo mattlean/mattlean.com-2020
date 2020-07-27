@@ -126,11 +126,7 @@ const MainNav = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink
-              to="/contact"
-              className="link-grey-a"
-              onClick={() => setIsOpen(false)}
-            >
+            <NavLink to="/contact" onClick={() => setIsOpen(false)}>
               contact
             </NavLink>
           </li>

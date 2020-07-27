@@ -1,23 +1,9 @@
-@use 'visuals/color';
-
-/* stylelint-disable selector-class-pattern */
 .logo_svg__ {
   &quad {
-    fill: color.$k;
+    fill: var(--primary);
   }
 
   &tri {
-    fill: color.$w;
+    fill: var(--secondary);
   }
 }
-
-.dark .logo_svg__ {
-  &quad {
-    fill: color.$w;
-  }
-
-  &tri {
-    fill: color.$k;
-  }
-}
-/* stylelint-enable selector-class-pattern  */

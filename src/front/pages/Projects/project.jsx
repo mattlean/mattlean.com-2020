@@ -23,7 +23,7 @@ const Projects = ({ projectData }) => {
         <section className="cover">
           <BlindFrame>
             <h1 className="header-lg">{name}</h1>
-            {company && <h2 className="subtitle txt-grey-b">{company}</h2>}
+            {company && <h2 className="subtitle txt-grey-2">{company}</h2>}
           </BlindFrame>
         </section>
       </main>

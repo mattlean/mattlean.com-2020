@@ -24,7 +24,7 @@ const Contact = () => (
           <h1 className="header-lg">Let&apos;s get in&nbsp;touch.</h1>
         </BlindFrame>
         <BlindFrame delay={0.5}>
-          <p className="txt-lg txt-grey-a">
+          <p className="txt-lg txt-grey-1">
             Have any questions? Got a project in mind for&nbsp;me?
             <br />
             Let’s connect and start&nbsp;talking.

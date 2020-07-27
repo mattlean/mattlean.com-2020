@@ -5,114 +5,123 @@ $grey-c: #999;
 $grey-d: #aaa;
 $w: #fff;
 
+:root {
+  --primary: #{$k};
+  --secondary: #{$w};
+  --grey-1: #{$grey-a};
+  --grey-2: #{$grey-b};
+  --grey-3: #{$grey-c};
+  --grey-4: #{$grey-d};
+}
+
 .link-primary,
 .link-primary:hover,
 .link-primary:visited {
-  color: $k;
+  color: var(--primary);
 }
 
-.dark .link-primary,
-.dark .link-primary:hover,
-.dark .link-primary:visited {
-  color: $w;
+// .dark .link-primary,
+// .dark .link-primary:hover,
+// .dark .link-primary:visited {
+//   color: $w;
+// }
+
+.link-grey-1,
+.link-grey-1:hover,
+.link-grey-1:visited {
+  color: var(--grey-1);
 }
 
-.link-grey-a,
-.link-grey-a:hover,
-.link-grey-a:visited {
-  color: $grey-a;
+// .dark .link-grey-1,
+// .dark .link-grey-1:hover,
+// .dark .link-grey-1:visited {
+//   color: $grey-c;
+// }
+
+.link-grey-2,
+.link-grey-2:hover,
+.link-grey-2:visited {
+  color: var(--grey-2);
 }
 
-.dark .link-grey-a,
-.dark .link-grey-a:hover,
-.dark .link-grey-a:visited {
-  color: $grey-c;
+.link-grey-3,
+.link-grey-3:hover,
+.link-grey-3:visited {
+  color: var(--grey-3);
 }
 
-.link-grey-b,
-.link-grey-b:hover,
-.link-grey-b:visited {
-  color: $grey-b;
-}
+// .dark .link-grey-3,
+// .dark .link-grey-3:hover,
+// .dark .link-grey-3:visited {
+//   color: $grey-a;
+// }
 
-.link-grey-c,
-.link-grey-c:hover,
-.link-grey-c:visited {
-  color: $grey-c;
-}
-
-.dark .link-grey-c,
-.dark .link-grey-c:hover,
-.dark .link-grey-c:visited {
-  color: $grey-a;
-}
-
-.link-grey-d,
-.link-grey-d:hover,
-.link-grey-d:visited {
-  color: $grey-d;
+.link-grey-4,
+.link-grey-4:hover,
+.link-grey-4:visited {
+  color: var(--grey-4);
 }
 
 .txt-primary {
-  color: $k;
+  color: var(--primary);
 }
 
-.dark .txt-primary {
-  color: $w;
+// .dark .txt-primary {
+//   color: $w;
+// }
+
+.txt-grey-1 {
+  color: var(--grey-1);
 }
 
-.txt-grey-a {
-  color: $grey-a;
+// .dark .txt-grey-1 {
+//   color: $grey-c;
+// }
+
+.txt-grey-2 {
+  color: var(--grey-2);
 }
 
-.dark .txt-grey-a {
-  color: $grey-c;
+.txt-grey-3 {
+  color: var(--grey-3);
 }
 
-.txt-grey-b {
-  color: $grey-b;
-}
+// .dark .txt-grey-3 {
+//   color: $grey-a;
+// }
 
-.txt-grey-c {
-  color: $grey-c;
-}
-
-.dark .txt-grey-c {
-  color: $grey-a;
-}
-
-.txt-grey-d {
-  color: $grey-d;
-}
-
-.svg-grey-a {
-  fill: $grey-a;
-}
-
-.dark .svg-grey-a {
-  fill: $grey-c;
-}
-
-.svg-grey-b {
-  fill: $grey-b;
-}
-
-.svg-grey-c {
-  fill: $grey-c;
-}
-
-.dark .svg-grey-c {
-  fill: $grey-a;
-}
-
-.svg-grey-d {
-  fill: $grey-d;
+.txt-grey-4 {
+  color: var(--grey-4);
 }
 
 .svg-primary {
-  fill: $k;
+  fill: var(--primary);
 }
 
-.dark .svg-primary {
-  fill: $w;
+.svg-grey-1 {
+  fill: var(--grey-1);
 }
+
+// .dark .svg-grey-1 {
+//   fill: $grey-c;
+// }
+
+.svg-grey-2 {
+  fill: var(--grey-2);
+}
+
+.svg-grey-3 {
+  fill: var(--grey-3);
+}
+
+// .dark .svg-grey-3 {
+//   fill: $grey-a;
+// }
+
+.svg-grey-4 {
+  fill: var(--grey-4);
+}
+
+// .dark .svg-primary {
+//   fill: $w;
+// }
