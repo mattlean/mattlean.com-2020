@@ -83,6 +83,7 @@ const PROJECTS = {
   'lean-space': {
     id: 'lean-space',
     name: 'Lean Space',
+    company: 'MattLean.com',
     long: 'The previous iteration of my personal website built in 2015.',
     tags: ['website', 'design', 'frontend'],
   },
@@ -103,6 +104,7 @@ const PROJECTS = {
   sot: {
     id: 'sot',
     name: 'Spectral Overlay Tool',
+    company: 'LGC Biosearch Technologies',
     long:
       'A tool for visualizing absorption and emission spectra for fluorescent dyes and quenchers.',
     tags: ['web-app', 'design', 'frontend', 'tooling'],

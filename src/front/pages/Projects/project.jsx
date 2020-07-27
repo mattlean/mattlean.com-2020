@@ -1,13 +1,14 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { useParams } from 'react-router-dom'
+import Badge from '../../components/Badge'
 import BlindFrame from '../../components/Blind/BlindFrame'
 import variants from '../variants'
 import { getProjectData } from '../../../common/projectData'
 
 const Projects = ({ projectData }) => {
   const { id } = useParams()
-  const { name } = projectData || getProjectData(id)
+  const { company, name } = projectData || getProjectData(id)
 
   return (
     <motion.div
@@ -19,9 +20,12 @@ const Projects = ({ projectData }) => {
       className="container"
     >
       <main className="grid-project grid">
-        <BlindFrame>
-          <h1 className="header-lg">{name}</h1>
-        </BlindFrame>
+        <section className="cover">
+          <BlindFrame>
+            <h1 className="header-lg">{name}</h1>
+            {company && <h2 className="subtitle txt-grey-b">{company}</h2>}
+          </BlindFrame>
+        </section>
       </main>
     </motion.div>
   )

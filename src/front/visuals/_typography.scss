@@ -6,6 +6,8 @@ $display-font-family: neue-haas-grotesk-display, 'Helvetica Neue', Helvetica,
 $txt-font-family: neue-haas-grotesk-text, 'Helvetica Neue', Helvetica, Arial,
   sans-serif;
 
+$txt-roman: 400;
+$display-roman: 500;
 $txt-medium: 500;
 $display-medium: 600;
 $bold: 700;
@@ -32,9 +34,13 @@ $bold: 700;
 
 .tracked-header {
   font-size: size.$size-30;
-  font-weight: $bold;
   letter-spacing: 0.15em;
   text-transform: uppercase;
+}
+
+.subtitle {
+  font-size: size.$size-30;
+  font-weight: $display-roman;
 }
 
 .txt-lg {

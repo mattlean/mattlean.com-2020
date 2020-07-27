@@ -4,6 +4,11 @@
   grid-template-rows: repeat(3, size.$size-157);
   margin-bottom: size.$size-27;
   margin-top: size.$size-211;
+
+  .cover {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+  }
 }
 
 @media (max-width: size.$size-960) {
