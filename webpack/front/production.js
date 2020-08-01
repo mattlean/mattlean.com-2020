@@ -38,7 +38,12 @@ module.exports = merge([
   buildStyles({
     cssLoaderOptions: { sourceMap: true },
     postCSSLoaderOptions: { config: { path: 'webpack' }, sourceMap: true },
-    sassLoaderOptions: { sourceMap: true },
+    sassLoaderOptions: {
+      sassOptions: {
+        includePaths: ['node_modules/eswiss/dist'],
+      },
+      sourceMap: true,
+    },
   }),
 
   genSourceMaps('source-map'),

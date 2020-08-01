@@ -1,5 +1,5 @@
-@use 'visuals/grid';
-@use 'visuals/size';
+@use '../visuals/grid';
+@use '../visuals/scale/size';
 
 .grid-feed {
   margin-bottom: size.$size-27;
@@ -38,6 +38,14 @@
           line-height: 1.25em;
           margin-bottom: size.$size-7;
           transform: translateY(-5px);
+        }
+
+        > ul > li {
+          margin-right: 1em;
+
+          &:last-child {
+            margin-right: 0;
+          }
         }
       }
     }

@@ -1,6 +1,6 @@
 import React from 'react'
+import { Badge } from 'eswiss'
 import { motion } from 'framer-motion'
-import Badge from '../components/Badge'
 import BlindFrame from '../components/Blind/BlindFrame'
 import MainFooter from '../components/MainFooter'
 import variants from './variants'
@@ -38,7 +38,7 @@ for (const i in allPostData) {
         <p className="txt-xs txt-grey-1">
           January 11, 2020 &middot; 5 min read
         </p>
-        <ul className="badge-list">{tags}</ul>
+        <ul>{tags}</ul>
       </a>
     </BlindFrame>
   )

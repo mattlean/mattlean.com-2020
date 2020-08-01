@@ -18,6 +18,18 @@ const TAGS = {
 }
 
 /**
+ * Take array of tag IDs, return new array of tag data
+ * @return {Array} Array of tag data
+ */
+export const genTagIDNameArray = (ids) => {
+  const tagIDNameArray = []
+  for (const id of ids) {
+    tagIDNameArray.push({ id, name: TAGS[id] })
+  }
+  return tagIDNameArray
+}
+
+/**
  * Get all tag data
  * @return {Object} All tag data
  */

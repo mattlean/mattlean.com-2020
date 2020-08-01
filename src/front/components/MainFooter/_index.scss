@@ -1,5 +1,5 @@
-@use 'visuals/color';
-@use 'visuals/size';
+@use '../../visuals/scale/color';
+@use '../../visuals/scale/size';
 
 .main-footer {
   grid-template-rows: repeat(2, size.$size-157);

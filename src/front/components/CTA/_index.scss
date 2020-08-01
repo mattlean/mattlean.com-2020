@@ -1,5 +1,5 @@
-@use 'visuals/size';
-@use 'visuals/typography';
+@use '../../visuals/scale/size';
+@use '../../visuals/scale/typography';
 
 %cta {
   font-family: typography.$disp-font-family;

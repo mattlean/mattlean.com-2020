@@ -1,13 +1,65 @@
-@use 'visuals/size';
+@use '../../visuals/grid';
+@use '../../visuals/scale/size';
+@use '../../visuals/scale/typography';
 
 .grid-project {
-  grid-template-rows: repeat(3, size.$size-157);
+  grid-template-rows: auto;
   margin-bottom: size.$size-27;
   margin-top: size.$size-211;
 
-  .cover {
+  a {
+    font-weight: typography.$txt-medium;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  > .project-content {
+    @include grid.grid-base;
+
     grid-column: 1/-1;
-    grid-row: 1/2;
+
+    > .cover {
+      transform: translateY(-27px);
+
+      grid-column: 1/-1;
+      grid-row: 1/2;
+
+      .subtitle {
+        margin-bottom: size.$size-12;
+      }
+    }
+
+    > .project-overview {
+      grid-column: 1/4;
+      margin-top: size.$size-100;
+    }
+
+    > .project-desc {
+      grid-column: 4/-1;
+      margin-top: size.$size-100;
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    > .btn-view-live {
+      grid-column: 4/5;
+
+      > .btn-icon {
+        transform: translateY(-2px);
+      }
+    }
+
+    > .btn-case-study {
+      grid-column: 5/6;
+
+      > .btn-icon {
+        transform: translateY(-1px);
+      }
+    }
   }
 }
 

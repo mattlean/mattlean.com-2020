@@ -1,24 +1,31 @@
 /* eswiss */
-@use '~eswiss/dist/styles/reset';
-@use '~eswiss/dist/components/Btn';
-@use '~eswiss/dist/components/Modal';
+@use 'styles/reset';
+@use 'components/Badge';
+@use 'components/Btn';
+@use 'components/Modal';
+
+/* Scales */
+@use './visuals/scale/color' as colorScale;
 
 /* General Styles */
-@use 'visuals/color';
-@use 'visuals/grid';
-@use 'visuals/logo';
-@use 'visuals/style';
-@use 'visuals/trans';
-@use 'visuals/typography';
+@use './visuals/style';
+@use './visuals/color';
+@use './visuals/grid';
+@use './visuals/logo';
+@use './visuals/trans';
+@use './visuals/typography';
+
+/* eswiss Overrides */
+@use './visuals/BadgeOverride';
+@use './visuals/BtnOverride';
 
 /* Components */
-@use 'components/Badge';
-@use 'components/Blind';
-@use 'components/CTA';
-@use 'components/MainFooter';
-@use 'components/MainNav';
-@use 'pages/About';
-@use 'pages/Contact';
-@use 'pages/Feed';
-@use 'pages/Landing';
-@use 'pages/Projects/Project';
+@use './components/Blind';
+@use './components/CTA';
+@use './components/MainFooter';
+@use './components/MainNav';
+@use './pages/About';
+@use './pages/Contact';
+@use './pages/Feed';
+@use './pages/Landing';
+@use './pages/Projects/Project';

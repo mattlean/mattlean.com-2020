@@ -1,30 +1,20 @@
-@use 'color';
-@use 'size';
-
-$disp-font-family: neue-haas-grotesk-display, 'Helvetica Neue', Helvetica, Arial,
-  sans-serif;
-$txt-font-family: neue-haas-grotesk-text, 'Helvetica Neue', Helvetica, Arial,
-  sans-serif;
-
-$disp-roman: 500;
-$disp-medium: 600;
-$txt-roman: 400;
-$txt-medium: 500;
-$bold: 700;
+@use './scale/color';
+@use './scale/size';
+@use './scale/typography';
 
 .headline {
   font-size: size.$size-100;
-  font-weight: $disp-medium;
+  font-weight: typography.$disp-medium;
 }
 
 .header-lg {
   font-size: size.$size-63;
-  font-weight: $disp-medium;
+  font-weight: typography.$disp-medium;
 }
 
 .header-md {
   font-size: size.$size-30;
-  font-weight: $disp-medium;
+  font-weight: typography.$disp-medium;
 }
 
 .header-sm {
@@ -40,7 +30,7 @@ $bold: 700;
 
 .subtitle {
   font-size: size.$size-30;
-  font-weight: $disp-roman;
+  font-weight: typography.$disp-roman;
 }
 
 .txt-lg {

@@ -1,7 +1,7 @@
 import React from 'react'
+import { Badge } from 'eswiss'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import Badge from '../../components/Badge'
 import BlindFrame from '../../components/Blind/BlindFrame'
 import variants from '../variants'
 import MainFooter from '../../components/MainFooter'
@@ -9,23 +9,18 @@ import { getAllProjectData } from '../../../common/projectData'
 
 const allProjectData = getAllProjectData()
 const projects = []
-for (const i in allProjectData) {
-  const currProjectData = allProjectData[i]
+for (const p of allProjectData) {
   projects.push(
-    <BlindFrame
-      key={currProjectData.id}
-      delay={0.5}
-      nodeType="li"
-      className="item"
-    >
-      <Link to={`/projects/${currProjectData.id}`}>
-        <h2 className="header-md link-primary">{currProjectData.name}</h2>
-        <p className="txt-grey-1">{currProjectData.long}</p>
-        <ul className="badge-list">
-          <Badge nodeType="li">Case Study</Badge>
-          <Badge nodeType="li">Backend</Badge>
-          <Badge nodeType="li">Design</Badge>
-          <Badge nodeType="li">Frontend</Badge>
+    <BlindFrame key={p.id} delay={0.5} nodeType="li" className="item">
+      <Link to={`/projects/${p.id}`}>
+        <h2 className="header-md link-primary">{p.name}</h2>
+        <p className="txt-grey-1">{p.long}</p>
+        <ul>
+          {p.tags.map((t) => (
+            <Badge key={t.id} nodeType="li" wide={true}>
+              {t.name}
+            </Badge>
+          ))}
         </ul>
       </Link>
     </BlindFrame>

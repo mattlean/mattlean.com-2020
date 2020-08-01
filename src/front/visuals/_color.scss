@@ -1,42 +1,14 @@
-$k: #000;
-$grey-a: #555;
-$grey-b: #777;
-$grey-c: #999;
-$grey-d: #aaa;
-$w: #fff;
-
-:root {
-  --primary: #{$k};
-  --secondary: #{$w};
-  --grey-1: #{$grey-a};
-  --grey-2: #{$grey-b};
-  --grey-3: #{$grey-c};
-  --grey-4: #{$grey-d};
-}
-
 .link-primary,
 .link-primary:hover,
 .link-primary:visited {
   color: var(--primary);
 }
 
-// .dark .link-primary,
-// .dark .link-primary:hover,
-// .dark .link-primary:visited {
-//   color: $w;
-// }
-
 .link-grey-1,
 .link-grey-1:hover,
 .link-grey-1:visited {
   color: var(--grey-1);
 }
-
-// .dark .link-grey-1,
-// .dark .link-grey-1:hover,
-// .dark .link-grey-1:visited {
-//   color: $grey-c;
-// }
 
 .link-grey-2,
 .link-grey-2:hover,
@@ -50,12 +22,6 @@ $w: #fff;
   color: var(--grey-3);
 }
 
-// .dark .link-grey-3,
-// .dark .link-grey-3:hover,
-// .dark .link-grey-3:visited {
-//   color: $grey-a;
-// }
-
 .link-grey-4,
 .link-grey-4:hover,
 .link-grey-4:visited {
@@ -66,17 +32,9 @@ $w: #fff;
   color: var(--primary);
 }
 
-// .dark .txt-primary {
-//   color: $w;
-// }
-
 .txt-grey-1 {
   color: var(--grey-1);
 }
-
-// .dark .txt-grey-1 {
-//   color: $grey-c;
-// }
 
 .txt-grey-2 {
   color: var(--grey-2);
@@ -85,10 +43,6 @@ $w: #fff;
 .txt-grey-3 {
   color: var(--grey-3);
 }
-
-// .dark .txt-grey-3 {
-//   color: $grey-a;
-// }
 
 .txt-grey-4 {
   color: var(--grey-4);
@@ -102,10 +56,6 @@ $w: #fff;
   fill: var(--grey-1);
 }
 
-// .dark .svg-grey-1 {
-//   fill: $grey-c;
-// }
-
 .svg-grey-2 {
   fill: var(--grey-2);
 }
@@ -114,14 +64,6 @@ $w: #fff;
   fill: var(--grey-3);
 }
 
-// .dark .svg-grey-3 {
-//   fill: $grey-a;
-// }
-
 .svg-grey-4 {
   fill: var(--grey-4);
 }
-
-// .dark .svg-primary {
-//   fill: $w;
-// }

@@ -1,6 +1,6 @@
-@use 'color';
-@use 'size';
-@use 'typography';
+@use './scale/color';
+@use './scale/size';
+@use './scale/typography';
 
 body {
   background-color: var(--secondary);

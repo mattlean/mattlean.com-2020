@@ -1,0 +1,14 @@
+@use '../visuals/scale/size';
+
+.btn {
+  --pb: #{size.$size-12};
+  --pt: #{size.$size-12};
+
+  font-size: size.$size-16;
+
+  > .btn-icon {
+    transform: translateY(-2px);
+
+    margin-right: 1em;
+  }
+}

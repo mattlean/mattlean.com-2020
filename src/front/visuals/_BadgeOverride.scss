@@ -1,0 +1,22 @@
+@use '../visuals/scale/size';
+
+/* Override default badge styles */
+.badge {
+  --color: var(--grey-2);
+
+  font-size: size.$size-12;
+}
+
+.badge-list li {
+  margin-right: 1em;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: size.$size-470) {
+  .badge {
+    font-size: size.$size-10;
+  }
+}

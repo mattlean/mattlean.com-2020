@@ -1,3 +1,4 @@
+import { genTagIDNameArray } from './tagData'
 import FeaturedEswiss from '../front/assets/eswiss-featured-project.jpg'
 import FeaturedGridnik from '../front/assets/gridnik-featured-project.jpg'
 
@@ -118,14 +119,19 @@ const PROJECTS = {
   },
 }
 
+// Format tag data
+for (const key in PROJECTS) {
+  PROJECTS[key].tags = genTagIDNameArray(PROJECTS[key].tags)
+}
+
 /**
  * Get all project data
  * @return {Array} Array of all project data in order
  */
 export const getAllProjectData = () => {
   const data = []
-  for (const i in ORDER) {
-    data.push(getProjectData(ORDER[i]))
+  for (const id of ORDER) {
+    data.push(getProjectData(id))
   }
   return data
 }
@@ -138,7 +144,6 @@ export const getAllProjectData = () => {
 export const getProjectData = (id) => {
   return PROJECTS[id]
 }
-
 /**
  * Get property value in project data associated with given ID
  * @param {string} id Project ID

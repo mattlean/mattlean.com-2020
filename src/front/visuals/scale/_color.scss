@@ -1,0 +1,15 @@
+$k: #000;
+$grey-a: #555;
+$grey-b: #777;
+$grey-c: #999;
+$grey-d: #aaa;
+$w: #fff;
+
+:root {
+  --primary: #{$k};
+  --secondary: #{$w};
+  --grey-1: #{$grey-a};
+  --grey-2: #{$grey-b};
+  --grey-3: #{$grey-c};
+  --grey-4: #{$grey-d};
+}

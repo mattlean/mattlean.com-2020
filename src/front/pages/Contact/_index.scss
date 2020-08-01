@@ -1,5 +1,5 @@
-@use 'visuals/size';
-@use 'visuals/typography';
+@use '../../visuals/scale/size';
+@use '../../visuals/scale/typography';
 
 .grid-contact {
   grid-template-rows: repeat(3, size.$size-157);
