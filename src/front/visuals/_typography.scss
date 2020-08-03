@@ -45,6 +45,19 @@
   font-size: size.$size-12;
 }
 
+.split-desc {
+  grid-column: 1/-1;
+
+  > h3 {
+    grid-column: span 3;
+  }
+
+  > p {
+    grid-column: span 3;
+    margin-bottom: 0;
+  }
+}
+
 @mixin txt-outline {
   /* TODO: have color class handle this */
   color: transparent;

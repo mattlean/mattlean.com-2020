@@ -6,6 +6,9 @@ import { useParams } from 'react-router-dom'
 import BlindFrame from '../../components/Blind/BlindFrame'
 import variants from '../variants'
 import { getProjectData } from '../../../common/projectData'
+import SSCharts from '../../assets/ss/charts.jpg'
+import SSFullscreen from '../../assets/ss/fullscreen.jpg'
+import SSInstrumentSelection from '../../assets/ss/instrument-selection.jpg'
 
 const Project = ({ projectData }) => {
   const { id } = useParams()
@@ -74,6 +77,37 @@ const Project = ({ projectData }) => {
             <Btn className="div" outline={true}>
               <BookIcon className="btn-icon" /> Case Study
             </Btn>
+          </BlindFrame>
+          <BlindFrame nodeType="figure" className="ss-lg">
+            <img src={`/${SSCharts}`} alt="" />
+            <figcaption>Main screen for spectral overlay tool</figcaption>
+          </BlindFrame>
+          <BlindFrame nodeType="section" className="split-desc grid">
+            <h3>Iterative Product Development Lifecycle</h3>
+            <p>
+              In 2014 I was brought on to port the app from Flash to native
+              browser technologies alongside new features. In 2015, Biosearch
+              Technologies was acquired by LGC, and the app’s styling was
+              updated to match the company’s new branding guidelines. In 2020,
+              the app’s UI was completely redesigned alongside new features and
+              performance optimizations.
+            </p>
+          </BlindFrame>
+          <BlindFrame nodeType="figure" className="ss-sm">
+            <img src={`/${SSInstrumentSelection}`} alt="" />
+            <figcaption className="txt-grey-2">
+              Instrument selection that supports filtering of instruments and
+              sorting of dyes
+            </figcaption>
+          </BlindFrame>
+          <BlindFrame nodeType="figure" className="ss-sm">
+            <img src={`/${SSFullscreen}`} alt="" />
+            <figcaption className="txt-grey-2">
+              Fullscreen mode for a larger view of the charts
+            </figcaption>
+          </BlindFrame>
+          <BlindFrame nodeType="section">
+            <h3>Project Details</h3>
           </BlindFrame>
         </section>
       </main>

@@ -24,7 +24,7 @@
       transform: translateY(-27px);
 
       grid-column: 1/-1;
-      grid-row: 1/2;
+      margin-bottom: 100px;
 
       .subtitle {
         margin-bottom: size.$size-12;
@@ -33,31 +33,13 @@
 
     > .project-overview {
       grid-column: 1/4;
-      margin-top: size.$size-100;
     }
 
     > .project-desc {
       grid-column: 4/-1;
-      margin-top: size.$size-100;
 
       p:last-child {
         margin-bottom: 0;
-      }
-    }
-
-    > .btn-view-live {
-      grid-column: 4/5;
-
-      > .btn-icon {
-        transform: translateY(-2px);
-      }
-    }
-
-    > .btn-case-study {
-      grid-column: 5/6;
-
-      > .btn-icon {
-        transform: translateY(-1px);
       }
     }
   }

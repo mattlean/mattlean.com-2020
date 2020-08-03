@@ -24,8 +24,13 @@
 @use './components/CTA';
 @use './components/MainFooter';
 @use './components/MainNav';
+
+/* Root Pages */
 @use './pages/About';
 @use './pages/Contact';
 @use './pages/Feed';
 @use './pages/Landing';
 @use './pages/Projects/Project';
+
+/* Project Pages */
+@use './pages/Projects/sot/index';

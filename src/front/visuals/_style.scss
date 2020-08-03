@@ -6,11 +6,12 @@ body {
   background-color: var(--secondary);
   color: var(--primary);
   font: typography.$txt-roman size.$size-18 typography.$txt-font-family;
+  text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+
   margin-left: size.$size-27;
   margin-right: size.$size-27;
-  text-rendering: optimizeLegibility;
 }
 
 body.dark {
@@ -32,6 +33,7 @@ h6 {
 
 p {
   line-height: 1.5em;
+
   margin-bottom: 1.5em;
 }
 
@@ -41,20 +43,36 @@ a:visited {
   color: color.$k;
 }
 
+figure {
+  > img {
+    width: 100%;
+  }
+
+  > figcaption {
+    font-size: size.$size-14;
+    font-style: italic;
+
+    margin-top: size.$size-14;
+  }
+}
+
 ol {
   counter-reset: ordered-list;
   list-style: none;
+
   padding-left: 3em;
 }
 
 ol > li::before {
   content: '0' counter(featured-posts-list);
+
   left: -3em;
   position: absolute;
 }
 
 ol > li {
   counter-increment: featured-posts-list;
+
   position: relative;
 }
 
@@ -64,6 +82,7 @@ dt {
 
 dd {
   line-height: 1.5em;
+
   margin-bottom: 1.5em;
 }
 
@@ -79,6 +98,7 @@ dd {
 @media (max-width: size.$size-470) {
   body {
     font-size: size.$size-16;
+
     margin-left: size.$size-18;
     margin-right: size.$size-18;
   }
