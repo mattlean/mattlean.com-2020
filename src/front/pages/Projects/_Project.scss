@@ -15,31 +15,86 @@
     width: 100%;
   }
 
-  > .project-content {
-    @include grid.grid-base;
-
+  > .cover {
     grid-column: 1/-1;
+    margin-bottom: 100px;
+    transform: translateY(-27px);
 
-    > .cover {
-      transform: translateY(-27px);
+    .subtitle {
+      margin-bottom: size.$size-12;
+    }
+  }
 
+  > .project-overview {
+    grid-column: span 3;
+    transform: translateY(-17px);
+  }
+
+  > .ss-lg {
+    grid-column: 1/-1;
+    margin-bottom: size.$size-81;
+    margin-top: size.$size-72;
+  }
+
+  > .ss-sm {
+    grid-column: span 3;
+    margin-bottom: 157px;
+  }
+
+  > .subgrid-project-desc {
+    grid-column: span 3;
+
+    > section {
       grid-column: 1/-1;
-      margin-bottom: 100px;
 
-      .subtitle {
-        margin-bottom: size.$size-12;
+      > p:last-of-type {
+        margin-bottom: 0;
       }
     }
+  }
 
-    > .project-overview {
-      grid-column: 1/4;
+  > .subgrid-project-details {
+    list-style-type: none;
+
+    grid-column: -3/-1;
+    margin-bottom: size.$size-184;
+
+    > section {
+      grid-column: span 1;
+
+      > section {
+        margin-bottom: size.$size-54;
+
+        > ul {
+          list-style-type: none;
+        }
+
+        > p {
+          line-height: normal;
+
+          margin-bottom: 0;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: size.$size-1150) {
+  .grid-project {
+    > .subgrid-project-desc {
+      grid-column: 1 / span 3;
     }
 
-    > .project-desc {
-      grid-column: 4/-1;
+    > .ss-sm {
+      grid-column: 1/-1;
+      margin-bottom: 0;
 
-      p:last-child {
-        margin-bottom: 0;
+      &:last-of-type {
+        margin-bottom: size.$size-157;
       }
     }
   }
@@ -48,6 +103,26 @@
 @media (max-width: size.$size-960) {
   .grid-project {
     margin-top: size.$size-201;
+  }
+}
+
+@media (max-width: size.$size-600) {
+  .grid-project {
+    > .project-overview {
+      grid-column: 1/-1;
+    }
+
+    > .subgrid-project-desc {
+      grid-column: 1/-1;
+    }
+  }
+}
+
+@media (max-width: size.$size-560) {
+  .grid-project {
+    > .subgrid-project-desc {
+      grid-column: 1/-1;
+    }
   }
 }
 

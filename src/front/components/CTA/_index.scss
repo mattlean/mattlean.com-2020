@@ -27,7 +27,7 @@
   @extend %cta;
 
   font-size: size.$size-18;
-  font-weight: typography.$bold;
+  font-weight: typography.$bold !important;
 
   > svg {
     @extend %cta-arrow;

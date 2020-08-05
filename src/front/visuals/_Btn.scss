@@ -7,8 +7,18 @@
   font-size: size.$size-16;
 
   > .btn-icon {
-    transform: translateY(-2px);
-
     margin-right: 1em;
+  }
+}
+
+.btn-case-study {
+  .btn-icon {
+    transform: translateY(-1px);
+  }
+}
+
+.btn-view-live {
+  .btn-icon {
+    transform: translateY(-2px);
   }
 }

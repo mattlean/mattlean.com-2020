@@ -183,6 +183,7 @@ const About = () => (
               <li>Jest</li>
               <li>Cypress</li>
               <li>Enzyme</li>
+              <li>Chromatic</li>
               <li>Mocha, Chai</li>
             </ul>
           </section>

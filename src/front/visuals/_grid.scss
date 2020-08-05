@@ -1,7 +1,7 @@
 @use './scale/size';
 
 @mixin grid-base {
-  display: grid;
+  display: grid !important;
   grid-gap: size.$size-27;
 }
 

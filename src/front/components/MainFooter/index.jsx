@@ -192,7 +192,8 @@ const MainFooter = () => {
           variants={variants}
           className="txt-xs txt-grey-3"
         >
-          Made with too much boba tea in SF Bay Area. <br className="d-sm" />
+          Made with too much boba tea in SF Bay Area.{' '}
+          <br className="d-none sm:d-inline" />
           <button
             onClick={() => {
               setFocusEleOnClose(document.activeElement)

@@ -7,6 +7,9 @@
 /* Scales */
 @use './visuals/scale/color' as colorScale;
 
+/* Util */
+@use './visuals/util/_responsive';
+
 /* General Styles */
 @use './visuals/style';
 @use './visuals/color';
@@ -14,10 +17,8 @@
 @use './visuals/logo';
 @use './visuals/trans';
 @use './visuals/typography';
-
-/* eswiss Overrides */
-@use './visuals/BadgeOverride';
-@use './visuals/BtnOverride';
+@use './visuals/Badge' as BadgeGeneral;
+@use './visuals/Btn' as BtnGeneral;
 
 /* Components */
 @use './components/Blind';

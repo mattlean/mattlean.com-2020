@@ -43,19 +43,6 @@ a:visited {
   color: color.$k;
 }
 
-figure {
-  > img {
-    width: 100%;
-  }
-
-  > figcaption {
-    font-size: size.$size-14;
-    font-style: italic;
-
-    margin-top: size.$size-14;
-  }
-}
-
 ol {
   counter-reset: ordered-list;
   list-style: none;
@@ -91,8 +78,17 @@ dd {
   max-width: size.$size-1161;
 }
 
-.d-sm {
-  display: none;
+.ss {
+  > img {
+    width: 100%;
+  }
+
+  > figcaption {
+    font-size: size.$size-14;
+    font-style: italic;
+
+    margin-top: size.$size-14;
+  }
 }
 
 @media (max-width: size.$size-470) {
@@ -101,9 +97,5 @@ dd {
 
     margin-left: size.$size-18;
     margin-right: size.$size-18;
-  }
-
-  .d-sm {
-    display: inline;
   }
 }
