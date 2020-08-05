@@ -5,6 +5,7 @@
   background: none;
   border: 0;
   cursor: pointer;
+
   vertical-align: middle;
 }
 
@@ -126,9 +127,10 @@
         z-index: 2;
 
         > li {
-          display: block;
           font: typography.$disp-medium size.$size-59
             typography.$disp-font-family;
+
+          display: block;
           margin-bottom: size.$size-30;
           margin-left: size.$size-27;
 
@@ -145,6 +147,7 @@
 
           > button {
             font-size: size.$size-20;
+
             vertical-align: bottom;
 
             > svg {
