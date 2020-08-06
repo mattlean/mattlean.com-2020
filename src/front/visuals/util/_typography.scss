@@ -1,0 +1,130 @@
+@use 'styles/util/gen';
+@use '../scale/bp';
+@use '../scale/size';
+@use '../scale/typography';
+
+$data: (
+  dispw: (
+    prop: font-weight,
+    vals: (
+      roman: typography.$disp-roman,
+      medium: typography.$disp-medium,
+      bold: typography.$bold,
+    ),
+  ),
+  txtw: (
+    prop: font-weight,
+    vals: (
+      roman: typography.$txt-roman,
+      medium: typography.$txt-medium,
+      bold: typography.$bold,
+    ),
+  ),
+);
+
+@include gen.gen-classes($data);
+
+@mixin gen-size-classes($prefix: '') {
+  $header-lg-class: 'header-lg';
+  @if $prefix != '' {
+    /* prettier-ignore */
+    $header-lg-class: #{$prefix}\:#{$header-lg-class};
+  }
+  @debug $header-lg-class;
+
+  .#{$header-lg-class} {
+    font-size: size.$size-63;
+    font-weight: typography.$disp-medium;
+  }
+
+  $header-md-class: 'header-md';
+  @if $prefix != '' {
+    /* prettier-ignore */
+    $header-md-class: #{$prefix}\:#{$header-md-class};
+  }
+  @debug $header-md-class;
+
+  .#{$header-md-class} {
+    font-size: size.$size-30;
+    font-weight: typography.$disp-medium;
+  }
+
+  $header-md-2-class: 'header-md-2';
+  @if $prefix != '' {
+    /* prettier-ignore */
+    $header-md-2-class: #{$prefix}\:#{$header-md-2-class};
+  }
+  @debug $header-md-2-class;
+
+  .#{$header-md-2-class} {
+    font-size: size.$size-24;
+    font-weight: typography.$disp-medium;
+  }
+
+  $header-sm-class: 'header-sm';
+  @if $prefix != '' {
+    /* prettier-ignore */
+    $header-sm-class: #{$prefix}\:#{$header-sm-class};
+  }
+  @debug $header-sm-class;
+
+  .#{$header-sm-class} {
+    font-size: size.$size-14;
+    text-transform: uppercase;
+  }
+
+  $txt-lg-class: 'txt-lg';
+  @if $prefix != '' {
+    /* prettier-ignore */
+    $txt-lg-class: #{$prefix}\:#{$txt-lg-class};
+  }
+  @debug $txt-lg-class;
+
+  .#{$txt-lg-class} {
+    font-size: size.$size-30;
+  }
+
+  $txt-md-class: 'txt-md';
+  @if $prefix != '' {
+    /* prettier-ignore */
+    $txt-md-class: #{$prefix}\:#{$txt-md-class};
+  }
+  @debug $txt-md-class;
+
+  .#{$txt-md-class} {
+    font-size: size.$size-24;
+    line-height: size.$size-36;
+  }
+
+  $txt-sm-class: 'txt-sm';
+  @if $prefix != '' {
+    /* prettier-ignore */
+    $txt-sm-class: #{$prefix}\:#{$txt-sm-class};
+  }
+  @debug $txt-sm-class;
+
+  .#{$txt-sm-class} {
+    font-size: size.$size-14;
+  }
+
+  $txt-xs-class: 'txt-xs';
+  @if $prefix != '' {
+    /* prettier-ignore */
+    $txt-xs-class: #{$prefix}\:#{$txt-xs-class};
+  }
+  @debug $txt-xs-class;
+
+  .#{$txt-xs-class} {
+    font-size: size.$size-12;
+  }
+}
+
+@include gen-size-classes;
+
+@media (max-width: size.$size-960) {
+  @include gen-size-classes('md');
+}
+
+@media (max-width: size.$size-470) {
+  @include gen-size-classes('sm');
+}

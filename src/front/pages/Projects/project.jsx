@@ -40,7 +40,7 @@ const Project = ({ projectData }) => {
           </ul>
         </BlindFrame>
         <BlindFrame className="project-overview">
-          <h2 className="header-lg">Project Overview</h2>
+          <h2 className="header-lg md:header-md">Project Overview</h2>
         </BlindFrame>
         <BlindFrame className="subgrid-project-desc grid">
           <section>
@@ -78,7 +78,7 @@ const Project = ({ projectData }) => {
           </figcaption>
         </BlindFrame>
         <BlindFrame nodeType="section" className="subgrid-mid-desc grid">
-          <h3 className="header-md">
+          <h3 className="header-md-2">
             Iterative Product Development&nbsp;Lifecycle
           </h3>
           <p className="txt-md txt-grey-1">
@@ -89,7 +89,7 @@ const Project = ({ projectData }) => {
             UI was completely redesigned alongside new features and performance
             optimizations.
           </p>
-          <CTA to="/" type="sm">
+          <CTA to="/" type="sm" className="link-primary svg-primary">
             Learn more about the project
           </CTA>
         </BlindFrame>

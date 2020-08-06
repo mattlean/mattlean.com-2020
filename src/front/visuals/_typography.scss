@@ -7,26 +7,6 @@
   font-weight: typography.$disp-medium;
 }
 
-.header-lg {
-  font-size: size.$size-63;
-  font-weight: typography.$disp-medium;
-}
-
-.header-md {
-  font-size: size.$size-30;
-  font-weight: typography.$disp-medium;
-}
-
-.header-md-2 {
-  font-size: size.$size-24;
-  font-weight: typography.$disp-medium;
-}
-
-.header-sm {
-  font-size: size.$size-14;
-  text-transform: uppercase;
-}
-
 .tracked-header {
   font-size: size.$size-30;
   letter-spacing: 0.15em;
@@ -36,31 +16,6 @@
 .subtitle {
   font-size: size.$size-30;
   font-weight: typography.$disp-roman;
-}
-
-.txt-lg {
-  font-size: size.$size-30;
-}
-
-.txt-md {
-  font-size: size.$size-24;
-  line-height: size.$size-36;
-}
-
-.txt-sm {
-  font-size: size.$size-14;
-}
-
-.txt-xs {
-  font-size: size.$size-12;
-}
-
-.subgrid-mid-desc {
-  grid-column: 1/-1;
-
-  > p {
-    margin-bottom: 0;
-  }
 }
 
 @mixin txt-outline {

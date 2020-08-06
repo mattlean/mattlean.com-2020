@@ -1,5 +1,7 @@
 @use 'styles/util/appearance';
-@use '../scale/bp';
 @use 'styles/util/gen';
+@use '../scale/bp';
+@use './typography';
 
 @include gen.gen-responsive-classes(bp.$bp, appearance.$data);
+@include gen.gen-responsive-classes(bp.$bp, typography.$data);

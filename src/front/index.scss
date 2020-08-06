@@ -8,7 +8,8 @@
 @use './visuals/scale/color' as colorScale;
 
 /* Util */
-@use './visuals/util/_responsive';
+@use './visuals/util/responsive';
+@use './visuals/util/typography';
 
 /* General Styles */
 @use './visuals/style';
@@ -16,7 +17,7 @@
 @use './visuals/grid';
 @use './visuals/logo';
 @use './visuals/trans';
-@use './visuals/typography';
+@use './visuals/typography' as typographyGeneral;
 @use './visuals/Badge' as BadgeGeneral;
 @use './visuals/Btn' as BtnGeneral;
 

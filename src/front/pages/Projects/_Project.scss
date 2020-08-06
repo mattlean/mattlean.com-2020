@@ -41,6 +41,14 @@
     margin-bottom: 157px;
   }
 
+  .subgrid-mid-desc {
+    grid-column: 1/-1;
+
+    > p {
+      margin-bottom: 0;
+    }
+  }
+
   > .subgrid-project-desc {
     grid-column: span 3;
 
@@ -69,6 +77,7 @@
           list-style-type: none;
         }
 
+        // stylelint-disable-next-line no-descending-specificity
         > p {
           line-height: normal;
 
@@ -103,6 +112,10 @@
 @media (max-width: size.$size-960) {
   .grid-project {
     margin-top: size.$size-201;
+
+    > .project-overview {
+      transform: none;
+    }
   }
 }
 
