@@ -8,8 +8,8 @@
 @use './visuals/scale/color' as colorScale;
 
 /* Util */
-@use './visuals/util/responsive';
 @use './visuals/util/typography';
+@use './visuals/util/responsive';
 
 /* General Styles */
 @use './visuals/style';

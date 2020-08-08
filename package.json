@@ -23,7 +23,7 @@
   "dependencies": {
     "@primer/octicons-react": "^10.0.0",
     "ejs": "^3.1.3",
-    "eswiss": "^0.0.16",
+    "eswiss": "^0.0.18",
     "express": "^4.17.1",
     "framer-motion": "^1.11.1",
     "morgan": "^1.10.0",

@@ -131,7 +131,7 @@ const MainNav = () => {
             </NavLink>
           </li>
           <li>
-            <button className="txt-primary" onClick={() => toggle()}>
+            <button className="c-primary" onClick={() => toggle()}>
               <SunMoon className="sun-moon_svg" />
               {btnLightTxt}
             </button>

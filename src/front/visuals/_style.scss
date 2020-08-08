@@ -3,8 +3,8 @@
 @use './scale/typography';
 
 body {
-  background-color: var(--secondary);
-  color: var(--primary);
+  background-color: var(--c-secondary);
+  color: var(--c-primary);
   font: typography.$txt-roman size.$size-18 typography.$txt-font-family;
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
@@ -15,8 +15,8 @@ body {
 }
 
 body.dark {
-  --primary: #{color.$w};
-  --secondary: #{color.$k};
+  --c-primary: #{color.$w};
+  --c-secondary: #{color.$k};
   --grey-1: #{color.$grey-c};
   --grey-3: #{color.$grey-a};
 }
@@ -28,7 +28,7 @@ h4,
 h5,
 h6 {
   font-family: typography.$disp-font-family;
-  font-weight: typography.$bold;
+  font-weight: typography.$disp-medium;
 }
 
 p {

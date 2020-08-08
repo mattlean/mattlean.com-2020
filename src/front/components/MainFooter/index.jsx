@@ -62,7 +62,7 @@ const MainFooter = () => {
       isOpen={isOpen}
       onClose={() => setIsOpen(false)}
     >
-      <h1 className="modal-heading header-md">About MattLean.com</h1>
+      <h1 className="modal-h h-4 sm:h-6">About MattLean.com</h1>
       <p>
         MattLean.com is designed to be responsive, meaning it works on all
         screen sizes, from large desktops to small mobile devices.
@@ -114,7 +114,7 @@ const MainFooter = () => {
 
   return (
     <>
-      <footer ref={intersectionRef} className="main-footer grid txt-grey-2">
+      <footer ref={intersectionRef} className="main-footer grid c-grey-2">
         <motion.dl
           animate={animate}
           initial="initial"
@@ -190,7 +190,7 @@ const MainFooter = () => {
           animate={animate}
           initial="initial"
           variants={variants}
-          className="txt-xs txt-grey-3"
+          className="txt-2 c-grey-3"
         >
           Made with too much boba tea in SF Bay Area.{' '}
           <br className="d-none sm:d-inline" />
@@ -199,7 +199,7 @@ const MainFooter = () => {
               setFocusEleOnClose(document.activeElement)
               setIsOpen(true)
             }}
-            className="txt-xs txt-grey-3"
+            className="txt-2 c-grey-3"
           >
             Learn more about this site.
           </button>

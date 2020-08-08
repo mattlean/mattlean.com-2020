@@ -1,7 +1,7 @@
 .link-primary,
 .link-primary:hover,
 .link-primary:visited {
-  color: var(--primary);
+  color: var(--c-primary);
 }
 
 .link-grey-1,
@@ -28,28 +28,28 @@
   color: var(--grey-4);
 }
 
-.txt-primary {
-  color: var(--primary);
+.c-primary {
+  color: var(--c-primary);
 }
 
-.txt-grey-1 {
+.c-grey-1 {
   color: var(--grey-1);
 }
 
-.txt-grey-2 {
+.c-grey-2 {
   color: var(--grey-2);
 }
 
-.txt-grey-3 {
+.c-grey-3 {
   color: var(--grey-3);
 }
 
-.txt-grey-4 {
+.c-grey-4 {
   color: var(--grey-4);
 }
 
 .svg-primary {
-  fill: var(--primary);
+  fill: var(--c-primary);
 }
 
 .svg-grey-1 {

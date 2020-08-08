@@ -23,7 +23,7 @@ const About = () => (
           <h1 className="header-lg">Hello, world!</h1>
         </BlindFrame>
         <BlindFrame delay={0.5} threshold={0.5}>
-          <p className="txt-lg txt-grey-1">
+          <p className="txt-lg c-grey-1">
             My name is Matt Lean and I’m a full-stack web developer & UI/UX
             designer. I was born in NY and raised in SoCal. Now I live in the SF
             Bay Area and am looking for new work&nbsp;opportunities!
@@ -34,7 +34,7 @@ const About = () => (
         delay={1}
         nodeType="section"
         threshold={0.1}
-        className="content txt-grey-1"
+        className="content c-grey-1"
       >
         <p>
           In elementary school, my sister introduced me to a browser game called
@@ -92,7 +92,7 @@ const About = () => (
       </BlindFrame>
       <section className="closing">
         <BlindFrame>
-          <p className="txt-lg txt-grey-1">
+          <p className="txt-lg c-grey-1">
             Thanks for reading my story.
             <br />
             I&apos;d love to hear yours!
@@ -108,7 +108,7 @@ const About = () => (
         delay={1}
         nodeType="aside"
         threshold={0.1}
-        className="subgrid-resume txt-sm txt-grey-2"
+        className="subgrid-resume txt-sm c-grey-2"
       >
         <section className="work">
           <h2 className="header-sm">Work</h2>

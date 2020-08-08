@@ -27,8 +27,8 @@ const Project = ({ projectData }) => {
     >
       <main className="grid-project grid">
         <BlindFrame nodeType="section" className="cover">
-          <h1 className="headline">{name}</h1>
-          {company && <h2 className="subtitle txt-grey-2">{company}</h2>}
+          <h1 className="h-1">{name}</h1>
+          {company && <h2 className="subtitle c-grey-2">{company}</h2>}
           <ul className="badge-list">
             {tags.map((t) => {
               return (
@@ -44,7 +44,7 @@ const Project = ({ projectData }) => {
         </BlindFrame>
         <BlindFrame className="subgrid-project-desc grid">
           <section>
-            <p className="txt-grey-1">
+            <p className="c-grey-1">
               <a
                 href="https://www.biosearchtech.com"
                 rel="noreferrer"
@@ -56,7 +56,7 @@ const Project = ({ projectData }) => {
               is a biotechnology company that provides products and services for
               genomic analysis in healthcare and agricultural genomics.
             </p>
-            <p className="txt-grey-1">
+            <p className="c-grey-1">
               I worked with them to build the spectral overlay tool, a web
               application that visualizes the absorption & emission spectra for
               common fluorescent dyes and quenchers, allowing users to overlay
@@ -73,7 +73,7 @@ const Project = ({ projectData }) => {
         </BlindFrame>
         <BlindFrame nodeType="figure" className="ss ss-lg">
           <img src={`/${SSCharts}`} alt="" />
-          <figcaption className="txt-grey-2">
+          <figcaption className="c-grey-2">
             Main screen for spectral overlay tool
           </figcaption>
         </BlindFrame>
@@ -81,7 +81,7 @@ const Project = ({ projectData }) => {
           <h3 className="header-md-2">
             Iterative Product Development&nbsp;Lifecycle
           </h3>
-          <p className="txt-md txt-grey-1">
+          <p className="txt-md c-grey-1">
             In 2014 I was brought on to port the app from Flash to native
             browser technologies alongside new features. In 2015, Biosearch
             Technologies was acquired by LGC, and the app’s styling was updated
@@ -95,19 +95,19 @@ const Project = ({ projectData }) => {
         </BlindFrame>
         <BlindFrame nodeType="figure" className="ss ss-sm">
           <img src={`/${SSInstrumentSelection}`} alt="" />
-          <figcaption className="txt-grey-2">
+          <figcaption className="c-grey-2">
             Instrument selection that supports filtering of instruments and
             sorting of dyes
           </figcaption>
         </BlindFrame>
         <BlindFrame nodeType="figure" className="ss ss-sm">
           <img src={`/${SSFullscreen}`} alt="" />
-          <figcaption className="txt-grey-2">
+          <figcaption className="c-grey-2">
             Fullscreen mode for a larger view of the charts
           </figcaption>
         </BlindFrame>
         <h3 className="header-md-2">Project Details</h3>
-        <section className="subgrid-project-details grid txt-grey-1">
+        <section className="subgrid-project-details grid c-grey-1">
           <section>
             <section>
               <h4>Last Updated</h4>

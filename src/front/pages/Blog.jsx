@@ -34,10 +34,8 @@ for (const i in allPostData) {
     >
       <a href="/">
         <h2 className="header-md link-primary">{currPostData.title}</h2>
-        <p className="txt-grey-1">{currPostData.subtitle}</p>
-        <p className="txt-xs txt-grey-1">
-          January 11, 2020 &middot; 5 min read
-        </p>
+        <p className="c-grey-1">{currPostData.subtitle}</p>
+        <p className="txt-xs c-grey-1">January 11, 2020 &middot; 5 min read</p>
         <ul>{tags}</ul>
       </a>
     </BlindFrame>

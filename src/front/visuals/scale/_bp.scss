@@ -1,4 +1,9 @@
+@use './size';
+
+$md: size.$size-960;
+$sm: size.$size-470;
+
 $bp: (
-  sm: 470px,
-  md: 960px,
+  md: $md,
+  sm: $sm,
 );

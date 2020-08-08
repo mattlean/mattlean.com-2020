@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import BlindFrame from '../../components/Blind/BlindFrame'
 import CTA from '../../components/CTA'
@@ -25,16 +26,24 @@ const Landing = () => (
     className="container"
   >
     <main className="grid-landing grid">
-      <section className="cover">
-        <BlindFrame delay={0.2} threshold={0.5}>
-          <h1 className="headline">Hi, I’m Matt&nbsp;Lean!</h1>
+      <section className="subgrid-cover grid">
+        <BlindFrame
+          nodeType="h1"
+          delay={0.2}
+          threshold={0.5}
+          className="h-1 md:h-2 sm:h-3"
+        >
+          Hi, I’m Matt&nbsp;Lean!
         </BlindFrame>
-        <BlindFrame delay={0.4} threshold={0.5}>
-          <p className="txt-lg txt-grey-1">
-            I’m a developer who works at the intersection of engineering and
-            design. I’ve been building web-based products for Silicon Valley
-            since 2015 and am currently looking for new opportunities.
-          </p>
+        <BlindFrame
+          nodeType="p"
+          delay={0.4}
+          threshold={0.5}
+          className="txt-7 sm:txt-6 c-grey-1"
+        >
+          I’m a developer who works at the intersection of engineering and
+          design. I’ve been building web-based products for Silicon Valley since
+          2015 and am currently looking for new opportunities.
         </BlindFrame>
         <BlindFrame delay={0.8} threshold={0.5}>
           <CTA to="/about" type="lg" className="svg-primary link-primary">
@@ -42,47 +51,51 @@ const Landing = () => (
           </CTA>
         </BlindFrame>
       </section>
-      <BlindFrame className="featured-projects-header">
-        <h2 className="tracked-header">Featured Projects</h2>
+      <BlindFrame
+        nodeType="h2"
+        className="featured-header featured-header-projects h-4 sm:h-6 dispw-bold tracked"
+      >
+        Featured Projects
       </BlindFrame>
       <section className="subgrid-featured featured-projects grid">
-        <figure className="subgrid-featured-a">
-          <BlindFrame threshold={0.5}>
-            <img
-              src={gridnikData.featured.img}
-              alt={gridnikData.featured.alt}
-            />
-          </BlindFrame>
-          <figcaption>
-            <BlindFrame>
-              <h3 className="header-md">{gridnikData.name}</h3>
+        <Link to="/projects/gridnik" className="subgrid-featured-item grid">
+          <figure className="subgrid-featured-item-content grid">
+            <BlindFrame threshold={0.5}>
+              <img
+                src={gridnikData.featured.img}
+                alt={gridnikData.featured.alt}
+              />
             </BlindFrame>
-            <BlindFrame>
-              <p className="txt-grey-1">{gridnikData.short}</p>
+            <BlindFrame nodeType="figcaption">
+              <h3 className="h-4 sm:h-6 c-primary">{gridnikData.name}</h3>
+              <p className="c-grey-1">{gridnikData.short}</p>
             </BlindFrame>
-          </figcaption>
-        </figure>
-        <figure className="subgrid-featured-b">
-          <BlindFrame threshold={0.5}>
-            <img src={eswissData.featured.img} alt={eswissData.featured.alt} />
-          </BlindFrame>
-          <figcaption>
-            <BlindFrame>
-              <h3 className="header-md">{eswissData.name}</h3>
+          </figure>
+        </Link>
+        <Link to="/projects/eswiss" className="subgrid-featured-item grid">
+          <figure className="subgrid-featured-item-content grid">
+            <BlindFrame threshold={0.5}>
+              <img
+                src={eswissData.featured.img}
+                alt={eswissData.featured.alt}
+              />
             </BlindFrame>
-            <BlindFrame>
-              <p className="txt-grey-1">{eswissData.short}</p>
+            <BlindFrame nodeType="figcaption">
+              <h3 className="h-4 sm:h-6 c-primary">{eswissData.name}</h3>
+              <p className="c-grey-1">{eswissData.short}</p>
             </BlindFrame>
-          </figcaption>
-        </figure>
+          </figure>
+        </Link>
       </section>
-      <BlindFrame className="view-more-projects">
-        <CTA to="/projects" type="sm" className=" svg-grey-3 link-grey-3">
+      <BlindFrame className="view-more view-more-projects">
+        <CTA to="/projects" type="sm" className="svg-grey-3 link-grey-3">
           View all projects
         </CTA>
       </BlindFrame>
-      <BlindFrame className="featured-case-studies-header">
-        <h2 className="tracked-header">Featured Case&nbsp;Studies</h2>
+      {/* <BlindFrame className="featured-header featured-header-case-studies">
+        <h2 className="h-4 sm:h-6 dispw-bold tracked">
+          Featured Case&nbsp;Studies
+        </h2>
       </BlindFrame>
       <section className="subgrid-featured featured-case-studies grid">
         <figure className="subgrid-featured-a">
@@ -91,10 +104,8 @@ const Landing = () => (
           </BlindFrame>
           <figcaption>
             <BlindFrame>
-              <h3 className="header-md">{csSOTData.title}</h3>
-            </BlindFrame>
-            <BlindFrame>
-              <p className="txt-grey-1">{csSOTData.subtitle}</p>
+              <h3 className="h-4 sm:h-6">{csSOTData.title}</h3>
+              <p className="c-grey-1">{csSOTData.subtitle}</p>
             </BlindFrame>
           </figcaption>
         </figure>
@@ -107,10 +118,8 @@ const Landing = () => (
           </BlindFrame>
           <figcaption>
             <BlindFrame>
-              <h3 className="header-md">{csLeanSpace.title}</h3>
-            </BlindFrame>
-            <BlindFrame>
-              <p className="txt-grey-1">{csLeanSpace.subtitle}</p>
+              <h3 className="h-4 sm:h-6">{csLeanSpace.title}</h3>
+              <p className="c-grey-1">{csLeanSpace.subtitle}</p>
             </BlindFrame>
           </figcaption>
         </figure>
@@ -119,7 +128,7 @@ const Landing = () => (
         <CTA to="/blog" type="sm" className="link-grey-3 svg-grey-3">
           View all case studies
         </CTA>
-      </BlindFrame>
+      </BlindFrame> */}
     </main>
     <MainFooter />
   </motion.div>

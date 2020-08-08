@@ -23,7 +23,7 @@
   }
 
   > ul {
-    background-color: var(--secondary);
+    background-color: var(--c-secondary);
     list-style: none;
 
     > li {
@@ -141,7 +141,7 @@
           }
 
           > a {
-            color: var(--primary);
+            color: var(--c-primary);
             letter-spacing: normal;
           }
 
@@ -161,7 +161,7 @@
   }
 
   .sun-moon_svg {
-    fill: var(--primary);
+    fill: var(--c-primary);
   }
 
   // .dark .main-nav > ul.open > li > a {

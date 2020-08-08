@@ -14,7 +14,7 @@ for (const p of allProjectData) {
     <BlindFrame key={p.id} delay={0.5} nodeType="li" className="item">
       <Link to={`/projects/${p.id}`}>
         <h2 className="header-md link-primary">{p.name}</h2>
-        <p className="txt-grey-1">{p.long}</p>
+        <p className="c-grey-1">{p.long}</p>
         <ul>
           {p.tags.map((t) => (
             <Badge key={t.id} nodeType="li" wide={true}>
