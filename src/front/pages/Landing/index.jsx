@@ -43,7 +43,7 @@ const Landing = () => (
         >
           I’m a developer who works at the intersection of engineering and
           design. I’ve been building web-based products for Silicon Valley since
-          2015 and am currently looking for new opportunities.
+          2015 and am currently looking for new&nbsp;opportunities.
         </BlindFrame>
         <BlindFrame delay={0.8} threshold={0.5}>
           <CTA to="/about" type="lg" className="svg-primary link-primary">
@@ -92,43 +92,47 @@ const Landing = () => (
           View all projects
         </CTA>
       </BlindFrame>
-      {/* <BlindFrame className="featured-header featured-header-case-studies">
-        <h2 className="h-4 sm:h-6 dispw-bold tracked">
-          Featured Case&nbsp;Studies
-        </h2>
+      <BlindFrame
+        nodeType="h2"
+        className="featured-header featured-header-case-studies h-4 sm:h-6 dispw-bold tracked"
+      >
+        Featured Case&nbsp;Studies
       </BlindFrame>
       <section className="subgrid-featured featured-case-studies grid">
-        <figure className="subgrid-featured-a">
-          <BlindFrame threshold={0.5}>
-            <img src={csSOTData.featured.img} alt={csSOTData.featured.alt} />
-          </BlindFrame>
-          <figcaption>
-            <BlindFrame>
-              <h3 className="h-4 sm:h-6">{csSOTData.title}</h3>
+        <Link to="/projects/sot" className="subgrid-featured-item grid">
+          <figure className="subgrid-featured-item-content grid">
+            <BlindFrame threshold={0.5}>
+              <img
+                src={gridnikData.featured.img}
+                alt={gridnikData.featured.alt}
+              />
+            </BlindFrame>
+            <BlindFrame nodeType="figcaption">
+              <h3 className="h-4 sm:h-6 c-primary">{csSOTData.title}</h3>
               <p className="c-grey-1">{csSOTData.subtitle}</p>
             </BlindFrame>
-          </figcaption>
-        </figure>
-        <figure className="subgrid-featured-b">
-          <BlindFrame threshold={0.5}>
-            <img
-              src={csLeanSpace.featured.img}
-              alt={csLeanSpace.featured.alt}
-            />
-          </BlindFrame>
-          <figcaption>
-            <BlindFrame>
-              <h3 className="h-4 sm:h-6">{csLeanSpace.title}</h3>
+          </figure>
+        </Link>
+        <Link to="/projects/lean-space" className="subgrid-featured-item grid">
+          <figure className="subgrid-featured-item-content grid">
+            <BlindFrame threshold={0.5}>
+              <img
+                src={csLeanSpace.featured.img}
+                alt={csLeanSpace.featured.alt}
+              />
+            </BlindFrame>
+            <BlindFrame nodeType="figcaption">
+              <h3 className="h-4 sm:h-6 c-primary">{csLeanSpace.title}</h3>
               <p className="c-grey-1">{csLeanSpace.subtitle}</p>
             </BlindFrame>
-          </figcaption>
-        </figure>
+          </figure>
+        </Link>
       </section>
       <BlindFrame className="view-more-case-studies">
         <CTA to="/blog" type="sm" className="link-grey-3 svg-grey-3">
           View all case studies
         </CTA>
-      </BlindFrame> */}
+      </BlindFrame>
     </main>
     <MainFooter />
   </motion.div>
