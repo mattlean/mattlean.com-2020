@@ -19,15 +19,18 @@ const About = () => (
   >
     <main className="grid-about grid">
       <section className="cover">
-        <BlindFrame>
-          <h1 className="header-lg">Hello, world!</h1>
+        <BlindFrame nodeType="h1" className="h-2 sm:h-3">
+          Hello, world!
         </BlindFrame>
-        <BlindFrame delay={0.5} threshold={0.5}>
-          <p className="txt-lg c-grey-1">
-            My name is Matt Lean and I’m a full-stack web developer & UI/UX
-            designer. I was born in NY and raised in SoCal. Now I live in the SF
-            Bay Area and am looking for new work&nbsp;opportunities!
-          </p>
+        <BlindFrame
+          nodeType="p"
+          delay={0.5}
+          threshold={0.5}
+          className="txt-7 sm:txt-6 c-grey-1"
+        >
+          My name is Matt Lean and I’m a full-stack web developer & UI/UX
+          designer. I was born in NY and raised in SoCal. Now I live in the SF
+          Bay Area and am looking for new work&nbsp;opportunities!
         </BlindFrame>
       </section>
       <BlindFrame
@@ -92,7 +95,7 @@ const About = () => (
       </BlindFrame>
       <section className="closing">
         <BlindFrame>
-          <p className="txt-lg c-grey-1">
+          <p className="txt-7 sm:txt-6 c-grey-1">
             Thanks for reading my story.
             <br />
             I&apos;d love to hear yours!
@@ -108,10 +111,10 @@ const About = () => (
         delay={1}
         nodeType="aside"
         threshold={0.1}
-        className="subgrid-resume txt-sm c-grey-2"
+        className="subgrid-resume txt-3 c-grey-2"
       >
         <section className="work">
-          <h2 className="header-sm">Work</h2>
+          <h2 className="h-9 dispw-bold tt-uppercase">Work</h2>
           <dl>
             <dt>Medable</dt>
             <dd>
@@ -146,7 +149,7 @@ const About = () => (
           </dl>
         </section>
         <section className="edu">
-          <h2 className="header-sm">Education</h2>
+          <h2 className="h-9 dispw-bold tt-uppercase">Education</h2>
           <dl>
             <dt>University of California, Santa Cruz</dt>
             <dd>
@@ -164,7 +167,7 @@ const About = () => (
         </section>
         <section className="subgrid-skills">
           <section>
-            <h2 className="header-sm">Languages</h2>
+            <h2 className="h-9 dispw-bold tt-uppercase">Languages</h2>
             <ul>
               <li>JavaScript</li>
               <li>Python</li>
@@ -178,7 +181,7 @@ const About = () => (
             </ul>
           </section>
           <section>
-            <h2 className="header-sm">Testing</h2>
+            <h2 className="h-9 dispw-bold tt-uppercase">Testing</h2>
             <ul>
               <li>Jest</li>
               <li>Cypress</li>
@@ -188,7 +191,7 @@ const About = () => (
             </ul>
           </section>
           <section>
-            <h2 className="header-sm">Frontend</h2>
+            <h2 className="h-9 dispw-bold tt-uppercase">Frontend</h2>
             <ul>
               <li>React</li>
               <li>React Router</li>
@@ -217,7 +220,7 @@ const About = () => (
             </ul>
           </section>
           <section>
-            <h2 className="header-sm">Backend</h2>
+            <h2 className="h-9 dispw-bold tt-uppercase">Backend</h2>
             <ul>
               <li>Express</li>
               <li>webapp2</li>
@@ -231,7 +234,7 @@ const About = () => (
             </ul>
           </section>
           <section>
-            <h2 className="header-sm">Databases</h2>
+            <h2 className="h-9 dispw-bold tt-uppercase">Databases</h2>
             <ul>
               <li>PostgreSQL</li>
               <li>MongoDB</li>
@@ -240,7 +243,7 @@ const About = () => (
             </ul>
           </section>
           <section>
-            <h2 className="header-sm">Servers</h2>
+            <h2 className="h-9 dispw-bold tt-uppercase">Servers</h2>
             <ul>
               <li>AWS Elastic Beanstalk</li>
               <li>Amazon S3</li>
@@ -250,7 +253,7 @@ const About = () => (
             </ul>
           </section>
           <section>
-            <h2 className="header-sm">Tooling</h2>
+            <h2 className="h-9 dispw-bold tt-uppercase">Tooling</h2>
             <ul>
               <li>webpack</li>
               <li>GitHub</li>
@@ -262,7 +265,7 @@ const About = () => (
             </ul>
           </section>
           <section>
-            <h2 className="header-sm">Design</h2>
+            <h2 className="h-9 dispw-bold tt-uppercase">Design</h2>
             <ul>
               <li>XD</li>
               <li>Photoshop</li>
