@@ -1,3 +1,4 @@
+@use '../../visuals/scale/bp';
 @use '../../visuals/scale/color';
 @use '../../visuals/scale/size';
 
@@ -62,7 +63,7 @@
   }
 }
 
-@media (max-width: size.$size-960) {
+@media (max-width: bp.$md) {
   .main-footer {
     margin-top: size.$size-422;
 
@@ -111,7 +112,7 @@
   }
 }
 
-@media (max-width: size.$size-470) {
+@media (max-width: bp.$sm) {
   .main-footer {
     margin-top: size.$size-200;
 

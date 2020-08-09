@@ -102,10 +102,7 @@ const Landing = () => (
         <Link to="/projects/sot" className="subgrid-featured-item grid">
           <figure className="subgrid-featured-item-content grid">
             <BlindFrame threshold={0.5}>
-              <img
-                src={gridnikData.featured.img}
-                alt={gridnikData.featured.alt}
-              />
+              <img src={csSOTData.featured.img} alt={csSOTData.featured.alt} />
             </BlindFrame>
             <BlindFrame nodeType="figcaption">
               <h3 className="h-4 sm:h-6 c-primary">{csSOTData.title}</h3>
@@ -128,7 +125,7 @@ const Landing = () => (
           </figure>
         </Link>
       </section>
-      <BlindFrame className="view-more-case-studies">
+      <BlindFrame className="view-more view-more-case-studies">
         <CTA to="/blog" type="sm" className="link-grey-3 svg-grey-3">
           View all case studies
         </CTA>

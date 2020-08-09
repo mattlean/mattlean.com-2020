@@ -49,6 +49,10 @@
       grid-row: 5/8;
     }
 
+    &.featured-case-studies {
+      grid-row: 9/12;
+    }
+
     > .subgrid-featured-item {
       grid-column: span 3;
       grid-row: 1/-1;
@@ -87,6 +91,10 @@
     &-projects {
       grid-row: 7/8;
     }
+
+    &-case-studies {
+      grid-row: 11/12;
+    }
   }
 }
 
@@ -123,8 +131,10 @@
 
     > .subgrid-featured {
       grid-template-rows: repeat(3, size.$size-147);
+
       > .subgrid-featured-item {
         grid-template-rows: repeat(3, size.$size-147);
+
         > .subgrid-featured-item-content {
           grid-template-rows: repeat(3, size.$size-147);
         }
@@ -141,17 +151,36 @@
 
 @media (max-width: size.$size-780) {
   .grid-landing {
-    grid-template-rows: repeat(4, size.$size-147) auto;
+    grid-template-rows: repeat(4, size.$size-147) auto auto size.$size-147 auto auto;
+
+    > .featured-header {
+      &-case-studies {
+        grid-row: 7/8;
+      }
+    }
 
     > .subgrid-featured {
       columns: auto;
       grid-row: 5/6;
 
+      &.featured-projects {
+        grid-row: 5/6;
+      }
+
+      &.featured-case-studies {
+        grid-row: 8/9;
+      }
+
       > .subgrid-featured-item {
         display: block !important;
+        margin-bottom: size.$size-54;
 
         > .subgrid-featured-item-content {
           display: block !important;
+
+          > figcaption {
+            margin-top: 1.5em;
+          }
         }
       }
     }
@@ -162,6 +191,10 @@
 
       &-projects {
         grid-row: 6/7;
+      }
+
+      &-case-studies {
+        grid-row: 9/10;
       }
     }
   }
@@ -182,7 +215,8 @@
 
 @media (max-width: bp.$sm) {
   .grid-landing {
-    grid-template-rows: repeat(3, size.$size-176) auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, size.$size-176) auto auto size.$size-176 auto auto;
     margin-bottom: size.$size-24;
     margin-top: 0;
 
@@ -190,17 +224,33 @@
       &-projects {
         grid-row: 3/4;
       }
+
+      &-case-studies {
+        grid-row: 6/7;
+      }
     }
 
     > .subgrid-featured {
       &.featured-projects {
-        grid-row: 4/6;
+        grid-row: 4/5;
+      }
+
+      &.featured-case-studies {
+        grid-row: 7/8;
+      }
+
+      > .subgrid-featured-item {
+        margin-bottom: size.$size-24;
       }
     }
 
     > .view-more {
       &-projects {
-        grid-row: 6/7;
+        grid-row: 5/6;
+      }
+
+      &-case-studies {
+        grid-row: 8/9;
       }
     }
   }
