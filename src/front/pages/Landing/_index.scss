@@ -4,7 +4,7 @@
 @use '../../visuals/scale/typography';
 
 .grid-landing {
-  grid-template-rows: repeat(11, size.$size-157);
+  grid-template-rows: repeat(7, size.$size-157) auto repeat(4, size.$size-157) auto;
   margin-bottom: size.$size-27;
   margin-top: size.$size-211;
 
@@ -41,7 +41,7 @@
     }
 
     &-case-studies {
-      grid-row: 8/9;
+      grid-row: 9/10;
     }
   }
 
@@ -54,7 +54,7 @@
     }
 
     &.featured-case-studies {
-      grid-row: 9/12;
+      grid-row: 10/13;
     }
 
     > .subgrid-featured-item {
@@ -93,11 +93,11 @@
     justify-self: center;
 
     &-projects {
-      grid-row: 7/8;
+      grid-row: 8/9;
     }
 
     &-case-studies {
-      grid-row: 11/12;
+      grid-row: 13/14;
     }
   }
 }
@@ -117,7 +117,7 @@
 
 @media (max-width: bp.$md) {
   .grid-landing {
-    grid-template-rows: repeat(11, size.$size-147);
+    grid-template-rows: repeat(7, size.$size-147) auto repeat(4, size.$size-147) auto;
     margin-top: size.$size-201;
 
     > .subgrid-cover {
