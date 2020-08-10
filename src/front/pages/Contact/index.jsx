@@ -35,7 +35,7 @@ const Contact = () => (
       </section>
       <ul>
         <BlindFrame nodeType="li" delay={0.5}>
-          <a href="mailto:matt@mattlean.com" className="link-primary">
+          <a href="mailto:matt@mattlean.com" className="a-primary">
             <MailIcon size={24} />
             matt@mattlean.com
           </a>
@@ -45,7 +45,7 @@ const Contact = () => (
             href="https://linkedin.com/in/mattlean"
             rel="noreferrer"
             target="_blank"
-            className="link-primary"
+            className="a-primary"
           >
             <img src={LinkedInLogo} alt="LinkedIn Icon" />
             linkedin.com/in/mattlean

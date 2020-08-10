@@ -115,7 +115,7 @@ const PROJECTS = {
     name: 'ThemeBoot',
     long:
       'A Bootstrap powered website layout built for use as a WordPress theme or a static HTML & CSS template.',
-    tags: ['wordpress-theme', 'website-template', 'backend', 'frontend'],
+    tags: ['wp-theme', 'template', 'backend', 'frontend'],
   },
 }
 

@@ -131,22 +131,22 @@ const MainFooter = () => {
         <nav className="internal-nav">
           <motion.ul animate={animate} initial="initial" variants={variants}>
             <li>
-              <Link to="/about" className="link-grey-2">
+              <Link to="/about" className="a-grey-2">
                 About
               </Link>
             </li>
             <li>
-              <Link to="/projects" className="link-grey-2">
+              <Link to="/projects" className="a-grey-2">
                 Projects
               </Link>
             </li>
             <li>
-              <Link to="/blog" className="link-grey-2">
+              <Link to="/blog" className="a-grey-2">
                 Blog
               </Link>
             </li>
             <li>
-              <Link to="/contact" className="link-grey-2">
+              <Link to="/contact" className="a-grey-2">
                 Contact
               </Link>
             </li>
@@ -159,7 +159,7 @@ const MainFooter = () => {
                 href="http://be.net/mattlean"
                 rel="noreferrer"
                 target="_blank"
-                className="link-grey-2"
+                className="a-grey-2"
               >
                 Behance
               </a>
@@ -169,7 +169,7 @@ const MainFooter = () => {
                 href="https://github.com/mattlean"
                 rel="noreferrer"
                 target="_blank"
-                className="link-grey-2"
+                className="a-grey-2"
               >
                 GitHub
               </a>
@@ -179,7 +179,7 @@ const MainFooter = () => {
                 href="https://linkedin.com/in/mattlean"
                 rel="noreferrer"
                 target="_blank"
-                className="link-grey-2"
+                className="a-grey-2"
               >
                 LinkedIn
               </a>

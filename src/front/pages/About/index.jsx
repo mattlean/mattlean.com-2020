@@ -102,7 +102,7 @@ const About = () => (
           </p>
         </BlindFrame>
         <BlindFrame>
-          <CTA to="/contact" type="lg" className="link-primary svg-primary">
+          <CTA to="/contact" type="lg" className="a-primary svg-primary">
             Let&apos;s start talking
           </CTA>
         </BlindFrame>

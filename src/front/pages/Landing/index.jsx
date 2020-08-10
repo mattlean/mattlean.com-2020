@@ -46,7 +46,7 @@ const Landing = () => (
           2015 and am currently looking for new&nbsp;opportunities.
         </BlindFrame>
         <BlindFrame nodeType="section" delay={0.8} threshold={0.5}>
-          <CTA to="/about" type="lg" className="svg-primary link-primary">
+          <CTA to="/about" type="lg" className="svg-primary a-primary">
             Learn more about me
           </CTA>
         </BlindFrame>
@@ -94,7 +94,7 @@ const Landing = () => (
         </Link>
       </section>
       <BlindFrame nodeType="section" className="view-more view-more-projects">
-        <CTA to="/projects" type="sm" className="svg-grey-3 link-grey-3">
+        <CTA to="/projects" type="sm" className="svg-grey-3 a-grey-3">
           View all projects
         </CTA>
       </BlindFrame>
@@ -141,7 +141,7 @@ const Landing = () => (
         nodeType="section"
         className="view-more view-more-case-studies"
       >
-        <CTA to="/blog" type="sm" className="link-grey-3 svg-grey-3">
+        <CTA to="/blog" type="sm" className="a-grey-3 svg-grey-3">
           View all case studies
         </CTA>
       </BlindFrame>

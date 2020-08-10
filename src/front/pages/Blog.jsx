@@ -18,7 +18,7 @@ for (const i in allPostData) {
 
     if (currTagID) {
       tags.push(
-        <Badge key={currTagID} nodeType="li">
+        <Badge key={currTagID} nodeType="li" wide={true}>
           {getTagName(currTagID)}
         </Badge>
       )
@@ -33,9 +33,9 @@ for (const i in allPostData) {
       className="item"
     >
       <a href="/">
-        <h2 className="header-md link-primary">{currPostData.title}</h2>
+        <h2 className="h-4 sm:h-6 a-primary">{currPostData.title}</h2>
         <p className="c-grey-1">{currPostData.subtitle}</p>
-        <p className="txt-xs c-grey-1">January 11, 2020 &middot; 5 min read</p>
+        <p className="txt-2 c-grey-1">January 11, 2020 &middot; 5 min read</p>
         <ul>{tags}</ul>
       </a>
     </BlindFrame>
@@ -55,11 +55,9 @@ const Blog = () => (
     className="container"
   >
     <main className="grid-feed grid">
-      <header>
-        <BlindFrame>
-          <h1 className="header-lg">Blog</h1>
-        </BlindFrame>
-      </header>
+      <BlindFrame nodeType="h1" className="h-2 sm:h-3">
+        Blog
+      </BlindFrame>
       <section className="content">{posts}</section>
     </main>
     <MainFooter />

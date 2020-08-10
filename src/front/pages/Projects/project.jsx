@@ -49,7 +49,7 @@ const Project = ({ projectData }) => {
                 href="https://www.biosearchtech.com"
                 rel="noreferrer"
                 target="_blank"
-                className="link-grey-1"
+                className="a-grey-1"
               >
                 LGC Biosearch Technologies
               </a>{' '}
@@ -89,7 +89,7 @@ const Project = ({ projectData }) => {
             UI was completely redesigned alongside new features and performance
             optimizations.
           </p>
-          <CTA to="/" type="sm" className="link-primary svg-primary">
+          <CTA to="/" type="sm" className="a-primary svg-primary">
             Learn more about the project
           </CTA>
         </BlindFrame>

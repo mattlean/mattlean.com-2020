@@ -13,7 +13,7 @@ for (const p of allProjectData) {
   projects.push(
     <BlindFrame key={p.id} delay={0.5} nodeType="li" className="item">
       <Link to={`/projects/${p.id}`}>
-        <h2 className="header-md link-primary">{p.name}</h2>
+        <h2 className="h-4 sm:h-6 a-primary">{p.name}</h2>
         <p className="c-grey-1">{p.long}</p>
         <ul>
           {p.tags.map((t) => (
@@ -40,11 +40,9 @@ const ProjectFeed = () => (
     className="container"
   >
     <main className="grid-feed grid">
-      <header>
-        <BlindFrame nodeType="header">
-          <h1 className="header-lg">Projects</h1>
-        </BlindFrame>
-      </header>
+      <BlindFrame nodeType="h1" className="h-2 sm:h-3">
+        Projects
+      </BlindFrame>
       <ul className="content">{projects}</ul>
     </main>
     <MainFooter />
