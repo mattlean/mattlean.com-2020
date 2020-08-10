@@ -15,7 +15,7 @@ for (const p of allProjectData) {
       <Link to={`/projects/${p.id}`}>
         <h2 className="h-4 sm:h-6 a-primary">{p.name}</h2>
         <p className="c-grey-1">{p.long}</p>
-        <ul>
+        <ul className="badge-list">
           {p.tags.map((t) => (
             <Badge key={t.id} nodeType="li" wide={true}>
               {t.name}

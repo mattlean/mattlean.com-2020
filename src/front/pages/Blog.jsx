@@ -36,7 +36,7 @@ for (const i in allPostData) {
         <h2 className="h-4 sm:h-6 a-primary">{currPostData.title}</h2>
         <p className="c-grey-1">{currPostData.subtitle}</p>
         <p className="txt-2 c-grey-1">January 11, 2020 &middot; 5 min read</p>
-        <ul>{tags}</ul>
+        <ul className="badge-list">{tags}</ul>
       </a>
     </BlindFrame>
   )
