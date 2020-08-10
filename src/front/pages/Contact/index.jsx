@@ -20,39 +20,37 @@ const Contact = () => (
   >
     <main className="grid-contact grid">
       <section className="cover">
-        <BlindFrame>
-          <h1 className="header-lg">Let&apos;s get in&nbsp;touch.</h1>
+        <BlindFrame nodeType="h1" className="h-2 sm:h-3 lh-1">
+          Let&apos;s get in&nbsp;touch.
         </BlindFrame>
-        <BlindFrame delay={0.5}>
-          <p className="txt-lg c-grey-1">
-            Have any questions? Got a project in mind for&nbsp;me?
-            <br />
-            Let’s connect and start&nbsp;talking.
-          </p>
+        <BlindFrame
+          nodeType="p"
+          delay={0.5}
+          className="txt-8 sm:txt-6 c-grey-1"
+        >
+          Have any questions? Got a project in mind for&nbsp;me?
+          <br />
+          Let’s connect and start&nbsp;talking.
         </BlindFrame>
       </section>
       <ul>
-        <li>
-          <BlindFrame delay={0.5}>
-            <a href="mailto:matt@mattlean.com" className="link-primary">
-              <MailIcon size={24} />
-              matt@mattlean.com
-            </a>
-          </BlindFrame>
-        </li>
-        <li>
-          <BlindFrame delay={0.5}>
-            <a
-              href="https://linkedin.com/in/mattlean"
-              rel="noreferrer"
-              target="_blank"
-              className="link-primary"
-            >
-              <img src={LinkedInLogo} alt="LinkedIn Icon" />
-              linkedin.com/in/mattlean
-            </a>
-          </BlindFrame>
-        </li>
+        <BlindFrame nodeType="li" delay={0.5}>
+          <a href="mailto:matt@mattlean.com" className="link-primary">
+            <MailIcon size={24} />
+            matt@mattlean.com
+          </a>
+        </BlindFrame>
+        <BlindFrame nodeType="li" delay={0.5}>
+          <a
+            href="https://linkedin.com/in/mattlean"
+            rel="noreferrer"
+            target="_blank"
+            className="link-primary"
+          >
+            <img src={LinkedInLogo} alt="LinkedIn Icon" />
+            linkedin.com/in/mattlean
+          </a>
+        </BlindFrame>
       </ul>
     </main>
     <MainFooter />

@@ -1,3 +1,4 @@
+@use '../../visuals/scale/bp';
 @use '../../visuals/scale/size';
 @use '../../visuals/scale/typography';
 
@@ -6,12 +7,17 @@
   margin-bottom: size.$size-27;
   margin-top: size.$size-211;
 
-  .cover {
+  > .cover {
     grid-column: 1/5;
     grid-row: 1/2;
 
-    .header-lg {
+    > h1 {
       margin-bottom: size.$size-30;
+      transform: translate(-1px, -9px);
+    }
+
+    > p {
+      transform: translateY(-5px);
     }
   }
 
@@ -24,7 +30,7 @@
     > li {
       margin-bottom: size.$size-27;
 
-      a {
+      > a {
         font: typography.$disp-medium size.$size-36 typography.$disp-font-family;
         text-decoration: none;
 
@@ -45,7 +51,7 @@
   }
 }
 
-@media (max-width: size.$size-960) {
+@media (max-width: bp.$md) {
   .grid-contact {
     margin-top: size.$size-201;
   }
@@ -53,20 +59,29 @@
 
 @media (max-width: size.$size-760) {
   .grid-contact {
-    display: block;
+    > .cover,
+    > ul {
+      grid-column: 1/-1;
+    }
   }
 }
 
-@media (max-width: size.$size-470) {
+@media (max-width: bp.$sm) {
   .grid-contact {
     margin-bottom: size.$size-24;
     margin-top: 0;
+
+    > .cover {
+      > p {
+        transform: translateY(-6px);
+      }
+    }
 
     > ul {
       > li {
         margin-bottom: size.$size-24;
 
-        a {
+        > a {
           font-size: size.$size-24;
 
           > img {
