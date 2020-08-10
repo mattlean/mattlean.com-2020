@@ -39,7 +39,7 @@ const Landing = () => (
           nodeType="p"
           delay={0.4}
           threshold={0.5}
-          className="txt-7 sm:txt-6 c-grey-1"
+          className="txt-8 sm:txt-6 c-grey-1"
         >
           I’m a developer who works at the intersection of engineering and
           design. I’ve been building web-based products for Silicon Valley since

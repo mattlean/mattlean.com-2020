@@ -18,7 +18,7 @@
 
     > p {
       margin-top: 1em;
-      transform: translate(-17px);
+      transform: translateY(-22px);
     }
   }
 
@@ -63,25 +63,21 @@
 
 @media (max-width: size.$size-1140) {
   .grid-about {
-    grid-template-rows: repeat(12, size.$size-157) auto;
+    grid-template-rows: repeat(2, size.$size-157) auto repeat(3, size.$size-157) auto;
 
     > .cover {
       grid-column: 1/4;
     }
 
-    > .content {
-      margin-top: size.$size-45;
-    }
-
     > .closing {
-      grid-row: 11/12;
+      grid-row: 5/6;
     }
 
     > .subgrid-resume {
       @include grid.grid-base;
 
       grid-column: 1/5;
-      grid-row: 13/14;
+      grid-row: 7/8;
       grid-template-columns: repeat(4, 1fr);
       grid-template-rows: auto auto;
 
@@ -98,7 +94,7 @@
         display: flex;
         flex-flow: column wrap;
         grid-column: 1/-1;
-        height: size.$size-1140;
+        height: 700px;
 
         > section {
           width: 21%;
@@ -109,44 +105,41 @@
 }
 
 @media (max-width: size.$size-980) {
-  .grid-about {
-    grid-template-rows: repeat(13, size.$size-157) auto;
-
-    > .closing {
-      grid-row: 12/13;
-    }
-
-    > .subgrid-resume {
-      grid-row: 14/15;
-    }
+  .grid-about > .content {
+    margin-top: size.$size-54;
   }
 }
 
 @media (max-width: bp.$md) {
   .grid-about {
-    grid-template-rows: repeat(13, size.$size-147) auto;
+    grid-template-rows: repeat(2, size.$size-147) auto repeat(3, size.$size-147) auto;
     margin-top: size.$size-201;
 
     > .cover {
-      grid-column: 1/-1;
+      grid-column: 1/4;
     }
 
     > .closing {
-      grid-row: 12/13;
+      grid-row: 5/6;
     }
 
     > .subgrid-resume {
-      grid-row: 14;
+      grid-row: 7/8;
     }
   }
 }
 
 @media (max-width: size.$size-780) {
   .grid-about {
-    > .content,
+    > .cover,
     > .closing,
     > .subgrid-resume {
       grid-column: 1/-1;
+    }
+
+    > .content {
+      grid-column: 1/-1;
+      margin-top: 0;
     }
   }
 }
@@ -162,16 +155,27 @@
   }
 }
 
+@media (max-width: size.$size-660) {
+  .grid-about > .subgrid-resume > .subgrid-skills {
+    height: 800px;
+  }
+}
+
 @media (max-width: size.$size-600) {
   .grid-about > .content {
-    grid-row: 4/12;
-    margin-top: 0;
+    margin-top: size.$size-54;
+  }
+}
+
+@media (max-width: size.$size-520) {
+  .grid-about > .content {
+    margin-top: size.$size-81;
   }
 }
 
 @media (max-width: bp.$sm) {
   .grid-about {
-    grid-template-rows: repeat(12, size.$size-176) auto;
+    grid-template-rows: repeat(2, size.$size-176) auto repeat(2, size.$size-176) auto;
     margin-bottom: size.$size-24;
     margin-top: 0;
 
@@ -187,21 +191,23 @@
 
     > .content {
       grid-column: 1/-1;
-      margin-bottom: size.$size-176;
+      margin-bottom: 0;
+      margin-top: 0;
     }
 
     > .closing {
       grid-column: 1/-1;
-      grid-row: 11/12;
+      grid-row: 4/5;
       margin-bottom: size.$size-200;
     }
 
     > .subgrid-resume {
       grid-column: 1/-1;
-      grid-row: 13/14;
+      grid-row: 7/8;
 
       > .subgrid-skills {
         column-gap: size.$size-24;
+        height: 1200px;
 
         > section {
           width: 49%;

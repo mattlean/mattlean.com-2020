@@ -26,11 +26,11 @@ const About = () => (
           nodeType="p"
           delay={0.5}
           threshold={0.5}
-          className="txt-7 sm:txt-6 c-grey-1"
+          className="txt-8 sm:txt-7 c-grey-1"
         >
-          My name is Matt Lean and I’m a full-stack web developer & UI/UX
-          designer. I was born in NY and raised in SoCal. Now I live in the SF
-          Bay Area and am looking for new work&nbsp;opportunities!
+          My name is Matt&nbsp;Lean and I’m a full-stack web&nbsp;developer &
+          UI/UX&nbsp;designer. I was born in NY and raised in SoCal. Now I live
+          in the SF Bay Area and am looking for new work&nbsp;opportunities!
         </BlindFrame>
       </section>
       <BlindFrame
@@ -95,7 +95,7 @@ const About = () => (
       </BlindFrame>
       <section className="closing">
         <BlindFrame>
-          <p className="txt-7 sm:txt-6 c-grey-1">
+          <p className="txt-8 sm:txt-6 c-grey-1">
             Thanks for reading my story.
             <br />
             I&apos;d love to hear yours!
