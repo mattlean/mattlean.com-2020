@@ -9,7 +9,7 @@ import React from 'react'
  * @prop {number} [delay] Delay in seconds
  * @prop {number} [duration] Duration in seconds
  * @prop {number} [threshold] Threshold value between 0 & 1 used by Intersection Observer
- * @prop {string} [nodeType=span] Determine's blind frame's element. Defaults to span element.
+ * @prop {string} [nodeType='span'] Determine's blind frame's element. Defaults to span element.
  */
 const BlindFrame = ({
   className,

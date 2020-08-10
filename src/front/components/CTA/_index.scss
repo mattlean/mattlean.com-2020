@@ -16,7 +16,7 @@
   font-size: size.$size-36;
   font-weight: typography.$disp-medium;
 
-  > svg {
+  svg {
     @extend %cta-arrow;
 
     width: 34.74px;
@@ -29,7 +29,7 @@
   font-size: size.$size-18;
   font-weight: typography.$bold !important;
 
-  > svg {
+  svg {
     @extend %cta-arrow;
 
     width: 17.3px;
@@ -40,7 +40,7 @@
   .cta-lg {
     font-size: size.$size-24;
 
-    > svg {
+    svg {
       width: 23.22px;
     }
   }

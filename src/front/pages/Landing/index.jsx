@@ -31,9 +31,9 @@ const Landing = () => (
           nodeType="h1"
           delay={0.2}
           threshold={0.5}
-          className="h-1 md:h-2 sm:h-3"
+          className="h-1 md:h-2 sm:h-3 lh-1"
         >
-          Hi, I’m Matt&nbsp;Lean!
+          Hi, I’m <br className="title-br" /> Matt&nbsp;Lean!
         </BlindFrame>
         <BlindFrame
           nodeType="p"
@@ -45,7 +45,7 @@ const Landing = () => (
           design. I’ve been building web-based products for Silicon Valley since
           2015 and am currently looking for new&nbsp;opportunities.
         </BlindFrame>
-        <BlindFrame delay={0.8} threshold={0.5}>
+        <BlindFrame nodeType="section" delay={0.8} threshold={0.5}>
           <CTA to="/about" type="lg" className="svg-primary link-primary">
             Learn more about me
           </CTA>
@@ -58,9 +58,12 @@ const Landing = () => (
         Featured Projects
       </BlindFrame>
       <section className="subgrid-featured featured-projects grid">
-        <Link to="/projects/gridnik" className="subgrid-featured-item grid">
+        <Link
+          to="/projects/gridnik"
+          className="subgrid-featured-item grid tdl-none"
+        >
           <figure className="subgrid-featured-item-content grid">
-            <BlindFrame threshold={0.5}>
+            <BlindFrame nodeType="section" threshold={0.5}>
               <img
                 src={gridnikData.featured.img}
                 alt={gridnikData.featured.alt}
@@ -72,9 +75,12 @@ const Landing = () => (
             </BlindFrame>
           </figure>
         </Link>
-        <Link to="/projects/eswiss" className="subgrid-featured-item grid">
+        <Link
+          to="/projects/eswiss"
+          className="subgrid-featured-item grid tdl-none"
+        >
           <figure className="subgrid-featured-item-content grid">
-            <BlindFrame threshold={0.5}>
+            <BlindFrame nodeType="section" threshold={0.5}>
               <img
                 src={eswissData.featured.img}
                 alt={eswissData.featured.alt}
@@ -87,7 +93,7 @@ const Landing = () => (
           </figure>
         </Link>
       </section>
-      <BlindFrame className="view-more view-more-projects">
+      <BlindFrame nodeType="section" className="view-more view-more-projects">
         <CTA to="/projects" type="sm" className="svg-grey-3 link-grey-3">
           View all projects
         </CTA>
@@ -99,9 +105,12 @@ const Landing = () => (
         Featured Case&nbsp;Studies
       </BlindFrame>
       <section className="subgrid-featured featured-case-studies grid">
-        <Link to="/projects/sot" className="subgrid-featured-item grid">
+        <Link
+          to="/projects/sot"
+          className="subgrid-featured-item grid tdl-none"
+        >
           <figure className="subgrid-featured-item-content grid">
-            <BlindFrame threshold={0.5}>
+            <BlindFrame nodeType="section" threshold={0.5}>
               <img src={csSOTData.featured.img} alt={csSOTData.featured.alt} />
             </BlindFrame>
             <BlindFrame nodeType="figcaption">
@@ -110,9 +119,12 @@ const Landing = () => (
             </BlindFrame>
           </figure>
         </Link>
-        <Link to="/projects/lean-space" className="subgrid-featured-item grid">
+        <Link
+          to="/projects/lean-space"
+          className="subgrid-featured-item grid tdl-none"
+        >
           <figure className="subgrid-featured-item-content grid">
-            <BlindFrame threshold={0.5}>
+            <BlindFrame nodeType="section" threshold={0.5}>
               <img
                 src={csLeanSpace.featured.img}
                 alt={csLeanSpace.featured.alt}
@@ -125,7 +137,10 @@ const Landing = () => (
           </figure>
         </Link>
       </section>
-      <BlindFrame className="view-more view-more-case-studies">
+      <BlindFrame
+        nodeType="section"
+        className="view-more view-more-case-studies"
+      >
         <CTA to="/blog" type="sm" className="link-grey-3 svg-grey-3">
           View all case studies
         </CTA>
