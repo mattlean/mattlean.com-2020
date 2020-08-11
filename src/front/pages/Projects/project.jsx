@@ -106,8 +106,13 @@ const Project = ({ projectData }) => {
             Fullscreen mode for a larger view of the charts
           </figcaption>
         </BlindFrame>
-        <h3 className="project-details-header">Project Details</h3>
-        <section className="subgrid-project-details grid c-grey-1">
+        <BlindFrame nodeType="h3" className="project-details-header">
+          Project Details
+        </BlindFrame>
+        <BlindFrame
+          nodeType="section"
+          className="subgrid-project-details grid c-grey-1"
+        >
           <section>
             <section>
               <h4>Last Updated</h4>
@@ -164,7 +169,7 @@ const Project = ({ projectData }) => {
               </ul>
             </section>
           </section>
-        </section>
+        </BlindFrame>
         <BlindFrame nodeType="div" className="btn-view-live">
           <Btn>
             <PlayIcon className="btn-icon" /> View Live

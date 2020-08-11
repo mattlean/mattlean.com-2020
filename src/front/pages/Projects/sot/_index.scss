@@ -67,10 +67,6 @@
 
 @media (max-width: bp.$md) {
   .grid-project {
-    > .cover {
-      transform: translateY(-16px);
-    }
-
     > .subgrid-mid-desc {
       > h3,
       > p,
@@ -83,23 +79,9 @@
 
 @media (max-width: size.$size-780) {
   .grid-project {
-    > .project-details-header {
-      font-size: size.$size-24;
-    }
-
-    > .subgrid-project-details {
-      grid-column: 1/-1;
-    }
-
     > .btn-view-live,
     > .btn-case-study {
       grid-column: auto;
     }
-  }
-}
-
-@media (max-width: bp.$sm) {
-  .grid-project > .cover {
-    margin-bottom: size.$size-59;
   }
 }
