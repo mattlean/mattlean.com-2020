@@ -67,6 +67,10 @@
 
 @media (max-width: bp.$md) {
   .grid-project {
+    > .cover {
+      transform: translateY(-16px);
+    }
+
     > .subgrid-mid-desc {
       > h3,
       > p,
@@ -91,5 +95,11 @@
     > .btn-case-study {
       grid-column: auto;
     }
+  }
+}
+
+@media (max-width: bp.$sm) {
+  .grid-project > .cover {
+    margin-bottom: size.$size-59;
   }
 }
