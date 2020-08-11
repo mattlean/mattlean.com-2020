@@ -12,12 +12,12 @@ import Arrow from '../../assets/arrow.svg'
  * @prop {('lg'|'sm')} type Determines whether call-to-action is large or small
  */
 const CTA = ({ blind, children, className, to, type }) => {
-  let cn
+  let cn = 'cta'
 
   if (type === 'lg') {
-    cn = 'cta-lg'
+    cn += ' cta-lg'
   } else if (type === 'sm') {
-    cn = 'cta-sm'
+    cn += ' cta-sm'
   } else {
     // eslint-disable-next-line no-console
     console.warn('CTA component type was not set')
@@ -28,7 +28,10 @@ const CTA = ({ blind, children, className, to, type }) => {
   const arrow = <Arrow className="cta-arrow" />
 
   let content
-  if (blind && (blind.delay || blind.duration || blind.threshold)) {
+  if (
+    blind &&
+    (blind.delay || blind.duration || blind.nodeType || blind.threshold)
+  ) {
     content = (
       <BlindFrame {...blind}>
         {children} {arrow}

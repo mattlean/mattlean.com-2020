@@ -28,8 +28,8 @@ for (const i in allPostData) {
   posts.push(
     <BlindFrame
       key={currPostData.id}
-      delay={0.5}
       nodeType="article"
+      delay={0.5}
       className="item"
     >
       <a href="/">

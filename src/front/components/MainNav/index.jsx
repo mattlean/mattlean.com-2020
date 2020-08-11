@@ -107,7 +107,9 @@ const MainNav = () => {
         <Link to="/" className={logoClassName} onClick={() => setIsOpen(false)}>
           <Logo />
         </Link>
-        <button onClick={() => setIsOpen(!isOpen)}>{menuIcon}</button>
+        <button className="btn-nav" onClick={() => setIsOpen(!isOpen)}>
+          {menuIcon}
+        </button>
         <ul className={openClassName}>
           {home}
           <li>
@@ -131,7 +133,7 @@ const MainNav = () => {
             </NavLink>
           </li>
           <li>
-            <button className="c-primary" onClick={() => toggle()}>
+            <button className="btn-nav c-primary" onClick={() => toggle()}>
               <SunMoon className="sun-moon_svg" />
               {btnLightTxt}
             </button>

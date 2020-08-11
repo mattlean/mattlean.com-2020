@@ -11,7 +11,7 @@ const allProjectData = getAllProjectData()
 const projects = []
 for (const p of allProjectData) {
   projects.push(
-    <BlindFrame key={p.id} delay={0.5} nodeType="li" className="item">
+    <BlindFrame nodeType="li" key={p.id} delay={0.5} className="item">
       <Link to={`/projects/${p.id}`}>
         <h2 className="h-4 sm:h-6 a-primary">{p.name}</h2>
         <p className="c-grey-1">{p.long}</p>

@@ -1,14 +1,6 @@
 @use '../../visuals/scale/size';
 @use '../../visuals/scale/typography';
 
-%btn-nav {
-  background: none;
-  border: 0;
-  cursor: pointer;
-
-  vertical-align: middle;
-}
-
 .main-nav {
   align-items: flex-end;
   display: flex;
@@ -16,10 +8,20 @@
   justify-content: space-between;
   margin-bottom: size.$size-27;
 
-  > button {
-    @extend %btn-nav;
+  .btn-nav {
+    background: none;
+    border: 0;
+    cursor: pointer;
 
+    vertical-align: middle;
+  }
+
+  > .btn-nav {
     display: none;
+  }
+
+  > .logo > svg {
+    height: 44px;
   }
 
   > ul {
@@ -42,9 +44,7 @@
         text-decoration: underline;
       }
 
-      > button {
-        @extend %btn-nav;
-
+      > .btn-nav {
         vertical-align: middle;
 
         > svg {
@@ -53,19 +53,7 @@
       }
     }
   }
-
-  > .logo > svg {
-    height: 44px;
-  }
 }
-
-// .dark .main-nav > ul {
-//   background-color: color.$k;
-
-//   > li > a {
-//     color: color.$grey-c;
-//   }
-// }
 
 .sun-moon_svg {
   fill: var(--grey-1);
@@ -102,7 +90,7 @@
       z-index: 3;
     }
 
-    > button {
+    > .btn-nav {
       display: block;
       position: absolute;
       right: size.$size-27;
@@ -145,7 +133,7 @@
             letter-spacing: normal;
           }
 
-          > button {
+          > .btn-nav {
             font-size: size.$size-20;
 
             vertical-align: bottom;
@@ -163,14 +151,6 @@
   .sun-moon_svg {
     fill: var(--c-primary);
   }
-
-  // .dark .main-nav > ul.open > li > a {
-  //   color: color.$w;
-  // }
-
-  // .dark .sun-moon_svg {
-  //   fill: color.$w;
-  // }
 }
 
 @media (max-width: size.$size-470) {
@@ -180,7 +160,7 @@
     margin-bottom: size.$size-24;
     margin-top: size.$size-18;
 
-    > button {
+    > .btn-nav {
       position: fixed;
       right: size.$size-18;
       top: size.$size-18;

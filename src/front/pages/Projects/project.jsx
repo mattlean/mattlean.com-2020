@@ -27,8 +27,10 @@ const Project = ({ projectData }) => {
     >
       <main className="grid-project grid">
         <BlindFrame nodeType="section" className="cover">
-          <h1 className="h-1">{name}</h1>
-          {company && <h2 className="subtitle c-grey-2">{company}</h2>}
+          <h1 className="h-1 md:h-2 sm:h-3">{name}</h1>
+          {company && (
+            <h2 className="h-4 sm:h-6 c-grey-2 dispw-roman">{company}</h2>
+          )}
           <ul className="badge-list">
             {tags.map((t) => {
               return (
@@ -39,8 +41,8 @@ const Project = ({ projectData }) => {
             })}
           </ul>
         </BlindFrame>
-        <BlindFrame className="project-overview">
-          <h2 className="header-lg md:header-md">Project Overview</h2>
+        <BlindFrame nodeType="h2" className="project-overview h-2 md:h-4">
+          Project Overview
         </BlindFrame>
         <BlindFrame className="subgrid-project-desc grid">
           <section>
@@ -78,10 +80,8 @@ const Project = ({ projectData }) => {
           </figcaption>
         </BlindFrame>
         <BlindFrame nodeType="section" className="subgrid-mid-desc grid">
-          <h3 className="header-md-2">
-            Iterative Product Development&nbsp;Lifecycle
-          </h3>
-          <p className="txt-md c-grey-1">
+          <h3 className="h-5">Iterative Product Development&nbsp;Lifecycle</h3>
+          <p className="txt-7 sm:txt-6 c-grey-1">
             In 2014 I was brought on to port the app from Flash to native
             browser technologies alongside new features. In 2015, Biosearch
             Technologies was acquired by LGC, and the app’s styling was updated
@@ -106,7 +106,7 @@ const Project = ({ projectData }) => {
             Fullscreen mode for a larger view of the charts
           </figcaption>
         </BlindFrame>
-        <h3 className="header-md-2">Project Details</h3>
+        <h3 className="project-details-header">Project Details</h3>
         <section className="subgrid-project-details grid c-grey-1">
           <section>
             <section>

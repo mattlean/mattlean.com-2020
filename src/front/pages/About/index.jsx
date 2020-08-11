@@ -34,8 +34,8 @@ const About = () => (
         </BlindFrame>
       </section>
       <BlindFrame
-        delay={1}
         nodeType="section"
+        delay={1}
         threshold={0.1}
         className="content c-grey-1"
       >
@@ -94,22 +94,19 @@ const About = () => (
         </p>
       </BlindFrame>
       <section className="closing">
-        <BlindFrame>
-          <p className="txt-8 sm:txt-6 c-grey-1">
-            Thanks for reading my story.
-            <br />
-            I&apos;d love to hear yours!
-          </p>
-        </BlindFrame>
-        <BlindFrame>
+        <BlindFrame nodeType="p" className="txt-8 sm:txt-6 c-grey-1">
+          Thanks for reading my story.
+          <br />
+          I&apos;d love to hear yours!
+          <br />
           <CTA to="/contact" type="lg" className="a-primary svg-primary">
             Let&apos;s start talking
           </CTA>
         </BlindFrame>
       </section>
       <BlindFrame
-        delay={1}
         nodeType="aside"
+        delay={1}
         threshold={0.1}
         className="subgrid-resume txt-3 c-grey-2"
       >

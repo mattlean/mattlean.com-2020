@@ -1,37 +1,31 @@
 @use '../../visuals/scale/size';
 @use '../../visuals/scale/typography';
 
-%cta {
+.cta {
   font-family: typography.$disp-font-family;
   text-decoration: none;
-}
 
-%cta-arrow {
-  margin-left: 0.5em;
+  display: inline-block;
+
+  .cta-arrow {
+    margin-left: 0.5em;
+  }
 }
 
 .cta-lg {
-  @extend %cta;
-
   font-size: size.$size-36;
   font-weight: typography.$disp-medium;
 
-  svg {
-    @extend %cta-arrow;
-
+  .cta-arrow {
     width: 34.74px;
   }
 }
 
 .cta-sm {
-  @extend %cta;
-
-  font-size: size.$size-18;
+  font-size: 1rem;
   font-weight: typography.$bold !important;
 
-  svg {
-    @extend %cta-arrow;
-
+  .cta-arrow {
     width: 17.3px;
   }
 }
@@ -40,7 +34,7 @@
   .cta-lg {
     font-size: size.$size-24;
 
-    svg {
+    .cta-arrow {
       width: 23.22px;
     }
   }

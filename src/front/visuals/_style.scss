@@ -2,6 +2,10 @@
 @use './scale/size';
 @use './scale/typography';
 
+html {
+  font-size: size.$size-18;
+}
+
 body {
   background-color: var(--c-secondary);
   color: var(--c-primary);
@@ -40,7 +44,7 @@ p {
 a,
 a:hover,
 a:visited {
-  color: color.$k;
+  color: var(--c-primary);
 }
 
 ol {
@@ -92,9 +96,11 @@ dd {
 }
 
 @media (max-width: size.$size-470) {
-  body {
+  html {
     font-size: size.$size-16;
+  }
 
+  body {
     margin-left: size.$size-18;
     margin-right: size.$size-18;
   }

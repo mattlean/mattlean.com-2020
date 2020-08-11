@@ -30,6 +30,10 @@
   > .closing {
     grid-column: 1/4;
     grid-row: -2/-1;
+
+    > p > .cta {
+      margin-top: size.$size-36;
+    }
   }
 
   > .subgrid-resume {
@@ -199,11 +203,15 @@
       grid-column: 1/-1;
       grid-row: 4/5;
       margin-bottom: size.$size-200;
+
+      > p > .cta {
+        margin-top: size.$size-24;
+      }
     }
 
     > .subgrid-resume {
       grid-column: 1/-1;
-      grid-row: 7/8;
+      grid-row: 6/7;
 
       > .subgrid-skills {
         column-gap: size.$size-24;

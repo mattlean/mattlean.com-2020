@@ -68,6 +68,7 @@
 
 @media (max-width: bp.$sm) {
   .grid-contact {
+    grid-template-columns: 1fr;
     margin-bottom: size.$size-24;
     margin-top: 0;
 

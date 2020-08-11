@@ -20,7 +20,7 @@
     margin-bottom: 100px;
     transform: translateY(-27px);
 
-    .subtitle {
+    > h2 {
       margin-bottom: size.$size-12;
     }
   }
@@ -72,6 +72,10 @@
 
       > section {
         margin-bottom: size.$size-54;
+
+        > h4 {
+          margin-bottom: 1em;
+        }
 
         > ul {
           list-style-type: none;

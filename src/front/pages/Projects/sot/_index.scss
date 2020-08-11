@@ -1,3 +1,4 @@
+@use '../../../visuals/scale/bp';
 @use '../../../visuals/scale/size';
 
 .grid-project {
@@ -8,8 +9,11 @@
       grid-column: span 3;
     }
 
-    > p,
-    .cta-sm {
+    > p {
+      grid-column: span 3/-1;
+    }
+
+    > .cta {
       grid-column: span 3/-1;
     }
   }
@@ -61,12 +65,12 @@
   }
 }
 
-@media (max-width: size.$size-960) {
+@media (max-width: bp.$md) {
   .grid-project {
     > .subgrid-mid-desc {
       > h3,
       > p,
-      > .cta-sm {
+      > .cta {
         grid-column: span 3;
       }
     }
@@ -75,6 +79,10 @@
 
 @media (max-width: size.$size-780) {
   .grid-project {
+    > .project-details-header {
+      font-size: size.$size-24;
+    }
+
     > .subgrid-project-details {
       grid-column: 1/-1;
     }

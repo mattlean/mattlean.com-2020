@@ -1,3 +1,4 @@
+@use '../visuals/scale/bp';
 @use '../visuals/grid';
 @use '../visuals/scale/size';
 
@@ -48,7 +49,7 @@
   }
 }
 
-@media (max-width: size.$size-960) {
+@media (max-width: bp.$md) {
   .grid-feed {
     margin-top: size.$size-201;
 
@@ -75,8 +76,9 @@
   }
 }
 
-@media (max-width: size.$size-470) {
+@media (max-width: bp.$sm) {
   .grid-feed {
+    grid-template-columns: 1fr;
     margin-bottom: size.$size-24;
     margin-top: 0;
 
