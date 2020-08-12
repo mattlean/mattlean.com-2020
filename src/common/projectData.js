@@ -108,7 +108,7 @@ const PROJECTS = {
     company: 'LGC Biosearch Technologies',
     long:
       'A tool for visualizing absorption and emission spectra for fluorescent dyes and quenchers.',
-    tags: ['web-app', 'design', 'frontend', 'tooling'],
+    tags: ['web-app', 'vis', 'design', 'frontend', 'tooling'],
   },
   themeboot: {
     id: 'themeboot',

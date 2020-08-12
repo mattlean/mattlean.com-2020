@@ -2,6 +2,7 @@ const TAGS = {
   aws: 'AWS',
   backend: 'Backend',
   cs: 'Case Study',
+  vis: 'Data Visualization',
   design: 'Design',
   'design-system': 'Design System',
   'express-middleware': 'Express Middleware',

@@ -1,4 +1,6 @@
-const SUFFIX = ' | Matt Lean'
+import PROJECT_ROUTES from './routeProjectData'
+
+export const TITLE_SUFFIX = ' | Matt Lean'
 
 const ROUTES = {
   '/': {
@@ -79,7 +81,7 @@ const ROUTES = {
     ],
   },
   '/about': {
-    title: 'About' + SUFFIX,
+    title: 'About',
     desc:
       'About Matt Lean, a Silicon Valley full-stack web developer and UI/UX designer.',
     keywords: [
@@ -156,7 +158,7 @@ const ROUTES = {
     ],
   },
   '/blog': {
-    title: 'Blog' + SUFFIX,
+    title: 'Blog',
     desc:
       "Matt Lean's blog, the thoughts and experiences of a Silicon Valley full-stack web developer and UI/UX designer.",
     keywords: [
@@ -233,7 +235,7 @@ const ROUTES = {
     ],
   },
   '/contact': {
-    title: 'Contact' + SUFFIX,
+    title: 'Contact',
     desc:
       'How to contact Matt Lean, a Silicon Valley full-stack web developer and UI/UX designer.',
     keywords: [
@@ -313,7 +315,7 @@ const ROUTES = {
     ],
   },
   '/projects': {
-    title: 'Projects' + SUFFIX,
+    title: 'Projects',
     desc:
       "Matt Lean's projects, work of a Silicon Valley full-stack web developer and UI/UX designer.",
     keywords: [
@@ -389,6 +391,7 @@ const ROUTES = {
       'science',
     ],
   },
+  ...PROJECT_ROUTES,
 }
 
 /**

@@ -9,8 +9,8 @@ import Landing from '../pages/Landing'
 import MainNav from './MainNav'
 import Project from '../pages/Projects/Project'
 import Projects from '../pages/Projects'
-import { getRootPath } from '../../common/util'
-import { getRouteData } from '../../common/routeData'
+import { genFormattedPath } from '../../common/util'
+import { getRouteData, TITLE_SUFFIX } from '../../common/routeData'
 import { updateMeta } from '../util'
 
 const App = () => {
@@ -40,9 +40,10 @@ const App = () => {
 
   // Update document head
   useEffect(() => {
-    const rootPath = getRootPath(location.pathname)
-    const { desc, keywords, title } = getRouteData(rootPath)
-    document.title = title
+    const path = genFormattedPath(location.pathname)
+    const { desc, keywords, title } = getRouteData(path)
+    const fullTitle = path !== '/' ? `${title}${TITLE_SUFFIX}` : title
+    document.title = fullTitle
     updateMeta('description', desc)
     updateMeta('keywords', keywords)
   }, [location.pathname])
