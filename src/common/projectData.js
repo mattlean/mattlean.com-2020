@@ -61,7 +61,7 @@ const PROJECTS = {
     name: 'express-ffuh',
     long:
       'An Express middleware that handles Amazon S3 and local file system uploads.',
-    tags: ['express-middleware', 'backend'],
+    tags: ['express-middleware', 'aws', 'backend'],
   },
   gridnik: {
     id: 'gridnik',

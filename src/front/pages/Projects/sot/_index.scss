@@ -1,7 +1,7 @@
 @use '../../../visuals/scale/bp';
 @use '../../../visuals/scale/size';
 
-.grid-project {
+.grid-project-sot {
   > .subgrid-mid-desc {
     margin-bottom: size.$size-81;
 
@@ -20,10 +20,12 @@
 
   > .btn-view-live {
     grid-column: 3/4;
+    grid-row: 8/9;
   }
 
   > .btn-case-study {
     grid-column: 4/5;
+    grid-row: 8/9;
   }
 
   > .subgrid-project-desc {
@@ -40,11 +42,13 @@
 @media (max-width: size.$size-1150) {
   .grid-project {
     > .btn-view-live {
-      grid-column: -2/-3;
+      grid-column: -3/-2;
+      grid-row: 10/11;
     }
 
     > .btn-case-study {
-      grid-column: -1/-2;
+      grid-column: -2/-1;
+      grid-row: 10/11;
     }
 
     > .subgrid-project-desc {
@@ -82,6 +86,7 @@
     > .btn-view-live,
     > .btn-case-study {
       grid-column: auto;
+      grid-row: 11/12;
     }
   }
 }

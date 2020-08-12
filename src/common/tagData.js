@@ -1,4 +1,5 @@
 const TAGS = {
+  aws: 'AWS',
   backend: 'Backend',
   cs: 'Case Study',
   design: 'Design',

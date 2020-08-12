@@ -1,3 +1,4 @@
+@use './scale/bp';
 @use './scale/color';
 @use './scale/size';
 @use './scale/typography';
@@ -95,12 +96,14 @@ dd {
   }
 }
 
-@media (max-width: size.$size-470) {
+@media (max-width: bp.$sm) {
   html {
     font-size: size.$size-16;
   }
 
   body {
+    font-size: size.$size-16;
+
     margin-left: size.$size-18;
     margin-right: size.$size-18;
   }

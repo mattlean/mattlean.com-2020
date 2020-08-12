@@ -4,7 +4,6 @@
 @use '../../visuals/scale/typography';
 
 .grid-project {
-  grid-template-rows: auto;
   margin-bottom: size.$size-27;
   margin-top: size.$size-211;
 
@@ -21,8 +20,8 @@
     margin-bottom: size.$size-100;
     transform: translateY(-27px);
 
-    > h2 {
-      margin-bottom: size.$size-12;
+    > .badge-list {
+      margin-top: size.$size-12;
     }
   }
 
@@ -66,6 +65,7 @@
     list-style-type: none;
 
     grid-column: -3/-1;
+    grid-row: span 2;
     margin-bottom: size.$size-184;
 
     > section {
@@ -80,6 +80,10 @@
 
         > ul {
           list-style-type: none;
+
+          > li {
+            margin-bottom: 0.5em;
+          }
         }
 
         // stylelint-disable-next-line no-descending-specificity
@@ -130,12 +134,12 @@
 
 @media (max-width: size.$size-780) {
   .grid-project {
-    > .subgrid-project-details {
-      grid-column: 1/-1;
-    }
-
     > .project-details-header {
       font-size: size.$size-24;
+    }
+
+    > .subgrid-project-details {
+      grid-column: 1/-1;
     }
   }
 }
