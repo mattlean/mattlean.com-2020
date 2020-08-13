@@ -1,7 +1,15 @@
+@use "sass:map";
 @use 'styles/util/appearance';
 @use 'styles/util/gen';
 @use '../scale/bp';
 @use './typography';
 
-@include gen.gen-responsive-classes(bp.$bp, appearance.$data);
-@include gen.gen-responsive-classes(bp.$bp, typography.$data);
+@media (max-width: map.get(bp.$bp, 'md')) {
+  @include gen.gen-classes(appearance.$data, 'md\\\:');
+  @include gen.gen-classes(typography.$data, 'md\\\:');
+}
+
+@media (max-width: map.get(bp.$bp, 'sm')) {
+  @include gen.gen-classes(appearance.$data, 'sm\\\:');
+  @include gen.gen-classes(typography.$data, 'sm\\\:');
+}
