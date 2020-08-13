@@ -48,6 +48,11 @@ a:visited {
   color: var(--c-primary);
 }
 
+b,
+strong {
+  font-weight: typography.$bold;
+}
+
 ol {
   counter-reset: ordered-list;
   list-style: none;

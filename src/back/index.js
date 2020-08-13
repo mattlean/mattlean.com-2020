@@ -1,5 +1,6 @@
 import express from 'express'
 import morgan from 'morgan'
+import { createNoMatchTemplateString } from './render'
 import route from './route'
 import ServerErr from './util/ServerErr'
 import { FRONT } from '../../PATHS'
@@ -31,6 +32,11 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 app.use('/', route)
+
+/* No Match Handler */
+app.use((req, res) =>
+  res.status(404).send(createNoMatchTemplateString(req.url))
+)
 
 // eslint-disable-next-line no-console
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`))

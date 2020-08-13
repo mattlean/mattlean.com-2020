@@ -7,11 +7,9 @@ import Blog from '../pages/Blog'
 import Contact from '../pages/Contact'
 import Landing from '../pages/Landing'
 import MainNav from './MainNav'
+import NoMatch from '../pages/NoMatch'
 import Project from '../pages/Projects/Project'
 import Projects from '../pages/Projects'
-import { genFormattedPath } from '../../common/util'
-import { getRouteData, TITLE_SUFFIX } from '../../common/routeData'
-import { updateMeta } from '../util'
 
 const App = () => {
   const [initLoad, setInitLoad] = useState(false)
@@ -38,16 +36,6 @@ const App = () => {
     }
   })
 
-  // Update document head
-  useEffect(() => {
-    const path = genFormattedPath(location.pathname)
-    const { desc, keywords, title } = getRouteData(path)
-    const fullTitle = path !== '/' ? `${title}${TITLE_SUFFIX}` : title
-    document.title = fullTitle
-    updateMeta('description', desc)
-    updateMeta('keywords', keywords)
-  }, [location.pathname])
-
   return (
     <ThemeCtx.Provider value={themeState}>
       <MainNav />
@@ -59,6 +47,7 @@ const App = () => {
           <Route path="/contact" component={Contact} />
           <Route exact path="/projects" component={Projects} />
           <Route path="/projects/:id" component={Project} />
+          <Route path="*" component={NoMatch} />
         </Switch>
       </AnimatePresence>
     </ThemeCtx.Provider>

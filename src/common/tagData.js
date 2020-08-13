@@ -14,7 +14,7 @@ const TAGS = {
   template: 'Website Template',
   tooling: 'Tooling',
   'web-app': 'Web App',
-  'webpack-plugin': 'webpack plugin',
+  'webpack-plugin': 'webpack Plugin',
   website: 'Website',
   'wp-theme': 'WordPress Theme',
   'xd-plugin': 'Adobe XD Plugin',

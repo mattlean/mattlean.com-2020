@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
+import { genHeadData } from '../../common/util'
 
 /**
  * Update meta element by updating its content attribute and add or remove element when necessary
@@ -24,6 +26,7 @@ export const updateMeta = (name, value) => {
   if (!ele && value) {
     // Create new meta element and append it to head element
     ele = document.createElement('meta')
+    ele.setAttribute('name', name)
     document.head.appendChild(ele)
   }
 
@@ -47,4 +50,25 @@ export const useViewportWidth = () => {
     return () => window.removeEventListener('resize', handleResize)
   }, [width]) // eslint-disable-line react-hooks/exhaustive-deps
   return width
+}
+
+/**
+ * Custom hook that determines the values for title and meta elements in head element
+ * @param {Object} [Object={}] Head data used to override default head data
+ */
+export const useHeadDataEffect = ({ desc, keywords, title } = {}) => {
+  const { pathname } = useLocation()
+  useEffect(() => {
+    const headData = genHeadData(pathname)
+
+    /* eslint-disable react-hooks/exhaustive-deps */
+    if (!desc && desc !== null) desc = headData.desc
+    if (!keywords && keywords !== null) keywords = headData.keywords
+    if (!title && title !== null) title = headData.title
+    /* eslint-enable react-hooks/exhaustive-deps */
+
+    document.title = title
+    updateMeta('description', desc)
+    updateMeta('keywords', keywords)
+  }, [pathname])
 }

@@ -2,6 +2,8 @@ import PROJECT_ROUTES from './routeProjectData'
 
 export const TITLE_SUFFIX = ' | Matt Lean'
 
+export const NO_MATCH_TITLE = `404'd!! FiLE NOT FOUND${TITLE_SUFFIX}`
+
 const ROUTES = {
   '/': {
     title: 'Matt Lean — Full-Stack Web Developer & UI/UX Designer',

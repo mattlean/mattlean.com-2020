@@ -1,0 +1,43 @@
+@use '../../visuals/scale/bp';
+@use '../../visuals/scale/size';
+@use '../../visuals/scale/typography';
+
+.grid-no-match {
+  grid-template-rows: size.$size-157;
+  margin-bottom: size.$size-27;
+  margin-top: size.$size-211;
+
+  > .cover {
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+
+    > h1 {
+      margin-bottom: size.$size-30;
+      transform: translate(-1px, -9px);
+    }
+
+    > p {
+      transform: translateY(-5px);
+    }
+  }
+}
+
+@media (max-width: bp.$md) {
+  .grid-no-match {
+    margin-top: size.$size-201;
+  }
+}
+
+@media (max-width: bp.$sm) {
+  .grid-no-match {
+    grid-template-columns: 1fr;
+    margin-bottom: size.$size-24;
+    margin-top: 0;
+
+    > .cover {
+      > p {
+        transform: translateY(-6px);
+      }
+    }
+  }
+}

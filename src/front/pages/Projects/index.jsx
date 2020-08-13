@@ -6,6 +6,7 @@ import BlindFrame from '../../components/Blind/BlindFrame'
 import variants from '../variants'
 import MainFooter from '../../components/MainFooter'
 import { getAllProjectData } from '../../../common/projectData'
+import { useHeadDataEffect } from '../../util'
 
 const allProjectData = getAllProjectData()
 const projects = []
@@ -28,25 +29,29 @@ for (const p of allProjectData) {
 }
 
 /**
- * Projects
+ * Project Feed Page
  */
-const ProjectFeed = () => (
-  <motion.div
-    animate="initial"
-    exit="out"
-    initial="initial"
-    variants={variants}
-    onAnimationComplete={() => window.scroll(0, 0)}
-    className="container"
-  >
-    <main className="grid-feed grid">
-      <BlindFrame nodeType="h1" className="h-2 sm:h-3">
-        Projects
-      </BlindFrame>
-      <ul className="content">{projects}</ul>
-    </main>
-    <MainFooter />
-  </motion.div>
-)
+const ProjectFeed = () => {
+  useHeadDataEffect()
+
+  return (
+    <motion.div
+      animate="initial"
+      exit="out"
+      initial="initial"
+      variants={variants}
+      onAnimationComplete={() => window.scroll(0, 0)}
+      className="container"
+    >
+      <main className="grid-feed grid">
+        <BlindFrame nodeType="h1" className="h-2 sm:h-3">
+          Projects
+        </BlindFrame>
+        <ul className="content">{projects}</ul>
+      </main>
+      <MainFooter />
+    </motion.div>
+  )
+}
 
 export default ProjectFeed

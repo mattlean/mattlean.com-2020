@@ -16,8 +16,8 @@ const THRESHOLD = 0.5
  * Main Navigation
  */
 const MainNav = () => {
-  const location = useLocation()
   const viewportWidth = useViewportWidth()
+  const { pathname } = useLocation()
   const [initRender, setInitRender] = useState(true)
   const [isOpen, setIsOpen] = useState(false)
   const { isDark, toggle } = useContext(ThemeCtx)
@@ -65,7 +65,7 @@ const MainNav = () => {
     },
   }
 
-  if (initRender && location.pathname === '/') {
+  if (initRender && pathname === '/') {
     variants.animate.transition.delay = 0.8
   }
 

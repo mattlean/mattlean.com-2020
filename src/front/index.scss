@@ -28,6 +28,7 @@
 @use './components/MainNav';
 
 /* Root Pages */
+@use './Pages/NoMatch';
 @use './pages/About';
 @use './pages/Contact';
 @use './pages/Feed';
@@ -35,5 +36,5 @@
 @use './pages/Projects/Project';
 
 /* Project Pages */
-@use './pages/Projects/sot/index';
+@use './pages/Projects/sot';
 @use './pages/Projects/ffuh';
