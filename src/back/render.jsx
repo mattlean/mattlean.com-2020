@@ -1,9 +1,10 @@
-import ejs from 'ejs'
 import React from 'react'
+import { render } from 'ejs'
 import { renderToString } from 'react-dom/server'
 import { StaticRouter } from 'react-router-dom'
 import App from '../front/components/App'
-import template from '../front/template.ejs'
+import ERR_TEMPLATE from './err/err_template.ejs'
+import TEMPLATE from '../front/template.ejs'
 import { genHeadData } from '../common/util'
 import { NO_MATCH_TITLE } from '../common/routeData'
 
@@ -23,7 +24,7 @@ export const createTemplateString = (location, params, context = {}) => {
   const { desc, keywords, title } = genHeadData(location)
 
   // TODO: render minified HTML for production
-  return ejs.render(template, {
+  return render(TEMPLATE, {
     app,
     desc,
     keywords,
@@ -45,7 +46,7 @@ export const createNoMatchTemplateString = (location, params, context = {}) => {
     </StaticRouter>
   )
 
-  return ejs.render(template, {
+  return render(TEMPLATE, {
     app,
     desc: '',
     keywords: '',
@@ -53,3 +54,9 @@ export const createNoMatchTemplateString = (location, params, context = {}) => {
     NODE_ENV: process.env.NODE_ENV,
   })
 }
+
+/**
+ * Create error template string
+ */
+export const createErrTemplateString = (title) =>
+  render(ERR_TEMPLATE, { title })

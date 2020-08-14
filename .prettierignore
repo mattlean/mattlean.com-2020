@@ -1,2 +1,2 @@
 build
-src/front/template.ejs
+*.ejs
