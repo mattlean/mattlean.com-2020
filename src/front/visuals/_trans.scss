@@ -7,9 +7,12 @@ body {
   transition-timing-function: $trans-timing-fn;
 }
 
-a,
-button {
+a {
   transition: color $trans-duration $trans-timing-fn;
+}
+
+button {
+  transition: background-color, color $trans-duration $trans-timing-fn;
 }
 
 ul {

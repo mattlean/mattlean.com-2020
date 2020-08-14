@@ -17,8 +17,23 @@
   }
 }
 
+.btn-view-gh,
 .btn-view-live {
   .btn-icon {
     transform: translateY(-2px);
+  }
+}
+
+.btn-view-npm {
+  .btn-icon {
+    transform: translateY(2px);
+
+    .npm_svg__bg {
+      fill: var(--c-primary);
+    }
+
+    .npm_svg__n {
+      fill: var(--c-secondary);
+    }
   }
 }

@@ -2,9 +2,14 @@ import React from 'react'
 import { Badge, Btn } from 'eswiss'
 import BlindFrame from '../../../components/Blind/BlindFrame'
 import { getProjectData } from '../../../../common/projectData'
+import { useHeadDataEffect } from '../../../util'
 import { MarkGithubIcon } from '@primer/octicons-react'
 
+/**
+ * express-ffuh Project Page
+ */
 const FFUH = () => {
+  useHeadDataEffect()
   const { name, tags } = getProjectData('ffuh')
 
   return (
@@ -45,9 +50,18 @@ const FFUH = () => {
             >
               Amazon Simple Storage Service (S3)
             </a>{' '}
-            and to the server’s local file system. <em>FFUH</em> stands for
-            flexible file upload handler. It’s pronounced like pho, a bowl of
-            Vietnamese noodle soup.
+            and to the server’s local file system. <em>FFUH</em> stands for{' '}
+            <em>flexible file upload handler</em>. It’s pronounced like{' '}
+            <a
+              href="https://wikipedia.org/wiki/Pho"
+              rel="noreferrer"
+              target="_blank"
+              className="a-grey-1"
+            >
+              pho
+            </a>{' '}
+            which is a bowl of Vietnamese noodle soup. (This is probably not the
+            best phonetic analogy since people mispronounce pho a lot.)
           </p>
           <p>
             This middleware is useful if you need to support uploading to both

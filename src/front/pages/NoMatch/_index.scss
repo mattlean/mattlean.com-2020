@@ -17,7 +17,7 @@
     }
 
     > p {
-      transform: translateY(-5px);
+      transform: translateY(-9px);
     }
   }
 }
@@ -35,8 +35,8 @@
     margin-top: 0;
 
     > .cover {
-      > p {
-        transform: translateY(-6px);
+      > h1 {
+        margin-bottom: size.$size-27;
       }
     }
   }

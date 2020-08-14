@@ -1,8 +1,9 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { Route, Switch, useLocation, useParams } from 'react-router-dom'
-import FFUH from './ffuh'
-import SOT from './sot'
+import ALWP from './ALWP'
+import FFUH from './FFUH'
+import SOT from './SOT'
 import MainFooter from '../../components/MainFooter'
 import NoMatchContent from '../../pages/NoMatch/NoMatchContent'
 import variants from '../variants'
@@ -38,6 +39,7 @@ const Project = () => {
     >
       <main className={cn}>
         <Switch>
+          <Route path={`${PREFIX_PROJECT}alwp`} component={ALWP} />
           <Route path={`${PREFIX_PROJECT}sot`} component={SOT} />
           <Route path={`${PREFIX_PROJECT}ffuh`} component={FFUH} />
           <Route path="*" component={NoMatchContent} />
