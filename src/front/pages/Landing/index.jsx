@@ -5,8 +5,8 @@ import BlindFrame from '../../components/Blind/BlindFrame'
 import CTA from '../../components/CTA'
 import MainFooter from '../../components/MainFooter'
 import variants from '../variants'
-import { getPostData } from '../../../common/postData'
-import { getProjectData } from '../../../common/projectData'
+import { getPostData } from '../../../common/data/post'
+import { getProjectData } from '../../../common/data/project'
 import { useHeadDataEffect } from '../../util'
 
 const eswissData = getProjectData('eswiss')

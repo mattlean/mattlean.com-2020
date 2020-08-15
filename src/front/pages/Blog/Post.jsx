@@ -1,28 +1,33 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { Route, Switch, useLocation, useParams } from 'react-router-dom'
-import ALWP from './ALWP'
-import FFUH from './FFUH'
-import SOT from './SOT'
+import HelloWorld from './posts/HelloWorld'
 import MainFooter from '../../components/MainFooter'
 import NoMatchContent from '../NoMatch/NoMatchContent'
 import variants from '../variants'
 import { genFormattedPath } from '../../../common/util'
 import { getRouteData } from '../../../common/data/route'
-import { ROUTE_PREFIX } from '../../../common/data/project'
+import { isGeneral } from './layout'
+import { ROUTE_PREFIX } from '../../../common/data/route/blog'
 
 /**
- * Project Page
+ * Post Page
  */
-const Project = () => {
+const Post = () => {
   const { pathname } = useLocation()
   const { id } = useParams()
 
   let cn = 'grid '
   const path = genFormattedPath(pathname)
   if (getRouteData(path)) {
-    cn += 'grid-project'
-    if (id) cn += ` grid-project-${id}`
+    cn += 'grid-blog'
+    if (id) {
+      if (isGeneral(id)) {
+        cn += ' grid-blog-general'
+      } else {
+        cn += ` grid-blog-${id}`
+      }
+    }
   } else {
     cn += 'grid-no-match'
   }
@@ -38,9 +43,7 @@ const Project = () => {
     >
       <main className={cn}>
         <Switch>
-          <Route path={`${ROUTE_PREFIX}alwp`} component={ALWP} />
-          <Route path={`${ROUTE_PREFIX}sot`} component={SOT} />
-          <Route path={`${ROUTE_PREFIX}ffuh`} component={FFUH} />
+          <Route path={`${ROUTE_PREFIX}hello-world`} component={HelloWorld} />
           <Route path="*" component={NoMatchContent} />
         </Switch>
       </main>
@@ -49,4 +52,4 @@ const Project = () => {
   )
 }
 
-export default Project
+export default Post

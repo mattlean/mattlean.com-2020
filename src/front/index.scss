@@ -1,5 +1,7 @@
 /* eswiss */
 @use 'styles/reset';
+@use 'styles/util/appearance';
+@use 'styles/util/layout';
 @use 'components/Badge';
 @use 'components/Btn';
 @use 'components/Modal';
@@ -39,3 +41,6 @@
 @use './pages/Projects/ALWP';
 @use './pages/Projects/SOT';
 @use './pages/Projects/FFUH';
+
+/* Blog Posts */
+@use './pages/Blog/general';

@@ -28,13 +28,15 @@
     background-color: var(--c-secondary);
     list-style: none;
 
+    transform: translateX(3px);
+
     > li {
       display: inline-block;
       margin-left: size.$size-36;
 
       > a {
         color: var(--grey-1);
-        letter-spacing: 0.1rem;
+        letter-spacing: 0.1em;
         text-decoration: none;
       }
 
@@ -103,6 +105,7 @@
 
     > ul {
       display: none;
+      transform: none;
 
       &.open {
         bottom: 0;

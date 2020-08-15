@@ -1,0 +1,29 @@
+@use '../../visuals/scale/size';
+
+.grid-blog-general {
+  display: grid;
+  grid-template-rows: auto;
+  margin-bottom: size.$size-27;
+  margin-top: size.$size-211;
+
+  .cover {
+    grid-column: 2/5;
+    margin-bottom: size.$size-184;
+
+    > .subtitle {
+      margin-bottom: size.$size-9;
+    }
+
+    > .time {
+      margin-bottom: size.$size-12;
+    }
+  }
+
+  .content {
+    grid-column: 2/5;
+
+    > p:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

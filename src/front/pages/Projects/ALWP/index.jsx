@@ -1,7 +1,7 @@
 import React from 'react'
 import { Badge, Btn } from 'eswiss'
 import BlindFrame from '../../../components/Blind/BlindFrame'
-import { getProjectData } from '../../../../common/projectData'
+import { getProjectData } from '../../../../common/data/project'
 import { useHeadDataEffect } from '../../../util'
 import NPMIcon from '../../../assets/npm.svg'
 import { MarkGithubIcon } from '@primer/octicons-react'
@@ -18,13 +18,11 @@ const AWLP = () => {
       <BlindFrame nodeType="header" className="cover">
         <h1 className="h-1 md:h-2 sm:h-3">Asset List Webpack&nbsp;Plugin</h1>
         <ul className="badge-list">
-          {tags.map((t) => {
-            return (
-              <Badge nodeType="li" wide={true} key={t.id}>
-                {t.name}
-              </Badge>
-            )
-          })}
+          {tags.map((t) => (
+            <Badge nodeType="li" wide={true} key={t.id}>
+              {t.name}
+            </Badge>
+          ))}
         </ul>
       </BlindFrame>
       <BlindFrame nodeType="h2" className="project-overview h-2 md:h-4">

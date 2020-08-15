@@ -1,4 +1,4 @@
-import { getRouteData, TITLE_SUFFIX } from './routeData'
+import { getRouteData, TITLE_SUFFIX } from './data/route'
 
 /**
  * Generate path array

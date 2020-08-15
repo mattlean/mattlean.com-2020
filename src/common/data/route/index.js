@@ -1,4 +1,5 @@
-import PROJECT_ROUTES from './routeProjectData'
+import BLOG_ROUTES from './blog'
+import PROJECT_ROUTES from './project'
 
 export const TITLE_SUFFIX = ' | Matt Lean'
 
@@ -169,6 +170,8 @@ const ROUTES = {
       'matt',
       'lean',
       'blog',
+      'blog posts',
+      'posts',
       'full-stack developer',
       'full-stack',
       'fullstack developer',
@@ -394,6 +397,7 @@ const ROUTES = {
     ],
   },
   ...PROJECT_ROUTES,
+  ...BLOG_ROUTES,
 }
 
 /**

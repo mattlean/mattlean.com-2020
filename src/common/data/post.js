@@ -1,5 +1,6 @@
-import FeaturedCSLeanSpace from '../front/assets/lean-space-featured-project.jpg'
-import FeaturedCSSOT from '../front/assets/spectral-overlay-tool-featured-project.jpg'
+import { genTagIDNameArray } from './tag'
+import FeaturedCSLeanSpace from '../../front/assets/lean-space-featured-project.jpg'
+import FeaturedCSSOT from '../../front/assets/spectral-overlay-tool-featured-project.jpg'
 
 const ORDER = ['cs-ml2020', 'cs-sot', 'cs-lean-space', 'hello-world']
 const POSTS = {
@@ -8,6 +9,7 @@ const POSTS = {
     title: 'Case Study: Lean Space',
     subtitle: 'Learnings from building my personal website in 2015.',
     published: 'June 30, 2020',
+    readtime: 5,
     featured: {
       img: FeaturedCSLeanSpace,
       alt: "Featured image for Lean Space case study: the project's logo",
@@ -19,6 +21,7 @@ const POSTS = {
     title: 'Case Study: MattLean.com',
     subtitle: 'How I designed my 2020 personal brand and developed my website.',
     published: 'June 30, 2020',
+    readtime: 5,
     tags: ['cs', 'backend', 'design', 'frontend'],
   },
   'cs-sot': {
@@ -26,6 +29,7 @@ const POSTS = {
     title: 'Case Study: Spectral Overlay Tool',
     subtitle: 'Building a biotech data visualization tool.',
     published: 'June 30, 2020',
+    readtime: 5,
     featured: {
       img: FeaturedCSSOT,
       alt:
@@ -38,8 +42,14 @@ const POSTS = {
     title: 'Hello world!',
     subtitle: 'Another few years, another blog...',
     published: 'August 31, 2015',
+    readtime: 2,
     tags: ['misc'],
   },
+}
+
+// Format tag data
+for (const key in POSTS) {
+  POSTS[key].tags = genTagIDNameArray(POSTS[key].tags)
 }
 
 /**

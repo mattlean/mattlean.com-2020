@@ -27,12 +27,13 @@
 .btn-view-npm {
   .btn-icon {
     transform: translateY(2px);
+    width: 16px;
 
-    .npm_svg__bg {
+    > .npm_svg__bg {
       fill: var(--c-primary);
     }
 
-    .npm_svg__n {
+    > .npm_svg__n {
       fill: var(--c-secondary);
     }
   }

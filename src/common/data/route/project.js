@@ -1,4 +1,4 @@
-const ROUTE_PREFIX = '/projects/'
+export const ROUTE_PREFIX = '/projects/'
 
 const ROUTES = {}
 ROUTES[`${ROUTE_PREFIX}alwp`] = {

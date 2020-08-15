@@ -2,7 +2,7 @@ import React from 'react'
 import { Badge, Btn } from 'eswiss'
 import CTA from '../../../components/CTA'
 import BlindFrame from '../../../components/Blind/BlindFrame'
-import { getProjectData } from '../../../../common/projectData'
+import { getProjectData } from '../../../../common/data/project'
 import { useHeadDataEffect } from '../../../util'
 import { BookIcon, PlayIcon } from '@primer/octicons-react'
 import SSCharts from '../../../assets/ss/charts.jpg'
@@ -24,13 +24,11 @@ const SOT = () => {
           <h2 className="h-4 sm:h-6 c-grey-2 dispw-roman">{company}</h2>
         )}
         <ul className="badge-list">
-          {tags.map((t) => {
-            return (
-              <Badge nodeType="li" wide={true} key={t.id}>
-                {t.name}
-              </Badge>
-            )
-          })}
+          {tags.map((t) => (
+            <Badge nodeType="li" wide={true} key={t.id}>
+              {t.name}
+            </Badge>
+          ))}
         </ul>
       </BlindFrame>
       <BlindFrame nodeType="h2" className="project-overview h-2 md:h-4">

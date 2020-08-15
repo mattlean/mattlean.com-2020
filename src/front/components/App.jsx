@@ -8,6 +8,7 @@ import Contact from '../pages/Contact'
 import Landing from '../pages/Landing'
 import MainNav from './MainNav'
 import NoMatch from '../pages/NoMatch'
+import Post from '../pages/Blog/Post'
 import Project from '../pages/Projects/Project'
 import Projects from '../pages/Projects'
 
@@ -43,7 +44,8 @@ const App = () => {
         <Switch location={location} key={location.pathname}>
           <Route exact path="/" component={Landing} />
           <Route path="/about" component={About} />
-          <Route path="/blog" component={Blog} />
+          <Route exact path="/blog" component={Blog} />
+          <Route path="/blog/:id" component={Post} />
           <Route path="/contact" component={Contact} />
           <Route exact path="/projects" component={Projects} />
           <Route path="/projects/:id" component={Project} />

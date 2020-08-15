@@ -6,7 +6,7 @@ import App from '../front/components/App'
 import ERR_TEMPLATE from './err/err_template.ejs'
 import TEMPLATE from '../front/template.ejs'
 import { genHeadData } from '../common/util'
-import { NO_MATCH_TITLE } from '../common/routeData'
+import { NO_MATCH_TITLE } from '../common/data/route'
 
 /**
  * Create template string from template and App React component

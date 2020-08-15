@@ -32,6 +32,7 @@ if (process.env.NODE_ENV === 'development') {
   throw new ServerErr('SE001')
 }
 
+/* Page Handler */
 app.use('/', route)
 
 /* No Match Handler */

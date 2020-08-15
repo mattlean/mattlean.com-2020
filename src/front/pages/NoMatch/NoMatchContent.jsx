@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
 import BlindFrame from '../../components/Blind/BlindFrame'
-import { NO_MATCH_TITLE } from '../../../common/routeData'
+import { NO_MATCH_TITLE } from '../../../common/data/route'
 import { useHeadDataEffect } from '../../util'
 
 /**
