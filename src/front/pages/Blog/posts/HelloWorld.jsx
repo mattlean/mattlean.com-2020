@@ -3,8 +3,10 @@ import { Badge } from 'eswiss'
 import { Link } from 'react-router-dom'
 import BlindFrame from '../../../components/Blind/BlindFrame'
 import { getPostData } from '../../../../common/data/post'
+import { useHeadDataEffect } from '../../../util'
 
 const HelloWorld = () => {
+  useHeadDataEffect()
   const { tags, title, published, readtime, subtitle } = getPostData(
     'hello-world'
   )
@@ -37,18 +39,18 @@ const HelloWorld = () => {
           keep it up forever <i>this time</i>. Well <i>this time</i> I’m not
           giving any guarantees, but hopefully this particular blog will be kept
           up for at least a while… I’ll do my best to update it when I have
-          something of value to say and when I have the spare time to write it
-          up.
+          something of value to say and when I have the spare time to write
+          it&nbsp;up.
         </p>
-        <p className="mb-2">
+        <p className="mb-3">
           Hopefully this blog will be different than the other ones because my
           previous ones usually became soapboxes about pretty meaningless stuff.
           This time around I really hope to help people out through my{' '}
           <Link to="/blog" className="a-grey-1">
             case studies
           </Link>{' '}
-          where I talk about the projects I worked on and maybe even some
-          tutorials.
+          where I talk about the projects I worked on and maybe even
+          some&nbsp;tutorials.
         </p>
         <h2 className="mb-1">My Vacation</h2>
         <p>
@@ -59,9 +61,9 @@ const HelloWorld = () => {
           girlfriend in my new official home of northern California, trying to
           get less terrible at Ultra Street Fighter IV, and doing some for-fun
           programming. I’ve truly appreciated not being in the stressful
-          environment of university or Team 360 No Scope.
+          environment of university or Team&nbsp;360&nbsp;No&nbsp;Scope.
         </p>
-        <p className="mb-2">
+        <p>
           In the past 2 months I’ve been leisurely programming{' '}
           <a
             href="https://github.com/mattlean/xuehuacms"
@@ -71,7 +73,7 @@ const HelloWorld = () => {
           >
             Xuehua CMS
           </a>{' '}
-          which I plan to use to as the backend to power my personal website,
+          which I plan to use to as the backend to power my personal website,{' '}
           <Link to="/projects/lean-space" className="a-grey-1">
             Lean Space
           </Link>{' '}
@@ -82,16 +84,26 @@ const HelloWorld = () => {
           </Link>{' '}
           which is a lightbox solution I decided to code up as a “working break”
           during the development of Lean Space, and a few other projects I’m
-          finishing up for the last contact work I have with{' '}
+          finishing up for the last contract work I have with{' '}
           <a
             href="https://biosearchtech.com"
             rel="noreferrer"
             target="_blank"
             className="a-grey-1"
           >
-            Biosearch Technologies
+            Biosearch&nbsp;Technologies
           </a>
           .
+        </p>
+        <p className="mb-3 txt-4 sm:txt-3 fs-italic">
+          <i>
+            (Update, 8/15/2020 &ndash; Lean Space and Xuehua CMS are no longer
+            being used on this website.{' '}
+            <Link to="/" className="a-grey-1">
+              If you’re interested in learning more about Lean Space, please
+              consider reading the case study.
+            </Link>
+          </i>
         </p>
         <h2 className="mb-1">What’s Next?</h2>
         <p>
@@ -102,7 +114,7 @@ const HelloWorld = () => {
           environment to be honest. Hopefully I’ll find the time to let you all
           know how it goes here on the blog. If the post actually goes up, maybe
           it’ll help someone who is in the same position I’m in right now where
-          they’re looking to get their foot into the software industry.
+          they’re looking to get their foot into the software&nbsp;industry.
         </p>
       </BlindFrame>
     </>

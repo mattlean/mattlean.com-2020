@@ -1,3 +1,4 @@
+@use '../../visuals/scale/bp';
 @use '../../visuals/scale/size';
 
 .grid-blog-general {
@@ -24,6 +25,41 @@
 
     > p:last-child {
       margin-bottom: 0;
+    }
+  }
+}
+
+@media (max-width: bp.$md) {
+  .grid-blog-general {
+    margin-top: size.$size-201;
+  }
+}
+
+@media (max-width: size.$size-780) {
+  .grid-blog-general {
+    .cover,
+    .content {
+      grid-column: 1/4;
+    }
+  }
+}
+
+@media (max-width: size.$size-590) {
+  .grid-blog-general {
+    .cover,
+    .content {
+      grid-column: 1/-1;
+    }
+  }
+}
+
+@media (max-width: bp.$sm) {
+  .grid-blog-general {
+    margin-bottom: size.$size-24;
+    margin-top: 0;
+
+    > .cover {
+      margin-bottom: size.$size-59;
     }
   }
 }
