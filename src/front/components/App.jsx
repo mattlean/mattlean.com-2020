@@ -8,8 +8,8 @@ import Contact from '../pages/Contact'
 import Landing from '../pages/Landing'
 import MainNav from './MainNav'
 import NoMatch from '../pages/NoMatch'
-import Post from '../pages/Blog/Post'
-import Project from '../pages/Projects/Project'
+import Post from '../pages/Blog/posts'
+import ProjectPage from '../pages/Projects/pages'
 import Projects from '../pages/Projects'
 
 const App = () => {
@@ -48,7 +48,7 @@ const App = () => {
           <Route path="/blog/:id" component={Post} />
           <Route path="/contact" component={Contact} />
           <Route exact path="/projects" component={Projects} />
-          <Route path="/projects/:id" component={Project} />
+          <Route path="/projects/:id" component={ProjectPage} />
           <Route path="*" component={NoMatch} />
         </Switch>
       </AnimatePresence>

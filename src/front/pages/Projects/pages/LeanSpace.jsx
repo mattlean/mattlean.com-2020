@@ -1,6 +1,7 @@
 import React from 'react'
 import { Badge, Btn } from 'eswiss'
 import BlindFrame from '../../../components/Blind/BlindFrame'
+import CTA from '../../../components/CTA'
 import { getProjectData } from '../../../../common/data/project'
 import { useHeadDataEffect } from '../../../util'
 import SSBlogPost from '../../../assets/projects/lean-space/blog-post.jpg'
@@ -41,11 +42,7 @@ const LeanSpace = () => {
             2015 &ndash; 2020. It was made as a portfolio and&nbsp;blog.
           </p>
         </section>
-        <a
-          href="https://biosearchtech.com/qpcr-multiplex-spectral-overlay-tool"
-          rel="noreferrer"
-          target="_blank"
-        >
+        <a href="https://google.com" rel="noreferrer" target="_blank">
           <Btn className="btn-view-live">
             <PlayIcon className="btn-icon" /> View Live
           </Btn>
@@ -55,7 +52,7 @@ const LeanSpace = () => {
           rel="noreferrer"
           target="_blank"
         >
-          <Btn outline={true} className="btn-view-gh">
+          <Btn outline={true} className="btn-gh">
             <MarkGithubIcon className="btn-icon" /> GitHub
           </Btn>
         </a>
@@ -81,6 +78,18 @@ const LeanSpace = () => {
         <figcaption className="c-grey-2">
           First post written on the&nbsp;blog
         </figcaption>
+      </BlindFrame>
+      <BlindFrame nodeType="section" className="subgrid-mid-desc grid">
+        <h3 className="h-5">My Online Identity in 2015</h3>
+        <p className="txt-7 sm:txt-6 c-grey-1">
+          Lean Space was created in 2015 to demonstrate my abilities as new
+          graduate. The majority of the code was written using vanilla
+          JavaScript and Sass with an emphasis on utilizing native browser APIs
+          rather than 3rd party libraries.
+        </p>
+        <CTA to="/" type="sm" className="a-primary svg-primary">
+          Learn more about the&nbsp;project
+        </CTA>
       </BlindFrame>
       <BlindFrame nodeType="figure" className="ss ss-sm">
         <img src={`/${SSWorkMobile}`} alt="" />
@@ -177,7 +186,7 @@ const LeanSpace = () => {
         className="btn-project-a"
       >
         <Btn className="btn-view-live">
-          <MarkGithubIcon className="btn-icon" /> View Live
+          <PlayIcon className="btn-icon" /> View Live
         </Btn>
       </BlindFrame>
       <BlindFrame
@@ -187,7 +196,7 @@ const LeanSpace = () => {
         target="_blank"
         className="btn-project-b"
       >
-        <Btn outline={true} className="btn-view-gh">
+        <Btn outline={true} className="btn-gh">
           <MarkGithubIcon className="btn-icon" /> GitHub
         </Btn>
       </BlindFrame>

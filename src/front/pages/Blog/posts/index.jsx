@@ -1,14 +1,14 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { Route, Switch, useLocation, useParams } from 'react-router-dom'
-import HelloWorld from './posts/HelloWorld'
-import MainFooter from '../../components/MainFooter'
-import NoMatchContent from '../NoMatch/NoMatchContent'
-import variants from '../variants'
-import { genFormattedPath } from '../../../common/util'
-import { getRouteData } from '../../../common/data/route'
+import HelloWorld from './HelloWorld'
+import MainFooter from '../../../components/MainFooter'
+import NoMatchContent from '../../NoMatch/NoMatchContent'
+import variants from '../../variants'
+import { genFormattedPath } from '../../../../common/util'
+import { getRouteData } from '../../../../common/data/route'
 import { isGeneral } from './layout'
-import { ROUTE_PREFIX } from '../../../common/data/route/blog'
+import { ROUTE_PREFIX } from '../../../../common/data/route/blog'
 
 /**
  * Post Page

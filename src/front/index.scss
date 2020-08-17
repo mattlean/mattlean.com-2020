@@ -37,11 +37,7 @@
 @use './pages/Landing';
 
 /* Project Pages */
-@use './pages/Projects/Project';
-@use './pages/Projects/ALWP';
-@use './pages/Projects/Lantern';
-@use './pages/Projects/SOT';
-@use './pages/Projects/ThemeBoot';
+@use './pages/Projects/pages';
 
 /* Blog Posts */
-@use './pages/Blog/general';
+@use './pages/Blog/posts/general';

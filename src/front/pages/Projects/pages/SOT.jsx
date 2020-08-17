@@ -42,7 +42,7 @@ const SOT = () => {
               href="https://biosearchtech.com"
               rel="noreferrer"
               target="_blank"
-              className="a-grey-1"
+              className="a-grey-1 txtw-roman"
             >
               {company}
             </a>{' '}

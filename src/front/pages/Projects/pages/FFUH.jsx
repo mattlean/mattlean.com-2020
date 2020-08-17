@@ -1,8 +1,8 @@
 import React from 'react'
 import { Badge, Btn } from 'eswiss'
-import BlindFrame from '../../components/Blind/BlindFrame'
-import { getProjectData } from '../../../common/data/project'
-import { useHeadDataEffect } from '../../util'
+import BlindFrame from '../../../components/Blind/BlindFrame'
+import { getProjectData } from '../../../../common/data/project'
+import { useHeadDataEffect } from '../../../util'
 import { MarkGithubIcon } from '@primer/octicons-react'
 
 /**

@@ -7,18 +7,18 @@ import FFUH from './FFUH'
 import Lantern from './Lantern'
 import LeanSpace from './LeanSpace'
 import SOT from './SOT'
-import MainFooter from '../../components/MainFooter'
-import NoMatchContent from '../NoMatch/NoMatchContent'
+import MainFooter from '../../../components/MainFooter'
+import NoMatchContent from '../../NoMatch/NoMatchContent'
 import ThemeBoot from './ThemeBoot'
-import variants from '../variants'
-import { genFormattedPath } from '../../../common/util'
-import { getRouteData } from '../../../common/data/route'
-import { ROUTE_PREFIX } from '../../../common/data/project'
+import variants from '../../variants'
+import { genFormattedPath } from '../../../../common/util'
+import { getRouteData } from '../../../../common/data/route'
+import { ROUTE_PREFIX } from '../../../../common/data/project'
 
 /**
  * Project Page
  */
-const Project = () => {
+const ProjectPage = () => {
   const { pathname } = useLocation()
   const { id } = useParams()
 
@@ -57,4 +57,4 @@ const Project = () => {
   )
 }
 
-export default Project
+export default ProjectPage

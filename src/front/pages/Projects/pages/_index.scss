@@ -1,7 +1,7 @@
-@use '../../visuals/scale/bp';
-@use '../../visuals/grid';
-@use '../../visuals/scale/size';
-@use '../../visuals/scale/typography';
+@use '../../../visuals/scale/bp';
+@use '../../../visuals/grid';
+@use '../../../visuals/scale/size';
+@use '../../../visuals/scale/typography';
 
 .grid-project {
   margin-bottom: size.$size-27;
@@ -48,11 +48,22 @@
     grid-gap: size.$size-27;
   }
 
-  .subgrid-mid-desc {
+  > .subgrid-mid-desc {
     grid-column: 1/-1;
+    margin-bottom: size.$size-81;
+    margin-top: size.$size-81;
+
+    > h3 {
+      grid-column: span 3;
+    }
 
     > p {
+      grid-column: span 3/-1;
       margin-bottom: 0;
+    }
+
+    > .cta {
+      grid-column: span 3/-1;
     }
   }
 
@@ -123,6 +134,10 @@
 
 @media (max-width: size.$size-1150) {
   .grid-project {
+    > .subgrid-mid-desc > h3 {
+      grid-column: span 2;
+    }
+
     > .subgrid-project-desc {
       grid-column: 1 / span 3;
     }
@@ -145,6 +160,14 @@
       transform: none;
     }
 
+    > .subgrid-mid-desc {
+      > h3,
+      > p,
+      > .cta {
+        grid-column: span 3;
+      }
+    }
+
     > .subgrid-project-details {
       grid-column: 3/-1;
     }
@@ -163,6 +186,11 @@
   .grid-project {
     > .project-details-header {
       font-size: size.$size-24;
+    }
+
+    > .subgrid-mid-desc {
+      margin-bottom: size.$size-72;
+      margin-top: size.$size-72;
     }
 
     > .subgrid-project-details {
