@@ -32,12 +32,17 @@
 
   > .ss-lg {
     grid-column: 1/-1;
-    margin-bottom: size.$size-81;
-    margin-top: size.$size-72;
   }
 
   > .ss-sm {
     grid-column: span 3;
+    margin-bottom: size.$size-157;
+  }
+
+  > .subgrid-ss-sm {
+    columns: 2;
+    grid-column: 1/-1;
+    grid-gap: size.$size-27;
     margin-bottom: size.$size-157;
   }
 
@@ -51,6 +56,7 @@
 
   > .subgrid-project-desc {
     grid-column: span 3;
+    margin-bottom: size.$size-72;
 
     > section {
       grid-column: 1/-1;
@@ -172,6 +178,18 @@
   }
 }
 
+@media (max-width: size.$size-520) {
+  .grid-project {
+    > .subgrid-ss-sm {
+      columns: auto;
+
+      > .ss-sm:first-child {
+        margin-bottom: size.$size-27;
+      }
+    }
+  }
+}
+
 @media (max-width: bp.$sm) {
   .grid-project {
     margin-bottom: size.$size-24;
@@ -179,6 +197,10 @@
 
     > .cover {
       margin-bottom: size.$size-59;
+    }
+
+    > .subgrid-ss-sm {
+      margin-bottom: size.$size-24;
     }
   }
 }

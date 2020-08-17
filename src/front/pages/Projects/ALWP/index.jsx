@@ -54,7 +54,7 @@ const AWLP = () => {
           href="https://github.com/mattlean/asset-list-webpack-plugin"
           rel="noreferrer"
           target="_blank"
-          className="btn-view-gh"
+          className="btn-gh"
         >
           <Btn>
             <MarkGithubIcon className="btn-icon" /> GitHub
@@ -64,7 +64,7 @@ const AWLP = () => {
           href="https://npmjs.com/package/asset-list-webpack-plugin"
           rel="noreferrer"
           target="_blank"
-          className="btn-view-npm"
+          className="btn-npm"
         >
           <Btn outline={true}>
             <NPMIcon className="btn-icon" /> npm

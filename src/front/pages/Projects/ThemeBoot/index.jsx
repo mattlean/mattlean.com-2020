@@ -5,7 +5,10 @@ import { getProjectData } from '../../../../common/data/project'
 import { useHeadDataEffect } from '../../../util'
 import { BookIcon, PlayIcon } from '@primer/octicons-react'
 import { MarkGithubIcon } from '@primer/octicons-react'
-import SSHome from '../../../assets/projects/themeboot/home.jpg'
+import SSFAQ from '../../../assets/projects/themeboot/faq-mobile.jpg'
+import SSLocation from '../../../assets/projects/themeboot/location.jpg'
+import SSFront from '../../../assets/projects/themeboot/front.jpg'
+import SSFrontMobile from '../../../assets/projects/themeboot/front-mobile.jpg'
 
 /**
  * ThemeBoot Project Page
@@ -60,7 +63,7 @@ const ThemeBoot = () => {
           href="https://github.com/mattlean/themeboot"
           rel="noreferrer"
           target="_blank"
-          className="btn-view-gh"
+          className="btn-gh"
         >
           <Btn>
             <MarkGithubIcon className="btn-icon" /> GitHub
@@ -73,9 +76,32 @@ const ThemeBoot = () => {
         threshold={0.2}
         className="ss ss-lg"
       >
-        <img src={`/${SSHome}`} alt="" />
-        <figcaption className="c-grey-2">Home page example</figcaption>
+        <img src={`/${SSFront}`} alt="" />
+        <figcaption className="c-grey-2">Frontpage example</figcaption>
       </BlindFrame>
+      <BlindFrame
+        nodeType="figure"
+        duration={0.1}
+        threshold={0.2}
+        className="ss ss-lg"
+      >
+        <img src={`/${SSLocation}`} alt="" />
+        <figcaption className="c-grey-2">Regular page&nbsp;example</figcaption>
+      </BlindFrame>
+      <section className="subgrid-ss-sm">
+        <BlindFrame nodeType="figure" className="ss ss-sm">
+          <img src={`/${SSFrontMobile}`} alt="" />
+          <figcaption className="c-grey-2">
+            Frontpage example being viewed on a mobile&nbsp;device
+          </figcaption>
+        </BlindFrame>
+        <BlindFrame nodeType="figure" className="ss ss-sm">
+          <img src={`/${SSFAQ}`} alt="" />
+          <figcaption className="c-grey-2">
+            Regular page example being viewed on a mobile&nbsp;device
+          </figcaption>
+        </BlindFrame>
+      </section>
       <BlindFrame nodeType="h3" className="project-details-header">
         Project Details
       </BlindFrame>
@@ -151,14 +177,15 @@ const ThemeBoot = () => {
           </section>
         </section>
       </BlindFrame>
-      <BlindFrame nodeType="section" className="btn-view-live">
+      <BlindFrame
+        nodeType="a"
+        href="https://github.com/mattlean/themeboot"
+        rel="noreferrer"
+        target="_blank"
+        className="btn-gh"
+      >
         <Btn>
-          <PlayIcon className="btn-icon" /> View Live
-        </Btn>
-      </BlindFrame>
-      <BlindFrame nodeType="section" className="btn-case-study">
-        <Btn outline={true}>
-          <BookIcon className="btn-icon" /> Case Study
+          <MarkGithubIcon className="btn-icon" /> GitHub
         </Btn>
       </BlindFrame>
     </>

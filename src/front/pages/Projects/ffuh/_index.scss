@@ -1,10 +1,6 @@
 @use '../../../visuals/scale/size';
 
 .grid-project-ffuh {
-  > .subgrid-project-desc {
-    margin-bottom: size.$size-72;
-  }
-
   > .project-details-header {
     grid-row: 3/4;
   }

@@ -2,6 +2,10 @@
 @use '../../../visuals/scale/size';
 
 .grid-project-sot {
+  > .ss-lg {
+    margin-bottom: size.$size-81;
+  }
+
   > .subgrid-mid-desc {
     margin-bottom: size.$size-81;
 
