@@ -32,11 +32,11 @@ const Checkpoint = () => {
         <section className="c-grey-1">
           <p>
             <strong>Checkpoint.js</strong> is an open source data validation and
-            transformation library. It works .
+            transformation&nbsp;library.
           </p>
           <p>
             This project was originally created to validate and transform data
-            during application runtime.
+            during application&nbsp;runtime.
           </p>
         </section>
         <a

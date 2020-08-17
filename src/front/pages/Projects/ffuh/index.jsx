@@ -59,7 +59,8 @@ const FFUH = () => {
               pho
             </a>{' '}
             which is a bowl of Vietnamese noodle soup. (This is probably not the
-            best phonetic analogy since people mispronounce pho a lot.)
+            best phonetic analogy since people mispronounce
+            pho&nbsp;a&nbsp;lot.)
           </p>
           <p>
             This middleware is useful if you need to support uploading to both
@@ -68,7 +69,7 @@ const FFUH = () => {
             the server is running in a development environment and then upload
             to S3 when a server is running in the production environment. This
             helps keep uploads working when developing offline while saving some
-            costs from hosting on an extra development S3 bucket.
+            costs from hosting on an extra development S3&nbsp;bucket.
           </p>
         </section>
         <a

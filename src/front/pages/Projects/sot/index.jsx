@@ -73,7 +73,7 @@ const SOT = () => {
       <BlindFrame nodeType="figure" className="ss ss-lg">
         <img src={`/${SSCharts}`} alt="" />
         <figcaption className="c-grey-2">
-          Main screen for spectral overlay tool
+          Main screen for spectral overlay&nbsp;tool
         </figcaption>
       </BlindFrame>
       <BlindFrame nodeType="section" className="subgrid-mid-desc grid">
@@ -87,7 +87,7 @@ const SOT = () => {
           performance&nbsp;optimizations.
         </p>
         <CTA to="/" type="sm" className="a-primary svg-primary">
-          Learn more about the project
+          Learn more about the&nbsp;project
         </CTA>
       </BlindFrame>
       <BlindFrame nodeType="figure" className="ss ss-sm">

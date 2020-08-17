@@ -46,8 +46,8 @@ const AWLP = () => {
           </p>
           <p>
             This plugin was originally created for dynamically handling frontend
-            bundles on the backend, but it can be useful for other scenarios
-            like bundle debugging.
+            bundles on the backend, but it can be useful for other purposes such
+            as bundle&nbsp;debugging.
           </p>
         </section>
         <a
