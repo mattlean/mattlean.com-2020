@@ -1,13 +1,14 @@
 import React from 'react'
 import { Badge, Btn } from 'eswiss'
+import { Link } from 'react-router-dom'
 import CTA from '../../../components/CTA'
 import BlindFrame from '../../../components/Blind/BlindFrame'
 import { getProjectData } from '../../../../common/data/project'
 import { useHeadDataEffect } from '../../../util'
 import { BookIcon, PlayIcon } from '@primer/octicons-react'
-import SSCharts from '../../../assets/ss/charts.jpg'
-import SSFullscreen from '../../../assets/ss/fullscreen.jpg'
-import SSInstrumentSelection from '../../../assets/ss/instrument-selection.jpg'
+import SSCharts from '../../../assets/projects/sot/charts.jpg'
+import SSFullscreen from '../../../assets/projects/sot/fullscreen.jpg'
+import SSInstrumentSelection from '../../../assets/projects/sot/instrument-selection.jpg'
 
 /**
  * Spectral Overlay Tool Project Page
@@ -49,11 +50,12 @@ const SOT = () => {
             genomic analysis in healthcare and agricultural&nbsp;genomics.
           </p>
           <p>
-            I worked with them to build the spectral overlay tool, a web
-            application that visualizes the absorption & emission spectra for
-            common fluorescent dyes and quenchers, allowing users to overlay
-            them as multiplexed sets according to recommended combinations for
-            each qPCR&nbsp;device.
+            I worked with them to build the{' '}
+            <strong>spectral overlay tool</strong>, a web application that
+            visualizes the absorption & emission spectra for common fluorescent
+            dyes and quenchers, allowing users to overlay them as multiplexed
+            sets according to recommended combinations for each
+            qPCR&nbsp;device.
           </p>
         </section>
         <a
@@ -66,9 +68,11 @@ const SOT = () => {
             <PlayIcon className="btn-icon" /> View Live
           </Btn>
         </a>
-        <Btn outline={true} className="btn-case-study">
-          <BookIcon className="btn-icon" /> Case Study
-        </Btn>
+        <Link to="/" className="btn-case-study">
+          <Btn outline={true}>
+            <BookIcon className="btn-icon" /> Case Study
+          </Btn>
+        </Link>
       </BlindFrame>
       <BlindFrame nodeType="figure" className="ss ss-lg">
         <img src={`/${SSCharts}`} alt="" />
@@ -154,7 +158,6 @@ const SOT = () => {
                   Python
                 </a>
               </li>
-              <li>HTML</li>
               <li>
                 <a
                   href="https://sass-lang.com"
@@ -166,6 +169,7 @@ const SOT = () => {
                 </a>
               </li>
               <li>CSS</li>
+              <li>HTML</li>
             </ul>
           </section>
           <section>
@@ -275,13 +279,19 @@ const SOT = () => {
           </section>
         </section>
       </BlindFrame>
-      <BlindFrame nodeType="section" className="btn-view-live">
+      <BlindFrame
+        nodeType="a"
+        href="https://biosearchtech.com/qpcr-multiplex-spectral-overlay-tool"
+        rel="noreferrer"
+        target="_blank"
+        className="btn-view-live"
+      >
         <Btn>
           <PlayIcon className="btn-icon" /> View Live
         </Btn>
       </BlindFrame>
-      <BlindFrame nodeType="section" className="btn-case-study">
-        <Btn className="div" outline={true}>
+      <BlindFrame nodeType="Link" to="/" className="btn-case-study">
+        <Btn outline={true}>
           <BookIcon className="btn-icon" /> Case Study
         </Btn>
       </BlindFrame>

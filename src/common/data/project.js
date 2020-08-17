@@ -5,13 +5,13 @@ import FeaturedGridnik from '../../front/assets/gridnik-featured-project.jpg'
 export const ROUTE_PREFIX = '/projects/'
 
 const ORDER = [
-  'gridnik',
-  'ml2020',
-  'eswiss',
   'sot',
+  'ml2020',
+  'gridnik',
+  'eswiss',
+  'ljsas',
   'ffuh',
   'checkpoint',
-  'ljsas',
   'crush',
   'adam',
   'alwp',
@@ -116,7 +116,7 @@ const PROJECTS = {
     id: 'themeboot',
     name: 'ThemeBoot',
     long:
-      'A Bootstrap powered website layout built for use as a WordPress theme or a static HTML & CSS template.',
+      'A Bootstrap-powered website layout built for use as a WordPress theme or a static HTML & CSS template.',
     tags: ['wp-theme', 'template', 'backend', 'frontend'],
   },
 }

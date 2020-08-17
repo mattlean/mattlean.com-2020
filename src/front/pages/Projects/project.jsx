@@ -7,6 +7,7 @@ import FFUH from './FFUH'
 import SOT from './SOT'
 import MainFooter from '../../components/MainFooter'
 import NoMatchContent from '../NoMatch/NoMatchContent'
+import ThemeBoot from './ThemeBoot'
 import variants from '../variants'
 import { genFormattedPath } from '../../../common/util'
 import { getRouteData } from '../../../common/data/route'
@@ -41,8 +42,9 @@ const Project = () => {
         <Switch>
           <Route path={`${ROUTE_PREFIX}alwp`} component={ALWP} />
           <Route path={`${ROUTE_PREFIX}checkpoint`} component={Checkpoint} />
-          <Route path={`${ROUTE_PREFIX}sot`} component={SOT} />
           <Route path={`${ROUTE_PREFIX}ffuh`} component={FFUH} />
+          <Route path={`${ROUTE_PREFIX}sot`} component={SOT} />
+          <Route path={`${ROUTE_PREFIX}themeboot`} component={ThemeBoot} />
           <Route path="*" component={NoMatchContent} />
         </Switch>
       </main>
