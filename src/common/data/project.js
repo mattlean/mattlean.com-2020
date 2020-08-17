@@ -86,7 +86,6 @@ const PROJECTS = {
   'lean-space': {
     id: 'lean-space',
     name: 'Lean Space',
-    company: 'MattLean.com',
     long: 'The previous iteration of my personal website built in 2015.',
     tags: ['website', 'design', 'frontend'],
   },

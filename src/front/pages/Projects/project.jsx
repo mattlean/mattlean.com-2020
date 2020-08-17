@@ -5,6 +5,7 @@ import ALWP from './ALWP'
 import Checkpoint from './Checkpoint'
 import FFUH from './FFUH'
 import Lantern from './Lantern'
+import LeanSpace from './LeanSpace'
 import SOT from './SOT'
 import MainFooter from '../../components/MainFooter'
 import NoMatchContent from '../NoMatch/NoMatchContent'
@@ -45,6 +46,7 @@ const Project = () => {
           <Route path={`${ROUTE_PREFIX}checkpoint`} component={Checkpoint} />
           <Route path={`${ROUTE_PREFIX}ffuh`} component={FFUH} />
           <Route path={`${ROUTE_PREFIX}lantern`} component={Lantern} />
+          <Route path={`${ROUTE_PREFIX}lean-space`} component={LeanSpace} />
           <Route path={`${ROUTE_PREFIX}sot`} component={SOT} />
           <Route path={`${ROUTE_PREFIX}themeboot`} component={ThemeBoot} />
           <Route path="*" component={NoMatchContent} />

@@ -85,7 +85,7 @@ const Lantern = () => {
       >
         <img src={`/${SSLantern}`} alt="" />
         <figcaption className="c-grey-2">
-          Example of open lightbox using Lantern.js
+          Example of open lightbox using&nbsp;Lantern.js
         </figcaption>
       </BlindFrame>
       <BlindFrame nodeType="h3" className="project-details-header">
@@ -134,7 +134,7 @@ const Lantern = () => {
       </BlindFrame>
       <BlindFrame
         nodeType="a"
-        href="https://github.com/mattlean/Lantern"
+        href="https://github.com/mattlean/lanternjs"
         rel="noreferrer"
         target="_blank"
         className="btn-gh"

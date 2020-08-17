@@ -8,7 +8,7 @@
 }
 
 @media (max-width: bp.$md) {
-  .grid-project {
+  .grid-project-themeboot {
     > .btn-gh {
       grid-column: 3/4;
     }
@@ -16,7 +16,7 @@
 }
 
 @media (max-width: size.$size-780) {
-  .grid-project {
+  .grid-project-themeboot {
     > .btn-gh {
       grid-column: auto;
     }

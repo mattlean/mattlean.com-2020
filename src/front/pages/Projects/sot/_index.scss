@@ -34,7 +34,7 @@
 }
 
 @media (max-width: size.$size-1150) {
-  .grid-project {
+  .grid-project-sot {
     > .btn-view-live {
       grid-row: 10/11;
     }
@@ -52,7 +52,7 @@
 }
 
 @media (max-width: bp.$md) {
-  .grid-project {
+  .grid-project-sot {
     > .subgrid-mid-desc {
       > h3,
       > p,
@@ -72,7 +72,7 @@
 }
 
 @media (max-width: size.$size-780) {
-  .grid-project {
+  .grid-project-sot {
     > .ss-lg {
       margin-bottom: size.$size-72;
     }
