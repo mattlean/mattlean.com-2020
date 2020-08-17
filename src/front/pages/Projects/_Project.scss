@@ -7,6 +7,10 @@
   margin-bottom: size.$size-27;
   margin-top: size.$size-211;
 
+  .project-details-gap {
+    margin-bottom: size.$size-81;
+  }
+
   a {
     font-weight: typography.$txt-medium;
   }
@@ -36,14 +40,12 @@
 
   > .ss-sm {
     grid-column: span 3;
-    margin-bottom: size.$size-157;
   }
 
   > .subgrid-ss-sm {
     columns: 2;
     grid-column: 1/-1;
     grid-gap: size.$size-27;
-    margin-bottom: size.$size-157;
   }
 
   .subgrid-mid-desc {
@@ -56,7 +58,7 @@
 
   > .subgrid-project-desc {
     grid-column: span 3;
-    margin-bottom: size.$size-72;
+    margin-bottom: size.$size-81;
 
     > section {
       grid-column: 1/-1;
@@ -76,7 +78,7 @@
 
     grid-column: 4/-1;
     grid-row: span 2;
-    margin-bottom: size.$size-184;
+    margin-bottom: size.$size-81;
 
     > section {
       grid-column: span 1;
@@ -119,11 +121,6 @@
 
     > .ss-sm {
       grid-column: 1/-1;
-      margin-bottom: 0;
-
-      &:last-of-type {
-        margin-bottom: size.$size-157;
-      }
     }
   }
 }
@@ -195,12 +192,20 @@
     margin-bottom: size.$size-24;
     margin-top: 0;
 
+    .project-details-gap {
+      margin-bottom: size.$size-72;
+    }
+
     > .cover {
       margin-bottom: size.$size-59;
     }
 
-    > .subgrid-ss-sm {
-      margin-bottom: size.$size-24;
+    > .subgrid-project-desc {
+      margin-bottom: size.$size-72;
+    }
+
+    > .subgrid-project-details {
+      margin-bottom: size.$size-72;
     }
   }
 }

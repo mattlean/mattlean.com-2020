@@ -35,13 +35,12 @@
 @use './pages/Contact';
 @use './pages/Feed';
 @use './pages/Landing';
-@use './pages/Projects/Project';
 
 /* Project Pages */
+@use './pages/Projects/Project';
 @use './pages/Projects/ALWP';
-@use './pages/Projects/Checkpoint';
+@use './pages/Projects/Lantern';
 @use './pages/Projects/SOT';
-@use './pages/Projects/FFUH';
 @use './pages/Projects/ThemeBoot';
 
 /* Blog Posts */

@@ -101,7 +101,7 @@ const SOT = () => {
           sorting of&nbsp;dyes
         </figcaption>
       </BlindFrame>
-      <BlindFrame nodeType="figure" className="ss ss-sm">
+      <BlindFrame nodeType="figure" className="ss ss-sm project-details-gap">
         <img src={`/${SSFullscreen}`} alt="" />
         <figcaption className="c-grey-2">
           Fullscreen mode for a larger view of the&nbsp;charts

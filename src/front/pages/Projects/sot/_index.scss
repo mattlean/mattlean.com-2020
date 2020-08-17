@@ -31,16 +31,6 @@
     grid-column: 5/6;
     grid-row: 8/9;
   }
-
-  > .subgrid-project-desc {
-    > .btn-view-live {
-      grid-column: 1/2;
-    }
-
-    > .btn-case-study {
-      grid-column: 2/3;
-    }
-  }
 }
 
 @media (max-width: size.$size-1150) {
@@ -51,16 +41,6 @@
 
     > .btn-case-study {
       grid-row: 10/11;
-    }
-
-    > .subgrid-project-desc {
-      > .btn-view-live {
-        grid-column: 1/2;
-      }
-
-      > .btn-case-study {
-        grid-column: 2/3;
-      }
     }
 
     > .subgrid-mid-desc {
@@ -93,6 +73,14 @@
 
 @media (max-width: size.$size-780) {
   .grid-project {
+    > .ss-lg {
+      margin-bottom: size.$size-72;
+    }
+
+    > .subgrid-mid-desc {
+      margin-bottom: size.$size-72;
+    }
+
     > .btn-view-live,
     > .btn-case-study {
       grid-column: auto;
