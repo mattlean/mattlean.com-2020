@@ -62,14 +62,13 @@ const SOT = () => {
           href="https://biosearchtech.com/qpcr-multiplex-spectral-overlay-tool"
           rel="noreferrer"
           target="_blank"
-          className="btn-view-live"
         >
-          <Btn>
+          <Btn className="btn-view-live">
             <PlayIcon className="btn-icon" /> View Live
           </Btn>
         </a>
-        <Link to="/" className="btn-case-study">
-          <Btn outline={true}>
+        <Link to="/">
+          <Btn outline={true} className="btn-case-study">
             <BookIcon className="btn-icon" /> Case Study
           </Btn>
         </Link>
@@ -284,14 +283,14 @@ const SOT = () => {
         href="https://biosearchtech.com/qpcr-multiplex-spectral-overlay-tool"
         rel="noreferrer"
         target="_blank"
-        className="btn-view-live"
+        className="btn-project-a"
       >
-        <Btn>
+        <Btn className="btn-view-live">
           <PlayIcon className="btn-icon" /> View Live
         </Btn>
       </BlindFrame>
-      <BlindFrame nodeType="Link" to="/" className="btn-case-study">
-        <Btn outline={true}>
+      <BlindFrame nodeType="Link" to="/" className="btn-project-b">
+        <Btn outline={true} className="btn-case-study">
           <BookIcon className="btn-icon" /> Case Study
         </Btn>
       </BlindFrame>

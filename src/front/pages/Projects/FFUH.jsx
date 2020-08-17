@@ -76,9 +76,8 @@ const FFUH = () => {
           href="https://github.com/mattlean/express-ffuh"
           rel="noreferrer"
           target="_blank"
-          className="btn-gh"
         >
-          <Btn>
+          <Btn className="btn-gh">
             <MarkGithubIcon className="btn-icon" /> GitHub
           </Btn>
         </a>

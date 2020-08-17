@@ -62,9 +62,8 @@ const ThemeBoot = () => {
           href="https://github.com/mattlean/themeboot"
           rel="noreferrer"
           target="_blank"
-          className="btn-gh txtw-roman"
         >
-          <Btn>
+          <Btn className="btn-github">
             <MarkGithubIcon className="btn-icon" /> GitHub
           </Btn>
         </a>
@@ -181,9 +180,9 @@ const ThemeBoot = () => {
         href="https://github.com/mattlean/themeboot"
         rel="noreferrer"
         target="_blank"
-        className="btn-gh"
+        className="btn-project-a"
       >
-        <Btn>
+        <Btn className="btn-github">
           <MarkGithubIcon className="btn-icon" /> GitHub
         </Btn>
       </BlindFrame>

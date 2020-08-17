@@ -45,9 +45,8 @@ const LeanSpace = () => {
           href="https://biosearchtech.com/qpcr-multiplex-spectral-overlay-tool"
           rel="noreferrer"
           target="_blank"
-          className="btn-view-live"
         >
-          <Btn>
+          <Btn className="btn-view-live">
             <PlayIcon className="btn-icon" /> View Live
           </Btn>
         </a>
@@ -55,9 +54,8 @@ const LeanSpace = () => {
           href="https://github.com/mattlean/lean-space"
           rel="noreferrer"
           target="_blank"
-          className="btn-gh txtw-roman"
         >
-          <Btn outline={true}>
+          <Btn outline={true} className="btn-view-gh">
             <MarkGithubIcon className="btn-icon" /> GitHub
           </Btn>
         </a>
@@ -173,12 +171,23 @@ const LeanSpace = () => {
       </BlindFrame>
       <BlindFrame
         nodeType="a"
+        href="http://google.com"
+        rel="noreferrer"
+        target="_blank"
+        className="btn-project-a"
+      >
+        <Btn className="btn-view-live">
+          <MarkGithubIcon className="btn-icon" /> View Live
+        </Btn>
+      </BlindFrame>
+      <BlindFrame
+        nodeType="a"
         href="https://github.com/mattlean/lean-space"
         rel="noreferrer"
         target="_blank"
-        className="btn-gh"
+        className="btn-project-b"
       >
-        <Btn>
+        <Btn outline={true} className="btn-view-gh">
           <MarkGithubIcon className="btn-icon" /> GitHub
         </Btn>
       </BlindFrame>

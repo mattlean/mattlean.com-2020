@@ -12,20 +12,20 @@
 }
 
 .btn-case-study {
-  .btn-icon {
+  > .btn-icon {
     transform: translateY(-1px);
   }
 }
 
 .btn-gh,
 .btn-view-live {
-  .btn-icon {
+  > .btn-icon {
     transform: translateY(-2px);
   }
 }
 
 .btn-npm {
-  .btn-icon {
+  > .btn-icon {
     transform: translateY(2px);
     width: 16px;
 

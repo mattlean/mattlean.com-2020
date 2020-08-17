@@ -43,9 +43,8 @@ const Checkpoint = () => {
           href="https://github.com/mattlean/checkpointjs"
           rel="noreferrer"
           target="_blank"
-          className="btn-gh"
         >
-          <Btn>
+          <Btn className="btn-gh">
             <MarkGithubIcon className="btn-icon" /> GitHub
           </Btn>
         </a>
@@ -53,9 +52,8 @@ const Checkpoint = () => {
           href="https://npmjs.com/package/checkpointjs"
           rel="noreferrer"
           target="_blank"
-          className="btn-npm"
         >
-          <Btn outline={true}>
+          <Btn outline={true} className="btn-npm">
             <NPMIcon className="btn-icon" /> npm
           </Btn>
         </a>

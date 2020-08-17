@@ -60,9 +60,8 @@ const Lantern = () => {
           href="https://github.com/mattlean/lanternjs"
           rel="noreferrer"
           target="_blank"
-          className="btn-gh txtw-roman"
         >
-          <Btn>
+          <Btn className="btn-gh">
             <MarkGithubIcon className="btn-icon" /> GitHub
           </Btn>
         </a>
@@ -70,9 +69,8 @@ const Lantern = () => {
           href="https://npmjs.com/package/lanternjs"
           rel="noreferrer"
           target="_blank"
-          className="btn-npm"
         >
-          <Btn outline={true}>
+          <Btn outline={true} className="btn-npm">
             <NPMIcon className="btn-icon" /> npm
           </Btn>
         </a>
@@ -137,9 +135,9 @@ const Lantern = () => {
         href="https://github.com/mattlean/lanternjs"
         rel="noreferrer"
         target="_blank"
-        className="btn-gh"
+        className="btn-project-a"
       >
-        <Btn>
+        <Btn className="btn-gh">
           <MarkGithubIcon className="btn-icon" /> GitHub
         </Btn>
       </BlindFrame>
@@ -148,9 +146,9 @@ const Lantern = () => {
         href="https://npmjs.com/package/lanternjs"
         rel="noreferrer"
         target="_blank"
-        className="btn-npm"
+        className="btn-project-b"
       >
-        <Btn outline={true}>
+        <Btn outline={true} className="btn-npm">
           <NPMIcon className="btn-icon" /> npm
         </Btn>
       </BlindFrame>

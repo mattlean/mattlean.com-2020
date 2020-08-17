@@ -111,6 +111,14 @@
       }
     }
   }
+
+  > .btn-project-a {
+    grid-column: 4/5;
+  }
+
+  > .btn-project-b {
+    grid-column: 5/6;
+  }
 }
 
 @media (max-width: size.$size-1150) {
@@ -140,6 +148,14 @@
     > .subgrid-project-details {
       grid-column: 3/-1;
     }
+
+    > .btn-project-a {
+      grid-column: 3/4;
+    }
+
+    > .btn-project-b {
+      grid-column: 4/5;
+    }
   }
 }
 
@@ -151,6 +167,11 @@
 
     > .subgrid-project-details {
       grid-column: 1/-1;
+    }
+
+    > .btn-project-a,
+    > .btn-project-b {
+      grid-column: auto;
     }
   }
 }
