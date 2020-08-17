@@ -61,10 +61,14 @@
     }
   }
 
+  > .project-details-header {
+    grid-column: 1/2;
+  }
+
   > .subgrid-project-details {
     list-style-type: none;
 
-    grid-column: -3/-1;
+    grid-column: 4/-1;
     grid-row: span 2;
     margin-bottom: size.$size-184;
 
@@ -128,6 +132,10 @@
 
     > .project-overview {
       transform: none;
+    }
+
+    > .subgrid-project-details {
+      grid-column: 3/-1;
     }
   }
 }

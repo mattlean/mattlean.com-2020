@@ -6,7 +6,7 @@ import { getRouteData } from '../common/data/route'
 const router = Router()
 
 /* Page Handler */
-router.get('*', (req, res, next) => {
+router.get(/^\/(about|blog|contact|projects)\/?|^\/$/, (req, res, next) => {
   const path = getRouteData(genFormattedPath(req.url))
   if (!path) return next() // Project not found, call no match handler
 

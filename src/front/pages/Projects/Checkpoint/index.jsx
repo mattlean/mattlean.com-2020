@@ -3,14 +3,15 @@ import { Badge, Btn } from 'eswiss'
 import BlindFrame from '../../../components/Blind/BlindFrame'
 import { getProjectData } from '../../../../common/data/project'
 import { useHeadDataEffect } from '../../../util'
+import NPMIcon from '../../../assets/npm.svg'
 import { MarkGithubIcon } from '@primer/octicons-react'
 
 /**
- * express-ffuh Project Page
+ * Checkpoint.js Project Page
  */
-const FFUH = () => {
+const Checkpoint = () => {
   useHeadDataEffect()
-  const { name, tags } = getProjectData('ffuh')
+  const { name, tags } = getProjectData('checkpoint')
 
   return (
     <>
@@ -30,55 +31,32 @@ const FFUH = () => {
       <BlindFrame nodeType="section" className="subgrid-project-desc grid">
         <section className="c-grey-1">
           <p>
-            <strong>express-ffuh</strong> is an open source{' '}
-            <a
-              href="https://expressjs.com"
-              rel="noreferrer"
-              target="_blank"
-              className="a-grey-1"
-            >
-              Express
-            </a>{' '}
-            middleware that handles file uploading to{' '}
-            <a
-              href="https://aws.amazon.com/s3"
-              rel="noreferrer"
-              target="_blank"
-              className="a-grey-1"
-            >
-              Amazon Simple Storage Service (S3)
-            </a>{' '}
-            and to the server’s local file system. <em>FFUH</em> stands for{' '}
-            <em>flexible file upload handler</em>. It’s pronounced like{' '}
-            <a
-              href="https://wikipedia.org/wiki/Pho"
-              rel="noreferrer"
-              target="_blank"
-              className="a-grey-1"
-            >
-              pho
-            </a>{' '}
-            which is a bowl of Vietnamese noodle soup. (This is probably not the
-            best phonetic analogy since people mispronounce pho a lot.)
+            <strong>Checkpoint.js</strong> is an open source data validation and
+            transformation library. It works .
           </p>
           <p>
-            This middleware is useful if you need to support uploading to both
-            S3 and the local file system for your project. The most common
-            scenario is when you want to upload to the local file system when
-            the server is running in a development environment and then upload
-            to S3 when a server is running in the production environment. This
-            helps keep uploads working when developing offline while saving some
-            costs from hosting on an extra development S3 bucket.
+            This project was originally created to validate and transform data
+            during application runtime.
           </p>
         </section>
         <a
-          href="https://github.com/mattlean/express-ffuh"
+          href="https://github.com/mattlean/checkpointjs"
           rel="noreferrer"
           target="_blank"
           className="btn-view-gh"
         >
           <Btn>
             <MarkGithubIcon className="btn-icon" /> GitHub
+          </Btn>
+        </a>
+        <a
+          href="https://npmjs.com/package/checkpointjs"
+          rel="noreferrer"
+          target="_blank"
+          className="btn-view-npm"
+        >
+          <Btn outline={true}>
+            <NPMIcon className="btn-icon" /> npm
           </Btn>
         </a>
       </BlindFrame>
@@ -107,43 +85,6 @@ const FFUH = () => {
             </ul>
           </section>
           <section>
-            <h4>Peer Dependencies</h4>
-            <ul>
-              <li>
-                <a
-                  href="https://aws.amazon.com/tools"
-                  rel="noreferrer"
-                  target="_blank"
-                  className="a-grey-1 txtw-roman"
-                >
-                  AWS SDK
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://npmjs.com/package/formidable"
-                  rel="noreferrer"
-                  target="_blank"
-                  className="a-grey-1 txtw-roman"
-                >
-                  formidable
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://npmjs.com/package/uuid"
-                  rel="noreferrer"
-                  target="_blank"
-                  className="a-grey-1 txtw-roman"
-                >
-                  UUID
-                </a>
-              </li>
-            </ul>
-          </section>
-        </section>
-        <section>
-          <section>
             <h4>Dev Dependencies</h4>
             <ul>
               <li>
@@ -158,12 +99,39 @@ const FFUH = () => {
               </li>
             </ul>
           </section>
+        </section>
+        <section>
+          <section>
+            <h4>Peer Dependencies</h4>
+            <ul>
+              <li>
+                <a
+                  href="https://lodash.com"
+                  rel="noreferrer"
+                  target="_blank"
+                  className="a-grey-1 txtw-roman"
+                >
+                  Lodash
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://npmjs.com/package/validator"
+                  rel="noreferrer"
+                  target="_blank"
+                  className="a-grey-1 txtw-roman"
+                >
+                  Validator
+                </a>
+              </li>
+            </ul>
+          </section>
           <section>
             <h4>License</h4>
             <ul>
               <li>
                 <a
-                  href="https://github.com/mattlean/express-ffuh/blob/master/LICENSE"
+                  href="https://github.com/mattlean/checkpointjs/blob/master/LICENSE"
                   rel="noreferrer"
                   target="_blank"
                   className="a-grey-1 txtw-roman"
@@ -179,4 +147,4 @@ const FFUH = () => {
   )
 }
 
-export default FFUH
+export default Checkpoint

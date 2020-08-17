@@ -19,12 +19,12 @@
   }
 
   > .btn-view-live {
-    grid-column: 3/4;
+    grid-column: 4/5;
     grid-row: 8/9;
   }
 
   > .btn-case-study {
-    grid-column: 4/5;
+    grid-column: 5/6;
     grid-row: 8/9;
   }
 
@@ -42,12 +42,10 @@
 @media (max-width: size.$size-1150) {
   .grid-project {
     > .btn-view-live {
-      grid-column: -3/-2;
       grid-row: 10/11;
     }
 
     > .btn-case-study {
-      grid-column: -2/-1;
       grid-row: 10/11;
     }
 
@@ -77,6 +75,14 @@
       > .cta {
         grid-column: span 3;
       }
+    }
+
+    > .btn-view-live {
+      grid-column: 3/4;
+    }
+
+    > .btn-case-study {
+      grid-column: 4/5;
     }
   }
 }

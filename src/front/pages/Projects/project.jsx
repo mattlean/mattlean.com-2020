@@ -2,6 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { Route, Switch, useLocation, useParams } from 'react-router-dom'
 import ALWP from './ALWP'
+import Checkpoint from './Checkpoint'
 import FFUH from './FFUH'
 import SOT from './SOT'
 import MainFooter from '../../components/MainFooter'
@@ -39,6 +40,7 @@ const Project = () => {
       <main className={cn}>
         <Switch>
           <Route path={`${ROUTE_PREFIX}alwp`} component={ALWP} />
+          <Route path={`${ROUTE_PREFIX}checkpoint`} component={Checkpoint} />
           <Route path={`${ROUTE_PREFIX}sot`} component={SOT} />
           <Route path={`${ROUTE_PREFIX}ffuh`} component={FFUH} />
           <Route path="*" component={NoMatchContent} />
