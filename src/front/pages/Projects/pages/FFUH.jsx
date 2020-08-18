@@ -87,7 +87,7 @@ const FFUH = () => {
       </BlindFrame>
       <BlindFrame
         nodeType="section"
-        className="subgrid-project-details grid c-grey-1"
+        className="subgrid-project-details grid mb-0 c-grey-1"
       >
         <section>
           <section>

@@ -146,7 +146,7 @@ exports.loadDevImgs = (
   module: {
     rules: [
       {
-        test: /\.(png|jpe?g|gif)$/i,
+        test: /\.(gif|jpe?g|mp4|png)$/i,
         exclude,
         include,
         use: {
@@ -180,7 +180,7 @@ exports.loadImgs = (exclude, include, options = { name: '[name].[ext]' }) => ({
   module: {
     rules: [
       {
-        test: /\.(png|jpe?g|gif)$/i,
+        test: /\.(gif|jpe?g|mp4|png)$/i,
         exclude,
         include,
         use: {

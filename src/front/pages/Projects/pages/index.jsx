@@ -1,6 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { Route, Switch, useLocation, useParams } from 'react-router-dom'
+import Adam from './Adam'
 import ALWP from './ALWP'
 import Checkpoint from './Checkpoint'
 import FFUH from './FFUH'
@@ -42,6 +43,7 @@ const ProjectPage = () => {
     >
       <main className={cn}>
         <Switch>
+          <Route path={`${ROUTE_PREFIX}adam`} component={Adam} />
           <Route path={`${ROUTE_PREFIX}alwp`} component={ALWP} />
           <Route path={`${ROUTE_PREFIX}checkpoint`} component={Checkpoint} />
           <Route path={`${ROUTE_PREFIX}ffuh`} component={FFUH} />
