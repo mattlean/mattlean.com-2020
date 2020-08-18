@@ -115,8 +115,10 @@ const SOT = () => {
       >
         <section>
           <section>
-            <h4>Last Updated</h4>
-            <p>2020</p>
+            <h4>Released</h4>
+            <ul>
+              <li>October 23, 2014</li>
+            </ul>
           </section>
           <section>
             <h4>Collaborators</h4>
@@ -209,10 +211,8 @@ const SOT = () => {
         </section>
         <section>
           <section>
-            <h4>Released</h4>
-            <ul>
-              <li>October 23, 2014</li>
-            </ul>
+            <h4>Updated</h4>
+            <p>August 3, 2020</p>
           </section>
           <section>
             <h4>Responsibilities</h4>

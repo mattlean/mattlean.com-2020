@@ -109,8 +109,10 @@ const ThemeBoot = () => {
       >
         <section>
           <section>
-            <h4>Last Updated</h4>
-            <p>May 22, 2016</p>
+            <h4>Released</h4>
+            <ul>
+              <li>October 29, 2014</li>
+            </ul>
           </section>
           <section>
             <h4>Languages</h4>
@@ -133,14 +135,22 @@ const ThemeBoot = () => {
         </section>
         <section>
           <section>
-            <h4>Released</h4>
-            <ul>
-              <li>October 29, 2014</li>
-            </ul>
+            <h4>Updated</h4>
+            <p>May 22, 2016</p>
           </section>
           <section>
             <h4>Dependencies</h4>
             <ul>
+              <li>
+                <a
+                  href="https://wordpress.org"
+                  rel="noreferrer"
+                  target="_blank"
+                  className="a-grey-1 txtw-roman"
+                >
+                  WordPress
+                </a>
+              </li>
               <li>
                 <a
                   href="https://getbootstrap.com"
@@ -161,14 +171,19 @@ const ThemeBoot = () => {
                   MySQL
                 </a>
               </li>
+            </ul>
+          </section>
+          <section>
+            <h4>License</h4>
+            <ul>
               <li>
                 <a
-                  href="https://wordpress.org"
+                  href="https://github.com/mattlean/themeboot/blob/master/LICENSE"
                   rel="noreferrer"
                   target="_blank"
                   className="a-grey-1 txtw-roman"
                 >
-                  WordPress
+                  MIT
                 </a>
               </li>
             </ul>

@@ -95,22 +95,16 @@ const Lantern = () => {
       >
         <section>
           <section>
-            <h4>Last Updated</h4>
-            <p>September 11, 2015</p>
+            <h4>Released</h4>
+            <ul>
+              <li>August 25, 2015</li>
+            </ul>
           </section>
           <section>
             <h4>Languages</h4>
             <ul>
               <li>JavaScript</li>
               <li>CSS</li>
-            </ul>
-          </section>
-        </section>
-        <section>
-          <section>
-            <h4>Released</h4>
-            <ul>
-              <li>August 25, 2015</li>
             </ul>
           </section>
           <section>
@@ -124,6 +118,29 @@ const Lantern = () => {
                   className="a-grey-1 txtw-roman"
                 >
                   Grunt
+                </a>
+              </li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h4>Updated</h4>
+            <ul>
+              <li>September 11, 2015</li>
+            </ul>
+          </section>
+          <section>
+            <h4>License</h4>
+            <ul>
+              <li>
+                <a
+                  href="https://github.com/mattlean/lanternjs/blob/master/LICENSE"
+                  rel="noreferrer"
+                  target="_blank"
+                  className="a-grey-1 txtw-roman"
+                >
+                  MIT
                 </a>
               </li>
             </ul>

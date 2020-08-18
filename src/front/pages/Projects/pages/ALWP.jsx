@@ -78,6 +78,12 @@ const ALWP = () => {
       >
         <section>
           <section>
+            <h4>Released</h4>
+            <ul>
+              <li>October 16, 2018</li>
+            </ul>
+          </section>
+          <section>
             <h4>Languages</h4>
             <ul>
               <li>JavaScript</li>
@@ -100,6 +106,12 @@ const ALWP = () => {
           </section>
         </section>
         <section>
+          <section>
+            <h4>Updated</h4>
+            <ul>
+              <li>January 14, 2019</li>
+            </ul>
+          </section>
           <section>
             <h4>License</h4>
             <ul>

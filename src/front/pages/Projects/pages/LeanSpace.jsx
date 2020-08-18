@@ -1,5 +1,6 @@
 import React from 'react'
 import { Badge, Btn } from 'eswiss'
+import { Link } from 'react-router-dom'
 import BlindFrame from '../../../components/Blind/BlindFrame'
 import CTA from '../../../components/CTA'
 import { getProjectData } from '../../../../common/data/project'
@@ -80,7 +81,7 @@ const LeanSpace = () => {
         </figcaption>
       </BlindFrame>
       <BlindFrame nodeType="section" className="subgrid-mid-desc grid">
-        <h3 className="h-5">My Online Identity in 2015</h3>
+        <h3 className="h-5">My 2015 Online Identity</h3>
         <p className="txt-7 sm:txt-6 c-grey-1">
           Lean Space was created in 2015 to demonstrate my abilities as new
           graduate. The majority of the code was written using vanilla
@@ -112,33 +113,45 @@ const LeanSpace = () => {
       >
         <section>
           <section>
-            <h4>Last Updated</h4>
-            <p>May 22, 2016</p>
+            <h4>Released</h4>
+            <ul>
+              <li>August 31, 2015</li>
+            </ul>
           </section>
           <section>
             <h4>Languages</h4>
             <ul>
+              <li>JavaScript</li>
               <li>
                 <a
-                  href="https://php.net"
+                  href="https://sass-lang.com"
                   rel="noreferrer"
                   target="_blank"
                   className="a-grey-1 txtw-roman"
                 >
-                  PHP
+                  Sass
                 </a>
               </li>
-              <li>JavaScript</li>
               <li>CSS</li>
               <li>HTML</li>
+              <li>
+                <a
+                  href="https://www.ruby-lang.org/en"
+                  rel="noreferrer"
+                  target="_blank"
+                  className="a-grey-1 txtw-roman"
+                >
+                  Ruby
+                </a>
+              </li>
             </ul>
           </section>
         </section>
         <section>
           <section>
-            <h4>Released</h4>
+            <h4>Updated</h4>
             <ul>
-              <li>October 29, 2014</li>
+              <li>September 14, 2015</li>
             </ul>
           </section>
           <section>
@@ -146,32 +159,72 @@ const LeanSpace = () => {
             <ul>
               <li>
                 <a
-                  href="https://getbootstrap.com"
+                  href="https://masonry.desandro.com"
                   rel="noreferrer"
                   target="_blank"
                   className="a-grey-1 txtw-roman"
                 >
-                  Bootstrap
+                  Masonry
                 </a>
               </li>
               <li>
                 <a
-                  href="https://mysql.com"
+                  href="https://developer.mozilla.org/en-US/docs/Web/API/History"
                   rel="noreferrer"
                   target="_blank"
                   className="a-grey-1 txtw-roman"
                 >
-                  MySQL
+                  History
                 </a>
               </li>
               <li>
                 <a
-                  href="https://wordpress.org"
+                  href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest"
                   rel="noreferrer"
                   target="_blank"
                   className="a-grey-1 txtw-roman"
                 >
-                  WordPress
+                  XMLHttpRequest
+                </a>
+              </li>
+              <li>
+                <Link to="/projects/lantern" className="a-grey-1 txtw-roman">
+                  Lantern.js
+                </Link>
+              </li>
+              <li>
+                <a
+                  href="https://modernizr.com"
+                  rel="noreferrer"
+                  target="_blank"
+                  className="a-grey-1 txtw-roman"
+                >
+                  Modernizr
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/mattlean/xuehuacms"
+                  rel="noreferrer"
+                  target="_blank"
+                  className="a-grey-1 txtw-roman"
+                >
+                  Xuehua CMS
+                </a>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h4>Design</h4>
+            <ul>
+              <li>
+                <a
+                  href="https://adobe.com/products/photoshop.html"
+                  rel="noreferrer"
+                  target="_blank"
+                  className="a-grey-1 txtw-roman"
+                >
+                  Photoshop
                 </a>
               </li>
             </ul>

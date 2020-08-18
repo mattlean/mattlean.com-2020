@@ -1,11 +1,11 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { Badge, Btn } from 'eswiss'
+import { Link } from 'react-router-dom'
 import BlindFrame from '../../../../components/Blind/BlindFrame'
 import { getProjectData } from '../../../../../common/data/project'
 import { useHeadDataEffect } from '../../../../util'
-import { MarkGithubIcon } from '@primer/octicons-react'
 import VidSnake from '../../../../assets/projects/adam/snake.mp4'
+import { MarkGithubIcon } from '@primer/octicons-react'
 
 /**
  * Adam Engine Project Page
@@ -77,7 +77,7 @@ const Adam = () => {
           >
             Snake
           </a>{' '}
-          being run on Adam Engine
+          being run on Adam&nbsp;Engine
         </figcaption>
       </BlindFrame>
       <BlindFrame nodeType="h3" className="project-details-header">
@@ -88,6 +88,12 @@ const Adam = () => {
         className="subgrid-project-details grid c-grey-1"
       >
         <section>
+          <section>
+            <h4>Released</h4>
+            <ul>
+              <li>August 18, 2014</li>
+            </ul>
+          </section>
           <section>
             <h4>Languages</h4>
             <ul>
@@ -131,6 +137,12 @@ const Adam = () => {
           </section>
         </section>
         <section>
+          <section>
+            <h4>Updated</h4>
+            <ul>
+              <li>January 9, 2016</li>
+            </ul>
+          </section>
           <section>
             <h4>License</h4>
             <ul>
