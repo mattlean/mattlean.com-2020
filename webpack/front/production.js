@@ -3,7 +3,7 @@ const {
   buildStyles,
   compileJS,
   genSourceMaps,
-  loadImgs,
+  loadMedia,
   setMode,
 } = require('../parts')
 const { COMMON, FRONT, NODE_MODULES } = require('../../PATHS')
@@ -48,5 +48,5 @@ module.exports = merge([
 
   genSourceMaps('source-map'),
 
-  loadImgs(),
+  loadMedia(),
 ])

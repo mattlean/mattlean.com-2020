@@ -23,7 +23,7 @@ const PROJECTS = {
   adam: {
     id: 'adam',
     name: 'Adam Engine',
-    long: 'A 2D game engine built with HTML5 Canvas.',
+    long: 'A browser-based 2D game engine.',
     tags: ['game-engine', 'frontend'],
   },
   alwp: {
@@ -42,7 +42,8 @@ const PROJECTS = {
   crush: {
     id: 'crush',
     name: 'qPCR Crush',
-    long: 'An LGC Biosearch Technologies branded tile-matching game.',
+    company: 'LGC Biosearch Technologies',
+    long: 'An LGC Biosearch Technologies-branded tile-matching game.',
     tags: ['game', 'backend', 'design', 'frontend'],
   },
   eswiss: {

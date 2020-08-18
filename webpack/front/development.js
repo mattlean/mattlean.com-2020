@@ -4,7 +4,7 @@ const {
   copyFiles,
   genSourceMaps,
   injectStyles,
-  loadDevImgs,
+  loadDevMedia,
   setMode,
 } = require('../parts')
 const { COMMON, FRONT, NODE_MODULES } = require('../../PATHS')
@@ -43,5 +43,5 @@ module.exports = merge([
     },
   }),
 
-  loadDevImgs(),
+  loadDevMedia(),
 ])

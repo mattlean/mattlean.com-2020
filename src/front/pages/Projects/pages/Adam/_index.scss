@@ -1,0 +1,18 @@
+.vid {
+  background-color: #cdcbcd;
+
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+
+  > figcaption {
+    color: #555;
+
+    > a,
+    > a:hover,
+    > a:visited {
+      color: #555;
+    }
+  }
+}

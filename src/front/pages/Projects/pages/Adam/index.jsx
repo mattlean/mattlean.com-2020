@@ -1,10 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Badge, Btn } from 'eswiss'
-import BlindFrame from '../../../components/Blind/BlindFrame'
-import { getProjectData } from '../../../../common/data/project'
-import { useHeadDataEffect } from '../../../util'
+import BlindFrame from '../../../../components/Blind/BlindFrame'
+import { getProjectData } from '../../../../../common/data/project'
+import { useHeadDataEffect } from '../../../../util'
 import { MarkGithubIcon } from '@primer/octicons-react'
+import VidSnake from '../../../../assets/projects/adam/snake.mp4'
 
 /**
  * Adam Engine Project Page
@@ -36,7 +37,7 @@ const Adam = () => {
             interaction through both mouse and keyboard and&nbsp;touchscreens.
           </p>
           <p>
-            The game engine was used to build{' '}
+            The project was used to build{' '}
             <Link to="/projects/crush" className="a-grey-1 txtw-roman">
               qPCR Crush
             </Link>
@@ -61,6 +62,23 @@ const Adam = () => {
             <MarkGithubIcon className="btn-icon" /> GitHub
           </Btn>
         </a>
+      </BlindFrame>
+      <BlindFrame nodeType="figure" className="vid project-details-gap">
+        <video autoPlay controls loop muted>
+          <source src={`/${VidSnake}`} />
+        </video>
+        <figcaption className="c-grey-2">
+          Video of{' '}
+          <a
+            href="https://en.wikipedia.org/wiki/Snake_(video_game_genre)"
+            rel="noreferrer"
+            target="_blank"
+            className="txtw-roman"
+          >
+            Snake
+          </a>{' '}
+          being run on Adam Engine
+        </figcaption>
       </BlindFrame>
       <BlindFrame nodeType="h3" className="project-details-header">
         Project Details
@@ -129,6 +147,17 @@ const Adam = () => {
             </ul>
           </section>
         </section>
+      </BlindFrame>
+      <BlindFrame
+        nodeType="a"
+        href="https://github.com/mattlean/adam-engine"
+        rel="noreferrer"
+        target="_blank"
+        className="btn-project-a"
+      >
+        <Btn className="btn-gh">
+          <MarkGithubIcon className="btn-icon" /> GitHub
+        </Btn>
       </BlindFrame>
     </>
   )

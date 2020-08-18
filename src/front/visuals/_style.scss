@@ -88,11 +88,13 @@ dd {
   max-width: size.$size-1161;
 }
 
-.ss {
-  > img {
-    width: 100%;
-  }
+.ss > img,
+.vid > video {
+  width: 100%;
+}
 
+.ss,
+.vid {
   > figcaption {
     font-size: size.$size-14;
     font-style: italic;

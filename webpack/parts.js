@@ -138,7 +138,7 @@ exports.injectStyles = ({
  * Inline images for development environment.
  * If images are too large, then emit images into output directory.
  */
-exports.loadDevImgs = (
+exports.loadDevMedia = (
   exclude,
   include,
   options = { limit: 15000, name: '[name].[ext]' }
@@ -146,7 +146,7 @@ exports.loadDevImgs = (
   module: {
     rules: [
       {
-        test: /\.(gif|jpe?g|mp4|png)$/i,
+        test: /\.(gif|jpe?g|mov|mp4|png)$/i,
         exclude,
         include,
         use: {
@@ -176,11 +176,11 @@ exports.loadHTMLAsString = (options) => ({
 /**
  * Emit images into output directory.
  */
-exports.loadImgs = (exclude, include, options = { name: '[name].[ext]' }) => ({
+exports.loadMedia = (exclude, include, options = { name: '[name].[ext]' }) => ({
   module: {
     rules: [
       {
-        test: /\.(gif|jpe?g|mp4|png)$/i,
+        test: /\.(gif|jpe?g|mov|mp4|png)$/i,
         exclude,
         include,
         use: {
