@@ -4,7 +4,7 @@ const ROUTES = {}
 
 ROUTES[`${ROUTE_PREFIX}adam`] = {
   title: 'Project: Adam Engine',
-  desc: "Project info for Matt Lean's project: Adam Engine",
+  desc: "Information about Matt Lean's project: Adam Engine",
   keywords: [
     'matt lean',
     'matthew lean',
@@ -41,7 +41,7 @@ ROUTES[`${ROUTE_PREFIX}adam`] = {
 
 ROUTES[`${ROUTE_PREFIX}alwp`] = {
   title: 'Project: Asset List Webpack Plugin',
-  desc: "Project info for Matt Lean's project: Asset List Webpack Plugin",
+  desc: "Information about Matt Lean's project: Asset List Webpack Plugin",
   keywords: [
     'matt lean',
     'matthew lean',
@@ -81,7 +81,7 @@ ROUTES[`${ROUTE_PREFIX}alwp`] = {
 
 ROUTES[`${ROUTE_PREFIX}checkpoint`] = {
   title: 'Project: Checkpoint.js',
-  desc: "Project info for Matt Lean's project: Checkpoint.js",
+  desc: "Information about Matt Lean's project: Checkpoint.js",
   keywords: [
     'matt lean',
     'matthew lean',
@@ -120,7 +120,7 @@ ROUTES[`${ROUTE_PREFIX}checkpoint`] = {
 
 ROUTES[`${ROUTE_PREFIX}eswiss`] = {
   title: 'Project: eswiss',
-  desc: "Project info for Matt Lean's project: eswiss",
+  desc: "Information about Matt Lean's project: eswiss",
   keywords: [
     'matt lean',
     'matthew lean',
@@ -159,7 +159,7 @@ ROUTES[`${ROUTE_PREFIX}eswiss`] = {
 
 ROUTES[`${ROUTE_PREFIX}ffuh`] = {
   title: 'Project: express-ffuh',
-  desc: "Project info for Matt Lean's project: express-ffuh",
+  desc: "Information about Matt Lean's project: express-ffuh",
   keywords: [
     'matt lean',
     'matthew lean',
@@ -196,7 +196,7 @@ ROUTES[`${ROUTE_PREFIX}ffuh`] = {
 
 ROUTES[`${ROUTE_PREFIX}crush`] = {
   title: 'Project: qPCR Crush',
-  desc: "Project info for Matt Lean's project: qPCR Crush",
+  desc: "Information about Matt Lean's project: qPCR Crush",
   keywords: [
     'matt lean',
     'matthew lean',
@@ -240,7 +240,7 @@ ROUTES[`${ROUTE_PREFIX}crush`] = {
 
 ROUTES[`${ROUTE_PREFIX}lantern`] = {
   title: 'Project: Lantern.js',
-  desc: "Project info for Matt Lean's project: Lantern.js",
+  desc: "Information about Matt Lean's project: Lantern.js",
   keywords: [
     'matt lean',
     'matthew lean',
@@ -276,7 +276,7 @@ ROUTES[`${ROUTE_PREFIX}lantern`] = {
 
 ROUTES[`${ROUTE_PREFIX}lean-space`] = {
   title: 'Project: Lean Space',
-  desc: "Project info for Matt Lean's project: Lean Space",
+  desc: "Information about Matt Lean's project: Lean Space",
   keywords: [
     'matt lean',
     'matthew lean',
@@ -322,7 +322,7 @@ ROUTES[`${ROUTE_PREFIX}lean-space`] = {
 ROUTES[`${ROUTE_PREFIX}ljas`] = {
   title: 'Project: Lean JavaScript Application Starter',
   desc:
-    "Project info for Matt Lean's project: Lean JavaScript Application Starter",
+    "Information about Matt Lean's project: Lean JavaScript Application Starter",
   keywords: [
     'matt lean',
     'matthew lean',
@@ -361,9 +361,42 @@ ROUTES[`${ROUTE_PREFIX}ljas`] = {
   ],
 }
 
+ROUTES[`${ROUTE_PREFIX}recha`] = {
+  title: 'Project: Recha',
+  desc: "Information about Matt Lean's project: Recha",
+  keywords: [
+    'matt lean',
+    'matthew lean',
+    'matt',
+    'recha',
+    'app',
+    'open source',
+    'open',
+    'source',
+    'backend developer',
+    'backend',
+    'frontend developer',
+    'frontend',
+    'web developer',
+    'desktop app developer',
+    'developer',
+    'web dev',
+    'dev',
+    'web engineer',
+    'software engineer',
+    'engineer',
+    'development',
+    'programmer',
+    'programming',
+    'software',
+    'application',
+    'web',
+  ],
+}
+
 ROUTES[`${ROUTE_PREFIX}sot`] = {
   title: 'Project: Spectral Overlay Tool',
-  desc: "Project info for Matt Lean's project: Spectral Overlay Tool",
+  desc: "Information about Matt Lean's project: Spectral Overlay Tool",
   keywords: [
     'matt lean',
     'matthew lean',
@@ -417,7 +450,7 @@ ROUTES[`${ROUTE_PREFIX}sot`] = {
 
 ROUTES[`${ROUTE_PREFIX}themeboot`] = {
   title: 'Project: ThemeBoot',
-  desc: "Project info for Matt Lean's project: Spectral Overlay Tool",
+  desc: "Information about Matt Lean's project: ThemeBoot",
   keywords: [
     'matt lean',
     'matthew lean',

@@ -44,21 +44,29 @@
       margin-bottom: size.$size-14;
     }
 
-    > dl {
-      margin-bottom: size.$size-45;
+    > .work,
+    > .edu {
+      > dl {
+        margin-bottom: size.$size-42;
+      }
     }
 
     > .subgrid-skills {
       column-gap: size.$size-27;
       columns: 2;
+      min-height: 1300px;
 
       ul {
         list-style: none;
 
-        margin-bottom: size.$size-45;
+        margin-bottom: size.$size-42;
 
         > li {
           margin-bottom: 0.5em;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
         }
       }
     }
@@ -98,7 +106,7 @@
         display: flex;
         flex-flow: column wrap;
         grid-column: 1/-1;
-        height: 700px;
+        min-height: 700px;
 
         > section {
           width: 21%;
@@ -161,7 +169,7 @@
 
 @media (max-width: size.$size-660) {
   .grid-about > .subgrid-resume > .subgrid-skills {
-    height: 800px;
+    min-height: 800px;
   }
 }
 
@@ -215,7 +223,7 @@
 
       > .subgrid-skills {
         column-gap: size.$size-24;
-        height: 1200px;
+        min-height: 1200px;
 
         > section {
           width: 49%;

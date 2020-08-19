@@ -188,9 +188,10 @@ const About = () => {
               <h2 className="h-9 dispw-bold tt-uppercase">Testing</h2>
               <ul>
                 <li>Jest</li>
+                <li>SuperTest</li>
                 <li>Cypress</li>
-                <li>Enzyme</li>
                 <li>Chromatic</li>
+                <li>Enzyme, React Test Renderer</li>
                 <li>Mocha, Chai</li>
               </ul>
             </section>

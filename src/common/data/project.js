@@ -117,7 +117,7 @@ const PROJECTS = {
     id: 'recha',
     name: 'Recha',
     long:
-      'A personal task and schedule management app that helps you meet your goals.',
+      'A personal task and schedule management app that helps you achieve your goals.',
     tags: ['desktop-app', 'backend', 'frontend'],
   },
   themeboot: {

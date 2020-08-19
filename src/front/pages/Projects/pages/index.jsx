@@ -10,6 +10,7 @@ import FFUH from './FFUH'
 import Lantern from './Lantern'
 import LeanSpace from './LeanSpace'
 import LJAS from './LJAS'
+import Recha from './Recha'
 import SOT from './SOT'
 import MainFooter from '../../../components/MainFooter'
 import NoMatchContent from '../../NoMatch/NoMatchContent'
@@ -55,6 +56,7 @@ const ProjectPage = () => {
           <Route path={`${ROUTE_PREFIX}lantern`} component={Lantern} />
           <Route path={`${ROUTE_PREFIX}lean-space`} component={LeanSpace} />
           <Route path={`${ROUTE_PREFIX}ljas`} component={LJAS} />
+          <Route path={`${ROUTE_PREFIX}recha`} component={Recha} />
           <Route path={`${ROUTE_PREFIX}sot`} component={SOT} />
           <Route path={`${ROUTE_PREFIX}themeboot`} component={ThemeBoot} />
           <Route path="*" component={NoMatchContent} />
