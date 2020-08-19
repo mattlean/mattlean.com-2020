@@ -1,5 +1,6 @@
 import React from 'react'
 import { Badge, Btn } from 'eswiss'
+import { Link } from 'react-router-dom'
 import BlindFrame from '../../../components/Blind/BlindFrame'
 import { getProjectData } from '../../../../common/data/project'
 import { useHeadDataEffect } from '../../../util'
@@ -92,7 +93,7 @@ const LJAS = () => {
       <BlindFrame nodeType="figure" className="ss ss-lg">
         <img src={`/${SSDesktop}`} alt="" />
         <figcaption className="c-grey-2">
-          Todo list app built with Lean JS App Starter running natively
+          Native desktop todo list app built with Lean JS App Starter running
           on&nbsp;macOS
         </figcaption>
       </BlindFrame>
@@ -173,6 +174,56 @@ const LJAS = () => {
                 >
                   React Router
                 </a>
+              </li>
+              <li>
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API"
+                  rel="noreferrer"
+                  target="_blank"
+                  className="a-grey-1 txtw-roman"
+                >
+                  Fetch
+                </a>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h4>Testing</h4>
+            <ul>
+              <li>
+                <a
+                  href="https://jestjs.io"
+                  rel="noreferrer"
+                  target="_blank"
+                  className="a-grey-1 txtw-roman"
+                >
+                  Jest
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://enzymejs.github.io/enzyme"
+                  rel="noreferrer"
+                  target="_blank"
+                  className="a-grey-1 txtw-roman"
+                >
+                  Enzyme
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://reactjs.org/docs/test-renderer.html"
+                  rel="noreferrer"
+                  target="_blank"
+                  className="a-grey-1 txtw-roman"
+                >
+                  React Test&nbsp;Renderer
+                </a>
+              </li>
+              <li>
+                <Link to="/projects/alwp" className="a-grey-1 txtw-roman">
+                  Asset List Webpack&nbsp;Plugin
+                </Link>
               </li>
             </ul>
           </section>
@@ -258,16 +309,6 @@ const LJAS = () => {
                   className="a-grey-1 txtw-roman"
                 >
                   Flow
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://jestjs.io"
-                  rel="noreferrer"
-                  target="_blank"
-                  className="a-grey-1 txtw-roman"
-                >
-                  Jest
                 </a>
               </li>
               <li>

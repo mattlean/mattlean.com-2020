@@ -7,7 +7,7 @@ import NPMIcon from '../../../assets/npm.svg'
 import { MarkGithubIcon } from '@primer/octicons-react'
 
 /**
- * asset-webpack-list-plugin Project Page
+ * Asset List Webpack Plugin Project Page
  */
 const ALWP = () => {
   useHeadDataEffect()

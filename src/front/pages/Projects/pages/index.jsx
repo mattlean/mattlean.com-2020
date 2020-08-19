@@ -5,6 +5,7 @@ import Adam from './Adam'
 import ALWP from './ALWP'
 import Checkpoint from './Checkpoint'
 import Crush from './Crush'
+import Eswiss from './Eswiss'
 import FFUH from './FFUH'
 import Lantern from './Lantern'
 import LeanSpace from './LeanSpace'
@@ -49,6 +50,7 @@ const ProjectPage = () => {
           <Route path={`${ROUTE_PREFIX}alwp`} component={ALWP} />
           <Route path={`${ROUTE_PREFIX}crush`} component={Crush} />
           <Route path={`${ROUTE_PREFIX}checkpoint`} component={Checkpoint} />
+          <Route path={`${ROUTE_PREFIX}eswiss`} component={Eswiss} />
           <Route path={`${ROUTE_PREFIX}ffuh`} component={FFUH} />
           <Route path={`${ROUTE_PREFIX}lantern`} component={Lantern} />
           <Route path={`${ROUTE_PREFIX}lean-space`} component={LeanSpace} />
