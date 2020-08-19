@@ -10,6 +10,7 @@ const ORDER = [
   'gridnik',
   'eswiss',
   'ljas',
+  'recha',
   'ffuh',
   'checkpoint',
   'crush',
@@ -94,7 +95,7 @@ const PROJECTS = {
     id: 'ljas',
     name: 'Lean JavaScript Application Starter',
     long:
-      'A starter project to kickoff development for your next web, Node.js, or desktop application.',
+      'A starter project to kickoff development for your next web, Node.js, or native desktop application.',
     tags: ['tooling', 'backend', 'desktop-app', 'frontend', 'web-app'],
   },
   ml2020: {
@@ -111,6 +112,13 @@ const PROJECTS = {
     long:
       'A tool for visualizing absorption and emission spectra for fluorescent dyes and quenchers.',
     tags: ['web-app', 'vis', 'design', 'frontend', 'tooling'],
+  },
+  recha: {
+    id: 'recha',
+    name: 'Recha',
+    long:
+      'A personal task and schedule management app that helps you meet your goals.',
+    tags: ['desktop-app', 'backend', 'frontend'],
   },
   themeboot: {
     id: 'themeboot',

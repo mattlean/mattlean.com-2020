@@ -41,8 +41,12 @@
         > p {
           line-height: 1.25em;
 
-          margin-bottom: size.$size-7;
+          margin-bottom: 0;
           transform: translateY(-5px);
+        }
+
+        > .badge-list > li {
+          margin-top: size.$size-7;
         }
       }
     }

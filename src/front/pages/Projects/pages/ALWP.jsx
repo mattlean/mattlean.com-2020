@@ -11,12 +11,12 @@ import { MarkGithubIcon } from '@primer/octicons-react'
  */
 const ALWP = () => {
   useHeadDataEffect()
-  const { tags } = getProjectData('alwp')
+  const { name, tags } = getProjectData('alwp')
 
   return (
     <>
       <BlindFrame nodeType="header" className="cover">
-        <h1 className="h-1 md:h-2 sm:h-3">Asset List Webpack&nbsp;Plugin</h1>
+        <h1 className="h-1 md:h-2 sm:h-3">{name}</h1>
         <ul className="badge-list">
           {tags.map((t) => (
             <Badge nodeType="li" wide={true} key={t.id}>

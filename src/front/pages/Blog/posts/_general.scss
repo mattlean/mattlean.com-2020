@@ -16,7 +16,11 @@
     }
 
     > .time {
-      margin-bottom: size.$size-12;
+      margin-bottom: 0;
+    }
+
+    > .badge-list > li {
+      margin-top: size.$size-12;
     }
   }
 

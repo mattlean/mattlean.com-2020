@@ -20,7 +20,7 @@ const LJAS = () => {
     <>
       <BlindFrame nodeType="header" className="cover">
         <h1 className="h-1 md:h-2 sm:h-3">
-          Lean JavaScript Application&nbsp;Starter
+          Lean JavaScript Application Starter
         </h1>
         {company && (
           <h2 className="h-4 sm:h-6 c-grey-2 dispw-roman">{company}</h2>
@@ -107,7 +107,7 @@ const LJAS = () => {
       <BlindFrame nodeType="figure" className="ss ss-sm project-details-gap">
         <img src={`/${SSBackend}`} alt="" />
         <figcaption className="c-grey-2">
-          Node.js server built with Lean&nbsp;JS&nbsp;App&nbsp;Starter
+          Node.js REST server API built with Lean&nbsp;JS&nbsp;App&nbsp;Starter
         </figcaption>
       </BlindFrame>
       <BlindFrame nodeType="h3" className="project-details-header">
@@ -188,36 +188,46 @@ const LJAS = () => {
             </ul>
           </section>
           <section>
-            <h4>Testing</h4>
+            <h4>Tooling</h4>
             <ul>
               <li>
                 <a
-                  href="https://jestjs.io"
+                  href="https://electronjs.org"
                   rel="noreferrer"
                   target="_blank"
                   className="a-grey-1 txtw-roman"
                 >
-                  Jest
+                  Electron
                 </a>
               </li>
               <li>
                 <a
-                  href="https://enzymejs.github.io/enzyme"
+                  href="https://webpack.js.org"
                   rel="noreferrer"
                   target="_blank"
                   className="a-grey-1 txtw-roman"
                 >
-                  Enzyme
+                  webpack
                 </a>
               </li>
               <li>
                 <a
-                  href="https://reactjs.org/docs/test-renderer.html"
+                  href="https://flow.org"
                   rel="noreferrer"
                   target="_blank"
                   className="a-grey-1 txtw-roman"
                 >
-                  React Test&nbsp;Renderer
+                  Flow
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://eslint.org"
+                  rel="noreferrer"
+                  target="_blank"
+                  className="a-grey-1 txtw-roman"
+                >
+                  ESLint
                 </a>
               </li>
               <li>
@@ -279,46 +289,36 @@ const LJAS = () => {
             </ul>
           </section>
           <section>
-            <h4>Tooling</h4>
+            <h4>Testing</h4>
             <ul>
               <li>
                 <a
-                  href="https://electronjs.org"
+                  href="https://jestjs.io"
                   rel="noreferrer"
                   target="_blank"
                   className="a-grey-1 txtw-roman"
                 >
-                  Electron
+                  Jest
                 </a>
               </li>
               <li>
                 <a
-                  href="https://webpack.js.org"
+                  href="https://enzymejs.github.io/enzyme"
                   rel="noreferrer"
                   target="_blank"
                   className="a-grey-1 txtw-roman"
                 >
-                  webpack
+                  Enzyme
                 </a>
               </li>
               <li>
                 <a
-                  href="https://flow.org"
+                  href="https://reactjs.org/docs/test-renderer.html"
                   rel="noreferrer"
                   target="_blank"
                   className="a-grey-1 txtw-roman"
                 >
-                  Flow
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://eslint.org"
-                  rel="noreferrer"
-                  target="_blank"
-                  className="a-grey-1 txtw-roman"
-                >
-                  ESLint
+                  React Test&nbsp;Renderer
                 </a>
               </li>
             </ul>
