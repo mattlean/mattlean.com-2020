@@ -36,7 +36,7 @@ const ALWP = () => {
               href="https://expressjs.com"
               rel="noreferrer"
               target="_blank"
-              className="a-grey-1"
+              className="a-grey-1 txtw-roman"
             >
               webpack
             </a>{' '}

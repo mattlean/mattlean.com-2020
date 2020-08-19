@@ -35,7 +35,7 @@ const FFUH = () => {
               href="https://expressjs.com"
               rel="noreferrer"
               target="_blank"
-              className="a-grey-1"
+              className="a-grey-1 txtw-roman"
             >
               Express
             </a>{' '}
@@ -44,7 +44,7 @@ const FFUH = () => {
               href="https://aws.amazon.com/s3"
               rel="noreferrer"
               target="_blank"
-              className="a-grey-1"
+              className="a-grey-1 txtw-roman"
             >
               Amazon Simple Storage Service (S3)
             </a>{' '}
@@ -54,7 +54,7 @@ const FFUH = () => {
               href="https://wikipedia.org/wiki/Pho"
               rel="noreferrer"
               target="_blank"
-              className="a-grey-1"
+              className="a-grey-1 txtw-roman"
             >
               pho
             </a>{' '}

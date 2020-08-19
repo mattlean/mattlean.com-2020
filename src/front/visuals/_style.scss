@@ -114,4 +114,13 @@ dd {
     margin-left: size.$size-18;
     margin-right: size.$size-18;
   }
+
+  .ss,
+  .vid {
+    > figcaption {
+      font-size: size.$size-12;
+
+      margin-top: size.$size-12;
+    }
+  }
 }

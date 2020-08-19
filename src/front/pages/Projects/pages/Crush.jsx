@@ -66,13 +66,13 @@ const Crush = () => {
         <BlindFrame nodeType="figure" className="ss ss-sm">
           <img src={`/${SSStart}`} alt="" />
           <figcaption className="c-grey-2">
-            Frontpage example being viewed on a mobile&nbsp;device
+            Screenshot of start&nbsp;screen
           </figcaption>
         </BlindFrame>
         <BlindFrame nodeType="figure" className="ss ss-sm">
           <img src={`/${SSBoard}`} alt="" />
           <figcaption className="c-grey-2">
-            Regular page example being viewed on a mobile&nbsp;device
+            Screenshot of tile-matching&nbsp;board
           </figcaption>
         </BlindFrame>
       </section>
@@ -83,7 +83,9 @@ const Crush = () => {
         className="ss ss-lg project-details-gap"
       >
         <img src={`/${SSBrowser}`} alt="" />
-        <figcaption className="c-grey-2">Regular page&nbsp;example</figcaption>
+        <figcaption className="c-grey-2">
+          qPCR Crush game and leaderboards on the qPCR&nbsp;Design&nbsp;Lab
+        </figcaption>
       </BlindFrame>
       <BlindFrame nodeType="h3" className="project-details-header">
         Project Details

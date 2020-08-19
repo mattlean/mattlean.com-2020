@@ -9,7 +9,7 @@ const ORDER = [
   'ml2020',
   'gridnik',
   'eswiss',
-  'ljsas',
+  'ljas',
   'ffuh',
   'checkpoint',
   'crush',
@@ -90,12 +90,12 @@ const PROJECTS = {
     long: 'The previous iteration of my personal website built in 2015.',
     tags: ['website', 'design', 'frontend'],
   },
-  ljsas: {
-    id: 'ljsas',
+  ljas: {
+    id: 'ljas',
     name: 'Lean JavaScript Application Starter',
     long:
       'A starter project to kickoff development for your next web, Node.js, or desktop application.',
-    tags: ['tooling'],
+    tags: ['tooling', 'backend', 'desktop-app', 'frontend', 'web-app'],
   },
   ml2020: {
     id: 'ml2020',

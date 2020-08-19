@@ -39,8 +39,9 @@ const LeanSpace = () => {
       <BlindFrame nodeType="section" className="subgrid-project-desc grid">
         <section className="c-grey-1">
           <p>
-            <strong>Lean Space</strong> was Matt Lean’s personal website from
-            2015 &ndash; 2020. It was made as a portfolio and&nbsp;blog.
+            <strong>Lean Space</strong> was my personal website from 2015
+            &ndash; 2020. It was made as a portfolio to showcase my work and a
+            blog to share my&nbsp;thoughts.
           </p>
         </section>
         <a href="https://google.com" rel="noreferrer" target="_blank">
