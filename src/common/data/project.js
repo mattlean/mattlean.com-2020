@@ -51,10 +51,9 @@ const PROJECTS = {
   eswiss: {
     id: 'eswiss',
     name: 'eswiss',
-    short:
-      'A design system built on Swiss/International style design principles.',
+    short: 'A design system built on Swiss & International Style principles.',
     long:
-      'A design system built on Swiss & International style design principles.',
+      'A design system built on Swiss & International Style design principles.',
     featured: {
       img: FeaturedEswiss,
       alt: 'Featured image for eswiss project: the eswiss logo',
@@ -71,7 +70,7 @@ const PROJECTS = {
   gridnik: {
     id: 'gridnik',
     name: 'Gridnik',
-    short: "Extend Adobe XD's grid generation capabilities.",
+    short: "A plugin that extends Adobe XD's grid generation capabilities.",
     long: 'An Adobe XD plugin that extends its grid generation capabilities.',
     featured: {
       img: FeaturedGridnik,

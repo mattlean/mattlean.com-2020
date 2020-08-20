@@ -21,6 +21,7 @@ import ThemeBoot from './ThemeBoot'
 import variants from '../../variants'
 import { genFormattedPath } from '../../../../common/util'
 import { getRouteData } from '../../../../common/data/route'
+import { isTxtOnly } from './layout'
 import { ROUTE_PREFIX } from '../../../../common/data/project'
 
 /**
@@ -34,7 +35,13 @@ const ProjectPage = () => {
   const path = genFormattedPath(pathname)
   if (getRouteData(path)) {
     cn += 'grid-project'
-    if (id) cn += ` grid-project-${id}`
+    if (id) {
+      if (isTxtOnly(id)) {
+        cn += ' grid-project-txtonly'
+      } else {
+        cn += ` grid-project-${id}`
+      }
+    }
   } else {
     cn += 'grid-no-match'
   }

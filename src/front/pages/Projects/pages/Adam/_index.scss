@@ -1,18 +1,21 @@
-.vid {
-  background-color: #cdcbcd;
+.grid-project-adam {
+  > .vid {
+    // background-color: #c5c5c5; // ff
+    background-color: #cdcbcd; // chrome
 
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  padding: 1em;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
 
-  > figcaption {
-    color: #555;
-
-    > a,
-    > a:hover,
-    > a:visited {
+    > figcaption {
       color: #555;
+
+      > a,
+      > a:hover,
+      > a:visited {
+        color: #555;
+      }
     }
   }
 }

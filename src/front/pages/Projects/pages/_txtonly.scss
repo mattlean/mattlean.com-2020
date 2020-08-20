@@ -1,0 +1,25 @@
+@use '../../../visuals/scale/size';
+
+@media (max-width: size.$size-1150) {
+  .grid-project-txtonly > .subgrid-project-details {
+    grid-column: 2 / span 2;
+  }
+}
+
+@media (max-width: size.$size-780) {
+  .grid-project-txtonly > .project-details-header {
+    font-size: size.$size-18;
+  }
+}
+
+@media (max-width: size.$size-590) {
+  .grid-project-txtonly {
+    > .project-details-header {
+      font-size: size.$size-24;
+    }
+
+    > .subgrid-project-details {
+      grid-column: 1/-1;
+    }
+  }
+}
