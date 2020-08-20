@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import BlindFrame from '../Blind/BlindFrame'
-import Arrow from '../../assets/arrow.svg'
+import Arrow from '../../assets/icons/arrow.svg'
 
 /**
  * Call-To-Action

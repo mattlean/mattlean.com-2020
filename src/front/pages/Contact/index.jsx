@@ -1,11 +1,11 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import BlindFrame from '../../components/Blind/BlindFrame'
-import LinkedInLogo from '../../assets/linkedin.png'
 import MainFooter from '../../components/MainFooter'
 import variants from '../variants'
 import { useHeadDataEffect } from '../../util'
 import { MailIcon } from '@primer/octicons-react'
+import LogoLinkedIn from '../../assets/icons/linkedin.png'
 
 /**
  * Contact Page
@@ -51,7 +51,7 @@ const Contact = () => {
               target="_blank"
               className="a-primary"
             >
-              <img src={LinkedInLogo} alt="LinkedIn Icon" />
+              <img src={LogoLinkedIn} alt="LinkedIn Icon" />
               linkedin.com/in/mattlean
             </a>
           </BlindFrame>

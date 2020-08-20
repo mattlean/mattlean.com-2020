@@ -5,10 +5,10 @@ import { LG_PHONE } from '../../visuals/responsive'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { ThemeCtx } from '../../visuals/theme'
 import { useViewportWidth } from '../../util'
-import Logo from '../../assets/logo.svg'
-import Menu from '../../assets/menu.svg'
-import SunMoon from '../../assets/sun-moon.svg'
-import X from '../../assets/x.svg'
+import Logo from '../../assets/logo/logo.svg'
+import Menu from '../../assets/icons/menu.svg'
+import SunMoon from '../../assets/icons/sun-moon.svg'
+import X from '../../assets/icons/x.svg'
 
 const THRESHOLD = 0.5
 

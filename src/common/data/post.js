@@ -1,6 +1,6 @@
 import { genTagIDNameArray } from './tag'
-import FeaturedCSLeanSpace from '../../front/assets/lean-space-featured-project.jpg'
-import FeaturedCSSOT from '../../front/assets/spectral-overlay-tool-featured-project.jpg'
+import FeaturedCSLeanSpace from '../../front/assets/featured/lean-space-featured-project.jpg'
+import FeaturedCSSOT from '../../front/assets/featured/spectral-overlay-tool-featured-project.jpg'
 
 const ORDER = ['cs-ml2020', 'cs-sot', 'cs-lean-space', 'hello-world']
 const POSTS = {

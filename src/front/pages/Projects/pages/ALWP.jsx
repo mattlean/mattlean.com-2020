@@ -3,7 +3,7 @@ import { Badge, Btn } from 'eswiss'
 import BlindFrame from '../../../components/Blind/BlindFrame'
 import { getProjectData } from '../../../../common/data/project'
 import { useHeadDataEffect } from '../../../util'
-import NPMIcon from '../../../assets/npm.svg'
+import NPMIcon from '../../../assets/icons/npm.svg'
 import { MarkGithubIcon } from '@primer/octicons-react'
 
 /**
