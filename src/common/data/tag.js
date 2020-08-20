@@ -11,6 +11,7 @@ const TAGS = {
   'game-engine': 'Game Engine',
   lib: 'Library',
   misc: 'Miscellaneous',
+  'mobile-app': 'Mobile App',
   template: 'Website Template',
   tooling: 'Tooling',
   vis: 'Data Visualization',

@@ -19,6 +19,7 @@ const ORDER = [
   'lean-space',
   'lantern',
   'themeboot',
+  'owl',
 ]
 const PROJECTS = {
   adam: {
@@ -95,7 +96,7 @@ const PROJECTS = {
     id: 'ljas',
     name: 'Lean JavaScript Application Starter',
     long:
-      'A starter project to kickoff development for your next web, Node.js, or native desktop application.',
+      'A starter project to kickoff development for your next web, Node.js, or native desktop app.',
     tags: ['tooling', 'backend', 'desktop-app', 'frontend', 'web-app'],
   },
   ml2020: {
@@ -104,6 +105,12 @@ const PROJECTS = {
     long:
       'The latest iteration of my personal website utilizing my personal identity.',
     tags: ['website', 'backend', 'design', 'design-system', 'frontend'],
+  },
+  owl: {
+    id: 'owl',
+    name: 'Project Owl',
+    long: 'A personal scheduling and finance management app.',
+    tags: ['mobile-app', 'web-app', 'backend', 'frontend'],
   },
   sot: {
     id: 'sot',

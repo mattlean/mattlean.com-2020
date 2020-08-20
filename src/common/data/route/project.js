@@ -16,7 +16,9 @@ ROUTES[`${ROUTE_PREFIX}adam`] = {
     'game engine',
     'game',
     'web application',
+    'web app',
     'webapp',
+    'app',
     'open source',
     'open',
     'source',
@@ -36,6 +38,7 @@ ROUTES[`${ROUTE_PREFIX}adam`] = {
     'programming',
     'software',
     'web',
+    'project',
   ],
 }
 
@@ -76,6 +79,7 @@ ROUTES[`${ROUTE_PREFIX}alwp`] = {
     'software',
     'application',
     'web',
+    'project',
   ],
 }
 
@@ -115,6 +119,7 @@ ROUTES[`${ROUTE_PREFIX}checkpoint`] = {
     'software',
     'application',
     'web',
+    'project',
   ],
 }
 
@@ -154,6 +159,7 @@ ROUTES[`${ROUTE_PREFIX}eswiss`] = {
     'software',
     'application',
     'web',
+    'project',
   ],
 }
 
@@ -191,6 +197,7 @@ ROUTES[`${ROUTE_PREFIX}ffuh`] = {
     'software',
     'application',
     'web',
+    'project',
   ],
 }
 
@@ -214,10 +221,9 @@ ROUTES[`${ROUTE_PREFIX}crush`] = {
     'match',
     'game',
     'web application',
+    'web app',
     'webapp',
-    'open source',
-    'open',
-    'source',
+    'app',
     'game developer',
     'backend developer',
     'backend',
@@ -235,6 +241,7 @@ ROUTES[`${ROUTE_PREFIX}crush`] = {
     'programming',
     'software',
     'web',
+    'project',
   ],
 }
 
@@ -271,6 +278,7 @@ ROUTES[`${ROUTE_PREFIX}lantern`] = {
     'software',
     'application',
     'web',
+    'project',
   ],
 }
 
@@ -316,6 +324,7 @@ ROUTES[`${ROUTE_PREFIX}lean-space`] = {
     'software',
     'application',
     'web',
+    'project',
   ],
 }
 
@@ -358,17 +367,24 @@ ROUTES[`${ROUTE_PREFIX}ljas`] = {
     'software',
     'application',
     'web',
+    'project',
   ],
 }
 
-ROUTES[`${ROUTE_PREFIX}recha`] = {
-  title: 'Project: Recha',
-  desc: "Information about Matt Lean's project: Recha",
+ROUTES[`${ROUTE_PREFIX}owl`] = {
+  title: 'Project: Project Owl',
+  desc: "Information about Matt Lean's project: Project Owl",
   keywords: [
     'matt lean',
     'matthew lean',
     'matt',
-    'recha',
+    'project owl',
+    'project',
+    'owl',
+    'mobile app',
+    'web application',
+    'web app',
+    'webapp',
     'app',
     'open source',
     'open',
@@ -391,6 +407,41 @@ ROUTES[`${ROUTE_PREFIX}recha`] = {
     'software',
     'application',
     'web',
+  ],
+}
+
+ROUTES[`${ROUTE_PREFIX}recha`] = {
+  title: 'Project: Recha',
+  desc: "Information about Matt Lean's project: Recha",
+  keywords: [
+    'matt lean',
+    'matthew lean',
+    'matt',
+    'recha',
+    'desktop app',
+    'app',
+    'open source',
+    'open',
+    'source',
+    'backend developer',
+    'backend',
+    'frontend developer',
+    'frontend',
+    'web developer',
+    'desktop app developer',
+    'developer',
+    'web dev',
+    'dev',
+    'web engineer',
+    'software engineer',
+    'engineer',
+    'development',
+    'programmer',
+    'programming',
+    'software',
+    'application',
+    'web',
+    'project',
   ],
 }
 
@@ -445,6 +496,7 @@ ROUTES[`${ROUTE_PREFIX}sot`] = {
     'design',
     'software',
     'web',
+    'project',
   ],
 }
 
@@ -460,6 +512,9 @@ ROUTES[`${ROUTE_PREFIX}themeboot`] = {
     'wordpress theme',
     'wordpress',
     'template',
+    'open source',
+    'open',
+    'source',
     'backend developer',
     'backend',
     'frontend developer',
@@ -492,6 +547,7 @@ ROUTES[`${ROUTE_PREFIX}themeboot`] = {
     'application',
     'webapp',
     'web',
+    'project',
   ],
 }
 

@@ -1,16 +1,17 @@
 import React from 'react'
 import { Badge, Btn } from 'eswiss'
+import { Link } from 'react-router-dom'
 import BlindFrame from '../../../components/Blind/BlindFrame'
 import { getProjectData } from '../../../../common/data/project'
 import { useHeadDataEffect } from '../../../util'
 import { MarkGithubIcon } from '@primer/octicons-react'
 
 /**
- * Recha Project Page
+ * Project Owl Project Page
  */
-const Recha = () => {
+const Owl = () => {
   useHeadDataEffect()
-  const { name, tags } = getProjectData('recha')
+  const { name, tags } = getProjectData('owl')
 
   return (
     <>
@@ -30,30 +31,52 @@ const Recha = () => {
       <BlindFrame nodeType="section" className="subgrid-project-desc grid">
         <section className="c-grey-1">
           <p>
-            <strong>Recha</strong> is a personal task and schedule management
-            application that helps you achieve your goals. As you attempt plan
-            and tasks, the app will keep track on how you’re doing and give you
-            helpful feedback like whether you’re over or under planning your
-            days, what tasks you to complete consistently, what tasks you
-            struggle with, progress made toward your goal, and more.
+            <strong>Project Owl</strong> is a personal scheduling and finance
+            management application. It has an{' '}
+            <a
+              href="https://android.com"
+              rel="noreferrer"
+              target="_blank"
+              className="a-grey-1 txtw-roman"
+            >
+              Android
+            </a>{' '}
+            mobile app and web app that connects to a server in the{' '}
+            <a
+              href="https://cloud.google.com"
+              rel="noreferrer"
+              target="_blank"
+              className="a-grey-1 txtw-roman"
+            >
+              Google Cloud
+            </a>
+            .
+          </p>
+          <p>
+            This project originally released as a school assignment, but was
+            eventually discontinued. The overall concept continues on as{' '}
+            <Link to="/projects/recha" className="a-grey-1">
+              Recha
+            </Link>
+            .
           </p>
         </section>
         <a
-          href="https://github.com/mattlean/recha"
+          href="https://github.com/mattlean/project-owl"
           rel="noreferrer"
           target="_blank"
         >
           <Btn className="btn-gh">
-            <MarkGithubIcon className="btn-icon" /> Desktop
+            <MarkGithubIcon className="btn-icon" /> Server
           </Btn>
         </a>
         <a
-          href="https://github.com/mattlean/recha-server"
+          href="https://github.com/mattlean/project-owl_android"
           rel="noreferrer"
           target="_blank"
         >
           <Btn outline={true} className="btn-gh">
-            <MarkGithubIcon className="btn-icon" /> Server
+            <MarkGithubIcon className="btn-icon" /> Mobile
           </Btn>
         </a>
       </BlindFrame>
@@ -66,46 +89,136 @@ const Recha = () => {
       >
         <section>
           <section>
+            <h4>Released</h4>
+            <ul>
+              <li>June 9, 2014</li>
+            </ul>
+          </section>
+          <section>
             <h4>Languages</h4>
             <ul>
               <li>
                 <a
-                  href="https://www.typescriptlang.org"
+                  href="https://java.com"
                   rel="noreferrer"
                   target="_blank"
                   className="a-grey-1 txtw-roman"
                 >
-                  TypeScript
+                  Java
                 </a>
               </li>
-              <li>SQL</li>
               <li>
                 <a
-                  href="https://sass-lang.com"
+                  href="https://python.org"
                   rel="noreferrer"
                   target="_blank"
                   className="a-grey-1 txtw-roman"
                 >
-                  Sass
+                  Python
                 </a>
               </li>
+              <li>JavaScript</li>
+              <li>SQL</li>
               <li>CSS</li>
               <li>HTML</li>
             </ul>
           </section>
           <section>
-            <h4>Frontend</h4>
+            <h4>Mobile</h4>
             <ul>
               <li>
                 <a
-                  href="https://material.io"
+                  href="https://android.com"
                   rel="noreferrer"
                   target="_blank"
                   className="a-grey-1 txtw-roman"
                 >
-                  Material Design
+                  Android
                 </a>
               </li>
+            </ul>
+          </section>
+          <section>
+            <h4>Tooling</h4>
+            <ul>
+              <li>
+                <a
+                  href="http://browserify.org"
+                  rel="noreferrer"
+                  target="_blank"
+                  className="a-grey-1 txtw-roman"
+                >
+                  Browserify
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/andreypopp/reactify"
+                  rel="noreferrer"
+                  target="_blank"
+                  className="a-grey-1 txtw-roman"
+                >
+                  reactify
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://gulpjs.com"
+                  rel="noreferrer"
+                  target="_blank"
+                  className="a-grey-1 txtw-roman"
+                >
+                  Gulp
+                </a>
+              </li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h4>Updated</h4>
+            <ul>
+              <li>October 3, 2015</li>
+            </ul>
+          </section>
+          <section>
+            <h4>Backend</h4>
+            <ul>
+              <li>
+                <a
+                  href="https://github.com/GoogleCloudPlatform/webapp2"
+                  rel="noreferrer"
+                  target="_blank"
+                  className="a-grey-1 txtw-roman"
+                >
+                  webapp2
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://cloud.google.com/datastore"
+                  rel="noreferrer"
+                  target="_blank"
+                  className="a-grey-1 txtw-roman"
+                >
+                  Datastore
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://palletsprojects.com/p/jinja/"
+                  rel="noreferrer"
+                  target="_blank"
+                  className="a-grey-1 txtw-roman"
+                >
+                  Jinja
+                </a>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h4>Web Frontend</h4>
+            <ul>
               <li>
                 <a
                   href="https://reactjs.org"
@@ -118,209 +231,42 @@ const Recha = () => {
               </li>
               <li>
                 <a
-                  href="https://redux.js.org"
+                  href="https://facebook.github.io/flux"
                   rel="noreferrer"
                   target="_blank"
                   className="a-grey-1 txtw-roman"
                 >
-                  Redux
+                  Flux
                 </a>
               </li>
               <li>
                 <a
-                  href="https://github.com/reduxjs/redux-thunk"
+                  href="https://github.com/strml/react-router-component"
                   rel="noreferrer"
                   target="_blank"
                   className="a-grey-1 txtw-roman"
                 >
-                  Redux Thunk
+                  React Router Component
                 </a>
               </li>
               <li>
                 <a
-                  href="https://github.com/reduxjs/reselect"
+                  href="https://github.com/async-library/react-async"
                   rel="noreferrer"
                   target="_blank"
                   className="a-grey-1 txtw-roman"
                 >
-                  Reselect
+                  React Async
                 </a>
               </li>
               <li>
                 <a
-                  href="https://reactrouter.com"
+                  href="https://getbootstrap.com"
                   rel="noreferrer"
                   target="_blank"
                   className="a-grey-1 txtw-roman"
                 >
-                  React Router
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API"
-                  rel="noreferrer"
-                  target="_blank"
-                  className="a-grey-1 txtw-roman"
-                >
-                  Fetch
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://github.com/atlassian/react-beautiful-dnd"
-                  rel="noreferrer"
-                  target="_blank"
-                  className="a-grey-1 txtw-roman"
-                >
-                  react-beautiful-dnd
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://momentjs.com"
-                  rel="noreferrer"
-                  target="_blank"
-                  className="a-grey-1 txtw-roman"
-                >
-                  Moment
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://lodash.com"
-                  rel="noreferrer"
-                  target="_blank"
-                  className="a-grey-1 txtw-roman"
-                >
-                  Lodash
-                </a>
-              </li>
-            </ul>
-          </section>
-        </section>
-        <section>
-          <section>
-            <h4>Backend</h4>
-            <ul>
-              <li>
-                <a
-                  href="https://nodejs.org"
-                  rel="noreferrer"
-                  target="_blank"
-                  className="a-grey-1 txtw-roman"
-                >
-                  Node.js
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://expressjs.com"
-                  rel="noreferrer"
-                  target="_blank"
-                  className="a-grey-1 txtw-roman"
-                >
-                  Express
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://postgresql.org/"
-                  rel="noreferrer"
-                  target="_blank"
-                  className="a-grey-1 txtw-roman"
-                >
-                  PostgreSQL
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://github.com/vitaly-t/pg-promise"
-                  rel="noreferrer"
-                  target="_blank"
-                  className="a-grey-1 txtw-roman"
-                >
-                  pg-promise
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://github.com/mattlean/checkpointjs"
-                  rel="noreferrer"
-                  target="_blank"
-                  className="a-grey-1 txtw-roman"
-                >
-                  Checkpoint.js
-                </a>
-              </li>
-            </ul>
-          </section>
-          <section>
-            <h4>Testing</h4>
-            <ul>
-              <li>
-                <a
-                  href="https://jestjs.io"
-                  rel="noreferrer"
-                  target="_blank"
-                  className="a-grey-1 txtw-roman"
-                >
-                  Jest
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://enzymejs.github.io/enzyme"
-                  rel="noreferrer"
-                  target="_blank"
-                  className="a-grey-1 txtw-roman"
-                >
-                  Enzyme
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://reactjs.org/docs/test-renderer.html"
-                  rel="noreferrer"
-                  target="_blank"
-                  className="a-grey-1 txtw-roman"
-                >
-                  React Test&nbsp;Renderer
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://github.com/visionmedia/supertest"
-                  rel="noreferrer"
-                  target="_blank"
-                  className="a-grey-1 txtw-roman"
-                >
-                  SuperTest
-                </a>
-              </li>
-            </ul>
-          </section>
-          <section>
-            <h4>Tooling</h4>
-            <ul>
-              <li>
-                <a
-                  href="https://electronjs.org"
-                  rel="noreferrer"
-                  target="_blank"
-                  className="a-grey-1 txtw-roman"
-                >
-                  Electron
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://webpack.js.org"
-                  rel="noreferrer"
-                  target="_blank"
-                  className="a-grey-1 txtw-roman"
-                >
-                  webpack
+                  Bootstrap
                 </a>
               </li>
             </ul>
@@ -330,7 +276,7 @@ const Recha = () => {
             <ul>
               <li>
                 <a
-                  href="https://github.com/mattlean/recha/blob/master/LICENSE"
+                  href="https://github.com/mattlean/project-owl/blob/master/LICENSE"
                   rel="noreferrer"
                   target="_blank"
                   className="a-grey-1 txtw-roman"
@@ -346,4 +292,4 @@ const Recha = () => {
   )
 }
 
-export default Recha
+export default Owl
