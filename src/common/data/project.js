@@ -1,6 +1,6 @@
 import { genTagIDNameArray } from './tag'
 import FeaturedEswiss from '../../front/assets/featured/eswiss-featured-project.jpg'
-import FeaturedGridnik from '../../front/assets/featured/gridnik-featured-project.jpg'
+import FeaturedGridnik from '../../front/assets/featured/gridnik-featured.jpg'
 
 export const ROUTE_PREFIX = '/projects/'
 
