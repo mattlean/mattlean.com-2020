@@ -1,5 +1,6 @@
 import React from 'react'
 import { Badge, Btn } from 'eswiss'
+import { Link } from 'react-router-dom'
 import BlindFrame from '../../../components/Blind/BlindFrame'
 import { getProjectData } from '../../../../common/data/project'
 import { useHeadDataEffect } from '../../../util'
@@ -244,14 +245,9 @@ const Recha = () => {
                 </a>
               </li>
               <li>
-                <a
-                  href="https://github.com/mattlean/checkpointjs"
-                  rel="noreferrer"
-                  target="_blank"
-                  className="a-grey-1 txtw-roman"
-                >
+                <Link to="/projects/checkpoint" className="a-grey-1 txtw-roman">
                   Checkpoint.js
-                </a>
+                </Link>
               </li>
             </ul>
           </section>

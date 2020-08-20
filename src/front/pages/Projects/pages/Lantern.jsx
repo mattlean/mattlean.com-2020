@@ -152,7 +152,7 @@ const Lantern = () => {
         href="https://github.com/mattlean/lanternjs"
         rel="noreferrer"
         target="_blank"
-        className="btn-project-a"
+        className="btn-option-a"
       >
         <Btn className="btn-gh">
           <MarkGithubIcon className="btn-icon" /> GitHub
@@ -163,7 +163,7 @@ const Lantern = () => {
         href="https://npmjs.com/package/lanternjs"
         rel="noreferrer"
         target="_blank"
-        className="btn-project-b"
+        className="btn-option-b"
       >
         <Btn outline={true} className="btn-npm">
           <NPMIcon className="btn-icon" /> npm

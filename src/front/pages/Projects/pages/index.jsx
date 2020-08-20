@@ -10,6 +10,7 @@ import FFUH from './FFUH'
 import Lantern from './Lantern'
 import LeanSpace from './LeanSpace'
 import LJAS from './LJAS'
+import ML2020 from './ML2020'
 import Owl from './Owl'
 import Recha from './Recha'
 import SOT from './SOT'
@@ -57,6 +58,7 @@ const ProjectPage = () => {
           <Route path={`${ROUTE_PREFIX}lantern`} component={Lantern} />
           <Route path={`${ROUTE_PREFIX}lean-space`} component={LeanSpace} />
           <Route path={`${ROUTE_PREFIX}ljas`} component={LJAS} />
+          <Route path={`${ROUTE_PREFIX}ml2020`} component={ML2020} />
           <Route path={`${ROUTE_PREFIX}owl`} component={Owl} />
           <Route path={`${ROUTE_PREFIX}recha`} component={Recha} />
           <Route path={`${ROUTE_PREFIX}sot`} component={SOT} />

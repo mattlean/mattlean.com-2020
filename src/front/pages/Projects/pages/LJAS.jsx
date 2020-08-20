@@ -375,7 +375,7 @@ const LJAS = () => {
         href="https://github.com/mattlean/lean-js-app-starter"
         rel="noreferrer"
         target="_blank"
-        className="btn-project-a"
+        className="btn-option-a"
       >
         <Btn className="btn-github">
           <MarkGithubIcon className="btn-icon" /> GitHub

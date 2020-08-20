@@ -195,7 +195,7 @@ const ThemeBoot = () => {
         href="https://github.com/mattlean/themeboot"
         rel="noreferrer"
         target="_blank"
-        className="btn-project-a"
+        className="btn-option-a"
       >
         <Btn className="btn-github">
           <MarkGithubIcon className="btn-icon" /> GitHub

@@ -283,13 +283,13 @@ const SOT = () => {
         href="https://biosearchtech.com/qpcr-multiplex-spectral-overlay-tool"
         rel="noreferrer"
         target="_blank"
-        className="btn-project-a"
+        className="btn-option-a"
       >
         <Btn className="btn-view-live">
           <PlayIcon className="btn-icon" /> View Live
         </Btn>
       </BlindFrame>
-      <BlindFrame nodeType="Link" to="/" className="btn-project-b">
+      <BlindFrame nodeType="Link" to="/" className="btn-option-b">
         <Btn outline={true} className="btn-case-study">
           <BookIcon className="btn-icon" /> Case Study
         </Btn>

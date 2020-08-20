@@ -38,7 +38,7 @@ const Adam = () => {
           </p>
           <p>
             The project was used to build{' '}
-            <Link to="/projects/crush" className="a-grey-1 txtw-roman">
+            <Link to="/projects/crush" className="a-grey-1">
               qPCR Crush
             </Link>
             , an{' '}
@@ -165,7 +165,7 @@ const Adam = () => {
         href="https://github.com/mattlean/adam-engine"
         rel="noreferrer"
         target="_blank"
-        className="btn-project-a"
+        className="btn-option-a"
       >
         <Btn className="btn-gh">
           <MarkGithubIcon className="btn-icon" /> GitHub

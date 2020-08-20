@@ -9,7 +9,7 @@ import SSBlogPost from '../../../assets/projects/lean-space/blog-post.jpg'
 import SSBlogPostMobile from '../../../assets/projects/lean-space/blog-post-mobile.jpg'
 import SSWork from '../../../assets/projects/lean-space/work.jpg'
 import SSWorkMobile from '../../../assets/projects/lean-space/work-mobile.jpg'
-import { MarkGithubIcon, PlayIcon } from '@primer/octicons-react'
+import { BookIcon, MarkGithubIcon, PlayIcon } from '@primer/octicons-react'
 
 /**
  * Lean Space Project Page
@@ -44,8 +44,18 @@ const LeanSpace = () => {
             blog to share my&nbsp;thoughts.
           </p>
         </section>
-        <a href="https://google.com" rel="noreferrer" target="_blank">
-          <Btn className="btn-view-live">
+        <Link to="/" className="btn-option-a btn-triple-group">
+          <Btn className="btn-case-study">
+            <BookIcon className="btn-icon" /> Case Study
+          </Btn>
+        </Link>
+        <a
+          href="https://google.com"
+          rel="noreferrer"
+          target="_blank"
+          className="btn-option-b btn-triple-group"
+        >
+          <Btn outline={true} className="btn-view-live">
             <PlayIcon className="btn-icon" /> View Live
           </Btn>
         </a>
@@ -53,6 +63,7 @@ const LeanSpace = () => {
           href="https://github.com/mattlean/lean-space"
           rel="noreferrer"
           target="_blank"
+          className="btn-option-c btn-triple-group"
         >
           <Btn outline={true} className="btn-gh">
             <MarkGithubIcon className="btn-icon" /> GitHub
@@ -93,18 +104,20 @@ const LeanSpace = () => {
           Learn more about the&nbsp;project
         </CTA>
       </BlindFrame>
-      <BlindFrame nodeType="figure" className="ss ss-sm">
-        <img src={`/${SSWorkMobile}`} alt="" />
-        <figcaption className="c-grey-2">
-          Work page showcasing projects being viewed on a mobile&nbsp;device
-        </figcaption>
-      </BlindFrame>
-      <BlindFrame nodeType="figure" className="ss ss-sm project-details-gap">
-        <img src={`/${SSBlogPostMobile}`} alt="" />
-        <figcaption className="c-grey-2">
-          First post written on the blog being viewed on a mobile&nbsp;device
-        </figcaption>
-      </BlindFrame>
+      <section className="subgrid-ss-sm">
+        <BlindFrame nodeType="figure" className="ss ss-sm">
+          <img src={`/${SSWorkMobile}`} alt="" />
+          <figcaption className="c-grey-2">
+            Work page showcasing projects being viewed on a mobile&nbsp;device
+          </figcaption>
+        </BlindFrame>
+        <BlindFrame nodeType="figure" className="ss ss-sm project-details-gap">
+          <img src={`/${SSBlogPostMobile}`} alt="" />
+          <figcaption className="c-grey-2">
+            First post written on the blog being viewed on a mobile&nbsp;device
+          </figcaption>
+        </BlindFrame>
+      </section>
       <BlindFrame nodeType="h3" className="project-details-header">
         Project Details
       </BlindFrame>
@@ -233,13 +246,22 @@ const LeanSpace = () => {
         </section>
       </BlindFrame>
       <BlindFrame
+        nodeType="Link"
+        to="/"
+        className="btn-option-a btn-triple-group"
+      >
+        <Btn className="btn-view-live">
+          <BookIcon className="btn-icon" /> Case Study
+        </Btn>
+      </BlindFrame>
+      <BlindFrame
         nodeType="a"
         href="http://google.com"
         rel="noreferrer"
         target="_blank"
-        className="btn-project-a"
+        className="btn-option-b btn-triple-group"
       >
-        <Btn className="btn-view-live">
+        <Btn outline={true} className="btn-view-live">
           <PlayIcon className="btn-icon" /> View Live
         </Btn>
       </BlindFrame>
@@ -248,7 +270,7 @@ const LeanSpace = () => {
         href="https://github.com/mattlean/lean-space"
         rel="noreferrer"
         target="_blank"
-        className="btn-project-b"
+        className="btn-option-c btn-triple-group"
       >
         <Btn outline={true} className="btn-gh">
           <MarkGithubIcon className="btn-icon" /> GitHub

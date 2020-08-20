@@ -102,8 +102,7 @@ const PROJECTS = {
   ml2020: {
     id: 'ml2020',
     name: 'MattLean.com',
-    long:
-      'The latest iteration of my personal website utilizing my personal identity.',
+    long: 'The latest iteration of my personal website.',
     tags: ['website', 'backend', 'design', 'design-system', 'frontend'],
   },
   owl: {

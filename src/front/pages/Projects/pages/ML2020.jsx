@@ -1,22 +1,25 @@
 import React from 'react'
 import { Badge, Btn } from 'eswiss'
+import { Link } from 'react-router-dom'
 import BlindFrame from '../../../components/Blind/BlindFrame'
 import { getProjectData } from '../../../../common/data/project'
 import { useHeadDataEffect } from '../../../util'
-import NPMIcon from '../../../assets/npm.svg'
-import { MarkGithubIcon, PlayIcon } from '@primer/octicons-react'
+import { BookIcon, MarkGithubIcon } from '@primer/octicons-react'
 
 /**
- * eswiss Project Page
+ * MattLean.com (2020) Project Page
  */
-const Eswiss = () => {
+const ML2020 = () => {
   useHeadDataEffect()
-  const { name, tags } = getProjectData('eswiss')
+  const { company, name, tags } = getProjectData('ml2020')
 
   return (
     <>
       <BlindFrame nodeType="header" className="cover">
         <h1 className="h-1 md:h-2 sm:h-3">{name}</h1>
+        {company && (
+          <h2 className="h-4 sm:h-6 c-grey-2 dispw-roman">{company}</h2>
+        )}
         <ul className="badge-list">
           {tags.map((t) => (
             <Badge nodeType="li" wide={true} key={t.id}>
@@ -31,53 +34,34 @@ const Eswiss = () => {
       <BlindFrame nodeType="section" className="subgrid-project-desc grid">
         <section className="c-grey-1">
           <p>
-            <strong>eswiss</strong> is a design system that uses principles
-            popularized by the{' '}
-            <a
-              href="https://en.wikipedia.org/wiki/International_Typographic_Style"
-              rel="noreferrer"
-              target="_blank"
-              className="a-grey-1 txtw-roman"
-            >
-              Swiss and International Typographic Styles
-            </a>{' '}
-            and adapts them to modern user interface development methodologies.
-            The system emphasizes practicality, maintainability,
-            and&nbsp;accessibility.
+            <strong>MattLean.com</strong> is the current iteration of my
+            personal website. You’re looking at it right&nbsp;now!
           </p>
           <p>
-            While the project is still in alpha, the website you’re looking at
-            right now is using eswiss as a proof-of-concept.
+            The project acts as a proof-of-concept for the{' '}
+            <Link to="/projects/eswiss" className="a-grey-1">
+              eswiss
+            </Link>
+            . If you’re interested in the design and development process behind
+            this website and its design system, read the{' '}
+            <Link to="/" className="a-grey-1 txtw-roman">
+              case study
+            </Link>
+            .
           </p>
         </section>
-        <a
-          href="http://mattlean.github.io/eswiss"
-          rel="noreferrer"
-          target="_blank"
-          className="btn-option-a btn-triple-group"
-        >
-          <Btn className="btn-view-live">
-            <PlayIcon className="btn-icon" /> View Live
+        <Link to="/">
+          <Btn className="btn-case-study">
+            <BookIcon className="btn-icon" /> Case Study
           </Btn>
-        </a>
+        </Link>
         <a
-          href="https://github.com/mattlean/eswiss"
+          href="https://github.com/mattlean/mattlean.com-2020"
           rel="noreferrer"
           target="_blank"
-          className="btn-option-b btn-triple-group"
         >
           <Btn outline={true} className="btn-gh">
             <MarkGithubIcon className="btn-icon" /> GitHub
-          </Btn>
-        </a>
-        <a
-          href="https://npmjs.com/package/eswiss"
-          rel="noreferrer"
-          target="_blank"
-          className="btn-option-c btn-triple-group"
-        >
-          <Btn outline={true} className="btn-npm">
-            <NPMIcon className="btn-icon" /> npm
           </Btn>
         </a>
       </BlindFrame>
@@ -86,22 +70,18 @@ const Eswiss = () => {
       </BlindFrame>
       <BlindFrame
         nodeType="section"
-        className="subgrid-project-details grid mb-0 c-grey-1"
+        className="subgrid-project-details grid c-grey-1"
       >
         <section>
           <section>
+            <h4>Released</h4>
+            <ul>
+              <li>August 19, 2020</li>
+            </ul>
+          </section>
+          <section>
             <h4>Languages</h4>
             <ul>
-              <li>
-                <a
-                  href="https://www.typescriptlang.org"
-                  rel="noreferrer"
-                  target="_blank"
-                  className="a-grey-1 txtw-roman"
-                >
-                  TypeScript
-                </a>
-              </li>
               <li>JavaScript</li>
               <li>
                 <a
@@ -113,59 +93,41 @@ const Eswiss = () => {
                   Sass
                 </a>
               </li>
+              <li>CSS</li>
+              <li>HTML</li>
             </ul>
           </section>
           <section>
-            <h4>Dev Dependencies</h4>
+            <h4>Backend</h4>
             <ul>
               <li>
                 <a
-                  href="https://storybook.js.org"
+                  href="https://nodejs.org"
                   rel="noreferrer"
                   target="_blank"
                   className="a-grey-1 txtw-roman"
                 >
-                  Storybook
+                  Node.js
                 </a>
               </li>
               <li>
                 <a
-                  href="https://jestjs.io"
+                  href="https://expressjs.com"
                   rel="noreferrer"
                   target="_blank"
                   className="a-grey-1 txtw-roman"
                 >
-                  Jest
+                  Express
                 </a>
               </li>
               <li>
                 <a
-                  href="https://reactjs.org/docs/test-renderer.html"
+                  href="https://ejs.co"
                   rel="noreferrer"
                   target="_blank"
                   className="a-grey-1 txtw-roman"
                 >
-                  React Test&nbsp;Renderer
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://chromatic.com"
-                  rel="noreferrer"
-                  target="_blank"
-                  className="a-grey-1 txtw-roman"
-                >
-                  Chromatic
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://gulpjs.com"
-                  rel="noreferrer"
-                  target="_blank"
-                  className="a-grey-1 txtw-roman"
-                >
-                  Gulp
+                  EJS
                 </a>
               </li>
             </ul>
@@ -173,8 +135,19 @@ const Eswiss = () => {
         </section>
         <section>
           <section>
-            <h4>Peer Dependencies</h4>
+            <h4>Updated</h4>
             <ul>
+              <li>August 19, 2020</li>
+            </ul>
+          </section>
+          <section>
+            <h4>Frontend</h4>
+            <ul>
+              <li>
+                <Link to="/projects/eswiss" className="a-grey-1 txtw-roman">
+                  eswiss
+                </Link>
+              </li>
               <li>
                 <a
                   href="https://reactjs.org"
@@ -197,27 +170,47 @@ const Eswiss = () => {
               </li>
               <li>
                 <a
-                  href="https://sass-lang.com"
+                  href="https://framer.com/motion"
                   rel="noreferrer"
                   target="_blank"
                   className="a-grey-1 txtw-roman"
                 >
-                  Sass
+                  Framer Motion
                 </a>
               </li>
             </ul>
           </section>
           <section>
-            <h4>License</h4>
+            <h4>Design</h4>
             <ul>
               <li>
                 <a
-                  href="https://github.com/mattlean/eswiss/blob/master/LICENSE"
+                  href="https://www.adobe.com/products/xd.html"
                   rel="noreferrer"
                   target="_blank"
                   className="a-grey-1 txtw-roman"
                 >
-                  MIT
+                  XD
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://adobe.com/products/photoshop.html"
+                  rel="noreferrer"
+                  target="_blank"
+                  className="a-grey-1 txtw-roman"
+                >
+                  Photoshop
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://adobe.com/products/illustrator.html"
+                  rel="noreferrer"
+                  target="_blank"
+                  className="a-grey-1 txtw-roman"
+                >
+                  Illustrator
                 </a>
               </li>
             </ul>
@@ -228,4 +221,4 @@ const Eswiss = () => {
   )
 }
 
-export default Eswiss
+export default ML2020
