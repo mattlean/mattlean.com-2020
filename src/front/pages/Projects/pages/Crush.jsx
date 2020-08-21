@@ -182,6 +182,14 @@ const Crush = () => {
             <p>February 6, 2017</p>
           </section>
           <section>
+            <h4>Responsibilities</h4>
+            <ul>
+              <li>Frontend</li>
+              <li>Game Design</li>
+              <li>Backend</li>
+            </ul>
+          </section>
+          <section>
             <h4>Backend</h4>
             <ul>
               <li>

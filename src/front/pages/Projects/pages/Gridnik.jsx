@@ -112,7 +112,11 @@ const Gridnik = () => {
       >
         <img src={`/${DCExample}`} alt="" />
         <figcaption className="c-grey-2">
-          A Gridnik-generated grid being used to compose the About page on{' '}
+          A Gridnik-generated grid being used to compose the{' '}
+          <Link to="/about" className="a-grey-2">
+            ”About” page
+          </Link>{' '}
+          on{' '}
           <Link to="/projects/ml2020" className="a-grey-2">
             MattLean.com
           </Link>

@@ -276,6 +276,41 @@ const SOT = () => {
               </li>
             </ul>
           </section>
+          <section>
+            <h4>Design</h4>
+            <ul>
+              <li>
+                <a
+                  href="https://www.adobe.com/products/xd.html"
+                  rel="noreferrer"
+                  target="_blank"
+                  className="a-grey-1 txtw-roman"
+                >
+                  XD
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://adobe.com/products/photoshop.html"
+                  rel="noreferrer"
+                  target="_blank"
+                  className="a-grey-1 txtw-roman"
+                >
+                  Photoshop
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://adobe.com/products/illustrator.html"
+                  rel="noreferrer"
+                  target="_blank"
+                  className="a-grey-1 txtw-roman"
+                >
+                  Illustrator
+                </a>
+              </li>
+            </ul>
+          </section>
         </section>
       </BlindFrame>
       <BlindFrame
