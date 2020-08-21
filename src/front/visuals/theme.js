@@ -2,8 +2,8 @@ import { createContext, useState } from 'react'
 
 export const ThemeCtx = createContext({
   isDark: false,
-  setDark: () => {},
-  toggle: () => {},
+  manualToggle: () => {},
+  setIsDark: () => {},
 })
 
 /**
@@ -16,11 +16,11 @@ export const useThemeState = (defaultIsDarkVal = false) => {
 
   return {
     isDark,
-    setDark: () => {
-      setIsDark(true)
-    },
-    toggle: () => {
+    manualToggle: () => {
+      localStorage.setItem('manualIsDark', !isDark)
+      localStorage.setItem('manualThemeExpire', Date.now() + 86400000)
       setIsDark(!isDark)
     },
+    setIsDark,
   }
 }

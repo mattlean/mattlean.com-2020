@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { AnimatePresence } from 'framer-motion'
 import { Route, Switch, useLocation } from 'react-router-dom'
 import { ThemeCtx, useThemeState } from '../visuals/theme'
@@ -13,19 +13,26 @@ import ProjectPage from '../pages/Projects/pages'
 import Projects from '../pages/Projects'
 
 const App = () => {
-  const [initLoad, setInitLoad] = useState(false)
   const location = useLocation()
   const themeState = useThemeState()
 
-  // Set dark theme if user's computer time is between 6PM & 6AM
-  if (!__isServer__ && !initLoad) {
-    const currHour = new Date().getHours()
+  if (!__isServer__ && !window.initLoad) {
+    let manualThemeExpire = localStorage.getItem('manualThemeExpire')
+    if (manualThemeExpire) manualThemeExpire = parseInt(manualThemeExpire)
 
-    if (currHour <= 6 || currHour >= 18) {
-      themeState.setDark()
+    if (manualThemeExpire && Date.now() < manualThemeExpire) {
+      // Set saved theme if it has been set within the past day
+      themeState.setIsDark(localStorage.getItem('manualIsDark') === 'true')
+    } else {
+      // Set dark theme if user's computer time is between 6PM & 6AM
+      const currHour = new Date().getHours()
+
+      if (currHour <= 6 || currHour >= 18) {
+        themeState.setIsDark(true)
+      }
     }
 
-    setInitLoad(true)
+    window.initLoad = true
   }
 
   // Handle theme change

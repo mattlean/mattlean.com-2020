@@ -20,7 +20,7 @@ const MainNav = () => {
   const { pathname } = useLocation()
   const [initRender, setInitRender] = useState(true)
   const [isOpen, setIsOpen] = useState(false)
-  const { isDark, toggle } = useContext(ThemeCtx)
+  const { isDark, manualToggle } = useContext(ThemeCtx)
 
   const intersectionRef = useRef(null)
   const intersection = useIntersection(intersectionRef, {
@@ -133,7 +133,12 @@ const MainNav = () => {
             </NavLink>
           </li>
           <li>
-            <button className="btn-nav c-primary" onClick={() => toggle()}>
+            <button
+              className="btn-nav c-primary"
+              onClick={() => {
+                manualToggle()
+              }}
+            >
               <SunMoon className="sun-moon_svg" />
               {btnLightTxt}
             </button>
