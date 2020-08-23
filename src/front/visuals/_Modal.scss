@@ -1,0 +1,38 @@
+@use './scale/color';
+@use './scale/size';
+
+.ats {
+  --bg: rgba(0, 0, 0, 0.5);
+
+  background: var(--bg);
+
+  bottom: 0;
+  left: 0;
+  overflow: scroll;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 4;
+
+  > .modal {
+    color: color.$k;
+
+    max-width: 600px;
+    z-index: 4;
+
+    > .modal-content > p > a {
+      color: color.$k;
+    }
+  }
+}
+
+@media (max-width: size.$size-560) {
+  .ats > .modal {
+    left: 0;
+    margin: 0;
+    max-width: 100vh;
+    min-height: 100vh;
+    top: 0;
+    transform: none !important;
+  }
+}

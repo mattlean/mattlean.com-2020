@@ -52,21 +52,6 @@
   }
 }
 
-.modal-overlay {
-  z-index: 4;
-
-  > .modal {
-    color: color.$k;
-
-    max-width: 600px;
-    z-index: 4;
-
-    > .modal-content > p > a {
-      color: color.$k;
-    }
-  }
-}
-
 @media (max-width: bp.$md) {
   .main-footer {
     margin-top: size.$size-422;
@@ -122,12 +107,6 @@
 
     &.grid {
       grid-template-rows: repeat(2, auto) size.$size-176;
-    }
-  }
-
-  .modal-overlay {
-    > .modal {
-      margin: 0;
     }
   }
 }
