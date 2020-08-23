@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 import { useIntersection } from 'react-use'
 
 const THRESHOLD = 0.25
-const variants = {
+const FOOTER_VARIANTS = {
   animate: {
     opacity: 1,
     y: 0,
@@ -23,6 +23,28 @@ const variants = {
     },
   },
 }
+const MODAL_VARIANTS = {
+  animate: {
+    display: 'block',
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 0.2,
+      ease: 'easeOut',
+    },
+  },
+  initial: {
+    opacity: 0,
+    scale: 1.2,
+    transition: {
+      duration: 0.2,
+      ease: 'easeIn',
+    },
+    transitionEnd: {
+      display: 'none',
+    },
+  },
+}
 
 /**
  * Main Footer
@@ -37,30 +59,41 @@ const MainFooter = () => {
   })
 
   const isHidden =
-    __isServer__ ||
+    __IS_SERVER__ ||
     (intersection && intersection.intersectionRatio < THRESHOLD) ||
     !intersection
       ? true
       : false
 
-  let animate
-  if (isHidden) {
-    animate = 'initial'
-  } else {
-    animate = 'animate'
-  }
+  const animateFooter = isHidden ? 'initial' : 'animate'
 
   // Modal
   const [isOpen, setIsOpen] = useState(false)
   const [focusEleOnClose, setFocusEleOnClose] = useState()
-  const modal = isOpen ? (
+  const animateModal = isOpen ? 'animate' : 'initial'
+
+  const modalOverlay = (
+    <motion.div
+      animate={animateModal}
+      initial="initial"
+      variants={MODAL_VARIANTS}
+    />
+  )
+  const modal = (
     <Modal
+      __IS_SERVER__={__IS_SERVER__}
       autoCenterH={true}
       autoCenterV={true}
       closeOnOverlayClick={true}
       focusEleOnClose={focusEleOnClose}
       isOpen={isOpen}
+      modalClassName="modal"
       onClose={() => setIsOpen(false)}
+      overlayClassName="ats"
+      overlayOverride={modalOverlay}
+      overrideClassName={true}
+      useAriaHidden={true}
+      useAriaModal={true}
     >
       <h1 className="modal-h h-4 sm:h-6">About MattLean.com</h1>
       <p>
@@ -110,15 +143,15 @@ const MainFooter = () => {
         that went into building this website, you can read the case study.
       </p>
     </Modal>
-  ) : undefined
+  )
 
   return (
     <>
       <footer ref={intersectionRef} className="main-footer grid c-grey-2">
         <motion.dl
-          animate={animate}
+          animate={animateFooter}
           initial="initial"
-          variants={variants}
+          variants={FOOTER_VARIANTS}
           className="personal-title"
         >
           <dt>Matt Lean</dt>
@@ -129,7 +162,11 @@ const MainFooter = () => {
           </dd>
         </motion.dl>
         <nav className="internal-nav">
-          <motion.ul animate={animate} initial="initial" variants={variants}>
+          <motion.ul
+            animate={animateFooter}
+            initial="initial"
+            variants={FOOTER_VARIANTS}
+          >
             <li>
               <Link to="/about" className="a-grey-2">
                 About
@@ -153,7 +190,11 @@ const MainFooter = () => {
           </motion.ul>
         </nav>
         <nav className="external-nav">
-          <motion.ul animate={animate} initial="initial" variants={variants}>
+          <motion.ul
+            animate={animateFooter}
+            initial="initial"
+            variants={FOOTER_VARIANTS}
+          >
             <li>
               <a
                 href="http://be.net/mattlean"
@@ -187,9 +228,9 @@ const MainFooter = () => {
           </motion.ul>
         </nav>
         <motion.p
-          animate={animate}
+          animate={animateFooter}
           initial="initial"
-          variants={variants}
+          variants={FOOTER_VARIANTS}
           className="txt-2 c-grey-3"
         >
           Made with too much boba tea in SF Bay Area.{' '}

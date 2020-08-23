@@ -35,7 +35,7 @@ const Blind = ({ delay, duration, threshold }) => {
   })
 
   const isHidden =
-    __isServer__ ||
+    __IS_SERVER__ ||
     (intersection && intersection.intersectionRatio < threshold) ||
     !intersection
       ? true

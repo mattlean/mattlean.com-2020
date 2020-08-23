@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import { genHeadData } from '../../common/util'
 
@@ -35,21 +35,6 @@ export const updateMeta = (name, value) => {
 
   // Set meta element content to new value
   ele.setAttribute('content', value)
-}
-
-/**
- * Custom hook that returns viewport width (including scrollbar) as state
- * @return {(number|undefined)} Viewport width. If server-side rendered, the width will be undefined.
- */
-export const useViewportWidth = () => {
-  const widthVal = __isServer__ ? undefined : window.innerWidth
-  const [width, setWidth] = useState(widthVal)
-  useEffect(() => {
-    const handleResize = () => setWidth(window.innerWidth)
-    window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)
-  }, [width]) // eslint-disable-line react-hooks/exhaustive-deps
-  return width
 }
 
 /**

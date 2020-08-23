@@ -29,11 +29,11 @@ module.exports = merge([
 
   cleanBuild(),
 
-  ignoreNodeModules({ allowlist: ['eswiss'] }),
+  ignoreNodeModules({ allowlist: [/^eswiss/] }),
 
   loadHTMLAsString({ attributes: false }),
 
   loadSVGs(),
 
-  setFreeVariable('__isServer__', true),
+  setFreeVariable('__IS_SERVER__', true),
 ])

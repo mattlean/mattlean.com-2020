@@ -18,7 +18,7 @@ const App = () => {
   const location = useLocation()
   const themeCtxState = useThemeCtxState()
 
-  if (!__isServer__ && isInitLoad) {
+  if (!__IS_SERVER__ && isInitLoad) {
     let manualThemeExpire = localStorage.getItem('manualThemeExpire')
     if (manualThemeExpire) manualThemeExpire = parseInt(manualThemeExpire)
 

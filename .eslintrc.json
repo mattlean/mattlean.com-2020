@@ -12,7 +12,7 @@
     "plugin:jsx-a11y/recommended"
   ],
   "globals": {
-    "__isServer__": "readonly"
+    "__IS_SERVER__": "readonly"
   },
   "parserOptions": {
     "ecmaVersion": 2018,

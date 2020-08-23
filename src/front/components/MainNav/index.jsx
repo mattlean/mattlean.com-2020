@@ -4,7 +4,7 @@ import { useIntersection } from 'react-use'
 import { LG_PHONE } from '../../visuals/responsive'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { ThemeCtx } from '../../visuals/theme'
-import { useViewportWidth } from '../../util'
+import { useViewportWidth } from 'eswiss/dist/util'
 import Logo from '../../assets/logo/logo.svg'
 import Menu from '../../assets/icons/menu.svg'
 import SunMoon from '../../assets/icons/sun-moon.svg'
@@ -16,7 +16,7 @@ const THRESHOLD = 0.5
  * Main Navigation
  */
 const MainNav = () => {
-  const viewportWidth = useViewportWidth()
+  const viewportWidth = useViewportWidth(__IS_SERVER__)
   const { pathname } = useLocation()
   const [initRender, setInitRender] = useState(true)
   const [isOpen, setIsOpen] = useState(false)
@@ -29,10 +29,10 @@ const MainNav = () => {
     threshold: THRESHOLD,
   })
 
-  const isPhone = !__isServer__ && viewportWidth <= LG_PHONE
+  const isPhone = !__IS_SERVER__ && viewportWidth <= LG_PHONE
 
   const isHidden =
-    __isServer__ ||
+    __IS_SERVER__ ||
     (!isPhone &&
       ((intersection && intersection.intersectionRatio < THRESHOLD) ||
         !intersection))

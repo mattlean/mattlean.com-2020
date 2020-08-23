@@ -21,5 +21,5 @@ module.exports = merge([
 
   loadSVGs(),
 
-  setFreeVariable('__isServer__', false),
+  setFreeVariable('__IS_SERVER__', false),
 ])
