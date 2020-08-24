@@ -13,9 +13,6 @@ let PORT = process.env.PORT
 
 const app = express()
 
-app.use(compression())
-app.use(helmet())
-
 if (process.env.NODE_ENV === 'development') {
   logger.info('🤖🔧 INITIATING DEVELOPMENT SERVER 🔧🤖')
 
@@ -24,6 +21,9 @@ if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'))
   app.use('/', express.static(FRONT.BUILD_DEV))
 } else if (process.env.NODE_ENV === 'production') {
+  app.use(compression())
+  app.use(helmet())
+
   logger.info('🤖🛫 INITIATING PRODUCTION SERVER 🛫🤖')
 
   if (!process.env.PORT) {
