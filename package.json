@@ -13,7 +13,7 @@
     "back:start:debug": "nodemon --exec \"yarn front:build && yarn back:build && NODE_ENV=development node --inspect-brk build/back/development/server\"",
     "build:production": "yarn front:build:production && yarn back:build:production",
     "dev": "nodemon --exec \"yarn front:build && yarn back:build && yarn back:start\"",
-    "front:dev": "webpack-dev-server --config webpack/front/config.js --env.type development --env.devType front",
+    "front:dev": "nodemon --config nodemon-front.json --exec \"webpack-dev-server --config webpack/front/config.js --env.type development --env.devType front\"",
     "front:build": "webpack --config webpack/front/config.js --env.type development",
     "front:build-dev": "webpack --config webpack/front/config.js --env.type development --env.devType front",
     "front:build:production": "webpack --config webpack/front/config.js --env.type production",

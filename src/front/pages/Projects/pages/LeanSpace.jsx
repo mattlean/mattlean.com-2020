@@ -76,7 +76,7 @@ const LeanSpace = () => {
         threshold={0.2}
         className="ss ss-lg"
       >
-        <img src={`/${SSWork}`} alt="" />
+        <img src={SSWork} alt="" />
         <figcaption className="c-grey-2">
           Work page showcasing&nbsp;projects
         </figcaption>
@@ -87,7 +87,7 @@ const LeanSpace = () => {
         threshold={0.2}
         className="ss ss-lg"
       >
-        <img src={`/${SSBlogPost}`} alt="" />
+        <img src={SSBlogPost} alt="" />
         <figcaption className="c-grey-2">
           First post written on the&nbsp;blog
         </figcaption>
@@ -106,13 +106,13 @@ const LeanSpace = () => {
       </BlindFrame>
       <section className="subgrid-ss-sm">
         <BlindFrame nodeType="figure" className="ss ss-sm">
-          <img src={`/${SSWorkMobile}`} alt="" />
+          <img src={SSWorkMobile} alt="" />
           <figcaption className="c-grey-2">
             Work page showcasing projects being viewed on a mobile&nbsp;device
           </figcaption>
         </BlindFrame>
         <BlindFrame nodeType="figure" className="ss ss-sm project-details-gap">
-          <img src={`/${SSBlogPostMobile}`} alt="" />
+          <img src={SSBlogPostMobile} alt="" />
           <figcaption className="c-grey-2">
             First post written on the blog being viewed on a mobile&nbsp;device
           </figcaption>

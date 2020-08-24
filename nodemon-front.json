@@ -1,0 +1,10 @@
+{
+  "ext": "css,ejs,js,json,jsx,scss,svg",
+  "watch": [
+    "src/front",
+    "webpack/parts.js",
+    "webpack/front",
+    "nodemon.json",
+    "PATHS.js"
+  ]
+}

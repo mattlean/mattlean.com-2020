@@ -65,7 +65,7 @@ const Adam = () => {
       </BlindFrame>
       <BlindFrame nodeType="figure" className="vid project-details-gap">
         <video autoPlay controls loop muted>
-          <source src={`/${VidSnake}`} />
+          <source src={VidSnake} />
         </video>
         <figcaption className="c-grey-2">
           Video of{' '}

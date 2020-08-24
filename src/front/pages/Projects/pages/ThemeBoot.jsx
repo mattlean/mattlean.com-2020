@@ -74,7 +74,7 @@ const ThemeBoot = () => {
         threshold={0.2}
         className="ss ss-lg"
       >
-        <img src={`/${SSFront}`} alt="" />
+        <img src={SSFront} alt="" />
         <figcaption className="c-grey-2">Frontpage example</figcaption>
       </BlindFrame>
       <BlindFrame
@@ -83,18 +83,18 @@ const ThemeBoot = () => {
         threshold={0.2}
         className="ss ss-lg"
       >
-        <img src={`/${SSLocation}`} alt="" />
+        <img src={SSLocation} alt="" />
         <figcaption className="c-grey-2">Regular page&nbsp;example</figcaption>
       </BlindFrame>
       <section className="subgrid-ss-sm">
         <BlindFrame nodeType="figure" className="ss ss-sm">
-          <img src={`/${SSFrontMobile}`} alt="" />
+          <img src={SSFrontMobile} alt="" />
           <figcaption className="c-grey-2">
             Frontpage example being viewed on a mobile&nbsp;device
           </figcaption>
         </BlindFrame>
         <BlindFrame nodeType="figure" className="ss ss-sm project-details-gap">
-          <img src={`/${SSFAQ}`} alt="" />
+          <img src={SSFAQ} alt="" />
           <figcaption className="c-grey-2">
             Regular page example being viewed on a mobile&nbsp;device
           </figcaption>

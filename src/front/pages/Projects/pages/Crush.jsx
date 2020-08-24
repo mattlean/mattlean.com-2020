@@ -64,13 +64,13 @@ const Crush = () => {
       </BlindFrame>
       <section className="subgrid-ss-sm">
         <BlindFrame nodeType="figure" className="ss ss-sm">
-          <img src={`/${SSStart}`} alt="" />
+          <img src={SSStart} alt="" />
           <figcaption className="c-grey-2">
             Screenshot of start&nbsp;screen
           </figcaption>
         </BlindFrame>
         <BlindFrame nodeType="figure" className="ss ss-sm">
-          <img src={`/${SSBoard}`} alt="" />
+          <img src={SSBoard} alt="" />
           <figcaption className="c-grey-2">
             Screenshot of tile-matching&nbsp;board
           </figcaption>
@@ -82,7 +82,7 @@ const Crush = () => {
         threshold={0.2}
         className="ss ss-lg project-details-gap"
       >
-        <img src={`/${SSBrowser}`} alt="" />
+        <img src={SSBrowser} alt="" />
         <figcaption className="c-grey-2">
           qPCR Crush game and leaderboards on the
           qPCR&nbsp;Design&nbsp;Lab&nbsp;microsite

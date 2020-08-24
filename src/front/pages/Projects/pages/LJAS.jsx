@@ -91,21 +91,21 @@ const LJAS = () => {
         </a>
       </BlindFrame>
       <BlindFrame nodeType="figure" className="ss ss-lg">
-        <img src={`/${SSDesktop}`} alt="" />
+        <img src={SSDesktop} alt="" />
         <figcaption className="c-grey-2">
           Native desktop todo list app built with Lean JS App Starter running
           on&nbsp;macOS
         </figcaption>
       </BlindFrame>
       <BlindFrame nodeType="figure" className="ss ss-sm">
-        <img src={`/${SSFrontend}`} alt="" />
+        <img src={SSFrontend} alt="" />
         <figcaption className="c-grey-2">
           Browser frontend for a bulletin board system built with
           Lean&nbsp;JS&nbsp;App&nbsp;Starter
         </figcaption>
       </BlindFrame>
       <BlindFrame nodeType="figure" className="ss ss-sm project-details-gap">
-        <img src={`/${SSBackend}`} alt="" />
+        <img src={SSBackend} alt="" />
         <figcaption className="c-grey-2">
           Node.js REST server API built with Lean&nbsp;JS&nbsp;App&nbsp;Starter
         </figcaption>

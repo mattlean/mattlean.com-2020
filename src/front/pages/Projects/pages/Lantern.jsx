@@ -81,7 +81,7 @@ const Lantern = () => {
         threshold={0.2}
         className="ss ss-lg project-details-gap"
       >
-        <img src={`/${SSLantern}`} alt="" />
+        <img src={SSLantern} alt="" />
         <figcaption className="c-grey-2">
           Example of open lightbox using&nbsp;Lantern.js
         </figcaption>

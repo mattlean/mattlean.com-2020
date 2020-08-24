@@ -5,6 +5,7 @@ module.exports = merge([
   {
     output: {
       filename: 'main.js',
+      publicPath: '/',
     },
 
     resolve: {

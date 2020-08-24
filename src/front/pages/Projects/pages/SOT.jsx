@@ -74,7 +74,7 @@ const SOT = () => {
         </Link>
       </BlindFrame>
       <BlindFrame nodeType="figure" className="ss ss-lg">
-        <img src={`/${SSCharts}`} alt="" />
+        <img src={SSCharts} alt="" />
         <figcaption className="c-grey-2">
           Main screen for spectral overlay&nbsp;tool
         </figcaption>
@@ -94,14 +94,14 @@ const SOT = () => {
         </CTA>
       </BlindFrame>
       <BlindFrame nodeType="figure" className="ss ss-sm">
-        <img src={`/${SSInstrumentSelection}`} alt="" />
+        <img src={SSInstrumentSelection} alt="" />
         <figcaption className="c-grey-2">
           Instrument selection that supports filtering of instruments and
           sorting of&nbsp;dyes
         </figcaption>
       </BlindFrame>
       <BlindFrame nodeType="figure" className="ss ss-sm project-details-gap">
-        <img src={`/${SSFullscreen}`} alt="" />
+        <img src={SSFullscreen} alt="" />
         <figcaption className="c-grey-2">
           Fullscreen mode for a larger view of the&nbsp;charts
         </figcaption>
