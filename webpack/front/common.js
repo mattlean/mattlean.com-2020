@@ -1,11 +1,8 @@
 const merge = require('webpack-merge')
 const { cleanBuild, copyFiles, loadSVGs, setFreeVariable } = require('../parts')
-const { FRONT } = require('../../PATHS')
 
 module.exports = merge([
   {
-    entry: `${FRONT.SRC}/index.jsx`,
-
     output: {
       filename: 'main.js',
     },

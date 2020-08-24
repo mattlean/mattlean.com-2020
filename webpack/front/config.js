@@ -1,11 +1,15 @@
 const merge = require('webpack-merge')
 const commonConfig = require('./common')
 
-module.exports = ({ type }) => {
+module.exports = ({ devType, type }) => {
   let config
 
   if (type === 'development') {
     config = require('./development')
+
+    if (devType === 'front') {
+      config = merge(config, require('./front-dev'))
+    }
   } else if (type === 'production') {
     config = require('./production')
   } else {

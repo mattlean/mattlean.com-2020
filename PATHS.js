@@ -9,6 +9,7 @@ const PATHS = {
   },
   FRONT: {
     BUILD_DEV: path.join(__dirname, 'build/front/development'),
+    BUILD_FRONT_DEV: path.join(__dirname, 'build/front/front-dev'),
     BUILD_PROD: path.join(__dirname, 'build/front/production'),
     SRC: path.join(__dirname, 'src/front'),
   },

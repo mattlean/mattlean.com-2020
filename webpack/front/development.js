@@ -14,6 +14,8 @@ console.log('🤡📦 STARTING FRONTEND DEVELOPMENT BUILD PROCESS 📦🤡')
 
 module.exports = merge([
   {
+    entry: `${FRONT.SRC}/index.jsx`,
+
     output: {
       path: FRONT.BUILD_DEV,
     },
