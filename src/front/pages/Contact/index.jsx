@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import BlindFrame from '../../components/Blind/BlindFrame'
 import MainFooter from '../../components/MainFooter'
-import variants from '../variants'
+import VARIANTS from '../page_variants'
 import { useHeadDataEffect } from '../../util'
 import { MailIcon } from '@primer/octicons-react'
 import LogoLinkedIn from '../../assets/icons/linkedin.png'
@@ -18,7 +18,7 @@ const Contact = () => {
       animate="initial"
       exit="out"
       initial="initial"
-      variants={variants}
+      variants={VARIANTS}
       onAnimationComplete={() => window.scroll(0, 0)}
       className="container"
     >

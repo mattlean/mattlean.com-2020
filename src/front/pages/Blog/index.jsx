@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import BlindFrame from '../../components/Blind/BlindFrame'
 import MainFooter from '../../components/MainFooter'
-import variants from '../variants'
+import VARIANTS from '../page_variants'
 import { getAllPostData } from '../../../common/data/post'
 import { ROUTE_PREFIX } from '../../../common/data/route/blog'
 import { useHeadDataEffect } from '../../util'
@@ -43,7 +43,7 @@ const Blog = () => {
       animate="initial"
       exit="out"
       initial="initial"
-      variants={variants}
+      variants={VARIANTS}
       onAnimationComplete={() => window.scroll(0, 0)}
       className="container"
     >

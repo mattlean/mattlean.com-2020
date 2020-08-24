@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import MainFooter from '../../components/MainFooter'
 import NoMatchContent from './NoMatchContent'
-import variants from '../variants'
+import VARIANTS from '../page_variants'
 
 /**
  * No Match Page
@@ -12,7 +12,7 @@ const NoMatch = () => (
     animate="initial"
     exit="out"
     initial="initial"
-    variants={variants}
+    variants={VARIANTS}
     onAnimationComplete={() => window.scroll(0, 0)}
     className="container"
   >

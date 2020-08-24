@@ -1,4 +1,4 @@
-const variants = {
+const PAGE_VARIANTS = {
   initial: {
     opacity: 1,
     y: 0,
@@ -13,4 +13,4 @@ const variants = {
   },
 }
 
-export default variants
+export default PAGE_VARIANTS

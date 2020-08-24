@@ -3,7 +3,7 @@ import { Badge } from 'eswiss'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import BlindFrame from '../../components/Blind/BlindFrame'
-import variants from '../variants'
+import VARIANTS from '../page_variants'
 import MainFooter from '../../components/MainFooter'
 import { getAllProjectData } from '../../../common/data/project'
 import { ROUTE_PREFIX } from '../../../common/data/route/project'
@@ -40,7 +40,7 @@ const ProjectFeed = () => {
       animate="initial"
       exit="out"
       initial="initial"
-      variants={variants}
+      variants={VARIANTS}
       onAnimationComplete={() => window.scroll(0, 0)}
       className="container"
     >

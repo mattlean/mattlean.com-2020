@@ -1,29 +1,7 @@
 import React, { useRef } from 'react'
 import { Modal } from 'eswiss'
 import { motion } from 'framer-motion'
-
-const VARIANTS = {
-  animate: {
-    display: 'block',
-    opacity: 1,
-    scale: 1,
-    transition: {
-      duration: 0.2,
-      ease: 'easeOut',
-    },
-  },
-  initial: {
-    opacity: 0,
-    scale: 1.2,
-    transition: {
-      duration: 0.2,
-      ease: 'easeIn',
-    },
-    transitionEnd: {
-      display: 'none',
-    },
-  },
-}
+import VARIANTS from '../modal_variants'
 
 const AboutThisSite = ({ focusEleOnClose, isOpen, setIsOpen }) => {
   const animateModal = isOpen ? 'animate' : 'initial'

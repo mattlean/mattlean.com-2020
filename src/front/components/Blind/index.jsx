@@ -14,7 +14,7 @@ const Blind = ({ delay, duration, threshold }) => {
   if (!duration) duration = 0.5
   if (!threshold) threshold = 1
 
-  const variants = {
+  const VARIANTS = {
     animate: (delay) => ({
       height: '0%',
       transition: {
@@ -55,7 +55,7 @@ const Blind = ({ delay, duration, threshold }) => {
       aria-hidden={true}
       custom={delay}
       initial="initial"
-      variants={variants}
+      variants={VARIANTS}
       onAnimationComplete={() => setIsDone(true)}
       className="blind"
     />

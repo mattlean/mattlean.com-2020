@@ -18,7 +18,7 @@ import SOT from './SOT'
 import MainFooter from '../../../components/MainFooter'
 import NoMatchContent from '../../NoMatch/NoMatchContent'
 import ThemeBoot from './ThemeBoot'
-import variants from '../../variants'
+import VARIANTS from '../../page_variants'
 import { genFormattedPath } from '../../../../common/util'
 import { getRouteData } from '../../../../common/data/route'
 import { isTxtOnly } from './layout'
@@ -51,7 +51,7 @@ const ProjectPage = () => {
       animate="initial"
       exit="out"
       initial="initial"
-      variants={variants}
+      variants={VARIANTS}
       onAnimationComplete={() => window.scroll(0, 0)}
       className="container"
     >

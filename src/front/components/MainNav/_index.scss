@@ -53,6 +53,10 @@
           width: 19.24px;
         }
       }
+
+      &.phone-home {
+        display: none;
+      }
     }
   }
 }
@@ -108,48 +112,51 @@
     }
 
     > ul {
+      bottom: 0;
       display: none;
+      left: 0;
+      padding-top: 233px;
+      position: fixed;
+      right: 0;
+      top: 0;
       transform: none;
+      z-index: 2;
 
       &.open {
-        bottom: 0;
         display: block;
-        left: 0;
-        padding-top: 233px;
-        position: fixed;
-        right: 0;
-        top: 0;
-        z-index: 2;
+      }
 
-        > li {
-          font: typography.$disp-medium size.$size-59
-            typography.$disp-font-family;
+      > li {
+        font: typography.$disp-medium size.$size-59 typography.$disp-font-family;
 
+        display: block;
+        margin-bottom: size.$size-30;
+        margin-left: size.$size-27;
+
+        &:last-child {
+          bottom: size.$size-18;
+          margin-bottom: 0;
+          position: absolute;
+        }
+
+        > a {
+          color: var(--c-primary);
+          letter-spacing: normal;
+        }
+
+        > .btn-nav {
+          font-size: size.$size-20;
+
+          vertical-align: bottom;
+
+          > svg {
+            height: 14.35px;
+            margin-right: 1em;
+          }
+        }
+
+        &.phone-home {
           display: block;
-          margin-bottom: size.$size-30;
-          margin-left: size.$size-27;
-
-          &:last-child {
-            bottom: size.$size-18;
-            margin-bottom: 0;
-            position: absolute;
-          }
-
-          > a {
-            color: var(--c-primary);
-            letter-spacing: normal;
-          }
-
-          > .btn-nav {
-            font-size: size.$size-20;
-
-            vertical-align: bottom;
-
-            > svg {
-              height: 14.35px;
-              margin-right: 1em;
-            }
-          }
         }
       }
     }
@@ -181,7 +188,7 @@
       height: 18px;
     }
 
-    > ul.open {
+    > ul {
       padding-top: 91px;
 
       > li {

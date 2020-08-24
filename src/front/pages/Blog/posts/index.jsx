@@ -4,7 +4,7 @@ import { Route, Switch, useLocation, useParams } from 'react-router-dom'
 import HelloWorld from './HelloWorld'
 import MainFooter from '../../../components/MainFooter'
 import NoMatchContent from '../../NoMatch/NoMatchContent'
-import variants from '../../variants'
+import VARIANTS from '../../page_variants'
 import { genFormattedPath } from '../../../../common/util'
 import { getRouteData } from '../../../../common/data/route'
 import { isGeneral } from './layout'
@@ -37,7 +37,7 @@ const Post = () => {
       animate="initial"
       exit="out"
       initial="initial"
-      variants={variants}
+      variants={VARIANTS}
       onAnimationComplete={() => window.scroll(0, 0)}
       className="container"
     >

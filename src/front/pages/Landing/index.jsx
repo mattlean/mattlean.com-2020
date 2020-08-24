@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import BlindFrame from '../../components/Blind/BlindFrame'
 import CTA from '../../components/CTA'
 import MainFooter from '../../components/MainFooter'
-import variants from '../variants'
+import VARIANTS from '../page_variants'
 import { getPostData } from '../../../common/data/post'
 import { getProjectData } from '../../../common/data/project'
 import { useHeadDataEffect } from '../../util'
@@ -25,7 +25,7 @@ const Landing = () => {
       animate="initial"
       exit="out"
       initial="initial"
-      variants={variants}
+      variants={VARIANTS}
       onAnimationComplete={() => window.scroll(0, 0)}
       className="container"
     >
