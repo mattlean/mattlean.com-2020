@@ -338,3 +338,39 @@
     }
   }
 }
+
+@media (max-width: size.$size-390) {
+  .grid-project {
+    grid-template-columns: 1fr;
+
+    > .btn-triple-group {
+      &.btn-option- {
+        &a,
+        &b,
+        &c {
+          grid-column: auto;
+          grid-row: auto;
+        }
+      }
+    }
+
+    > .subgrid-project-desc {
+      grid-template-columns: 1fr;
+
+      > .btn-triple-group {
+        &.btn-option- {
+          &a,
+          &b,
+          &c {
+            grid-column: auto;
+            grid-row: auto;
+          }
+        }
+      }
+    }
+
+    > .subgrid-project-details {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}

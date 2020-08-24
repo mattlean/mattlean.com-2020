@@ -37,7 +37,8 @@ const Landing = () => {
             threshold={0.5}
             className="h-1 md:h-2 sm:h-3 lh-1"
           >
-            Hi, I’m <br className="title-br" /> Matt&nbsp;Lean!
+            Hi, I’m <br className="title-br" aria-hidden="true" />{' '}
+            Matt&nbsp;Lean!
           </BlindFrame>
           <BlindFrame
             nodeType="p"

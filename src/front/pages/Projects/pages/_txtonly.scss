@@ -1,8 +1,14 @@
 @use '../../../visuals/scale/size';
 
 @media (max-width: size.$size-1150) {
-  .grid-project-txtonly > .subgrid-project-details {
-    grid-column: 2 / span 2;
+  .grid-project-txtonly {
+    > .cover > h1 > .title-br {
+      display: none;
+    }
+
+    > .subgrid-project-details {
+      grid-column: 2 / span 2;
+    }
   }
 }
 
@@ -21,5 +27,11 @@
     > .subgrid-project-details {
       grid-column: 1/-1;
     }
+  }
+}
+
+@media (max-width: size.$size-400) {
+  .grid-project-txtonly > .cover > h1 > .title-br {
+    display: inline;
   }
 }

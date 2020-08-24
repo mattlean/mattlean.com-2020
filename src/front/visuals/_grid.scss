@@ -14,6 +14,5 @@
 @media (max-width: size.$size-470) {
   .grid {
     grid-gap: size.$size-24;
-    grid-template-columns: minxmax(0, 1fr);
   }
 }

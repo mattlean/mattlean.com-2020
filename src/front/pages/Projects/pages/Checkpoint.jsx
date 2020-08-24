@@ -11,12 +11,16 @@ import { MarkGithubIcon } from '@primer/octicons-react'
  */
 const Checkpoint = () => {
   useHeadDataEffect()
-  const { name, tags } = getProjectData('checkpoint')
+  const { tags } = getProjectData('checkpoint')
 
   return (
     <>
       <BlindFrame nodeType="header" className="cover">
-        <h1 className="h-1 md:h-2 sm:h-3">{name}</h1>
+        <h1 className="h-1 md:h-2 sm:h-3">
+          Checkpoint
+          <br className="title-br" aria-hidden="true" />
+          .js
+        </h1>
         <ul className="badge-list">
           {tags.map((t) => (
             <Badge nodeType="li" wide={true} key={t.id}>

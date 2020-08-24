@@ -11,12 +11,16 @@ import { BookIcon, MarkGithubIcon } from '@primer/octicons-react'
  */
 const ML2020 = () => {
   useHeadDataEffect()
-  const { company, name, tags } = getProjectData('ml2020')
+  const { company, tags } = getProjectData('ml2020')
 
   return (
     <>
       <BlindFrame nodeType="header" className="cover">
-        <h1 className="h-1 md:h-2 sm:h-3">{name}</h1>
+        <h1 className="h-1 md:h-2 sm:h-3">
+          MattLean
+          <br className="title-br" aria-hidden="true" />
+          .com
+        </h1>
         {company && (
           <h2 className="h-4 sm:h-6 c-grey-2 dispw-roman">{company}</h2>
         )}
