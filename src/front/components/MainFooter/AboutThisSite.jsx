@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { Modal } from 'eswiss'
 import { motion } from 'framer-motion'
 
@@ -27,9 +27,19 @@ const VARIANTS = {
 
 const AboutThisSite = ({ focusEleOnClose, isOpen, setIsOpen }) => {
   const animateModal = isOpen ? 'animate' : 'initial'
+  const modalH = useRef(null)
 
   const modalOverlay = (
-    <motion.div animate={animateModal} initial="initial" variants={VARIANTS} />
+    <motion.div
+      animate={animateModal}
+      initial="initial"
+      variants={VARIANTS}
+      onAnimationComplete={() => {
+        if (animateModal === 'animate' && modalH && modalH.current) {
+          modalH.current.focus()
+        }
+      }}
+    />
   )
 
   return (
@@ -42,13 +52,16 @@ const AboutThisSite = ({ focusEleOnClose, isOpen, setIsOpen }) => {
       isOpen={isOpen}
       modalClassName="modal"
       onClose={() => setIsOpen(false)}
+      onOpen={null}
       overlayClassName="ats"
       overlayOverride={modalOverlay}
       overrideClassName={true}
       useAriaHidden={true}
       useAriaModal={true}
     >
-      <h1 className="modal-h h-4 sm:h-6">About MattLean.com</h1>
+      <h1 ref={modalH} className="modal-h h-4 sm:h-6" tabIndex="-1">
+        About MattLean.com
+      </h1>
       <p>
         MattLean.com is designed to be responsive, meaning it works on all
         screen sizes, from large desktops to small mobile devices.
