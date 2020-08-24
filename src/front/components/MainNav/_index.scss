@@ -98,6 +98,10 @@
       right: size.$size-27;
       z-index: 3;
 
+      &.open {
+        position: fixed;
+      }
+
       > svg {
         height: 44px;
       }

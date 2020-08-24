@@ -4,7 +4,7 @@ import { useIntersection } from 'react-use'
 import { LG_PHONE } from '../../visuals/responsive'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { ThemeCtx } from '../../visuals/theme'
-import { useViewportWidth } from 'eswiss/dist/util'
+import { useViewportWidth, setBodyScroll } from 'eswiss/dist/util'
 import Logo from '../../assets/logo/logo.svg'
 import Menu from '../../assets/icons/menu.svg'
 import SunMoon from '../../assets/icons/sun-moon.svg'
@@ -30,6 +30,11 @@ const MainNav = () => {
   })
 
   const isPhone = !__IS_SERVER__ && viewportWidth <= LG_PHONE
+
+  if (!isPhone && isOpen) {
+    // Close mobile MainNav if window is resized too large and mobile MainNav is open
+    setIsOpen(false)
+  }
 
   const isHidden =
     __IS_SERVER__ ||
@@ -72,6 +77,9 @@ const MainNav = () => {
   let logoClassName = 'logo'
   if (isOpen) logoClassName += ' open'
 
+  let mainNavCloseClassName = 'btn-nav'
+  if (isOpen) mainNavCloseClassName += ' open'
+
   const home = isPhone ? (
     <li>
       <NavLink exact={true} to="/" onClick={() => setIsOpen(false)}>
@@ -94,6 +102,7 @@ const MainNav = () => {
   }
 
   const openClassName = isOpen ? 'open' : ''
+  if (!__IS_SERVER__) setBodyScroll(!isOpen)
 
   return (
     <header ref={intersectionRef} className="main-header">
@@ -107,7 +116,10 @@ const MainNav = () => {
         <Link to="/" className={logoClassName} onClick={() => setIsOpen(false)}>
           <Logo />
         </Link>
-        <button className="btn-nav" onClick={() => setIsOpen(!isOpen)}>
+        <button
+          className={mainNavCloseClassName}
+          onClick={() => setIsOpen(!isOpen)}
+        >
           {menuIcon}
         </button>
         <ul className={openClassName}>
