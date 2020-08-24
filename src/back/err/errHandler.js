@@ -1,3 +1,4 @@
+import logger from '../logger'
 import { createErrTemplateString } from '../render'
 
 /**
@@ -5,7 +6,7 @@ import { createErrTemplateString } from '../render'
  */
 // eslint-disable-next-line no-unused-vars
 const errHandler = (err, req, res, next) => {
-  console.error(err.stack) // eslint-disable-line no-console
+  logger.error(err.stack)
   if (!res.statusCode || res.statusCode < 400 || res.statusCode > 599) {
     res.status(500)
   }

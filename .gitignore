@@ -1,4 +1,6 @@
 build
 node_modules
+combined.log
+error.log
 yarn.lock
 yarn-error.log
