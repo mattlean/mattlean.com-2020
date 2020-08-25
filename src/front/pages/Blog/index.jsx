@@ -54,7 +54,12 @@ const Blog = () => {
       className="container"
     >
       <main aria-label="Content" className="grid-feed grid">
-        <BlindFrame ref={srStart} nodeType="h1" className="h-2 sm:h-3">
+        <BlindFrame
+          ref={srStart}
+          nodeType="h1"
+          tabIndex="-1"
+          className="h-2 sm:h-3"
+        >
           Blog
         </BlindFrame>
         <section className="content">{posts}</section>

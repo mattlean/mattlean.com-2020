@@ -30,7 +30,12 @@ const Contact = () => {
     >
       <main aria-label="Content" className="grid-contact grid">
         <section className="cover">
-          <BlindFrame ref={srStart} nodeType="h1" className="h-2 sm:h-3 lh-1">
+          <BlindFrame
+            ref={srStart}
+            nodeType="h1"
+            tabIndex="-1"
+            className="h-2 sm:h-3 lh-1"
+          >
             Let’s get in&nbsp;touch.
           </BlindFrame>
           <BlindFrame

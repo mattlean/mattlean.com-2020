@@ -51,7 +51,12 @@ const ProjectFeed = () => {
       className="container"
     >
       <main aria-label="Content" className="grid-feed grid">
-        <BlindFrame nodeType="h1" className="h-2 sm:h-3">
+        <BlindFrame
+          ref={srStart}
+          nodeType="h1"
+          tabIndex="-1"
+          className="h-2 sm:h-3"
+        >
           Projects
         </BlindFrame>
         <ul className="content">{projects}</ul>

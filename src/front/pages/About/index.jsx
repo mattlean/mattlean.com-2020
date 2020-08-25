@@ -29,7 +29,12 @@ const About = () => {
     >
       <main aria-label="Content" className="grid-about grid">
         <section className="cover">
-          <BlindFrame ref={srStart} nodeType="h1" className="h-2 sm:h-3">
+          <BlindFrame
+            ref={srStart}
+            nodeType="h1"
+            tabIndex="-1"
+            className="h-2 sm:h-3"
+          >
             Hello, world!
           </BlindFrame>
           <BlindFrame
