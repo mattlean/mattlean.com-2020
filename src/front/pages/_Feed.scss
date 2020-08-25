@@ -30,10 +30,6 @@
       > a {
         text-decoration: none;
 
-        > h2 {
-          margin-bottom: size.$size-7;
-        }
-
         &:hover > h2 {
           text-decoration: underline;
         }
@@ -42,7 +38,7 @@
           line-height: 1.25em;
 
           margin-bottom: 0;
-          transform: translateY(-5px);
+          margin-top: size.$size-3;
         }
 
         > .badge-list > li {
