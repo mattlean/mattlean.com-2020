@@ -27,7 +27,7 @@
       transform: translateY(-81px);
     }
 
-    > section.blind-frame {
+    > .cta {
       grid-column: 1/-1;
     }
   }
@@ -205,7 +205,7 @@
 }
 
 @media (max-width: size.$size-600) {
-  .grid-landing > .subgrid-cover > section.blind-frame {
+  .grid-landing > .subgrid-cover > .cta {
     align-self: center;
   }
 }
@@ -243,7 +243,7 @@
         transform: translate(1px, -65px);
       }
 
-      > section.blind-frame {
+      > .cta {
         align-self: end;
         grid-row: 2/3;
       }

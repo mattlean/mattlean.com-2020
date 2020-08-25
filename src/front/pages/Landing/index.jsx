@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import BlindFrame from '../../components/Blind/BlindFrame'
@@ -20,6 +20,12 @@ const csLeanSpace = getPostData('cs-lean-space')
 const Landing = () => {
   useHeadDataEffect()
 
+  // Focus starting element on page load
+  const srStart = useRef(null)
+  useEffect(() => {
+    if (srStart.current) srStart.current.focus()
+  })
+
   return (
     <motion.div
       animate="initial"
@@ -29,15 +35,17 @@ const Landing = () => {
       onAnimationComplete={() => window.scroll(0, 0)}
       className="container"
     >
-      <main className="grid-landing grid">
+      <main aria-label="Content" className="grid-landing grid">
         <section className="subgrid-cover grid">
           <BlindFrame
+            ref={srStart}
             nodeType="h1"
             delay={0.2}
+            tabIndex="-1"
             threshold={0.5}
             className="h-1 md:h-2 sm:h-3 lh-1"
           >
-            Hi, I’m <br className="title-br" aria-hidden="true" />{' '}
+            Hi, I’m <br className="title-br" aria-hidden="true" />
             Matt&nbsp;Lean!
           </BlindFrame>
           <BlindFrame
@@ -50,11 +58,14 @@ const Landing = () => {
             design. I’ve been building web-based products for Silicon Valley
             since 2015 and am currently looking for new&nbsp;opportunities.
           </BlindFrame>
-          <BlindFrame nodeType="section" delay={0.8} threshold={0.5}>
-            <CTA to="/about" type="lg" className="svg-primary a-primary">
-              Learn more about me
-            </CTA>
-          </BlindFrame>
+          <CTA
+            blind={{ delay: 0.8, threshold: 0.5 }}
+            to="/about"
+            type="lg"
+            className="svg-primary a-primary"
+          >
+            Learn more about me
+          </CTA>
         </section>
         <BlindFrame
           nodeType="h2"

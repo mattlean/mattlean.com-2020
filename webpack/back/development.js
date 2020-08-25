@@ -1,6 +1,6 @@
 const merge = require('webpack-merge')
 const { BACK, NODE_MODULES, SRC } = require('../../PATHS')
-const { compileJS, genSourceMaps, loadDevMedia, setMode } = require('../parts')
+const { compileJS, genSourceMaps, setMode } = require('../parts')
 
 // eslint-disable-next-line no-console
 console.log('🤖📦 STARTING BACKEND DEVELOPMENT BUILD PROCESS 📦🤖')
@@ -22,6 +22,4 @@ module.exports = merge([
   }),
 
   genSourceMaps('cheap-module-eval-source-map'),
-
-  loadDevMedia(),
 ])

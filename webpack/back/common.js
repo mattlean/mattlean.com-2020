@@ -4,6 +4,7 @@ const {
   cleanBuild,
   ignoreNodeModules,
   loadHTMLAsString,
+  loadMedia,
   loadSVGs,
   setFreeVariable,
 } = require('../parts')
@@ -12,12 +13,13 @@ module.exports = merge([
   {
     entry: `${BACK.SRC}/index.js`,
 
-    node: {
-      __dirname: true,
-    },
-
     output: {
       filename: 'server.js',
+      publicPath: '/',
+    },
+
+    node: {
+      __dirname: true,
     },
 
     resolve: {
@@ -32,6 +34,8 @@ module.exports = merge([
   ignoreNodeModules({ allowlist: [/^eswiss/] }),
 
   loadHTMLAsString({ attributes: false }),
+
+  loadMedia(),
 
   loadSVGs(),
 

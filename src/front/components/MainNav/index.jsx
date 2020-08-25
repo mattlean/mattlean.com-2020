@@ -92,7 +92,7 @@ const MainNav = () => {
   let mainNavCloseClassName = 'btn-nav'
   if (isOpen) mainNavCloseClassName += ' open'
 
-  const openClassName = isOpen ? 'open' : ''
+  const openClassName = isOpen ? 'open' : undefined
 
   // Set menu icon depending on whether phone MainNav is open or not
   const menuIcon = isOpen ? (
@@ -102,12 +102,7 @@ const MainNav = () => {
   )
 
   // Set phone MainNav theme setting btn txt
-  let btnLightTxt
-  if (isPhone) {
-    btnLightTxt = isDark ? 'light mode' : 'dark mode'
-  } else {
-    btnLightTxt = ''
-  }
+  const lightnessTxt = isDark ? 'light mode' : 'dark mode'
 
   const homeRef = useRef(null)
   const menuRef = useRef(null)
@@ -146,13 +141,14 @@ const MainNav = () => {
       </li>
       <li>
         <button
+          aria-label={`Switch lightness theme`}
           className="btn-nav c-primary"
           onClick={() => {
             manualToggle()
           }}
         >
           <SunMoon className="sun-moon_svg" />
-          {btnLightTxt}
+          {isPhone ? lightnessTxt : undefined}
         </button>
       </li>
     </>
@@ -161,9 +157,14 @@ const MainNav = () => {
   let LinkList
   if (isPhone) {
     // Use motion component if phone MainNav
+    const ariaHiddenVal = !isOpen ? true : undefined
+    const ariaModalVal = isOpen ? true : undefined
     LinkList = (
       <motion.ul
         animate={phoneAnimate}
+        aria-hidden={ariaHiddenVal}
+        aria-modal={ariaModalVal}
+        role="dialog"
         variants={PHONE_VARIANTS}
         className={openClassName}
       >
@@ -227,6 +228,7 @@ const MainNav = () => {
     <header ref={intersectionRef} className="main-header">
       <motion.nav
         animate={regularAnimate}
+        aria-label="Main"
         initial="initial"
         variants={regularVariants}
         onAnimationComplete={() => setInitRender(false)}
@@ -238,6 +240,8 @@ const MainNav = () => {
         {LinkList}
         <button
           ref={menuRef}
+          aria-hidden={!isPhone}
+          aria-label="Open main navigation"
           className={mainNavCloseClassName}
           onClick={() => setIsOpen(!isOpen)}
         >

@@ -34,6 +34,10 @@ h5,
 h6 {
   font-family: typography.$disp-font-family;
   font-weight: typography.$disp-medium;
+
+  &:focus {
+    outline: 0;
+  }
 }
 
 p {

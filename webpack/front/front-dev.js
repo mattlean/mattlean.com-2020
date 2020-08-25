@@ -1,6 +1,11 @@
 const merge = require('webpack-merge')
 const { FRONT } = require('../../PATHS')
-const { injectStyles, setupDevServer, setupHTML } = require('../parts')
+const {
+  injectStyles,
+  loadDevMedia,
+  setupDevServer,
+  setupHTML,
+} = require('../parts')
 
 module.exports = merge([
   {
@@ -20,6 +25,8 @@ module.exports = merge([
       sourceMap: true,
     },
   }),
+
+  loadDevMedia(),
 
   setupDevServer({
     host: process.env.HOST,

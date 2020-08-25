@@ -68,6 +68,7 @@ const MainFooter = () => {
         <nav className="internal-nav">
           <motion.ul
             animate={animateFooter}
+            aria-hidden="true"
             initial="initial"
             variants={VARIANTS}
           >
@@ -93,7 +94,7 @@ const MainFooter = () => {
             </li>
           </motion.ul>
         </nav>
-        <nav className="external-nav">
+        <nav aria-label="External website profile" className="external-nav">
           <motion.ul
             animate={animateFooter}
             initial="initial"

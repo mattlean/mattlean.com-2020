@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import { Link } from 'react-router-dom'
 import Blind from '.'
 
@@ -12,22 +12,27 @@ import Blind from '.'
  * @prop {string} [href] href attribute value used if nodeType is "a"
  * @prop {string} [nodeType='span'] Determine's blind frame's element. Defaults to span element.
  * @prop {string} [rel] rel attribute value used if nodeType is "a"
+ * @prop {tabIndex} [tabIndex] tabindex attribute value
  * @prop {string} [target] target attribute value used if nodeType is "a"
  * @prop {number} [threshold] Threshold value between 0 & 1 used by Intersection Observer
  * @prop {string} [to] to prop value used if nodeType is "Link"
  */
-const BlindFrame = ({
-  className,
-  children,
-  delay,
-  duration,
-  href,
-  nodeType,
-  rel,
-  target,
-  threshold,
-  to,
-}) => {
+const BlindFrame = (
+  {
+    className,
+    children,
+    delay,
+    duration,
+    href,
+    nodeType,
+    rel,
+    tabIndex,
+    target,
+    threshold,
+    to,
+  },
+  ref
+) => {
   let cn = 'blind-frame'
   if (className) cn += ` ${className}`
 
@@ -59,7 +64,11 @@ const BlindFrame = ({
 
   const Node = nodeType || 'span'
 
-  return <Node className={cn}>{content}</Node>
+  return (
+    <Node ref={ref} tabIndex={tabIndex} className={cn}>
+      {content}
+    </Node>
+  )
 }
 
-export default BlindFrame
+export default forwardRef(BlindFrame)
