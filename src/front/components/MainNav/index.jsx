@@ -36,9 +36,8 @@ const MainNav = () => {
   // Flag to check if MainNav is hidden for regular screen sizes
   const isHidden =
     __IS_SERVER__ ||
-    (!isPhone &&
-      ((intersection && intersection.intersectionRatio < THRESHOLD) ||
-        !intersection))
+    (intersection && intersection.intersectionRatio < THRESHOLD) ||
+    !intersection
       ? true
       : false
 

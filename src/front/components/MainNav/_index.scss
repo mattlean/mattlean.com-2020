@@ -97,17 +97,17 @@
     }
 
     > .btn-nav {
-      display: block;
-      position: absolute;
-      right: size.$size-27;
+      display: inline-block;
       z-index: 3;
 
       &.open {
         position: fixed;
+        right: size.$size-27;
       }
 
       > svg {
         height: 44px;
+        transform: translateY(1px);
       }
     }
 
@@ -175,9 +175,9 @@
     margin-top: size.$size-18;
 
     > .btn-nav {
-      position: fixed;
-      right: size.$size-18;
-      top: size.$size-18;
+      &.open {
+        right: size.$size-18;
+      }
 
       > svg {
         height: 18px;

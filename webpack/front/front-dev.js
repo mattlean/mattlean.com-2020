@@ -108,7 +108,7 @@ module.exports = merge([
       ],
       js: '/main.js',
       title: 'Matt Lean — Full-Stack Web Developer & UI/UX Designer',
-      NODE_ENV: process.env.NODE_ENV,
+      NODE_ENV: 'development',
     },
   }),
 ])
