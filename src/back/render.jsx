@@ -26,8 +26,10 @@ export const createTemplateString = (location, params, context = {}) => {
   // TODO: render minified HTML for production
   return render(TEMPLATE, {
     app,
+    css: '/main.css',
     desc,
     keywords,
+    js: '/main.js',
     title,
     NODE_ENV: process.env.NODE_ENV,
   })
@@ -48,8 +50,10 @@ export const createNoMatchTemplateString = (location, params, context = {}) => {
 
   return render(TEMPLATE, {
     app,
+    css: '/main.css',
     desc: '',
     keywords: '',
+    js: '/main.js',
     title: NO_MATCH_TITLE,
     NODE_ENV: process.env.NODE_ENV,
   })

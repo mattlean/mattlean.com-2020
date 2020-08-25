@@ -9,6 +9,8 @@ module.exports = ({ devType, type }) => {
 
     if (devType === 'front') {
       config = merge(config, require('./front-dev'))
+    } else {
+      config = merge(config, require('./ssr-dev'))
     }
   } else if (type === 'production') {
     config = require('./production')

@@ -1,7 +1,6 @@
 const merge = require('webpack-merge')
 const { FRONT } = require('../../PATHS')
-
-const { setupDevServer, setupHTML } = require('../parts')
+const { injectStyles, setupDevServer, setupHTML } = require('../parts')
 
 module.exports = merge([
   {
@@ -11,9 +10,20 @@ module.exports = merge([
     },
   },
 
+  injectStyles({
+    cssLoaderOptions: { sourceMap: true },
+    postCSSLoaderOptions: { config: { path: 'webpack' }, sourceMap: true },
+    sassLoaderOptions: {
+      sassOptions: {
+        includePaths: ['node_modules/eswiss/dist'],
+      },
+      sourceMap: true,
+    },
+  }),
+
   setupDevServer({
     host: process.env.HOST,
-    port: process.env.PORT,
+    port: 9489,
   }),
 
   setupHTML({
@@ -21,6 +31,7 @@ module.exports = merge([
     inject: false,
     templateParameters: {
       app: '',
+      css: '',
       desc:
         'The personal website of Matt Lean, a Silicon Valley full-stack web developer and UI/UX designer.',
       keywords: [
@@ -95,6 +106,7 @@ module.exports = merge([
         'computer',
         'science',
       ],
+      js: '/main.js',
       title: 'Matt Lean — Full-Stack Web Developer & UI/UX Designer',
       NODE_ENV: process.env.NODE_ENV,
     },

@@ -3,7 +3,6 @@ const {
   compileJS,
   copyFiles,
   genSourceMaps,
-  injectStyles,
   loadDevMedia,
   setMode,
 } = require('../parts')
@@ -33,17 +32,6 @@ module.exports = merge([
   copyFiles([{ from: 'src/front/util/dev.js' }]),
 
   genSourceMaps('cheap-module-eval-source-map'),
-
-  injectStyles({
-    cssLoaderOptions: { sourceMap: true },
-    postCSSLoaderOptions: { config: { path: 'webpack' }, sourceMap: true },
-    sassLoaderOptions: {
-      sassOptions: {
-        includePaths: ['node_modules/eswiss/dist'],
-      },
-      sourceMap: true,
-    },
-  }),
 
   loadDevMedia(),
 ])
