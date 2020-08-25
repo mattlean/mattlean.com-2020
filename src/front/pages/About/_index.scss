@@ -54,18 +54,26 @@
     > .subgrid-skills {
       column-gap: size.$size-27;
       columns: 2;
-      min-height: 1300px;
+      grid-column: 1/-1;
 
-      ul {
-        list-style: none;
+      > section {
+        break-inside: avoid;
 
-        margin-bottom: size.$size-42;
+        &.frontend {
+          display: inline-block;
+        }
 
-        > li {
-          margin-bottom: 0.5em;
+        > ul {
+          list-style: none;
 
-          &:last-child {
-            margin-bottom: 0;
+          margin-bottom: size.$size-42;
+
+          > li {
+            margin-bottom: 0.5em;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
           }
         }
       }
@@ -102,15 +110,7 @@
       }
 
       > .subgrid-skills {
-        columns: auto;
-        display: flex;
-        flex-flow: column wrap;
-        grid-column: 1/-1;
-        min-height: 700px;
-
-        > section {
-          width: 21%;
-        }
+        columns: 4;
       }
     }
   }
@@ -167,15 +167,27 @@
   }
 }
 
-@media (max-width: size.$size-660) {
-  .grid-about > .subgrid-resume > .subgrid-skills {
-    min-height: 800px;
-  }
-}
-
 @media (max-width: size.$size-600) {
   .grid-about > .content {
     margin-top: size.$size-54;
+  }
+}
+
+@media (max-width: size.$size-560) {
+  .grid-about > .subgrid-resume {
+    grid-template-columns: 1fr 1fr;
+
+    > .work {
+      grid-column: 1/2;
+    }
+
+    > .edu {
+      grid-column: 2/3;
+    }
+
+    > .subgrid-skills {
+      columns: 2;
+    }
   }
 }
 
@@ -223,11 +235,6 @@
 
       > .subgrid-skills {
         column-gap: size.$size-24;
-        min-height: 1200px;
-
-        > section {
-          width: 49%;
-        }
       }
     }
   }

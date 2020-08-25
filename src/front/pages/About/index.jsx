@@ -201,7 +201,7 @@ const About = () => {
                 <li>Mocha, Chai</li>
               </ul>
             </section>
-            <section>
+            <section className="frontend">
               <h2 className="h-9 dispw-bold tt-uppercase">Frontend</h2>
               <ul>
                 <li>React</li>
