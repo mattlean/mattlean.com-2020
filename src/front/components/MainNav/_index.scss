@@ -91,19 +91,13 @@
 
 @media (max-width: size.$size-560) {
   .main-nav {
-    > .logo.open {
-      position: fixed;
+    > .logo {
       z-index: 3;
     }
 
     > .btn-nav {
       display: inline-block;
       z-index: 3;
-
-      &.open {
-        position: fixed;
-        right: size.$size-27;
-      }
 
       > svg {
         height: 44px;
@@ -174,14 +168,8 @@
     margin-bottom: size.$size-24;
     margin-top: size.$size-18;
 
-    > .btn-nav {
-      &.open {
-        right: size.$size-18;
-      }
-
-      > svg {
-        height: 18px;
-      }
+    > .btn-nav > svg {
+      height: 18px;
     }
 
     > .logo > svg {
