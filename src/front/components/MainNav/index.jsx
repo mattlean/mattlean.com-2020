@@ -12,6 +12,7 @@ import SunMoon from '../../assets/icons/sun-moon.svg'
 import X from '../../assets/icons/x.svg'
 
 const THRESHOLD = 0.5
+let initRender = true
 
 /**
  * Main Navigation
@@ -19,7 +20,6 @@ const THRESHOLD = 0.5
 const MainNav = () => {
   const viewportWidth = useViewportWidth(__IS_SERVER__)
   const { pathname } = useLocation()
-  const [initRender, setInitRender] = useState(true)
   const [isOpen, setIsOpen] = useState(false)
   const { isDark, manualToggle } = useContext(ThemeCtx)
 
@@ -62,6 +62,7 @@ const MainNav = () => {
   // Set longer delay for initial animation for Landing page
   if (initRender && pathname === '/') {
     regularVariants.animate.transition.delay = 0.8
+    initRender = false
   }
 
   // Control regular animation
@@ -231,7 +232,6 @@ const MainNav = () => {
         aria-label="Main"
         initial="initial"
         variants={regularVariants}
-        onAnimationComplete={() => setInitRender(false)}
         className="container main-nav"
       >
         <Link to="/" className={logoClassName} onClick={() => setIsOpen(false)}>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Badge } from 'eswiss'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
@@ -38,6 +38,12 @@ for (const p of allPostData) {
 const Blog = () => {
   useHeadDataEffect()
 
+  // Focus starting element on page load
+  const srStart = useRef(null)
+  useEffect(() => {
+    if (srStart.current) srStart.current.focus()
+  }, [])
+
   return (
     <motion.div
       animate="initial"
@@ -47,8 +53,8 @@ const Blog = () => {
       onAnimationComplete={() => window.scroll(0, 0)}
       className="container"
     >
-      <main className="grid-feed grid">
-        <BlindFrame nodeType="h1" className="h-2 sm:h-3">
+      <main aria-label="Content" className="grid-feed grid">
+        <BlindFrame ref={srStart} nodeType="h1" className="h-2 sm:h-3">
           Blog
         </BlindFrame>
         <section className="content">{posts}</section>

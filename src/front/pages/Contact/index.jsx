@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 import BlindFrame from '../../components/Blind/BlindFrame'
 import MainFooter from '../../components/MainFooter'
@@ -13,6 +13,12 @@ import LogoLinkedIn from '../../assets/icons/linkedin.png'
 const Contact = () => {
   useHeadDataEffect()
 
+  // Focus starting element on page load
+  const srStart = useRef(null)
+  useEffect(() => {
+    if (srStart.current) srStart.current.focus()
+  }, [])
+
   return (
     <motion.div
       animate="initial"
@@ -22,9 +28,9 @@ const Contact = () => {
       onAnimationComplete={() => window.scroll(0, 0)}
       className="container"
     >
-      <main className="grid-contact grid">
+      <main aria-label="Content" className="grid-contact grid">
         <section className="cover">
-          <BlindFrame nodeType="h1" className="h-2 sm:h-3 lh-1">
+          <BlindFrame ref={srStart} nodeType="h1" className="h-2 sm:h-3 lh-1">
             Let’s get in&nbsp;touch.
           </BlindFrame>
           <BlindFrame

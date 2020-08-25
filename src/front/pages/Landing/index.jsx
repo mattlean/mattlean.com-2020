@@ -24,7 +24,7 @@ const Landing = () => {
   const srStart = useRef(null)
   useEffect(() => {
     if (srStart.current) srStart.current.focus()
-  })
+  }, [])
 
   return (
     <motion.div
@@ -109,11 +109,14 @@ const Landing = () => {
             </figure>
           </Link>
         </section>
-        <BlindFrame nodeType="section" className="view-more view-more-projects">
-          <CTA to="/projects" type="sm" className="svg-grey-3 a-grey-3">
-            View all projects
-          </CTA>
-        </BlindFrame>
+        <CTA
+          blind={{}}
+          to="/projects"
+          type="sm"
+          className="view-more view-more-projects svg-grey-3 a-grey-3"
+        >
+          View all projects
+        </CTA>
         <BlindFrame
           nodeType="h2"
           className="featured-header featured-header-case-studies h-4 sm:h-6 dispw-bold tracked"
@@ -156,14 +159,14 @@ const Landing = () => {
             </figure>
           </Link>
         </section>
-        <BlindFrame
-          nodeType="section"
-          className="view-more view-more-case-studies"
+        <CTA
+          blind={{}}
+          to="/blog"
+          type="sm"
+          className="view-more view-more-case-studies a-grey-3 svg-grey-3"
         >
-          <CTA to="/blog" type="sm" className="a-grey-3 svg-grey-3">
-            View all case studies
-          </CTA>
-        </BlindFrame>
+          View all case studies
+        </CTA>
       </main>
       <MainFooter />
     </motion.div>

@@ -28,10 +28,7 @@ const CTA = ({ blind, children, className, to, type }) => {
   const arrow = <Arrow className="cta-arrow" />
 
   let content
-  if (
-    blind &&
-    (blind.delay || blind.duration || blind.nodeType || blind.threshold)
-  ) {
+  if (blind) {
     content = (
       <BlindFrame {...blind}>
         {children} {arrow}

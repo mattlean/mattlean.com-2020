@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 import BlindFrame from '../../components/Blind/BlindFrame'
 import CTA from '../../components/CTA'
@@ -12,6 +12,12 @@ import { useHeadDataEffect } from '../../util'
 const About = () => {
   useHeadDataEffect()
 
+  // Focus starting element on page load
+  const srStart = useRef(null)
+  useEffect(() => {
+    if (srStart.current) srStart.current.focus()
+  }, [])
+
   return (
     <motion.div
       animate="initial"
@@ -21,9 +27,9 @@ const About = () => {
       onAnimationComplete={() => window.scroll(0, 0)}
       className="container"
     >
-      <main className="grid-about grid">
+      <main aria-label="Content" className="grid-about grid">
         <section className="cover">
-          <BlindFrame nodeType="h1" className="h-2 sm:h-3">
+          <BlindFrame ref={srStart} nodeType="h1" className="h-2 sm:h-3">
             Hello, world!
           </BlindFrame>
           <BlindFrame
