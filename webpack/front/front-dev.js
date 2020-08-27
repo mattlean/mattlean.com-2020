@@ -31,6 +31,7 @@ module.exports = merge([
   setupDevServer({
     host: process.env.HOST,
     port: 9489,
+    historyApiFallback: true,
   }),
 
   setupHTML({
