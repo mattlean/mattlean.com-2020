@@ -24,7 +24,6 @@ const Blind = ({ delay, duration, observer, play }) => {
     initial: { height: '100%' },
   }
 
-  console.log('NewBlind rendered', delay, play)
   const animate = play ? 'animate' : 'initial'
 
   return (
@@ -36,7 +35,6 @@ const Blind = ({ delay, duration, observer, play }) => {
       variants={VARIANTS}
       onAnimationComplete={() => {
         if (observer) observer.disconnect()
-        console.log(3, 'Animation completed', observer)
       }}
       className="blind"
     />

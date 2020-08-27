@@ -1,10 +1,14 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import BlindFrame from '../../components/Blind/BlindFrame'
 import NewBlindFrame from '../../components/Blind/NewBlindFrame'
 import CTA from '../../components/CTA'
 import MainFooter from '../../components/MainFooter'
 import VARIANTS from '../page_variants'
+import {
+  setupBlindObserver,
+  useInitAnim,
+} from '../../components/Blind/initAnimUtil'
 import { useHeadDataEffect } from '../../util'
 
 /**
@@ -13,142 +17,30 @@ import { useHeadDataEffect } from '../../util'
 const About = () => {
   useHeadDataEffect()
 
-  const blind0 = useRef(null)
-  const blind1 = useRef(null)
-
-  const [initAnimComplete, setInitAnimComplete] = useState(false)
-
-  const blindVisibleStates = []
-  for (let i = 0; i < 2; i += 1) {
-    const [isVisible, setIsVisible] = useState(false)
-    blindVisibleStates.push({ isVisible, setIsVisible })
-  }
-  const blindVisibleStatesRef = useRef(blindVisibleStates)
-
-  const blindStates = []
-  for (let i = 0; i < 2; i += 1) {
-    const [play, setPlay] = useState(false)
-    const [delay, setDelay] = useState(undefined)
-    blindStates.push({ delay, play, setDelay, setPlay })
-  }
-
-  const observers = []
-  for (let i = 0; i < 2; i += 1) {
-    const [observer, setObserver] = useState(undefined)
-    observers.push({ observer, setObserver })
-  }
-
-  const timeoutHandler = () => {
-    console.log('timeoutHandler called')
-    if (blindVisibleStatesRef.current) {
-      let startViewport = false
-      let delay = 0
-      for (let i = 0; i < blindVisibleStatesRef.current.length; i += 1) {
-        const visibleState = blindVisibleStatesRef.current[i]
-        console.log('visibleState', visibleState, i)
-        if (visibleState.isVisible) {
-          if (!startViewport) startViewport = true
-          const blindState = blindStates[i]
-          console.log('blindState set', blindState)
-          blindState.setDelay(delay)
-          blindState.setPlay(true)
-          delay += 0.5
-        } else if (startViewport) {
-          // End of viewport has been reached
-          setInitAnimComplete(true)
-          break
-        }
-      }
-    }
-  }
-
-  // Set blindVisibleStates ref
-  useEffect(() => {
-    blindVisibleStatesRef.current = blindVisibleStates
-  })
+  const {
+    blindVisibleStates,
+    blindStates,
+    initAnimComplete,
+    observerData,
+    runInitAnim,
+  } = useInitAnim(2)
 
   // Setup effect which is only run once
   useEffect(() => {
-    console.log(1)
     // Focus starting element on page load
-    if (blind0.current) blind0.current.focus()
+    if (observerData[0].ref.current) observerData[0].ref.current.focus()
 
-    // Blind conductor setup
-    const constructBlindObserver = (threshold, index) => {
-      return new IntersectionObserver(
-        () => {
-          console.log('intersect occurred')
-          blindVisibleStates[index].setIsVisible(true)
-        },
-        {
-          threshold,
-        }
-      )
-    }
+    setupBlindObserver(0, 0.1, observerData[0], blindVisibleStates)
 
-    const observer0 = constructBlindObserver(0.1, 0)
-    observers[0].setObserver(observer0)
-    if (blind0.current) {
-      observer0.observe(blind0.current)
-    } else {
-      console.warn('Reference to blind not found. Observer was not set.')
-    }
+    setupBlindObserver(1, 0.1, observerData[1], blindVisibleStates)
 
-    const observer1 = constructBlindObserver(0.1, 1)
-    observers[1].setObserver(observer1)
-    if (blind1.current) {
-      observer1.observe(blind1.current)
-    } else {
-      console.warn('Reference to blind not found. Observer was not set.')
-    }
-
-    window.setTimeout(timeoutHandler, 100)
+    window.setTimeout(runInitAnim, 100)
 
     return () => {
       // Disconnect all observers on unmount
-      observers.forEach(({ observer }) => observer.disconnect())
+      observerData.forEach(({ observer }) => observer.disconnect())
     }
   }, [])
-
-  // TODO: How do I know when all of the visible blinds are found after page load?
-
-  // // Conductor
-  // const blinds = []
-  // const [isDone, setIsDone] = useState(false) // Controls when conductor's job is complete and can free blinds
-  // for (let i = 0; i < 2; i += 1) {
-  //   const [isHidden, setIsHidden] = useState(undefined) // Allows blinds to communicate to conductor on whether or not they are visible
-  //   let play // Allows conductor to control when blind animation plays
-  //   blinds.push({
-  //     isHidden,
-  //     play,
-  //     setIsHidden,
-  //   })
-  // }
-
-  // let startFound = false
-  // for (let i = 0; i < blinds.length; i += 1) {
-  //   const currBlind = blinds[i]
-
-  //   if (!startFound) {
-  //     // Look for first blind in view.
-  //     // Covers case when user starts page somewhere below the top of the page.
-  //     if (currBlind.isHidden) startFound = true
-  //   } else {
-  //     if (currBlind.isHidden === undefined) {
-  //       break // Blind isHidden states haven't been calculated yet
-  //     } else if (!currBlind.isHidden) {
-  //       // Blind is hidden, end of visible blinds have been reached.
-  //       // Complete the conductor's work.
-  //       setIsDone(true)
-  //       break
-  //     } else {
-  //       // Blind is not hidden. Play the animation.
-  //       currBlind.setPlay(true)
-  //     }
-  //   }
-  // }
-
-  // console.log(blinds)
 
   return (
     <motion.div
@@ -162,10 +54,10 @@ const About = () => {
       <main aria-label="Content" className="grid-about grid">
         <section className="cover">
           <NewBlindFrame
-            ref={blind0}
+            ref={observerData[0].ref}
             nodeType="h1"
             delay={blindStates[0].delay}
-            observer={observers[0].observer}
+            observer={observerData[0].observer}
             play={
               initAnimComplete
                 ? blindVisibleStates[0].isVisible
@@ -177,10 +69,10 @@ const About = () => {
             Hello, world!
           </NewBlindFrame>
           <NewBlindFrame
-            ref={blind1}
+            ref={observerData[1].ref}
             nodeType="p"
             delay={blindStates[1].delay}
-            observer={observers[1].observer}
+            observer={observerData[1].observer}
             play={
               initAnimComplete
                 ? blindVisibleStates[1].isVisible

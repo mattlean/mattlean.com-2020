@@ -36,7 +36,7 @@ const BlindFrame = (
 ) => {
   let cn = 'blind-frame'
   if (className) cn += ` ${className}`
-  console.log(observer, 'bro')
+
   const content = (
     <>
       <NewBlind
