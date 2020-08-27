@@ -9,10 +9,10 @@ import { useIntersection } from 'react-use'
  * @prop {number} [duration=0.5] Duration in seconds
  * @prop {number} [threshold=1] Threshold value between 0 & 1 used by Intersection Observer
  */
-const Blind = ({ delay, duration, threshold }) => {
-  if (!delay) delay = 0
-  if (!duration) duration = 0.5
-  if (!threshold) threshold = 1
+const Blind = ({ delay, duration, isFree, play, threshold }) => {
+  if (!delay) delay = 0.1
+  if (!duration) duration = 0.4
+  if (!threshold) threshold = 0.5
 
   const VARIANTS = {
     animate: (delay) => ({
@@ -34,15 +34,27 @@ const Blind = ({ delay, duration, threshold }) => {
     threshold,
   })
 
+  /*
+   * Blind is considered hidden if it's:
+   * 1. Being rendered on the server
+   * 2. Is under control of a conductor that says it's not free
+   * 3. Is currently under Intersection Observer threshold
+   */
   const isHidden =
-    __IS_SERVER__ ||
-    (intersection && intersection.intersectionRatio < threshold) ||
-    !intersection
+    __IS_SERVER__ || !intersection || intersection.intersectionRatio < threshold
       ? true
       : false
 
+  // if (setIsHidden && isFree !== undefined) {
+  //   setIsHidden(isHidden) // Let conductor know blind's hidden state
+  // }
+
   let animate
-  if ((!isDone && !isHidden) || isDone) {
+  if (
+    play ||
+    ((isFree || isFree === undefined) && !isDone && !isHidden) ||
+    isDone
+  ) {
     animate = 'animate'
   } else {
     animate = 'initial'

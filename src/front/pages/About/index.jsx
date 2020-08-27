@@ -1,6 +1,7 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import BlindFrame from '../../components/Blind/BlindFrame'
+import NewBlindFrame from '../../components/Blind/NewBlindFrame'
 import CTA from '../../components/CTA'
 import MainFooter from '../../components/MainFooter'
 import VARIANTS from '../page_variants'
@@ -12,11 +13,142 @@ import { useHeadDataEffect } from '../../util'
 const About = () => {
   useHeadDataEffect()
 
-  // Focus starting element on page load
-  const srStart = useRef(null)
+  const blind0 = useRef(null)
+  const blind1 = useRef(null)
+
+  const [initAnimComplete, setInitAnimComplete] = useState(false)
+
+  const blindVisibleStates = []
+  for (let i = 0; i < 2; i += 1) {
+    const [isVisible, setIsVisible] = useState(false)
+    blindVisibleStates.push({ isVisible, setIsVisible })
+  }
+  const blindVisibleStatesRef = useRef(blindVisibleStates)
+
+  const blindStates = []
+  for (let i = 0; i < 2; i += 1) {
+    const [play, setPlay] = useState(false)
+    const [delay, setDelay] = useState(undefined)
+    blindStates.push({ delay, play, setDelay, setPlay })
+  }
+
+  const observers = []
+  for (let i = 0; i < 2; i += 1) {
+    const [observer, setObserver] = useState(undefined)
+    observers.push({ observer, setObserver })
+  }
+
+  const timeoutHandler = () => {
+    console.log('timeoutHandler called')
+    if (blindVisibleStatesRef.current) {
+      let startViewport = false
+      let delay = 0
+      for (let i = 0; i < blindVisibleStatesRef.current.length; i += 1) {
+        const visibleState = blindVisibleStatesRef.current[i]
+        console.log('visibleState', visibleState, i)
+        if (visibleState.isVisible) {
+          if (!startViewport) startViewport = true
+          const blindState = blindStates[i]
+          console.log('blindState set', blindState)
+          blindState.setDelay(delay)
+          blindState.setPlay(true)
+          delay += 0.5
+        } else if (startViewport) {
+          // End of viewport has been reached
+          setInitAnimComplete(true)
+          break
+        }
+      }
+    }
+  }
+
+  // Set blindVisibleStates ref
   useEffect(() => {
-    if (srStart.current) srStart.current.focus()
+    blindVisibleStatesRef.current = blindVisibleStates
+  })
+
+  // Setup effect which is only run once
+  useEffect(() => {
+    console.log(1)
+    // Focus starting element on page load
+    if (blind0.current) blind0.current.focus()
+
+    // Blind conductor setup
+    const constructBlindObserver = (threshold, index) => {
+      return new IntersectionObserver(
+        () => {
+          console.log('intersect occurred')
+          blindVisibleStates[index].setIsVisible(true)
+        },
+        {
+          threshold,
+        }
+      )
+    }
+
+    const observer0 = constructBlindObserver(0.1, 0)
+    observers[0].setObserver(observer0)
+    if (blind0.current) {
+      observer0.observe(blind0.current)
+    } else {
+      console.warn('Reference to blind not found. Observer was not set.')
+    }
+
+    const observer1 = constructBlindObserver(0.1, 1)
+    observers[1].setObserver(observer1)
+    if (blind1.current) {
+      observer1.observe(blind1.current)
+    } else {
+      console.warn('Reference to blind not found. Observer was not set.')
+    }
+
+    window.setTimeout(timeoutHandler, 100)
+
+    return () => {
+      // Disconnect all observers on unmount
+      observers.forEach(({ observer }) => observer.disconnect())
+    }
   }, [])
+
+  // TODO: How do I know when all of the visible blinds are found after page load?
+
+  // // Conductor
+  // const blinds = []
+  // const [isDone, setIsDone] = useState(false) // Controls when conductor's job is complete and can free blinds
+  // for (let i = 0; i < 2; i += 1) {
+  //   const [isHidden, setIsHidden] = useState(undefined) // Allows blinds to communicate to conductor on whether or not they are visible
+  //   let play // Allows conductor to control when blind animation plays
+  //   blinds.push({
+  //     isHidden,
+  //     play,
+  //     setIsHidden,
+  //   })
+  // }
+
+  // let startFound = false
+  // for (let i = 0; i < blinds.length; i += 1) {
+  //   const currBlind = blinds[i]
+
+  //   if (!startFound) {
+  //     // Look for first blind in view.
+  //     // Covers case when user starts page somewhere below the top of the page.
+  //     if (currBlind.isHidden) startFound = true
+  //   } else {
+  //     if (currBlind.isHidden === undefined) {
+  //       break // Blind isHidden states haven't been calculated yet
+  //     } else if (!currBlind.isHidden) {
+  //       // Blind is hidden, end of visible blinds have been reached.
+  //       // Complete the conductor's work.
+  //       setIsDone(true)
+  //       break
+  //     } else {
+  //       // Blind is not hidden. Play the animation.
+  //       currBlind.setPlay(true)
+  //     }
+  //   }
+  // }
+
+  // console.log(blinds)
 
   return (
     <motion.div
@@ -29,29 +161,41 @@ const About = () => {
     >
       <main aria-label="Content" className="grid-about grid">
         <section className="cover">
-          <BlindFrame
-            ref={srStart}
+          <NewBlindFrame
+            ref={blind0}
             nodeType="h1"
+            delay={blindStates[0].delay}
+            observer={observers[0].observer}
+            play={
+              initAnimComplete
+                ? blindVisibleStates[0].isVisible
+                : blindStates[0].play
+            }
             tabIndex="-1"
             className="h-2 sm:h-3"
           >
             Hello, world!
-          </BlindFrame>
-          <BlindFrame
+          </NewBlindFrame>
+          <NewBlindFrame
+            ref={blind1}
             nodeType="p"
-            delay={0.5}
-            threshold={0.5}
+            delay={blindStates[1].delay}
+            observer={observers[1].observer}
+            play={
+              initAnimComplete
+                ? blindVisibleStates[1].isVisible
+                : blindStates[1].play
+            }
             className="txt-8 sm:txt-7 c-grey-1"
           >
             My name is Matt&nbsp;Lean and I’m a full-stack web&nbsp;developer &
             UI/UX&nbsp;designer. I was born in NY and raised in SoCal. Now I
             live in the SF Bay Area and am looking for new
             work&nbsp;opportunities!
-          </BlindFrame>
+          </NewBlindFrame>
         </section>
         <BlindFrame
           nodeType="section"
-          delay={1}
           threshold={0.1}
           className="content c-grey-1"
         >

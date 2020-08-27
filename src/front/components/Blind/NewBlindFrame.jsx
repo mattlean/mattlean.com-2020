@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react'
 import { Link } from 'react-router-dom'
-import Blind from '.'
+import NewBlind from './NewBlind'
 
 /**
  * Blind Frame
@@ -24,28 +24,26 @@ const BlindFrame = (
     delay,
     duration,
     href,
-    isFree,
     nodeType,
+    observer,
+    play,
     rel,
-    setIsHidden,
     tabIndex,
     target,
-    threshold,
     to,
   },
   ref
 ) => {
   let cn = 'blind-frame'
   if (className) cn += ` ${className}`
-
+  console.log(observer, 'bro')
   const content = (
     <>
-      <Blind
+      <NewBlind
         delay={delay}
         duration={duration}
-        isFree={isFree}
-        setIsHidden={setIsHidden}
-        threshold={threshold}
+        observer={observer}
+        play={play}
         className={cn}
       />
       {children}
