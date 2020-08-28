@@ -30,18 +30,16 @@ const About = () => {
     // Focus starting element on page load
     if (observerData[0].ref.current) observerData[0].ref.current.focus()
 
-    setupBlindObservers(
-      [0.1, 0.1, 0.1, 0.1, 0.1],
+    const observers = setupBlindObservers(
+      [0.5, 0.1, 0.1, 0.1, 0.1],
       observerData,
       blindVisibleStates
     )
 
     window.setTimeout(runInitAnim, 100)
 
-    return () => {
-      // Disconnect all observers on unmount
-      observerData.forEach(({ observer }) => observer.disconnect())
-    }
+    // Disconnect all observers on unmount
+    return () => observers.forEach((observer) => observer.disconnect())
   }, [])
 
   return (

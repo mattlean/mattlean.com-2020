@@ -41,7 +41,6 @@ const BlindFrame = (
   const content = (
     <>
       <NewBlind
-        ref={ref}
         delay={delay}
         duration={duration}
         observer={observer}
@@ -69,7 +68,7 @@ const BlindFrame = (
   const Node = nodeType || 'span'
 
   return (
-    <Node tabIndex={tabIndex} className={cn}>
+    <Node ref={ref} tabIndex={tabIndex} className={cn}>
       {content}
     </Node>
   )

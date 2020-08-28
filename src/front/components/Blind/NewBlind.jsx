@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react'
+import React from 'react'
 import { motion } from 'framer-motion'
 
 /**
@@ -29,7 +29,6 @@ const Blind = ({ delay, duration, observer, play }, ref) => {
 
   return (
     <motion.span
-      ref={ref}
       animate={animate}
       aria-hidden={true}
       custom={delay}
@@ -43,4 +42,4 @@ const Blind = ({ delay, duration, observer, play }, ref) => {
   )
 }
 
-export default forwardRef(Blind)
+export default Blind

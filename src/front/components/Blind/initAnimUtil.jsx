@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from 'react'
  * @param {number|Array} threshold A single number or an array of numbers between 0.0 and 1.0, specifying a ratio of intersection area to total bounding box area for observed target
  * @param {Object} observerData Array of observer data that is used to access ref & setObserver
  * @param {Array} blindVisibleStates Array of blind visible states
+ * @return {Observer} New observer
  */
 export const setupBlindObserver = (
   index,
@@ -41,20 +42,26 @@ export const setupBlindObserver = (
  * @param {Array} thresholds Array of single numbers or arrays of numbers between 0.0 and 1.0, specifying a ratio of intersection area to total bounding box area for observed targets
  * @param {Object} observerData Array of observer data that is used to access ref & setObserver
  * @param {Array} blindVisibleStates Array of blind visible states
+ * @return {Array} Array of new observers
  */
 export const setupBlindObservers = (
   thresholds,
   observerData,
   blindVisibleStates
 ) => {
+  const observers = []
   for (let i = 0; i < thresholds.length; i += 1) {
-    setupBlindObserver(i, thresholds[i], observerData, blindVisibleStates)
+    observers.push(
+      setupBlindObserver(i, thresholds[i], observerData, blindVisibleStates)
+    )
   }
+  return observers
 }
 
 /**
  *
- * @param {number} numBlinds Number of blinds being controlled
+ * @param {number} numBlinds Number of blinds
+ * @return {Object} Data and functions necessary for initial animation
  */
 export const useInitAnim = (numBlinds) => {
   // Determines if blind is visible within viewport
