@@ -36,37 +36,35 @@ const Landing = () => {
       className="container"
     >
       <main aria-label="Content" className="grid-landing grid">
-        <section className="subgrid-cover grid">
-          <BlindFrame
-            ref={srStart}
-            nodeType="h1"
-            delay={0.2}
-            tabIndex="-1"
-            threshold={0.5}
-            className="h-1 md:h-2 sm:h-3 lh-1"
-          >
-            Hi, I’m <br className="title-br" aria-hidden="true" />
-            Matt&nbsp;Lean!
-          </BlindFrame>
-          <BlindFrame
-            nodeType="p"
-            delay={0.4}
-            threshold={0.5}
-            className="txt-8 sm:txt-6 c-grey-1"
-          >
-            I’m a developer who works at the intersection of engineering and
-            design. I’ve been building web-based products for Silicon Valley
-            since 2015 and am currently looking for new&nbsp;opportunities.
-          </BlindFrame>
-          <CTA
-            blind={{ delay: 0.8, threshold: 0.5 }}
-            to="/about"
-            type="lg"
-            className="svg-primary a-primary"
-          >
-            Learn more about me
-          </CTA>
-        </section>
+        <BlindFrame
+          ref={srStart}
+          nodeType="h1"
+          delay={0.2}
+          tabIndex="-1"
+          threshold={0.5}
+          className="h-1 md:h-2 sm:h-3 lh-1"
+        >
+          Hi, I’m <br className="title-br" aria-hidden="true" />
+          Matt&nbsp;Lean!
+        </BlindFrame>
+        <BlindFrame
+          nodeType="p"
+          delay={0.4}
+          threshold={0.5}
+          className="txt-8 sm:txt-6 c-grey-1"
+        >
+          I’m a developer who works at the intersection of engineering and
+          design. I’ve been building web-based products for Silicon Valley since
+          2015 and am currently looking for new&nbsp;opportunities.
+        </BlindFrame>
+        <CTA
+          blind={{ delay: 0.8, threshold: 0.5 }}
+          to="/about"
+          type="lg"
+          className="svg-primary a-primary"
+        >
+          Learn more about me
+        </CTA>
         <BlindFrame
           nodeType="h2"
           className="featured-header featured-header-projects h-4 sm:h-6 dispw-bold tracked"

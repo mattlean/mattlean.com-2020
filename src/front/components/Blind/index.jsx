@@ -9,22 +9,45 @@ import { useIntersection } from 'react-use'
  * @prop {number} [duration=0.5] Duration in seconds
  * @prop {number} [threshold=1] Threshold value between 0 & 1 used by Intersection Observer
  */
-const Blind = ({ delay, duration, isFree, play, threshold }) => {
+const Blind = ({
+  delay,
+  duration,
+  isFree,
+  play,
+  threshold,
+  heightStart,
+  scrollHeight,
+}) => {
   if (!delay) delay = 0.1
   if (!duration) duration = 0.4
   if (!threshold) threshold = 0.5
 
+  console.log(scrollHeight)
+
+  let height
+  if (scrollHeight) {
+    height = `${scrollHeight}px`
+    console.log('scrollHeight set', height)
+  } else {
+    height = '100%'
+    console.log('height set', height)
+  }
+
   const VARIANTS = {
-    animate: (delay) => ({
-      height: '0%',
+    animate: () => ({
+      height: '0',
       transition: {
         delay,
         duration,
         ease: 'easeOut',
       },
     }),
-    initial: { height: '100%' },
+    initial: (custom) => ({ height: custom }),
   }
+
+  // custom property is set to startHeight on motion component
+
+  console.log(VARIANTS)
 
   const [isDone, setIsDone] = useState(false)
   const intersectionRef = useRef(null)
@@ -60,12 +83,14 @@ const Blind = ({ delay, duration, isFree, play, threshold }) => {
     animate = 'initial'
   }
 
+  // animate = 'initial'
+
   return (
     <motion.span
       ref={intersectionRef}
       animate={animate}
+      custom={height}
       aria-hidden={true}
-      custom={delay}
       initial="initial"
       variants={VARIANTS}
       onAnimationComplete={() => setIsDone(true)}

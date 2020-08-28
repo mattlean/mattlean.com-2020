@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react'
+import React, { forwardRef, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Blind from '.'
 
@@ -32,11 +32,24 @@ const BlindFrame = (
     target,
     threshold,
     to,
+    useScrollHeight,
   },
   ref
 ) => {
   let cn = 'blind-frame'
   if (className) cn += ` ${className}`
+
+  const [scrollHeight, setScrollHeight] = useState()
+
+  console.log('first', ref)
+
+  useEffect(() => {
+    if (useScrollHeight && ref && ref.current) {
+      console.log(ref.current)
+      console.log(ref.current.scrollHeight)
+      setScrollHeight(ref.current.scrollHeight)
+    }
+  }, [ref, useScrollHeight])
 
   const content = (
     <>
@@ -47,6 +60,7 @@ const BlindFrame = (
         setIsHidden={setIsHidden}
         threshold={threshold}
         className={cn}
+        scrollHeight={scrollHeight}
       />
       {children}
     </>

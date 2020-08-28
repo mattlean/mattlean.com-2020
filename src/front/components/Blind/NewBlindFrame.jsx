@@ -45,7 +45,6 @@ const BlindFrame = (
         duration={duration}
         observer={observer}
         play={play}
-        className={cn}
       />
       {children}
     </>

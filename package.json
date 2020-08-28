@@ -40,7 +40,7 @@
     "eswiss": "^0.0.28",
     "express": "^4.17.1",
     "file-loader": "^6.0.0",
-    "framer-motion": "^1.11.1",
+    "framer-motion": "^2.6.5",
     "helmet": "^4.1.0",
     "html-loader": "^1.1.0",
     "html-webpack-plugin": "^4.3.0",

@@ -4,20 +4,19 @@ import { motion } from 'framer-motion'
 /**
  * Blind Animation
  * Must be used within a BlindFrame component
- * @prop {number} [delay=0.1] Delay in seconds
+ * @prop {number} [delay] Delay in seconds
  * @prop {number} [duration=0.4] Duration in seconds
  * @prop {Object} [observer] Used to disconnect observer after animation is complete
  * @prop {boolean} [play] Flag that controls if animation is played
  */
-const Blind = ({ delay, duration, observer, play }, ref) => {
-  if (!delay && delay !== 0) delay = 0.1
+const Blind = ({ delay, duration, observer, play }) => {
   if (!duration && duration !== 0) duration = 0.4
 
   const VARIANTS = {
-    animate: (delay) => ({
+    animate: (custom) => ({
       height: '0%',
       transition: {
-        delay,
+        delay: custom,
         duration,
         ease: 'easeOut',
       },

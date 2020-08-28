@@ -4,32 +4,31 @@
 @use '../../visuals/scale/typography';
 
 .grid-landing {
-  grid-template-rows: repeat(7, size.$size-157) auto repeat(4, size.$size-157) auto;
+  grid-template-rows:
+    repeat(2, auto) repeat(5, size.$size-157) auto repeat(4, size.$size-157)
+    auto;
   margin-bottom: size.$size-27;
   margin-top: size.$size-211;
 
-  > .subgrid-cover {
+  > h1 {
     grid-column: 1/-1;
-    grid-row: 1/4;
-    grid-template-rows: repeat(3, size.$size-157);
+    transform: translate(-3px, -15px);
 
-    > h1 {
-      grid-column: 1/-1;
-      transform: translate(-3px, -15px);
-
-      > .title-br {
-        display: none;
-      }
+    > .title-br {
+      display: none;
     }
+  }
 
-    > p {
-      grid-column: 1/5;
-      transform: translateY(-81px);
-    }
+  > p {
+    grid-column: 1/5;
+    transform: translateY(-10px);
+  }
 
-    > .cta {
-      grid-column: 1/-1;
-    }
+  > a.cta:first-of-type {
+    align-self: start;
+    grid-column: 1/4;
+    justify-self: start;
+    transform: translateY(-15px);
   }
 
   > .featured-header {
@@ -110,27 +109,28 @@
 }
 
 @media (max-width: size.$size-980) {
-  .grid-landing > .subgrid-cover > p {
+  .grid-landing > p {
     grid-column: 1/5;
   }
 }
 
 @media (max-width: bp.$md) {
   .grid-landing {
-    grid-template-rows: repeat(7, size.$size-147) auto repeat(4, size.$size-147) auto;
+    grid-template-rows:
+      repeat(2, auto) repeat(5, size.$size-147) auto repeat(4, size.$size-147)
+      auto;
     margin-top: size.$size-201;
 
-    > .subgrid-cover {
-      grid-template-rows: repeat(3, size.$size-147);
+    > h1 {
+      transform: translate(-1px, -9px);
+    }
 
-      > h1 {
-        transform: translate(-1px, -9px);
-      }
+    > p {
+      transform: translateY(3px);
+    }
 
-      > p {
-        grid-column: 1/4;
-        transform: translateY(-104px);
-      }
+    > a.cta:first-of-type {
+      transform: translateY(-9px);
     }
 
     > .subgrid-featured {
@@ -147,15 +147,32 @@
   }
 }
 
+@media (max-width: size.$size-956) {
+  .grid-landing > p {
+    grid-column: 1/4;
+  }
+}
+
+@media (max-width: size.$size-860) {
+  .grid-landing > p {
+    grid-column: 1/5;
+  }
+}
+
 @media (max-width: size.$size-800) {
-  .grid-landing > .subgrid-cover > p {
+  .grid-landing > p {
     grid-column: 1/-1;
   }
 }
 
 @media (max-width: size.$size-780) {
   .grid-landing {
-    grid-template-rows: repeat(4, size.$size-147) auto auto size.$size-147 auto auto;
+    grid-template-rows: repeat(2, auto) repeat(2, size.$size-147) auto auto size.$size-147 auto auto;
+
+    > p,
+    > a.cta:first-of-type {
+      grid-column: 1/-1;
+    }
 
     > .featured-header {
       &-case-studies {
@@ -205,48 +222,37 @@
 }
 
 @media (max-width: size.$size-600) {
-  .grid-landing > .subgrid-cover > .cta {
+  .grid-landing > .cta {
     align-self: center;
   }
 }
 
 @media (max-width: size.$size-520) {
-  .grid-landing > .subgrid-cover {
-    display: block !important;
-
-    > p {
-      margin-top: 0.5em;
-      transform: none;
-    }
+  .grid-landing > p {
+    margin-top: 0.5em;
+    transform: none;
   }
 }
 
 @media (max-width: bp.$sm) {
   .grid-landing {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, size.$size-176) auto auto size.$size-176 auto auto;
+    grid-template-rows: repeat(2, auto) size.$size-176 auto auto size.$size-176 auto auto;
     margin-bottom: size.$size-24;
     margin-top: 0;
 
-    > .subgrid-cover {
-      display: grid !important;
-      grid-template-columns: 1fr;
-      grid-template-rows: repeat(3, size.$size-176);
+    > h1 > .title-br {
+      display: inline;
+    }
 
-      > h1 > .title-br {
-        display: inline;
-      }
+    > p {
+      grid-row: 2/3;
+      margin-top: 0;
+      transform: translateY(-9px);
+    }
 
-      > p {
-        grid-row: 2/3;
-        margin-top: 0;
-        transform: translate(1px, -65px);
-      }
-
-      > .cta {
-        align-self: end;
-        grid-row: 2/3;
-      }
+    > a.cta:first-of-type {
+      grid-row: 3/4;
     }
 
     > .featured-header {
