@@ -113,10 +113,11 @@ export const useInitAnim = (numBlinds) => {
           delay += 0.5 // Grow delay to stagger blind animations in initial animation
         } else if (startViewport) {
           // End of viewport has been reached, complete initial animation
-          window.setTimeout(() => setInitAnimComplete(true), delay * 1000)
           break
         }
       }
+
+      window.setTimeout(() => setInitAnimComplete(true), delay * 1000)
     }
   }
 
