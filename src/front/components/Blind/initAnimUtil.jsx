@@ -3,8 +3,8 @@ import { useEffect, useRef, useState } from 'react'
 /**
  *
  * @param {number} index Index for blind in corresponding array data
- * @param {number|Array} threshold A single number or an array of numbers between 0.0. and 1.0, specifying a ratio of intersection area to total bounding box area for observed target
- * @param {Object} observerData Observer data that is used to access ref & setObserver
+ * @param {number|Array} threshold A single number or an array of numbers between 0.0 and 1.0, specifying a ratio of intersection area to total bounding box area for observed target
+ * @param {Object} observerData Array of observer data that is used to access ref & setObserver
  * @param {Array} blindVisibleStates Array of blind visible states
  */
 export const setupBlindObserver = (
@@ -13,9 +13,13 @@ export const setupBlindObserver = (
   observerData,
   blindVisibleStates
 ) => {
-  const { ref, setObserver } = observerData
+  const { ref, setObserver } = observerData[index]
   const observer = new IntersectionObserver(
-    () => blindVisibleStates[index].setIsVisible(true),
+    (entries) => {
+      if (entries[0].intersectionRatio >= threshold) {
+        blindVisibleStates[index].setIsVisible(true)
+      }
+    },
     {
       threshold,
     }
@@ -30,6 +34,22 @@ export const setupBlindObserver = (
   }
 
   return observer
+}
+
+/**
+ *
+ * @param {Array} thresholds Array of single numbers or arrays of numbers between 0.0 and 1.0, specifying a ratio of intersection area to total bounding box area for observed targets
+ * @param {Object} observerData Array of observer data that is used to access ref & setObserver
+ * @param {Array} blindVisibleStates Array of blind visible states
+ */
+export const setupBlindObservers = (
+  thresholds,
+  observerData,
+  blindVisibleStates
+) => {
+  for (let i = 0; i < thresholds.length; i += 1) {
+    setupBlindObserver(i, thresholds[i], observerData, blindVisibleStates)
+  }
 }
 
 /**
@@ -93,7 +113,7 @@ export const useInitAnim = (numBlinds) => {
           delay += 0.5 // Grow delay to stagger blind animations in initial animation
         } else if (startViewport) {
           // End of viewport has been reached, complete initial animation
-          setInitAnimComplete(true)
+          window.setTimeout(() => setInitAnimComplete(true), delay * 1000)
           break
         }
       }

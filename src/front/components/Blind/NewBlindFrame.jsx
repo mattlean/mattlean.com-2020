@@ -11,16 +11,17 @@ import NewBlind from './NewBlind'
  * @prop {number} [duration] Duration in seconds
  * @prop {string} [href] href attribute value used if nodeType is "a"
  * @prop {string} [nodeType='span'] Determine's blind frame's element. Defaults to span element.
+ * @prop {Object} [observer] Used to disconnect observer after animation is complete
+ * @prop {boolean} [play] Flag that controls if animation is played
  * @prop {string} [rel] rel attribute value used if nodeType is "a"
  * @prop {tabIndex} [tabIndex] tabindex attribute value
  * @prop {string} [target] target attribute value used if nodeType is "a"
- * @prop {number} [threshold] Threshold value between 0 & 1 used by Intersection Observer
  * @prop {string} [to] to prop value used if nodeType is "Link"
  */
 const BlindFrame = (
   {
-    className,
     children,
+    className,
     delay,
     duration,
     href,
@@ -40,6 +41,7 @@ const BlindFrame = (
   const content = (
     <>
       <NewBlind
+        ref={ref}
         delay={delay}
         duration={duration}
         observer={observer}
@@ -67,7 +69,7 @@ const BlindFrame = (
   const Node = nodeType || 'span'
 
   return (
-    <Node ref={ref} tabIndex={tabIndex} className={cn}>
+    <Node tabIndex={tabIndex} className={cn}>
       {content}
     </Node>
   )

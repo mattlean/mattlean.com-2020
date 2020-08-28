@@ -6,7 +6,7 @@ import CTA from '../../components/CTA'
 import MainFooter from '../../components/MainFooter'
 import VARIANTS from '../page_variants'
 import {
-  setupBlindObserver,
+  setupBlindObservers,
   useInitAnim,
 } from '../../components/Blind/initAnimUtil'
 import { useHeadDataEffect } from '../../util'
@@ -23,16 +23,18 @@ const About = () => {
     initAnimComplete,
     observerData,
     runInitAnim,
-  } = useInitAnim(2)
+  } = useInitAnim(5)
 
   // Setup effect which is only run once
   useEffect(() => {
     // Focus starting element on page load
     if (observerData[0].ref.current) observerData[0].ref.current.focus()
 
-    setupBlindObserver(0, 0.1, observerData[0], blindVisibleStates)
-
-    setupBlindObserver(1, 0.1, observerData[1], blindVisibleStates)
+    setupBlindObservers(
+      [0.1, 0.1, 0.1, 0.1, 0.1],
+      observerData,
+      blindVisibleStates
+    )
 
     window.setTimeout(runInitAnim, 100)
 
@@ -86,9 +88,16 @@ const About = () => {
             work&nbsp;opportunities!
           </NewBlindFrame>
         </section>
-        <BlindFrame
+        <NewBlindFrame
+          ref={observerData[2].ref}
           nodeType="section"
-          threshold={0.1}
+          delay={blindStates[2].delay}
+          observer={observerData[2].observer}
+          play={
+            initAnimComplete
+              ? blindVisibleStates[2].isVisible
+              : blindStates[2].play
+          }
           className="content c-grey-1"
         >
           <p>
@@ -146,9 +155,20 @@ const About = () => {
             where I am sluggishly working towards an associate degree in Graphic
             & Interactive&nbsp;Design.
           </p>
-        </BlindFrame>
+        </NewBlindFrame>
         <section className="closing">
-          <BlindFrame nodeType="p" className="txt-8 sm:txt-6 c-grey-1">
+          <NewBlindFrame
+            ref={observerData[3].ref}
+            nodeType="p"
+            delay={blindStates[3].delay}
+            observer={observerData[3].observer}
+            play={
+              initAnimComplete
+                ? blindVisibleStates[3].isVisible
+                : blindStates[3].play
+            }
+            className="txt-8 sm:txt-6 c-grey-1"
+          >
             Thanks for reading my story.
             <br />
             I&apos;d love to hear yours!
@@ -156,12 +176,18 @@ const About = () => {
             <CTA to="/contact" type="lg" className="a-primary svg-primary">
               Let&apos;s start talking
             </CTA>
-          </BlindFrame>
+          </NewBlindFrame>
         </section>
-        <BlindFrame
+        <NewBlindFrame
+          ref={observerData[4].ref}
           nodeType="aside"
-          delay={1}
-          threshold={0.1}
+          delay={blindStates[4].delay}
+          observer={observerData[4].observer}
+          play={
+            initAnimComplete
+              ? blindVisibleStates[4].isVisible
+              : blindStates[4].play
+          }
           className="subgrid-resume txt-3 c-grey-2"
         >
           <section className="work">
@@ -330,7 +356,7 @@ const About = () => {
               </ul>
             </section>
           </section>
-        </BlindFrame>
+        </NewBlindFrame>
       </main>
       <MainFooter />
     </motion.div>
