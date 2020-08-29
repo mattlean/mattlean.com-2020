@@ -25,7 +25,7 @@ const HEADER_VARIANTS = {
   },
   initial: {
     opacity: 0,
-    y: '-10%',
+    y: '-20%',
     transition: {
       duration: 0.4,
       ease: 'easeIn',
@@ -46,216 +46,9 @@ const HEADER_VARIANTS = {
  * Main Navigation
  */
 const MainNav = () => {
-  // const viewportWidth = useViewportWidth(__IS_SERVER__)
-  // const { pathname } = useLocation()
-  // const [isOpen, setIsOpen] = useState(false)
-  // const { isDark, manualToggle } = useContext(ThemeCtx)
-
-  // const intersectionRef = useRef(null)
-  // const intersection = useIntersection(intersectionRef, {
-  //   root: null,
-  //   rootMargin: '0px',
-  //   threshold: THRESHOLD,
-  // })
-
-  // // Flag to check if window is within phone screen sizes
-  // const isPhone = !__IS_SERVER__ && viewportWidth <= LG_PHONE
-
-  // // Flag to check if MainNav is hidden for regular screen sizes
-  // const isHidden =
-  //   __IS_SERVER__ ||
-  //   (intersection && intersection.intersectionRatio < THRESHOLD) ||
-  //   !intersection
-  //     ? true
-  //     : false
-
-  // const regularVariants = {
-  //   animate: {
-  //     opacity: 1,
-  //     y: 0,
-  //     transition: {
-  //       duration: 0.5,
-  //       ease: 'easeOut',
-  //     },
-  //   },
-  //   initial: {
-  //     opacity: 0,
-  //     y: '-10%',
-  //     transition: {
-  //       duration: 0.5,
-  //       ease: 'easeIn',
-  //     },
-  //   },
-  // }
-  // // Set longer delay for initial animation for Landing page
-  // if (initRender && pathname === '/') {
-  //   regularVariants.animate.transition.delay = 0.8
-  //   initRender = false
-  // }
-
-  // // Control regular animation
-  // let regularAnimate
-  // if (isHidden) {
-  //   regularAnimate = 'initial'
-  // } else {
-  //   regularAnimate = 'animate'
-  // }
-
-  // if (!isPhone && isOpen) {
-  //   // Close mobile MainNav if window is resized too large and mobile MainNav is open
-  //   setIsOpen(false)
-  // }
-
-  // // Control phone animation
-  // let phoneAnimate
-  // if (isOpen) {
-  //   phoneAnimate = 'animate'
-  // } else {
-  //   phoneAnimate = 'initial'
-  // }
-
-  // // Set class names
-  // let logoClassName = 'logo'
-  // if (isOpen) logoClassName += ' open'
-
-  // let mainNavCloseClassName = 'btn-nav'
-  // if (isOpen) mainNavCloseClassName += ' open'
-
-  // const openClassName = isOpen ? 'open' : undefined
-
-  // // Set menu icon depending on whether phone MainNav is open or not
-  // const menuIcon = isOpen ? (
-  //   <X className="svg-primary" />
-  // ) : (
-  //   <Menu className="svg-primary" />
-  // )
-
-  // // Set phone MainNav theme setting btn txt
-  // const lightnessTxt = isDark ? 'light mode' : 'dark mode'
-
-  // const homeRef = useRef(null)
-  // const menuRef = useRef(null)
-
-  // const LinkListContent = (
-  //   <>
-  //     <li className="phone-home">
-  //       <NavLink
-  //         ref={homeRef}
-  //         exact={true}
-  //         to="/"
-  //         onClick={() => setIsOpen(false)}
-  //       >
-  //         home
-  //       </NavLink>
-  //     </li>
-  //     <li>
-  //       <NavLink to="/about" onClick={() => setIsOpen(false)}>
-  //         about
-  //       </NavLink>
-  //     </li>
-  //     <li>
-  //       <NavLink to="/projects" onClick={() => setIsOpen(false)}>
-  //         projects
-  //       </NavLink>
-  //     </li>
-  //     <li>
-  //       <NavLink to="/blog" onClick={() => setIsOpen(false)}>
-  //         blog
-  //       </NavLink>
-  //     </li>
-  //     <li>
-  //       <NavLink to="/contact" onClick={() => setIsOpen(false)}>
-  //         contact
-  //       </NavLink>
-  //     </li>
-  //     <li>
-  //       <button
-  //         aria-label={`Switch lightness theme`}
-  //         className="btn-nav c-primary"
-  //         onClick={() => {
-  //           manualToggle()
-  //         }}
-  //       >
-  //         <SunMoon className="sun-moon_svg" />
-  //         {isPhone ? lightnessTxt : undefined}
-  //       </button>
-  //     </li>
-  //   </>
-  // )
-
-  // let LinkList
-  // if (isPhone) {
-  //   // Use motion component if phone MainNav
-  //   const ariaHiddenVal = !isOpen ? true : undefined
-  //   const ariaModalVal = isOpen ? true : undefined
-  //   LinkList = (
-  //     <motion.ul
-  //       animate={phoneAnimate}
-  //       aria-hidden={ariaHiddenVal}
-  //       aria-modal={ariaModalVal}
-  //       role="dialog"
-  //       variants={PHONE_VARIANTS}
-  //       className={openClassName}
-  //     >
-  //       {LinkListContent}
-  //     </motion.ul>
-  //   )
-  // } else {
-  //   // Use regular ul ele if regular MainNav
-  //   LinkList = <ul className={openClassName}>{LinkListContent}</ul>
-  // }
-
-  // // Disable body scrolling when phone MainNav is open
-  // if (!__IS_SERVER__) setBodyScroll(!isOpen)
-
-  // // Setup keyboard tab trap
-  // useEffect(() => {
-  //   /**
-  //    * Setup keyboard tab trap
-  //    * @param {KeyboardEvent} e Keyboard event object
-  //    */
-  //   const trapTab = (e) => {
-  //     if (e.keyCode === 27) {
-  //       setIsOpen(false)
-  //     } else if (
-  //       e.keyCode === 9 &&
-  //       homeRef &&
-  //       homeRef.current &&
-  //       menuRef &&
-  //       menuRef.current
-  //     ) {
-  //       // Shift + Tab
-  //       if (e.shiftKey) {
-  //         if (document.activeElement === homeRef.current) {
-  //           // Move activeElement to end of MainNav
-  //           e.preventDefault()
-  //           menuRef.current.focus()
-  //         }
-  //       } else {
-  //         // Tab only
-  //         if (document.activeElement === menuRef.current) {
-  //           // Move activeElement to start of MainNav
-  //           e.preventDefault()
-  //           homeRef.current.focus()
-  //         }
-  //       }
-  //     }
-  //   }
-
-  //   // Apply keyboard tab trap
-  //   if (isOpen && isPhone) {
-  //     document.addEventListener('keydown', trapTab)
-  //   } else {
-  //     document.removeEventListener('keydown', trapTab)
-  //   }
-
-  //   // Remove keyboard trap on unmount
-  //   return () => document.removeEventListener('keydown', trapTab)
-  // }, [isOpen, isPhone])
-
   const [headerAnimateVal, setHeaderAnimateVal] = useState('initial')
-  const logoRef = useRef(null)
   const mainHeaderRef = useRef(null)
+  const logoRef = useRef(null)
   const menuOpenRef = useRef(null)
   const menuCloseRef = useRef(null)
   const phoneHomeRef = useRef(null)
@@ -370,9 +163,10 @@ const MainNav = () => {
     // Create logo for phone layout
     logo = (
       <motion.h2
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.4, ease: 'easeOut' }}
+        ref={logoRef}
+        initial="initial"
+        animate={headerAnimateVal}
+        variants={HEADER_VARIANTS}
       >
         {logoContent}
       </motion.h2>
@@ -400,9 +194,9 @@ const MainNav = () => {
       <motion.button
         ref={menuOpenRef}
         aria-label="Open main navigation"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.4, ease: 'easeOut' }}
+        initial="initial"
+        animate={headerAnimateVal}
+        variants={HEADER_VARIANTS}
         className="btn-nav"
         onClick={() => {
           setIsOpen(true)
@@ -462,31 +256,55 @@ const MainNav = () => {
 
   // Setup observers
   useEffect(() => {
-    let observer
+    const observerCb = (entries) => {
+      if (entries[0].intersectionRatio >= HEADER_THRESHOLD) {
+        if (isInitRender) {
+          isInitRender = false
 
-    if (mainHeaderRef.current) {
-      observer = createObserver(
-        mainHeaderRef,
-        { threshold: HEADER_THRESHOLD },
-        (entries) => {
-          if (entries[0].intersectionRatio >= HEADER_THRESHOLD) {
-            if (isInitRender) {
-              isInitRender = false
-
-              if (pathname === '/') setHeaderAnimateVal('slow')
-              else setHeaderAnimateVal('fast')
-            } else {
-              setHeaderAnimateVal('fast')
-            }
-          } else {
-            setHeaderAnimateVal('initial')
-          }
+          if (pathname === '/') setHeaderAnimateVal('slow')
+          else setHeaderAnimateVal('fast')
+        } else {
+          setHeaderAnimateVal('fast')
         }
-      )
+      } else {
+        setHeaderAnimateVal('initial')
+      }
     }
 
+    const observers = []
+
+    if (isPhone) {
+      if (logoRef.current) {
+        observers.push(
+          createObserver(logoRef, { threshold: HEADER_THRESHOLD }, observerCb)
+        )
+      }
+
+      if (menuOpenRef.current) {
+        observers.push(
+          createObserver(
+            menuOpenRef,
+            { threshold: HEADER_THRESHOLD },
+            observerCb
+          )
+        )
+      }
+    } else {
+      if (mainHeaderRef.current) {
+        observers.push(
+          createObserver(
+            mainHeaderRef,
+            { threshold: HEADER_THRESHOLD },
+            observerCb
+          )
+        )
+      }
+    }
+
+    // Disconnect all observers on unmount
     return () => {
-      if (observer) observer.disconnect()
+      if (observers.length > 0)
+        observers.forEach((observer) => observer.disconnect())
     }
   }, [isPhone, mainHeaderRef])
 
