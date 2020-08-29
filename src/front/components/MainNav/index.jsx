@@ -328,7 +328,12 @@ const MainNav = () => {
       ) {
         // Shift + Tab
         if (e.shiftKey) {
-          if (document.activeElement === phoneHomeRef.current) {
+          if (
+            document.activeElement === phoneHomeRef.current ||
+            (mainNavTitleRef &&
+              mainNavTitleRef.current &&
+              document.activeElement === mainNavTitleRef.current)
+          ) {
             // Move active element to end of phone menu
             e.preventDefault()
             menuCloseRef.current.focus()
