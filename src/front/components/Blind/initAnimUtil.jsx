@@ -1,3 +1,4 @@
+import { createObserver } from '../../util'
 import { useEffect, useRef, useState } from 'react'
 
 /**
@@ -15,24 +16,14 @@ export const setupBlindObserver = (
   blindVisibleStates
 ) => {
   const { ref, setObserver } = observerData[index]
-  const observer = new IntersectionObserver(
-    (entries) => {
-      if (entries[0].intersectionRatio >= threshold) {
-        blindVisibleStates[index].setIsVisible(true)
-      }
-    },
-    {
-      threshold,
+
+  const observer = createObserver(ref, { threshold }, (entries) => {
+    if (entries[0].intersectionRatio >= threshold) {
+      blindVisibleStates[index].setIsVisible(true)
     }
-  )
+  })
 
   setObserver(observer)
-  if (ref.current) {
-    observer.observe(ref.current)
-  } else {
-    // eslint-disable-next-line no-console
-    console.warn('Reference to blind not found. Observer was not set.')
-  }
 
   return observer
 }

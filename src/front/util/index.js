@@ -3,6 +3,24 @@ import { useLocation } from 'react-router-dom'
 import { genHeadData } from '../../common/util'
 
 /**
+ * Create intersection observer
+ * @param {Object} ref React ref
+ * @param {Object} options Intersection observer options
+ * @param {function} cb Callback function run by intersection observer
+ */
+export const createObserver = (ref, options, cb) => {
+  const observer = new IntersectionObserver(cb, options)
+  if (ref.current) {
+    observer.observe(ref.current)
+  } else {
+    // eslint-disable-next-line no-console
+    console.warn('Reference to blind not found. Observer was not set.')
+  }
+
+  return observer
+}
+
+/**
  * Update meta element by updating its content attribute and add or remove element when necessary
  * @param {string} name Meta name attribute value
  * @param {string} value Meta content attribute value

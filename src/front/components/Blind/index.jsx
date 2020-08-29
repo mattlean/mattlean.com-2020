@@ -22,15 +22,15 @@ const Blind = ({
   if (!duration) duration = 0.4
   if (!threshold) threshold = 0.5
 
-  console.log(scrollHeight)
+  // console.log(scrollHeight)
 
   let height
   if (scrollHeight) {
     height = `${scrollHeight}px`
-    console.log('scrollHeight set', height)
+    // console.log('scrollHeight set', height)
   } else {
     height = '100%'
-    console.log('height set', height)
+    // console.log('height set', height)
   }
 
   const VARIANTS = {
@@ -47,7 +47,7 @@ const Blind = ({
 
   // custom property is set to startHeight on motion component
 
-  console.log(VARIANTS)
+  // console.log(VARIANTS)
 
   const [isDone, setIsDone] = useState(false)
   const intersectionRef = useRef(null)

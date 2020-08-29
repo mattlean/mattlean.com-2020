@@ -1,7 +1,8 @@
+@use '../../visuals/scale/bp';
 @use '../../visuals/scale/size';
 @use '../../visuals/scale/typography';
 
-.main-nav {
+.main-header {
   align-items: flex-end;
   display: flex;
   height: size.$size-157;
@@ -16,46 +17,55 @@
     vertical-align: middle;
   }
 
-  > .btn-nav {
-    display: none;
-  }
-
-  > .logo > svg {
+  > h2 > .logo > svg {
     height: 44px;
   }
 
-  > ul {
-    background-color: var(--c-secondary);
-    list-style: none;
+  > .main-nav {
+    > .main-nav-title {
+      left: 0;
+      position: absolute;
+      top: -500px;
+    }
 
-    transform: translateX(3px);
+    // Phone Menu Button
+    > .btn-nav {
+      display: none;
+    }
 
-    > li {
-      display: inline-block;
-      margin-left: size.$size-36;
+    > ul {
+      list-style: none;
 
-      > a {
-        color: var(--grey-1);
-        letter-spacing: 0.1em;
-        text-decoration: none;
-      }
+      transform: translateX(3px);
 
-      > a:active,
-      > a:hover,
-      > .active {
-        text-decoration: underline;
-      }
+      > li {
+        display: inline-block;
 
-      > .btn-nav {
-        vertical-align: middle;
+        margin-left: size.$size-36;
 
-        > svg {
-          width: 19.24px;
+        &.phone-home {
+          display: none;
         }
-      }
 
-      &.phone-home {
-        display: none;
+        > a {
+          color: var(--grey-1);
+          letter-spacing: 0.1em;
+          text-decoration: none;
+
+          &:active,
+          &:hover,
+          &.active {
+            text-decoration: underline;
+          }
+        }
+
+        > .btn-nav {
+          vertical-align: middle;
+
+          > svg {
+            width: 19.24px;
+          }
+        }
       }
     }
   }
@@ -83,105 +93,252 @@
   }
 }
 
-@media (max-width: size.$size-960) {
-  .main-nav {
+@media (max-width: bp.$md) {
+  .main-header {
     height: size.$size-147;
   }
 }
 
 @media (max-width: size.$size-560) {
-  .main-nav {
-    > .logo {
-      z-index: 3;
-    }
+  .main-header {
+    background-color: red;
 
-    > .btn-nav {
-      display: inline-block;
-      z-index: 3;
+    // Phone Menu Button
+    > .main-nav {
+      > .btn-nav {
+        display: inline-block;
 
-      > svg {
-        height: 44px;
-        transform: translateY(1px);
-      }
-    }
-
-    > ul {
-      bottom: 0;
-      display: none;
-      left: 0;
-      padding-top: 233px;
-      position: fixed;
-      right: 0;
-      top: 0;
-      transform: none;
-      z-index: 2;
-
-      &.open {
-        display: block;
+        > svg {
+          height: 44px;
+          transform: translateY(1px);
+        }
       }
 
-      > li {
-        font: typography.$disp-medium size.$size-59 typography.$disp-font-family;
-
-        display: block;
-        margin-bottom: size.$size-30;
-        margin-left: size.$size-27;
-
-        &:last-child {
-          bottom: size.$size-18;
-          margin-bottom: 0;
-          position: absolute;
-        }
-
-        > a {
-          color: var(--c-primary);
-          letter-spacing: normal;
-        }
-
-        > .btn-nav {
-          font-size: size.$size-20;
-
-          vertical-align: bottom;
-
-          > svg {
-            height: 14.35px;
-            margin-right: 1em;
-          }
-        }
-
-        &.phone-home {
-          display: block;
-        }
+      > ul {
+        display: none;
+        z-index: 3;
       }
     }
   }
 
-  .sun-moon_svg {
-    fill: var(--c-primary);
+  .main-header.open {
+    align-items: stretch;
+    bottom: 0;
+    height: 100vh;
+    left: 0;
+    padding-left: size.$size-27;
+    padding-right: size.$size-27;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100vw;
+    z-index: 2;
+
+    > .main-nav {
+      > ul {
+        display: block;
+      }
+    }
   }
 }
 
-@media (max-width: size.$size-470) {
-  .main-nav {
+@media (max-width: bp.$sm) {
+  .main-header {
     align-items: flex-start;
     height: size.$size-176;
     margin-bottom: size.$size-24;
     margin-top: size.$size-18;
 
-    > .btn-nav > svg {
+    > h2 > .logo > svg {
       height: 18px;
     }
 
-    > .logo > svg {
-      height: 18px;
-    }
-
-    > ul {
-      padding-top: 91px;
-
-      > li {
-        margin-left: size.$size-18;
+    > .main-nav {
+      // Phone Menu Button
+      > .btn-nav > svg {
+        height: 18px;
       }
     }
   }
 }
+
+// .main-nav {
+//   align-items: flex-end;
+//   display: flex;
+//   height: size.$size-157;
+//   justify-content: space-between;
+//   margin-bottom: size.$size-27;
+
+//   .btn-nav {
+//     background: none;
+//     border: 0;
+//     cursor: pointer;
+
+//     vertical-align: middle;
+//   }
+
+//   > .btn-nav {
+//     display: none;
+//   }
+
+//   > ul {
+//     background-color: var(--c-secondary);
+//     list-style: none;
+
+//     transform: translateX(3px);
+
+//     > li {
+//       display: inline-block;
+//       margin-left: size.$size-36;
+
+//       > a {
+//         color: var(--grey-1);
+//         letter-spacing: 0.1em;
+//         text-decoration: none;
+//       }
+
+//       > a:active,
+//       > a:hover,
+//       > .active {
+//         text-decoration: underline;
+//       }
+
+//       > .btn-nav {
+//         vertical-align: middle;
+
+//         > svg {
+//           width: 19.24px;
+//         }
+//       }
+
+//       &.phone-home {
+//         display: none;
+//       }
+//     }
+//   }
+// }
+
+// .sun-moon_svg {
+//   fill: var(--grey-1);
+
+//   &__moon {
+//     opacity: 1;
+//   }
+
+//   &__sun {
+//     opacity: 0;
+//   }
+// }
+
+// .dark .sun-moon_svg {
+//   &__moon {
+//     opacity: 0;
+//   }
+
+//   &__sun {
+//     opacity: 1;
+//   }
+// }
+
+// @media (max-width: size.$size-960) {
+//   .main-nav {
+//     height: size.$size-147;
+//   }
+// }
+
+// @media (max-width: size.$size-560) {
+//   .main-nav {
+//     > h2 > .logo {
+//       z-index: 3;
+//     }
+
+//     > .btn-nav {
+//       display: inline-block;
+//       z-index: 3;
+
+//       > svg {
+//         height: 44px;
+//         transform: translateY(1px);
+//       }
+//     }
+
+//     > ul {
+//       bottom: 0;
+//       display: none;
+//       left: 0;
+//       padding-top: 233px;
+//       position: fixed;
+//       right: 0;
+//       top: 0;
+//       transform: none;
+//       z-index: 2;
+
+//       &.open {
+//         display: block;
+//       }
+
+//       > li {
+//         font: typography.$disp-medium size.$size-59 typography.$disp-font-family;
+
+//         display: block;
+//         margin-bottom: size.$size-30;
+//         margin-left: size.$size-27;
+
+//         &:last-child {
+//           bottom: size.$size-18;
+//           margin-bottom: 0;
+//           position: absolute;
+//         }
+
+//         > a {
+//           color: var(--c-primary);
+//           letter-spacing: normal;
+//         }
+
+//         > .btn-nav {
+//           font-size: size.$size-20;
+
+//           vertical-align: bottom;
+
+//           > svg {
+//             height: 14.35px;
+//             margin-right: 1em;
+//           }
+//         }
+
+//         &.phone-home {
+//           display: block;
+//         }
+//       }
+//     }
+//   }
+
+//   .sun-moon_svg {
+//     fill: var(--c-primary);
+//   }
+// }
+
+// @media (max-width: size.$size-470) {
+//   .main-nav {
+//     align-items: flex-start;
+//     height: size.$size-176;
+//     margin-bottom: size.$size-24;
+//     margin-top: size.$size-18;
+
+//     > .btn-nav > svg {
+//       height: 18px;
+//     }
+
+//     > h2 > .logo > svg {
+//       height: 18px;
+//     }
+
+//     > ul {
+//       padding-top: 91px;
+
+//       > li {
+//         margin-left: size.$size-18;
+//       }
+//     }
+//   }
+// }

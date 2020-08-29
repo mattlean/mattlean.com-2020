@@ -41,12 +41,12 @@ const BlindFrame = (
 
   const [scrollHeight, setScrollHeight] = useState()
 
-  console.log('first', ref)
+  // console.log('first', ref)
 
   useEffect(() => {
     if (useScrollHeight && ref && ref.current) {
-      console.log(ref.current)
-      console.log(ref.current.scrollHeight)
+      // console.log(ref.current)
+      // console.log(ref.current.scrollHeight)
       setScrollHeight(ref.current.scrollHeight)
     }
   }, [ref, useScrollHeight])
