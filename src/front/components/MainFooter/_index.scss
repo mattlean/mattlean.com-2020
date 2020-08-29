@@ -35,6 +35,8 @@
     grid-row: 1;
 
     > dt {
+      line-height: 1em;
+
       margin-bottom: size.$size-7;
     }
 
@@ -49,6 +51,12 @@
 
   .external-nav {
     grid-column: -1/-2;
+
+    > .external-nav-title {
+      bottom: -600px;
+      left: 0;
+      position: fixed;
+    }
   }
 }
 

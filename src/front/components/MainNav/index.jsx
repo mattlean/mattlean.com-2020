@@ -11,10 +11,10 @@ import MODAL_VARIANTS from '../modal_variants'
 import SunMoon from '../../assets/icons/sun-moon.svg'
 import X from '../../assets/icons/x.svg'
 
-const HEADER_THRESHOLD = 0.4
+const THRESHOLD = 0.4
 let isInitRender = true
 
-const HEADER_VARIANTS = {
+const VARIANTS = {
   fast: {
     opacity: 1,
     y: 0,
@@ -167,7 +167,7 @@ const MainNav = () => {
         ref={logoRef}
         initial="initial"
         animate={headerAnimateVal}
-        variants={HEADER_VARIANTS}
+        variants={VARIANTS}
       >
         {logoContent}
       </motion.h2>
@@ -198,7 +198,7 @@ const MainNav = () => {
         aria-label="Open main navigation"
         initial="initial"
         animate={headerAnimateVal}
-        variants={HEADER_VARIANTS}
+        variants={VARIANTS}
         className="btn-nav"
         onClick={() => {
           setIsOpen(true)
@@ -255,7 +255,7 @@ const MainNav = () => {
         ref={mainHeaderRef}
         initial="initial"
         animate={headerAnimateVal}
-        variants={HEADER_VARIANTS}
+        variants={VARIANTS}
         className="main-header container"
       >
         {mainHeaderContent}
@@ -263,10 +263,10 @@ const MainNav = () => {
     )
   }
 
-  // Setup observers
+  // Handle observers
   useEffect(() => {
     const observerCb = (entries) => {
-      if (entries[0].intersectionRatio >= HEADER_THRESHOLD) {
+      if (entries[0].intersectionRatio >= THRESHOLD) {
         if (isInitRender) {
           isInitRender = false
 
@@ -285,27 +285,19 @@ const MainNav = () => {
     if (isPhone) {
       if (logoRef.current) {
         observers.push(
-          createObserver(logoRef, { threshold: HEADER_THRESHOLD }, observerCb)
+          createObserver(logoRef, { threshold: THRESHOLD }, observerCb)
         )
       }
 
       if (menuOpenRef.current) {
         observers.push(
-          createObserver(
-            menuOpenRef,
-            { threshold: HEADER_THRESHOLD },
-            observerCb
-          )
+          createObserver(menuOpenRef, { threshold: THRESHOLD }, observerCb)
         )
       }
     } else {
       if (mainHeaderRef.current) {
         observers.push(
-          createObserver(
-            mainHeaderRef,
-            { threshold: HEADER_THRESHOLD },
-            observerCb
-          )
+          createObserver(mainHeaderRef, { threshold: THRESHOLD }, observerCb)
         )
       }
     }
@@ -317,7 +309,7 @@ const MainNav = () => {
     }
   }, [isPhone, mainHeaderRef])
 
-  // Setup phone menu modal
+  // Handle phone menu modal
   useEffect(() => {
     /**
      * Setup keyboard tab trap

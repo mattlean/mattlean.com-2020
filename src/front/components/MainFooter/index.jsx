@@ -1,10 +1,10 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { useIntersection } from 'react-use'
 import AboutThisSite from './AboutThisSite'
+import { createObserver } from '../../util'
 
-const THRESHOLD = 0.25
+const THRESHOLD = 0.2
 const VARIANTS = {
   animate: {
     opacity: 1,
@@ -29,21 +29,31 @@ const VARIANTS = {
  */
 const MainFooter = () => {
   // Animations
-  const intersectionRef = useRef(null)
-  const intersection = useIntersection(intersectionRef, {
-    root: null,
-    rootMargin: '0px',
-    threshold: THRESHOLD,
-  })
+  const [isVisible, setIsVisible] = useState(false)
+  const mainFooterRef = useRef(null)
 
-  const isHidden =
-    __IS_SERVER__ ||
-    (intersection && intersection.intersectionRatio < THRESHOLD) ||
-    !intersection
-      ? true
-      : false
+  useEffect(() => {
+    let observer
+    if (mainFooterRef.current) {
+      observer = createObserver(
+        mainFooterRef,
+        { threshold: THRESHOLD },
+        (entries) => {
+          if (entries[0].intersectionRatio >= THRESHOLD) {
+            setIsVisible(true)
+          } else {
+            setIsVisible(false)
+          }
+        }
+      )
+    }
 
-  const animateFooter = isHidden ? 'initial' : 'animate'
+    return () => {
+      if (observer) observer.disconnect()
+    }
+  }, [])
+
+  const animateFooterVal = isVisible ? 'animate' : 'initial'
 
   // Modal
   const [isOpen, setIsOpen] = useState(false)
@@ -51,9 +61,9 @@ const MainFooter = () => {
 
   return (
     <>
-      <footer ref={intersectionRef} className="main-footer grid c-grey-2">
+      <footer ref={mainFooterRef} className="main-footer grid c-grey-2">
         <motion.dl
-          animate={animateFooter}
+          animate={animateFooterVal}
           initial="initial"
           variants={VARIANTS}
           className="personal-title"
@@ -67,7 +77,7 @@ const MainFooter = () => {
         </motion.dl>
         <nav className="internal-nav">
           <motion.ul
-            animate={animateFooter}
+            animate={animateFooterVal}
             aria-hidden="true"
             initial="initial"
             variants={VARIANTS}
@@ -94,9 +104,10 @@ const MainFooter = () => {
             </li>
           </motion.ul>
         </nav>
-        <nav aria-label="External website profile" className="external-nav">
+        <nav className="external-nav">
+          <h4 className="external-nav-title">External profile links</h4>
           <motion.ul
-            animate={animateFooter}
+            animate={animateFooterVal}
             initial="initial"
             variants={VARIANTS}
           >
@@ -133,7 +144,7 @@ const MainFooter = () => {
           </motion.ul>
         </nav>
         <motion.p
-          animate={animateFooter}
+          animate={animateFooterVal}
           initial="initial"
           variants={VARIANTS}
           className="txt-2 c-grey-3"
