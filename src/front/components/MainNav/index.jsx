@@ -49,6 +49,7 @@ const MainNav = () => {
   const [headerAnimateVal, setHeaderAnimateVal] = useState('initial')
   const mainHeaderRef = useRef(null)
   const logoRef = useRef(null)
+  const mainNavTitleRef = useRef(null)
   const menuOpenRef = useRef(null)
   const menuCloseRef = useRef(null)
   const phoneHomeRef = useRef(null)
@@ -182,7 +183,8 @@ const MainNav = () => {
         variants={MODAL_VARIANTS}
         className={phoneMenuClass}
         onAnimationComplete={() => {
-          if (phoneHomeRef.current) phoneHomeRef.current.focus()
+          if (mainNavTitleRef.current) mainNavTitleRef.current.focus()
+          else if (phoneHomeRef.current) phoneHomeRef.current.focus()
         }}
       >
         {navListContent}
@@ -226,7 +228,14 @@ const MainNav = () => {
     <>
       {logo}
       <nav className="main-nav">
-        <h2 className="main-nav-title">Main Navigation</h2>
+        <h2
+          ref={mainNavTitleRef}
+          aria-hidden={isPhone ? true : undefined}
+          className="main-nav-title"
+          tabIndex="-1"
+        >
+          Main Navigation
+        </h2>
         {navList}
       </nav>
       {menuBtn}
