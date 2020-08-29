@@ -13,6 +13,7 @@ import X from '../../assets/icons/x.svg'
 
 const THRESHOLD = 0.4
 let isInitRender = true
+let isInitRenderPhone = [true, true]
 
 const VARIANTS = {
   fast: {
@@ -246,7 +247,9 @@ const MainNav = () => {
   if (isPhone) {
     // Put everything together in phone layout header
     mainHeader = (
-      <header className="main-header container">{mainHeaderContent}</header>
+      <header ref={mainHeaderRef} className="main-header container">
+        {mainHeaderContent}
+      </header>
     )
   } else {
     // Put everything together in non-phone layout header
@@ -263,41 +266,101 @@ const MainNav = () => {
     )
   }
 
+  // Fix for phone layout where leftover styles are remain on header from SSR
+  useEffect(() => {
+    if (mainHeaderRef.current && isPhone) {
+      mainHeaderRef.current.removeAttribute('style')
+    }
+  }, [])
+
   // Handle observers
   useEffect(() => {
-    const observerCb = (entries) => {
-      if (entries[0].intersectionRatio >= THRESHOLD) {
-        if (isInitRender) {
-          isInitRender = false
-
-          if (pathname === '/') setHeaderAnimateVal('slow')
-          else setHeaderAnimateVal('fast')
-        } else {
-          setHeaderAnimateVal('fast')
-        }
-      } else {
-        setHeaderAnimateVal('initial')
-      }
-    }
-
     const observers = []
 
     if (isPhone) {
       if (logoRef.current) {
         observers.push(
-          createObserver(logoRef, { threshold: THRESHOLD }, observerCb)
+          createObserver(logoRef, { threshold: THRESHOLD }, (entries) => {
+            if (entries[0].intersectionRatio >= THRESHOLD) {
+              if (isInitRenderPhone[0]) {
+                if (
+                  pathname === '/' &&
+                  (isInitRenderPhone[0] || isInitRenderPhone[1])
+                ) {
+                  setHeaderAnimateVal('slow')
+                } else {
+                  setHeaderAnimateVal('fast')
+                }
+
+                isInitRenderPhone[0] = false
+
+                if (
+                  !isInitRenderPhone[0] &&
+                  !isInitRenderPhone[1] &&
+                  isInitRender
+                )
+                  isInitRender = false
+              } else {
+                setHeaderAnimateVal('fast')
+              }
+            } else {
+              setHeaderAnimateVal('initial')
+            }
+          })
         )
       }
 
       if (menuOpenRef.current) {
         observers.push(
-          createObserver(menuOpenRef, { threshold: THRESHOLD }, observerCb)
+          createObserver(menuOpenRef, { threshold: THRESHOLD }, (entries) => {
+            if (entries[0].intersectionRatio >= THRESHOLD) {
+              if (isInitRenderPhone[1]) {
+                if (
+                  pathname === '/' &&
+                  (isInitRenderPhone[0] || isInitRenderPhone[1])
+                ) {
+                  setHeaderAnimateVal('slow')
+                } else {
+                  setHeaderAnimateVal('fast')
+                }
+
+                isInitRenderPhone[1] = false
+
+                if (
+                  !isInitRenderPhone[0] &&
+                  !isInitRenderPhone[1] &&
+                  isInitRender
+                )
+                  isInitRender = false
+              } else {
+                setHeaderAnimateVal('fast')
+              }
+            } else {
+              setHeaderAnimateVal('initial')
+            }
+          })
         )
       }
     } else {
       if (mainHeaderRef.current) {
         observers.push(
-          createObserver(mainHeaderRef, { threshold: THRESHOLD }, observerCb)
+          createObserver(mainHeaderRef, { threshold: THRESHOLD }, (entries) => {
+            if (entries[0].intersectionRatio >= THRESHOLD) {
+              if (isInitRender) {
+                if (pathname === '/') {
+                  setHeaderAnimateVal('slow')
+                } else {
+                  setHeaderAnimateVal('fast')
+                }
+
+                isInitRender = isInitRenderPhone[0] = isInitRenderPhone[1] = false
+              } else {
+                setHeaderAnimateVal('fast')
+              }
+            } else {
+              setHeaderAnimateVal('initial')
+            }
+          })
         )
       }
     }
