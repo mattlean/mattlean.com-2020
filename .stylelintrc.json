@@ -56,6 +56,7 @@
           "counter-increment",
           "counter-reset",
           "cursor",
+          "fill",
           "filter",
           "font",
           "font-family",

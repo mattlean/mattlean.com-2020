@@ -2,78 +2,7 @@
 @use '../../visuals/scale/size';
 @use '../../visuals/scale/typography';
 
-.main-header {
-  align-items: flex-end;
-  display: flex;
-  height: size.$size-157;
-  justify-content: space-between;
-  margin-bottom: size.$size-27;
-
-  .btn-nav {
-    background: none;
-    border: 0;
-    cursor: pointer;
-
-    vertical-align: middle;
-  }
-
-  > h2 > .logo > svg {
-    height: 44px;
-  }
-
-  > .main-nav {
-    > .main-nav-title {
-      left: 0;
-      position: absolute;
-      top: -500px;
-    }
-
-    // Phone Menu Button
-    > .btn-nav {
-      display: none;
-    }
-
-    > ul {
-      list-style: none;
-
-      transform: translateX(3px);
-
-      > li {
-        display: inline-block;
-
-        margin-left: size.$size-36;
-
-        &.phone-home {
-          display: none;
-        }
-
-        > a {
-          color: var(--grey-1);
-          letter-spacing: 0.1em;
-          text-decoration: none;
-
-          &:active,
-          &:hover,
-          &.active {
-            text-decoration: underline;
-          }
-        }
-
-        > .btn-nav {
-          vertical-align: middle;
-
-          > svg {
-            width: 19.24px;
-          }
-        }
-      }
-    }
-  }
-}
-
 .sun-moon_svg {
-  fill: var(--grey-1);
-
   &__moon {
     opacity: 1;
   }
@@ -93,6 +22,93 @@
   }
 }
 
+.main-header {
+  align-items: flex-end;
+  display: flex;
+  height: size.$size-157;
+  justify-content: space-between;
+  margin-bottom: size.$size-27;
+
+  .btn-nav {
+    background: none;
+    border: 0;
+    cursor: pointer;
+
+    vertical-align: middle;
+
+    > .menu-icon {
+      height: 44px;
+      transform: translateY(1px);
+    }
+
+    > .sun-moon_svg {
+      fill: var(--grey-1);
+
+      width: 19.24px;
+
+      > span {
+        position: absolute;
+      }
+    }
+  }
+
+  > h2 > .logo > svg {
+    height: 44px;
+  }
+
+  // Phone Menu Button
+  > .btn-nav {
+    display: none;
+  }
+
+  > .main-nav {
+    > .main-nav-title {
+      left: 0;
+      position: absolute;
+      top: -600px;
+    }
+
+    > ul {
+      list-style: none;
+
+      transform: translateX(3px);
+
+      > li {
+        font-family: typography.$disp-font-family;
+
+        display: inline-block;
+        margin-left: size.$size-36;
+
+        &.phone-home {
+          display: none;
+        }
+
+        &.btn-lightness > .btn-nav > span {
+          left: 0;
+          position: absolute;
+          top: -600px;
+        }
+
+        &.phone-menu-close {
+          display: none;
+        }
+
+        > a {
+          color: var(--grey-1);
+          letter-spacing: 0.1em;
+          text-decoration: none;
+
+          &:active,
+          &:hover,
+          &.active {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: bp.$md) {
   .main-header {
     height: size.$size-147;
@@ -101,45 +117,99 @@
 
 @media (max-width: size.$size-560) {
   .main-header {
-    background-color: red;
+    .btn-nav {
+      > .sun-moon_svg {
+        fill: var(--c-primary);
+
+        height: 14.35px;
+      }
+    }
 
     // Phone Menu Button
-    > .main-nav {
-      > .btn-nav {
-        display: inline-block;
+    > .btn-nav {
+      display: inline-block;
+    }
 
-        > svg {
-          height: 44px;
-          transform: translateY(1px);
+    > .main-nav {
+      > ul {
+        background-color: var(--c-secondary);
+
+        bottom: 0;
+        display: none;
+        left: 0;
+        padding: size.$size-18 size.$size-27;
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 2;
+
+        &.open {
+          display: block;
+        }
+
+        > li {
+          font-size: size.$size-59;
+          font-weight: typography.$disp-medium;
+
+          display: block;
+          margin-bottom: size.$size-30;
+          margin-left: 0;
+          transform: translateY(-6px);
+
+          &.phone-home {
+            display: inline-block;
+          }
+
+          &.btn-lightness {
+            bottom: size.$size-18;
+            margin-bottom: 0;
+            position: fixed;
+            vertical-align: bottom;
+
+            > .btn-nav > span {
+              font-size: size.$size-20;
+
+              margin-left: 1em;
+              position: static;
+            }
+          }
+
+          &.phone-menu-close {
+            display: inline-block;
+            position: fixed;
+            right: size.$size-27;
+            top: size.$size-18;
+          }
+
+          > a {
+            color: var(--c-primary);
+            letter-spacing: normal;
+          }
         }
       }
-
-      > ul {
-        display: none;
-        z-index: 3;
-      }
     }
   }
 
-  .main-header.open {
-    align-items: stretch;
-    bottom: 0;
-    height: 100vh;
-    left: 0;
-    padding-left: size.$size-27;
-    padding-right: size.$size-27;
-    position: fixed;
-    right: 0;
-    top: 0;
-    width: 100vw;
-    z-index: 2;
+  // .main-header.open {
+  //   // align-items: stretch;
+  //   // bottom: 0;
+  //   // height: 100vh;
+  //   // left: 0;
+  //   // padding-left: size.$size-27;
+  //   // padding-right: size.$size-27;
+  //   // position: fixed;
+  //   // right: 0;
+  //   // top: 0;
+  //   // width: 100vw;
+  //   // z-index: 2;
 
-    > .main-nav {
-      > ul {
-        display: block;
-      }
-    }
-  }
+  //   > .main-nav {
+  //     > ul {
+  //       display: block;
+
+  //     }
+  //   }
+  // }
 }
 
 @media (max-width: bp.$sm) {
@@ -153,11 +223,12 @@
       height: 18px;
     }
 
-    > .main-nav {
-      // Phone Menu Button
-      > .btn-nav > svg {
-        height: 18px;
-      }
+    > .main-nav > ul {
+      padding: size.$size-18;
+    }
+
+    > .btn-nav > .menu-icon {
+      height: 18px;
     }
   }
 }

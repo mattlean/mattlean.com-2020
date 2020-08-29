@@ -7,14 +7,14 @@ import { useViewportWidth, setBodyScroll } from 'eswiss/dist/util'
 import { createObserver } from '../../util'
 import Logo from '../../assets/logo/logo.svg'
 import Menu from '../../assets/icons/menu.svg'
-import PHONE_VARIANTS from '../modal_variants'
+import MODAL_VARIANTS from '../modal_variants'
 import SunMoon from '../../assets/icons/sun-moon.svg'
 import X from '../../assets/icons/x.svg'
 
 const HEADER_THRESHOLD = 0.4
-// let initRender = true
+let isInitRender = true
 
-const MAIN_HEADER_VARIANTS = {
+const HEADER_VARIANTS = {
   fast: {
     opacity: 1,
     y: 0,
@@ -35,6 +35,7 @@ const MAIN_HEADER_VARIANTS = {
     opacity: 1,
     y: 0,
     transition: {
+      delay: 1.2,
       duration: 0.8,
       ease: 'easeOut',
     },
@@ -253,93 +254,292 @@ const MainNav = () => {
   // }, [isOpen, isPhone])
 
   const [headerAnimateVal, setHeaderAnimateVal] = useState('initial')
-  const headerRef = useRef(null)
+  const logoRef = useRef(null)
+  const mainHeaderRef = useRef(null)
+  const menuOpenRef = useRef(null)
+  const menuCloseRef = useRef(null)
+  const phoneHomeRef = useRef(null)
   const { isDark, manualToggle } = useContext(ThemeCtx)
   const [isOpen, setIsOpen] = useState(false)
+  const viewportWidth = useViewportWidth(__IS_SERVER__)
+  const isPhone = !__IS_SERVER__ && viewportWidth <= LG_PHONE
+  const { pathname } = useLocation()
 
-  const menuIcon = isOpen ? (
-    <X className="svg-primary" />
-  ) : (
-    <Menu className="svg-primary" />
+  if (!isPhone && isOpen) {
+    // Close phone menu when window is resized to non-phone screen sizes
+    setIsOpen(false)
+  }
+
+  // General logo content
+  const logoContent = (
+    <Link to="/" className="logo">
+      <Logo role="img" />
+    </Link>
   )
 
-  useEffect(() => {
-    const observer = createObserver(
-      headerRef,
-      { threshold: HEADER_THRESHOLD },
-      (entries) => {
-        if (entries[0].intersectionRatio >= HEADER_THRESHOLD) {
-          setHeaderAnimateVal('fast')
-        } else {
-          setHeaderAnimateVal('initial')
-        }
-      }
+  // General nav list content
+  const navListContent = (
+    <>
+      <li className="phone-home">
+        <NavLink
+          ref={phoneHomeRef}
+          to="/"
+          exact={true}
+          onClick={() => {
+            if (isOpen) setIsOpen(false)
+          }}
+        >
+          home
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/about"
+          onClick={() => {
+            if (isOpen) setIsOpen(false)
+          }}
+        >
+          about
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/projects"
+          onClick={() => {
+            if (isOpen) setIsOpen(false)
+          }}
+        >
+          projects
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/blog"
+          onClick={() => {
+            if (isOpen) setIsOpen(false)
+          }}
+        >
+          blog
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/contact"
+          onClick={() => {
+            if (isOpen) setIsOpen(false)
+          }}
+        >
+          contact
+        </NavLink>
+      </li>
+      <li className="btn-lightness">
+        <button
+          aria-label="Switch lightness theme"
+          className="btn-nav c-primary"
+          onClick={() => manualToggle()}
+        >
+          <SunMoon className="sun-moon_svg" aria-hidden="true" />
+          <span>switch to {isDark ? 'light mode' : 'dark mode'}</span>
+        </button>
+      </li>
+      <li className="phone-menu-close">
+        <button
+          ref={menuCloseRef}
+          aria-label="Close main navigation"
+          className="btn-nav"
+          onClick={() => {
+            setIsOpen(false)
+            setBodyScroll(true)
+          }}
+        >
+          <X className="svg-primary menu-icon" />
+        </button>
+      </li>
+    </>
+  )
+  const phoneMenuClass = isOpen ? 'open' : undefined
+
+  // General menu button content
+  const menuBtnContent = <Menu className="svg-primary menu-icon" />
+
+  let logo
+  let navList
+  let menuBtn
+
+  if (isPhone) {
+    // Create logo for phone layout
+    logo = (
+      <motion.h2
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.4, ease: 'easeOut' }}
+      >
+        {logoContent}
+      </motion.h2>
     )
+
+    // Create nav list for phone layout
+    navList = (
+      <motion.ul
+        aria-modal={isOpen ? true : undefined}
+        role="dialog"
+        initial="initial"
+        animate={isOpen ? 'animate' : 'initial'}
+        variants={MODAL_VARIANTS}
+        className={phoneMenuClass}
+        onAnimationComplete={() => {
+          if (phoneHomeRef.current) phoneHomeRef.current.focus()
+        }}
+      >
+        {navListContent}
+      </motion.ul>
+    )
+
+    // Create menu button for phone layout
+    menuBtn = (
+      <motion.button
+        ref={menuOpenRef}
+        aria-label="Open main navigation"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.4, ease: 'easeOut' }}
+        className="btn-nav"
+        onClick={() => {
+          setIsOpen(true)
+          setBodyScroll(false)
+        }}
+      >
+        {menuBtnContent}
+      </motion.button>
+    )
+  } else {
+    // Create logo for non-phone layout
+    logo = <h2>{logoContent}</h2>
+
+    // Create nav list for non-phone layout
+    navList = <ul className={phoneMenuClass}>{navListContent}</ul>
+
+    // Create menu button for non-phone layout
+    menuBtn = (
+      <button aria-label="Open main navigation" className="btn-nav">
+        {menuBtnContent}
+      </button>
+    )
+  }
+
+  // Finally create main header
+  const mainHeaderContent = (
+    <>
+      {logo}
+      <nav className="main-nav">
+        <h2 className="main-nav-title">Main Navigation</h2>
+        {navList}
+      </nav>
+      {menuBtn}
+    </>
+  )
+
+  let mainHeader
+  if (isPhone) {
+    // Put everything together in phone layout header
+    mainHeader = (
+      <header className="main-header container">{mainHeaderContent}</header>
+    )
+  } else {
+    // Put everything together in non-phone layout header
+    mainHeader = (
+      <motion.header
+        ref={mainHeaderRef}
+        initial="initial"
+        animate={headerAnimateVal}
+        variants={HEADER_VARIANTS}
+        className="main-header container"
+      >
+        {mainHeaderContent}
+      </motion.header>
+    )
+  }
+
+  // Setup observers
+  useEffect(() => {
+    let observer
+
+    if (mainHeaderRef.current) {
+      observer = createObserver(
+        mainHeaderRef,
+        { threshold: HEADER_THRESHOLD },
+        (entries) => {
+          if (entries[0].intersectionRatio >= HEADER_THRESHOLD) {
+            if (isInitRender) {
+              isInitRender = false
+
+              if (pathname === '/') setHeaderAnimateVal('slow')
+              else setHeaderAnimateVal('fast')
+            } else {
+              setHeaderAnimateVal('fast')
+            }
+          } else {
+            setHeaderAnimateVal('initial')
+          }
+        }
+      )
+    }
 
     return () => {
       if (observer) observer.disconnect()
     }
-  }, [])
+  }, [isPhone, mainHeaderRef])
 
-  let mainHeaderClass = 'main-header container'
-  if (isOpen) mainHeaderClass += ' open'
+  // Setup phone menu modal
+  useEffect(() => {
+    /**
+     * Setup keyboard tab trap
+     * @param {KeyboardEvent} e Keyboard event object
+     */
+    const trapTab = (e) => {
+      if (e.keyCode === 27) {
+        setIsOpen(false)
+        setBodyScroll(true)
+      } else if (
+        e.keyCode === 9 &&
+        phoneHomeRef &&
+        phoneHomeRef.current &&
+        menuCloseRef &&
+        menuCloseRef.current
+      ) {
+        // Shift + Tab
+        if (e.shiftKey) {
+          if (document.activeElement === phoneHomeRef.current) {
+            // Move active element to end of phone menu
+            e.preventDefault()
+            menuCloseRef.current.focus()
+          }
+        } else {
+          // Tab only
+          if (document.activeElement === menuCloseRef.current) {
+            // Move active element to start of phone menu
+            e.preventDefault()
+            phoneHomeRef.current.focus()
+          }
+        }
+      }
+    }
 
-  return (
-    <motion.header
-      ref={headerRef}
-      initial="initial"
-      animate={headerAnimateVal}
-      variants={MAIN_HEADER_VARIANTS}
-      className={mainHeaderClass}
-    >
-      <h2>
-        <Link to="/" className="logo">
-          <Logo role="img" />
-        </Link>
-      </h2>
-      <nav className="main-nav">
-        <h2 className="main-nav-title">Main Navigation</h2>
-        <ul>
-          <li className="phone-home">
-            <NavLink exact={true} to="/">
-              home
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/about">about</NavLink>
-          </li>
-          <li>
-            <NavLink to="/projects">projects</NavLink>
-          </li>
-          <li>
-            <NavLink to="/blog">blog</NavLink>
-          </li>
-          <li>
-            <NavLink to="/contact">contact</NavLink>
-          </li>
-          <li>
-            <button
-              aria-label={`Switch lightness theme`}
-              className="btn-nav c-primary"
-              onClick={() => manualToggle()}
-            >
-              <SunMoon className="sun-moon_svg" />
-            </button>
-          </li>
-        </ul>
-        <button
-          aria-label="Open main navigation"
-          className="btn-nav"
-          onClick={() => {
-            setBodyScroll(isOpen)
-            setIsOpen(!isOpen)
-          }}
-        >
-          {menuIcon}
-        </button>
-      </nav>
-    </motion.header>
-  )
+    // Apply keyboard tab trap
+    if (isOpen && isPhone) {
+      document.addEventListener('keydown', trapTab)
+
+      if (phoneHomeRef.current) phoneHomeRef.current.focus() // Start focus on first element
+    } else {
+      document.removeEventListener('keydown', trapTab)
+      if (menuOpenRef.current) menuOpenRef.current.focus() // Return focus on menu open button
+    }
+
+    // Remove keyboard trap on unmount
+    return () => document.removeEventListener('keydown', trapTab)
+  }, [isOpen, isPhone])
+
+  return mainHeader
 }
 
 export default MainNav
