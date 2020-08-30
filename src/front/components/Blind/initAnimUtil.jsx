@@ -108,7 +108,7 @@ export const useInitAnim = (numBlinds) => {
           const blindState = blindStates[i]
           blindState.setDelay(delay)
           blindState.setPlay(true)
-          delay += 0.5 // Grow delay to stagger blind animations in initial animation
+          delay += 0.18 // Grow delay to stagger blind animations in initial animation
         } else if (startViewport) {
           // End of viewport has been reached, complete initial animation
           break
