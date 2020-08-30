@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import BlindFrame from '../../components/Blind/BlindFrame'
-import NewBlindFrame from '../../components/Blind/NewBlindFrame'
 import CTA from '../../components/CTA'
 import MainFooter from '../../components/MainFooter'
 import VARIANTS from '../page_variants'
@@ -53,7 +52,7 @@ const About = () => {
     >
       <main aria-label="Content" className="grid-about grid">
         <section className="cover">
-          <NewBlindFrame
+          <BlindFrame
             ref={observerData[0].ref}
             nodeType="h1"
             delay={blindStates[0].delay}
@@ -67,8 +66,8 @@ const About = () => {
             className="h-2 sm:h-3"
           >
             Hello, world!
-          </NewBlindFrame>
-          <NewBlindFrame
+          </BlindFrame>
+          <BlindFrame
             ref={observerData[1].ref}
             nodeType="p"
             delay={blindStates[1].delay}
@@ -84,9 +83,9 @@ const About = () => {
             UI/UX&nbsp;designer. I was born in NY and raised in SoCal. Now I
             live in the SF Bay Area and am looking for new
             work&nbsp;opportunities!
-          </NewBlindFrame>
+          </BlindFrame>
         </section>
-        <NewBlindFrame
+        <BlindFrame
           ref={observerData[2].ref}
           nodeType="section"
           delay={blindStates[2].delay}
@@ -154,9 +153,9 @@ const About = () => {
             where I am sluggishly working towards an associate degree in Graphic
             & Interactive&nbsp;Design.
           </p>
-        </NewBlindFrame>
+        </BlindFrame>
         <section className="closing">
-          <NewBlindFrame
+          <BlindFrame
             ref={observerData[3].ref}
             nodeType="p"
             delay={blindStates[3].delay}
@@ -175,9 +174,9 @@ const About = () => {
             <CTA to="/contact" type="lg" className="a-primary svg-primary">
               Let&apos;s start talking
             </CTA>
-          </NewBlindFrame>
+          </BlindFrame>
         </section>
-        <NewBlindFrame
+        <BlindFrame
           ref={observerData[4].ref}
           nodeType="aside"
           aria-label="Resume"
@@ -358,7 +357,7 @@ const About = () => {
               </ul>
             </section>
           </section>
-        </NewBlindFrame>
+        </BlindFrame>
       </main>
       <MainFooter />
     </motion.div>

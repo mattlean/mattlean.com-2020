@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import { Badge, Btn } from 'eswiss'
 import BlindFrame from '../../../components/Blind/BlindFrame'
-import NewBlindFrame from '../../../components/Blind/NewBlindFrame'
 import { getProjectData } from '../../../../common/data/project'
 import {
   setupBlindObservers,
@@ -50,7 +49,7 @@ const ThemeBoot = () => {
 
   return (
     <>
-      <NewBlindFrame
+      <BlindFrame
         ref={observerData[0].ref}
         nodeType="header"
         delay={blindStates[0].delay}
@@ -75,8 +74,8 @@ const ThemeBoot = () => {
             </Badge>
           ))}
         </ul>
-      </NewBlindFrame>
-      <NewBlindFrame
+      </BlindFrame>
+      <BlindFrame
         ref={observerData[1].ref}
         nodeType="h2"
         delay={blindStates[1].delay}
@@ -89,8 +88,8 @@ const ThemeBoot = () => {
         className="project-overview h-2 md:h-4"
       >
         Project Overview
-      </NewBlindFrame>
-      <NewBlindFrame
+      </BlindFrame>
+      <BlindFrame
         ref={observerData[2].ref}
         nodeType="section"
         delay={blindStates[2].delay}
@@ -134,8 +133,8 @@ const ThemeBoot = () => {
             <MarkGithubIcon className="btn-icon" /> GitHub
           </Btn>
         </a>
-      </NewBlindFrame>
-      <NewBlindFrame
+      </BlindFrame>
+      <BlindFrame
         ref={observerData[3].ref}
         nodeType="figure"
         delay={blindStates[3].delay}
@@ -150,8 +149,8 @@ const ThemeBoot = () => {
       >
         <img src={SSFront} alt="" />
         <figcaption className="c-grey-2">Frontpage example</figcaption>
-      </NewBlindFrame>
-      <NewBlindFrame
+      </BlindFrame>
+      <BlindFrame
         ref={observerData[4].ref}
         nodeType="figure"
         delay={blindStates[4].delay}
@@ -166,9 +165,9 @@ const ThemeBoot = () => {
       >
         <img src={SSLocation} alt="" />
         <figcaption className="c-grey-2">Regular page&nbsp;example</figcaption>
-      </NewBlindFrame>
+      </BlindFrame>
       <section className="subgrid-ss-sm project-details-gap">
-        <NewBlindFrame
+        <BlindFrame
           ref={observerData[5].ref}
           nodeType="figure"
           delay={blindStates[5].delay}
@@ -185,8 +184,8 @@ const ThemeBoot = () => {
           <figcaption className="c-grey-2">
             Frontpage example being viewed on a mobile&nbsp;device
           </figcaption>
-        </NewBlindFrame>
-        <NewBlindFrame
+        </BlindFrame>
+        <BlindFrame
           ref={observerData[6].ref}
           nodeType="figure"
           delay={blindStates[6].delay}
@@ -203,9 +202,9 @@ const ThemeBoot = () => {
           <figcaption className="c-grey-2">
             Regular page example being viewed on a mobile&nbsp;device
           </figcaption>
-        </NewBlindFrame>
+        </BlindFrame>
       </section>
-      <NewBlindFrame
+      <BlindFrame
         ref={observerData[7].ref}
         nodeType="h3"
         delay={blindStates[7].delay}
@@ -218,8 +217,8 @@ const ThemeBoot = () => {
         className="project-details-header"
       >
         Project Details
-      </NewBlindFrame>
-      <NewBlindFrame
+      </BlindFrame>
+      <BlindFrame
         ref={observerData[8].ref}
         nodeType="section"
         className="subgrid-project-details grid mb-0 c-grey-1"
@@ -313,8 +312,8 @@ const ThemeBoot = () => {
             </ul>
           </section>
         </section>
-      </NewBlindFrame>
-      <NewBlindFrame
+      </BlindFrame>
+      <BlindFrame
         ref={observerData[9].ref}
         nodeType="a"
         href="https://github.com/mattlean/themeboot"
@@ -332,7 +331,7 @@ const ThemeBoot = () => {
         <Btn className="btn-github">
           <MarkGithubIcon className="btn-icon" /> GitHub
         </Btn>
-      </NewBlindFrame>
+      </BlindFrame>
     </>
   )
 }

@@ -3,7 +3,6 @@ import { Badge, Btn } from 'eswiss'
 import { Link } from 'react-router-dom'
 import CTA from '../../../components/CTA'
 import BlindFrame from '../../../components/Blind/BlindFrame'
-import NewBlindFrame from '../../../components/Blind/NewBlindFrame'
 import { getProjectData } from '../../../../common/data/project'
 import {
   setupBlindObservers,
@@ -51,7 +50,7 @@ const SOT = () => {
 
   return (
     <>
-      <NewBlindFrame
+      <BlindFrame
         ref={observerData[0].ref}
         nodeType="header"
         delay={blindStates[0].delay}
@@ -76,8 +75,8 @@ const SOT = () => {
             </Badge>
           ))}
         </ul>
-      </NewBlindFrame>
-      <NewBlindFrame
+      </BlindFrame>
+      <BlindFrame
         ref={observerData[1].ref}
         nodeType="h2"
         delay={blindStates[1].delay}
@@ -90,8 +89,8 @@ const SOT = () => {
         className="project-overview h-2 md:h-4"
       >
         Project Overview
-      </NewBlindFrame>
-      <NewBlindFrame
+      </BlindFrame>
+      <BlindFrame
         ref={observerData[2].ref}
         nodeType="section"
         delay={blindStates[2].delay}
@@ -139,8 +138,8 @@ const SOT = () => {
             <BookIcon className="btn-icon" /> Case Study
           </Btn>
         </Link>
-      </NewBlindFrame>
-      <NewBlindFrame
+      </BlindFrame>
+      <BlindFrame
         ref={observerData[3].ref}
         nodeType="figure"
         delay={blindStates[3].delay}
@@ -157,8 +156,8 @@ const SOT = () => {
         <figcaption className="c-grey-2">
           Main screen for spectral overlay&nbsp;tool
         </figcaption>
-      </NewBlindFrame>
-      <NewBlindFrame
+      </BlindFrame>
+      <BlindFrame
         ref={observerData[4].ref}
         nodeType="section"
         delay={blindStates[4].delay}
@@ -182,8 +181,8 @@ const SOT = () => {
         <CTA to="/" type="sm" className="a-primary svg-primary">
           Learn more about the&nbsp;project
         </CTA>
-      </NewBlindFrame>
-      <NewBlindFrame
+      </BlindFrame>
+      <BlindFrame
         ref={observerData[5].ref}
         nodeType="figure"
         delay={blindStates[5].delay}
@@ -200,8 +199,8 @@ const SOT = () => {
           Instrument selection that supports filtering of instruments and
           sorting of&nbsp;dyes
         </figcaption>
-      </NewBlindFrame>
-      <NewBlindFrame
+      </BlindFrame>
+      <BlindFrame
         ref={observerData[6].ref}
         nodeType="figure"
         delay={blindStates[6].delay}
@@ -217,8 +216,8 @@ const SOT = () => {
         <figcaption className="c-grey-2">
           Fullscreen mode for a larger view of the&nbsp;charts
         </figcaption>
-      </NewBlindFrame>
-      <NewBlindFrame
+      </BlindFrame>
+      <BlindFrame
         ref={observerData[7].ref}
         nodeType="h3"
         delay={blindStates[7].delay}
@@ -231,8 +230,8 @@ const SOT = () => {
         className="project-details-header"
       >
         Project Details
-      </NewBlindFrame>
-      <NewBlindFrame
+      </BlindFrame>
+      <BlindFrame
         ref={observerData[8].ref}
         nodeType="section"
         delay={blindStates[8].delay}
@@ -443,8 +442,8 @@ const SOT = () => {
             </ul>
           </section>
         </section>
-      </NewBlindFrame>
-      <NewBlindFrame
+      </BlindFrame>
+      <BlindFrame
         ref={observerData[9].ref}
         nodeType="a"
         href="https://biosearchtech.com/qpcr-multiplex-spectral-overlay-tool"
@@ -462,8 +461,8 @@ const SOT = () => {
         <Btn className="btn-view-live">
           <PlayIcon className="btn-icon" /> View Live
         </Btn>
-      </NewBlindFrame>
-      <NewBlindFrame
+      </BlindFrame>
+      <BlindFrame
         ref={observerData[10].ref}
         nodeType="Link"
         to="/"
@@ -479,7 +478,7 @@ const SOT = () => {
         <Btn outline={true} className="btn-case-study">
           <BookIcon className="btn-icon" /> Case Study
         </Btn>
-      </NewBlindFrame>
+      </BlindFrame>
     </>
   )
 }

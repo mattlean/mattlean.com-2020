@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from 'react'
 import { Badge } from 'eswiss'
 import { Link } from 'react-router-dom'
 import BlindFrame from '../../../components/Blind/BlindFrame'
-import NewBlindFrame from '../../../components/Blind/NewBlindFrame'
 import { getPostData } from '../../../../common/data/post'
 import {
   setupBlindObservers,
@@ -48,7 +47,7 @@ const HelloWorld = () => {
 
   return (
     <>
-      <NewBlindFrame
+      <BlindFrame
         ref={observerData[0].ref}
         nodeType="header"
         delay={blindStates[0].delay}
@@ -74,8 +73,8 @@ const HelloWorld = () => {
             </Badge>
           ))}
         </ul>
-      </NewBlindFrame>
-      <NewBlindFrame
+      </BlindFrame>
+      <BlindFrame
         ref={observerData[1].ref}
         delay={blindStates[1].delay}
         duration={0.2}
@@ -172,7 +171,7 @@ const HelloWorld = () => {
           it’ll help someone who is in the same position I’m in right now where
           they’re looking to get their foot into the software&nbsp;industry.
         </p>
-      </NewBlindFrame>
+      </BlindFrame>
     </>
   )
 }

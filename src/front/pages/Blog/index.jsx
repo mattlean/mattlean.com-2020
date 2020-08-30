@@ -3,7 +3,6 @@ import { Badge } from 'eswiss'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import BlindFrame from '../../components/Blind/BlindFrame'
-import NewBlindFrame from '../../components/Blind/NewBlindFrame'
 import MainFooter from '../../components/MainFooter'
 import VARIANTS from '../page_variants'
 import { getAllPostData } from '../../../common/data/post'
@@ -51,7 +50,7 @@ const Blog = () => {
   for (let i = 0; i < allPostData.length; i += 1) {
     const p = allPostData[i]
     posts.push(
-      <NewBlindFrame
+      <BlindFrame
         ref={observerData[i + 1].ref}
         key={p.id}
         nodeType="article"
@@ -78,7 +77,7 @@ const Blog = () => {
             ))}
           </ul>
         </Link>
-      </NewBlindFrame>
+      </BlindFrame>
     )
   }
 
@@ -92,7 +91,7 @@ const Blog = () => {
       className="container"
     >
       <main aria-label="Content" className="grid-feed grid">
-        <NewBlindFrame
+        <BlindFrame
           ref={observerData[0].ref}
           nodeType="h1"
           delay={blindStates[0].delay}
@@ -106,7 +105,7 @@ const Blog = () => {
           className="h-2 sm:h-3"
         >
           Blog
-        </NewBlindFrame>
+        </BlindFrame>
         <section aria-label="Blog Feed" role="feed" className="content">
           {posts}
         </section>

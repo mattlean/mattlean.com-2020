@@ -1,7 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import BlindFrame from '../Blind/BlindFrame'
-import NewBlindFrame from '../Blind/NewBlindFrame'
 import Arrow from '../../assets/icons/arrow.svg'
 
 /**
@@ -31,9 +30,9 @@ const CTA = ({ blind, children, className, to, type }) => {
   let content
   if (blind) {
     content = (
-      <NewBlindFrame {...blind}>
+      <BlindFrame {...blind}>
         {children} {arrow}
-      </NewBlindFrame>
+      </BlindFrame>
     )
   } else {
     content = (

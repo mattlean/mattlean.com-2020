@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from 'react'
 import { Badge, Btn } from 'eswiss'
 import { Link } from 'react-router-dom'
 import BlindFrame from '../../../components/Blind/BlindFrame'
-import NewBlindFrame from '../../../components/Blind/NewBlindFrame'
 import CTA from '../../../components/CTA'
 import { getProjectData } from '../../../../common/data/project'
 import {
@@ -52,7 +51,7 @@ const LeanSpace = () => {
 
   return (
     <>
-      <NewBlindFrame
+      <BlindFrame
         ref={observerData[0].ref}
         nodeType="header"
         delay={blindStates[0].delay}
@@ -77,8 +76,8 @@ const LeanSpace = () => {
             </Badge>
           ))}
         </ul>
-      </NewBlindFrame>
-      <NewBlindFrame
+      </BlindFrame>
+      <BlindFrame
         ref={observerData[1].ref}
         nodeType="h2"
         delay={blindStates[1].delay}
@@ -91,8 +90,8 @@ const LeanSpace = () => {
         className="project-overview h-2 md:h-4"
       >
         Project Overview
-      </NewBlindFrame>
-      <NewBlindFrame
+      </BlindFrame>
+      <BlindFrame
         ref={observerData[2].ref}
         nodeType="section"
         delay={blindStates[2].delay}
@@ -136,8 +135,8 @@ const LeanSpace = () => {
             <MarkGithubIcon className="btn-icon" /> GitHub
           </Btn>
         </a>
-      </NewBlindFrame>
-      <NewBlindFrame
+      </BlindFrame>
+      <BlindFrame
         ref={observerData[3].ref}
         nodeType="figure"
         delay={blindStates[3].delay}
@@ -154,8 +153,8 @@ const LeanSpace = () => {
         <figcaption className="c-grey-2">
           Work page showcasing&nbsp;projects
         </figcaption>
-      </NewBlindFrame>
-      <NewBlindFrame
+      </BlindFrame>
+      <BlindFrame
         ref={observerData[4].ref}
         nodeType="figure"
         delay={blindStates[4].delay}
@@ -172,8 +171,8 @@ const LeanSpace = () => {
         <figcaption className="c-grey-2">
           First post written on the&nbsp;blog
         </figcaption>
-      </NewBlindFrame>
-      <NewBlindFrame
+      </BlindFrame>
+      <BlindFrame
         ref={observerData[5].ref}
         nodeType="section"
         delay={blindStates[5].delay}
@@ -195,9 +194,9 @@ const LeanSpace = () => {
         <CTA to="/" type="sm" className="a-primary svg-primary">
           Learn more about the&nbsp;project
         </CTA>
-      </NewBlindFrame>
+      </BlindFrame>
       <section className="subgrid-ss-sm project-details-gap">
-        <NewBlindFrame
+        <BlindFrame
           ref={observerData[6].ref}
           nodeType="figure"
           delay={blindStates[6].delay}
@@ -214,8 +213,8 @@ const LeanSpace = () => {
           <figcaption className="c-grey-2">
             Work page showcasing projects being viewed on a mobile&nbsp;device
           </figcaption>
-        </NewBlindFrame>
-        <NewBlindFrame
+        </BlindFrame>
+        <BlindFrame
           ref={observerData[7].ref}
           nodeType="figure"
           delay={blindStates[7].delay}
@@ -232,9 +231,9 @@ const LeanSpace = () => {
           <figcaption className="c-grey-2">
             First post written on the blog being viewed on a mobile&nbsp;device
           </figcaption>
-        </NewBlindFrame>
+        </BlindFrame>
       </section>
-      <NewBlindFrame
+      <BlindFrame
         ref={observerData[8].ref}
         nodeType="h3"
         delay={blindStates[8].delay}
@@ -247,8 +246,8 @@ const LeanSpace = () => {
         className="project-details-header"
       >
         Project Details
-      </NewBlindFrame>
-      <NewBlindFrame
+      </BlindFrame>
+      <BlindFrame
         ref={observerData[9].ref}
         nodeType="section"
         delay={blindStates[9].delay}
@@ -379,8 +378,8 @@ const LeanSpace = () => {
             </ul>
           </section>
         </section>
-      </NewBlindFrame>
-      <NewBlindFrame
+      </BlindFrame>
+      <BlindFrame
         ref={observerData[10].ref}
         nodeType="Link"
         to="/"
@@ -396,8 +395,8 @@ const LeanSpace = () => {
         <Btn className="btn-view-live">
           <BookIcon className="btn-icon" /> Case Study
         </Btn>
-      </NewBlindFrame>
-      <NewBlindFrame
+      </BlindFrame>
+      <BlindFrame
         ref={observerData[11].ref}
         nodeType="a"
         href="http://google.com"
@@ -415,8 +414,8 @@ const LeanSpace = () => {
         <Btn outline={true} className="btn-view-live">
           <PlayIcon className="btn-icon" /> View Live
         </Btn>
-      </NewBlindFrame>
-      <NewBlindFrame
+      </BlindFrame>
+      <BlindFrame
         ref={observerData[12].ref}
         nodeType="a"
         href="https://github.com/mattlean/lean-space"
@@ -434,7 +433,7 @@ const LeanSpace = () => {
         <Btn outline={true} className="btn-gh">
           <MarkGithubIcon className="btn-icon" /> GitHub
         </Btn>
-      </NewBlindFrame>
+      </BlindFrame>
     </>
   )
 }

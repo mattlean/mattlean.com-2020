@@ -3,7 +3,6 @@ import { Badge } from 'eswiss'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import BlindFrame from '../../components/Blind/BlindFrame'
-import NewBlindFrame from '../../components/Blind/NewBlindFrame'
 import VARIANTS from '../page_variants'
 import MainFooter from '../../components/MainFooter'
 import { getAllProjectData } from '../../../common/data/project'
@@ -68,7 +67,7 @@ const ProjectFeed = () => {
   for (let i = 0; i < allProjectData.length; i += 1) {
     const p = allProjectData[i]
     projects.push(
-      <NewBlindFrame
+      <BlindFrame
         ref={observerData[i + 1].ref}
         key={p.id}
         nodeType="li"
@@ -92,7 +91,7 @@ const ProjectFeed = () => {
             ))}
           </ul>
         </Link>
-      </NewBlindFrame>
+      </BlindFrame>
     )
   }
 
@@ -106,7 +105,7 @@ const ProjectFeed = () => {
       className="container"
     >
       <main aria-label="Content" className="grid-feed grid">
-        <NewBlindFrame
+        <BlindFrame
           ref={observerData[0].ref}
           nodeType="h1"
           delay={blindStates[0].delay}
@@ -120,7 +119,7 @@ const ProjectFeed = () => {
           className="h-2 sm:h-3"
         >
           Projects
-        </NewBlindFrame>
+        </BlindFrame>
         <ul aria-label="Project Feed" role="feed" className="content">
           {projects}
         </ul>

@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { Badge } from 'eswiss'
 import BlindFrame from '../../../components/Blind/BlindFrame'
-import NewBlindFrame from '../../../components/Blind/NewBlindFrame'
 import { getProjectData } from '../../../../common/data/project'
 import {
   setupBlindObservers,
@@ -49,7 +48,7 @@ const Crush = () => {
 
   return (
     <>
-      <NewBlindFrame
+      <BlindFrame
         ref={observerData[0].ref}
         nodeType="header"
         delay={blindStates[0].delay}
@@ -74,8 +73,8 @@ const Crush = () => {
             </Badge>
           ))}
         </ul>
-      </NewBlindFrame>
-      <NewBlindFrame
+      </BlindFrame>
+      <BlindFrame
         ref={observerData[1].ref}
         nodeType="h2"
         delay={blindStates[1].delay}
@@ -88,8 +87,8 @@ const Crush = () => {
         className="project-overview h-2 md:h-4"
       >
         Project Overview
-      </NewBlindFrame>
-      <NewBlindFrame
+      </BlindFrame>
+      <BlindFrame
         ref={observerData[2].ref}
         nodeType="section"
         delay={blindStates[2].delay}
@@ -128,9 +127,9 @@ const Crush = () => {
             .
           </p>
         </section>
-      </NewBlindFrame>
+      </BlindFrame>
       <section className="subgrid-ss-sm">
-        <NewBlindFrame
+        <BlindFrame
           ref={observerData[3].ref}
           nodeType="figure"
           delay={blindStates[3].delay}
@@ -146,8 +145,8 @@ const Crush = () => {
           <figcaption className="c-grey-2">
             Screenshot of start&nbsp;screen
           </figcaption>
-        </NewBlindFrame>
-        <NewBlindFrame
+        </BlindFrame>
+        <BlindFrame
           ref={observerData[4].ref}
           nodeType="figure"
           delay={blindStates[4].delay}
@@ -163,9 +162,9 @@ const Crush = () => {
           <figcaption className="c-grey-2">
             Screenshot of tile-matching&nbsp;board
           </figcaption>
-        </NewBlindFrame>
+        </BlindFrame>
       </section>
-      <NewBlindFrame
+      <BlindFrame
         ref={observerData[5].ref}
         nodeType="figure"
         delay={blindStates[5].delay}
@@ -183,8 +182,8 @@ const Crush = () => {
           qPCR Crush game and leaderboards on the
           qPCR&nbsp;Design&nbsp;Lab&nbsp;microsite
         </figcaption>
-      </NewBlindFrame>
-      <NewBlindFrame
+      </BlindFrame>
+      <BlindFrame
         ref={observerData[6].ref}
         nodeType="h3"
         delay={blindStates[6].delay}
@@ -197,8 +196,8 @@ const Crush = () => {
         className="project-details-header"
       >
         Project Details
-      </NewBlindFrame>
-      <NewBlindFrame
+      </BlindFrame>
+      <BlindFrame
         ref={observerData[7].ref}
         nodeType="section"
         className="subgrid-project-details grid mb-0 c-grey-1"
@@ -390,7 +389,7 @@ const Crush = () => {
             </ul>
           </section>
         </section>
-      </NewBlindFrame>
+      </BlindFrame>
     </>
   )
 }

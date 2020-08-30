@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import BlindFrame from '../../components/Blind/BlindFrame'
-import NewBlindFrame from '../../components/Blind/NewBlindFrame'
 import MainFooter from '../../components/MainFooter'
 import VARIANTS from '../page_variants'
 import {
@@ -54,7 +53,7 @@ const Contact = () => {
     >
       <main aria-label="Content" className="grid-contact grid">
         <section className="cover">
-          <NewBlindFrame
+          <BlindFrame
             ref={observerData[0].ref}
             nodeType="h1"
             delay={blindStates[0].delay}
@@ -68,8 +67,8 @@ const Contact = () => {
             className="h-2 sm:h-3 lh-1"
           >
             Let’s get in&nbsp;touch.
-          </NewBlindFrame>
-          <NewBlindFrame
+          </BlindFrame>
+          <BlindFrame
             ref={observerData[1].ref}
             nodeType="p"
             delay={blindStates[1].delay}
@@ -84,10 +83,10 @@ const Contact = () => {
             Have any questions? Got a project in mind for&nbsp;me?
             <br />
             Let’s connect and start&nbsp;talking.
-          </NewBlindFrame>
+          </BlindFrame>
         </section>
         <ul>
-          <NewBlindFrame
+          <BlindFrame
             ref={observerData[2].ref}
             nodeType="li"
             delay={blindStates[2].delay}
@@ -102,8 +101,8 @@ const Contact = () => {
               <MailIcon size={24} />
               matt@mattlean.com
             </a>
-          </NewBlindFrame>
-          <NewBlindFrame
+          </BlindFrame>
+          <BlindFrame
             ref={observerData[3].ref}
             nodeType="li"
             delay={blindStates[3].delay}
@@ -123,7 +122,7 @@ const Contact = () => {
               <img src={LogoLinkedIn} alt="LinkedIn Icon" />
               linkedin.com/in/mattlean
             </a>
-          </NewBlindFrame>
+          </BlindFrame>
         </ul>
       </main>
       <MainFooter />

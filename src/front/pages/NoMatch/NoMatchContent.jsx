@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
 import BlindFrame from '../../components/Blind/BlindFrame'
-import NewBlindFrame from '../../components/Blind/NewBlindFrame'
 import { NO_MATCH_TITLE } from '../../../common/data/route'
 import {
   setupBlindObservers,
@@ -44,7 +43,7 @@ const NoMatchContent = () => {
 
   return (
     <section className="cover">
-      <NewBlindFrame
+      <BlindFrame
         ref={observerData[0].ref}
         nodeType="h1"
         delay={blindStates[0].delay}
@@ -58,8 +57,8 @@ const NoMatchContent = () => {
         className="h-2 sm:h-3 lh-1"
       >
         404: Page Not&nbsp;Found
-      </NewBlindFrame>
-      <NewBlindFrame
+      </BlindFrame>
+      <BlindFrame
         ref={observerData[1].ref}
         nodeType="p"
         delay={blindStates[1].delay}
@@ -78,7 +77,7 @@ const NoMatchContent = () => {
           contact me
         </NavLink>{' '}
         to get&nbsp;it&nbsp;fixed!
-      </NewBlindFrame>
+      </BlindFrame>
     </section>
   )
 }

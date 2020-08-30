@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from 'react'
 import { Badge, Btn } from 'eswiss'
 import { Link } from 'react-router-dom'
 import BlindFrame from '../../../components/Blind/BlindFrame'
-import NewBlindFrame from '../../../components/Blind/NewBlindFrame'
 import { getProjectData } from '../../../../common/data/project'
 import {
   setupBlindObservers,
@@ -49,7 +48,7 @@ const Gridnik = () => {
 
   return (
     <>
-      <NewBlindFrame
+      <BlindFrame
         ref={observerData[0].ref}
         nodeType="header"
         delay={blindStates[0].delay}
@@ -74,8 +73,8 @@ const Gridnik = () => {
             </Badge>
           ))}
         </ul>
-      </NewBlindFrame>
-      <NewBlindFrame
+      </BlindFrame>
+      <BlindFrame
         ref={observerData[1].ref}
         nodeType="h2"
         delay={blindStates[1].delay}
@@ -88,8 +87,8 @@ const Gridnik = () => {
         className="project-overview h-2 md:h-4"
       >
         Project Overview
-      </NewBlindFrame>
-      <NewBlindFrame
+      </BlindFrame>
+      <BlindFrame
         ref={observerData[2].ref}
         nodeType="section"
         delay={blindStates[2].delay}
@@ -149,8 +148,8 @@ const Gridnik = () => {
             <MarkGithubIcon className="btn-icon" /> GitHub
           </Btn>
         </a>
-      </NewBlindFrame>
-      <NewBlindFrame
+      </BlindFrame>
+      <BlindFrame
         ref={observerData[3].ref}
         nodeType="figure"
         delay={blindStates[3].delay}
@@ -177,8 +176,8 @@ const Gridnik = () => {
           </a>
           .
         </figcaption>
-      </NewBlindFrame>
-      <NewBlindFrame
+      </BlindFrame>
+      <BlindFrame
         ref={observerData[4].ref}
         nodeType="figure"
         delay={blindStates[4].delay}
@@ -203,8 +202,8 @@ const Gridnik = () => {
           </Link>
           .
         </figcaption>
-      </NewBlindFrame>
-      <NewBlindFrame
+      </BlindFrame>
+      <BlindFrame
         ref={observerData[5].ref}
         nodeType="h3"
         delay={blindStates[5].delay}
@@ -217,8 +216,8 @@ const Gridnik = () => {
         className="project-details-header"
       >
         Project Details
-      </NewBlindFrame>
-      <NewBlindFrame
+      </BlindFrame>
+      <BlindFrame
         ref={observerData[6].ref}
         nodeType="section"
         className="subgrid-project-details grid mb-0 c-grey-1"
@@ -266,8 +265,8 @@ const Gridnik = () => {
             </ul>
           </section>
         </section>
-      </NewBlindFrame>
-      <NewBlindFrame
+      </BlindFrame>
+      <BlindFrame
         ref={observerData[7].ref}
         nodeType="a"
         href="https://github.com/mattlean/gridnik"
@@ -285,7 +284,7 @@ const Gridnik = () => {
         <Btn className="btn-gh">
           <MarkGithubIcon className="btn-icon" /> GitHub
         </Btn>
-      </NewBlindFrame>
+      </BlindFrame>
     </>
   )
 }

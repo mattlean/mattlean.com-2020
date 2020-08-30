@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import { Badge, Btn } from 'eswiss'
 import BlindFrame from '../../../components/Blind/BlindFrame'
-import NewBlindFrame from '../../../components/Blind/NewBlindFrame'
 import { getProjectData } from '../../../../common/data/project'
 import {
   setupBlindObservers,
@@ -47,7 +46,7 @@ const Checkpoint = () => {
 
   return (
     <>
-      <NewBlindFrame
+      <BlindFrame
         ref={observerData[0].ref}
         nodeType="header"
         delay={blindStates[0].delay}
@@ -71,8 +70,8 @@ const Checkpoint = () => {
             </Badge>
           ))}
         </ul>
-      </NewBlindFrame>
-      <NewBlindFrame
+      </BlindFrame>
+      <BlindFrame
         ref={observerData[1].ref}
         nodeType="h2"
         delay={blindStates[1].delay}
@@ -85,8 +84,8 @@ const Checkpoint = () => {
         className="project-overview h-2 md:h-4"
       >
         Project Overview
-      </NewBlindFrame>
-      <NewBlindFrame
+      </BlindFrame>
+      <BlindFrame
         ref={observerData[2].ref}
         nodeType="section"
         delay={blindStates[2].delay}
@@ -126,8 +125,8 @@ const Checkpoint = () => {
             <NPMIcon className="btn-icon" /> npm
           </Btn>
         </a>
-      </NewBlindFrame>
-      <NewBlindFrame
+      </BlindFrame>
+      <BlindFrame
         ref={observerData[3].ref}
         nodeType="h3"
         delay={blindStates[3].delay}
@@ -140,8 +139,8 @@ const Checkpoint = () => {
         className="project-details-header"
       >
         Project Details
-      </NewBlindFrame>
-      <NewBlindFrame
+      </BlindFrame>
+      <BlindFrame
         ref={observerData[4].ref}
         nodeType="section"
         className="subgrid-project-details grid mb-0 c-grey-1"
@@ -228,7 +227,7 @@ const Checkpoint = () => {
             </ul>
           </section>
         </section>
-      </NewBlindFrame>
+      </BlindFrame>
     </>
   )
 }

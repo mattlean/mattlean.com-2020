@@ -2,7 +2,6 @@ import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import BlindFrame from '../../components/Blind/BlindFrame'
-import NewBlindFrame from '../../components/Blind/NewBlindFrame'
 import CTA from '../../components/CTA'
 import MainFooter from '../../components/MainFooter'
 import VARIANTS from '../page_variants'
@@ -76,7 +75,7 @@ const Landing = () => {
       className="container"
     >
       <main aria-label="Content" className="grid-landing grid">
-        <NewBlindFrame
+        <BlindFrame
           ref={observerData[0].ref}
           nodeType="h1"
           delay={blindStates[0].delay}
@@ -91,8 +90,8 @@ const Landing = () => {
         >
           Hi, I’m <br className="title-br" aria-hidden="true" />
           Matt&nbsp;Lean!
-        </NewBlindFrame>
-        <NewBlindFrame
+        </BlindFrame>
+        <BlindFrame
           ref={observerData[1].ref}
           nodeType="p"
           delay={blindStates[1].delay}
@@ -107,7 +106,7 @@ const Landing = () => {
           I’m a developer who works at the intersection of engineering and
           design. I’ve been building web-based products for Silicon Valley since
           2015 and am currently looking for new&nbsp;opportunities.
-        </NewBlindFrame>
+        </BlindFrame>
         <CTA
           blind={{
             ref: observerData[2].ref,
@@ -123,7 +122,7 @@ const Landing = () => {
         >
           Learn more about me
         </CTA>
-        <NewBlindFrame
+        <BlindFrame
           ref={observerData[3].ref}
           nodeType="h2"
           delay={blindStates[3].delay}
@@ -136,14 +135,14 @@ const Landing = () => {
           className="featured-header featured-header-projects h-4 sm:h-6 dispw-bold tracked"
         >
           Featured Projects
-        </NewBlindFrame>
+        </BlindFrame>
         <section className="subgrid-featured featured-projects grid">
           <Link
             to="/projects/gridnik"
             className="subgrid-featured-item grid tdl-none"
           >
             <figure className="subgrid-featured-item-content grid">
-              <NewBlindFrame
+              <BlindFrame
                 ref={observerData[4].ref}
                 nodeType="section"
                 delay={blindStates[4].delay}
@@ -158,8 +157,8 @@ const Landing = () => {
                   src={gridnikData.featured.img}
                   alt={gridnikData.featured.alt}
                 />
-              </NewBlindFrame>
-              <NewBlindFrame
+              </BlindFrame>
+              <BlindFrame
                 ref={observerData[5].ref}
                 nodeType="figcaption"
                 delay={blindStates[5].delay}
@@ -172,7 +171,7 @@ const Landing = () => {
               >
                 <h3 className="h-4 sm:h-6 c-primary">{gridnikData.name}</h3>
                 <p className="c-grey-1">{gridnikData.short}</p>
-              </NewBlindFrame>
+              </BlindFrame>
             </figure>
           </Link>
           <Link
@@ -180,7 +179,7 @@ const Landing = () => {
             className="subgrid-featured-item grid tdl-none"
           >
             <figure className="subgrid-featured-item-content grid">
-              <NewBlindFrame
+              <BlindFrame
                 ref={observerData[6].ref}
                 nodeType="section"
                 delay={blindStates[6].delay}
@@ -195,8 +194,8 @@ const Landing = () => {
                   src={eswissData.featured.img}
                   alt={eswissData.featured.alt}
                 />
-              </NewBlindFrame>
-              <NewBlindFrame
+              </BlindFrame>
+              <BlindFrame
                 ref={observerData[7].ref}
                 nodeType="figcaption"
                 delay={blindStates[7].delay}
@@ -209,7 +208,7 @@ const Landing = () => {
               >
                 <h3 className="h-4 sm:h-6 c-primary">{eswissData.name}</h3>
                 <p className="c-grey-1">{eswissData.short}</p>
-              </NewBlindFrame>
+              </BlindFrame>
             </figure>
           </Link>
         </section>
@@ -228,7 +227,7 @@ const Landing = () => {
         >
           View all projects
         </CTA>
-        <NewBlindFrame
+        <BlindFrame
           ref={observerData[9].ref}
           nodeType="h2"
           delay={blindStates[9].delay}
@@ -241,14 +240,14 @@ const Landing = () => {
           className="featured-header featured-header-case-studies h-4 sm:h-6 dispw-bold tracked"
         >
           Featured Case&nbsp;Studies
-        </NewBlindFrame>
+        </BlindFrame>
         <section className="subgrid-featured featured-case-studies grid">
           <Link
             to="/projects/sot"
             className="subgrid-featured-item grid tdl-none"
           >
             <figure className="subgrid-featured-item-content grid">
-              <NewBlindFrame
+              <BlindFrame
                 ref={observerData[10].ref}
                 nodeType="section"
                 delay={blindStates[10].delay}
@@ -263,8 +262,8 @@ const Landing = () => {
                   src={csSOTData.featured.img}
                   alt={csSOTData.featured.alt}
                 />
-              </NewBlindFrame>
-              <NewBlindFrame
+              </BlindFrame>
+              <BlindFrame
                 ref={observerData[11].ref}
                 nodeType="figcaption"
                 delay={blindStates[11].delay}
@@ -277,7 +276,7 @@ const Landing = () => {
               >
                 <h3 className="h-4 sm:h-6 c-primary">{csSOTData.title}</h3>
                 <p className="c-grey-1">{csSOTData.subtitle}</p>
-              </NewBlindFrame>
+              </BlindFrame>
             </figure>
           </Link>
           <Link
@@ -285,7 +284,7 @@ const Landing = () => {
             className="subgrid-featured-item grid tdl-none"
           >
             <figure className="subgrid-featured-item-content grid">
-              <NewBlindFrame
+              <BlindFrame
                 ref={observerData[12].ref}
                 nodeType="section"
                 delay={blindStates[12].delay}
@@ -300,8 +299,8 @@ const Landing = () => {
                   src={csLeanSpace.featured.img}
                   alt={csLeanSpace.featured.alt}
                 />
-              </NewBlindFrame>
-              <NewBlindFrame
+              </BlindFrame>
+              <BlindFrame
                 ref={observerData[13].ref}
                 nodeType="figcaption"
                 delay={blindStates[13].delay}
@@ -314,7 +313,7 @@ const Landing = () => {
               >
                 <h3 className="h-4 sm:h-6 c-primary">{csLeanSpace.title}</h3>
                 <p className="c-grey-1">{csLeanSpace.subtitle}</p>
-              </NewBlindFrame>
+              </BlindFrame>
             </figure>
           </Link>
         </section>

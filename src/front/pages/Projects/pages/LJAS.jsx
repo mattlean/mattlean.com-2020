@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from 'react'
 import { Badge, Btn } from 'eswiss'
 import { Link } from 'react-router-dom'
 import BlindFrame from '../../../components/Blind/BlindFrame'
-import NewBlindFrame from '../../../components/Blind/NewBlindFrame'
 import { getProjectData } from '../../../../common/data/project'
 import {
   setupBlindObservers,
@@ -50,7 +49,7 @@ const LJAS = () => {
 
   return (
     <>
-      <NewBlindFrame
+      <BlindFrame
         ref={observerData[0].ref}
         nodeType="header"
         delay={blindStates[0].delay}
@@ -75,8 +74,8 @@ const LJAS = () => {
             </Badge>
           ))}
         </ul>
-      </NewBlindFrame>
-      <NewBlindFrame
+      </BlindFrame>
+      <BlindFrame
         ref={observerData[1].ref}
         nodeType="h2"
         delay={blindStates[1].delay}
@@ -89,8 +88,8 @@ const LJAS = () => {
         className="project-overview h-2 md:h-4"
       >
         Project Overview
-      </NewBlindFrame>
-      <NewBlindFrame
+      </BlindFrame>
+      <BlindFrame
         ref={observerData[2].ref}
         nodeType="section"
         delay={blindStates[2].delay}
@@ -154,8 +153,8 @@ const LJAS = () => {
             <MarkGithubIcon className="btn-icon" /> GitHub
           </Btn>
         </a>
-      </NewBlindFrame>
-      <NewBlindFrame
+      </BlindFrame>
+      <BlindFrame
         ref={observerData[3].ref}
         nodeType="figure"
         delay={blindStates[3].delay}
@@ -173,8 +172,8 @@ const LJAS = () => {
           Native desktop todo list app built with Lean JS App Starter running
           on&nbsp;macOS
         </figcaption>
-      </NewBlindFrame>
-      <NewBlindFrame
+      </BlindFrame>
+      <BlindFrame
         ref={observerData[4].ref}
         nodeType="figure"
         delay={blindStates[4].delay}
@@ -191,8 +190,8 @@ const LJAS = () => {
           Browser frontend for a bulletin board system built with
           Lean&nbsp;JS&nbsp;App&nbsp;Starter
         </figcaption>
-      </NewBlindFrame>
-      <NewBlindFrame
+      </BlindFrame>
+      <BlindFrame
         ref={observerData[5].ref}
         nodeType="figure"
         delay={blindStates[5].delay}
@@ -208,8 +207,8 @@ const LJAS = () => {
         <figcaption className="c-grey-2">
           Node.js REST server API built with Lean&nbsp;JS&nbsp;App&nbsp;Starter
         </figcaption>
-      </NewBlindFrame>
-      <NewBlindFrame
+      </BlindFrame>
+      <BlindFrame
         ref={observerData[6].ref}
         nodeType="h3"
         delay={blindStates[6].delay}
@@ -222,8 +221,8 @@ const LJAS = () => {
         className="project-details-header"
       >
         Project Details
-      </NewBlindFrame>
-      <NewBlindFrame
+      </BlindFrame>
+      <BlindFrame
         ref={observerData[7].ref}
         nodeType="section"
         delay={blindStates[7].delay}
@@ -487,8 +486,8 @@ const LJAS = () => {
             </ul>
           </section>
         </section>
-      </NewBlindFrame>
-      <NewBlindFrame
+      </BlindFrame>
+      <BlindFrame
         ref={observerData[8].ref}
         nodeType="a"
         href="https://github.com/mattlean/lean-js-app-starter"
@@ -506,7 +505,7 @@ const LJAS = () => {
         <Btn className="btn-github">
           <MarkGithubIcon className="btn-icon" /> GitHub
         </Btn>
-      </NewBlindFrame>
+      </BlindFrame>
     </>
   )
 }
