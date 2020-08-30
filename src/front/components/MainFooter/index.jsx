@@ -104,8 +104,8 @@ const MainFooter = () => {
             </li>
           </motion.ul>
         </nav>
-        <nav className="external-nav">
-          <h4 className="external-nav-title">External profile links</h4>
+        <nav aria-labelledby="external-nav-title" className="external-nav">
+          <h4 id="external-nav-title">External Profile Link</h4>
           <motion.ul
             animate={animateFooterVal}
             initial="initial"

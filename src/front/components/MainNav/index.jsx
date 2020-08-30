@@ -228,11 +228,11 @@ const MainNav = () => {
   const mainHeaderContent = (
     <>
       {logo}
-      <nav className="main-nav">
+      <nav aria-labelledby="main-nav-title" className="main-nav">
         <h2
+          id="main-nav-title"
           ref={mainNavTitleRef}
           aria-hidden={isPhone ? true : undefined}
-          className="main-nav-title"
           tabIndex="-1"
         >
           Main Navigation
