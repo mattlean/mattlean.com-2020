@@ -61,7 +61,7 @@ const ProjectFeed = () => {
 
     // Disconnect all observers on unmount
     return () => observers.forEach((observer) => observer.disconnect())
-  }, [])
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   const projects = []
   for (let i = 0; i < allProjectData.length; i += 1) {

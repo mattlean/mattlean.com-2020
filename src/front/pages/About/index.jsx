@@ -39,7 +39,7 @@ const About = () => {
 
     // Disconnect all observers on unmount
     return () => observers.forEach((observer) => observer.disconnect())
-  }, [])
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <motion.div

@@ -44,7 +44,7 @@ const Blog = () => {
 
     // Disconnect all observers on unmount
     return () => observers.forEach((observer) => observer.disconnect())
-  }, [])
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   const posts = []
   for (let i = 0; i < allPostData.length; i += 1) {

@@ -272,7 +272,7 @@ const MainNav = () => {
     if (mainHeaderRef.current && isPhone) {
       mainHeaderRef.current.removeAttribute('style')
     }
-  }, [])
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   // Handle observers
   useEffect(() => {
@@ -371,7 +371,7 @@ const MainNav = () => {
       if (observers.length > 0)
         observers.forEach((observer) => observer.disconnect())
     }
-  }, [isPhone, mainHeaderRef])
+  }, [isPhone, mainHeaderRef]) // eslint-disable-line react-hooks/exhaustive-deps
 
   // Handle phone menu modal
   useEffect(() => {
