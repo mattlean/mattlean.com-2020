@@ -176,7 +176,7 @@ const Lantern = () => {
       <BlindFrame
         ref={observerData[5].ref}
         nodeType="section"
-        className="subgrid-project-details grid mb-0 c-grey-1"
+        className="subgrid-project-details grid c-grey-1"
         delay={blindStates[5].delay}
         observer={observerData[5].observer}
         play={

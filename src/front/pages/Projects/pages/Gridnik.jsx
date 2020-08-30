@@ -220,7 +220,7 @@ const Gridnik = () => {
       <BlindFrame
         ref={observerData[6].ref}
         nodeType="section"
-        className="subgrid-project-details grid mb-0 c-grey-1"
+        className="subgrid-project-details grid c-grey-1"
         delay={blindStates[6].delay}
         observer={observerData[6].observer}
         play={

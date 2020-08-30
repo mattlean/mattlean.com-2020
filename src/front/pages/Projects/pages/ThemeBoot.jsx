@@ -221,7 +221,7 @@ const ThemeBoot = () => {
       <BlindFrame
         ref={observerData[8].ref}
         nodeType="section"
-        className="subgrid-project-details grid mb-0 c-grey-1"
+        className="subgrid-project-details grid c-grey-1"
         delay={blindStates[8].delay}
         observer={observerData[8].observer}
         play={
