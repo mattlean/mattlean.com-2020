@@ -63,6 +63,7 @@ const MainNav = () => {
   if (!isPhone && isOpen) {
     // Close phone menu when window is resized to non-phone screen sizes
     setIsOpen(false)
+    setBodyScroll(true)
   }
 
   // General logo content

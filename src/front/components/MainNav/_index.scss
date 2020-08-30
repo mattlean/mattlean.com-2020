@@ -180,11 +180,24 @@
             position: fixed;
             vertical-align: bottom;
 
-            > .btn-nav > span {
-              font-size: size.$size-20;
-
-              margin-left: 1em;
+            > .btn-nav {
+              height: auto;
               position: static;
+              width: auto;
+
+              > .sun-moon_svg {
+                left: auto;
+                position: static;
+                top: auto;
+                transform: none;
+              }
+
+              > span {
+                font-size: size.$size-20;
+
+                margin-left: 1em;
+                position: static;
+              }
             }
           }
 
