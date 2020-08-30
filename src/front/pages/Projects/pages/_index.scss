@@ -135,11 +135,21 @@
     transform: translateY(-27px);
 
     > h1 {
-      display: inline-block;
+      float: left;
     }
 
-    > .badge-list > li {
-      margin-top: size.$size-12;
+    > h2 {
+      clear: left;
+      float: left;
+    }
+
+    > .badge-list {
+      clear: left;
+      float: left;
+
+      > li {
+        margin-top: size.$size-12;
+      }
     }
   }
 

@@ -1,41 +1,108 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Badge, Btn } from 'eswiss'
 import { Link } from 'react-router-dom'
 import CTA from '../../../components/CTA'
 import BlindFrame from '../../../components/Blind/BlindFrame'
+import NewBlindFrame from '../../../components/Blind/NewBlindFrame'
 import { getProjectData } from '../../../../common/data/project'
+import {
+  setupBlindObservers,
+  useInitAnim,
+} from '../../../components/Blind/initAnimUtil'
 import { useHeadDataEffect } from '../../../util'
 import { BookIcon, PlayIcon } from '@primer/octicons-react'
 import SSCharts from '../../../assets/projects/sot/charts.jpg'
 import SSFullscreen from '../../../assets/projects/sot/fullscreen.jpg'
 import SSInstrumentSelection from '../../../assets/projects/sot/instrument-selection.jpg'
 
+const { company, tags } = getProjectData('sot')
+
 /**
  * Spectral Overlay Tool Project Page
  */
 const SOT = () => {
   useHeadDataEffect()
-  const { company, tags } = getProjectData('sot')
+
+  const srStartRef = useRef(null)
+  const {
+    blindVisibleStates,
+    blindStates,
+    initAnimComplete,
+    observerData,
+    runInitAnim,
+  } = useInitAnim(11)
+
+  // Setup effect which is only run once
+  useEffect(() => {
+    // Focus starting element on page load
+    if (srStartRef.current) srStartRef.current.focus()
+
+    const observers = setupBlindObservers(
+      [0.5, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1],
+      observerData,
+      blindVisibleStates
+    )
+
+    window.setTimeout(runInitAnim, 100)
+
+    // Disconnect all observers on unmount
+    return () => observers.forEach((observer) => observer.disconnect())
+  }, [])
 
   return (
     <>
-      <BlindFrame nodeType="header" className="cover">
-        <h1 className="h-1 md:h-2 sm:h-3">Spectral Overlay&nbsp;Tool</h1>
+      <NewBlindFrame
+        ref={observerData[0].ref}
+        nodeType="header"
+        delay={blindStates[0].delay}
+        observer={observerData[0].observer}
+        play={
+          initAnimComplete
+            ? blindVisibleStates[0].isVisible
+            : blindStates[0].play
+        }
+        className="cover"
+      >
+        <h1 ref={srStartRef} tabIndex="-1" className="h-1 md:h-2 sm:h-3">
+          Spectral Overlay&nbsp;Tool
+        </h1>
         {company && (
           <h2 className="h-4 sm:h-6 c-grey-2 dispw-roman">{company}</h2>
         )}
-        <ul className="badge-list">
+        <ul aria-label="Categories" className="badge-list">
           {tags.map((t) => (
             <Badge nodeType="li" wide={true} key={t.id}>
               {t.name}
             </Badge>
           ))}
         </ul>
-      </BlindFrame>
-      <BlindFrame nodeType="h2" className="project-overview h-2 md:h-4">
+      </NewBlindFrame>
+      <NewBlindFrame
+        ref={observerData[1].ref}
+        nodeType="h2"
+        delay={blindStates[1].delay}
+        observer={observerData[1].observer}
+        play={
+          initAnimComplete
+            ? blindVisibleStates[1].isVisible
+            : blindStates[1].play
+        }
+        className="project-overview h-2 md:h-4"
+      >
         Project Overview
-      </BlindFrame>
-      <BlindFrame nodeType="section" className="subgrid-project-desc grid">
+      </NewBlindFrame>
+      <NewBlindFrame
+        ref={observerData[2].ref}
+        nodeType="section"
+        delay={blindStates[2].delay}
+        observer={observerData[2].observer}
+        play={
+          initAnimComplete
+            ? blindVisibleStates[2].isVisible
+            : blindStates[2].play
+        }
+        className="subgrid-project-desc grid"
+      >
         <section className="c-grey-1">
           <p>
             <a
@@ -72,14 +139,37 @@ const SOT = () => {
             <BookIcon className="btn-icon" /> Case Study
           </Btn>
         </Link>
-      </BlindFrame>
-      <BlindFrame nodeType="figure" className="ss ss-lg">
+      </NewBlindFrame>
+      <NewBlindFrame
+        ref={observerData[3].ref}
+        nodeType="figure"
+        delay={blindStates[3].delay}
+        duration={0.2}
+        observer={observerData[3].observer}
+        play={
+          initAnimComplete
+            ? blindVisibleStates[3].isVisible
+            : blindStates[3].play
+        }
+        className="ss ss-lg"
+      >
         <img src={SSCharts} alt="" />
         <figcaption className="c-grey-2">
           Main screen for spectral overlay&nbsp;tool
         </figcaption>
-      </BlindFrame>
-      <BlindFrame nodeType="section" className="subgrid-mid-desc grid">
+      </NewBlindFrame>
+      <NewBlindFrame
+        ref={observerData[4].ref}
+        nodeType="section"
+        delay={blindStates[4].delay}
+        observer={observerData[4].observer}
+        play={
+          initAnimComplete
+            ? blindVisibleStates[4].isVisible
+            : blindStates[4].play
+        }
+        className="subgrid-mid-desc grid"
+      >
         <h3 className="h-5">Long-Term Development&nbsp;Lifecycle</h3>
         <p className="txt-7 sm:txt-6 c-grey-1">
           In 2014 I was brought on to port the app from Flash to native browser
@@ -92,25 +182,66 @@ const SOT = () => {
         <CTA to="/" type="sm" className="a-primary svg-primary">
           Learn more about the&nbsp;project
         </CTA>
-      </BlindFrame>
-      <BlindFrame nodeType="figure" className="ss ss-sm">
+      </NewBlindFrame>
+      <NewBlindFrame
+        ref={observerData[5].ref}
+        nodeType="figure"
+        delay={blindStates[5].delay}
+        observer={observerData[5].observer}
+        play={
+          initAnimComplete
+            ? blindVisibleStates[5].isVisible
+            : blindStates[5].play
+        }
+        className="ss ss-sm"
+      >
         <img src={SSInstrumentSelection} alt="" />
         <figcaption className="c-grey-2">
           Instrument selection that supports filtering of instruments and
           sorting of&nbsp;dyes
         </figcaption>
-      </BlindFrame>
-      <BlindFrame nodeType="figure" className="ss ss-sm project-details-gap">
+      </NewBlindFrame>
+      <NewBlindFrame
+        ref={observerData[6].ref}
+        nodeType="figure"
+        delay={blindStates[6].delay}
+        observer={observerData[6].observer}
+        play={
+          initAnimComplete
+            ? blindVisibleStates[6].isVisible
+            : blindStates[6].play
+        }
+        className="ss ss-sm project-details-gap"
+      >
         <img src={SSFullscreen} alt="" />
         <figcaption className="c-grey-2">
           Fullscreen mode for a larger view of the&nbsp;charts
         </figcaption>
-      </BlindFrame>
-      <BlindFrame nodeType="h3" className="project-details-header">
+      </NewBlindFrame>
+      <NewBlindFrame
+        ref={observerData[7].ref}
+        nodeType="h3"
+        delay={blindStates[7].delay}
+        observer={observerData[7].observer}
+        play={
+          initAnimComplete
+            ? blindVisibleStates[7].isVisible
+            : blindStates[7].play
+        }
+        className="project-details-header"
+      >
         Project Details
-      </BlindFrame>
-      <BlindFrame
+      </NewBlindFrame>
+      <NewBlindFrame
+        ref={observerData[8].ref}
         nodeType="section"
+        delay={blindStates[8].delay}
+        observer={observerData[8].observer}
+        play={
+          initAnimComplete
+            ? blindVisibleStates[8].isVisible
+            : blindStates[8].play
+        }
         className="subgrid-project-details grid c-grey-1"
       >
         <section>
@@ -312,23 +443,43 @@ const SOT = () => {
             </ul>
           </section>
         </section>
-      </BlindFrame>
-      <BlindFrame
+      </NewBlindFrame>
+      <NewBlindFrame
+        ref={observerData[9].ref}
         nodeType="a"
         href="https://biosearchtech.com/qpcr-multiplex-spectral-overlay-tool"
         rel="noreferrer"
         target="_blank"
+        delay={blindStates[9].delay}
+        observer={observerData[9].observer}
+        play={
+          initAnimComplete
+            ? blindVisibleStates[9].isVisible
+            : blindStates[9].play
+        }
         className="btn-option-a"
       >
         <Btn className="btn-view-live">
           <PlayIcon className="btn-icon" /> View Live
         </Btn>
-      </BlindFrame>
-      <BlindFrame nodeType="Link" to="/" className="btn-option-b">
+      </NewBlindFrame>
+      <NewBlindFrame
+        ref={observerData[10].ref}
+        nodeType="Link"
+        to="/"
+        delay={blindStates[10].delay}
+        observer={observerData[10].observer}
+        play={
+          initAnimComplete
+            ? blindVisibleStates[10].isVisible
+            : blindStates[10].play
+        }
+        className="btn-option-b"
+      >
         <Btn outline={true} className="btn-case-study">
           <BookIcon className="btn-icon" /> Case Study
         </Btn>
-      </BlindFrame>
+      </NewBlindFrame>
     </>
   )
 }

@@ -18,7 +18,7 @@ const Adam = () => {
     <>
       <BlindFrame nodeType="header" className="cover">
         <h1 className="h-1 md:h-2 sm:h-3">{name}</h1>
-        <ul className="badge-list">
+        <ul aria-label="Categories" className="badge-list">
           {tags.map((t) => (
             <Badge nodeType="li" wide={true} key={t.id}>
               {t.name}

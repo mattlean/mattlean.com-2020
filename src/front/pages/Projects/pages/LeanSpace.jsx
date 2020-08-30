@@ -1,9 +1,14 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Badge, Btn } from 'eswiss'
 import { Link } from 'react-router-dom'
 import BlindFrame from '../../../components/Blind/BlindFrame'
+import NewBlindFrame from '../../../components/Blind/NewBlindFrame'
 import CTA from '../../../components/CTA'
 import { getProjectData } from '../../../../common/data/project'
+import {
+  setupBlindObservers,
+  useInitAnim,
+} from '../../../components/Blind/initAnimUtil'
 import { useHeadDataEffect } from '../../../util'
 import SSBlogPost from '../../../assets/projects/lean-space/blog-post.jpg'
 import SSBlogPostMobile from '../../../assets/projects/lean-space/blog-post-mobile.jpg'
@@ -11,32 +16,94 @@ import SSWork from '../../../assets/projects/lean-space/work.jpg'
 import SSWorkMobile from '../../../assets/projects/lean-space/work-mobile.jpg'
 import { BookIcon, MarkGithubIcon, PlayIcon } from '@primer/octicons-react'
 
+const { company, name, tags } = getProjectData('lean-space')
+
 /**
  * Lean Space Project Page
  */
 const LeanSpace = () => {
   useHeadDataEffect()
-  const { company, name, tags } = getProjectData('lean-space')
+
+  const srStartRef = useRef(null)
+  const {
+    blindVisibleStates,
+    blindStates,
+    initAnimComplete,
+    observerData,
+    runInitAnim,
+  } = useInitAnim(13)
+
+  // Setup effect which is only run once
+  useEffect(() => {
+    // Focus starting element on page load
+    if (srStartRef.current) srStartRef.current.focus()
+
+    const observers = setupBlindObservers(
+      [0.5, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1],
+      observerData,
+      blindVisibleStates
+    )
+
+    window.setTimeout(runInitAnim, 100)
+
+    // Disconnect all observers on unmount
+    return () => observers.forEach((observer) => observer.disconnect())
+  }, [])
 
   return (
     <>
-      <BlindFrame nodeType="header" className="cover">
-        <h1 className="h-1 md:h-2 sm:h-3">{name}</h1>
+      <NewBlindFrame
+        ref={observerData[0].ref}
+        nodeType="header"
+        delay={blindStates[0].delay}
+        observer={observerData[0].observer}
+        play={
+          initAnimComplete
+            ? blindVisibleStates[0].isVisible
+            : blindStates[0].play
+        }
+        className="cover"
+      >
+        <h1 ref={srStartRef} tabIndex="-1" className="h-1 md:h-2 sm:h-3">
+          {name}
+        </h1>
         {company && (
           <h2 className="h-4 sm:h-6 c-grey-2 dispw-roman">{company}</h2>
         )}
-        <ul className="badge-list">
+        <ul aria-label="Categories" className="badge-list">
           {tags.map((t) => (
             <Badge nodeType="li" wide={true} key={t.id}>
               {t.name}
             </Badge>
           ))}
         </ul>
-      </BlindFrame>
-      <BlindFrame nodeType="h2" className="project-overview h-2 md:h-4">
+      </NewBlindFrame>
+      <NewBlindFrame
+        ref={observerData[1].ref}
+        nodeType="h2"
+        delay={blindStates[1].delay}
+        observer={observerData[1].observer}
+        play={
+          initAnimComplete
+            ? blindVisibleStates[1].isVisible
+            : blindStates[1].play
+        }
+        className="project-overview h-2 md:h-4"
+      >
         Project Overview
-      </BlindFrame>
-      <BlindFrame nodeType="section" className="subgrid-project-desc grid">
+      </NewBlindFrame>
+      <NewBlindFrame
+        ref={observerData[2].ref}
+        nodeType="section"
+        delay={blindStates[2].delay}
+        observer={observerData[2].observer}
+        play={
+          initAnimComplete
+            ? blindVisibleStates[2].isVisible
+            : blindStates[2].play
+        }
+        className="subgrid-project-desc grid"
+      >
         <section className="c-grey-1">
           <p>
             <strong>Lean Space</strong> was my personal website from 2015
@@ -69,30 +136,55 @@ const LeanSpace = () => {
             <MarkGithubIcon className="btn-icon" /> GitHub
           </Btn>
         </a>
-      </BlindFrame>
-      <BlindFrame
+      </NewBlindFrame>
+      <NewBlindFrame
+        ref={observerData[3].ref}
         nodeType="figure"
-        duration={0.1}
-        threshold={0.2}
+        delay={blindStates[3].delay}
+        duration={0.2}
+        observer={observerData[3].observer}
+        play={
+          initAnimComplete
+            ? blindVisibleStates[3].isVisible
+            : blindStates[3].play
+        }
         className="ss ss-lg"
       >
         <img src={SSWork} alt="" />
         <figcaption className="c-grey-2">
           Work page showcasing&nbsp;projects
         </figcaption>
-      </BlindFrame>
-      <BlindFrame
+      </NewBlindFrame>
+      <NewBlindFrame
+        ref={observerData[4].ref}
         nodeType="figure"
-        duration={0.1}
-        threshold={0.2}
+        delay={blindStates[4].delay}
+        duration={0.2}
+        observer={observerData[4].observer}
+        play={
+          initAnimComplete
+            ? blindVisibleStates[4].isVisible
+            : blindStates[4].play
+        }
         className="ss ss-lg"
       >
         <img src={SSBlogPost} alt="" />
         <figcaption className="c-grey-2">
           First post written on the&nbsp;blog
         </figcaption>
-      </BlindFrame>
-      <BlindFrame nodeType="section" className="subgrid-mid-desc grid">
+      </NewBlindFrame>
+      <NewBlindFrame
+        ref={observerData[5].ref}
+        nodeType="section"
+        delay={blindStates[5].delay}
+        observer={observerData[5].observer}
+        play={
+          initAnimComplete
+            ? blindVisibleStates[5].isVisible
+            : blindStates[5].play
+        }
+        className="subgrid-mid-desc grid"
+      >
         <h3 className="h-5">My 2015 Online Identity</h3>
         <p className="txt-7 sm:txt-6 c-grey-1">
           Lean Space was created in 2015 to demonstrate my abilities as new
@@ -103,26 +195,69 @@ const LeanSpace = () => {
         <CTA to="/" type="sm" className="a-primary svg-primary">
           Learn more about the&nbsp;project
         </CTA>
-      </BlindFrame>
-      <section className="subgrid-ss-sm">
-        <BlindFrame nodeType="figure" className="ss ss-sm">
+      </NewBlindFrame>
+      <section className="subgrid-ss-sm project-details-gap">
+        <NewBlindFrame
+          ref={observerData[6].ref}
+          nodeType="figure"
+          delay={blindStates[6].delay}
+          duration={0.2}
+          observer={observerData[6].observer}
+          play={
+            initAnimComplete
+              ? blindVisibleStates[6].isVisible
+              : blindStates[6].play
+          }
+          className="ss ss-sm"
+        >
           <img src={SSWorkMobile} alt="" />
           <figcaption className="c-grey-2">
             Work page showcasing projects being viewed on a mobile&nbsp;device
           </figcaption>
-        </BlindFrame>
-        <BlindFrame nodeType="figure" className="ss ss-sm project-details-gap">
+        </NewBlindFrame>
+        <NewBlindFrame
+          ref={observerData[7].ref}
+          nodeType="figure"
+          delay={blindStates[7].delay}
+          duration={0.2}
+          observer={observerData[7].observer}
+          play={
+            initAnimComplete
+              ? blindVisibleStates[7].isVisible
+              : blindStates[7].play
+          }
+          className="ss ss-sm"
+        >
           <img src={SSBlogPostMobile} alt="" />
           <figcaption className="c-grey-2">
             First post written on the blog being viewed on a mobile&nbsp;device
           </figcaption>
-        </BlindFrame>
+        </NewBlindFrame>
       </section>
-      <BlindFrame nodeType="h3" className="project-details-header">
+      <NewBlindFrame
+        ref={observerData[8].ref}
+        nodeType="h3"
+        delay={blindStates[8].delay}
+        observer={observerData[8].observer}
+        play={
+          initAnimComplete
+            ? blindVisibleStates[8].isVisible
+            : blindStates[8].play
+        }
+        className="project-details-header"
+      >
         Project Details
-      </BlindFrame>
-      <BlindFrame
+      </NewBlindFrame>
+      <NewBlindFrame
+        ref={observerData[9].ref}
         nodeType="section"
+        delay={blindStates[9].delay}
+        observer={observerData[9].observer}
+        play={
+          initAnimComplete
+            ? blindVisibleStates[9].isVisible
+            : blindStates[9].play
+        }
         className="subgrid-project-details grid c-grey-1"
       >
         <section>
@@ -244,38 +379,62 @@ const LeanSpace = () => {
             </ul>
           </section>
         </section>
-      </BlindFrame>
-      <BlindFrame
+      </NewBlindFrame>
+      <NewBlindFrame
+        ref={observerData[10].ref}
         nodeType="Link"
         to="/"
+        delay={blindStates[10].delay}
+        observer={observerData[10].observer}
+        play={
+          initAnimComplete
+            ? blindVisibleStates[10].isVisible
+            : blindStates[10].play
+        }
         className="btn-option-a btn-triple-group"
       >
         <Btn className="btn-view-live">
           <BookIcon className="btn-icon" /> Case Study
         </Btn>
-      </BlindFrame>
-      <BlindFrame
+      </NewBlindFrame>
+      <NewBlindFrame
+        ref={observerData[11].ref}
         nodeType="a"
         href="http://google.com"
         rel="noreferrer"
         target="_blank"
+        delay={blindStates[11].delay}
+        observer={observerData[11].observer}
+        play={
+          initAnimComplete
+            ? blindVisibleStates[11].isVisible
+            : blindStates[11].play
+        }
         className="btn-option-b btn-triple-group"
       >
         <Btn outline={true} className="btn-view-live">
           <PlayIcon className="btn-icon" /> View Live
         </Btn>
-      </BlindFrame>
-      <BlindFrame
+      </NewBlindFrame>
+      <NewBlindFrame
+        ref={observerData[12].ref}
         nodeType="a"
         href="https://github.com/mattlean/lean-space"
         rel="noreferrer"
         target="_blank"
+        delay={blindStates[12].delay}
+        observer={observerData[12].observer}
+        play={
+          initAnimComplete
+            ? blindVisibleStates[12].isVisible
+            : blindStates[12].play
+        }
         className="btn-option-c btn-triple-group"
       >
         <Btn outline={true} className="btn-gh">
           <MarkGithubIcon className="btn-icon" /> GitHub
         </Btn>
-      </BlindFrame>
+      </NewBlindFrame>
     </>
   )
 }

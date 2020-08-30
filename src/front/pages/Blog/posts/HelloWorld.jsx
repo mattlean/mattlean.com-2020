@@ -19,7 +19,7 @@ const HelloWorld = () => {
         <p className="time c-grey-2">
           {published} &middot; {readtime} min read
         </p>
-        <ul className="badge-list">
+        <ul aria-label="Categories" className="badge-list">
           {tags.map((t) => (
             <Badge nodeType="li" wide={true} key={t.id}>
               {t.name}

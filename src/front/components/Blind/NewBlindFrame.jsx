@@ -55,9 +55,11 @@ const BlindFrame = (
   if (nodeType === 'a') {
     return (
       <a
+        ref={ref}
         href={href}
         aria-label={ariaLabel}
         rel={rel}
+        tabIndex={tabIndex}
         target={target}
         className={cn}
       >
@@ -66,7 +68,13 @@ const BlindFrame = (
     )
   } else if (nodeType === 'Link') {
     return (
-      <Link to={to} aria-label={ariaLabel} className={cn}>
+      <Link
+        ref={ref}
+        to={to}
+        aria-label={ariaLabel}
+        tabIndex={tabIndex}
+        className={cn}
+      >
         {content}
       </Link>
     )

@@ -1,11 +1,11 @@
 @use '../../../visuals/scale/size';
 
+.grid-project-txtonly > .cover > h1 > .title-br {
+  display: none;
+}
+
 @media (max-width: size.$size-1150) {
   .grid-project-txtonly {
-    > .cover > h1 > .title-br {
-      display: none;
-    }
-
     > .subgrid-project-details {
       grid-column: 2 / span 2;
     }

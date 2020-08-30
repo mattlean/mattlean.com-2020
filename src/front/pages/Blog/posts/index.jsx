@@ -41,7 +41,7 @@ const Post = () => {
       onAnimationComplete={() => window.scroll(0, 0)}
       className="container"
     >
-      <main className={cn}>
+      <main aria-label="Content" className={cn}>
         <Switch>
           <Route path={`${ROUTE_PREFIX}hello-world`} component={HelloWorld} />
           <Route path="*" component={NoMatchContent} />

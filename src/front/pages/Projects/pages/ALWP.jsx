@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Badge, Btn } from 'eswiss'
 import BlindFrame from '../../../components/Blind/BlindFrame'
 import NewBlindFrame from '../../../components/Blind/NewBlindFrame'
@@ -11,13 +11,15 @@ import { useHeadDataEffect } from '../../../util'
 import NPMIcon from '../../../assets/icons/npm.svg'
 import { MarkGithubIcon } from '@primer/octicons-react'
 
+const { name, tags } = getProjectData('alwp')
+
 /**
  * Asset List Webpack Plugin Project Page
  */
 const ALWP = () => {
   useHeadDataEffect()
-  const { name, tags } = getProjectData('alwp')
 
+  const srStartRef = useRef(null)
   const {
     blindVisibleStates,
     blindStates,
@@ -29,7 +31,7 @@ const ALWP = () => {
   // Setup effect which is only run once
   useEffect(() => {
     // Focus starting element on page load
-    if (observerData[0].ref.current) observerData[0].ref.current.focus()
+    if (srStartRef.current) srStartRef.current.focus()
 
     const observers = setupBlindObservers(
       [0.5, 0.1, 0.1, 0.1, 0.1],
@@ -57,8 +59,10 @@ const ALWP = () => {
         }
         className="cover"
       >
-        <h1 className="h-1 md:h-2 sm:h-3">{name}</h1>
-        <ul className="badge-list">
+        <h1 ref={srStartRef} tabIndex="-1" className="h-1 md:h-2 sm:h-3">
+          {name}
+        </h1>
+        <ul aria-label="Categories" className="badge-list">
           {tags.map((t) => (
             <Badge nodeType="li" wide={true} key={t.id}>
               {t.name}

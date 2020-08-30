@@ -55,7 +55,7 @@ const ProjectPage = () => {
       onAnimationComplete={() => window.scroll(0, 0)}
       className="container"
     >
-      <main className={cn}>
+      <main aria-label="Content" className={cn}>
         <Switch>
           <Route path={`${ROUTE_PREFIX}adam`} component={Adam} />
           <Route path={`${ROUTE_PREFIX}alwp`} component={ALWP} />

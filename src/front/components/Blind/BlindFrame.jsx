@@ -41,12 +41,8 @@ const BlindFrame = (
 
   const [scrollHeight, setScrollHeight] = useState()
 
-  // console.log('first', ref)
-
   useEffect(() => {
     if (useScrollHeight && ref && ref.current) {
-      // console.log(ref.current)
-      // console.log(ref.current.scrollHeight)
       setScrollHeight(ref.current.scrollHeight)
     }
   }, [ref, useScrollHeight])
@@ -68,13 +64,20 @@ const BlindFrame = (
 
   if (nodeType === 'a') {
     return (
-      <a href={href} rel={rel} target={target} className={cn}>
+      <a
+        ref={ref}
+        href={href}
+        rel={rel}
+        tabIndex={tabIndex}
+        target={target}
+        className={cn}
+      >
         {content}
       </a>
     )
   } else if (nodeType === 'Link') {
     return (
-      <Link to={to} className={cn}>
+      <Link ref={ref} to={to} tabIndex={tabIndex} className={cn}>
         {content}
       </Link>
     )

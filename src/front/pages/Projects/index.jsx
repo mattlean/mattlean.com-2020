@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect } from 'react'
 import { Badge } from 'eswiss'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
@@ -95,12 +95,6 @@ const ProjectFeed = () => {
       </NewBlindFrame>
     )
   }
-
-  // Focus starting element on page load
-  const srStart = useRef(null)
-  useEffect(() => {
-    if (srStart.current) srStart.current.focus()
-  }, [])
 
   return (
     <motion.div

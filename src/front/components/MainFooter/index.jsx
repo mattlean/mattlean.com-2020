@@ -16,7 +16,7 @@ const VARIANTS = {
   },
   initial: {
     opacity: 0,
-    y: '10%',
+    y: '20%',
     transition: {
       duration: 0.5,
       ease: 'easeIn',
