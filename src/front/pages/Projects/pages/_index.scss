@@ -46,6 +46,12 @@
     grid-gap: size.$size-27;
   }
 
+  > h2,
+  > h3 {
+    align-self: start;
+    justify-self: start;
+  }
+
   > .subgrid-mid-desc {
     grid-column: 1/-1;
     margin-bottom: size.$size-81;
@@ -127,6 +133,10 @@
     grid-column: 1/-1;
     margin-bottom: size.$size-100;
     transform: translateY(-27px);
+
+    > h1 {
+      display: inline-block;
+    }
 
     > .badge-list > li {
       margin-top: size.$size-12;
