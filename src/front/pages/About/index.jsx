@@ -90,6 +90,7 @@ const About = () => {
           ref={observerData[2].ref}
           nodeType="section"
           delay={blindStates[2].delay}
+          duration={0.2}
           observer={observerData[2].observer}
           play={
             initAnimComplete
@@ -179,7 +180,9 @@ const About = () => {
         <NewBlindFrame
           ref={observerData[4].ref}
           nodeType="aside"
+          aria-label="Resume"
           delay={blindStates[4].delay}
+          duration={0.2}
           observer={observerData[4].observer}
           play={
             initAnimComplete

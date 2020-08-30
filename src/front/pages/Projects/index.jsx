@@ -84,7 +84,7 @@ const ProjectFeed = () => {
         <Link to={`${ROUTE_PREFIX}${p.id}`}>
           <h2 className="h-4 sm:h-6 a-primary">{p.name}</h2>
           <p className="c-grey-1">{p.long}</p>
-          <ul className="badge-list">
+          <ul aria-label="Categories" className="badge-list">
             {p.tags.map((t) => (
               <Badge key={t.id} nodeType="li" wide={true}>
                 {t.name}
@@ -127,7 +127,9 @@ const ProjectFeed = () => {
         >
           Projects
         </NewBlindFrame>
-        <ul className="content">{projects}</ul>
+        <ul aria-label="Project Feed" role="feed" className="content">
+          {projects}
+        </ul>
       </main>
       <MainFooter />
     </motion.div>

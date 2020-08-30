@@ -5,6 +5,7 @@ import NewBlind from './NewBlind'
 /**
  * Blind Frame
  * Frame used for positioning blind animation
+ * @prop {string} [aria-label] aria-label attribute value
  * @prop {children} [children] Children
  * @prop {string} [className] Class attribute to append to default value
  * @prop {number} [delay] Delay in seconds
@@ -20,6 +21,7 @@ import NewBlind from './NewBlind'
  */
 const BlindFrame = (
   {
+    'aria-label': ariaLabel,
     children,
     className,
     delay,
@@ -52,13 +54,19 @@ const BlindFrame = (
 
   if (nodeType === 'a') {
     return (
-      <a href={href} rel={rel} target={target} className={cn}>
+      <a
+        href={href}
+        aria-label={ariaLabel}
+        rel={rel}
+        target={target}
+        className={cn}
+      >
         {content}
       </a>
     )
   } else if (nodeType === 'Link') {
     return (
-      <Link to={to} className={cn}>
+      <Link to={to} aria-label={ariaLabel} className={cn}>
         {content}
       </Link>
     )
@@ -67,7 +75,7 @@ const BlindFrame = (
   const Node = nodeType || 'span'
 
   return (
-    <Node ref={ref} tabIndex={tabIndex} className={cn}>
+    <Node ref={ref} aria-label={ariaLabel} tabIndex={tabIndex} className={cn}>
       {content}
     </Node>
   )

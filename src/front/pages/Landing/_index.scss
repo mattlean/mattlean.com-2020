@@ -11,7 +11,9 @@
   margin-top: size.$size-211;
 
   > h1 {
+    align-self: start;
     grid-column: 1/-1;
+    justify-self: start;
     transform: translate(-3px, -15px);
 
     > .title-br {
@@ -34,6 +36,7 @@
   > .featured-header {
     align-self: end;
     grid-column: 1/-1;
+    justify-self: start;
 
     &-projects {
       grid-row: 4/5;
