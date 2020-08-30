@@ -77,6 +77,10 @@ ol > li {
   position: relative;
 }
 
+dl {
+  line-height: 1.5em;
+}
+
 dt {
   font-weight: typography.$txt-medium;
 }
