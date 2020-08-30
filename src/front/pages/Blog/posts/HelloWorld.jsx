@@ -1,20 +1,68 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Badge } from 'eswiss'
 import { Link } from 'react-router-dom'
 import BlindFrame from '../../../components/Blind/BlindFrame'
+import NewBlindFrame from '../../../components/Blind/NewBlindFrame'
 import { getPostData } from '../../../../common/data/post'
+import {
+  setupBlindObservers,
+  useInitAnim,
+} from '../../../components/Blind/initAnimUtil'
 import { useHeadDataEffect } from '../../../util'
 
+const { tags, title, published, readtime, subtitle } = getPostData(
+  'hello-world'
+)
+
+/**
+ * "Hello world!" Blog Post
+ */
 const HelloWorld = () => {
   useHeadDataEffect()
-  const { tags, title, published, readtime, subtitle } = getPostData(
-    'hello-world'
-  )
+
+  const srStartRef = useRef(null)
+  const {
+    blindVisibleStates,
+    blindStates,
+    initAnimComplete,
+    observerData,
+    runInitAnim,
+  } = useInitAnim(2)
+
+  // Setup effect which is only run once
+  useEffect(() => {
+    // Focus starting element on page load
+    if (srStartRef.current) srStartRef.current.focus()
+
+    const observers = setupBlindObservers(
+      [0.5, 0.1],
+      observerData,
+      blindVisibleStates
+    )
+
+    window.setTimeout(runInitAnim, 100)
+
+    // Disconnect all observers on unmount
+    return () => observers.forEach((observer) => observer.disconnect())
+  }, [])
 
   return (
     <>
-      <BlindFrame nodeType="header" className="cover">
-        <h1 className="h-2 sm:h-3">{title}</h1>
+      <NewBlindFrame
+        ref={observerData[0].ref}
+        nodeType="header"
+        delay={blindStates[0].delay}
+        observer={observerData[0].observer}
+        play={
+          initAnimComplete
+            ? blindVisibleStates[0].isVisible
+            : blindStates[0].play
+        }
+        className="cover"
+      >
+        <h1 ref={srStartRef} tabIndex="-1" className="h-2 sm:h-3">
+          {title}
+        </h1>
         <p className="subtitle txt-8 sm:txt-6 c-grey-1">{subtitle}</p>
         <p className="time c-grey-2">
           {published} &middot; {readtime} min read
@@ -26,9 +74,17 @@ const HelloWorld = () => {
             </Badge>
           ))}
         </ul>
-      </BlindFrame>
-      <BlindFrame
-        threshold={0.1}
+      </NewBlindFrame>
+      <NewBlindFrame
+        ref={observerData[1].ref}
+        delay={blindStates[1].delay}
+        duration={0.2}
+        observer={observerData[1].observer}
+        play={
+          initAnimComplete
+            ? blindVisibleStates[1].isVisible
+            : blindStates[1].play
+        }
         nodeType="section"
         className="content c-grey-1"
       >
@@ -116,7 +172,7 @@ const HelloWorld = () => {
           it’ll help someone who is in the same position I’m in right now where
           they’re looking to get their foot into the software&nbsp;industry.
         </p>
-      </BlindFrame>
+      </NewBlindFrame>
     </>
   )
 }
