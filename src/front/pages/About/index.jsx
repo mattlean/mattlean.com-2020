@@ -283,6 +283,7 @@ const About = () => {
                 <li>Canvas</li>
                 <li>Web Storage</li>
                 <li>Sass</li>
+                <li>Intersection Observer</li>
                 <li>Material Design</li>
                 <li>Bootstrap</li>
                 <li>jQuery</li>

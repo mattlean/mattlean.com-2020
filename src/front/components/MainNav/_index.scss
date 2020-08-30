@@ -38,7 +38,7 @@
 
     > .menu-icon {
       height: 44px;
-      transform: translateY(1px);
+      transform: translateY(-3px);
     }
 
     > .sun-moon_svg {
@@ -54,6 +54,7 @@
 
   > h2 > .logo > svg {
     height: 44px;
+    transform: translateY(-1px);
   }
 
   // Phone Menu Button
@@ -83,10 +84,23 @@
           display: none;
         }
 
-        &.btn-lightness > .btn-nav > span {
-          left: 0;
-          position: absolute;
-          top: -600px;
+        &.btn-lightness > .btn-nav {
+          height: 26px;
+          position: relative;
+          width: 26px;
+
+          > .sun-moon_svg {
+            left: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+          }
+
+          > span {
+            left: 0;
+            position: absolute;
+            top: -600px;
+          }
         }
 
         &.phone-menu-close {
@@ -208,6 +222,7 @@
 
     > .btn-nav > .menu-icon {
       height: 18px;
+      transform: translateY(5px);
     }
   }
 }
