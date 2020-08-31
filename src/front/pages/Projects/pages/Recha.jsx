@@ -159,7 +159,7 @@ const Recha = () => {
                   href="https://www.typescriptlang.org"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   TypeScript
                 </a>
@@ -170,7 +170,7 @@ const Recha = () => {
                   href="https://sass-lang.com"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Sass
                 </a>
@@ -187,7 +187,7 @@ const Recha = () => {
                   href="https://material.io"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Material Design
                 </a>
@@ -197,7 +197,7 @@ const Recha = () => {
                   href="https://reactjs.org"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   React
                 </a>
@@ -207,7 +207,7 @@ const Recha = () => {
                   href="https://redux.js.org"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Redux
                 </a>
@@ -217,7 +217,7 @@ const Recha = () => {
                   href="https://github.com/reduxjs/redux-thunk"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Redux Thunk
                 </a>
@@ -227,7 +227,7 @@ const Recha = () => {
                   href="https://github.com/reduxjs/reselect"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Reselect
                 </a>
@@ -237,7 +237,7 @@ const Recha = () => {
                   href="https://reactrouter.com"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   React Router
                 </a>
@@ -247,7 +247,7 @@ const Recha = () => {
                   href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Fetch
                 </a>
@@ -257,7 +257,7 @@ const Recha = () => {
                   href="https://github.com/atlassian/react-beautiful-dnd"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   react-beautiful-dnd
                 </a>
@@ -267,7 +267,7 @@ const Recha = () => {
                   href="https://momentjs.com"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Moment
                 </a>
@@ -277,7 +277,7 @@ const Recha = () => {
                   href="https://lodash.com"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Lodash
                 </a>
@@ -294,7 +294,7 @@ const Recha = () => {
                   href="https://nodejs.org"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Node.js
                 </a>
@@ -304,7 +304,7 @@ const Recha = () => {
                   href="https://expressjs.com"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Express
                 </a>
@@ -314,7 +314,7 @@ const Recha = () => {
                   href="https://postgresql.org/"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   PostgreSQL
                 </a>
@@ -324,13 +324,13 @@ const Recha = () => {
                   href="https://github.com/vitaly-t/pg-promise"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   pg-promise
                 </a>
               </li>
               <li>
-                <Link to="/projects/checkpoint" className="a-grey-1 txtw-roman">
+                <Link to="/projects/checkpoint" className="a-grey-1">
                   Checkpoint.js
                 </Link>
               </li>
@@ -344,7 +344,7 @@ const Recha = () => {
                   href="https://jestjs.io"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Jest
                 </a>
@@ -354,7 +354,7 @@ const Recha = () => {
                   href="https://enzymejs.github.io/enzyme"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Enzyme
                 </a>
@@ -364,7 +364,7 @@ const Recha = () => {
                   href="https://reactjs.org/docs/test-renderer.html"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   React Test&nbsp;Renderer
                 </a>
@@ -374,7 +374,7 @@ const Recha = () => {
                   href="https://github.com/visionmedia/supertest"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   SuperTest
                 </a>
@@ -389,7 +389,7 @@ const Recha = () => {
                   href="https://electronjs.org"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Electron
                 </a>
@@ -399,7 +399,7 @@ const Recha = () => {
                   href="https://webpack.js.org"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   webpack
                 </a>
@@ -414,7 +414,7 @@ const Recha = () => {
                   href="https://github.com/mattlean/recha/blob/master/LICENSE"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   MIT
                 </a>

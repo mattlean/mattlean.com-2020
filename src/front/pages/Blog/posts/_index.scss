@@ -1,0 +1,155 @@
+@use '../../../visuals/scale/color';
+@use '../../../visuals/scale/size';
+
+.grid-cs {
+  display: grid;
+  grid-template-rows: auto auto;
+  margin-bottom: size.$size-27;
+  margin-top: size.$size-211;
+
+  .ss-lg {
+    grid-column: 1/-1;
+  }
+
+  .ss-sm {
+    grid-column: span 3;
+  }
+
+  > .cover {
+    grid-column: 1/-1;
+    margin-bottom: size.$size-184;
+    transform: translateY(-7px);
+
+    > h1 {
+      > .title-prefix {
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+
+        float: left;
+        transform: translateX(1px);
+
+        > span {
+          opacity: 0;
+        }
+      }
+
+      > .title {
+        clear: left;
+        float: left;
+        transform: translate(-3px, -21px);
+      }
+    }
+
+    > .subtitle {
+      clear: left;
+      float: left;
+      margin-bottom: size.$size-9;
+      transform: translateY(-26px);
+    }
+
+    > .time {
+      clear: left;
+      float: left;
+      margin-bottom: 0;
+      transform: translateY(-30px);
+    }
+
+    > .badge-list {
+      clear: left;
+      float: left;
+      transform: translateY(-31px);
+
+      > li {
+        margin-top: size.$size-12;
+      }
+    }
+  }
+
+  > .subgrid-content {
+    grid-column: 1/-1;
+    grid-row: 2/3;
+    transform: translateY(-17px);
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    .left-half {
+      grid-column: 1/4;
+    }
+
+    .right-half {
+      grid-column: 4/-1;
+    }
+
+    > h2,
+    > h3 {
+      display: inline-block;
+      grid-column: 1/-1;
+    }
+
+    > .subgrid-subcontent {
+      grid-column: 1/-1;
+
+      > .sticky-media {
+        align-self: start;
+        justify-self: start;
+        position: sticky;
+        top: size.$size-27;
+      }
+    }
+
+    > .subgrid-ss {
+      grid-template-rows: repeat(8, size.$size-157) auto;
+
+      .mobile {
+        background-color: color.$k;
+        border-radius: 20px;
+
+        &.phone-horizontal {
+          padding: 10px 15px;
+        }
+
+        &.phone-vertical {
+          height: 100%;
+          padding: 15px 10px;
+          width: auto;
+        }
+
+        &.tablet-vertical {
+          height: 100%;
+          padding: 30px 20px;
+          width: auto;
+        }
+      }
+
+      > .ss {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+
+        &.ss-lg {
+          grid-row: span 5;
+          padding: 30px;
+        }
+
+        &.ss-sm {
+          grid-row: span 3;
+          padding: 15px;
+        }
+      }
+
+      > figcaption {
+        font-size: size.$size-14;
+        font-style: italic;
+
+        grid-column: 1/-1;
+        transform: translateY(-14px);
+      }
+    }
+
+    > .vid {
+      grid-column: 1/-1;
+    }
+  }
+}

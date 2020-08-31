@@ -103,7 +103,7 @@ const Owl = () => {
               href="https://android.com"
               rel="noreferrer"
               target="_blank"
-              className="a-grey-1 txtw-roman"
+              className="a-grey-1"
             >
               Android
             </a>{' '}
@@ -112,7 +112,7 @@ const Owl = () => {
               href="https://cloud.google.com"
               rel="noreferrer"
               target="_blank"
-              className="a-grey-1 txtw-roman"
+              className="a-grey-1"
             >
               Google Cloud
             </a>
@@ -121,7 +121,7 @@ const Owl = () => {
           <p>
             This project originally released as a school assignment, but was
             eventually discontinued. The overall concept continues on as{' '}
-            <Link to="/projects/recha" className="a-grey-1">
+            <Link to="/projects/recha" className="a-grey-1 txtw-bold">
               Recha
             </Link>
             .
@@ -187,7 +187,7 @@ const Owl = () => {
                   href="https://java.com"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Java
                 </a>
@@ -197,7 +197,7 @@ const Owl = () => {
                   href="https://python.org"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Python
                 </a>
@@ -216,7 +216,7 @@ const Owl = () => {
                   href="https://android.com"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Android
                 </a>
@@ -231,7 +231,7 @@ const Owl = () => {
                   href="http://browserify.org"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Browserify
                 </a>
@@ -241,7 +241,7 @@ const Owl = () => {
                   href="https://github.com/andreypopp/reactify"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   reactify
                 </a>
@@ -251,7 +251,7 @@ const Owl = () => {
                   href="https://gulpjs.com"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Gulp
                 </a>
@@ -274,7 +274,7 @@ const Owl = () => {
                   href="https://github.com/GoogleCloudPlatform/webapp2"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   webapp2
                 </a>
@@ -284,7 +284,7 @@ const Owl = () => {
                   href="https://cloud.google.com/datastore"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Datastore
                 </a>
@@ -294,7 +294,7 @@ const Owl = () => {
                   href="https://palletsprojects.com/p/jinja/"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Jinja
                 </a>
@@ -309,7 +309,7 @@ const Owl = () => {
                   href="https://reactjs.org"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   React
                 </a>
@@ -319,7 +319,7 @@ const Owl = () => {
                   href="https://facebook.github.io/flux"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Flux
                 </a>
@@ -329,7 +329,7 @@ const Owl = () => {
                   href="https://github.com/strml/react-router-component"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   React Router Component
                 </a>
@@ -339,7 +339,7 @@ const Owl = () => {
                   href="https://github.com/async-library/react-async"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   React Async
                 </a>
@@ -349,7 +349,7 @@ const Owl = () => {
                   href="https://getbootstrap.com"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Bootstrap
                 </a>
@@ -364,7 +364,7 @@ const Owl = () => {
                   href="https://github.com/mattlean/project-owl/blob/master/LICENSE"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   MIT
                 </a>

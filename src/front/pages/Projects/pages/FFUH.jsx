@@ -101,7 +101,7 @@ const FFUH = () => {
               href="https://expressjs.com"
               rel="noreferrer"
               target="_blank"
-              className="a-grey-1 txtw-roman"
+              className="a-grey-1"
             >
               Express
             </a>{' '}
@@ -110,17 +110,17 @@ const FFUH = () => {
               href="https://aws.amazon.com/s3"
               rel="noreferrer"
               target="_blank"
-              className="a-grey-1 txtw-roman"
+              className="a-grey-1"
             >
               Amazon Simple Storage Service (S3)
             </a>{' '}
             and to the server’s local file system. <em>FFUH</em> stands for{' '}
             <em>flexible file upload handler</em>. It’s pronounced like{' '}
             <a
-              href="https://wikipedia.org/wiki/Pho"
+              href="https://en.wikipedia.org/wiki/Pho"
               rel="noreferrer"
               target="_blank"
-              className="a-grey-1 txtw-roman"
+              className="a-grey-1"
             >
               pho
             </a>{' '}
@@ -183,7 +183,7 @@ const FFUH = () => {
                   href="https://www.typescriptlang.org"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   TypeScript
                 </a>
@@ -199,7 +199,7 @@ const FFUH = () => {
                   href="https://aws.amazon.com/tools"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   AWS SDK
                 </a>
@@ -209,7 +209,7 @@ const FFUH = () => {
                   href="https://npmjs.com/package/formidable"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   formidable
                 </a>
@@ -219,7 +219,7 @@ const FFUH = () => {
                   href="https://npmjs.com/package/uuid"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   UUID
                 </a>
@@ -236,7 +236,7 @@ const FFUH = () => {
                   href="https://jestjs.io"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Jest
                 </a>
@@ -251,7 +251,7 @@ const FFUH = () => {
                   href="https://github.com/mattlean/express-ffuh/blob/master/LICENSE"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   MIT
                 </a>

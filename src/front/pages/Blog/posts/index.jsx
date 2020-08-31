@@ -1,13 +1,14 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { Route, Switch, useLocation, useParams } from 'react-router-dom'
+import CSLeanSpace from './CSLeanSpace'
 import HelloWorld from './HelloWorld'
 import MainFooter from '../../../components/MainFooter'
 import NoMatchContent from '../../NoMatch/NoMatchContent'
 import VARIANTS from '../../page_variants'
 import { genFormattedPath } from '../../../../common/util'
 import { getRouteData } from '../../../../common/data/route'
-import { isGeneral } from './layout'
+import { isCaseStudy, isGeneral } from './layout'
 import { ROUTE_PREFIX } from '../../../../common/data/route/blog'
 
 /**
@@ -27,6 +28,10 @@ const Post = () => {
       } else {
         cn += ` grid-blog-${id}`
       }
+
+      if (isCaseStudy(id)) {
+        cn += ' grid-cs'
+      }
     }
   } else {
     cn += 'grid-no-match'
@@ -43,6 +48,10 @@ const Post = () => {
     >
       <main aria-label="Content" className={cn}>
         <Switch>
+          <Route
+            path={`${ROUTE_PREFIX}cs-lean-space`}
+            component={CSLeanSpace}
+          />
           <Route path={`${ROUTE_PREFIX}hello-world`} component={HelloWorld} />
           <Route path="*" component={NoMatchContent} />
         </Switch>

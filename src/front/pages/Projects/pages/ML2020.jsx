@@ -107,12 +107,12 @@ const ML2020 = () => {
           </p>
           <p>
             The project acts as a proof-of-concept for the{' '}
-            <Link to="/projects/eswiss" className="a-grey-1">
+            <Link to="/projects/eswiss" className="a-grey-1 txtw-bold">
               eswiss
             </Link>
             . If you’re interested in the design and development process behind
             this website and its design system, read the{' '}
-            <Link to="/" className="a-grey-1 txtw-roman">
+            <Link to="/" className="a-grey-1">
               case study
             </Link>
             .
@@ -175,7 +175,7 @@ const ML2020 = () => {
                   href="https://sass-lang.com"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Sass
                 </a>
@@ -192,7 +192,7 @@ const ML2020 = () => {
                   href="https://nodejs.org"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Node.js
                 </a>
@@ -202,7 +202,7 @@ const ML2020 = () => {
                   href="https://expressjs.com"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Express
                 </a>
@@ -212,7 +212,7 @@ const ML2020 = () => {
                   href="https://ejs.co"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   EJS
                 </a>
@@ -231,7 +231,7 @@ const ML2020 = () => {
             <h4>Frontend</h4>
             <ul>
               <li>
-                <Link to="/projects/eswiss" className="a-grey-1 txtw-roman">
+                <Link to="/projects/eswiss" className="a-grey-1">
                   eswiss
                 </Link>
               </li>
@@ -240,7 +240,7 @@ const ML2020 = () => {
                   href="https://reactjs.org"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   React
                 </a>
@@ -250,7 +250,7 @@ const ML2020 = () => {
                   href="https://reactrouter.com"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   React Router
                 </a>
@@ -260,7 +260,7 @@ const ML2020 = () => {
                   href="https://framer.com/motion"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Framer Motion
                 </a>
@@ -275,7 +275,7 @@ const ML2020 = () => {
                   href="https://www.adobe.com/products/xd.html"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   XD
                 </a>
@@ -285,7 +285,7 @@ const ML2020 = () => {
                   href="https://adobe.com/products/photoshop.html"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Photoshop
                 </a>
@@ -295,7 +295,7 @@ const ML2020 = () => {
                   href="https://adobe.com/products/illustrator.html"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Illustrator
                 </a>

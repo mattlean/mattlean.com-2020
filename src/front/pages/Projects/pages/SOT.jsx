@@ -108,7 +108,7 @@ const SOT = () => {
               href="https://biosearchtech.com"
               rel="noreferrer"
               target="_blank"
-              className="a-grey-1 txtw-roman"
+              className="a-grey-1"
             >
               {company}
             </a>{' '}
@@ -258,7 +258,7 @@ const SOT = () => {
                   href="https://www.columnfivemedia.com"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Column Five
                 </a>
@@ -268,7 +268,7 @@ const SOT = () => {
                   href="https://thespider.com"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   TheSpider
                 </a>
@@ -284,7 +284,7 @@ const SOT = () => {
                   href="https://python.org"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Python
                 </a>
@@ -294,7 +294,7 @@ const SOT = () => {
                   href="https://sass-lang.com"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Sass
                 </a>
@@ -311,7 +311,7 @@ const SOT = () => {
                   href="https://webpack.js.org"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   webpack
                 </a>
@@ -321,7 +321,7 @@ const SOT = () => {
                   href="https://gruntjs.com"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Grunt
                 </a>
@@ -331,7 +331,7 @@ const SOT = () => {
                   href="https://nodejs.org"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Node.js
                 </a>
@@ -359,7 +359,7 @@ const SOT = () => {
                   href="https://developers.google.com/chart"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Google Charts
                 </a>
@@ -369,7 +369,7 @@ const SOT = () => {
                   href="https://getbootstrap.com"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Bootstrap
                 </a>
@@ -379,7 +379,7 @@ const SOT = () => {
                   href="https://jquery.com"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   jQuery
                 </a>
@@ -389,7 +389,7 @@ const SOT = () => {
                   href="https://lodash.com"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Lodash
                 </a>
@@ -399,7 +399,7 @@ const SOT = () => {
                   href="https://popper.js.org"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Popper.js
                 </a>
@@ -414,7 +414,7 @@ const SOT = () => {
                   href="https://www.adobe.com/products/xd.html"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   XD
                 </a>
@@ -424,7 +424,7 @@ const SOT = () => {
                   href="https://adobe.com/products/photoshop.html"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Photoshop
                 </a>
@@ -434,7 +434,7 @@ const SOT = () => {
                   href="https://adobe.com/products/illustrator.html"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Illustrator
                 </a>

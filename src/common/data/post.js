@@ -2,13 +2,17 @@ import { genTagIDNameArray } from './tag'
 import FeaturedCSLeanSpace from '../../front/assets/featured/lean-space-featured-project.jpg'
 import FeaturedCSSOT from '../../front/assets/featured/spectral-overlay-tool-featured-project.jpg'
 
-const ORDER = ['cs-ml2020', 'cs-sot', 'cs-lean-space', 'hello-world']
+//'cs-ml2020', 'cs-sot',
+const ORDER = ['cs-lean-space', 'hello-world']
 const POSTS = {
   'cs-lean-space': {
     id: 'cs-lean-space',
     title: 'Case Study: Lean Space',
     subtitle: 'Learnings from building my personal website in 2015.',
-    published: 'June 30, 2020',
+    published: {
+      dateStr: '2020-08-30',
+      txt: 'August 30, 2020',
+    },
     readtime: 5,
     featured: {
       img: FeaturedCSLeanSpace,
@@ -41,7 +45,10 @@ const POSTS = {
     id: 'hello-world',
     title: 'Hello world!',
     subtitle: 'Another few years, another blog...',
-    published: 'August 31, 2015',
+    published: {
+      dateStr: '2015-08-31',
+      txt: 'August 31, 2015',
+    },
     readtime: 2,
     tags: ['misc'],
   },

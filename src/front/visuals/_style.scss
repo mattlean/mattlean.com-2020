@@ -59,6 +59,7 @@ strong {
 
 ol {
   counter-reset: ordered-list;
+  line-height: 1.5em;
   list-style: none;
 
   padding-left: 3em;
@@ -74,7 +75,12 @@ ol > li::before {
 ol > li {
   counter-increment: featured-posts-list;
 
+  margin-bottom: 1em;
   position: relative;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 dl {

@@ -67,7 +67,8 @@ const Blog = () => {
           <h2 className="h-4 sm:h-6 a-primary">{p.title}</h2>
           <p className="c-grey-1">{p.subtitle}</p>
           <p className="txt-2 c-grey-1">
-            {p.published} &middot; {p.readtime} min read
+            <time dateTime={p.published.dateStr}>{p.published.txt}</time>{' '}
+            &middot; {p.readtime} min read
           </p>
           <ul aria-label="Categories" className="badge-list">
             {p.tags.map((t) => (

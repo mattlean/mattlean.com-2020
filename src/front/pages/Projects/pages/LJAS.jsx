@@ -113,7 +113,7 @@ const LJAS = () => {
               href="https://nodejs.org"
               rel="noreferrer"
               target="_blank"
-              className="a-grey-1 txtw-roman"
+              className="a-grey-1"
             >
               Node.js
             </a>{' '}
@@ -123,7 +123,7 @@ const LJAS = () => {
               href="https://electronjs.org"
               rel="noreferrer"
               target="_blank"
-              className="a-grey-1 txtw-roman"
+              className="a-grey-1"
             >
               Electron
             </a>
@@ -132,7 +132,7 @@ const LJAS = () => {
               href="https://webpack.js.org/"
               rel="noreferrer"
               target="_blank"
-              className="a-grey-1 txtw-roman"
+              className="a-grey-1"
             >
               webpack
             </a>
@@ -250,7 +250,7 @@ const LJAS = () => {
                   href="https://sass-lang.com"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Sass
                 </a>
@@ -267,7 +267,7 @@ const LJAS = () => {
                   href="https://reactjs.org"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   React
                 </a>
@@ -277,7 +277,7 @@ const LJAS = () => {
                   href="https://redux.js.org"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Redux
                 </a>
@@ -287,7 +287,7 @@ const LJAS = () => {
                   href="https://reactrouter.com"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   React Router
                 </a>
@@ -297,7 +297,7 @@ const LJAS = () => {
                   href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Fetch
                 </a>
@@ -312,7 +312,7 @@ const LJAS = () => {
                   href="https://electronjs.org"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Electron
                 </a>
@@ -322,7 +322,7 @@ const LJAS = () => {
                   href="https://webpack.js.org"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   webpack
                 </a>
@@ -332,7 +332,7 @@ const LJAS = () => {
                   href="https://babeljs.io"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Babel
                 </a>
@@ -342,7 +342,7 @@ const LJAS = () => {
                   href="https://flow.org"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Flow
                 </a>
@@ -352,7 +352,7 @@ const LJAS = () => {
                   href="https://eslint.org"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   ESLint
                 </a>
@@ -362,13 +362,13 @@ const LJAS = () => {
                   href="https://stylelint.io"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   stylelint
                 </a>
               </li>
               <li>
-                <Link to="/projects/alwp" className="a-grey-1 txtw-roman">
+                <Link to="/projects/alwp" className="a-grey-1">
                   Asset List Webpack&nbsp;Plugin
                 </Link>
               </li>
@@ -388,7 +388,7 @@ const LJAS = () => {
                   href="https://nodejs.org"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Node.js
                 </a>
@@ -398,7 +398,7 @@ const LJAS = () => {
                   href="https://expressjs.com"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Express
                 </a>
@@ -408,7 +408,7 @@ const LJAS = () => {
                   href="https://mongodb.com"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   MongoDB
                 </a>
@@ -418,7 +418,7 @@ const LJAS = () => {
                   href="https://mongoosejs.com"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Mongoose
                 </a>
@@ -433,7 +433,7 @@ const LJAS = () => {
                   href="https://jestjs.io"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Jest
                 </a>
@@ -443,7 +443,7 @@ const LJAS = () => {
                   href="https://enzymejs.github.io/enzyme"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Enzyme
                 </a>
@@ -453,7 +453,7 @@ const LJAS = () => {
                   href="https://reactjs.org/docs/test-renderer.html"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   React Test&nbsp;Renderer
                 </a>
@@ -463,7 +463,7 @@ const LJAS = () => {
                   href="https://github.com/visionmedia/supertest"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   SuperTest
                 </a>
@@ -478,7 +478,7 @@ const LJAS = () => {
                   href="https://github.com/mattlean/lean-js-app-starter/blob/master/LICENSE"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   MIT
                 </a>

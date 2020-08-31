@@ -108,7 +108,7 @@ const Crush = () => {
               href="https://biosearchtech.com"
               rel="noreferrer"
               target="_blank"
-              className="a-grey-1 txtw-roman"
+              className="a-grey-1"
             >
               LGC Biosearch Technologies
             </a>{' '}
@@ -121,14 +121,14 @@ const Crush = () => {
           <p>
             The project was built with another personal project of mine, a
             browser-based 2D game engine called{' '}
-            <Link to="/projects/adam" className="a-grey-1">
+            <Link to="/projects/adam" className="a-grey-1 txtw-bold">
               Adam Engine
             </Link>
             .
           </p>
         </section>
       </BlindFrame>
-      <section className="subgrid-ss-sm">
+      <section className="multicol-ss">
         <BlindFrame
           ref={observerData[3].ref}
           nodeType="figure"
@@ -224,7 +224,7 @@ const Crush = () => {
                   href="https://thespider.com"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   TheSpider
                 </a>
@@ -240,7 +240,7 @@ const Crush = () => {
                   href="https://python.org"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Python
                 </a>
@@ -257,7 +257,7 @@ const Crush = () => {
                   href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Canvas
                 </a>
@@ -267,7 +267,7 @@ const Crush = () => {
                   href="https://developer.mozilla.org/en-US/docs/Web/API/Touch_events"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Touch Events
                 </a>
@@ -277,13 +277,13 @@ const Crush = () => {
                   href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Web Audio
                 </a>
               </li>
               <li>
-                <Link to="/projects/adam" className="a-grey-1 txtw-roman">
+                <Link to="/projects/adam" className="a-grey-1">
                   Adam Engine
                 </Link>
               </li>
@@ -311,7 +311,7 @@ const Crush = () => {
                   href="https://github.com/GoogleCloudPlatform/webapp2"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   webapp2
                 </a>
@@ -321,7 +321,7 @@ const Crush = () => {
                   href="https://cloud.google.com/datastore"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Datastore
                 </a>
@@ -331,7 +331,7 @@ const Crush = () => {
                   href="https://palletsprojects.com/p/jinja/"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Jinja
                 </a>
@@ -346,7 +346,7 @@ const Crush = () => {
                   href="https://getbootstrap.com"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Bootstrap
                 </a>
@@ -356,7 +356,7 @@ const Crush = () => {
                   href="https://jquery.com"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   jQuery
                 </a>
@@ -371,7 +371,7 @@ const Crush = () => {
                   href="https://adobe.com/products/photoshop.html"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Photoshop
                 </a>
@@ -381,7 +381,7 @@ const Crush = () => {
                   href="https://adobe.com/products/illustrator.html"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Illustrator
                 </a>

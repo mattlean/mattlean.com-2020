@@ -106,7 +106,7 @@ const Lantern = () => {
               href="https://getbootstrap.com"
               rel="noreferrer"
               target="_blank"
-              className="a-grey-1 txtw-roman"
+              className="a-grey-1"
             >
               Bootstrap
             </a>
@@ -115,7 +115,7 @@ const Lantern = () => {
               href="https://wordpress.org"
               rel="noreferrer"
               target="_blank"
-              className="a-grey-1 txtw-roman"
+              className="a-grey-1"
             >
               WordPress
             </a>{' '}
@@ -207,7 +207,7 @@ const Lantern = () => {
                   href="https://gruntjs.com"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Grunt
                 </a>
@@ -230,7 +230,7 @@ const Lantern = () => {
                   href="https://github.com/mattlean/lanternjs/blob/master/LICENSE"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   MIT
                 </a>

@@ -161,7 +161,7 @@ const Checkpoint = () => {
                   href="https://www.typescriptlang.org"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   TypeScript
                 </a>
@@ -177,7 +177,7 @@ const Checkpoint = () => {
                   href="https://jestjs.io"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Jest
                 </a>
@@ -194,7 +194,7 @@ const Checkpoint = () => {
                   href="https://lodash.com"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Lodash
                 </a>
@@ -204,7 +204,7 @@ const Checkpoint = () => {
                   href="https://npmjs.com/package/validator"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Validator
                 </a>
@@ -219,7 +219,7 @@ const Checkpoint = () => {
                   href="https://github.com/mattlean/checkpointjs/blob/master/LICENSE"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   MIT
                 </a>

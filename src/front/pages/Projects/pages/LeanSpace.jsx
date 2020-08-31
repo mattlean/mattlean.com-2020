@@ -195,7 +195,7 @@ const LeanSpace = () => {
           Learn more about the&nbsp;project
         </CTA>
       </BlindFrame>
-      <section className="subgrid-ss-sm project-details-gap">
+      <section className="multicol-ss project-details-gap">
         <BlindFrame
           ref={observerData[6].ref}
           nodeType="figure"
@@ -275,7 +275,7 @@ const LeanSpace = () => {
                   href="https://sass-lang.com"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Sass
                 </a>
@@ -287,7 +287,7 @@ const LeanSpace = () => {
                   href="https://www.ruby-lang.org/en"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Ruby
                 </a>
@@ -310,7 +310,7 @@ const LeanSpace = () => {
                   href="https://masonry.desandro.com"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Masonry
                 </a>
@@ -320,7 +320,7 @@ const LeanSpace = () => {
                   href="https://developer.mozilla.org/en-US/docs/Web/API/History"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   History
                 </a>
@@ -330,13 +330,13 @@ const LeanSpace = () => {
                   href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   XMLHttpRequest
                 </a>
               </li>
               <li>
-                <Link to="/projects/lantern" className="a-grey-1 txtw-roman">
+                <Link to="/projects/lantern" className="a-grey-1">
                   Lantern.js
                 </Link>
               </li>
@@ -345,9 +345,19 @@ const LeanSpace = () => {
                   href="https://modernizr.com"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Modernizr
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://necolas.github.io/normalize.css"
+                  rel="noreferrer"
+                  target="_blank"
+                  className="a-grey-1"
+                >
+                  Normalize.css
                 </a>
               </li>
               <li>
@@ -355,7 +365,7 @@ const LeanSpace = () => {
                   href="https://github.com/mattlean/xuehuacms"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Xuehua CMS
                 </a>
@@ -370,7 +380,7 @@ const LeanSpace = () => {
                   href="https://adobe.com/products/photoshop.html"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Photoshop
                 </a>

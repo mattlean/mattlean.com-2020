@@ -11,6 +11,26 @@
   grid-template-columns: repeat(auto-fill, minmax(size.$size-159, 1fr));
 }
 
+.multicol-ss {
+  columns: 2;
+  grid-column: 1/-1;
+  grid-gap: size.$size-27;
+}
+
+.subgrid-ss {
+  grid-column: 1/-1;
+}
+
+@media (max-width: size.$size-520) {
+  .multicol-ss {
+    columns: auto;
+
+    > .ss-sm:first-child {
+      margin-bottom: size.$size-27;
+    }
+  }
+}
+
 @media (max-width: size.$size-470) {
   .grid {
     grid-gap: size.$size-24;

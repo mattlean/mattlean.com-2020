@@ -64,7 +64,8 @@ const HelloWorld = () => {
         </h1>
         <p className="subtitle txt-8 sm:txt-6 c-grey-1">{subtitle}</p>
         <p className="time c-grey-2">
-          {published} &middot; {readtime} min read
+          <time dateTime={published.dateStr}>{published.txt}</time> &middot;{' '}
+          {readtime} min read
         </p>
         <ul aria-label="Categories" className="badge-list">
           {tags.map((t) => (

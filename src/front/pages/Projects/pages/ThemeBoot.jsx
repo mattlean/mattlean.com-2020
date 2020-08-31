@@ -108,7 +108,7 @@ const ThemeBoot = () => {
               href="https://getbootstrap.com"
               rel="noreferrer"
               target="_blank"
-              className="a-grey-1 txtw-roman"
+              className="a-grey-1"
             >
               Bootstrap
             </a>
@@ -117,7 +117,7 @@ const ThemeBoot = () => {
               href="https://wordpress.org"
               rel="noreferrer"
               target="_blank"
-              className="a-grey-1 txtw-roman"
+              className="a-grey-1"
             >
               WordPress
             </a>{' '}
@@ -166,7 +166,7 @@ const ThemeBoot = () => {
         <img src={SSLocation} alt="" />
         <figcaption className="c-grey-2">Regular page&nbsp;example</figcaption>
       </BlindFrame>
-      <section className="subgrid-ss-sm project-details-gap">
+      <section className="multicol-ss project-details-gap">
         <BlindFrame
           ref={observerData[5].ref}
           nodeType="figure"
@@ -245,7 +245,7 @@ const ThemeBoot = () => {
                   href="https://php.net"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   PHP
                 </a>
@@ -269,7 +269,7 @@ const ThemeBoot = () => {
                   href="https://wordpress.org"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   WordPress
                 </a>
@@ -279,7 +279,7 @@ const ThemeBoot = () => {
                   href="https://getbootstrap.com"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Bootstrap
                 </a>
@@ -289,7 +289,7 @@ const ThemeBoot = () => {
                   href="https://mysql.com"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   MySQL
                 </a>
@@ -304,7 +304,7 @@ const ThemeBoot = () => {
                   href="https://github.com/mattlean/themeboot/blob/master/LICENSE"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   MIT
                 </a>

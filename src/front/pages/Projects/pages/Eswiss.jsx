@@ -103,7 +103,7 @@ const Eswiss = () => {
               href="https://en.wikipedia.org/wiki/International_Typographic_Style"
               rel="noreferrer"
               target="_blank"
-              className="a-grey-1 txtw-roman"
+              className="a-grey-1"
             >
               Swiss and International Typographic Styles
             </a>{' '}
@@ -182,7 +182,7 @@ const Eswiss = () => {
                   href="https://www.typescriptlang.org"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   TypeScript
                 </a>
@@ -193,7 +193,7 @@ const Eswiss = () => {
                   href="https://sass-lang.com"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Sass
                 </a>
@@ -208,7 +208,7 @@ const Eswiss = () => {
                   href="https://storybook.js.org"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Storybook
                 </a>
@@ -218,7 +218,7 @@ const Eswiss = () => {
                   href="https://jestjs.io"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Jest
                 </a>
@@ -228,7 +228,7 @@ const Eswiss = () => {
                   href="https://reactjs.org/docs/test-renderer.html"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   React Test&nbsp;Renderer
                 </a>
@@ -238,7 +238,7 @@ const Eswiss = () => {
                   href="https://chromatic.com"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Chromatic
                 </a>
@@ -248,7 +248,7 @@ const Eswiss = () => {
                   href="https://gulpjs.com"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Gulp
                 </a>
@@ -265,7 +265,7 @@ const Eswiss = () => {
                   href="https://reactjs.org"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   React
                 </a>
@@ -275,7 +275,7 @@ const Eswiss = () => {
                   href="https://reactrouter.com"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   React Router
                 </a>
@@ -285,7 +285,7 @@ const Eswiss = () => {
                   href="https://sass-lang.com"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Sass
                 </a>
@@ -300,7 +300,7 @@ const Eswiss = () => {
                   href="https://github.com/mattlean/eswiss/blob/master/LICENSE"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   MIT
                 </a>

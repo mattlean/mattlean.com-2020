@@ -107,7 +107,7 @@ const Gridnik = () => {
               href="https://www.adobe.com/products/xd.html"
               rel="noreferrer"
               target="_blank"
-              className="a-grey-1 txtw-roman"
+              className="a-grey-1"
             >
               Adobe XD
             </a>{' '}
@@ -122,7 +122,7 @@ const Gridnik = () => {
               href="https://en.wikipedia.org/wiki/Wim_Crouwel"
               rel="noreferrer"
               target="_blank"
-              className="a-grey-1 txtw-roman"
+              className="a-grey-1"
             >
               Wim Crouwel
             </a>
@@ -131,7 +131,7 @@ const Gridnik = () => {
               href="https://en.wikipedia.org/wiki/International_Typographic_Style"
               rel="noreferrer"
               target="_blank"
-              className="a-grey-1 txtw-roman"
+              className="a-grey-1"
             >
               Swiss and International Typographic Styles
             </a>
@@ -247,7 +247,7 @@ const Gridnik = () => {
                   href="https://jestjs.io"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   Jest
                 </a>
@@ -257,7 +257,7 @@ const Gridnik = () => {
                   href="https://webpack.js.org"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   webpack
                 </a>

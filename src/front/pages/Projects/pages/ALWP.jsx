@@ -102,7 +102,7 @@ const ALWP = () => {
               href="https://expressjs.com"
               rel="noreferrer"
               target="_blank"
-              className="a-grey-1 txtw-roman"
+              className="a-grey-1"
             >
               webpack
             </a>{' '}
@@ -182,7 +182,7 @@ const ALWP = () => {
                   href="https://webpack.js.org"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   webpack
                 </a>
@@ -205,7 +205,7 @@ const ALWP = () => {
                   href="https://github.com/mattlean/asset-list-webpack-plugin/blob/master/LICENSE"
                   rel="noreferrer"
                   target="_blank"
-                  className="a-grey-1 txtw-roman"
+                  className="a-grey-1"
                 >
                   MIT
                 </a>
