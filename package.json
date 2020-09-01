@@ -11,7 +11,7 @@
     "back:start": "NODE_ENV=development node build/back/development/server",
     "back:start:production": "NODE_ENV=production node build/back/production/server",
     "back:start:debug": "nodemon --exec \"yarn front:build && yarn back:build && NODE_ENV=development node --inspect-brk build/back/development/server\"",
-    "build:production": "yarn front:build:production && yarn back:build:production",
+    "build": "yarn front:build:production && yarn back:build:production",
     "dev": "nodemon --exec \"yarn front:build && yarn back:build && yarn back:start\"",
     "front:dev": "nodemon --config nodemon-front.json --exec \"webpack-dev-server --config webpack/front/config.js --env.type development --env.devType front\"",
     "front:build": "webpack --config webpack/front/config.js --env.type development",
@@ -22,7 +22,7 @@
     "lint:js": "eslint --ext .js,.json,.jsx src/ webpack/",
     "lint:styles": "stylelint \"src/**/*.{css,scss}\"",
     "sass:build": "yarn sass --load-path=node_modules/eswiss/dist src/front/index.scss:build/front/sass/index.css",
-    "start:production": "NODE_ENV=production node build/back/production/server"
+    "start": "NODE_ENV=production node build/back/production/server"
   },
   "dependencies": {
     "@babel/core": "^7.10.3",
