@@ -120,7 +120,6 @@
       display: grid;
       grid-gap: size.$size-27;
       grid-template-columns: repeat(6, 1fr);
-      grid-template-rows: repeat(8, size.$size-157) auto;
 
       .mobile {
         background-color: color.$k;
@@ -206,10 +205,6 @@
         transform: translateY(-11px);
       }
     }
-
-    > .subgrid-content > .subgrid-ss {
-      grid-template-rows: repeat(8, size.$size-147) auto;
-    }
   }
 }
 
@@ -255,7 +250,11 @@
 
     > .subgrid-content > .subgrid-ss {
       grid-gap: size.$size-24;
-      grid-template-rows: repeat(8, size.$size-176) auto;
+
+      .mobile.phone-vertical {
+        height: auto;
+        width: 100%;
+      }
     }
   }
 }
