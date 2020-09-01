@@ -99,6 +99,15 @@
       }
     }
 
+    > .multicol-txt {
+      columns: 2;
+      grid-column: 1/-1;
+    }
+
+    > .vid {
+      grid-column: 1/-1;
+    }
+
     > .subgrid-ss {
       grid-template-rows: repeat(8, size.$size-157) auto;
 
@@ -146,10 +155,6 @@
         grid-column: 1/-1;
         transform: translateY(-14px);
       }
-    }
-
-    > .vid {
-      grid-column: 1/-1;
     }
   }
 }

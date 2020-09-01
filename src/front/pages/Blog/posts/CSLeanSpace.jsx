@@ -13,6 +13,8 @@ import SSLightbox from '../../../assets/posts/cs-lean-space/lightbox.png'
 import SSMobileHorizontal from '../../../assets/posts/cs-lean-space/blog-pixel2-horizontal.png'
 import SSMobileVertical from '../../../assets/posts/cs-lean-space/blog-pixel2-vertical.png'
 import SSTablet from '../../../assets/posts/cs-lean-space/blog-ipad.png'
+import SSType from '../../../assets/posts/cs-lean-space/type.jpg'
+import VidLanding from '../../../assets/posts/cs-lean-space/landing.mp4'
 import VidPageTransitions from '../../../assets/posts/cs-lean-space/page-transitions.mp4'
 import VidWork from '../../../assets/posts/cs-lean-space/work.mp4'
 
@@ -236,74 +238,72 @@ const CSSOT = () => {
         <h3 className="h-7">
           Backendless with SEO-Friendly Seamless Page Transitions
         </h3>
-        <section className="subgrid-subcontent grid mb-3">
-          <section className="left-half">
-            <p className="c-grey-1">
-              I wanted the site to utilize seamless page transitions without
-              triggering a page reload, an inherent feature of{' '}
-              <a
-                href="https://en.wikipedia.org/wiki/Single-page_application"
-                rel="noreferrer"
-                target="_blank"
-                className="a-grey-1"
-              >
-                single-page applications
-              </a>
-              . However, a common trade-off with this approach at the time was
-              that it could make it difficult for search engine spiders to parse
-              your page, negatively impacting{' '}
-              <a
-                href="https://en.wikipedia.org/wiki/Search_engine_optimization"
-                rel="noreferrer"
-                target="_blank"
-                className="a-grey-1"
-              >
-                search engine optimization
-              </a>
-              . To address this issue, I structured the server with a standard
-              setup: every page would have a corresponding HTML document that
-              would be distributed by the server. Once a page is downloaded by a
-              user, JavaScript is executed and adds an event handler on all
-              internal links that performs an XMLHttpRequest when they are
-              clicked, downloading the requested page and using it to
-              dynamically update the DOM of the current page to transform it
-              into the new one, thus allowing navigation without page reloads.
-            </p>
-            <p className="c-grey-1">
-              This technique also allows the website to still be fully
-              functional when JavaScript is disabled, avoiding the JavaScript
-              requirement problem for most single-page applications. When
-              browsing the site without JavaScript, the page is still completely
-              rendered, but the event handlers will never be applied, letting
-              the navigation experience fallback to the standard link behavior.
-              This ensures the SEO-friendliness of the website, as search engine
-              spiders will be able to easily read an identical page that humans
-              see without needing to execute any JavaScript.
-            </p>
-            <p className="c-grey-1">
-              This solution also does not require any backend code, hence the
-              “backendless” aspect. It just lets the{' '}
-              <a
-                href="https://httpd.apache.org"
-                rel="noreferrer"
-                target="_blank"
-                className="a-grey-1"
-              >
-                Apache server
-              </a>{' '}
-              perform its standard behavior.
-            </p>
-          </section>
-          <figure className="vid right-half sticky-media">
-            <video autoPlay controls loop muted>
-              <source src={VidPageTransitions} />
-            </video>
-            <figcaption className="a-grey-2">
-              Example of persistent, refreshless experience with seamless page
-              transitions.
-            </figcaption>
-          </figure>
+        <section className="multicol-txt mb-3">
+          <p className="c-grey-1">
+            I wanted the site to utilize seamless page transitions without
+            triggering a page reload, an inherent feature of{' '}
+            <a
+              href="https://en.wikipedia.org/wiki/Single-page_application"
+              rel="noreferrer"
+              target="_blank"
+              className="a-grey-1"
+            >
+              single-page applications
+            </a>
+            . However, a common trade-off with this approach at the time was
+            that it could make it difficult for search engine spiders to parse
+            your page, negatively impacting{' '}
+            <a
+              href="https://en.wikipedia.org/wiki/Search_engine_optimization"
+              rel="noreferrer"
+              target="_blank"
+              className="a-grey-1"
+            >
+              search engine optimization
+            </a>
+            . To address this issue, I structured the server with a standard
+            setup: every page would have a corresponding HTML document that
+            would be distributed by the server. Once a page is downloaded by a
+            user, JavaScript is executed and adds an event handler on all
+            internal links that performs an XMLHttpRequest when they are
+            clicked, downloading the requested page and using it to dynamically
+            update the DOM of the current page to transform it into the new one,
+            thus allowing navigation without page reloads.
+          </p>
+          <p className="c-grey-1">
+            This also allows the website to still be fully functional when
+            JavaScript is disabled, avoiding the JavaScript requirement problem
+            for most single-page applications. When browsing the site without
+            JavaScript, the page is still completely rendered, but the event
+            handlers will never be applied, letting the navigation experience
+            fallback to the standard link behavior. This ensures the
+            SEO-friendliness of the website, as search engine spiders will be
+            able to easily read an identical page that humans see without
+            needing to execute any JavaScript.
+          </p>
+          <p className="c-grey-1">
+            This solution also does not require any backend code, hence the
+            “backendless” aspect. It just lets the{' '}
+            <a
+              href="https://httpd.apache.org"
+              rel="noreferrer"
+              target="_blank"
+              className="a-grey-1"
+            >
+              Apache server
+            </a>{' '}
+            perform its standard behavior.
+          </p>
         </section>
+        <figure className="vid right-half">
+          <video autoPlay controls loop muted>
+            <source src={VidPageTransitions} />
+          </video>
+          <figcaption className="a-grey-2">
+            Example of persistent, refreshless experience with seamless page
+            transitions.
+          </figcaption>
+        </figure>
         <h3 className="h-7 left-half">Custom Lightbox Library</h3>
         <p className="right-half mb-3 c-grey-1">
           A significant part of the website experience involves looking at
@@ -434,12 +434,111 @@ const CSSOT = () => {
           </a>{' '}
           for this.
         </p>
-        <figure className="vid">
+        <figure className="vid mb-3">
           <video autoPlay controls loop muted>
             <source src={VidWork} />
           </video>
           <figcaption className="a-grey-2">
             A demonstration of the work page’s filter feature.
+          </figcaption>
+        </figure>
+        <h2 className="design-header h-2 left-half">Design</h2>
+        <p className="right-half mb-3 c-grey-1">
+          I wanted the style to feel like one fitting for a software engineer.
+          Nothing too extravagant, but still unique enough to show that I have
+          some experience with design.
+        </p>
+        <h3 className="h-7 left-half">Colors</h3>
+        <p className="right-half c-grey-1">
+          I decided on a blueish-green as my primary color because it was a
+          fairly bright, calming, and inoffensive color. Grey became my
+          secondary color because it was a very neutral color and didn’t compete
+          with the primary colors.
+        </p>
+        <ul className="subgrid-colors grid mb-3">
+          <li>#3DBBC2</li>
+          <li>#54E1E6</li>
+          <li>#EEEEEE</li>
+          <li>#BABBBD</li>
+          <li>#333333</li>
+          <li>#292C31</li>
+        </ul>
+        <h3 className="h-7 left-half">Typography</h3>
+        <section className="subgrid-subcontent grid mb-3">
+          <section className="left-half c-grey-1">
+            <p>
+              I chose{' '}
+              <a
+                href="https://fonts.google.com/specimen/Open+Sans"
+                rel="noreferrer"
+                target="_blank"
+                className="a-grey-1"
+              >
+                Open Sans
+              </a>{' '}
+              for the body and header text because I wanted to use a modern
+              looking sans serif typeface that wasn’t a web-safe standard, just
+              to give a subtly different look to the text.
+            </p>
+            <p>
+              For monospaced text I chose{' '}
+              <a
+                href="https://fonts.google.com/specimen/Inconsolata"
+                rel="noreferrer"
+                target="_blank"
+                className="a-grey-1"
+              >
+                Inconsolata
+              </a>
+              . This would be used for body and heading text that would benefit
+              from monospacing or would need to be distinguished from text in
+              Open Sans.
+            </p>
+            <p>
+              For the logo, I settled with{' '}
+              <a
+                href="https://fonts.google.com/specimen/Exo"
+                rel="noreferrer"
+                target="_blank"
+                className="a-grey-1"
+              >
+                Exo
+              </a>{' '}
+              since it was a font that contrasted with Open Sans very well while
+              expressing a very technological feel. I specifically used it in
+              italics to make the logo look like it was “leaning” over to a
+              side, a play on my last name (Lean).
+            </p>
+            <p>
+              To make the typefaces still viewable for users who didn’t have
+              them already installed, I imported them as web fonts through{' '}
+              <a
+                href="https://fonts.google.com"
+                rel="noreferrer"
+                target="_blank"
+                className="a-grey-1"
+              >
+                Google Fonts
+              </a>
+              .
+            </p>
+          </section>
+          <img src={SSType} alt="" className="right-half sticky-media" />
+        </section>
+        <h3 className="h-7 left-half">Animations & Transitions</h3>
+        <p className="right-half c-grey-1">
+          I used animations and transitions wherever I could throughout the site
+          to have it give off a sleek and polished experience. This contributed
+          particularly to the navigation experience, making the changing of
+          pages feel smooth and seamless. By only CSS, the animations can be
+          experienced by users even when they have JavaScript disabled.
+        </p>
+        <figure className="vid">
+          <video autoPlay controls loop muted>
+            <source src={VidLanding} />
+          </video>
+          <figcaption className="a-grey-2">
+            Initial load animation shown on the landing page.
           </figcaption>
         </figure>
       </BlindFrame>

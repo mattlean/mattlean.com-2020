@@ -1,6 +1,56 @@
 @use '../../../visuals/scale/bp';
+@use '../../../visuals/scale/color';
 @use '../../../visuals/scale/size';
 
-.grid-blog-cs-lean-space > .subgrid-content > .subgrid-ss > .ss {
-  background-color: #eee;
+.grid-blog-cs-lean-space > .subgrid-content {
+  > .subgrid-ss > .ss {
+    background-color: #eee;
+  }
+
+  > .design-header {
+    transform: translateY(-16px);
+  }
+
+  > .subgrid-colors {
+    list-style: none;
+
+    grid-column: 1/-1;
+    grid-template-rows: size.$size-157;
+
+    > li {
+      background-color: #ccc;
+
+      padding: 0.5em;
+
+      &:nth-child(1) {
+        background-color: #3dbbc2;
+        color: color.$w;
+      }
+
+      &:nth-child(2) {
+        background-color: #54e1e6;
+        color: color.$k;
+      }
+
+      &:nth-child(3) {
+        background-color: #eee;
+        color: color.$k;
+      }
+
+      &:nth-child(4) {
+        background-color: #babbbd;
+        color: color.$k;
+      }
+
+      &:nth-child(5) {
+        background-color: #333;
+        color: color.$w;
+      }
+
+      &:nth-child(6) {
+        background-color: #292c31;
+        color: color.$w;
+      }
+    }
+  }
 }
