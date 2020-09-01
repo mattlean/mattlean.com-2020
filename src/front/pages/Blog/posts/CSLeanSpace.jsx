@@ -234,7 +234,7 @@ const CSSOT = () => {
         <h3 className="h-7">
           Backendless with SEO-Friendly Seamless Page Transitions
         </h3>
-        <section className="multicol-txt mb-3">
+        <section className="multicol-txt">
           <p className="c-grey-1">
             I wanted the site to utilize seamless page transitions without
             triggering a page reload, an inherent feature of{' '}
@@ -279,7 +279,7 @@ const CSSOT = () => {
           </p>
           <p className="c-grey-1">
             This solution also does not require any backend code, hence the
-            “backendless” aspect. It just lets the{' '}
+            “backendless” aspect. It just lets the server, in my case an{' '}
             <a
               href="https://httpd.apache.org"
               rel="noreferrer"
@@ -287,11 +287,11 @@ const CSSOT = () => {
               className="a-grey-1"
             >
               Apache server
-            </a>{' '}
-            perform its standard&nbsp;behavior.
+            </a>
+            , keep it simple and serve static&nbsp;files.
           </p>
         </section>
-        <figure className="vid">
+        <figure className="vid mb-3">
           <video autoPlay controls loop muted>
             <source src={VidPageTransitions} />
           </video>
@@ -301,7 +301,7 @@ const CSSOT = () => {
           </figcaption>
         </figure>
         <h3 className="h-7 left-half">Custom Lightbox Library</h3>
-        <p className="right-half-priority mb-3 c-grey-1">
+        <p className="right-half-priority mb-0 c-grey-1">
           A significant part of the website experience involves looking at
           screenshots of my portfolio work, so I wrote a{' '}
           <a
@@ -345,7 +345,7 @@ const CSSOT = () => {
           </figcaption>
         </figure>
         <h3 className="h-7 left-half">Work Filtering</h3>
-        <p className="right-half-priority mb-3 c-grey-1">
+        <p className="right-half-priority mb-0 c-grey-1">
           This was where the main exception to the “no 3rd party dependency
           rule” was made: the work page. As this would likely be one of the main
           pages prospective employers would investigate first, I wanted the
@@ -369,14 +369,14 @@ const CSSOT = () => {
             A demonstration of the work page’s filter&nbsp;feature
           </figcaption>
         </figure>
-        <h2 className="design-header h-2 left-half">Design</h2>
+        <h2 className="design-header h-2 md:h-4 left-half">Design</h2>
         <p className="right-half-priority mb-3 c-grey-1">
           I wanted the style to feel like one fitting for a software engineer.
           Nothing too extravagant, but still unique enough to show that I have
           some experience with&nbsp;design.
         </p>
         <h3 className="h-7 left-half">Colors</h3>
-        <p className="right-half-priority c-grey-1">
+        <p className="right-half-priority mb-0 c-grey-1">
           I decided on a blueish-green as my primary color because it was a
           fairly bright, calming, and inoffensive color. Grey became my
           secondary color because it was a very neutral color and didn’t compete
@@ -453,7 +453,7 @@ const CSSOT = () => {
           <img src={SSType} alt="" className="right-half sticky-media" />
         </section>
         <h3 className="h-7 left-half">Animations & Transitions</h3>
-        <p className="right-half-priority c-grey-1">
+        <p className="right-half-priority mb-0 c-grey-1">
           I used animations and transitions wherever I could throughout the site
           to have it give off a sleek and polished experience. This contributed
           particularly to the navigation experience, making the changing of
@@ -469,7 +469,7 @@ const CSSOT = () => {
           </figcaption>
         </figure>
         <h3 className="h-7 left-half">Custom Responsive Layout</h3>
-        <p className="right-half-priority c-grey-1">
+        <p className="right-half-priority mb-0 c-grey-1">
           Without the luxury of a framework like{' '}
           <a
             href="https://getbootstrap.com"
@@ -488,7 +488,7 @@ const CSSOT = () => {
             target="_blank"
             className="a-grey-1"
           >
-            floats,
+            floats
           </a>{' '}
           and the{' '}
           <a

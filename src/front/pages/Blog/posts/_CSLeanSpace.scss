@@ -68,6 +68,10 @@
 
 @media (max-width: bp.$md) {
   .grid-blog-cs-lean-space > .subgrid-content {
+    > .design-header {
+      transform: translateY(-10px);
+    }
+
     > .subgrid-colors {
       grid-template-rows: size.$size-147;
     }
@@ -111,7 +115,9 @@
 @media (max-width: bp.$sm) {
   .grid-blog-cs-lean-space > .subgrid-content {
     > .subgrid-colors {
-      grid-template-rows: repeat(2, size.$size-176);
+      grid-gap: size.$size-24;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, size.$size-176);
     }
 
     > .subgrid-ss {
@@ -126,15 +132,6 @@
           grid-row: span 2;
         }
       }
-    }
-  }
-}
-
-@media (max-width: size.$size-390) {
-  .grid-blog-cs-lean-space > .subgrid-content {
-    > .subgrid-colors {
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(3, size.$size-147);
     }
   }
 }
