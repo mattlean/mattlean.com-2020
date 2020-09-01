@@ -1,6 +1,6 @@
 import compression from 'compression'
 import express from 'express'
-import helmet from 'helmet'
+// import helmet from 'helmet'
 import morgan from 'morgan'
 import errHandler from './err/errHandler'
 import logger from './logger'
@@ -22,7 +22,7 @@ if (process.env.NODE_ENV === 'development') {
   app.use('/', express.static(FRONT.BUILD_DEV))
 } else if (process.env.NODE_ENV === 'production') {
   app.use(compression())
-  app.use(helmet())
+  // app.use(helmet())
 
   logger.info('🤖🛫 INITIATING PRODUCTION SERVER 🛫🤖')
 
