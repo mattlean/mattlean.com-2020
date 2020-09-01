@@ -196,11 +196,10 @@ const Gridnik = () => {
           <Link to="/about" className="a-grey-2">
             ”About” page
           </Link>{' '}
-          on{' '}
+          on&nbsp;
           <Link to="/projects/ml2020" className="a-grey-2">
             MattLean.com
           </Link>
-          .
         </figcaption>
       </BlindFrame>
       <BlindFrame

@@ -105,14 +105,14 @@ const CSSOT = () => {
             college in 2015. The goal of the project built was to create a
             personal brand that would help me land my first full-time
             engineering job in Silicon Valley. This brand would be applied on my
-            website, resume, and cover letters.
+            website, resume, and cover&nbsp;letters.
           </p>
           <p>The two key factors directing my project were the following:</p>
           <ol>
             <li>
               Demonstrate that I’m a self-motivated software engineer that is
               not solely dependent on 3rd party packages and is capable of
-              developing my own solutions.
+              developing my own&nbsp;solutions.
             </li>
             <li>
               Showcase a unique visual style to distinguish myself from
@@ -224,14 +224,14 @@ const CSSOT = () => {
               developer under deadlines. Since this was a personal project, I
               wanted to avoid using 3rd party dependencies as much as I could in
               favor of vanilla JavaScript, CSS, and native browser APIs, just to
-              show that I was comfortable with handling both.
+              show that I was comfortable with handling&nbsp;both.
             </p>
           </section>
           <figure className="ss right-half sticky-media">
             <img src={SSLeanTheme} alt="" className="right-half" />
             <figcaption className="c-grey-2">
-              My old website that was in dire need of a redesign. It was created
-              by me in 2011.
+              My old website I created in 2011 that was in dire need of
+              a&nbsp;redesign
             </figcaption>
           </figure>
         </section>
@@ -268,7 +268,7 @@ const CSSOT = () => {
             internal links that performs an XMLHttpRequest when they are
             clicked, downloading the requested page and using it to dynamically
             update the DOM of the current page to transform it into the new one,
-            thus allowing navigation without page reloads.
+            thus allowing navigation without page&nbsp;reloads.
           </p>
           <p className="c-grey-1">
             This also allows the website to still be fully functional when
@@ -279,7 +279,7 @@ const CSSOT = () => {
             fallback to the standard link behavior. This ensures the
             SEO-friendliness of the website, as search engine spiders will be
             able to easily read an identical page that humans see without
-            needing to execute any JavaScript.
+            needing to execute any&nbsp;JavaScript.
           </p>
           <p className="c-grey-1">
             This solution also does not require any backend code, hence the
@@ -292,7 +292,7 @@ const CSSOT = () => {
             >
               Apache server
             </a>{' '}
-            perform its standard behavior.
+            perform its standard&nbsp;behavior.
           </p>
         </section>
         <figure className="vid right-half">
@@ -300,8 +300,8 @@ const CSSOT = () => {
             <source src={VidPageTransitions} />
           </video>
           <figcaption className="a-grey-2">
-            Example of persistent, refreshless experience with seamless page
-            transitions.
+            Example of persistent, refreshless experience with seamless
+            page&nbsp;transitions
           </figcaption>
         </figure>
         <h3 className="h-7 left-half">Custom Lightbox Library</h3>
@@ -330,7 +330,7 @@ const CSSOT = () => {
           >
             GitHub
           </a>{' '}
-          and{' '}
+          and&nbsp;
           <a
             href="https://npmjs.com/package/lanternjs"
             rel="noreferrer"
@@ -344,13 +344,137 @@ const CSSOT = () => {
         <figure className="ss ss-lg mb-3">
           <img src={SSLightbox} alt="" />
           <figcaption className="a-grey-2">
-            Lantern.js being used to display a screenshot of one of my portfolio
-            pieces.
+            Lantern.js being used to display a screenshot of one of my
+            portfolio&nbsp;pieces
+          </figcaption>
+        </figure>
+        <h3 className="h-7 left-half">Work Filtering</h3>
+        <p className="right-half mb-3 c-grey-1">
+          This was where the main exception to the “no 3rd party dependency
+          rule” was made: the work page. As this would likely be one of the main
+          pages prospective employers would investigate first, I wanted the
+          experience here to be a little more sophisticated by creating a filter
+          feature that faded each work piece in and out. I ended up using{' '}
+          <a
+            href="https://masonry.desandro.com"
+            rel="noreferrer"
+            target="_blank"
+            className="a-grey-1"
+          >
+            Masonry
+          </a>{' '}
+          for&nbsp;this.
+        </p>
+        <figure className="vid mb-3">
+          <video autoPlay controls loop muted>
+            <source src={VidWork} />
+          </video>
+          <figcaption className="a-grey-2">
+            A demonstration of the work page’s filter&nbsp;feature
+          </figcaption>
+        </figure>
+        <h2 className="design-header h-2 left-half">Design</h2>
+        <p className="right-half mb-3 c-grey-1">
+          I wanted the style to feel like one fitting for a software engineer.
+          Nothing too extravagant, but still unique enough to show that I have
+          some experience with&nbsp;design.
+        </p>
+        <h3 className="h-7 left-half">Colors</h3>
+        <p className="right-half c-grey-1">
+          I decided on a blueish-green as my primary color because it was a
+          fairly bright, calming, and inoffensive color. Grey became my
+          secondary color because it was a very neutral color and didn’t compete
+          with the primary&nbsp;colors.
+        </p>
+        <ul className="subgrid-colors grid mb-3">
+          <li>#3DBBC2</li>
+          <li>#54E1E6</li>
+          <li>#EEEEEE</li>
+          <li>#BABBBD</li>
+          <li>#333333</li>
+          <li>#292C31</li>
+        </ul>
+        <h3 className="h-7 left-half">Typography</h3>
+        <section className="subgrid-subcontent grid mb-3">
+          <section className="left-half c-grey-1">
+            <p>
+              I chose{' '}
+              <a
+                href="https://fonts.google.com/specimen/Open+Sans"
+                rel="noreferrer"
+                target="_blank"
+                className="a-grey-1"
+              >
+                Open Sans
+              </a>{' '}
+              for the body and header text because I wanted to use a modern
+              looking sans serif typeface that wasn’t a web-safe standard, just
+              to give a subtly different look to the&nbsp;text.
+            </p>
+            <p>
+              For monospaced text I chose{' '}
+              <a
+                href="https://fonts.google.com/specimen/Inconsolata"
+                rel="noreferrer"
+                target="_blank"
+                className="a-grey-1"
+              >
+                Inconsolata
+              </a>
+              . This would be used for body and heading text that would benefit
+              from monospacing or would need to be distinguished from text in
+              Open&nbsp;Sans.
+            </p>
+            <p>
+              For the logo, I settled with{' '}
+              <a
+                href="https://fonts.google.com/specimen/Exo"
+                rel="noreferrer"
+                target="_blank"
+                className="a-grey-1"
+              >
+                Exo
+              </a>{' '}
+              since it was a font that contrasted with Open Sans very well while
+              expressing a very technological feel. I specifically used it in
+              italics to make the logo look like it was “leaning” over to a
+              side, a play on my last name&nbsp;(Lean).
+            </p>
+            <p>
+              To make the typefaces still viewable for users who didn’t have
+              them already installed, I imported them as web fonts through{' '}
+              <a
+                href="https://fonts.google.com"
+                rel="noreferrer"
+                target="_blank"
+                className="a-grey-1"
+              >
+                Google&nbsp;Fonts
+              </a>
+              .
+            </p>
+          </section>
+          <img src={SSType} alt="" className="right-half sticky-media" />
+        </section>
+        <h3 className="h-7 left-half">Animations & Transitions</h3>
+        <p className="right-half c-grey-1">
+          I used animations and transitions wherever I could throughout the site
+          to have it give off a sleek and polished experience. This contributed
+          particularly to the navigation experience, making the changing of
+          pages feel smooth and seamless. By only CSS, the animations can be
+          experienced by users even when they have JavaScript&nbsp;disabled.
+        </p>
+        <figure className="vid mb-3 ">
+          <video autoPlay controls loop muted>
+            <source src={VidLanding} />
+          </video>
+          <figcaption className="a-grey-2">
+            Initial load animation shown on the landing&nbsp;page
           </figcaption>
         </figure>
         <h3 className="h-7 left-half">Custom Responsive Layout</h3>
-        <p className="right-half mb-3 c-grey-1">
-          Of course without the luxury of a framework like{' '}
+        <p className="right-half c-grey-1">
+          Without the luxury of a framework like{' '}
           <a
             href="https://getbootstrap.com"
             rel="noreferrer"
@@ -386,7 +510,7 @@ const CSSOT = () => {
             target="_blank"
             className="a-grey-1"
           >
-            media queries
+            media&nbsp;queries
           </a>
           .
         </p>
@@ -414,131 +538,7 @@ const CSSOT = () => {
           </div>
           <figcaption className="c-grey-2 mb-3">
             Lean Space’s layout adapting to different mobile devices with
-            different screen dimensions.
-          </figcaption>
-        </figure>
-        <h3 className="h-7 left-half">Work Filtering</h3>
-        <p className="right-half mb-3 c-grey-1">
-          This was where the main exception to the “no 3rd party dependency
-          rule” was made: the work page. As this would likely be one of the main
-          pages prospective employers would investigate first, I wanted the
-          experience here to be a little more sophisticated by creating a filter
-          feature that faded each work piece in and out. I ended up using{' '}
-          <a
-            href="https://masonry.desandro.com"
-            rel="noreferrer"
-            target="_blank"
-            className="a-grey-1"
-          >
-            Masonry
-          </a>{' '}
-          for this.
-        </p>
-        <figure className="vid mb-3">
-          <video autoPlay controls loop muted>
-            <source src={VidWork} />
-          </video>
-          <figcaption className="a-grey-2">
-            A demonstration of the work page’s filter feature.
-          </figcaption>
-        </figure>
-        <h2 className="design-header h-2 left-half">Design</h2>
-        <p className="right-half mb-3 c-grey-1">
-          I wanted the style to feel like one fitting for a software engineer.
-          Nothing too extravagant, but still unique enough to show that I have
-          some experience with design.
-        </p>
-        <h3 className="h-7 left-half">Colors</h3>
-        <p className="right-half c-grey-1">
-          I decided on a blueish-green as my primary color because it was a
-          fairly bright, calming, and inoffensive color. Grey became my
-          secondary color because it was a very neutral color and didn’t compete
-          with the primary colors.
-        </p>
-        <ul className="subgrid-colors grid mb-3">
-          <li>#3DBBC2</li>
-          <li>#54E1E6</li>
-          <li>#EEEEEE</li>
-          <li>#BABBBD</li>
-          <li>#333333</li>
-          <li>#292C31</li>
-        </ul>
-        <h3 className="h-7 left-half">Typography</h3>
-        <section className="subgrid-subcontent grid mb-3">
-          <section className="left-half c-grey-1">
-            <p>
-              I chose{' '}
-              <a
-                href="https://fonts.google.com/specimen/Open+Sans"
-                rel="noreferrer"
-                target="_blank"
-                className="a-grey-1"
-              >
-                Open Sans
-              </a>{' '}
-              for the body and header text because I wanted to use a modern
-              looking sans serif typeface that wasn’t a web-safe standard, just
-              to give a subtly different look to the text.
-            </p>
-            <p>
-              For monospaced text I chose{' '}
-              <a
-                href="https://fonts.google.com/specimen/Inconsolata"
-                rel="noreferrer"
-                target="_blank"
-                className="a-grey-1"
-              >
-                Inconsolata
-              </a>
-              . This would be used for body and heading text that would benefit
-              from monospacing or would need to be distinguished from text in
-              Open Sans.
-            </p>
-            <p>
-              For the logo, I settled with{' '}
-              <a
-                href="https://fonts.google.com/specimen/Exo"
-                rel="noreferrer"
-                target="_blank"
-                className="a-grey-1"
-              >
-                Exo
-              </a>{' '}
-              since it was a font that contrasted with Open Sans very well while
-              expressing a very technological feel. I specifically used it in
-              italics to make the logo look like it was “leaning” over to a
-              side, a play on my last name (Lean).
-            </p>
-            <p>
-              To make the typefaces still viewable for users who didn’t have
-              them already installed, I imported them as web fonts through{' '}
-              <a
-                href="https://fonts.google.com"
-                rel="noreferrer"
-                target="_blank"
-                className="a-grey-1"
-              >
-                Google Fonts
-              </a>
-              .
-            </p>
-          </section>
-          <img src={SSType} alt="" className="right-half sticky-media" />
-        </section>
-        <h3 className="h-7 left-half">Animations & Transitions</h3>
-        <p className="right-half c-grey-1">
-          I used animations and transitions wherever I could throughout the site
-          to have it give off a sleek and polished experience. This contributed
-          particularly to the navigation experience, making the changing of
-          pages feel smooth and seamless. By only CSS, the animations can be
-          experienced by users even when they have JavaScript disabled.
-        </p>
-        <figure className="vid">
-          <video autoPlay controls loop muted>
-            <source src={VidLanding} />
-          </video>
-          <figcaption className="a-grey-2">
-            Initial load animation shown on the landing page.
+            different screen&nbsp;dimensions
           </figcaption>
         </figure>
       </BlindFrame>
