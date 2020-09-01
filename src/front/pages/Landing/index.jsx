@@ -280,7 +280,7 @@ const Landing = () => {
             </figure>
           </Link>
           <Link
-            to="/projects/lean-space"
+            to="/blog/cs-lean-space"
             className="subgrid-featured-item grid tdl-none"
           >
             <figure className="subgrid-featured-item-content grid">

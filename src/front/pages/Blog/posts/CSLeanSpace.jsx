@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import { Badge } from 'eswiss'
 import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
 import BlindFrame from '../../../components/Blind/BlindFrame'
 import { getPostData } from '../../../../common/data/post'
 import {
@@ -33,7 +34,7 @@ const CSSOT = () => {
     initAnimComplete,
     observerData,
     runInitAnim,
-  } = useInitAnim(2)
+  } = useInitAnim(1)
 
   // Setup effect which is only run once
   useEffect(() => {
@@ -41,7 +42,7 @@ const CSSOT = () => {
     if (srStartRef.current) srStartRef.current.focus()
 
     const observers = setupBlindObservers(
-      [0.5, 0.05],
+      [0.5],
       observerData,
       blindVisibleStates
     )
@@ -85,27 +86,22 @@ const CSSOT = () => {
           ))}
         </ul>
       </BlindFrame>
-      <BlindFrame
-        ref={observerData[1].ref}
-        delay={blindStates[1].delay}
-        duration={0.2}
-        observer={observerData[1].observer}
-        play={
-          initAnimComplete
-            ? blindVisibleStates[1].isVisible
-            : blindStates[1].play
-        }
-        nodeType="section"
+      <motion.section
+        initial={{ opacity: 0 }}
+        animate={{
+          opacity: 1,
+          transition: { duration: 0.5, ease: 'easeOut' },
+        }}
         className="subgrid-content grid"
       >
         <h2 className="h-2 mb-1rem">My Brand as a College Grad</h2>
         <section className="left-half c-grey-1 mb-3">
           <p>
             I created <strong>Lean Space</strong> right after I graduated from
-            college in 2015. The goal of the project built was to create a
-            personal brand that would help me land my first full-time
-            engineering job in Silicon Valley. This brand would be applied on my
-            website, resume, and cover&nbsp;letters.
+            college in 2015. The goal of the project was to create a personal
+            brand that would help me land my first full-time engineering job in
+            Silicon Valley. This brand would be applied on my website, resume,
+            and cover&nbsp;letters.
           </p>
           <p>The two key factors directing my project were the following:</p>
           <ol>
@@ -464,7 +460,7 @@ const CSSOT = () => {
           pages feel smooth and seamless. By only CSS, the animations can be
           experienced by users even when they have JavaScript&nbsp;disabled.
         </p>
-        <figure className="vid mb-3 ">
+        <figure className="vid mb-3">
           <video autoPlay controls loop muted>
             <source src={VidLanding} />
           </video>
@@ -536,12 +532,12 @@ const CSSOT = () => {
               className="mobile tablet-vertical"
             />
           </div>
-          <figcaption className="c-grey-2 mb-3">
+          <figcaption className="c-grey-2">
             Lean Space’s layout adapting to different mobile devices with
             different screen&nbsp;dimensions
           </figcaption>
         </figure>
-      </BlindFrame>
+      </motion.section>
     </>
   )
 }
