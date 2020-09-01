@@ -3,6 +3,10 @@
 @use '../../../visuals/scale/size';
 
 .grid-blog-cs-lean-space > .subgrid-content {
+  > section:first-of-type {
+    grid-column: span 3;
+  }
+
   > .subgrid-ss > .ss {
     background-color: #eee;
   }
@@ -14,7 +18,10 @@
   > .subgrid-colors {
     list-style: none;
 
+    display: grid;
     grid-column: 1/-1;
+    grid-gap: size.$size-27;
+    grid-template-columns: repeat(6, 1fr);
     grid-template-rows: size.$size-157;
 
     > li {
@@ -51,6 +58,62 @@
         background-color: #292c31;
         color: color.$w;
       }
+    }
+  }
+}
+
+@media (max-width: bp.$md) {
+  .grid-blog-cs-lean-space > .subgrid-content {
+    > .subgrid-colors {
+      grid-template-rows: size.$size-147;
+    }
+  }
+}
+
+@media (max-width: 770px) {
+  .grid-blog-cs-lean-space > .subgrid-content {
+    > section:first-of-type {
+      grid-column: 1/-1;
+    }
+
+    > .subgrid-colors {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, size.$size-147);
+    }
+
+    > .subgrid-ss > .ss.ss-sm {
+      grid-column: 1/-1;
+    }
+  }
+}
+
+@media (max-width: bp.$sm) {
+  .grid-blog-cs-lean-space > .subgrid-content {
+    > .subgrid-colors {
+      grid-template-rows: repeat(2, size.$size-176);
+    }
+
+    > .subgrid-ss {
+      grid-template-rows: repeat(4, auto);
+
+      > .ss {
+        &.ss-sm {
+          grid-row: auto;
+        }
+
+        &.ss-lg {
+          grid-row: span 2;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: size.$size-390) {
+  .grid-blog-cs-lean-space > .subgrid-content {
+    > .subgrid-colors {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, size.$size-147);
     }
   }
 }

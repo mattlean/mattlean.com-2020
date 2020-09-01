@@ -1,3 +1,4 @@
+@use '../visuals/scale/bp';
 @use '../visuals/scale/size';
 
 /* Override default badge styles */
@@ -15,7 +16,7 @@
   }
 }
 
-@media (max-width: size.$size-470) {
+@media (max-width: bp.$sm) {
   .badge {
     font-size: size.$size-10;
   }

@@ -68,10 +68,10 @@ const CSSOT = () => {
         className="cover"
       >
         <h1 ref={srStartRef} tabIndex="-1">
-          <span className="title-prefix h-4 c-grey-4">
+          <span className="title-prefix h-4 sm:h-6 c-grey-4">
             Case Study<span>:</span>
           </span>
-          <span className="title h-1">Lean Space</span>
+          <span className="title h-1 md:h-2 sm:h-3">Lean Space</span>
         </h1>
         <p className="subtitle txt-8 sm:txt-6 c-grey-1">{subtitle}</p>
         <p className="time c-grey-2">
@@ -90,12 +90,12 @@ const CSSOT = () => {
         initial={{ opacity: 0 }}
         animate={{
           opacity: 1,
-          transition: { duration: 0.5, ease: 'easeOut' },
+          transition: { delay: 0.2, duration: 0.4, ease: 'easeOut' },
         }}
         className="subgrid-content grid"
       >
-        <h2 className="h-2 mb-1rem">My Brand as a College Grad</h2>
-        <section className="left-half c-grey-1 mb-3">
+        <h2 className="h-2 md:h-4 mb-1rem">My Brand as a College Grad</h2>
+        <section className="c-grey-1 mb-3">
           <p>
             I created <strong>Lean Space</strong> right after I graduated from
             college in 2015. The goal of the project was to create a personal
@@ -126,9 +126,9 @@ const CSSOT = () => {
             </li>
           </ol>
         </section>
-        <h2 className="h-2 mb-1rem">Development</h2>
+        <h2 className="h-2 md:h-4 mb-1rem">Development</h2>
         <section className="subgrid-subcontent grid mb-3">
-          <section className="left-half c-grey-1">
+          <section className="left-half-priority c-grey-1">
             <p>
               My previous website before this one ran off of{' '}
               <a
@@ -291,7 +291,7 @@ const CSSOT = () => {
             perform its standard&nbsp;behavior.
           </p>
         </section>
-        <figure className="vid right-half">
+        <figure className="vid">
           <video autoPlay controls loop muted>
             <source src={VidPageTransitions} />
           </video>
@@ -301,7 +301,7 @@ const CSSOT = () => {
           </figcaption>
         </figure>
         <h3 className="h-7 left-half">Custom Lightbox Library</h3>
-        <p className="right-half mb-3 c-grey-1">
+        <p className="right-half-priority mb-3 c-grey-1">
           A significant part of the website experience involves looking at
           screenshots of my portfolio work, so I wrote a{' '}
           <a
@@ -345,7 +345,7 @@ const CSSOT = () => {
           </figcaption>
         </figure>
         <h3 className="h-7 left-half">Work Filtering</h3>
-        <p className="right-half mb-3 c-grey-1">
+        <p className="right-half-priority mb-3 c-grey-1">
           This was where the main exception to the “no 3rd party dependency
           rule” was made: the work page. As this would likely be one of the main
           pages prospective employers would investigate first, I wanted the
@@ -370,19 +370,19 @@ const CSSOT = () => {
           </figcaption>
         </figure>
         <h2 className="design-header h-2 left-half">Design</h2>
-        <p className="right-half mb-3 c-grey-1">
+        <p className="right-half-priority mb-3 c-grey-1">
           I wanted the style to feel like one fitting for a software engineer.
           Nothing too extravagant, but still unique enough to show that I have
           some experience with&nbsp;design.
         </p>
         <h3 className="h-7 left-half">Colors</h3>
-        <p className="right-half c-grey-1">
+        <p className="right-half-priority c-grey-1">
           I decided on a blueish-green as my primary color because it was a
           fairly bright, calming, and inoffensive color. Grey became my
           secondary color because it was a very neutral color and didn’t compete
           with the primary&nbsp;colors.
         </p>
-        <ul className="subgrid-colors grid mb-3">
+        <ul className="subgrid-colors mb-3">
           <li>#3DBBC2</li>
           <li>#54E1E6</li>
           <li>#EEEEEE</li>
@@ -392,7 +392,7 @@ const CSSOT = () => {
         </ul>
         <h3 className="h-7 left-half">Typography</h3>
         <section className="subgrid-subcontent grid mb-3">
-          <section className="left-half c-grey-1">
+          <section className="left-half-priority c-grey-1">
             <p>
               I chose{' '}
               <a
@@ -453,7 +453,7 @@ const CSSOT = () => {
           <img src={SSType} alt="" className="right-half sticky-media" />
         </section>
         <h3 className="h-7 left-half">Animations & Transitions</h3>
-        <p className="right-half c-grey-1">
+        <p className="right-half-priority c-grey-1">
           I used animations and transitions wherever I could throughout the site
           to have it give off a sleek and polished experience. This contributed
           particularly to the navigation experience, making the changing of
@@ -469,7 +469,7 @@ const CSSOT = () => {
           </figcaption>
         </figure>
         <h3 className="h-7 left-half">Custom Responsive Layout</h3>
-        <p className="right-half c-grey-1">
+        <p className="right-half-priority c-grey-1">
           Without the luxury of a framework like{' '}
           <a
             href="https://getbootstrap.com"
@@ -510,7 +510,7 @@ const CSSOT = () => {
           </a>
           .
         </p>
-        <figure className="subgrid-ss grid">
+        <figure className="subgrid-ss">
           <div className="ss ss-sm">
             <img
               src={SSMobileVertical}
