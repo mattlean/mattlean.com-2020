@@ -10,8 +10,8 @@ const POSTS = {
     title: 'Case Study: Lean Space',
     subtitle: 'Learnings from building my personal website in 2015.',
     published: {
-      dateStr: '2020-08-30',
-      txt: 'August 30, 2020',
+      dateStr: '2020-08-31',
+      txt: 'August 31, 2020',
     },
     readtime: 5,
     featured: {
