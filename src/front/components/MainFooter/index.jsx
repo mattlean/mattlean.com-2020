@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import AboutThisSite from './AboutThisSite'
 import { createObserver } from '../../util'
+import { ROUTE_PREFIX as BLOG_PREFIX } from '../../../common/data/route/project'
+import { ROUTE_PREFIX as PROJECT_PREFIX } from '../../../common/data/route/project'
 
 const THRESHOLD = 0.2
 const VARIANTS = {
@@ -88,12 +90,12 @@ const MainFooter = () => {
               </Link>
             </li>
             <li>
-              <Link to="/projects" className="a-grey-2">
+              <Link to={PROJECT_PREFIX} className="a-grey-2">
                 Projects
               </Link>
             </li>
             <li>
-              <Link to="/blog" className="a-grey-2">
+              <Link to={BLOG_PREFIX} className="a-grey-2">
                 Blog
               </Link>
             </li>

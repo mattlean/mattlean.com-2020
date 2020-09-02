@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { Badge } from 'eswiss'
 import BlindFrame from '../../../components/Blind/BlindFrame'
 import { getProjectData } from '../../../../common/data/project'
+import { ROUTE_PREFIX } from '../../../../common/data/project'
 import {
   setupBlindObservers,
   useInitAnim,
@@ -121,7 +122,7 @@ const Crush = () => {
           <p>
             The project was built with another personal project of mine, a
             browser-based 2D game engine called{' '}
-            <Link to="/projects/adam" className="a-grey-1 txtw-bold">
+            <Link to={`${ROUTE_PREFIX}adam`} className="a-grey-1 txtw-bold">
               Adam Engine
             </Link>
             .
@@ -283,7 +284,7 @@ const Crush = () => {
                 </a>
               </li>
               <li>
-                <Link to="/projects/adam" className="a-grey-1">
+                <Link to={`${ROUTE_PREFIX}adam`} className="a-grey-1">
                   Adam Engine
                 </Link>
               </li>

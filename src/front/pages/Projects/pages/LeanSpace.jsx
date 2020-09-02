@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import BlindFrame from '../../../components/Blind/BlindFrame'
 import CTA from '../../../components/CTA'
 import { getProjectData } from '../../../../common/data/project'
+import { ROUTE_PREFIX } from '../../../../common/data/route/blog'
 import {
   setupBlindObservers,
   useInitAnim,
@@ -110,7 +111,10 @@ const LeanSpace = () => {
             blog to share my&nbsp;thoughts.
           </p>
         </section>
-        <Link to="/" className="btn-option-a btn-triple-group">
+        <Link
+          to={`${ROUTE_PREFIX}cs-lean-space`}
+          className="btn-option-a btn-triple-group"
+        >
           <Btn className="btn-case-study">
             <BookIcon className="btn-icon" /> Case Study
           </Btn>
@@ -191,7 +195,11 @@ const LeanSpace = () => {
           JavaScript and Sass with an emphasis on utilizing native browser APIs
           rather than 3rd party libraries.
         </p>
-        <CTA to="/" type="sm" className="a-primary svg-primary">
+        <CTA
+          to={`${ROUTE_PREFIX}cs-lean-space`}
+          type="sm"
+          className="a-primary svg-primary"
+        >
           Learn more about the&nbsp;project
         </CTA>
       </BlindFrame>
@@ -336,7 +344,7 @@ const LeanSpace = () => {
                 </a>
               </li>
               <li>
-                <Link to="/projects/lantern" className="a-grey-1">
+                <Link to={`${ROUTE_PREFIX}lantern`} className="a-grey-1">
                   Lantern.js
                 </Link>
               </li>
@@ -392,7 +400,7 @@ const LeanSpace = () => {
       <BlindFrame
         ref={observerData[10].ref}
         nodeType="Link"
-        to="/"
+        to={`${ROUTE_PREFIX}cs-lean-space`}
         delay={blindStates[10].delay}
         observer={observerData[10].observer}
         play={
@@ -409,7 +417,7 @@ const LeanSpace = () => {
       <BlindFrame
         ref={observerData[11].ref}
         nodeType="a"
-        href="http://google.com"
+        href="https://google.com"
         rel="noreferrer"
         target="_blank"
         delay={blindStates[11].delay}

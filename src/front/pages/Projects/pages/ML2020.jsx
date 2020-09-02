@@ -3,6 +3,7 @@ import { Badge, Btn } from 'eswiss'
 import { Link } from 'react-router-dom'
 import BlindFrame from '../../../components/Blind/BlindFrame'
 import { getProjectData } from '../../../../common/data/project'
+import { ROUTE_PREFIX } from '../../../../common/data/project'
 import {
   setupBlindObservers,
   useInitAnim,
@@ -107,7 +108,7 @@ const ML2020 = () => {
           </p>
           <p>
             The project acts as a proof-of-concept for the{' '}
-            <Link to="/projects/eswiss" className="a-grey-1 txtw-bold">
+            <Link to={`${ROUTE_PREFIX}eswiss`} className="a-grey-1 txtw-bold">
               eswiss
             </Link>
             . If you’re interested in the design and development process behind
@@ -231,7 +232,7 @@ const ML2020 = () => {
             <h4>Frontend</h4>
             <ul>
               <li>
-                <Link to="/projects/eswiss" className="a-grey-1">
+                <Link to={`${ROUTE_PREFIX}eswiss`} className="a-grey-1">
                   eswiss
                 </Link>
               </li>

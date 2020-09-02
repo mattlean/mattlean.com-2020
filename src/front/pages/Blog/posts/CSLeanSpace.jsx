@@ -1,14 +1,16 @@
 import React, { useEffect, useRef } from 'react'
-import { Badge } from 'eswiss'
+import { Badge, Btn } from 'eswiss'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import BlindFrame from '../../../components/Blind/BlindFrame'
 import { getPostData } from '../../../../common/data/post'
+import { ROUTE_PREFIX } from '../../../../common/data/route/project'
 import {
   setupBlindObservers,
   useInitAnim,
 } from '../../../components/Blind/initAnimUtil'
 import { useHeadDataEffect } from '../../../util'
+import { FileIcon, PlayIcon } from '@primer/octicons-react'
 import SSLeanTheme from '../../../assets/posts/cs-lean-space/lean-theme.jpg'
 import SSLightbox from '../../../assets/posts/cs-lean-space/lightbox.png'
 import SSMobileHorizontal from '../../../assets/posts/cs-lean-space/blog-pixel2-horizontal.png'
@@ -95,7 +97,7 @@ const CSSOT = () => {
         className="subgrid-content grid"
       >
         <h2 className="h-2 md:h-4 mb-1rem">My Brand as a College Grad</h2>
-        <section className="c-grey-1 mb-3">
+        <section className="c-grey-1 mb-6">
           <p>
             I created <strong>Lean Space</strong> right after I graduated from
             college in 2015. The goal of the project was to create a personal
@@ -127,7 +129,7 @@ const CSSOT = () => {
           </ol>
         </section>
         <h2 className="h-2 md:h-4 mb-1rem">Development</h2>
-        <section className="subgrid-subcontent grid mb-3">
+        <section className="subgrid-subcontent grid mb-4">
           <section className="left-half-priority c-grey-1">
             <p>
               My previous website before this one ran off of{' '}
@@ -291,7 +293,7 @@ const CSSOT = () => {
             , keep it simple and serve static&nbsp;files.
           </p>
         </section>
-        <figure className="vid mb-3">
+        <figure className="vid mb-4">
           <video autoPlay controls loop muted>
             <source src={VidPageTransitions} />
           </video>
@@ -313,7 +315,7 @@ const CSSOT = () => {
             lightbox
           </a>{' '}
           library called{' '}
-          <Link to="/projects/lantern" className="a-grey-1">
+          <Link to={`${ROUTE_PREFIX}lantern`} className="a-grey-1">
             Lantern.js
           </Link>
           . It uses lightweight vanilla JavaScript and CSS, is open source, and
@@ -337,7 +339,7 @@ const CSSOT = () => {
           </a>
           .
         </p>
-        <figure className="ss ss-lg mb-3">
+        <figure className="ss ss-lg mb-4">
           <img src={SSLightbox} alt="" />
           <figcaption className="a-grey-2">
             Lantern.js being used to display a screenshot of one of my
@@ -361,7 +363,7 @@ const CSSOT = () => {
           </a>{' '}
           for&nbsp;this.
         </p>
-        <figure className="vid mb-3">
+        <figure className="vid mb-6">
           <video autoPlay controls loop muted>
             <source src={VidWork} />
           </video>
@@ -370,7 +372,7 @@ const CSSOT = () => {
           </figcaption>
         </figure>
         <h2 className="design-header h-2 md:h-4 left-half">Design</h2>
-        <p className="right-half-priority mb-3 c-grey-1">
+        <p className="right-half-priority mb-4 c-grey-1">
           I wanted the style to feel like one fitting for a software engineer.
           Nothing too extravagant, but still unique enough to show that I have
           some experience with&nbsp;design.
@@ -382,7 +384,7 @@ const CSSOT = () => {
           secondary color because it was a very neutral color and didn’t compete
           with the primary&nbsp;colors.
         </p>
-        <ul className="subgrid-colors mb-3">
+        <ul className="subgrid-colors mb-4">
           <li>#3DBBC2</li>
           <li>#54E1E6</li>
           <li>#EEEEEE</li>
@@ -391,7 +393,7 @@ const CSSOT = () => {
           <li>#292C31</li>
         </ul>
         <h3 className="h-7 left-half">Typography</h3>
-        <section className="subgrid-subcontent grid mb-3">
+        <section className="subgrid-subcontent grid mb-4">
           <section className="left-half-priority c-grey-1">
             <p>
               I chose{' '}
@@ -460,7 +462,7 @@ const CSSOT = () => {
           pages feel smooth and seamless. By only CSS, the animations can be
           experienced by users even when they have JavaScript&nbsp;disabled.
         </p>
-        <figure className="vid mb-3">
+        <figure className="vid mb-4">
           <video autoPlay controls loop muted>
             <source src={VidLanding} />
           </video>
@@ -510,7 +512,7 @@ const CSSOT = () => {
           </a>
           .
         </p>
-        <figure className="subgrid-ss">
+        <figure className="subgrid-ss mb-6">
           <div className="ss ss-sm">
             <img
               src={SSMobileVertical}
@@ -537,6 +539,20 @@ const CSSOT = () => {
             different screen&nbsp;dimensions
           </figcaption>
         </figure>
+        <section className="btn-area">
+          <section className="btn-double-group">
+            <a href="https://google.com" rel="noreferrer" target="_blank">
+              <Btn className="btn-view-live">
+                <PlayIcon className="btn-icon" /> View Live
+              </Btn>
+            </a>
+            <Link to={`${ROUTE_PREFIX}lean-space`}>
+              <Btn outline={true} className="btn-details">
+                <FileIcon className="btn-icon" /> Details
+              </Btn>
+            </Link>
+          </section>
+        </section>
       </motion.section>
     </>
   )

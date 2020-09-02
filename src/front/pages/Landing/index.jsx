@@ -7,6 +7,8 @@ import MainFooter from '../../components/MainFooter'
 import VARIANTS from '../page_variants'
 import { getPostData } from '../../../common/data/post'
 import { getProjectData } from '../../../common/data/project'
+import { ROUTE_PREFIX as BLOG_PREFIX } from '../../../common/data/route/blog'
+import { ROUTE_PREFIX as PROJECT_PREFIX } from '../../../common/data/route/project'
 import {
   setupBlindObservers,
   useInitAnim,
@@ -138,7 +140,7 @@ const Landing = () => {
         </BlindFrame>
         <section className="subgrid-featured featured-projects grid">
           <Link
-            to="/projects/gridnik"
+            to={`${PROJECT_PREFIX}${gridnikData.id}`}
             className="subgrid-featured-item grid tdl-none"
           >
             <figure className="subgrid-featured-item-content grid">
@@ -175,7 +177,7 @@ const Landing = () => {
             </figure>
           </Link>
           <Link
-            to="/projects/eswiss"
+            to={`${PROJECT_PREFIX}${eswissData.id}`}
             className="subgrid-featured-item grid tdl-none"
           >
             <figure className="subgrid-featured-item-content grid">
@@ -221,7 +223,7 @@ const Landing = () => {
               ? blindVisibleStates[8].isVisible
               : blindStates[8].play,
           }}
-          to="/projects"
+          to={PROJECT_PREFIX}
           type="sm"
           className="view-more view-more-projects svg-grey-3 a-grey-3"
         >
@@ -243,7 +245,7 @@ const Landing = () => {
         </BlindFrame>
         <section className="subgrid-featured featured-case-studies grid">
           <Link
-            to="/projects/sot"
+            to={`${BLOG_PREFIX}${csSOTData.id}`}
             className="subgrid-featured-item grid tdl-none"
           >
             <figure className="subgrid-featured-item-content grid">
@@ -280,7 +282,7 @@ const Landing = () => {
             </figure>
           </Link>
           <Link
-            to="/blog/cs-lean-space"
+            to={`${BLOG_PREFIX}${csLeanSpace.id}`}
             className="subgrid-featured-item grid tdl-none"
           >
             <figure className="subgrid-featured-item-content grid">

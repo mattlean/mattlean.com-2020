@@ -37,7 +37,7 @@
     "copy-webpack-plugin": "^6.0.2",
     "css-loader": "^3.6.0",
     "ejs": "^3.1.3",
-    "eswiss": "^0.0.29",
+    "eswiss": "^0.0.30",
     "express": "^4.17.1",
     "file-loader": "^6.0.0",
     "framer-motion": "^2.6.5",

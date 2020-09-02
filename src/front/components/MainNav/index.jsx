@@ -2,9 +2,10 @@ import React, { useContext, useEffect, useState, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { LG_PHONE } from '../../visuals/responsive'
 import { Link, NavLink, useLocation } from 'react-router-dom'
+import { createObserver } from '../../util'
+import { ROUTE_PREFIX } from '../../../common/data/route/project'
 import { ThemeCtx } from '../../visuals/theme'
 import { useViewportWidth, setBodyScroll } from 'eswiss/dist/util'
-import { createObserver } from '../../util'
 import Logo from '../../assets/logo/logo.svg'
 import Menu from '../../assets/icons/menu.svg'
 import MODAL_VARIANTS from '../modal_variants'
@@ -100,7 +101,7 @@ const MainNav = () => {
       </li>
       <li>
         <NavLink
-          to="/projects"
+          to={ROUTE_PREFIX}
           onClick={() => {
             if (isOpen) setIsOpen(false)
           }}

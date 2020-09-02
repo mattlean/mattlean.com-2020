@@ -3,6 +3,7 @@ import { Badge, Btn } from 'eswiss'
 import { Link } from 'react-router-dom'
 import BlindFrame from '../../../components/Blind/BlindFrame'
 import { getProjectData } from '../../../../common/data/project'
+import { ROUTE_PREFIX } from '../../../../common/data/project'
 import {
   setupBlindObservers,
   useInitAnim,
@@ -197,7 +198,7 @@ const Gridnik = () => {
             ”About” page
           </Link>{' '}
           on&nbsp;
-          <Link to="/projects/ml2020" className="a-grey-2">
+          <Link to={`${ROUTE_PREFIX}ml2020`} className="a-grey-2">
             MattLean.com
           </Link>
         </figcaption>

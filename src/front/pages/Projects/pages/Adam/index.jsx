@@ -3,6 +3,7 @@ import { Badge, Btn } from 'eswiss'
 import { Link } from 'react-router-dom'
 import BlindFrame from '../../../../components/Blind/BlindFrame'
 import { getProjectData } from '../../../../../common/data/project'
+import { ROUTE_PREFIX } from '../../../../../common/data/project'
 import {
   setupBlindObservers,
   useInitAnim,
@@ -103,7 +104,7 @@ const Adam = () => {
           </p>
           <p>
             The project was used to build{' '}
-            <Link to="/projects/crush" className="a-grey-1">
+            <Link to={`${ROUTE_PREFIX}crush`} className="a-grey-1">
               qPCR Crush
             </Link>
             , an{' '}

@@ -3,6 +3,7 @@ import { Badge, Btn } from 'eswiss'
 import { Link } from 'react-router-dom'
 import BlindFrame from '../../../components/Blind/BlindFrame'
 import { getProjectData } from '../../../../common/data/project'
+import { ROUTE_PREFIX } from '../../../../common/data/project'
 import {
   setupBlindObservers,
   useInitAnim,
@@ -121,7 +122,7 @@ const Owl = () => {
           <p>
             This project originally released as a school assignment, but was
             eventually discontinued. The overall concept continues on as{' '}
-            <Link to="/projects/recha" className="a-grey-1 txtw-bold">
+            <Link to={`${ROUTE_PREFIX}recha`} className="a-grey-1 txtw-bold">
               Recha
             </Link>
             .
