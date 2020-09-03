@@ -108,50 +108,57 @@ const About = () => {
             background GIFs that probably triggered epileptic seizures, and
             seemingly endless stacks of alert dialog boxes that would “freeze”
             your computer and make your mom think you got a virus. (I apologize
-            if you ever fell victim to my heinous crimes!) Despite the fact I
-            was creating stupid webpages about my Neopets, I didn’t realize how
-            important it was that the game had introduced the very fabric of the
-            web to&nbsp;me.
+            if you ever fell victim to my heinous pranks!) Despite the fact I
+            was creating stupid webpages about my Neopets, the reality was that
+            the game was introducing me to the very fabric of the&nbsp;web.
           </p>
           <p>
-            After countless scoldings for me to stop gaming, I quit and
-            continued to learn web development through free online tutorials and
-            books I couldn’t buy during visits to bookstores. These learnings
-            would then be published on free web hosting platforms like GeoCities
-            and Freewebs in the form of fan websites about games that intrigued
-            me. In high school, I decided to try something “entrepreneurial”
-            since my sister started her own neighborhood business as a dog
-            walker. Instead of mowing lawns or watering plants, I decided to
-            start freelance web designing and built websites for small, local
-            businesses with PHP, MySQL, WordPress, Magento, phpBB, jQuery,
-            Photoshop, Illustrator, and&nbsp;Flash.
+            After I quit Neopets, I continued to learn web development through
+            free online tutorials and books I couldn’t buy during visits to
+            bookstores. These learnings would then manifest on free web hosting
+            platforms like GeoCities and Freewebs in the form of fan websites
+            about other video games that intrigued&nbsp;me.
+          </p>
+          <p>
+            In high school, my sister started her own neighborhood business as a
+            dog walker and inspired me to try to start my own business as a
+            freelance web design and developer. I built websites for small,
+            local businesses for several years.
           </p>
           <p>
             For college I moved to northern California to study computer science
             at the University of California, Santa Cruz. Because I had been
             self-taught up until this point, it was here that I began to truly
             realize the scope and diversity in opportunities the field offered.
-            I had been completely oblivious to the importance of computer
-            science fundamentals, and I began to study topics that online
-            tutorials never directed me to like data structure and algorithm
-            analysis, assembly, computer architecture, and more. I also tried to
-            step away from web programming to explore other specializations like
-            graphics programming, network programming, game programming, virtual
-            reality, and more. At the end of my studies I realized that it made
-            the most sense to come full circle and combine my formal computer
-            science education with my previous “street” web coding experiences
-            to find a job in Silicon Valley as a specialist in
-            web&nbsp;technologies.
+            I had been completely oblivious to computer science fundamentals,
+            and I began to study topics that online tutorials never directed me
+            to like data structure and algorithm analysis, assembly, computer
+            architecture, and more. I also tried to step away from web
+            programming to explore other specializations like graphics
+            programming, network programming, game programming, virtual reality,
+            and more. At the end of my studies I realized that it made the most
+            sense to come full circle and combine my formal computer science
+            education with my previous “street” web coding experiences to find a
+            job in Silicon Valley as a specialist in web&nbsp;technologies.
           </p>
           <p>
             Since graduating and receiving my Bachelor of Science degree in
             Computer Science in 2015, I’ve been professionally building web
             applications for Silicon Valley. My education hasn’t stopped here
             though. Outside of work I continue to learn and play with new
-            technologies. As I currently live in South Bay, occasionally when I
-            have extra time I take an online or night class at De Anza College
-            where I am sluggishly working towards an associate degree in Graphic
-            & Interactive&nbsp;Design.
+            technologies that often come up as{' '}
+            <a
+              href="https://github.com/mattlean"
+              rel="noreferrer"
+              target="_blank"
+              className="a-grey-1"
+            >
+              open source experiments on my GitHub
+            </a>
+            . As I currently live in South Bay, occasionally when I have extra
+            time, I take an online or night class at De Anza College where I am
+            sluggishly working towards an associate degree in Graphic &
+            Interactive&nbsp;Design.
           </p>
         </BlindFrame>
         <section className="closing">
@@ -193,17 +200,17 @@ const About = () => {
           <section className="work">
             <h2 className="h-9 dispw-bold tt-uppercase">Work</h2>
             <dl>
-              <dt>Medable</dt>
-              <dd>
-                Frontend Web Developer
-                <br />
-                2016 &ndash; 2018
-              </dd>
               <dt>LGC Biosearch Technologies</dt>
               <dd>
                 Web Developer Consultant
                 <br />
                 2014 &ndash; Present
+              </dd>
+              <dt>Medable</dt>
+              <dd>
+                Frontend Web Developer
+                <br />
+                2016 &ndash; 2018
               </dd>
               <dt>Miles & Company</dt>
               <dd>
