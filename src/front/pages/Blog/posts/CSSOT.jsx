@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import BlindFrame from '../../../components/Blind/BlindFrame'
 import { getPostData } from '../../../../common/data/post'
+import { getProjectData } from '../../../../common/data/project'
 import { ROUTE_PREFIX } from '../../../../common/data/route/project'
 import {
   setupBlindObservers,
@@ -20,7 +21,8 @@ import SSPrototype from '../../../assets/posts/cs-sot/prototype.jpg'
 import SSTablet from '../../../assets/posts/cs-sot/2015-tablet.jpg'
 import SSWireframeA from '../../../assets/posts/cs-sot/wireframe-a.jpg'
 
-const { live, published, readtime, subtitle, tags } = getPostData('cs-sot')
+const { live } = getProjectData('sot')
+const { published, readtime, subtitle, tags } = getPostData('cs-sot')
 
 /**
  * "Case Study: Lean Space" Blog Post

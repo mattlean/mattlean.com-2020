@@ -295,12 +295,8 @@
       columns: auto;
     }
 
-    > .subgrid-content {
-      grid-template-rows: repeat(11, size.$size-147) auto;
-
-      > .ss.ss-sm {
-        grid-column: 1/-1;
-      }
+    > .subgrid-subcontent > .sticky-media {
+      margin-top: size.$size-72;
     }
   }
 }
@@ -334,7 +330,7 @@
 
     > .subgrid-content {
       > .subgrid-subcontent > .sticky-media {
-        top: size.$size-24;
+        margin-top: size.$size-64;
       }
 
       > .subgrid-ss {

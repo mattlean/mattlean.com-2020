@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import BlindFrame from '../../../components/Blind/BlindFrame'
 import { getPostData } from '../../../../common/data/post'
+import { getProjectData } from '../../../../common/data/project'
 import { ROUTE_PREFIX } from '../../../../common/data/route/project'
 import {
   setupBlindObservers,
@@ -21,9 +22,8 @@ import VidLanding from '../../../assets/posts/cs-lean-space/landing.mp4'
 import VidPageTransitions from '../../../assets/posts/cs-lean-space/page-transitions.mp4'
 import VidWork from '../../../assets/posts/cs-lean-space/work.mp4'
 
-const { live, published, readtime, subtitle, tags } = getPostData(
-  'cs-lean-space'
-)
+const { live } = getProjectData('lean-space')
+const { published, readtime, subtitle, tags } = getPostData('cs-lean-space')
 
 /**
  * "Case Study: Lean Space" Blog Post
@@ -98,7 +98,7 @@ const CSLeanSpace = () => {
         }}
         className="subgrid-content grid"
       >
-        <h2 className="h-2 md:h-4 mb-1rem">My Brand as a College Grad</h2>
+        <h2 className="h-2 md:h-4 mb-1.5rem">My Brand as a College Grad</h2>
         <section className="intro mb-6 c-grey-1">
           <p>
             I created <strong>Lean Space</strong> right after I graduated from
@@ -130,7 +130,7 @@ const CSLeanSpace = () => {
             </li>
           </ol>
         </section>
-        <h2 className="h-2 md:h-4 mb-1rem">Development</h2>
+        <h2 className="h-2 md:h-4 mb-1.5rem">Development</h2>
         <section className="subgrid-subcontent grid mb-4">
           <section className="left-half-priority c-grey-1">
             <p>
@@ -238,7 +238,7 @@ const CSLeanSpace = () => {
         <h3 className="h-7">
           Backendless with SEO-Friendly Seamless Page Transitions
         </h3>
-        <section className="multicol-txt">
+        <section className="multicol-txt mb-4">
           <p className="c-grey-1">
             I wanted the site to utilize seamless page transitions without
             triggering a page reload, an inherent feature of{' '}
@@ -305,7 +305,7 @@ const CSLeanSpace = () => {
           </figcaption>
         </figure>
         <h3 className="h-7 left-half">Custom Lightbox Library</h3>
-        <p className="right-half-priority mb-0 c-grey-1">
+        <p className="right-half-priority mb-4 c-grey-1">
           A significant part of the website experience involves looking at
           screenshots of my portfolio work, so I wrote a{' '}
           <a
@@ -349,7 +349,7 @@ const CSLeanSpace = () => {
           </figcaption>
         </figure>
         <h3 className="h-7 left-half">Work Filtering</h3>
-        <p className="right-half-priority mb-0 c-grey-1">
+        <p className="right-half-priority mb-4 c-grey-1">
           This was where the main exception to the “no 3rd party dependency
           rule” was made: the work page. As this would likely be one of the main
           pages prospective employers would investigate first, I wanted the
@@ -373,14 +373,14 @@ const CSLeanSpace = () => {
             A demonstration of the work page’s filter&nbsp;feature
           </figcaption>
         </figure>
-        <h2 className="sbs-header left-half h-2 md:h-4 mb-1rem">Design</h2>
+        <h2 className="sbs-header left-half h-2 md:h-4 mb-1.5rem">Design</h2>
         <p className="right-half-priority mb-4 c-grey-1">
           I wanted the style to feel like one fitting for a software engineer.
           Nothing too extravagant, but still unique enough to show that I have
           some experience with&nbsp;design.
         </p>
         <h3 className="h-7 left-half">Colors</h3>
-        <p className="right-half-priority mb-0 c-grey-1">
+        <p className="right-half-priority mb-4 c-grey-1">
           I decided on a blueish-green as my primary color because it was a
           fairly bright, calming, and inoffensive color. Grey became my
           secondary color because it was a very neutral color and didn’t compete
@@ -457,7 +457,7 @@ const CSLeanSpace = () => {
           <img src={SSType} alt="" className="right-half sticky-media" />
         </section>
         <h3 className="h-7 left-half">Animations & Transitions</h3>
-        <p className="right-half-priority mb-0 c-grey-1">
+        <p className="right-half-priority mb-4 c-grey-1">
           I used animations and transitions wherever I could throughout the site
           to have it give off a sleek and polished experience. This contributed
           particularly to the navigation experience, making the changing of
@@ -473,7 +473,7 @@ const CSLeanSpace = () => {
           </figcaption>
         </figure>
         <h3 className="h-7 left-half">Custom Responsive Layout</h3>
-        <p className="right-half-priority mb-0 c-grey-1">
+        <p className="right-half-priority mb-4 c-grey-1">
           Without the luxury of a framework like{' '}
           <a
             href="https://getbootstrap.com"
