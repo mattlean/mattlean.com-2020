@@ -10,7 +10,7 @@ import { useHeadDataEffect } from '../../../util'
 import NPMIcon from '../../../assets/icons/npm.svg'
 import { MarkGithubIcon, PlayIcon } from '@primer/octicons-react'
 
-const { name, tags } = getProjectData('eswiss')
+const { live, name, tags } = getProjectData('eswiss')
 
 /**
  * eswiss Project Page
@@ -117,7 +117,7 @@ const Eswiss = () => {
           </p>
         </section>
         <a
-          href="http://mattlean.github.io/eswiss"
+          href={live}
           rel="noreferrer"
           target="_blank"
           className="btn-option-a btn-triple-group"

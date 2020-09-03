@@ -15,7 +15,7 @@ import SSCharts from '../../../assets/projects/sot/charts.jpg'
 import SSFullscreen from '../../../assets/projects/sot/fullscreen.jpg'
 import SSInstrumentSelection from '../../../assets/projects/sot/instrument-selection.jpg'
 
-const { company, tags } = getProjectData('sot')
+const { company, live, tags } = getProjectData('sot')
 
 /**
  * Spectral Overlay Tool Project Page
@@ -125,11 +125,7 @@ const SOT = () => {
             qPCR&nbsp;device.
           </p>
         </section>
-        <a
-          href="https://biosearchtech.com/qpcr-multiplex-spectral-overlay-tool"
-          rel="noreferrer"
-          target="_blank"
-        >
+        <a href={live} rel="noreferrer" target="_blank">
           <Btn className="btn-view-live">
             <PlayIcon className="btn-icon" /> View Live
           </Btn>
@@ -447,7 +443,7 @@ const SOT = () => {
       <BlindFrame
         ref={observerData[9].ref}
         nodeType="a"
-        href="https://biosearchtech.com/qpcr-multiplex-spectral-overlay-tool"
+        href={live}
         rel="noreferrer"
         target="_blank"
         delay={blindStates[9].delay}

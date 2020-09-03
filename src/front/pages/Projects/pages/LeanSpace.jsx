@@ -16,7 +16,7 @@ import SSWork from '../../../assets/projects/lean-space/work.jpg'
 import SSWorkMobile from '../../../assets/projects/lean-space/work-mobile.jpg'
 import { BookIcon, MarkGithubIcon, PlayIcon } from '@primer/octicons-react'
 
-const { company, name, tags } = getProjectData('lean-space')
+const { company, live, name, tags } = getProjectData('lean-space')
 
 /**
  * Lean Space Project Page
@@ -120,7 +120,7 @@ const LeanSpace = () => {
           </Btn>
         </Link>
         <a
-          href="https://google.com"
+          href={live}
           rel="noreferrer"
           target="_blank"
           className="btn-option-b btn-triple-group"
@@ -302,6 +302,19 @@ const LeanSpace = () => {
               </li>
             </ul>
           </section>
+          <section>
+            <h4>Dev Dependencies</h4>
+            <ul>
+              <a
+                href="https://gruntjs.com"
+                rel="noreferrer"
+                target="_blank"
+                className="a-grey-1"
+              >
+                Grunt
+              </a>
+            </ul>
+          </section>
         </section>
         <section>
           <section>
@@ -417,7 +430,7 @@ const LeanSpace = () => {
       <BlindFrame
         ref={observerData[11].ref}
         nodeType="a"
-        href="https://google.com"
+        href={live}
         rel="noreferrer"
         target="_blank"
         delay={blindStates[11].delay}

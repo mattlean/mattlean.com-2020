@@ -21,7 +21,9 @@ import VidLanding from '../../../assets/posts/cs-lean-space/landing.mp4'
 import VidPageTransitions from '../../../assets/posts/cs-lean-space/page-transitions.mp4'
 import VidWork from '../../../assets/posts/cs-lean-space/work.mp4'
 
-const { tags, published, readtime, subtitle } = getPostData('cs-lean-space')
+const { live, published, readtime, subtitle, tags } = getPostData(
+  'cs-lean-space'
+)
 
 /**
  * "Case Study: Lean Space" Blog Post
@@ -541,7 +543,7 @@ const CSLeanSpace = () => {
         </figure>
         <section className="btn-area">
           <section className="btn-double-group">
-            <a href="https://google.com" rel="noreferrer" target="_blank">
+            <a href={live} rel="noreferrer" target="_blank">
               <Btn className="btn-view-live">
                 <PlayIcon className="btn-icon" /> View Live
               </Btn>

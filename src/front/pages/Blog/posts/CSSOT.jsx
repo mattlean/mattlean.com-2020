@@ -20,7 +20,7 @@ import SSPrototype from '../../../assets/posts/cs-sot/prototype.jpg'
 import SSTablet from '../../../assets/posts/cs-sot/2015-tablet.jpg'
 import SSWireframeA from '../../../assets/posts/cs-sot/wireframe-a.jpg'
 
-const { tags, published, readtime, subtitle } = getPostData('cs-sot')
+const { live, published, readtime, subtitle, tags } = getPostData('cs-sot')
 
 /**
  * "Case Study: Lean Space" Blog Post
@@ -142,7 +142,7 @@ const CSSOT = () => {
             Unfortunately the microsite it was originally found on is no longer
             online, but{' '}
             <a
-              href="https://biosearchtech.com/qpcr-multiplex-spectral-overlay-tool"
+              href={live}
               rel="noreferrer"
               target="_blank"
               className="a-grey-1"
@@ -637,7 +637,7 @@ const CSSOT = () => {
           </p>
           <p>
             <a
-              href="https://biosearchtech.com/qpcr-multiplex-spectral-overlay-tool"
+              href={live}
               rel="noreferrer"
               target="_blank"
               className="a-grey-1"
@@ -650,11 +650,7 @@ const CSSOT = () => {
         </section>
         <section className="btn-area">
           <section className="btn-double-group">
-            <a
-              href="https://biosearchtech.com/qpcr-multiplex-spectral-overlay-tool"
-              rel="noreferrer"
-              target="_blank"
-            >
+            <a href={live} rel="noreferrer" target="_blank">
               <Btn className="btn-view-live">
                 <PlayIcon className="btn-icon" /> View Live
               </Btn>

@@ -52,6 +52,7 @@ const PROJECTS = {
     short: 'A design system built on Swiss & International Style principles.',
     long:
       'A design system built on Swiss & International Style design principles.',
+    live: 'http://mattlean.github.io/eswiss',
     featured: {
       img: FeaturedEswiss,
       alt: 'Featured image for eswiss project: the eswiss logo',
@@ -87,6 +88,7 @@ const PROJECTS = {
     id: 'lean-space',
     name: 'Lean Space',
     long: 'The previous iteration of my personal website built in 2015.',
+    live: 'http://leanspace.mattlean.com',
     tags: ['website', 'design', 'frontend'],
   },
   ljas: {
@@ -114,6 +116,7 @@ const PROJECTS = {
     company: 'LGC Biosearch Technologies',
     long:
       'A tool for visualizing absorption and emission spectra for fluorescent dyes and quenchers.',
+    live: 'https://biosearchtech.com/qpcr-multiplex-spectral-overlay-tool',
     tags: ['web-app', 'vis', 'design', 'frontend', 'tooling'],
   },
   recha: {
