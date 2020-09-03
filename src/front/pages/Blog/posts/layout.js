@@ -4,7 +4,7 @@
  * @return {boolean} True if blog post uses case study layout, false otherwise
  */
 export const isCaseStudy = (id) => {
-  const ids = new Set(['cs-lean-space'])
+  const ids = new Set(['cs-lean-space', 'cs-sot'])
   return ids.has(id)
 }
 

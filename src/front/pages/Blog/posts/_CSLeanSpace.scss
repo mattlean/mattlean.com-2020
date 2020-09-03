@@ -3,14 +3,6 @@
 @use '../../../visuals/scale/size';
 
 .grid-blog-cs-lean-space > .subgrid-content {
-  > section:first-of-type {
-    grid-column: span 3;
-  }
-
-  > .design-header {
-    transform: translateY(-16px);
-  }
-
   > .subgrid-colors {
     list-style: none;
 
@@ -62,52 +54,35 @@
 
     > .ss {
       background-color: #eee;
+
+      &.ss-lg {
+        grid-row: span 5;
+      }
+
+      &.ss-sm {
+        grid-row: span 3;
+      }
     }
   }
 }
 
 @media (max-width: bp.$md) {
   .grid-blog-cs-lean-space > .subgrid-content {
-    > .design-header {
-      transform: translateY(-10px);
+    > .subgrid-ss {
+      grid-template-rows: repeat(8, size.$size-147) auto;
     }
 
     > .subgrid-colors {
       grid-template-rows: size.$size-147;
-    }
-
-    .subgrid-ss {
-      grid-template-rows: repeat(8, size.$size-147) auto;
     }
   }
 }
 
 @media (max-width: 770px) {
   .grid-blog-cs-lean-space > .subgrid-content {
-    > section:first-of-type {
-      grid-column: 1/-1;
-    }
-
     > .subgrid-colors {
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(2, size.$size-147);
-    }
-
-    > .subgrid-ss {
-      grid-template-rows: repeat(11, size.$size-147) auto;
-
-      > .ss.ss-sm {
-        grid-column: 1/-1;
-      }
-    }
-  }
-}
-
-@media (max-width: 700px) {
-  .grid-cs > .subgrid-content > .subgrid-ss {
-    .mobile.tablet-vertical {
-      height: auto;
-      width: 100%;
     }
   }
 }
@@ -125,11 +100,12 @@
 
       > .ss {
         &.ss-sm {
+          grid-column: 1/-1;
           grid-row: auto;
         }
 
         &.ss-lg {
-          grid-row: span 2;
+          grid-row: auto;
         }
       }
     }

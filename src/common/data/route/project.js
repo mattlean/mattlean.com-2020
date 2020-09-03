@@ -536,6 +536,7 @@ ROUTES[`${ROUTE_PREFIX}sot`] = {
     'lean',
     'spectral overlay tool',
     'spectral overlay charts',
+    'lgc biosearch technologies',
     'biosearch technologies',
     'lgc',
     'data visualization',

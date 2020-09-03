@@ -1,0 +1,12 @@
+@use '../../../visuals/scale/bp';
+@use '../../../visuals/scale/size';
+
+.grid-blog-cs-sot > .subgrid-content {
+  > .subgrid-ss {
+    grid-template-rows: repeat(3, size.$size-157) repeat(2, auto);
+
+    > .ss-sm {
+      grid-row: span 3;
+    }
+  }
+}

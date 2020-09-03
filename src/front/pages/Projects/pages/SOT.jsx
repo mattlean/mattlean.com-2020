@@ -411,7 +411,7 @@ const SOT = () => {
             <ul>
               <li>
                 <a
-                  href="https://www.adobe.com/products/xd.html"
+                  href="https://adobe.com/products/xd.html"
                   rel="noreferrer"
                   target="_blank"
                   className="a-grey-1"

@@ -43,6 +43,7 @@
 @use './pages/Projects/pages/Adam';
 
 /* Blog Posts */
-@use './pages/Blog/posts';
-@use './pages/Blog/posts/CSLeanSpace';
 @use './pages/Blog/posts/general';
+@use './pages/Blog/posts/cs';
+@use './pages/Blog/posts/CSLeanSpace';
+@use './pages/Blog/posts/CSSOT';

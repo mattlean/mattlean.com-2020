@@ -158,7 +158,7 @@ const HelloWorld = () => {
             being used on this website.{' '}
             <Link to="/blog/cs-lean-space" className="a-grey-1">
               If you’re interested in learning more about Lean Space, please
-              consider reading the case study.
+              consider reading the case&nbsp;study.
             </Link>
           </i>
         </p>

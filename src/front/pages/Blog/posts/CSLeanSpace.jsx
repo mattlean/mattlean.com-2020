@@ -26,7 +26,7 @@ const { tags, published, readtime, subtitle } = getPostData('cs-lean-space')
 /**
  * "Case Study: Lean Space" Blog Post
  */
-const CSSOT = () => {
+const CSLeanSpace = () => {
   useHeadDataEffect()
 
   const srStartRef = useRef(null)
@@ -97,7 +97,7 @@ const CSSOT = () => {
         className="subgrid-content grid"
       >
         <h2 className="h-2 md:h-4 mb-1rem">My Brand as a College Grad</h2>
-        <section className="c-grey-1 mb-6">
+        <section className="intro mb-6 c-grey-1">
           <p>
             I created <strong>Lean Space</strong> right after I graduated from
             college in 2015. The goal of the project was to create a personal
@@ -226,7 +226,7 @@ const CSSOT = () => {
             </p>
           </section>
           <figure className="ss right-half sticky-media">
-            <img src={SSLeanTheme} alt="" className="right-half" />
+            <img src={SSLeanTheme} alt="" />
             <figcaption className="c-grey-2">
               My old website I created in 2011 that was in dire need of
               a&nbsp;redesign
@@ -371,7 +371,7 @@ const CSSOT = () => {
             A demonstration of the work page’s filter&nbsp;feature
           </figcaption>
         </figure>
-        <h2 className="design-header h-2 md:h-4 left-half">Design</h2>
+        <h2 className="sbs-header left-half h-2 md:h-4 mb-1rem">Design</h2>
         <p className="right-half-priority mb-4 c-grey-1">
           I wanted the style to feel like one fitting for a software engineer.
           Nothing too extravagant, but still unique enough to show that I have
@@ -558,4 +558,4 @@ const CSSOT = () => {
   )
 }
 
-export default CSSOT
+export default CSLeanSpace

@@ -2,13 +2,13 @@ import FeaturedCSLeanSpace from '../../front/assets/featured/lean-space-featured
 import FeaturedCSSOT from '../../front/assets/featured/spectral-overlay-tool-featured-project.jpg'
 import { genTagIDNameArray } from './tag'
 
-//'cs-ml2020', 'cs-sot',
-const ORDER = ['cs-lean-space', 'hello-world']
+//'cs-ml2020',
+const ORDER = ['cs-sot', 'cs-lean-space', 'hello-world']
 const POSTS = {
   'cs-lean-space': {
     id: 'cs-lean-space',
     title: 'Case Study: Lean Space',
-    subtitle: 'Learnings from building my personal website in 2015.',
+    subtitle: 'Designing & developing my personal website in 2015.',
     published: {
       dateStr: '2020-08-31',
       txt: 'August 31, 2020',
@@ -32,7 +32,10 @@ const POSTS = {
     id: 'cs-sot',
     title: 'Case Study: Spectral Overlay Tool',
     subtitle: 'Building a biotech data visualization tool.',
-    published: 'June 30, 2020',
+    published: {
+      dateStr: '2020-09-03',
+      txt: 'September 3, 2020',
+    },
     readtime: 5,
     featured: {
       img: FeaturedCSSOT,
