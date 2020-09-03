@@ -398,8 +398,7 @@ const CSSOT = () => {
         <figure className="ss ss-lg mb-4">
           <img src={SSCharts} alt="" />
           <figcaption className="a-grey-2">
-            Lantern.js being used to display a screenshot of one of my
-            portfolio&nbsp;pieces
+            Main screen for spectral overlay&nbsp;tool
           </figcaption>
         </figure>
         <h3 className="h-7 left-half">Application Updates</h3>
@@ -587,7 +586,7 @@ const CSSOT = () => {
             sorting of&nbsp;dyes
           </figcaption>
         </figure>
-        <figure className="ss ss-sm project-details-gap">
+        <figure className="ss ss-sm mb-6">
           <img src={SSFullscreen} alt="" />
           <figcaption className="c-grey-2">
             Fullscreen mode for a larger view of the&nbsp;charts

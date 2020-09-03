@@ -2,11 +2,44 @@
 @use '../../../visuals/scale/size';
 
 .grid-blog-cs-sot > .subgrid-content {
+  > .subgrid-subcontent {
+    > .early-work {
+      margin-top: size.$size-54;
+    }
+  }
+
   > .subgrid-ss {
     grid-template-rows: repeat(3, size.$size-157) repeat(2, auto);
 
     > .ss-sm {
       grid-row: span 3;
+    }
+  }
+}
+
+@media (max-width: bp.$md) {
+  .grid-blog-cs-sot > .subgrid-content > .subgrid-ss {
+    grid-template-rows: repeat(3, size.$size-147) repeat(2, auto);
+  }
+}
+
+@media (max-width: bp.$sm) {
+  .grid-blog-cs-sot > .subgrid-content > .subgrid-ss {
+    grid-template-rows: repeat(4, auto);
+
+    > .ss {
+      &.ss-sm {
+        grid-row: auto;
+
+        > .mobile.phone-vertical {
+          height: 100%;
+          width: auto;
+        }
+      }
+
+      &.ss-lg {
+        grid-row: auto;
+      }
     }
   }
 }

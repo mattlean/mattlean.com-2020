@@ -200,6 +200,12 @@
   }
 }
 
+@media (max-width: size.$size-1150) {
+  .grid-cs > .subgrid-content > .ss-sm {
+    grid-column: 1/-1;
+  }
+}
+
 @media (max-width: 1142px) {
   .grid-cs {
     > .subgrid-content {
@@ -236,10 +242,8 @@
       }
     }
 
-    > .subgrid-content {
-      > .sbs-header {
-        transform: translateY(-10px);
-      }
+    > .subgrid-content > .sbs-header {
+      transform: translateY(-10px);
     }
   }
 }
@@ -261,6 +265,13 @@
         grid-column: span 2;
       }
     }
+  }
+}
+
+@media (max-width: 890px) {
+  .grid-cs .subgrid-content > .subgrid-ss > .ss-sm > .mobile.tablet-vertical {
+    height: auto;
+    width: 100%;
   }
 }
 
@@ -293,12 +304,14 @@
 
 @media (max-width: 700px) {
   .grid-cs > .subgrid-content > .subgrid-ss {
-    .mobile {
-      &.phone-vertical,
-      &.tablet-vertical {
-        height: auto;
-        width: 100%;
-      }
+    > .ss-lg > .mobile.tablet-vertical {
+      height: auto;
+      width: 100%;
+    }
+
+    > .ss-sm > .mobile.phone-vertical {
+      height: auto;
+      width: 100%;
     }
   }
 }
@@ -321,7 +334,11 @@
 
       > .subgrid-ss {
         grid-gap: size.$size-24;
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(100%, 1fr);
+
+        > .ss-sm {
+          grid-column: 1/-1;
+        }
       }
 
       > .btn-area > .btn-double-group {
