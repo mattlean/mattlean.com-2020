@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import CTA from '../../../components/CTA'
 import BlindFrame from '../../../components/Blind/BlindFrame'
 import { getProjectData } from '../../../../common/data/project'
+import { ROUTE_PREFIX } from '../../../../common/data/route/blog'
 import {
   setupBlindObservers,
   useInitAnim,
@@ -133,7 +134,7 @@ const SOT = () => {
             <PlayIcon className="btn-icon" /> View Live
           </Btn>
         </a>
-        <Link to="/">
+        <Link to={`${ROUTE_PREFIX}cs-sot`}>
           <Btn outline={true} className="btn-case-study">
             <BookIcon className="btn-icon" /> Case Study
           </Btn>
@@ -342,7 +343,7 @@ const SOT = () => {
         <section>
           <section>
             <h4>Updated</h4>
-            <p>August 3, 2020</p>
+            <p>September 1, 2020</p>
           </section>
           <section>
             <h4>Responsibilities</h4>
@@ -465,7 +466,7 @@ const SOT = () => {
       <BlindFrame
         ref={observerData[10].ref}
         nodeType="Link"
-        to="/"
+        to={`${ROUTE_PREFIX}cs-sot`}
         delay={blindStates[10].delay}
         observer={observerData[10].observer}
         play={

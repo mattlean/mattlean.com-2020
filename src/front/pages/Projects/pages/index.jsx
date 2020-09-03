@@ -22,7 +22,7 @@ import VARIANTS from '../../page_variants'
 import { genFormattedPath } from '../../../../common/util'
 import { getRouteData } from '../../../../common/data/route'
 import { isTxtOnly } from './layout'
-import { ROUTE_PREFIX } from '../../../../common/data/project'
+import { ROUTE_PREFIX } from '../../../../common/data/route/project'
 
 /**
  * Project Page

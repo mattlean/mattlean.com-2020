@@ -3,7 +3,7 @@ import { Badge, Btn } from 'eswiss'
 import { Link } from 'react-router-dom'
 import BlindFrame from '../../../../components/Blind/BlindFrame'
 import { getProjectData } from '../../../../../common/data/project'
-import { ROUTE_PREFIX } from '../../../../../common/data/project'
+import { ROUTE_PREFIX } from '../../../../../common/data/route/project'
 import {
   setupBlindObservers,
   useInitAnim,

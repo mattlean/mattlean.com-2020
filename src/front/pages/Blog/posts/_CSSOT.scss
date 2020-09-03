@@ -2,10 +2,8 @@
 @use '../../../visuals/scale/size';
 
 .grid-blog-cs-sot > .subgrid-content {
-  > .subgrid-subcontent {
-    > .early-work {
-      margin-top: size.$size-54;
-    }
+  > .early-work > .right-half {
+    margin-top: size.$size-54;
   }
 
   > .subgrid-ss {

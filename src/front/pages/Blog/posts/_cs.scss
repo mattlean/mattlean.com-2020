@@ -3,7 +3,8 @@
 @use '../../../visuals/scale/size';
 
 .grid-cs {
-  display: grid;
+  --row-gap-space: #{size.$size-184};
+
   grid-template-rows: auto auto;
   margin-bottom: size.$size-27;
   margin-top: size.$size-211;
@@ -18,7 +19,7 @@
 
   > .cover {
     grid-column: 1/-1;
-    margin-bottom: size.$size-184;
+    margin-bottom: var(--row-gap-space);
     transform: translateY(-8px);
 
     > h1 {
@@ -222,6 +223,8 @@
 
 @media (max-width: bp.$md) {
   .grid-cs {
+    --row-gap-space: #{size.$size-174};
+
     margin-top: size.$size-201;
 
     > .cover {
@@ -324,6 +327,8 @@
 
 @media (max-width: bp.$sm) {
   .grid-cs {
+    --row-gap-space: #{size.$size-200};
+
     margin-bottom: size.$size-24;
     margin-top: 0;
 

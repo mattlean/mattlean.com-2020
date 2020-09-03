@@ -95,7 +95,9 @@ const CSSOT = () => {
         }}
         className="subgrid-content grid"
       >
-        <h2 className="h-2 md:h-4 mb-1rem">Modernizing a Visualization Tool</h2>
+        <h2 className="h-2 md:h-4 mb-1.5rem">
+          Modernizing a Visualization Tool
+        </h2>
         <section className="intro mb-6 c-grey-1">
           <p>
             <a
@@ -151,18 +153,18 @@ const CSSOT = () => {
             .
           </p>
         </section>
-        <h2 className="h-2 md:h-4 mb-1rem">Initial 2014&nbsp;Build</h2>
-        <section className="subgrid-subcontent grid">
-          <section className="left-half-priority c-grey-1">
+        <h2 className="h-2 md:h-4 mb-1rem">Initial 2014&nbsp;Version</h2>
+        <section className="early-work subgrid-subcontent grid mb-4">
+          <section className="left-half-priority">
             <h3 className="h-7 mb-1.5">Early Design Progression</h3>
-            <p>
+            <p className="c-grey-1">
               Biosearch Technology’s marketing team and I designed the initial
               wireframes and wireflows together. This design supported both
               desktop and mobile devices. We then quickly iterated through
               several prototypes of the application until we settled on the
               finalized layout.
             </p>
-            <p className="mb-4">
+            <p className="c-grey-1 mb-4">
               In 2015, Biosearch Technologies was acquired by{' '}
               <a
                 href="https://lgcgroup.com"
@@ -186,8 +188,9 @@ const CSSOT = () => {
               >
                 Bootstrap
               </a>{' '}
-              for its excellent cross-browser compability, modal component, and
-              great reliability. Because the framework was already dependent on{' '}
+              for its excellent cross-browser compatibility, modal component,
+              and great reliability. Because the framework was already dependent
+              on{' '}
               <a
                 href="https://jquery.com"
                 rel="noreferrer"
@@ -246,7 +249,7 @@ const CSSOT = () => {
               in order to have complete control.
             </p>
             <h3 className="h-7 mb-1.5">Project Tooling</h3>
-            <p>
+            <p className="c-grey-1">
               As I wanted to try out some new things in my workflow, I took the
               opportunity to use{' '}
               <a
@@ -316,7 +319,7 @@ const CSSOT = () => {
               </a>
               .
             </p>
-            <p>
+            <p className="c-grey-1">
               Because I received all of the visualizations’ data points in an
               Excel spreadsheet, I wrote a custom command line tool in{' '}
               <a
@@ -331,7 +334,7 @@ const CSSOT = () => {
               application.
             </p>
           </section>
-          <section className="early-work right-half sticky-media">
+          <section className="right-half sticky-media">
             <figure className="ss mb-1.5">
               <img src={SSWireframeA} alt="" className="ss ss-sm" />
               <figcaption className="c-grey-2">
@@ -369,13 +372,13 @@ const CSSOT = () => {
             devices with different screen&nbsp;dimensions
           </figcaption>
         </figure>
-        <h2 className="sbs-header left-half h-2 md:h-4 mb-1rem">
+        <h2 className="sbs-header left-half h-2 md:h-4 mb-1.5rem">
           2020 Redesign
         </h2>
         <p className="right-half-priority mb-4 c-grey-1">
-          In 2019, the company approached me again, this time wanting to do a
-          complete redesign alongside a few new features. This time during the
-          design process we collaborated with{' '}
+          In 2019, the company asked me to perform a complete visual redesign
+          alongside a few new features. During this design process iteration, we
+          collaborated with{' '}
           <a
             href="https://www.columnfivemedia.com"
             rel="noreferrer"
@@ -442,19 +445,19 @@ const CSSOT = () => {
           </p>
           <p>
             Performance improvements in chart drawing and data handling were
-            also implemented during this time. The main one improved the load
-            times for the charts. While the previous versions utilized JSON that
-            was converted with my custom spreadsheet conversion tool, the format
-            of the JSON still required additional transformations before it
-            could be used to render data points with Google Charts. This meant
-            that every time the application started up, it would perform
-            identical transformations to get the data into a readable state. To
-            remove this unnecessary work, the data conversion tool was updated
-            to perform these transformations ahead of time, and this data is now
-            statically included within the bundle. That way, whenever the
-            application starts up, it no longer needs to perform any
-            transformations during runtime and it simply feeds the data directly
-            into the Google Charts API.
+            also implemented during this time. The most significant one improved
+            the load times for the charts. While the previous versions utilized
+            JSON that was converted with my custom spreadsheet conversion tool,
+            the format of the JSON still required additional transformations
+            before it could be used to render data points with Google Charts.
+            This meant that every time the application started up, it would
+            perform identical transformations to get the data into a readable
+            state. To remove this unnecessary work, the data conversion tool was
+            updated to perform these transformations ahead of time, and this
+            properly formatted data is now statically included within the
+            bundle. That way, whenever the application starts up, it no longer
+            needs to perform any transformations during runtime and it simply
+            feeds the data directly into the Google Charts API.
           </p>
           <p>
             The styles were also completely rewritten to adopt the{' '}
@@ -467,7 +470,17 @@ const CSSOT = () => {
               Block Element Modifier (BEM)
             </a>{' '}
             methodology to improve the readability and maintainability of the
-            Sass codebase.
+            Sass codebase. Due to a requirement to continue support for Internet
+            Explorer 11, a float-based layout solution was still used over a
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout"
+              rel="noreferrer"
+              target="_blank"
+              className="a-grey-1"
+            >
+              grid
+            </a>
+            -based one.
           </p>
         </section>
         <h3 className="h-7 left-half">Project Tooling Updates</h3>
@@ -486,11 +499,12 @@ const CSSOT = () => {
             <Link to={`${ROUTE_PREFIX}ljas`} className="a-grey-1">
               Lean JavaScript Application Starter
             </Link>
-            . It handles all of the same responsibilities old Grunt-based one
+            . It handles the same responsibilities the previous Grunt-based one
             had, except it does it all better.
           </p>
           <p>
-            To handle the new ES2015 syntax, webpack now compiles the code with{' '}
+            To handle the new ES2015 syntax, webpack now compiles JavaScript
+            with{' '}
             <a
               href="https://babeljs.io/"
               rel="noreferrer"
@@ -572,11 +586,16 @@ const CSSOT = () => {
               cssnano
             </a>
             . The result of this reduces the overall application file size to
-            the point where it is actually smaller than the Grunt builds, even
-            though the application has more features than it has ever had. To
-            prevent stale browser cache hits, unique hashes were introduced to
-            the builds’ file names to ensure cache invalidation when new
-            versions are deployed.
+            the point where it is actually smaller than the older Grunt builds,
+            even though the application has more features than it has ever had
+            before. To prevent stale browser cache hits, unique hashes were
+            introduced to the builds’ file names to ensure cache invalidation
+            when new versions are deployed.
+          </p>
+          <p>
+            The custom spreadsheet conversion command line tool was also
+            rewritten in JavaScript and Node.js, just to keep the entire
+            codebase consistent in one language.
           </p>
         </section>
         <figure className="ss ss-sm">
@@ -592,29 +611,43 @@ const CSSOT = () => {
             Fullscreen mode for a larger view of the&nbsp;charts
           </figcaption>
         </figure>
-        <h2 className="sbs-header left-half h-2 md:h-4 mb-1rem">Reception</h2>
-        <p className="right-half-priority mb-6 c-grey-1">
-          The spectral overlay tool first went live alongside the qPCR Design
-          Lab on October 23, 2014.{' '}
-          <a
-            href="http://genengnews.com"
-            rel="noreferrer"
-            target="_blank"
-            className="a-grey-1"
-          >
-            Genetic Engineering & Biotechnology News (GEN)
-          </a>{' '}
-          awarded the project{' '}
-          <a
-            href="https://genengnews.com/resources/best-of-the-web/qpcr-design-lab/2933"
-            rel="noreferrer"
-            target="_blank"
-            className="a-grey-1"
-          >
-            Best of Web in vol. 35, no. 4
-          </a>
-          .
-        </p>
+        <h2 className="sbs-header left-half h-2 md:h-4 mb-1.5rem">Reception</h2>
+        <section className="right-half-priority mb-6 c-grey-1">
+          <p>
+            The spectral overlay tool first went live alongside the qPCR Design
+            Lab on October 23, 2014.{' '}
+            <a
+              href="http://genengnews.com"
+              rel="noreferrer"
+              target="_blank"
+              className="a-grey-1"
+            >
+              Genetic Engineering & Biotechnology News (GEN)
+            </a>{' '}
+            awarded the project{' '}
+            <a
+              href="https://genengnews.com/resources/best-of-the-web/qpcr-design-lab/2933"
+              rel="noreferrer"
+              target="_blank"
+              className="a-grey-1"
+            >
+              Best of Web in vol. 35, no. 4
+            </a>
+            .
+          </p>
+          <p>
+            <a
+              href="https://biosearchtech.com/qpcr-multiplex-spectral-overlay-tool"
+              rel="noreferrer"
+              target="_blank"
+              className="a-grey-1"
+            >
+              The 2020 version of the tool went live on the Biosearch
+              Technologies website
+            </a>{' '}
+            on September 1, 2020.
+          </p>
+        </section>
         <section className="btn-area">
           <section className="btn-double-group">
             <a
