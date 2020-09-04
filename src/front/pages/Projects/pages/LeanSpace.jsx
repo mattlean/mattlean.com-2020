@@ -106,9 +106,9 @@ const LeanSpace = () => {
       >
         <section className="c-grey-1">
           <p>
-            <strong>Lean Space</strong> was my personal website from 2015
-            &ndash; 2020. It was made as a portfolio to showcase my work and a
-            blog to share my&nbsp;thoughts.
+            <strong>Lean Space</strong> was my personal website from
+            2015&ndash;2020. It was made as a portfolio to showcase my work and
+            a blog to share my&nbsp;thoughts.
           </p>
         </section>
         <Link

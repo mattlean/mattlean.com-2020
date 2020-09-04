@@ -37,7 +37,7 @@ const VARIANTS = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: 1.2,
+      delay: 0.8,
       duration: 0.8,
       ease: 'easeOut',
     },
