@@ -87,6 +87,16 @@
   }
 }
 
+@media (max-width: 680px) {
+  .grid-blog-cs-lean-space > .subgrid-content > .subgrid-ss {
+    > .ss-sm > .phone-vertical,
+    > .ss-lg > .tablet {
+      height: auto;
+      width: 100%;
+    }
+  }
+}
+
 @media (max-width: bp.$sm) {
   .grid-blog-cs-lean-space > .subgrid-content {
     > .subgrid-colors {

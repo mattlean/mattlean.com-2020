@@ -361,7 +361,7 @@ const CSSOT = () => {
             <img
               src={SSTablet}
               alt="2015 build of spectral overlay tool on a phone"
-              className="mobile tablet-vertical"
+              className="mobile tablet"
             />
           </div>
           <img

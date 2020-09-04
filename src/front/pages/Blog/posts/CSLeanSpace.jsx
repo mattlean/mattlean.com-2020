@@ -533,7 +533,7 @@ const CSLeanSpace = () => {
             <img
               src={SSTablet}
               alt="Lean Space viewed on a tablet"
-              className="mobile tablet-vertical"
+              className="mobile tablet"
             />
           </div>
           <figcaption className="c-grey-2">
