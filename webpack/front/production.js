@@ -50,5 +50,8 @@ module.exports = merge([
 
   genSourceMaps('source-map'),
 
-  loadMedia(),
+  loadMedia(undefined, undefined, {
+    name: '[name].[ext]',
+    outputPath: 'media',
+  }),
 ])

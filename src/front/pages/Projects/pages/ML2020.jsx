@@ -9,7 +9,7 @@ import {
   useInitAnim,
 } from '../../../components/Blind/initAnimUtil'
 import { useHeadDataEffect } from '../../../util'
-import { BookIcon, MarkGithubIcon } from '@primer/octicons-react'
+import { MarkGithubIcon } from '@primer/octicons-react'
 
 const { company, tags } = getProjectData('ml2020')
 

@@ -35,7 +35,10 @@ module.exports = merge([
 
   loadHTMLAsString({ attributes: false }),
 
-  loadMedia(),
+  loadMedia(undefined, undefined, {
+    name: '[name].[ext]',
+    outputPath: 'media',
+  }),
 
   loadSVGs(),
 
