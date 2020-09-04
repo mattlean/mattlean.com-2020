@@ -111,19 +111,20 @@ const ML2020 = () => {
             <Link to={`${ROUTE_PREFIX}eswiss`} className="a-grey-1 txtw-bold">
               eswiss
             </Link>
-            . If you’re interested in the design and development process behind
+            .
+            {/* If you’re interested in the design and development process behind
             this website and its design system, read the{' '}
             <Link to="/" className="a-grey-1">
               case study
             </Link>
-            .
+            . */}
           </p>
         </section>
-        <Link to="/">
+        {/* <Link to="/">
           <Btn className="btn-case-study">
             <BookIcon className="btn-icon" /> Case Study
           </Btn>
-        </Link>
+        </Link> */}
         <a
           href="https://github.com/mattlean/mattlean.com-2020"
           rel="noreferrer"
