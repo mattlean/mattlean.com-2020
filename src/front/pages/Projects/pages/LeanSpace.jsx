@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom'
 import BlindFrame from '../../../components/Blind/BlindFrame'
 import CTA from '../../../components/CTA'
 import { getProjectData } from '../../../../common/data/project'
-import { ROUTE_PREFIX } from '../../../../common/data/route/blog'
+import { ROUTE_PREFIX as BLOG_PREFIX } from '../../../../common/data/route/blog'
+import { ROUTE_PREFIX as PROJECT_PREFIX } from '../../../../common/data/route/project'
 import {
   setupBlindObservers,
   useInitAnim,
@@ -112,7 +113,7 @@ const LeanSpace = () => {
           </p>
         </section>
         <Link
-          to={`${ROUTE_PREFIX}cs-lean-space`}
+          to={`${BLOG_PREFIX}cs-lean-space`}
           className="btn-option-a btn-triple-group"
         >
           <Btn className="btn-case-study">
@@ -196,7 +197,7 @@ const LeanSpace = () => {
           rather than 3rd party libraries.
         </p>
         <CTA
-          to={`${ROUTE_PREFIX}cs-lean-space`}
+          to={`${BLOG_PREFIX}cs-lean-space`}
           type="sm"
           className="a-primary svg-primary"
         >
@@ -357,7 +358,7 @@ const LeanSpace = () => {
                 </a>
               </li>
               <li>
-                <Link to={`${ROUTE_PREFIX}lantern`} className="a-grey-1">
+                <Link to={`${PROJECT_PREFIX}lantern`} className="a-grey-1">
                   Lantern.js
                 </Link>
               </li>
@@ -413,7 +414,7 @@ const LeanSpace = () => {
       <BlindFrame
         ref={observerData[10].ref}
         nodeType="Link"
-        to={`${ROUTE_PREFIX}cs-lean-space`}
+        to={`${BLOG_PREFIX}cs-lean-space`}
         delay={blindStates[10].delay}
         observer={observerData[10].observer}
         play={

@@ -272,6 +272,15 @@ const MainNav = () => {
     if (mainHeaderRef.current && isPhone) {
       mainHeaderRef.current.removeAttribute('style')
     }
+
+    // Close phone menu when clicking on back or forward buttons while it is open
+    const popStateHandler = () => {
+      setIsOpen(() => false)
+    }
+    window.addEventListener('popstate', popStateHandler)
+
+    // Remove popStateHandler on unmount
+    return () => window.removeEventListener('popState', popStateHandler)
   }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   // Handle observers
