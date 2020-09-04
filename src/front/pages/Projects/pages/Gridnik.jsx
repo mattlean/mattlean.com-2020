@@ -139,6 +139,11 @@ const Gridnik = () => {
             . He was also known as Mr. Gridnik&mdash;a nickname his friends gave
             to him due to his obsession with&nbsp;grids.
           </p>
+          <p>
+            <em>
+              The plugin will be available through the XD Plugin Manager soon!
+            </em>
+          </p>
         </section>
         <a
           href="https://github.com/mattlean/gridnik"

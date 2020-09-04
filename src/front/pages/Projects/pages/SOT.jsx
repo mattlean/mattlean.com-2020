@@ -175,7 +175,11 @@ const SOT = () => {
           completely redesigned alongside new features and
           performance&nbsp;optimizations.
         </p>
-        <CTA to="/" type="sm" className="a-primary svg-primary">
+        <CTA
+          to={`${ROUTE_PREFIX}cs-sot`}
+          type="sm"
+          className="a-primary svg-primary"
+        >
           Learn more about the&nbsp;project
         </CTA>
       </BlindFrame>

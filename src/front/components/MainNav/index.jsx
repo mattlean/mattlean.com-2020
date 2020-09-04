@@ -3,7 +3,6 @@ import { motion } from 'framer-motion'
 import { LG_PHONE } from '../../visuals/responsive'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { createObserver } from '../../util'
-import { ROUTE_PREFIX } from '../../../common/data/route/project'
 import { ThemeCtx } from '../../visuals/theme'
 import { useViewportWidth, setBodyScroll } from 'eswiss/dist/util'
 import Logo from '../../assets/logo/logo.svg'
@@ -101,7 +100,7 @@ const MainNav = () => {
       </li>
       <li>
         <NavLink
-          to={ROUTE_PREFIX}
+          to="/projects"
           onClick={() => {
             if (isOpen) setIsOpen(false)
           }}

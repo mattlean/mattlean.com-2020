@@ -3,7 +3,8 @@ import { Badge } from 'eswiss'
 import { Link } from 'react-router-dom'
 import BlindFrame from '../../../components/Blind/BlindFrame'
 import { getPostData } from '../../../../common/data/post'
-import { ROUTE_PREFIX } from '../../../../common/data/route/project'
+import { ROUTE_PREFIX as BLOG_PREFIX } from '../../../../common/data/route/blog'
+import { ROUTE_PREFIX as PROJECT_PREFIX } from '../../../../common/data/route/project'
 import {
   setupBlindObservers,
   useInitAnim,
@@ -131,12 +132,12 @@ const HelloWorld = () => {
             Xuehua CMS
           </a>{' '}
           which I plan to use to as the backend to power my personal website,{' '}
-          <Link to={`${ROUTE_PREFIX}lean-space`} className="a-grey-1">
+          <Link to={`${PROJECT_PREFIX}lean-space`} className="a-grey-1">
             Lean Space
           </Link>{' '}
           which is the frontend of my personal website that you’re currently
           looking at right now,{' '}
-          <Link to={`${ROUTE_PREFIX}lantern`} className="a-grey-1">
+          <Link to={`${PROJECT_PREFIX}lantern`} className="a-grey-1">
             Lantern.js
           </Link>{' '}
           which is a lightbox solution I decided to code up as a “working break”
@@ -156,7 +157,7 @@ const HelloWorld = () => {
           <i>
             (Update, 8/31/2020 &ndash; Lean Space and Xuehua CMS are no longer
             being used on this website.{' '}
-            <Link to="/blog/cs-lean-space" className="a-grey-1">
+            <Link to={`${BLOG_PREFIX}cs-lean-space`} className="a-grey-1">
               If you’re interested in learning more about Lean Space, please
               consider reading the case&nbsp;study.
             </Link>

@@ -2,7 +2,7 @@
 
 Current website for [MattLean.com](https://mattlean.com).
 
-## About This Project
+## About
 
-Details about Lean Space can be found here:  
+Details about this project can be found here:  
 https://mattlean.com/projects/ml2020

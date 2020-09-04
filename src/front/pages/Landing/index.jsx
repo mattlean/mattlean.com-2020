@@ -223,7 +223,7 @@ const Landing = () => {
               ? blindVisibleStates[8].isVisible
               : blindStates[8].play,
           }}
-          to={PROJECT_PREFIX}
+          to="/projects"
           type="sm"
           className="view-more view-more-projects svg-grey-3 a-grey-3"
         >
