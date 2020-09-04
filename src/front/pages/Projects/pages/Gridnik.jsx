@@ -9,7 +9,7 @@ import {
   useInitAnim,
 } from '../../../components/Blind/initAnimUtil'
 import { useHeadDataEffect } from '../../../util'
-import DCExample from '../../../assets/projects/gridnik/example.jpg'
+import DCExample from '../../../assets/projects/gridnik/example-dark.jpg'
 import LogoGridnik from '../../../assets/projects/gridnik/gridnik-logo.jpg'
 import { MarkGithubIcon } from '@primer/octicons-react'
 
