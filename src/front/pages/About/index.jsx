@@ -22,7 +22,7 @@ const About = () => {
     initAnimComplete,
     observerData,
     runInitAnim,
-  } = useInitAnim(5)
+  } = useInitAnim(3)
 
   // Setup effect which is only run once
   useEffect(() => {
@@ -30,7 +30,7 @@ const About = () => {
     if (observerData[0].ref.current) observerData[0].ref.current.focus()
 
     const observers = setupBlindObservers(
-      [0.5, 0.1, 0.1, 0.1, 0.1],
+      [0.5, 0.1, 0.1],
       observerData,
       blindVisibleStates
     )
@@ -85,17 +85,12 @@ const About = () => {
             work&nbsp;opportunities!
           </BlindFrame>
         </section>
-        <BlindFrame
-          ref={observerData[2].ref}
-          nodeType="section"
-          delay={blindStates[2].delay}
-          duration={0.2}
-          observer={observerData[2].observer}
-          play={
-            initAnimComplete
-              ? blindVisibleStates[2].isVisible
-              : blindStates[2].play
-          }
+        <motion.section
+          initial={{ opacity: 0 }}
+          animate={{
+            opacity: 1,
+            transition: { delay: 0.4, duration: 0.4, ease: 'easeOut' },
+          }}
           className="content c-grey-1"
         >
           <p>
@@ -160,17 +155,17 @@ const About = () => {
             sluggishly working towards an associate degree in Graphic &
             Interactive&nbsp;Design.
           </p>
-        </BlindFrame>
+        </motion.section>
         <section className="closing">
           <BlindFrame
-            ref={observerData[3].ref}
+            ref={observerData[2].ref}
             nodeType="p"
-            delay={blindStates[3].delay}
-            observer={observerData[3].observer}
+            delay={blindStates[2].delay}
+            observer={observerData[2].observer}
             play={
               initAnimComplete
-                ? blindVisibleStates[3].isVisible
-                : blindStates[3].play
+                ? blindVisibleStates[2].isVisible
+                : blindStates[2].play
             }
             className="txt-8 sm:txt-6 c-grey-1"
           >
@@ -183,18 +178,12 @@ const About = () => {
             </CTA>
           </BlindFrame>
         </section>
-        <BlindFrame
-          ref={observerData[4].ref}
-          nodeType="aside"
-          aria-label="Resume"
-          delay={blindStates[4].delay}
-          duration={0.2}
-          observer={observerData[4].observer}
-          play={
-            initAnimComplete
-              ? blindVisibleStates[4].isVisible
-              : blindStates[4].play
-          }
+        <motion.section
+          initial={{ opacity: 0 }}
+          animate={{
+            opacity: 1,
+            transition: { delay: 0.4, duration: 0.4, ease: 'easeOut' },
+          }}
           className="subgrid-resume txt-3 c-grey-2"
         >
           <section className="work">
@@ -364,7 +353,7 @@ const About = () => {
               </ul>
             </section>
           </section>
-        </BlindFrame>
+        </motion.section>
       </main>
       <MainFooter />
     </motion.div>

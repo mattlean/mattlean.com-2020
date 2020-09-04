@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import { Badge } from 'eswiss'
 import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
 import BlindFrame from '../../../components/Blind/BlindFrame'
 import { getPostData } from '../../../../common/data/post'
 import { ROUTE_PREFIX as BLOG_PREFIX } from '../../../../common/data/route/blog'
@@ -28,7 +29,7 @@ const HelloWorld = () => {
     initAnimComplete,
     observerData,
     runInitAnim,
-  } = useInitAnim(2)
+  } = useInitAnim(1)
 
   // Setup effect which is only run once
   useEffect(() => {
@@ -36,7 +37,7 @@ const HelloWorld = () => {
     if (srStartRef.current) srStartRef.current.focus()
 
     const observers = setupBlindObservers(
-      [0.5, 0.1],
+      [0.5],
       observerData,
       blindVisibleStates
     )
@@ -77,17 +78,12 @@ const HelloWorld = () => {
           ))}
         </ul>
       </BlindFrame>
-      <BlindFrame
-        ref={observerData[1].ref}
-        delay={blindStates[1].delay}
-        duration={0.2}
-        observer={observerData[1].observer}
-        play={
-          initAnimComplete
-            ? blindVisibleStates[1].isVisible
-            : blindStates[1].play
-        }
-        nodeType="section"
+      <motion.section
+        initial={{ opacity: 0 }}
+        animate={{
+          opacity: 1,
+          transition: { delay: 0.2, duration: 0.4, ease: 'easeOut' },
+        }}
         className="content c-grey-1"
       >
         <h2 className="mb-1">Another Few Years, Another Blog...</h2>
@@ -174,7 +170,7 @@ const HelloWorld = () => {
           it’ll help someone who is in the same position I’m in right now where
           they’re looking to get their foot into the software&nbsp;industry.
         </p>
-      </BlindFrame>
+      </motion.section>
     </>
   )
 }
