@@ -183,7 +183,7 @@ const Crush = () => {
       >
         <img src={SSBrowser} alt="qPCR Crush on qPCR Design Lab" />
         <figcaption className="c-grey-2">
-          qPCR Crush game and leaderboards on the
+          Screenshot of qPCR Crush game and leaderboards on the
           qPCR&nbsp;Design&nbsp;Lab&nbsp;microsite
         </figcaption>
       </BlindFrame>

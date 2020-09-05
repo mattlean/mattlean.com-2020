@@ -342,10 +342,7 @@ const CSLeanSpace = () => {
           .
         </p>
         <figure className="ss ss-lg mb-4">
-          <img
-            src={SSLightbox}
-            alt="Screenshot of Lantern.js being used for Lean Space"
-          />
+          <img src={SSLightbox} alt="Lantern.js being used for Lean Space" />
           <figcaption className="a-grey-2">
             Lantern.js being used to display a screenshot of one of my
             portfolio&nbsp;pieces

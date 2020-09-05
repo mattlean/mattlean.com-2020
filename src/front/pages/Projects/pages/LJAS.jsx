@@ -191,7 +191,7 @@ const LJAS = () => {
       >
         <img
           src={SSFrontend}
-          alt="Screenshot of frontend app built with Lean JS App Starter running in a browser"
+          alt="Frontend app built with Lean JS App Starter running in a browser"
         />
         <figcaption className="c-grey-2">
           Browser frontend for a bulletin board system built with
@@ -212,7 +212,7 @@ const LJAS = () => {
       >
         <img
           src={SSBackend}
-          alt="Screenshot of backend app built with Lean JS App Starter running in Node.js"
+          alt="Backend app built with Lean JS App Starter running in Node.js"
         />
         <figcaption className="c-grey-2">
           Node.js REST API built with Lean&nbsp;JS&nbsp;App&nbsp;Starter
