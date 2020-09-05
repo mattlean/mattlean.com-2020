@@ -43,7 +43,10 @@ module.exports = merge([
   buildStyles({
     cssLoaderOptions: { sourceMap: true },
     miniCssExtractPluginOptions: { filename: 'style.[contenthash:4].css' },
-    postCSSLoaderOptions: { config: { path: 'webpack' }, sourceMap: true },
+    postCSSLoaderOptions: {
+      config: { path: 'webpack/front/prod' },
+      sourceMap: true,
+    },
     sassLoaderOptions: {
       sassOptions: {
         includePaths: ['node_modules/eswiss/dist'],

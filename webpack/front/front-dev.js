@@ -17,7 +17,10 @@ module.exports = merge([
 
   injectStyles({
     cssLoaderOptions: { sourceMap: true },
-    postCSSLoaderOptions: { config: { path: 'webpack' }, sourceMap: true },
+    postCSSLoaderOptions: {
+      config: { path: 'webpack/front/dev' },
+      sourceMap: true,
+    },
     sassLoaderOptions: {
       sassOptions: {
         includePaths: ['node_modules/eswiss/dist'],
