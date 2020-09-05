@@ -323,7 +323,15 @@ const CSSOT = () => {
             </p>
             <p className="c-grey-1">
               Because I received all of the visualizations’ data points in an
-              Excel spreadsheet, I wrote a custom command line tool in{' '}
+              <a
+                href="https://microsoft.com/en-us/microsoft-365/excel"
+                rel="noreferrer"
+                target="_blank"
+                className="a-grey-1"
+              >
+                Excel
+              </a>{' '}
+              spreadsheet, I wrote a custom command line tool in{' '}
               <a
                 href="https://python.org"
                 rel="noreferrer"
@@ -344,13 +352,13 @@ const CSSOT = () => {
                 className="ss ss-sm"
               />
               <figcaption className="c-grey-2">
-                An early low-fidelity wireframe for spectral overlay tool
+                An early low-fidelity wireframe of spectral overlay tool
               </figcaption>
             </figure>
             <figure className="ss">
               <img src={SSPrototype} alt="Spectral overlay tool prototype" />
               <figcaption className="c-grey-2">
-                An early prototype for spectral overlay tool
+                An early prototype of spectral overlay tool
               </figcaption>
             </figure>
           </section>
@@ -481,8 +489,16 @@ const CSSOT = () => {
               Block Element Modifier (BEM)
             </a>{' '}
             methodology to improve the readability and maintainability of the
-            Sass codebase. Due to a requirement to continue support for Internet
-            Explorer 11, a float-based layout solution was still used over a
+            Sass codebase. Due to a requirement to continue support for{' '}
+            <a
+              href="https://en.wikipedia.org/wiki/Internet_Explorer_11"
+              rel="noreferrer"
+              target="_blank"
+              className="a-grey-1"
+            >
+              Internet Explorer 11
+            </a>
+            , a float-based layout solution was still used over a{' '}
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout"
               rel="noreferrer"
@@ -551,7 +567,7 @@ const CSSOT = () => {
             >
               Prettier
             </a>{' '}
-            now handles all code formatting.
+            now handles all formatting to keep the coding style consistent.
           </p>
           <p>
             The most impactful aspect of the new tooling setup is how it handles
@@ -598,15 +614,23 @@ const CSSOT = () => {
             </a>
             . The result of this reduces the overall application file size to
             the point where it is actually smaller than the older Grunt builds,
-            even though the application has more features than it has ever had
-            before. To prevent stale browser cache hits, unique hashes were
-            introduced to the builds’ file names to ensure cache invalidation
-            when new versions are deployed.
+            even though the application has more features than it has ever had.
+            To prevent stale browser cache hits, unique hashes were introduced
+            to the build’s file names to ensure cache invalidation when new
+            versions are deployed.
           </p>
           <p>
             The custom spreadsheet conversion command line tool was also
-            rewritten in JavaScript and Node.js, just to keep the entire
-            codebase consistent in one language.
+            rewritten in JavaScript and{' '}
+            <a
+              href="https://nodejs.org"
+              rel="noreferrer"
+              target="_blank"
+              className="a-grey-1"
+            >
+              Node.js
+            </a>
+            , just to keep the entire codebase consistent in one language.
           </p>
         </section>
         <figure className="ss ss-sm">

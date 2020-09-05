@@ -102,8 +102,17 @@ const Lantern = () => {
         <section className="c-grey-1">
           <p>
             <strong>Lantern.js</strong> is a simple-to-use, lightweight,
-            customizable image lightbox that does not require any external
-            dependencies by relying on only native browser APIs and&nbsp;CSS.
+            customizable image{' '}
+            <a
+              href="https://en.wikipedia.org/wiki/Lightbox_(JavaScript)"
+              rel="noreferrer"
+              target="_blank"
+              className="a-grey-1"
+            >
+              lightbox
+            </a>{' '}
+            library that does not require any external dependencies by relying
+            on only native browser APIs and&nbsp;CSS.
           </p>
         </section>
         <a

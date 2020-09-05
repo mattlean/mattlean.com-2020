@@ -119,9 +119,9 @@ const SOT = () => {
           <p>
             I worked with them to build the{' '}
             <strong>spectral overlay tool</strong>, a web application that
-            visualizes the absorption & emission spectra for common fluorescent
-            dyes and quenchers, allowing users to overlay them as multiplexed
-            sets according to recommended combinations for each
+            visualizes the absorption and emission spectra for common
+            fluorescent dyes and quenchers, allowing users to overlay them as
+            multiplexed sets according to recommended combinations for each
             qPCR&nbsp;device.
           </p>
         </section>

@@ -99,8 +99,16 @@ const Eswiss = () => {
       >
         <section className="c-grey-1">
           <p>
-            <strong>eswiss</strong> is a design system that uses principles
-            popularized by the{' '}
+            <strong>eswiss</strong> is a{' '}
+            <a
+              href="https://en.wikipedia.org/wiki/Design_system"
+              rel="noreferrer"
+              target="_blank"
+              className="a-grey-1"
+            >
+              design system
+            </a>{' '}
+            that uses principles popularized by the{' '}
             <a
               href="https://en.wikipedia.org/wiki/International_Typographic_Style"
               rel="noreferrer"
