@@ -4,7 +4,7 @@ import { genTagIDNameArray } from './tag'
 
 //'cs-ml2020',
 const ORDER = ['cs-sot', 'cs-lean-space', 'hello-world']
-const POSTS = {
+export const POSTS = {
   'cs-lean-space': {
     id: 'cs-lean-space',
     title: 'Case Study: Lean Space',

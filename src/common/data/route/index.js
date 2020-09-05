@@ -322,7 +322,7 @@ const ROUTES = {
   '/projects': {
     title: 'Projects',
     desc:
-      "Matt Lean's projects, work of a Silicon Valley full-stack web developer and UI/UX designer.",
+      "Matt Lean's projects, the work of a Silicon Valley full-stack web developer and UI/UX designer.",
     keywords: [
       'matt lean',
       'matthew lean',

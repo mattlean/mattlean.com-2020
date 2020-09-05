@@ -1,9 +1,12 @@
+import { POSTS } from '../post'
+
 export const ROUTE_PREFIX = '/blog/'
 
 const ROUTES = {}
 
 ROUTES[`${ROUTE_PREFIX}cs-lean-space`] = {
   title: 'Case Study: Lean Space — Blog',
+  desc: POSTS['cs-lean-space'].subtitle,
   keywords: [
     'matt lean',
     'matthew lean',
@@ -87,6 +90,7 @@ ROUTES[`${ROUTE_PREFIX}cs-lean-space`] = {
 
 ROUTES[`${ROUTE_PREFIX}cs-sot`] = {
   title: 'Case Study: Spectral Overlay Tool — Blog',
+  desc: POSTS['cs-sot'].subtitle,
   keywords: [
     'matt lean',
     'matthew lean',
@@ -172,6 +176,7 @@ ROUTES[`${ROUTE_PREFIX}cs-sot`] = {
 
 ROUTES[`${ROUTE_PREFIX}hello-world`] = {
   title: 'Hello world! — Blog',
+  desc: POSTS['hello-world'].subtitle,
   keywords: [
     'matt lean',
     'matthew lean',
