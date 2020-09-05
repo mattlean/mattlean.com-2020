@@ -1,6 +1,6 @@
 <h1 align="center">MattLean.com (2020)</h1>
 <p align="center">
-  <img src="src/front/assets/logo/logo.png" align="center" width="35%"><br><br>
+  <img src="src/front/assets/logo/raw/logo.png" align="center" width="35%"><br><br>
   My personal website at <a href="https://mattlean.com">MattLean.com</a>.
 </p>
 

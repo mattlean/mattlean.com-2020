@@ -8,7 +8,7 @@ import {
 } from '../../../components/Blind/initAnimUtil'
 import { useHeadDataEffect } from '../../../util'
 import NPMIcon from '../../../assets/icons/npm.svg'
-import SSLantern from '../../../assets/projects/lantern.jpg'
+import SSLantern from '../../../assets/projects/lantern/lightbox.jpg'
 import { MarkGithubIcon } from '@primer/octicons-react'
 
 const { company, name, tags } = getProjectData('lantern')
