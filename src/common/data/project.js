@@ -1,5 +1,5 @@
 import { genTagIDNameArray } from './tag'
-import FeaturedEswiss from '../../front/assets/featured/eswiss-featured-project.jpg'
+import FeaturedEswiss from '../../front/assets/featured/eswiss-featured.jpg'
 import FeaturedGridnik from '../../front/assets/featured/gridnik-featured.jpg'
 
 const ORDER = [

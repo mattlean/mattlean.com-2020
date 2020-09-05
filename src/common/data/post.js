@@ -1,5 +1,5 @@
-import FeaturedCSLeanSpace from '../../front/assets/featured/lean-space-featured-project.jpg'
-import FeaturedCSSOT from '../../front/assets/featured/spectral-overlay-tool-featured-project.jpg'
+import FeaturedCSLeanSpace from '../../front/assets/featured/lean-space-featured.jpg'
+import FeaturedCSSOT from '../../front/assets/featured/sot-featured.jpg'
 import { genTagIDNameArray } from './tag'
 
 //'cs-ml2020',
