@@ -2,6 +2,7 @@ const CopyPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const nodeExternals = require('webpack-node-externals')
+const TerserPlugin = require('terser-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const { DefinePlugin } = require('webpack')
 
@@ -98,7 +99,7 @@ exports.ignoreNodeModules = (options) => ({
 /**
  * Inject styles.
  * 1. Compiles Sass to CSS with sass-loader
- * 2. Runs PostCSS with Autoprefixer plugin
+ * 2. Runs PostCSS with Autoprefixer & cssnano plugins
  * 3. Interprets @import and url() like import/require() and resolves them with css-loader
  * 4. Injects CSS into DOM with style-loader
  */
@@ -207,6 +208,16 @@ exports.loadSVGs = (options) => ({
         },
       },
     ],
+  },
+})
+
+/**
+ * Minify JavaScript
+ */
+exports.minifyJS = () => ({
+  optimization: {
+    minimize: true,
+    minimizer: [new TerserPlugin({ sourceMap: true })],
   },
 })
 

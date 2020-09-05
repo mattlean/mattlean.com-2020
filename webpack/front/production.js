@@ -4,6 +4,7 @@ const {
   compileJS,
   genSourceMaps,
   loadMedia,
+  minifyJS,
   setMode,
 } = require('../parts')
 const { COMMON, FRONT, NODE_MODULES } = require('../../PATHS')
@@ -57,4 +58,6 @@ module.exports = merge([
     name: '[name].[ext]',
     outputPath: 'media',
   }),
+
+  minifyJS(),
 ])
