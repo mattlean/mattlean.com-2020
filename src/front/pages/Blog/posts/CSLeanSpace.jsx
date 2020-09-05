@@ -117,7 +117,7 @@ const CSLeanSpace = () => {
             <li>
               Showcase a unique visual style to distinguish myself from
               engineers who don’t consider design practices, blindly rip
-              templates, or design resumes in{' '}
+              templates, or design resumes in&nbsp;
               <a
                 href="https://latex-project.org"
                 rel="noreferrer"
@@ -200,7 +200,7 @@ const CSLeanSpace = () => {
               >
                 Ruby
               </a>
-              , I discontinued the project and focused on Lean Space.
+              , I discontinued the project and focused on Lean&nbsp;Space.
             </p>
             <p>
               Instead of dealing with the hassle of a content management system,
@@ -216,7 +216,7 @@ const CSLeanSpace = () => {
                 Jekyll
               </a>
               , but given the small scope of the site, I think I would’ve
-              implemented it in the same way, regardless of any trends.
+              implemented it in the same way, regardless of any&nbsp;trends.
             </p>
             <p>
               Most of my previous web-related work involved popular frameworks
