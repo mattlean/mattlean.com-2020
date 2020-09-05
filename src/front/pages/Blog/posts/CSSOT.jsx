@@ -19,7 +19,7 @@ import SSInstrumentSelection from '../../../assets/projects/sot/instrument-selec
 import SSPhone from '../../../assets/posts/cs-sot/2015-phone.jpg'
 import SSPrototype from '../../../assets/posts/cs-sot/prototype.jpg'
 import SSTablet from '../../../assets/posts/cs-sot/2015-tablet.jpg'
-import SSWireframeA from '../../../assets/posts/cs-sot/wireframe-a.jpg'
+import SSWireframe from '../../../assets/posts/cs-sot/wireframe-a.jpg'
 
 const { live } = getProjectData('sot')
 const { published, readtime, subtitle, tags } = getPostData('cs-sot')
@@ -339,7 +339,7 @@ const CSSOT = () => {
           <section className="right-half sticky-media">
             <figure className="ss mb-1.5">
               <img
-                src={SSWireframeA}
+                src={SSWireframe}
                 alt="Spectral overlay tool wireframe"
                 className="ss ss-sm"
               />
