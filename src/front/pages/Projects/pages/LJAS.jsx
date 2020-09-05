@@ -168,7 +168,10 @@ const LJAS = () => {
         }
         className="ss ss-lg"
       >
-        <img src={SSDesktop} alt="" />
+        <img
+          src={SSDesktop}
+          alt="Screenshot of app built with Lean JS App Starter running natively on macOS"
+        />
         <figcaption className="c-grey-2">
           Native desktop todo list app built with Lean JS App Starter running
           on&nbsp;macOS
@@ -186,7 +189,10 @@ const LJAS = () => {
         }
         className="ss ss-sm"
       >
-        <img src={SSFrontend} alt="" />
+        <img
+          src={SSFrontend}
+          alt="Screenshot of frontend app built with Lean JS App Starter running in a browser"
+        />
         <figcaption className="c-grey-2">
           Browser frontend for a bulletin board system built with
           Lean&nbsp;JS&nbsp;App&nbsp;Starter
@@ -204,7 +210,10 @@ const LJAS = () => {
         }
         className="ss ss-sm project-details-gap"
       >
-        <img src={SSBackend} alt="" />
+        <img
+          src={SSBackend}
+          alt="Screenshot of backend app built with Lean JS App Starter running in Node.js"
+        />
         <figcaption className="c-grey-2">
           Node.js REST server API built with Lean&nbsp;JS&nbsp;App&nbsp;Starter
         </figcaption>

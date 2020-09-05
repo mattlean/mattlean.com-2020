@@ -338,14 +338,20 @@ const CSSOT = () => {
           </section>
           <section className="right-half sticky-media">
             <figure className="ss mb-1.5">
-              <img src={SSWireframeA} alt="" className="ss ss-sm" />
+              <img
+                src={SSWireframeA}
+                alt="Spectral overlay tool wireframe"
+                className="ss ss-sm"
+              />
               <figcaption className="c-grey-2">
-                An early low-fidelity wireframe
+                An early low-fidelity wireframe for spectral overlay tool
               </figcaption>
             </figure>
             <figure className="ss">
-              <img src={SSPrototype} alt="" />
-              <figcaption className="c-grey-2">An early prototype</figcaption>
+              <img src={SSPrototype} alt="Spectral overlay tool prototype" />
+              <figcaption className="c-grey-2">
+                An early prototype for spectral overlay tool
+              </figcaption>
             </figure>
           </section>
         </section>
@@ -401,9 +407,12 @@ const CSSOT = () => {
           .
         </p>
         <figure className="ss ss-lg mb-4">
-          <img src={SSCharts} alt="" />
+          <img
+            src={SSCharts}
+            alt="Main screen for the 2020 version of the spectral overlay tool"
+          />
           <figcaption className="a-grey-2">
-            Main screen for spectral overlay&nbsp;tool
+            Main screen for the latest version of spectral overlay&nbsp;tool
           </figcaption>
         </figure>
         <h3 className="h-7 left-half">Application Updates</h3>
@@ -601,14 +610,17 @@ const CSSOT = () => {
           </p>
         </section>
         <figure className="ss ss-sm">
-          <img src={SSInstrumentSelection} alt="" />
+          <img
+            src={SSInstrumentSelection}
+            alt="Spectral overlay tool sort and filtering features"
+          />
           <figcaption className="c-grey-2">
             Instrument selection that supports filtering of instruments and
             sorting of&nbsp;dyes
           </figcaption>
         </figure>
         <figure className="ss ss-sm mb-6">
-          <img src={SSFullscreen} alt="" />
+          <img src={SSFullscreen} alt="Spectral overlay tool fullscreen mode" />
           <figcaption className="c-grey-2">
             Fullscreen mode for a larger view of the&nbsp;charts
           </figcaption>

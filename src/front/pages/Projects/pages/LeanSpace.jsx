@@ -154,7 +154,7 @@ const LeanSpace = () => {
         }
         className="ss ss-lg"
       >
-        <img src={SSWork} alt="" />
+        <img src={SSWork} alt="Lean Space work page" />
         <figcaption className="c-grey-2">
           Work page showcasing&nbsp;projects
         </figcaption>
@@ -172,7 +172,7 @@ const LeanSpace = () => {
         }
         className="ss ss-lg"
       >
-        <img src={SSBlogPost} alt="" />
+        <img src={SSBlogPost} alt="Lean Space blog post" />
         <figcaption className="c-grey-2">
           First post written on the&nbsp;blog
         </figcaption>
@@ -218,7 +218,7 @@ const LeanSpace = () => {
           }
           className="ss ss-sm"
         >
-          <img src={SSWorkMobile} alt="" />
+          <img src={SSWorkMobile} alt="Lean Space work page on mobile" />
           <figcaption className="c-grey-2">
             Work page showcasing projects being viewed on a mobile&nbsp;device
           </figcaption>
@@ -236,7 +236,7 @@ const LeanSpace = () => {
           }
           className="ss ss-sm"
         >
-          <img src={SSBlogPostMobile} alt="" />
+          <img src={SSBlogPostMobile} alt="Lean Space blog post on mobile" />
           <figcaption className="c-grey-2">
             First post written on the blog being viewed on a mobile&nbsp;device
           </figcaption>

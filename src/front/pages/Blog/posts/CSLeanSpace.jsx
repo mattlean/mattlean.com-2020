@@ -228,7 +228,7 @@ const CSLeanSpace = () => {
             </p>
           </section>
           <figure className="ss right-half sticky-media">
-            <img src={SSLeanTheme} alt="" />
+            <img src={SSLeanTheme} alt="Screenshot of Lean Theme" />
             <figcaption className="c-grey-2">
               My old website I created in 2011 that was in dire need of
               a&nbsp;redesign
@@ -342,7 +342,10 @@ const CSLeanSpace = () => {
           .
         </p>
         <figure className="ss ss-lg mb-4">
-          <img src={SSLightbox} alt="" />
+          <img
+            src={SSLightbox}
+            alt="Screenshot of Lantern.js being used for Lean Space"
+          />
           <figcaption className="a-grey-2">
             Lantern.js being used to display a screenshot of one of my
             portfolio&nbsp;pieces
@@ -454,7 +457,11 @@ const CSLeanSpace = () => {
               .
             </p>
           </section>
-          <img src={SSType} alt="" className="right-half sticky-media" />
+          <img
+            src={SSType}
+            alt="Typefaces used for Lean Space"
+            className="right-half sticky-media"
+          />
         </section>
         <h3 className="h-7 left-half">Animations & Transitions</h3>
         <p className="right-half-priority mb-4 c-grey-1">

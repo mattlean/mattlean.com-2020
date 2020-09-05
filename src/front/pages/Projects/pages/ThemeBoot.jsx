@@ -147,7 +147,7 @@ const ThemeBoot = () => {
         }
         className="ss ss-lg"
       >
-        <img src={SSFront} alt="" />
+        <img src={SSFront} alt="ThemeBoot frontpage" />
         <figcaption className="c-grey-2">Frontpage example</figcaption>
       </BlindFrame>
       <BlindFrame
@@ -163,7 +163,7 @@ const ThemeBoot = () => {
         }
         className="ss ss-lg"
       >
-        <img src={SSLocation} alt="" />
+        <img src={SSLocation} alt="ThemeBoot regular page" />
         <figcaption className="c-grey-2">Regular page&nbsp;example</figcaption>
       </BlindFrame>
       <section className="multicol-ss project-details-gap">
@@ -180,7 +180,10 @@ const ThemeBoot = () => {
           }
           className="ss ss-sm"
         >
-          <img src={SSFrontMobile} alt="" />
+          <img
+            src={SSFrontMobile}
+            alt="ThemeBoot frontpage being viewed on mobile"
+          />
           <figcaption className="c-grey-2">
             Frontpage example being viewed on a mobile&nbsp;device
           </figcaption>
@@ -198,7 +201,10 @@ const ThemeBoot = () => {
           }
           className="ss ss-sm"
         >
-          <img src={SSFAQ} alt="" />
+          <img
+            src={SSFAQ}
+            alt="ThemeBoot regular page being viewed on mobile"
+          />
           <figcaption className="c-grey-2">
             Regular page example being viewed on a mobile&nbsp;device
           </figcaption>

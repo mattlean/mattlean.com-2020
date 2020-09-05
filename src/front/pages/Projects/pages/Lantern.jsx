@@ -154,7 +154,7 @@ const Lantern = () => {
         }
         className="ss ss-lg project-details-gap"
       >
-        <img src={SSLantern} alt="" />
+        <img src={SSLantern} alt="Example of Lantern.js" />
         <figcaption className="c-grey-2">
           Example of open lightbox using&nbsp;Lantern.js
         </figcaption>

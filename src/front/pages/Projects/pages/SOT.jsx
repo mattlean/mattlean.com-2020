@@ -149,7 +149,10 @@ const SOT = () => {
         }
         className="ss ss-lg"
       >
-        <img src={SSCharts} alt="" />
+        <img
+          src={SSCharts}
+          alt="Main screen for the 2020 version of the spectral overlay tool"
+        />
         <figcaption className="c-grey-2">
           Main screen for spectral overlay&nbsp;tool
         </figcaption>
@@ -195,7 +198,10 @@ const SOT = () => {
         }
         className="ss ss-sm"
       >
-        <img src={SSInstrumentSelection} alt="" />
+        <img
+          src={SSInstrumentSelection}
+          alt="Spectral overlay tool sort and filtering features"
+        />
         <figcaption className="c-grey-2">
           Instrument selection that supports filtering of instruments and
           sorting of&nbsp;dyes
@@ -213,7 +219,7 @@ const SOT = () => {
         }
         className="ss ss-sm project-details-gap"
       >
-        <img src={SSFullscreen} alt="" />
+        <img src={SSFullscreen} alt="Spectral overlay tool fullscreen mode" />
         <figcaption className="c-grey-2">
           Fullscreen mode for a larger view of the&nbsp;charts
         </figcaption>

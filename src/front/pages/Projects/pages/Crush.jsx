@@ -142,9 +142,9 @@ const Crush = () => {
           }
           className="ss ss-sm"
         >
-          <img src={SSStart} alt="" />
+          <img src={SSStart} alt="qPCR Crush start screen" />
           <figcaption className="c-grey-2">
-            Screenshot of start&nbsp;screen
+            The qPCR Crush start screen, the first screen the player&nbsp;sees
           </figcaption>
         </BlindFrame>
         <BlindFrame
@@ -159,9 +159,9 @@ const Crush = () => {
           }
           className="ss ss-sm"
         >
-          <img src={SSBoard} alt="" />
+          <img src={SSBoard} alt="qPCR Crush tile-matching board" />
           <figcaption className="c-grey-2">
-            Screenshot of tile-matching&nbsp;board
+            The qPCR Crush tile-matching board, where the gameplay&nbsp;occurs
           </figcaption>
         </BlindFrame>
       </section>
@@ -178,7 +178,7 @@ const Crush = () => {
         }
         className="ss ss-lg project-details-gap"
       >
-        <img src={SSBrowser} alt="" />
+        <img src={SSBrowser} alt="qPCR Crush on qPCR Design Lab" />
         <figcaption className="c-grey-2">
           qPCR Crush game and leaderboards on the
           qPCR&nbsp;Design&nbsp;Lab&nbsp;microsite
