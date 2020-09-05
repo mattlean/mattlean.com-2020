@@ -48,7 +48,9 @@
     margin-top: size.$size-81;
 
     > h3 {
+      align-self: start;
       grid-column: span 3;
+      justify-self: start;
     }
 
     > p {
@@ -57,7 +59,9 @@
     }
 
     > .cta {
+      align-self: start;
       grid-column: span 3/-1;
+      justify-self: start;
     }
   }
 

@@ -32,6 +32,10 @@
       > a {
         text-decoration: none;
 
+        > h2 {
+          display: inline-block;
+        }
+
         &:hover > h2 {
           text-decoration: underline;
         }
