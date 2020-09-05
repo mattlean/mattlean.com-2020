@@ -122,7 +122,7 @@ const CSSOT = () => {
             </a>{' '}
             which was already seeing decline in support at the time, and the
             company recognized that they would need to port the tool to work
-            natively in the browser to ensure its longevity.
+            natively in the browser to ensure its&nbsp;longevity.
           </p>
           <p>
             They also had plans to launch the{' '}
@@ -137,7 +137,7 @@ const CSSOT = () => {
             , a microsite that offered various resources and tools about
             quantitative polymerase chain reaction targeted to both new and
             experienced users. The spectral overlay tool would be one of the
-            primary tools to be featured on the site.
+            primary tools to be featured on the&nbsp;site.
           </p>
           <p>
             The tool has received periodic updates after its initial release.
@@ -149,8 +149,8 @@ const CSSOT = () => {
               target="_blank"
               className="a-grey-1"
             >
-              the tool can still be found live on the LGC Biosearch Technologies
-              website
+              the tool can still be found live on the LGC
+              Biosearch&nbsp;Technologies&nbsp;website
             </a>
             .
           </p>
@@ -164,7 +164,7 @@ const CSSOT = () => {
               wireframes and wireflows together. This design supported both
               desktop and mobile devices. We then quickly iterated through
               several prototypes of the application until we settled on the
-              finalized layout.
+              finalized&nbsp;layout.
             </p>
             <p className="c-grey-1 mb-4">
               In 2015, Biosearch Technologies was acquired by{' '}
@@ -177,7 +177,8 @@ const CSSOT = () => {
                 LGC
               </a>
               . Because of this they reapproached me to perform some visual
-              design updates that incorporated their new branding guidelines.
+              design updates that incorporated their new
+              branding&nbsp;guidelines.
             </p>
             <h3 className="h-7 mb-1.5">Settling on a Technology Stack</h3>
             <p className="mb-4 c-grey-1">
@@ -221,7 +222,8 @@ const CSSOT = () => {
               >
                 Google Charts
               </a>{' '}
-              because of its support for area charts and clear documentation.
+              because of its support for area charts and
+              clear&nbsp;documentation.
             </p>
             <h3 className="h-7 mb-1.5">Custom Layout vs. Bootstrap Grid</h3>
             <p className="c-grey-1 mb-4">
@@ -248,7 +250,7 @@ const CSSOT = () => {
               >
                 media queries
               </a>{' '}
-              in order to have complete control.
+              in order to have complete&nbsp;control.
             </p>
             <h3 className="h-7 mb-1.5">Project Tooling</h3>
             <p className="c-grey-1">
@@ -310,7 +312,7 @@ const CSSOT = () => {
               >
                 HTMLMinifier
               </a>
-              , and{' '}
+              , and&nbsp;
               <a
                 href="https://github.com/imagemin/imagemin"
                 rel="noreferrer"
@@ -340,8 +342,8 @@ const CSSOT = () => {
               >
                 Python
               </a>{' '}
-              to convert them into a JSON format that could be imported into the
-              application.
+              to convert them into a JSON format that could be imported into
+              the&nbsp;application.
             </p>
           </section>
           <section className="right-half sticky-media">
@@ -352,13 +354,13 @@ const CSSOT = () => {
                 className="ss ss-sm"
               />
               <figcaption className="c-grey-2">
-                An early low-fidelity wireframe of spectral overlay tool
+                An early low-fidelity wireframe of spectral overlay&nbsp;tool
               </figcaption>
             </figure>
             <figure className="ss">
               <img src={SSPrototype} alt="Spectral overlay tool prototype" />
               <figcaption className="c-grey-2">
-                An early prototype of spectral overlay tool
+                An early prototype of spectral overlay&nbsp;tool
               </figcaption>
             </figure>
           </section>
@@ -403,7 +405,7 @@ const CSSOT = () => {
           >
             Column Five
           </a>{' '}
-          and built the mockups in{' '}
+          and built the mockups in&nbsp;
           <a
             href="https://www.adobe.com/products/xd.html"
             rel="noreferrer"
@@ -458,7 +460,7 @@ const CSSOT = () => {
               target="_blank"
               className="a-grey-1"
             >
-              ECMAScript 2015 specification
+              ECMAScript 2015&nbsp;specification
             </a>
             .
           </p>
@@ -476,7 +478,7 @@ const CSSOT = () => {
             properly formatted data is now statically included within the
             bundle. That way, whenever the application starts up, it no longer
             needs to perform any transformations during runtime and it simply
-            feeds the data directly into the Google Charts API.
+            feeds the data directly into the Google Charts&nbsp;API.
           </p>
           <p>
             The styles were also completely rewritten to adopt the{' '}
@@ -507,7 +509,7 @@ const CSSOT = () => {
             >
               grid
             </a>
-            -based one.
+            -based&nbsp;one.
           </p>
         </section>
         <h3 className="h-7 left-half">Project Tooling Updates</h3>
@@ -527,7 +529,7 @@ const CSSOT = () => {
               Lean JavaScript Application Starter
             </Link>
             . It handles the same responsibilities the previous Grunt-based one
-            had, except it does it all better.
+            had, except it does it all&nbsp;better.
           </p>
           <p>
             To handle the new ES2015 syntax, webpack now compiles JavaScript
@@ -567,7 +569,7 @@ const CSSOT = () => {
             >
               Prettier
             </a>{' '}
-            now handles all formatting to keep the coding style consistent.
+            now handles all formatting to keep the coding style&nbsp;consistent.
           </p>
           <p>
             The most impactful aspect of the new tooling setup is how it handles
@@ -617,7 +619,7 @@ const CSSOT = () => {
             even though the application has more features than it has ever had.
             To prevent stale browser cache hits, unique hashes were introduced
             to the build’s file names to ensure cache invalidation when new
-            versions are deployed.
+            versions are&nbsp;deployed.
           </p>
           <p>
             The custom spreadsheet conversion command line tool was also
@@ -630,7 +632,7 @@ const CSSOT = () => {
             >
               Node.js
             </a>
-            , just to keep the entire codebase consistent in one language.
+            , just to keep the entire codebase consistent in one&nbsp;language.
           </p>
         </section>
         <figure className="ss ss-sm">
@@ -669,7 +671,7 @@ const CSSOT = () => {
               target="_blank"
               className="a-grey-1"
             >
-              Best of Web in vol. 35, no. 4
+              Best of Web in vol.&nbsp;35,&nbsp;no.&nbsp;4
             </a>
             .
           </p>
@@ -683,7 +685,7 @@ const CSSOT = () => {
               The 2020 version of the tool went live on the Biosearch
               Technologies website
             </a>{' '}
-            on September 1, 2020.
+            on September&nbsp;1,&nbsp;2020.
           </p>
         </section>
         <section className="btn-area">
