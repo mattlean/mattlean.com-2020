@@ -4,6 +4,7 @@ const { buildStyles, loadMedia } = require('../parts')
 module.exports = merge([
   buildStyles({
     cssLoaderOptions: { sourceMap: true },
+    miniCssExtractPluginOptions: { filename: 'style.css' },
     postCSSLoaderOptions: {
       config: { path: 'webpack/front/dev' },
       sourceMap: true,

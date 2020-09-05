@@ -221,6 +221,26 @@ const ML2020 = () => {
               </li>
             </ul>
           </section>
+          <section>
+            <h4>Tooling</h4>
+            <ul>
+              <li>
+                <Link to={`${ROUTE_PREFIX}alwp`} className="a-grey-1">
+                  Asset List Webpack&nbsp;Plugin
+                </Link>
+              </li>
+              <li>
+                <a
+                  href="https://webpack.js.org"
+                  rel="noreferrer"
+                  target="_blank"
+                  className="a-grey-1"
+                >
+                  webpack
+                </a>
+              </li>
+            </ul>
+          </section>
         </section>
         <section>
           <section>

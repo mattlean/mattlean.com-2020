@@ -1716,6 +1716,11 @@ assert@^1.1.1:
     object-assign "^4.1.1"
     util "0.10.3"
 
+asset-list-webpack-plugin@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/asset-list-webpack-plugin/-/asset-list-webpack-plugin-0.4.0.tgz#620c8fd68ecb3c1b8bdf2a801ac94ab6facf18c0"
+  integrity sha512-itT1iTKtv7GQHNX8JKBEqoTIH2cZBVF1INU0dGvEIq7xV/VBbY9eF5gPEhAlQzFYH2dZGpC05QBSt6Al4WaxAg==
+
 assign-symbols@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/assign-symbols/-/assign-symbols-1.0.0.tgz#59667f41fadd4f20ccbc2bb96b8d4f7f78ec0367"

@@ -1,3 +1,4 @@
+const AssetListWebpackPlugin = require('asset-list-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
@@ -80,6 +81,13 @@ exports.copyFiles = (patterns, options) => ({
       options,
     }),
   ],
+})
+
+/**
+ * Generate bundle asset list
+ */
+exports.genAssetList = ({ format, key, name }) => ({
+  plugins: [new AssetListWebpackPlugin({ format, key, name })],
 })
 
 /**

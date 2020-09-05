@@ -2,6 +2,7 @@ const merge = require('webpack-merge')
 const {
   buildStyles,
   compileJS,
+  genAssetList,
   genSourceMaps,
   loadMedia,
   minifyJS,
@@ -54,6 +55,8 @@ module.exports = merge([
       sourceMap: true,
     },
   }),
+
+  genAssetList({ format: 'object', key: 'name' }),
 
   genSourceMaps('source-map'),
 

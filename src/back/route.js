@@ -110,4 +110,10 @@ router.get(/^\/(about|blog|contact|projects)\/?|^\/$/, (req, res, next) => {
   return res.send(createTemplateString(req.url, req.params))
 })
 
+/* Test Server Error Page */
+// router.get('/test-500', (req, res, next) => {
+//   res.status(500)
+//   return next(new Error('Manual error 500 test triggered'))
+// })
+
 export default router
