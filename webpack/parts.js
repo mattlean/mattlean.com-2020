@@ -14,10 +14,10 @@ const { DefinePlugin } = require('webpack')
  */
 exports.buildStyles = ({
   cssLoaderOptions,
+  miniCssExtractPluginOptions,
   postCSSLoaderOptions,
   sassLoaderOptions,
 } = {}) => ({
-  plugins: [new MiniCssExtractPlugin()],
   module: {
     rules: [
       {
@@ -40,6 +40,7 @@ exports.buildStyles = ({
       },
     ],
   },
+  plugins: [new MiniCssExtractPlugin(miniCssExtractPluginOptions)],
 })
 
 /**

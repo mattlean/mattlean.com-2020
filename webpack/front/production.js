@@ -16,6 +16,8 @@ module.exports = merge([
     entry: `${FRONT.SRC}/index.jsx`,
 
     output: {
+      chunkFilename: '[name].[chunkhash:4].js',
+      filename: '[name].[chunkhash:4].js',
       path: FRONT.BUILD_PROD,
     },
   },
@@ -39,6 +41,7 @@ module.exports = merge([
 
   buildStyles({
     cssLoaderOptions: { sourceMap: true },
+    miniCssExtractPluginOptions: { filename: 'style.[contenthash:4].css' },
     postCSSLoaderOptions: { config: { path: 'webpack' }, sourceMap: true },
     sassLoaderOptions: {
       sassOptions: {
