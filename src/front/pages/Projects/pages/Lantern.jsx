@@ -101,25 +101,9 @@ const Lantern = () => {
       >
         <section className="c-grey-1">
           <p>
-            <strong>Lantern.js</strong> is a{' '}
-            <a
-              href="https://getbootstrap.com"
-              rel="noreferrer"
-              target="_blank"
-              className="a-grey-1"
-            >
-              Bootstrap
-            </a>
-            -powered website layout built for use as a{' '}
-            <a
-              href="https://wordpress.org"
-              rel="noreferrer"
-              target="_blank"
-              className="a-grey-1"
-            >
-              WordPress
-            </a>{' '}
-            theme or a static HTML and CSS&nbsp;template.
+            <strong>Lantern.js</strong> is a simple-to-use, lightweight,
+            customizable image lightbox that does not require any external
+            dependencies by relying on only native browser APIs and&nbsp;CSS.
           </p>
         </section>
         <a
@@ -200,7 +184,7 @@ const Lantern = () => {
             </ul>
           </section>
           <section>
-            <h4>Dev Dependencies</h4>
+            <h4>Tooling</h4>
             <ul>
               <li>
                 <a

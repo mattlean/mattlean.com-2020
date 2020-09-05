@@ -229,7 +229,7 @@ const FFUH = () => {
         </section>
         <section>
           <section>
-            <h4>Dev Dependencies</h4>
+            <h4>Testing</h4>
             <ul>
               <li>
                 <a

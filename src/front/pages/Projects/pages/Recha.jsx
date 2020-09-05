@@ -103,7 +103,7 @@ const Recha = () => {
             and tasks, the app will keep track on how you’re doing and give you
             helpful feedback like whether you’re over or under planning your
             days, what tasks you to complete consistently, what tasks you
-            struggle with, progress made toward your goal, and more.
+            struggle with, progress made toward your goal, and&nbsp;more.
           </p>
         </section>
         <a

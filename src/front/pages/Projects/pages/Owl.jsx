@@ -115,13 +115,13 @@ const Owl = () => {
               target="_blank"
               className="a-grey-1"
             >
-              Google Cloud
+              Google&nbsp;Cloud
             </a>
             .
           </p>
           <p>
             This project originally released as a school assignment, but was
-            eventually discontinued. The overall concept continues on as{' '}
+            eventually discontinued. The overall concept continues on as&nbsp;
             <Link to={`${ROUTE_PREFIX}recha`} className="a-grey-1 txtw-bold">
               Recha
             </Link>

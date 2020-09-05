@@ -104,7 +104,7 @@ const Adam = () => {
           </p>
           <p>
             The project was used to build{' '}
-            <Link to={`${ROUTE_PREFIX}crush`} className="a-grey-1">
+            <Link to={`${ROUTE_PREFIX}crush`} className="a-grey-1 txtw-bold">
               qPCR Crush
             </Link>
             , an{' '}
@@ -112,7 +112,7 @@ const Adam = () => {
               href="https://biosearchtech.com"
               rel="noreferrer"
               target="_blank"
-              className="a-grey-1 txtw-roman"
+              className="a-grey-1"
             >
               LGC Biosearch Technologies
             </a>

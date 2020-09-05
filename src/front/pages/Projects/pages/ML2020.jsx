@@ -107,7 +107,8 @@ const ML2020 = () => {
             personal website. You’re looking at it right&nbsp;now!
           </p>
           <p>
-            The project acts as a proof-of-concept for the{' '}
+            The project acts as a proof-of-concept for my other project, a
+            design system called&nbsp;
             <Link to={`${ROUTE_PREFIX}eswiss`} className="a-grey-1 txtw-bold">
               eswiss
             </Link>
@@ -130,7 +131,7 @@ const ML2020 = () => {
           rel="noreferrer"
           target="_blank"
         >
-          <Btn outline={true} className="btn-gh">
+          <Btn className="btn-gh">
             <MarkGithubIcon className="btn-icon" /> GitHub
           </Btn>
         </a>

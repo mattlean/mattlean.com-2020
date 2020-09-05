@@ -171,7 +171,7 @@ const SOT = () => {
       >
         <h3 className="h-5">Long-Term Development&nbsp;Lifecycle</h3>
         <p className="txt-7 sm:txt-6 c-grey-1">
-          In 2014 I was brought on to port the app from Flash to native browser
+          In 2014, I was brought on to port the app from Flash to native browser
           technologies alongside new features. In 2015, Biosearch Technologies
           was acquired by LGC, and the app’s styling was updated to match the
           company’s new branding guidelines. In 2020, the app’s UI was
@@ -311,7 +311,7 @@ const SOT = () => {
             </ul>
           </section>
           <section>
-            <h4>Dev Dependencies</h4>
+            <h4>Tooling</h4>
             <ul>
               <li>
                 <a

@@ -1,7 +1,9 @@
 import React, { useEffect, useRef } from 'react'
 import { Badge, Btn } from 'eswiss'
+import { Link } from 'react-router-dom'
 import BlindFrame from '../../../components/Blind/BlindFrame'
 import { getProjectData } from '../../../../common/data/project'
+import { ROUTE_PREFIX } from '../../../../common/data/route/project'
 import {
   setupBlindObservers,
   useInitAnim,
@@ -112,8 +114,11 @@ const Eswiss = () => {
             and&nbsp;accessibility.
           </p>
           <p>
-            While the project is still in alpha, the website you’re looking at
-            right now is using eswiss as a proof-of-concept.
+            While the project is still in alpha,{' '}
+            <Link to={`${ROUTE_PREFIX}ml2020`} className="a-grey-1">
+              the website you’re looking at right now
+            </Link>{' '}
+            is using eswiss as a proof-of-concept.
           </p>
         </section>
         <a
@@ -201,7 +206,7 @@ const Eswiss = () => {
             </ul>
           </section>
           <section>
-            <h4>Dev Dependencies</h4>
+            <h4>Tooling</h4>
             <ul>
               <li>
                 <a

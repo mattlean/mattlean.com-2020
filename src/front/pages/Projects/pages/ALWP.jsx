@@ -99,7 +99,7 @@ const ALWP = () => {
           <p>
             <strong>Asset List Webpack Plugin</strong> is an open source{' '}
             <a
-              href="https://expressjs.com"
+              href="https://webpack.js.org"
               rel="noreferrer"
               target="_blank"
               className="a-grey-1"

@@ -114,16 +114,18 @@ const Crush = () => {
               LGC Biosearch Technologies
             </a>{' '}
             brand. It supports play on desktops and mobile devices and includes
-            an online, real-time leaderboard system. The game also has a
-            specialized iPad version which is exclusively used at convention
-            booth promotions. This version includes a raffle system that handles
-            player rewards.
+            an online, real-time leaderboard&nbsp;system.
           </p>
           <p>
-            The project was built with another personal project of mine, a
-            browser-based 2D game engine called{' '}
+            The game also has a specialized iPad version which is exclusively
+            used at convention booth promotions. This version includes a raffle
+            system that handles player&nbsp;rewards.
+          </p>
+          <p>
+            The project was built with another project of mine, a browser-based
+            2D game engine called{' '}
             <Link to={`${ROUTE_PREFIX}adam`} className="a-grey-1 txtw-bold">
-              Adam Engine
+              Adam&nbsp;Engine
             </Link>
             .
           </p>
@@ -161,7 +163,8 @@ const Crush = () => {
         >
           <img src={SSBoard} alt="qPCR Crush tile-matching board" />
           <figcaption className="c-grey-2">
-            The qPCR Crush tile-matching board, where the gameplay&nbsp;occurs
+            The qPCR Crush tile-matching board, where the main gameplay
+            loop&nbsp;occurs
           </figcaption>
         </BlindFrame>
       </section>

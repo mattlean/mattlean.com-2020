@@ -189,12 +189,12 @@ const LeanSpace = () => {
         }
         className="subgrid-mid-desc grid"
       >
-        <h3 className="h-5">My 2015 Online Identity</h3>
+        <h3 className="h-5">My Personal Brand in 2015</h3>
         <p className="txt-7 sm:txt-6 c-grey-1">
           Lean Space was created in 2015 to demonstrate my abilities as new
-          graduate. The majority of the code was written using vanilla
-          JavaScript and Sass with an emphasis on utilizing native browser APIs
-          rather than 3rd party libraries.
+          graduate. All of the code was written using vanilla JavaScript and
+          Sass with an emphasis on usage of native browser APIs rather than 3rd
+          party&nbsp;libraries.
         </p>
         <CTA
           to={`${BLOG_PREFIX}cs-lean-space`}
@@ -304,7 +304,7 @@ const LeanSpace = () => {
             </ul>
           </section>
           <section>
-            <h4>Dev Dependencies</h4>
+            <h4>Tooling</h4>
             <ul>
               <a
                 href="https://gruntjs.com"

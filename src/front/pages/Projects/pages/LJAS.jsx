@@ -215,7 +215,7 @@ const LJAS = () => {
           alt="Screenshot of backend app built with Lean JS App Starter running in Node.js"
         />
         <figcaption className="c-grey-2">
-          Node.js REST server API built with Lean&nbsp;JS&nbsp;App&nbsp;Starter
+          Node.js REST API built with Lean&nbsp;JS&nbsp;App&nbsp;Starter
         </figcaption>
       </BlindFrame>
       <BlindFrame

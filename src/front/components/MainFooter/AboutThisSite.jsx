@@ -41,19 +41,20 @@ const AboutThisSite = ({ focusEleOnClose, isOpen, setIsOpen }) => {
         About MattLean.com
       </h1>
       <p>
-        MattLean.com is designed to be responsive, meaning it works on all
-        screen sizes, from large desktops to small mobile devices.
+        <strong>MattLean.com</strong> is designed to be responsive, meaning it
+        works on all screen sizes, from large desktop monitors to small
+        mobile&nbsp;devices.
       </p>
       <p>
         This site is also built with accessibility in mind, so it supports
-        keyboard and screen reader interactions.
+        keyboard and screen reader&nbsp;interactions.
       </p>
       <p>
         Light and dark modes are supported to accomodate different viewing
         scenarios and preferences. Light mode will automatically activate at
         6:00 AM and dark mode will automatically activate at 6:00 PM in the
         visitor’s time zone. Mode switching can also be controlled manually by
-        selecting the mode switch icon at the end of the main navigation.
+        selecting the mode switch icon at the end of the main&nbsp;navigation.
       </p>
       <p>
         The codebase was programmed with{' '}
@@ -78,14 +79,14 @@ const AboutThisSite = ({ focusEleOnClose, isOpen, setIsOpen }) => {
           rel="noreferrer"
           target="_blank"
         >
-          the project’s GitHub repository
+          the project’s GitHub&nbsp;repository
         </a>
         .
       </p>
-      <p>
+      {/* <p>
         If would like to learn more about the design and development process
-        that went into building this website, you can read the case study.
-      </p>
+        that went into building this website, you can read the case&nbsp;study.
+      </p> */}
     </Modal>
   )
 }

@@ -113,9 +113,9 @@ const Gridnik = () => {
               Adobe XD
             </a>{' '}
             plugin that extends the program’s grid generation capabilities. It
-            allows grids to be generated over any object: artboards, rectangles,
-            text, etc. Auto-calculations make sure your grids hold your desired
-            structure while still being&nbsp;valid.
+            allows grids to be generated over any object: artboards, polygons,
+            circles, text, etc. Auto-calculations make sure your grids hold your
+            desired structure while still being&nbsp;valid.
           </p>
           <p>
             The project is named after{' '}
@@ -141,7 +141,8 @@ const Gridnik = () => {
           </p>
           <p>
             <em>
-              The plugin will be available through the XD Plugin Manager soon!
+              The plugin will be available through the XD Plugin
+              Manager&nbsp;soon!
             </em>
           </p>
         </section>
