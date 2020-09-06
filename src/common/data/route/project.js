@@ -644,6 +644,7 @@ ORDER.forEach((id) => {
     routeData.desc = `Information about Matt Lean's project: ${name}`
     routeData.canon = `${CANON_ROOT}${routeData.path}`
     routeData.og_img = 'http://mattlean.com/media/social.png'
+    routeData.og_img_secure = 'https://mattlean.com/media/social.png'
     routeData.og_img_alt = 'Logo for MattLean.com'
     routeData.og_img_width = '1200'
     routeData.og_img_height = '1200'

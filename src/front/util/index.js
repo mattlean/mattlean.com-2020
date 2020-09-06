@@ -69,6 +69,7 @@ export const usePageLoadEffect = (override = {}) => {
       desc,
       keywords,
       og_img,
+      og_img_secure,
       og_img_alt,
       og_img_height,
       og_img_width,
@@ -84,6 +85,8 @@ export const usePageLoadEffect = (override = {}) => {
     if (!keywords && keywords !== null && override.keywords)
       keywords = override.keywords
     if (!og_img && og_img !== null && override.og_img) og_img = override.og_img
+    if (!og_img_secure && og_img_secure !== null && override.og_img_secure)
+      og_img_secure = override.og_img_secure
     if (!og_img && og_img_alt !== null && override.og_img_alt)
       og_img_alt = override.og_img_alt
     if (!og_img && og_img_height !== null && override.og_img_height)
@@ -106,6 +109,7 @@ export const usePageLoadEffect = (override = {}) => {
     updateMeta('name', 'twitter:description', desc)
     updateMeta('name', 'description', desc)
     updateMeta('property', 'og:image', og_img)
+    updateMeta('property', 'og:image:secure_url', og_img_secure)
     updateMeta('property', 'og:image:alt', og_img_alt)
     updateMeta('property', 'og:image:height', og_img_height)
     updateMeta('property', 'og:image:width', og_img_width)
