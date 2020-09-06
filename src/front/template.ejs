@@ -26,7 +26,7 @@
     <% if (keywords) { %><meta name="keywords" content="<%= keywords.toString() %>"><% } %>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this website properly.</noscript>
+    <noscript>JavaScript must be enabled to run this website properly.</noscript>
     <div id="root"><% if (app) { %><%- app %><% } %></div>
     <script src="<%= js %>"></script><% if (NODE_ENV === 'development') { %><script src="/dev.js"></script><% } %>
   </body>
