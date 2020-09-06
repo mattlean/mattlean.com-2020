@@ -69,6 +69,8 @@ export const useHeadDataEffect = (override = {}) => {
       keywords,
       og_img,
       og_img_alt,
+      og_img_height,
+      og_img_width,
       og_type,
       title,
       twitter_card,
@@ -81,8 +83,14 @@ export const useHeadDataEffect = (override = {}) => {
     if (!keywords && keywords !== null && override.keywords)
       keywords = override.keywords
     if (!og_img && og_img !== null && override.og_img) og_img = override.og_img
+    if (!og_img && og_img_alt !== null && override.og_img_alt)
+      og_img_alt = override.og_img_alt
+    if (!og_img && og_img_height !== null && override.og_img_height)
+      og_img_height = override.og_img_height
+    if (!og_img && og_img_width !== null && override.og_img_width)
+      og_img_width = override.og_img_width
     if (!og_type && og_type !== null && override.og_type)
-      og_type = override.og_img
+      og_type = override.og_type
     if (!title && title !== null && override.title) title = override.title
     if (!twitter_card && twitter_card !== null && override.twitter_card)
       twitter_card = override.twitter_card
@@ -98,6 +106,8 @@ export const useHeadDataEffect = (override = {}) => {
     updateMeta('name', 'description', desc)
     updateMeta('property', 'og:image', og_img)
     updateMeta('property', 'og:image:alt', og_img_alt)
+    updateMeta('property', 'og:image:height', og_img_height)
+    updateMeta('property', 'og:image:width', og_img_width)
     updateMeta('name', 'twitter:image', twitter_img)
     updateMeta('name', 'twitter:image:alt', twitter_img_alt)
     updateMeta('property', 'og:url', canon)
