@@ -115,7 +115,10 @@ export const useHeadDataEffect = (override = {}) => {
     updateMeta('name', 'twitter:card', twitter_card)
     updateMeta('name', 'keywords', keywords)
 
+    console.log(override, pathname)
+
     if (window.isInit === true) {
+      console.log('set isInit to false')
       window.isInit = false
     } else {
       console.log('got here UH OH')
@@ -125,5 +128,5 @@ export const useHeadDataEffect = (override = {}) => {
         ga('send', 'pageview')
       }
     }
-  }, [override, pathname])
+  }, [pathname]) // eslint-disable-line react-hooks/exhaustive-deps
 }
