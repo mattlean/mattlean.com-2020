@@ -10,10 +10,20 @@
     </script><% } %>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <% if (desc) { %><meta name="description" content="<%= desc %>"><% } %>
-    <% if (keywords) { %><meta name="keywords" content="<%= keywords.toString() %>"><% } %>
     <% if (css) { %><link rel="stylesheet" href="<%= css %>" /><% } %>
-    <title><% if (title) { %><%- title %><% } %></title>
+    <% if (title) { %><title><%- title %></title>
+    <meta property="og:title" content="<%- title %>" />
+    <meta name="twitter:title" content="<%- title %>" /><% } %>
+    <% if (desc) { %><meta property="og:description" content="<%- desc %>" />
+    <meta name="twitter:description" content="<%- desc %>" />
+    <meta name="description" content="<%- desc %>"><% } %>
+    <% if (og_img) { %><meta property="og:image" content="<%= og_img %>" /><% } %>
+    <% if (og_img_alt) { %><meta property="og:image:alt" content="<%= og_img_alt %>" /><% } %>
+    <% if (twitter_img) { %><meta name="twitter:image" content="<%= twitter_img %>" /><% } %>
+    <% if (twitter_img_alt) { %><meta name="twitter:image:alt" content="<%= twitter_img_alt %>" /><% } %>
+    <% if (canon) { %><meta property="og:url" content="<%= canon %>" /><% } %>
+    <% if (twitter_card) { %><meta name="twitter:card" content="<%= twitter_card %>" /><% } %>
+    <% if (keywords) { %><meta name="keywords" content="<%= keywords.toString() %>"><% } %>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this website properly.</noscript>

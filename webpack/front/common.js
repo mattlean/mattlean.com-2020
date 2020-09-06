@@ -18,6 +18,7 @@ module.exports = merge([
   copyFiles([
     { from: 'src/front/assets/favicon.ico' },
     { from: 'src/front/assets/logo/logo.png' },
+    { from: 'src/front/assets/logo/social.png' },
   ]),
 
   loadSVGs(),

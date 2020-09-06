@@ -187,6 +187,11 @@ ROUTES[`${ROUTE_PREFIX}hello-world`] = {
   desc: POSTS['hello-world'].subtitle,
   path: `${ROUTE_PREFIX}hello-world`,
   canon: `${CANON_ROOT}${ROUTE_PREFIX}hello-world`,
+  og_img: 'http://mattlean.com/social.png',
+  og_img_alt: 'Logo for MattLean.com',
+  twitter_card: 'summary',
+  twitter_img: 'http://mattlean.com/social.png',
+  twitter_img_alt: 'Logo for MattLean.com',
   keywords: [
     'matt lean',
     'matthew lean',

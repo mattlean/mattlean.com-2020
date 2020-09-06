@@ -49,16 +49,32 @@ export const createTemplateString = (location, params, context = {}) => {
     </StaticRouter>
   )
 
-  const { desc, keywords, title } = genHeadData(location)
+  const {
+    canon,
+    desc,
+    keywords,
+    og_img,
+    og_img_alt,
+    title,
+    twitter_card,
+    twitter_img,
+    twitter_img_alt,
+  } = genHeadData(location)
 
   // TODO: render minified HTML for production
   return render(TEMPLATE, {
     app,
+    canon,
     css: cssFilename,
     desc,
-    keywords,
     js: jsFilename,
+    keywords,
+    og_img,
+    og_img_alt,
     title,
+    twitter_card,
+    twitter_img,
+    twitter_img_alt,
     NODE_ENV: process.env.NODE_ENV,
   })
 }

@@ -36,12 +36,20 @@ export const genFormattedPath = (pathname) => {
  */
 export const genHeadData = (pathname) => {
   const path = genFormattedPath(pathname)
-  let desc, keywords, title
+  let canon, desc, keywords, og_img, title, twitter_card, twitter_img
   const routeData = getRouteData(path)
 
   if (routeData) {
     // Route exists in routeData
-    ;({ desc, keywords, title } = routeData)
+    ;({
+      canon,
+      desc,
+      keywords,
+      og_img,
+      title,
+      twitter_card,
+      twitter_img,
+    } = routeData)
 
     if (path !== '/') {
       title += TITLE_SUFFIX
@@ -52,5 +60,5 @@ export const genHeadData = (pathname) => {
     ;({ desc, keywords } = getRouteData('/'))
   }
 
-  return { desc, keywords, title }
+  return { canon, desc, keywords, og_img, title, twitter_card, twitter_img }
 }

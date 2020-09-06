@@ -643,6 +643,11 @@ ORDER.forEach((id) => {
     routeData.title = `Project: ${name}`
     routeData.desc = `Information about Matt Lean's project: ${name}`
     routeData.canon = `${CANON_ROOT}${routeData.path}`
+    routeData.og_img = 'http://mattlean.com/social.png'
+    routeData.og_img_alt = 'Logo for MattLean.com'
+    routeData.twitter_card = 'summary'
+    routeData.twitter_img = 'http://mattlean.com/social.png'
+    routeData.twitter_img_alt = 'Logo for MattLean.com'
   }
 })
 

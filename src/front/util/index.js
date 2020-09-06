@@ -22,56 +22,83 @@ export const createObserver = (ref, options, cb) => {
 
 /**
  * Update meta element by updating its content attribute and add or remove element when necessary
- * @param {string} name Meta name attribute value
- * @param {string} value Meta content attribute value
+ * @param {string} attribute Meta attribute
+ * @param {string} attributeVal Meta attribute value
+ * @param {string} contentVal Meta content attribute value
  * @return {Object|null} Modified existing or newly added meta element, or null if the element was removed
  */
-export const updateMeta = (name, value) => {
-  let ele = document.querySelector(`meta[name="${name}"]`)
+export const updateMeta = (attribute, attributeVal, contentVal) => {
+  let ele = document.querySelector(`meta[${attribute}="${attributeVal}"]`)
 
-  if (!ele && !value) {
+  if (!ele && !contentVal) {
     return null
   }
 
-  // Meta element exists but value doesn't
-  if (ele && !value) {
+  // Meta element exists but contentVal doesn't
+  if (ele && !contentVal) {
     // Remove existing meta element
     ele.remove()
     return null
   }
 
-  // Meta element doesn't exist but value does
-  if (!ele && value) {
+  // Meta element doesn't exist but contentVal does
+  if (!ele && contentVal) {
     // Create new meta element and append it to head element
     ele = document.createElement('meta')
-    ele.setAttribute('name', name)
+    ele.setAttribute(attribute, attributeVal)
     document.head.appendChild(ele)
   }
 
-  // If value is array, convert to string where each item is separated by a comma
-  if (Array.isArray(value)) value = value.toString()
+  // If contentVal is array, convert to string where each item is separated by a comma
+  if (Array.isArray(contentVal)) contentVal = contentVal.toString()
 
-  // Set meta element content to new value
-  ele.setAttribute('content', value)
+  // Set meta element content to new contentVal
+  ele.setAttribute('content', contentVal)
 }
 
 /**
  * Custom hook that determines the values for title and meta elements in head element
  * @param {Object} [Object={}] Head data used to override default head data
  */
-export const useHeadDataEffect = ({ desc, keywords, title } = {}) => {
+export const useHeadDataEffect = (override = {}) => {
   const { pathname } = useLocation()
   useEffect(() => {
     const headData = genHeadData(pathname)
 
-    /* eslint-disable react-hooks/exhaustive-deps */
-    if (!desc && desc !== null) desc = headData.desc
-    if (!keywords && keywords !== null) keywords = headData.keywords
-    if (!title && title !== null) title = headData.title
-    /* eslint-enable react-hooks/exhaustive-deps */
+    let {
+      canon,
+      desc,
+      keywords,
+      og_img,
+      og_img_alt,
+      title,
+      twitter_card,
+      twitter_img,
+      twitter_img_alt,
+    } = headData
+
+    if (!canon && canon !== null) canon = override.canon
+    if (!desc && desc !== null) desc = override.desc
+    if (!keywords && keywords !== null) keywords = override.keywords
+    if (!og_img && og_img !== null) og_img = override.og_img
+    if (!title && title !== null) title = override.title
+    if (!twitter_card && twitter_card !== null)
+      twitter_card = override.twitter_card
+    if (!twitter_img && twitter_img !== null) twitter_img = override.twitter_img
 
     document.title = title
-    updateMeta('description', desc)
-    updateMeta('keywords', keywords)
-  }, [pathname])
+
+    updateMeta('property', 'og:title', title)
+    updateMeta('name', 'twitter:title', title)
+    updateMeta('property', 'og:description', desc)
+    updateMeta('name', 'twitter:desc', desc)
+    updateMeta('name', 'description', desc)
+    updateMeta('property', 'og:image', og_img)
+    updateMeta('property', 'og:image:alt', og_img_alt)
+    updateMeta('name', 'twitter:image', twitter_img)
+    updateMeta('name', 'twitter:image:alt', twitter_img_alt)
+    updateMeta('property', 'og:url', canon)
+    updateMeta('name', 'twitter:card', twitter_card)
+    updateMeta('name', 'keywords', keywords)
+  }, [override, pathname])
 }
