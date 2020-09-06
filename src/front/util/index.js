@@ -123,9 +123,8 @@ export const usePageLoadEffect = (override = {}) => {
       if (!__IS_DEVELOPMENT__) {
         console.log('page view sent', pathname)
         /* eslint-disable no-undef */
-        console.log('ga', ga)
-        ga('set', 'page', pathname)
-        ga('send', 'pageview')
+        console.log('gtag', gtag)
+        gtag('config', 'UA-67002303-1', { page_path: pathname })
         /* eslint-enable no-undef */
       }
     }
