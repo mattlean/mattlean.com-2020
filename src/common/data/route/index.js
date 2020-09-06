@@ -1,15 +1,14 @@
 import BLOG_ROUTES from './blog'
 import PROJECT_ROUTES from './project'
-
-export const TITLE_SUFFIX = ' | Matt Lean'
-
-export const NO_MATCH_TITLE = `404'd!! FiLE NOT FOUND${TITLE_SUFFIX}`
+import { CANON_ROOT } from './const'
 
 const ROUTES = {
   '/': {
     title: 'Matt Lean — Full-Stack Web Developer & UI/UX Designer',
     desc:
       'The personal website of Matt Lean, a Silicon Valley full-stack web developer and UI/UX designer.',
+    path: '/',
+    canon: CANON_ROOT,
     keywords: [
       'matt lean',
       'matthew lean',
@@ -87,6 +86,8 @@ const ROUTES = {
     title: 'About',
     desc:
       'About Matt Lean, a Silicon Valley full-stack web developer and UI/UX designer.',
+    path: '/about',
+    canon: `${CANON_ROOT}/about`,
     keywords: [
       'matt lean',
       'matthew lean',
@@ -164,6 +165,8 @@ const ROUTES = {
     title: 'Blog',
     desc:
       "Matt Lean's blog, the thoughts and experiences of a Silicon Valley full-stack web developer and UI/UX designer.",
+    path: '/blog',
+    canon: `${CANON_ROOT}/blog`,
     keywords: [
       'matt lean',
       'matthew lean',
@@ -243,6 +246,8 @@ const ROUTES = {
     title: 'Contact',
     desc:
       'How to contact Matt Lean, a Silicon Valley full-stack web developer and UI/UX designer.',
+    path: '/contact',
+    canon: `${CANON_ROOT}/contact`,
     keywords: [
       'matt lean',
       'matthew lean',
@@ -323,6 +328,8 @@ const ROUTES = {
     title: 'Projects',
     desc:
       "Matt Lean's projects, the work of a Silicon Valley full-stack web developer and UI/UX designer.",
+    path: '/projects',
+    canon: `${CANON_ROOT}/projects`,
     keywords: [
       'matt lean',
       'matthew lean',

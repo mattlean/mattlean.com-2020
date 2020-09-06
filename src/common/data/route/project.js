@@ -1,10 +1,13 @@
+import { CANON_ROOT } from './const'
+import { ORDER, getProjectData } from '../project'
+
 export const ROUTE_PREFIX = '/projects/'
 
 const ROUTES = {}
 
-ROUTES[`${ROUTE_PREFIX}adam`] = {
-  title: 'Project: Adam Engine',
-  desc: "Information about Matt Lean's project: Adam Engine",
+let path = `${ROUTE_PREFIX}adam`
+ROUTES[path] = {
+  path,
   keywords: [
     'matt lean',
     'matthew lean',
@@ -42,9 +45,9 @@ ROUTES[`${ROUTE_PREFIX}adam`] = {
   ],
 }
 
-ROUTES[`${ROUTE_PREFIX}alwp`] = {
-  title: 'Project: Asset List Webpack Plugin',
-  desc: "Information about Matt Lean's project: Asset List Webpack Plugin",
+path = `${ROUTE_PREFIX}alwp`
+ROUTES[path] = {
+  path,
   keywords: [
     'matt lean',
     'matthew lean',
@@ -83,9 +86,9 @@ ROUTES[`${ROUTE_PREFIX}alwp`] = {
   ],
 }
 
-ROUTES[`${ROUTE_PREFIX}checkpoint`] = {
-  title: 'Project: Checkpoint.js',
-  desc: "Information about Matt Lean's project: Checkpoint.js",
+path = `${ROUTE_PREFIX}checkpoint`
+ROUTES[path] = {
+  path,
   keywords: [
     'matt lean',
     'matthew lean',
@@ -123,9 +126,9 @@ ROUTES[`${ROUTE_PREFIX}checkpoint`] = {
   ],
 }
 
-ROUTES[`${ROUTE_PREFIX}crush`] = {
-  title: 'Project: qPCR Crush',
-  desc: "Information about Matt Lean's project: qPCR Crush",
+path = `${ROUTE_PREFIX}crush`
+ROUTES[path] = {
+  path,
   keywords: [
     'matt lean',
     'matthew lean',
@@ -167,9 +170,9 @@ ROUTES[`${ROUTE_PREFIX}crush`] = {
   ],
 }
 
-ROUTES[`${ROUTE_PREFIX}eswiss`] = {
-  title: 'Project: eswiss',
-  desc: "Information about Matt Lean's project: eswiss",
+path = `${ROUTE_PREFIX}eswiss`
+ROUTES[path] = {
+  path,
   keywords: [
     'matt lean',
     'matthew lean',
@@ -207,9 +210,9 @@ ROUTES[`${ROUTE_PREFIX}eswiss`] = {
   ],
 }
 
-ROUTES[`${ROUTE_PREFIX}ffuh`] = {
-  title: 'Project: express-ffuh',
-  desc: "Information about Matt Lean's project: express-ffuh",
+path = `${ROUTE_PREFIX}ffuh`
+ROUTES[path] = {
+  path,
   keywords: [
     'matt lean',
     'matthew lean',
@@ -245,9 +248,9 @@ ROUTES[`${ROUTE_PREFIX}ffuh`] = {
   ],
 }
 
-ROUTES[`${ROUTE_PREFIX}gridnik`] = {
-  title: 'Project: Gridnik',
-  desc: "Information about Matt Lean's project: Gridnik",
+path = `${ROUTE_PREFIX}gridnik`
+ROUTES[path] = {
+  path,
   keywords: [
     'matt lean',
     'matthew lean',
@@ -281,9 +284,9 @@ ROUTES[`${ROUTE_PREFIX}gridnik`] = {
   ],
 }
 
-ROUTES[`${ROUTE_PREFIX}lantern`] = {
-  title: 'Project: Lantern.js',
-  desc: "Information about Matt Lean's project: Lantern.js",
+path = `${ROUTE_PREFIX}lantern`
+ROUTES[path] = {
+  path,
   keywords: [
     'matt lean',
     'matthew lean',
@@ -318,9 +321,9 @@ ROUTES[`${ROUTE_PREFIX}lantern`] = {
   ],
 }
 
-ROUTES[`${ROUTE_PREFIX}lean-space`] = {
-  title: 'Project: Lean Space',
-  desc: "Information about Matt Lean's project: Lean Space",
+path = `${ROUTE_PREFIX}lean-space`
+ROUTES[path] = {
+  path,
   keywords: [
     'matt lean',
     'matthew lean',
@@ -364,10 +367,9 @@ ROUTES[`${ROUTE_PREFIX}lean-space`] = {
   ],
 }
 
-ROUTES[`${ROUTE_PREFIX}ljas`] = {
-  title: 'Project: Lean JavaScript Application Starter',
-  desc:
-    "Information about Matt Lean's project: Lean JavaScript Application Starter",
+path = `${ROUTE_PREFIX}ljas`
+ROUTES[path] = {
+  path,
   keywords: [
     'matt lean',
     'matthew lean',
@@ -407,9 +409,9 @@ ROUTES[`${ROUTE_PREFIX}ljas`] = {
   ],
 }
 
-ROUTES[`${ROUTE_PREFIX}ml2020`] = {
-  title: 'Project: MattLean.com',
-  desc: "Information about Matt Lean's project: MattLean.com",
+path = `${ROUTE_PREFIX}ml2020`
+ROUTES[path] = {
+  path,
   keywords: [
     'matt lean',
     'matthew lean',
@@ -452,9 +454,9 @@ ROUTES[`${ROUTE_PREFIX}ml2020`] = {
   ],
 }
 
-ROUTES[`${ROUTE_PREFIX}owl`] = {
-  title: 'Project: Project Owl',
-  desc: "Information about Matt Lean's project: Project Owl",
+path = `${ROUTE_PREFIX}owl`
+ROUTES[path] = {
+  path,
   keywords: [
     'matt lean',
     'matthew lean',
@@ -491,9 +493,9 @@ ROUTES[`${ROUTE_PREFIX}owl`] = {
   ],
 }
 
-ROUTES[`${ROUTE_PREFIX}recha`] = {
-  title: 'Project: Recha',
-  desc: "Information about Matt Lean's project: Recha",
+path = `${ROUTE_PREFIX}recha`
+ROUTES[path] = {
+  path,
   keywords: [
     'matt lean',
     'matthew lean',
@@ -526,9 +528,9 @@ ROUTES[`${ROUTE_PREFIX}recha`] = {
   ],
 }
 
-ROUTES[`${ROUTE_PREFIX}sot`] = {
-  title: 'Project: Spectral Overlay Tool',
-  desc: "Information about Matt Lean's project: Spectral Overlay Tool",
+path = `${ROUTE_PREFIX}sot`
+ROUTES[path] = {
+  path,
   keywords: [
     'matt lean',
     'matthew lean',
@@ -582,9 +584,9 @@ ROUTES[`${ROUTE_PREFIX}sot`] = {
   ],
 }
 
-ROUTES[`${ROUTE_PREFIX}themeboot`] = {
-  title: 'Project: ThemeBoot',
-  desc: "Information about Matt Lean's project: ThemeBoot",
+path = `${ROUTE_PREFIX}themeboot`
+ROUTES[path] = {
+  path,
   keywords: [
     'matt lean',
     'matthew lean',
@@ -632,5 +634,16 @@ ROUTES[`${ROUTE_PREFIX}themeboot`] = {
     'project',
   ],
 }
+
+ORDER.forEach((id) => {
+  const { name } = getProjectData(id)
+  const routeData = ROUTES[`${ROUTE_PREFIX}${id}`]
+
+  if (routeData) {
+    routeData.title = `Project: ${name}`
+    routeData.desc = `Information about Matt Lean's project: ${name}`
+    routeData.canon = `${CANON_ROOT}${routeData.path}`
+  }
+})
 
 export default ROUTES

@@ -1,4 +1,5 @@
-import { getRouteData, TITLE_SUFFIX } from './data/route'
+import { getRouteData } from './data/route'
+import { TITLE_SUFFIX } from './data/route/const'
 
 /**
  * Generate path array
@@ -43,7 +44,7 @@ export const genHeadData = (pathname) => {
     ;({ desc, keywords, title } = routeData)
 
     if (path !== '/') {
-      title = `${title}${TITLE_SUFFIX}`
+      title += TITLE_SUFFIX
     }
   } else {
     // Route not found in routeData, use default values

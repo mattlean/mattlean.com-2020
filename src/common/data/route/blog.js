@@ -1,12 +1,18 @@
+import { CANON_ROOT } from './const'
 import { POSTS } from '../post'
 
 export const ROUTE_PREFIX = '/blog/'
 
+const CS_PREFIX = 'Case Study: '
+const BLOG_SUFFIX = ' — Blog'
+
 const ROUTES = {}
 
 ROUTES[`${ROUTE_PREFIX}cs-lean-space`] = {
-  title: 'Case Study: Lean Space — Blog',
+  title: `${CS_PREFIX}Lean Space${BLOG_SUFFIX}`,
   desc: POSTS['cs-lean-space'].subtitle,
+  path: `${ROUTE_PREFIX}cs-lean-space`,
+  canon: `${CANON_ROOT}${ROUTE_PREFIX}cs-lean-space`,
   keywords: [
     'matt lean',
     'matthew lean',
@@ -89,8 +95,10 @@ ROUTES[`${ROUTE_PREFIX}cs-lean-space`] = {
 }
 
 ROUTES[`${ROUTE_PREFIX}cs-sot`] = {
-  title: 'Case Study: Spectral Overlay Tool — Blog',
+  title: `${CS_PREFIX}Spectral Overlay Tool${BLOG_SUFFIX}`,
   desc: POSTS['cs-sot'].subtitle,
+  path: `${ROUTE_PREFIX}cs-sot`,
+  canon: `${CANON_ROOT}${ROUTE_PREFIX}cs-sot`,
   keywords: [
     'matt lean',
     'matthew lean',
@@ -175,8 +183,10 @@ ROUTES[`${ROUTE_PREFIX}cs-sot`] = {
 }
 
 ROUTES[`${ROUTE_PREFIX}hello-world`] = {
-  title: 'Hello world! — Blog',
+  title: `Hello world!${BLOG_SUFFIX}`,
   desc: POSTS['hello-world'].subtitle,
+  path: `${ROUTE_PREFIX}hello-world`,
+  canon: `${CANON_ROOT}${ROUTE_PREFIX}hello-world`,
   keywords: [
     'matt lean',
     'matthew lean',

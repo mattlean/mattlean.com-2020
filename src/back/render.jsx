@@ -6,7 +6,7 @@ import App from '../front/components/App'
 import ERR_TEMPLATE from './err/err_template.ejs'
 import TEMPLATE from '../front/template.ejs'
 import { genHeadData } from '../common/util'
-import { NO_MATCH_TITLE } from '../common/data/route'
+import { NO_MATCH_TITLE } from '../common/data/route/const'
 
 let FRONT_ASSETS = {}
 if (process.env.NODE_ENV === 'production') {

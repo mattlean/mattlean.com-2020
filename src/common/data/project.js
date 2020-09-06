@@ -2,7 +2,7 @@ import { genTagIDNameArray } from './tag'
 import FeaturedEswiss from '../../front/assets/featured/eswiss-featured.jpg'
 import FeaturedGridnik from '../../front/assets/featured/gridnik-featured.jpg'
 
-const ORDER = [
+export const ORDER = [
   'sot',
   'ml2020',
   'gridnik',
@@ -19,6 +19,7 @@ const ORDER = [
   'themeboot',
   'owl',
 ]
+
 const PROJECTS = {
   adam: {
     id: 'adam',
