@@ -117,15 +117,11 @@ export const usePageLoadEffect = (override = {}) => {
     updateMeta('name', 'keywords', keywords)
 
     if (window.isInit === true) {
-      console.log('set isInit to false')
       window.isInit = false
     } else {
       if (!__IS_DEVELOPMENT__) {
-        console.log('page view sent', pathname)
-        /* eslint-disable no-undef */
-        console.log('gtag', gtag)
+        // eslint-disable-next-line no-undef
         gtag('config', 'UA-67002303-1', { page_path: pathname })
-        /* eslint-enable no-undef */
       }
     }
   }, [pathname]) // eslint-disable-line react-hooks/exhaustive-deps
