@@ -386,8 +386,8 @@ const CSSOT = () => {
             className="ss ss-lg"
           />
           <figcaption className="c-grey-2">
-            2015 layout for spectral overlay tool adapting to different mobile
-            devices with different screen&nbsp;dimensions
+            2015 layout for spectral overlay tool adapting to different devices
+            of varying screen&nbsp;dimensions
           </figcaption>
         </figure>
         <h2 className="sbs-header left-half h-2 md:h-4 mb-1.5rem">

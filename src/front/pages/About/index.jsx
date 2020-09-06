@@ -122,19 +122,28 @@ const About = () => {
           </p>
           <p>
             For college I moved to northern California to study computer science
-            at the University of California, Santa Cruz. Because I had been
-            self-taught up until this point, it was here that I began to truly
-            realize the scope and diversity in opportunities the field offered.
-            I had been completely oblivious to computer science fundamentals,
-            and I began to study topics that online tutorials never directed me
-            to like data structure and algorithm analysis, assembly, computer
-            architecture, and more. I also tried to step away from web
-            programming to explore other specializations like graphics
-            programming, network programming, game programming, virtual reality,
-            and more. At the end of my studies I realized that it made the most
-            sense to come full circle and combine my formal computer science
-            education with my previous “street” web coding experiences to find a
-            job in Silicon Valley as a specialist in web&nbsp;technologies.
+            at the{' '}
+            <a
+              href="https://ucsc.edu"
+              rel="noreferrer"
+              target="_blank"
+              className="a-grey-1"
+            >
+              University of California, Santa Cruz
+            </a>
+            . Because I had been self-taught up until this point, it was here
+            that I began to truly realize the scope and diversity in
+            opportunities the field offered. I had been completely oblivious to
+            computer science fundamentals, and I began to study topics that
+            online tutorials never directed me to like data structure and
+            algorithm analysis, assembly, computer architecture, and more. I
+            also tried to step away from web programming to explore other
+            specializations like graphics programming, network programming, game
+            programming, virtual reality, and more. At the end of my studies I
+            realized that it made the most sense to come full circle and combine
+            my formal computer science education with my previous “street” web
+            coding experiences to find a job in Silicon Valley as a specialist
+            in web&nbsp;technologies.
           </p>
           <p>
             Since graduating and receiving my Bachelor of Science degree in
@@ -151,9 +160,17 @@ const About = () => {
               open source experiments on my GitHub
             </a>
             . As I currently live in South Bay, occasionally when I have extra
-            time, I take an online or night class at De Anza College where I am
-            sluggishly working towards an associate degree in Graphic &
-            Interactive&nbsp;Design.
+            time, I take an online or night class at{' '}
+            <a
+              href="http://deanza.edu"
+              rel="noreferrer"
+              target="_blank"
+              className="a-grey-1"
+            >
+              De Anza College
+            </a>{' '}
+            where I am sluggishly working towards an associate degree in Graphic
+            & Interactive&nbsp;Design.
           </p>
         </motion.section>
         <section className="closing">

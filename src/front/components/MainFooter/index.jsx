@@ -83,6 +83,11 @@ const MainFooter = () => {
             variants={VARIANTS}
           >
             <li>
+              <Link to="/" className="a-grey-2">
+                Home
+              </Link>
+            </li>
+            <li>
               <Link to="/about" className="a-grey-2">
                 About
               </Link>
