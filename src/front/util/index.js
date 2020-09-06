@@ -91,7 +91,7 @@ export const useHeadDataEffect = (override = {}) => {
     updateMeta('property', 'og:title', title)
     updateMeta('name', 'twitter:title', title)
     updateMeta('property', 'og:description', desc)
-    updateMeta('name', 'twitter:desc', desc)
+    updateMeta('name', 'twitter:description', desc)
     updateMeta('name', 'description', desc)
     updateMeta('property', 'og:image', og_img)
     updateMeta('property', 'og:image:alt', og_img_alt)
