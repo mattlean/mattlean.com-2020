@@ -23,12 +23,6 @@ router.get(
 )
 
 router.get(
-  /^(\/blog\/hello-world\/?|^\/blog\/hello-world\/index.html)$/,
-  (req, res) =>
-    res.redirect(301, 'http://leanspace.mattlean.com/blog/hello-world')
-)
-
-router.get(
   /^(\/blog\/spectral-overlay-tool\/?|^\/blog\/spectral-overlay-tool\/index.html)$/,
   (req, res) => res.redirect(301, '/blog/cs-sot')
 )
