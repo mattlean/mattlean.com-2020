@@ -15,7 +15,7 @@ const errHandler = (err, req, res, next) => {
   if (res.statusCode === 500) {
     title = '500: Internal Server&nbsp;Error'
   } else {
-    title = `${res.statusCode}: Server Error`
+    title = `${res.statusCode}: Server&nbsp;Error`
   }
 
   res.send(createErrTemplateString(title))
