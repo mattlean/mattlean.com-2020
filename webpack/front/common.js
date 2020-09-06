@@ -23,6 +23,10 @@ module.exports = merge([
       from: 'src/front/assets/posts/cs-lean-space/lean-space-social.png',
       to: 'media',
     },
+    {
+      from: 'src/front/assets/posts/cs-sot/sot-social.png',
+      to: 'media',
+    },
   ]),
 
   loadSVGs(),

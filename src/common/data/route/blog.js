@@ -105,8 +105,12 @@ ROUTES[`${ROUTE_PREFIX}cs-sot`] = {
   desc: POSTS['cs-sot'].subtitle,
   path: `${ROUTE_PREFIX}cs-sot`,
   canon: `${CANON_ROOT}${ROUTE_PREFIX}cs-sot`,
+  og_img: 'http://mattlean.com/media/sot-social.png',
+  og_img_alt: 'Chart from spectral overlay tool',
   og_type: 'article',
   twitter_card: 'summary',
+  twitter_img: 'http://mattlean.com/media/sot-social.png',
+  twitter_img_alt: 'Chart from spectral overlay tool',
   keywords: [
     'matt lean',
     'matthew lean',
