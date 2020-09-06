@@ -63,28 +63,31 @@ export const updateMeta = (attribute, attributeVal, contentVal) => {
 export const useHeadDataEffect = (override = {}) => {
   const { pathname } = useLocation()
   useEffect(() => {
-    const headData = genHeadData(pathname)
-
     let {
       canon,
       desc,
       keywords,
       og_img,
       og_img_alt,
+      og_type,
       title,
       twitter_card,
       twitter_img,
       twitter_img_alt,
-    } = headData
+    } = genHeadData(pathname)
 
-    if (!canon && canon !== null) canon = override.canon
-    if (!desc && desc !== null) desc = override.desc
-    if (!keywords && keywords !== null) keywords = override.keywords
-    if (!og_img && og_img !== null) og_img = override.og_img
-    if (!title && title !== null) title = override.title
-    if (!twitter_card && twitter_card !== null)
+    if (!canon && canon !== null && override.canon) canon = override.canon
+    if (!desc && desc !== null && override.desc) desc = override.desc
+    if (!keywords && keywords !== null && override.keywords)
+      keywords = override.keywords
+    if (!og_img && og_img !== null && override.og_img) og_img = override.og_img
+    if (!og_type && og_type !== null && override.og_type)
+      og_type = override.og_img
+    if (!title && title !== null && override.title) title = override.title
+    if (!twitter_card && twitter_card !== null && override.twitter_card)
       twitter_card = override.twitter_card
-    if (!twitter_img && twitter_img !== null) twitter_img = override.twitter_img
+    if (!twitter_img && twitter_img !== null && override.twitter_img)
+      twitter_img = override.twitter_img
 
     document.title = title
 
@@ -98,6 +101,7 @@ export const useHeadDataEffect = (override = {}) => {
     updateMeta('name', 'twitter:image', twitter_img)
     updateMeta('name', 'twitter:image:alt', twitter_img_alt)
     updateMeta('property', 'og:url', canon)
+    updateMeta('property', 'og:type', og_type)
     updateMeta('name', 'twitter:card', twitter_card)
     updateMeta('name', 'keywords', keywords)
   }, [override, pathname])

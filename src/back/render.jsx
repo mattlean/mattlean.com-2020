@@ -55,6 +55,7 @@ export const createTemplateString = (location, params, context = {}) => {
     keywords,
     og_img,
     og_img_alt,
+    og_type,
     title,
     twitter_card,
     twitter_img,
@@ -71,6 +72,7 @@ export const createTemplateString = (location, params, context = {}) => {
     keywords,
     og_img,
     og_img_alt,
+    og_type,
     title,
     twitter_card,
     twitter_img,
@@ -94,11 +96,18 @@ export const createNoMatchTemplateString = (location, params, context = {}) => {
 
   return render(TEMPLATE, {
     app,
+    canon: '',
     css: cssFilename,
     desc: '',
-    keywords: '',
     js: jsFilename,
+    keywords: '',
+    og_img: '',
+    og_img_alt: '',
+    og_type: '',
     title: NO_MATCH_TITLE,
+    twitter_card: '',
+    twitter_img: '',
+    twitter_img_alt: '',
     NODE_ENV: process.env.NODE_ENV,
   })
 }

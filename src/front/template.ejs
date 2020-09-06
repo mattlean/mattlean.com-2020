@@ -22,6 +22,7 @@
     <% if (twitter_img) { %><meta name="twitter:image" content="<%= twitter_img %>" /><% } %>
     <% if (twitter_img_alt) { %><meta name="twitter:image:alt" content="<%= twitter_img_alt %>" /><% } %>
     <% if (canon) { %><meta property="og:url" content="<%= canon %>" /><% } %>
+    <% if (og_type) { %><meta property="og:type" content="<%= og_type %>" /><% } %>
     <% if (twitter_card) { %><meta name="twitter:card" content="<%= twitter_card %>" /><% } %>
     <% if (keywords) { %><meta name="keywords" content="<%= keywords.toString() %>"><% } %>
   </head>

@@ -36,7 +36,16 @@ export const genFormattedPath = (pathname) => {
  */
 export const genHeadData = (pathname) => {
   const path = genFormattedPath(pathname)
-  let canon, desc, keywords, og_img, title, twitter_card, twitter_img
+  let canon,
+    desc,
+    keywords,
+    og_img,
+    og_img_alt,
+    og_type,
+    title,
+    twitter_card,
+    twitter_img,
+    twitter_img_alt
   const routeData = getRouteData(path)
 
   if (routeData) {
@@ -46,9 +55,12 @@ export const genHeadData = (pathname) => {
       desc,
       keywords,
       og_img,
+      og_img_alt,
+      og_type,
       title,
       twitter_card,
       twitter_img,
+      twitter_img_alt,
     } = routeData)
 
     if (path !== '/') {
@@ -60,5 +72,16 @@ export const genHeadData = (pathname) => {
     ;({ desc, keywords } = getRouteData('/'))
   }
 
-  return { canon, desc, keywords, og_img, title, twitter_card, twitter_img }
+  return {
+    canon,
+    desc,
+    keywords,
+    og_img,
+    og_img_alt,
+    og_type,
+    title,
+    twitter_card,
+    twitter_img,
+    twitter_img_alt,
+  }
 }
