@@ -6,7 +6,7 @@ import {
   setupBlindObservers,
   useInitAnim,
 } from '../../../components/Blind/initAnimUtil'
-import { useHeadDataEffect } from '../../../util'
+import { usePageLoadEffect } from '../../../util'
 import NPMIcon from '../../../assets/icons/npm.svg'
 import SSLantern from '../../../assets/projects/lantern/lightbox.jpg'
 import { MarkGithubIcon } from '@primer/octicons-react'
@@ -17,7 +17,7 @@ const { company, name, tags } = getProjectData('lantern')
  * Lantern.js Project Page
  */
 const Lantern = () => {
-  useHeadDataEffect()
+  usePageLoadEffect()
 
   const srStartRef = useRef(null)
   const {

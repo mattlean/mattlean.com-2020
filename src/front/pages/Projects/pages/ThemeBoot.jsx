@@ -6,7 +6,7 @@ import {
   setupBlindObservers,
   useInitAnim,
 } from '../../../components/Blind/initAnimUtil'
-import { useHeadDataEffect } from '../../../util'
+import { usePageLoadEffect } from '../../../util'
 import SSFAQ from '../../../assets/projects/themeboot/faq-mobile.jpg'
 import SSLocation from '../../../assets/projects/themeboot/location.jpg'
 import SSFront from '../../../assets/projects/themeboot/front.jpg'
@@ -19,7 +19,7 @@ const { company, name, tags } = getProjectData('themeboot')
  * ThemeBoot Project Page
  */
 const ThemeBoot = () => {
-  useHeadDataEffect()
+  usePageLoadEffect()
 
   const srStartRef = useRef(null)
   const {

@@ -8,7 +8,7 @@ import {
   setupBlindObservers,
   useInitAnim,
 } from '../../../components/Blind/initAnimUtil'
-import { useHeadDataEffect } from '../../../util'
+import { usePageLoadEffect } from '../../../util'
 import NPMIcon from '../../../assets/icons/npm.svg'
 import { MarkGithubIcon, PlayIcon } from '@primer/octicons-react'
 
@@ -18,7 +18,7 @@ const { live, name, tags } = getProjectData('eswiss')
  * eswiss Project Page
  */
 const Eswiss = () => {
-  useHeadDataEffect()
+  usePageLoadEffect()
 
   const srStartRef = useRef(null)
   const {

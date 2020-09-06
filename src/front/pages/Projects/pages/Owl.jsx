@@ -8,7 +8,7 @@ import {
   setupBlindObservers,
   useInitAnim,
 } from '../../../components/Blind/initAnimUtil'
-import { useHeadDataEffect } from '../../../util'
+import { usePageLoadEffect } from '../../../util'
 import { MarkGithubIcon } from '@primer/octicons-react'
 
 const { name, tags } = getProjectData('owl')
@@ -17,7 +17,7 @@ const { name, tags } = getProjectData('owl')
  * Project Owl Project Page
  */
 const Owl = () => {
-  useHeadDataEffect()
+  usePageLoadEffect()
 
   const srStartRef = useRef(null)
   const {

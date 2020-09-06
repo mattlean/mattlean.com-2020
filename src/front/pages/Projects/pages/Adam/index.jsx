@@ -8,7 +8,7 @@ import {
   setupBlindObservers,
   useInitAnim,
 } from '../../../../components/Blind/initAnimUtil'
-import { useHeadDataEffect } from '../../../../util'
+import { usePageLoadEffect } from '../../../../util'
 import VidSnake from '../../../../assets/projects/adam/snake.mp4'
 import { MarkGithubIcon } from '@primer/octicons-react'
 
@@ -16,7 +16,7 @@ import { MarkGithubIcon } from '@primer/octicons-react'
  * Adam Engine Project Page
  */
 const Adam = () => {
-  useHeadDataEffect()
+  usePageLoadEffect()
   const { name, tags } = getProjectData('adam')
 
   const srStartRef = useRef(null)

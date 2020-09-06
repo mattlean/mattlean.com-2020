@@ -10,7 +10,7 @@ import {
   setupBlindObservers,
   useInitAnim,
 } from '../../../components/Blind/initAnimUtil'
-import { useHeadDataEffect } from '../../../util'
+import { usePageLoadEffect } from '../../../util'
 import SSBlogPost from '../../../assets/projects/lean-space/blog-post.jpg'
 import SSBlogPostMobile from '../../../assets/projects/lean-space/blog-post-mobile.jpg'
 import SSWork from '../../../assets/projects/lean-space/work.jpg'
@@ -23,7 +23,7 @@ const { company, live, name, tags } = getProjectData('lean-space')
  * Lean Space Project Page
  */
 const LeanSpace = () => {
-  useHeadDataEffect()
+  usePageLoadEffect()
 
   const srStartRef = useRef(null)
   const {

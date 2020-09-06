@@ -10,7 +10,7 @@ import {
   setupBlindObservers,
   useInitAnim,
 } from '../../../components/Blind/initAnimUtil'
-import { useHeadDataEffect } from '../../../util'
+import { usePageLoadEffect } from '../../../util'
 
 const { tags, title, published, readtime, subtitle } = getPostData(
   'hello-world'
@@ -20,7 +20,7 @@ const { tags, title, published, readtime, subtitle } = getPostData(
  * "Hello world!" Blog Post
  */
 const HelloWorld = () => {
-  useHeadDataEffect()
+  usePageLoadEffect()
 
   const srStartRef = useRef(null)
   const {

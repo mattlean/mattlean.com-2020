@@ -8,7 +8,7 @@ import {
   setupBlindObservers,
   useInitAnim,
 } from '../../../components/Blind/initAnimUtil'
-import { useHeadDataEffect } from '../../../util'
+import { usePageLoadEffect } from '../../../util'
 import SSBoard from '../../../assets/projects/crush/board.jpg'
 import SSBrowser from '../../../assets/projects/crush/browser.jpg'
 import SSStart from '../../../assets/projects/crush/start.jpg'
@@ -19,7 +19,7 @@ const { company, name, tags } = getProjectData('crush')
  * qPCR Crush Project Page
  */
 const Crush = () => {
-  useHeadDataEffect()
+  usePageLoadEffect()
 
   const srStartRef = useRef(null)
   const {

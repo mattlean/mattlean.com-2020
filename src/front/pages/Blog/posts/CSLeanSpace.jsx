@@ -10,7 +10,7 @@ import {
   setupBlindObservers,
   useInitAnim,
 } from '../../../components/Blind/initAnimUtil'
-import { useHeadDataEffect } from '../../../util'
+import { usePageLoadEffect } from '../../../util'
 import { FileIcon, PlayIcon } from '@primer/octicons-react'
 import SSLantern from '../../../assets/posts/cs-lean-space/lantern.png'
 import SSLeanTheme from '../../../assets/posts/cs-lean-space/lean-theme.jpg'
@@ -29,7 +29,7 @@ const { published, readtime, subtitle, tags } = getPostData('cs-lean-space')
  * "Case Study: Lean Space" Blog Post
  */
 const CSLeanSpace = () => {
-  useHeadDataEffect()
+  usePageLoadEffect()
 
   const srStartRef = useRef(null)
   const {

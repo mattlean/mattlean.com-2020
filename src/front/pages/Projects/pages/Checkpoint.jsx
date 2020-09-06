@@ -6,7 +6,7 @@ import {
   setupBlindObservers,
   useInitAnim,
 } from '../../../components/Blind/initAnimUtil'
-import { useHeadDataEffect } from '../../../util'
+import { usePageLoadEffect } from '../../../util'
 import NPMIcon from '../../../assets/icons/npm.svg'
 import { MarkGithubIcon } from '@primer/octicons-react'
 
@@ -16,7 +16,7 @@ const { tags } = getProjectData('checkpoint')
  * Checkpoint.js Project Page
  */
 const Checkpoint = () => {
-  useHeadDataEffect()
+  usePageLoadEffect()
 
   const srStartRef = useRef(null)
   const {

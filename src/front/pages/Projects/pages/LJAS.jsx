@@ -8,7 +8,7 @@ import {
   setupBlindObservers,
   useInitAnim,
 } from '../../../components/Blind/initAnimUtil'
-import { useHeadDataEffect } from '../../../util'
+import { usePageLoadEffect } from '../../../util'
 import SSBackend from '../../../assets/projects/ljas/starchan-backend.png'
 import SSDesktop from '../../../assets/projects/ljas/todolist-desktop.png'
 import SSFrontend from '../../../assets/projects/ljas/starchan-frontend.png'
@@ -20,7 +20,7 @@ const { company, tags } = getProjectData('ljas')
  * Lean JavaScript Application Starter Project Page
  */
 const LJAS = () => {
-  useHeadDataEffect()
+  usePageLoadEffect()
 
   const srStartRef = useRef(null)
   const {

@@ -9,7 +9,7 @@ import {
   setupBlindObservers,
   useInitAnim,
 } from '../../../components/Blind/initAnimUtil'
-import { useHeadDataEffect } from '../../../util'
+import { usePageLoadEffect } from '../../../util'
 import { BookIcon, PlayIcon } from '@primer/octicons-react'
 import SSCharts from '../../../assets/projects/sot/charts.jpg'
 import SSFullscreen from '../../../assets/projects/sot/fullscreen.jpg'
@@ -21,7 +21,7 @@ const { company, live, tags } = getProjectData('sot')
  * Spectral Overlay Tool Project Page
  */
 const SOT = () => {
-  useHeadDataEffect()
+  usePageLoadEffect()
 
   const srStartRef = useRef(null)
   const {

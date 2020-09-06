@@ -6,7 +6,7 @@ import {
   setupBlindObservers,
   useInitAnim,
 } from '../../../components/Blind/initAnimUtil'
-import { useHeadDataEffect } from '../../../util'
+import { usePageLoadEffect } from '../../../util'
 import NPMIcon from '../../../assets/icons/npm.svg'
 import { MarkGithubIcon } from '@primer/octicons-react'
 
@@ -16,7 +16,7 @@ const { name, tags } = getProjectData('alwp')
  * Asset List Webpack Plugin Project Page
  */
 const ALWP = () => {
-  useHeadDataEffect()
+  usePageLoadEffect()
 
   const srStartRef = useRef(null)
   const {

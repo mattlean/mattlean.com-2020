@@ -8,7 +8,7 @@ import {
   setupBlindObservers,
   useInitAnim,
 } from '../../../components/Blind/initAnimUtil'
-import { useHeadDataEffect } from '../../../util'
+import { usePageLoadEffect } from '../../../util'
 import { MarkGithubIcon } from '@primer/octicons-react'
 
 const { company, tags } = getProjectData('ml2020')
@@ -17,7 +17,7 @@ const { company, tags } = getProjectData('ml2020')
  * MattLean.com (2020) Project Page
  */
 const ML2020 = () => {
-  useHeadDataEffect()
+  usePageLoadEffect()
 
   const srStartRef = useRef(null)
   const {

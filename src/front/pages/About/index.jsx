@@ -8,13 +8,13 @@ import {
   setupBlindObservers,
   useInitAnim,
 } from '../../components/Blind/initAnimUtil'
-import { useHeadDataEffect } from '../../util'
+import { usePageLoadEffect } from '../../util'
 
 /**
  * About Page
  */
 const About = () => {
-  useHeadDataEffect()
+  usePageLoadEffect()
 
   const {
     blindVisibleStates,

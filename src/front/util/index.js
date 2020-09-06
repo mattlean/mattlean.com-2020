@@ -58,9 +58,10 @@ export const updateMeta = (attribute, attributeVal, contentVal) => {
 
 /**
  * Custom hook that determines the values for title and meta elements in head element
- * @param {Object} [Object={}] Head data used to override default head data
+ * and manages tracking dynamic navigation for Google Analytics
+ * @param {Object} [override={}] Head data used to override default head data
  */
-export const useHeadDataEffect = (override = {}) => {
+export const usePageLoadEffect = (override = {}) => {
   const { pathname } = useLocation()
   useEffect(() => {
     let {
@@ -115,17 +116,17 @@ export const useHeadDataEffect = (override = {}) => {
     updateMeta('name', 'twitter:card', twitter_card)
     updateMeta('name', 'keywords', keywords)
 
-    console.log(override, pathname)
-
     if (window.isInit === true) {
       console.log('set isInit to false')
       window.isInit = false
     } else {
-      console.log('got here UH OH')
       if (!__IS_DEVELOPMENT__) {
-        console.log('page view sent')
+        console.log('page view sent', pathname)
+        /* eslint-disable no-undef */
+        console.log('ga', ga)
         ga('set', 'page', pathname)
         ga('send', 'pageview')
+        /* eslint-enable no-undef */
       }
     }
   }, [pathname]) // eslint-disable-line react-hooks/exhaustive-deps

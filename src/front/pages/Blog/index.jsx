@@ -11,7 +11,7 @@ import {
   setupBlindObservers,
   useInitAnim,
 } from '../../components/Blind/initAnimUtil'
-import { useHeadDataEffect } from '../../util'
+import { usePageLoadEffect } from '../../util'
 
 const allPostData = getAllPostData()
 
@@ -19,7 +19,7 @@ const allPostData = getAllPostData()
  * Blog Feed Page
  */
 const Blog = () => {
-  useHeadDataEffect()
+  usePageLoadEffect()
 
   const {
     blindVisibleStates,

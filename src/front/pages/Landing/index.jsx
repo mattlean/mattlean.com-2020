@@ -13,7 +13,7 @@ import {
   setupBlindObservers,
   useInitAnim,
 } from '../../components/Blind/initAnimUtil'
-import { useHeadDataEffect } from '../../util'
+import { usePageLoadEffect } from '../../util'
 
 const eswissData = getProjectData('eswiss')
 const gridnikData = getProjectData('gridnik')
@@ -24,7 +24,7 @@ const csLeanSpace = getPostData('cs-lean-space')
  * Landing Page
  */
 const Landing = () => {
-  useHeadDataEffect()
+  usePageLoadEffect()
 
   const {
     blindVisibleStates,

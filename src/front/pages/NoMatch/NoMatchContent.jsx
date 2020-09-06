@@ -6,7 +6,7 @@ import {
   setupBlindObservers,
   useInitAnim,
 } from '../../components/Blind/initAnimUtil'
-import { useHeadDataEffect } from '../../util'
+import { usePageLoadEffect } from '../../util'
 
 /**
  * Content for no match page
@@ -14,7 +14,7 @@ import { useHeadDataEffect } from '../../util'
  */
 const NoMatchContent = () => {
   const { pathname } = useLocation()
-  useHeadDataEffect({ desc: null, keywords: null, title: NO_MATCH_TITLE })
+  usePageLoadEffect({ desc: null, keywords: null, title: NO_MATCH_TITLE })
 
   const {
     blindVisibleStates,

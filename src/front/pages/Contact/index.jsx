@@ -7,7 +7,7 @@ import {
   setupBlindObservers,
   useInitAnim,
 } from '../../components/Blind/initAnimUtil'
-import { useHeadDataEffect } from '../../util'
+import { usePageLoadEffect } from '../../util'
 import { MailIcon } from '@primer/octicons-react'
 import LogoLinkedIn from '../../assets/icons/linkedin.png'
 
@@ -15,7 +15,7 @@ import LogoLinkedIn from '../../assets/icons/linkedin.png'
  * Contact Page
  */
 const Contact = () => {
-  useHeadDataEffect()
+  usePageLoadEffect()
 
   const {
     blindVisibleStates,

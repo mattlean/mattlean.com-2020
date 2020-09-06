@@ -10,7 +10,7 @@ import {
   setupBlindObservers,
   useInitAnim,
 } from '../../../components/Blind/initAnimUtil'
-import { useHeadDataEffect } from '../../../util'
+import { usePageLoadEffect } from '../../../util'
 import { FileIcon, PlayIcon } from '@primer/octicons-react'
 import SSCharts from '../../../assets/projects/sot/charts.jpg'
 import SSDrawn from '../../../assets/posts/cs-sot/2015-drawn.jpg'
@@ -28,7 +28,7 @@ const { published, readtime, subtitle, tags } = getPostData('cs-sot')
  * "Case Study: Lean Space" Blog Post
  */
 const CSSOT = () => {
-  useHeadDataEffect()
+  usePageLoadEffect()
 
   const srStartRef = useRef(null)
   const {
