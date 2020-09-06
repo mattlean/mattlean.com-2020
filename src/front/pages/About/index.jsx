@@ -224,7 +224,7 @@ const About = () => {
                 <br />
                 2015 &ndash; 2016
               </dd>
-              <dt>Food Lovers United Company</dt>
+              <dt>Food Lovers United&nbsp;Company</dt>
               <dd>
                 Frontend Developer
                 <br />
@@ -241,7 +241,7 @@ const About = () => {
           <section className="edu">
             <h2 className="h-9 dispw-bold tt-uppercase">Education</h2>
             <dl>
-              <dt>University of California, Santa Cruz</dt>
+              <dt>University of California, Santa&nbsp;Cruz</dt>
               <dd>
                 B.S. in Computer Science
                 <br />

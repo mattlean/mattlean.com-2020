@@ -6,6 +6,7 @@ const {
   genSourceMaps,
   loadMedia,
   minifyJS,
+  setFreeVariable,
   setMode,
 } = require('../parts')
 const { COMMON, FRONT, NODE_MODULES } = require('../../PATHS')
@@ -66,4 +67,6 @@ module.exports = merge([
   }),
 
   minifyJS(),
+
+  setFreeVariable('__IS_DEVELOPMENT__', false),
 ])

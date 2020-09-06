@@ -1,5 +1,11 @@
 const merge = require('webpack-merge')
-const { compileJS, copyFiles, genSourceMaps, setMode } = require('../parts')
+const {
+  compileJS,
+  copyFiles,
+  genSourceMaps,
+  setFreeVariable,
+  setMode,
+} = require('../parts')
 const { COMMON, FRONT, NODE_MODULES } = require('../../PATHS')
 
 // eslint-disable-next-line no-console
@@ -26,4 +32,6 @@ module.exports = merge([
   copyFiles([{ from: 'src/front/util/dev.js' }]),
 
   genSourceMaps('cheap-module-eval-source-map'),
+
+  setFreeVariable('__IS_DEVELOPMENT__', true),
 ])

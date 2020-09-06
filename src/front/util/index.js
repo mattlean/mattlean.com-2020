@@ -114,5 +114,16 @@ export const useHeadDataEffect = (override = {}) => {
     updateMeta('property', 'og:type', og_type)
     updateMeta('name', 'twitter:card', twitter_card)
     updateMeta('name', 'keywords', keywords)
+
+    if (window.isInit === true) {
+      window.isInit = false
+    } else {
+      console.log('got here UH OH')
+      if (!__IS_DEVELOPMENT__) {
+        console.log('page view sent')
+        ga('set', 'page', pathname)
+        ga('send', 'pageview')
+      }
+    }
   }, [override, pathname])
 }

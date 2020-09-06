@@ -1,6 +1,11 @@
 const merge = require('webpack-merge')
 const { BACK, NODE_MODULES, SRC } = require('../../PATHS')
-const { compileJS, genSourceMaps, setMode } = require('../parts')
+const {
+  compileJS,
+  genSourceMaps,
+  setFreeVariable,
+  setMode,
+} = require('../parts')
 
 // eslint-disable-next-line no-console
 console.log('🤖📦 STARTING BACKEND DEVELOPMENT BUILD PROCESS 📦🤖')
@@ -20,6 +25,8 @@ module.exports = merge([
       presets: [['@babel/preset-react', { development: true }]],
     },
   }),
+
+  setFreeVariable('__IS_DEVELOPMENT__', true),
 
   genSourceMaps('cheap-module-eval-source-map'),
 ])
