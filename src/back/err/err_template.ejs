@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <% if (NODE_ENV === 'production') { %><script async src="https://www.googletagmanager.com/gtag/js?id=UA-67002303-1"></script>
+    <% if (ga) { %><script async src="https://www.googletagmanager.com/gtag/js?id=<%= ga %>"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'UA-67002303-1');
+      gtag('config', '<%= ga %>');
     </script><% } %>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />

@@ -16,19 +16,19 @@ const app = express()
 if (process.env.NODE_ENV === 'development') {
   logger.info('🤖🔧 INITIATING DEVELOPMENT SERVER 🔧🤖')
 
+  if (!process.env.GA) logger.warn('Google Analytics tracking ID was not set')
   if (!PORT) PORT = 9001
 
   app.use(morgan('dev'))
   app.use('/', express.static(FRONT.BUILD_DEV))
 } else if (process.env.NODE_ENV === 'production') {
-  app.use(compression())
-  // app.use(helmet())
-
   logger.info('🤖🛫 INITIATING PRODUCTION SERVER 🛫🤖')
 
-  if (!process.env.PORT) {
-    throw new ServerErr('SE002')
-  }
+  if (!process.env.PORT) throw new ServerErr('SE002')
+  if (!process.env.GA) throw new ServerErr('SE003')
+
+  app.use(compression())
+  // app.use(helmet())
 
   app.use(morgan('common'))
   app.use('/', express.static(FRONT.BUILD_PROD))

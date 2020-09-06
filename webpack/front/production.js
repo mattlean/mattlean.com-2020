@@ -14,7 +14,7 @@ const { COMMON, FRONT, NODE_MODULES } = require('../../PATHS')
 // eslint-disable-next-line no-console
 console.log('🤡🎁 STARTING FRONTEND PRODUCTION BUILD PROCESS 🎁🤡')
 
-module.exports = merge([
+let productionConfig = merge([
   {
     entry: `${FRONT.SRC}/index.jsx`,
 
@@ -70,3 +70,16 @@ module.exports = merge([
 
   setFreeVariable('__IS_DEVELOPMENT__', false),
 ])
+
+if (process.env.GA) {
+  productionConfig = merge(
+    productionConfig,
+    setFreeVariable('__GA__', process.env.GA)
+  )
+} else {
+  throw new Error(
+    'Google Analytics tracking ID must be explicitly defined when building for production environment'
+  )
+}
+
+module.exports = productionConfig

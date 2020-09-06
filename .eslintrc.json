@@ -12,6 +12,7 @@
     "plugin:jsx-a11y/recommended"
   ],
   "globals": {
+    "__GA__": "readonly",
     "__IS_DEVELOPMENT__": "readonly",
     "__IS_SERVER__": "readonly"
   },

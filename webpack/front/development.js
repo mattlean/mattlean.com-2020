@@ -11,7 +11,7 @@ const { COMMON, FRONT, NODE_MODULES } = require('../../PATHS')
 // eslint-disable-next-line no-console
 console.log('🤡📦 STARTING FRONTEND DEVELOPMENT BUILD PROCESS 📦🤡')
 
-module.exports = merge([
+let developmentConfig = merge([
   {
     entry: `${FRONT.SRC}/index.jsx`,
 
@@ -35,3 +35,16 @@ module.exports = merge([
 
   setFreeVariable('__IS_DEVELOPMENT__', true),
 ])
+
+developmentConfig = merge(
+  developmentConfig,
+  setFreeVariable('__GA__', process.env.GA)
+)
+if (!process.env.GA) {
+  // eslint-disable-next-line no-console
+  console.warn(
+    '[WARNING] Google Analytics ID was not set and will not be included in the build'
+  )
+}
+
+module.exports = developmentConfig

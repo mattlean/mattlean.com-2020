@@ -70,6 +70,7 @@ export const createTemplateString = (location, params, context = {}) => {
     canon,
     css: cssFilename,
     desc,
+    ga: process.env.GA,
     js: jsFilename,
     keywords,
     og_img,
@@ -103,6 +104,7 @@ export const createNoMatchTemplateString = (location, params, context = {}) => {
     canon: '',
     css: cssFilename,
     desc: '',
+    ga: process.env.GA,
     js: jsFilename,
     keywords: '',
     og_img: '',
@@ -122,4 +124,4 @@ export const createNoMatchTemplateString = (location, params, context = {}) => {
  * Create error template string
  */
 export const createErrTemplateString = (title) =>
-  render(ERR_TEMPLATE, { title, NODE_ENV: process.env.NODE_ENV })
+  render(ERR_TEMPLATE, { ga: process.env.GA, title })

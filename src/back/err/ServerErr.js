@@ -16,6 +16,8 @@ class ServerErr extends CustomErr {
       this.message = `{${code}} Server environment not set`
     } else if (code === 'SE002') {
       this.message = `{${code}} Server port must be explicitly defined when running in production environment`
+    } else if (code === 'SE003') {
+      this.message = `{${code}} Google Analytics tracking ID must be explicitly defined when running in production environment`
     }
   }
 }

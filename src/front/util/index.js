@@ -119,9 +119,9 @@ export const usePageLoadEffect = (override = {}) => {
     if (window.isInit === true) {
       window.isInit = false
     } else {
-      if (!__IS_DEVELOPMENT__) {
+      if (__GA__) {
         // eslint-disable-next-line no-undef
-        gtag('config', 'UA-67002303-1', { page_path: pathname })
+        gtag('config', __GA__, { page_path: pathname })
       }
     }
   }, [pathname]) // eslint-disable-line react-hooks/exhaustive-deps
