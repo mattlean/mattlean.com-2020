@@ -54,7 +54,8 @@ const AboutThisSite = ({ focusEleOnClose, isOpen, setIsOpen }) => {
         scenarios and preferences. Light mode will automatically activate at
         6:00 AM and dark mode will automatically activate at 6:00 PM in the
         visitor’s time zone. Mode switching can also be controlled manually by
-        selecting the mode switch icon at the end of the main&nbsp;navigation.
+        selecting the mode switch icon at the end of the main navigation. Your
+        manual selection will be remembered for 24&nbsp;hours.
       </p>
       <p>
         The codebase was programmed with{' '}

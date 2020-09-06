@@ -96,7 +96,7 @@ const About = () => {
           <p>
             In elementary school, my sister introduced me to a browser game
             called Neopets. The main objective of the game was to take care of
-            your virtual pets, but the most impactful feature was that it
+            your virtual creature, but the most impactful feature was that it
             allowed users to personalize and share webpages in-game with HTML,
             CSS, and JavaScript. I ended up building sinful pages with lots of
             blue Comic Sans, absurdly loud autoplaying MIDI music, flashing
@@ -104,7 +104,7 @@ const About = () => {
             seemingly endless stacks of alert dialog boxes that would “freeze”
             your computer and make your mom think you got a virus. (I apologize
             if you ever fell victim to my heinous pranks!) Despite the fact I
-            was creating stupid webpages about my Neopets, the reality was that
+            was creating foolish webpages about my Neopets, the reality was that
             the game was introducing me to the very fabric of the&nbsp;web.
           </p>
           <p>

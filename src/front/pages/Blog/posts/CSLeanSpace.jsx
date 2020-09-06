@@ -176,7 +176,16 @@ const CSLeanSpace = () => {
               >
                 Xuehua CMS
               </a>
-              , a custom content management system built with{' '}
+              , a custom{' '}
+              <a
+                href="https://en.wikipedia.org/wiki/Content_management_system"
+                rel="noreferrer"
+                target="_blank"
+                className="a-grey-1"
+              >
+                content management system
+              </a>{' '}
+              built with{' '}
               <a
                 href="https://rubyonrails.org"
                 rel="noreferrer"
@@ -265,10 +274,18 @@ const CSLeanSpace = () => {
             setup: every page would have a corresponding HTML document that
             would be distributed by the server. Once a page is downloaded by a
             user, JavaScript is executed and adds an event handler on all
-            internal links that performs an XMLHttpRequest when they are
-            clicked, downloading the requested page and using it to dynamically
-            update the DOM of the current page to transform it into the new one,
-            thus allowing navigation without page&nbsp;reloads.
+            internal links that performs an{' '}
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX"
+              rel="noreferrer"
+              target="_blank"
+              className="a-grey-1"
+            >
+              AJAX request
+            </a>{' '}
+            when they are clicked, downloading the next page and using it to
+            dynamically update the DOM of the current page to transform it into
+            the new one, thus allowing navigation without page&nbsp;reloads.
           </p>
           <p className="c-grey-1">
             This also allows the website to still be fully functional when
