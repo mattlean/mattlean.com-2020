@@ -1,8 +1,10 @@
 const AssetListWebpackPlugin = require('asset-list-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
+const glob = require('glob')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const nodeExternals = require('webpack-node-externals')
+const PurgecssPlugin = require('purgecss-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const { DefinePlugin } = require('webpack')
@@ -227,6 +229,13 @@ exports.minifyJS = () => ({
     minimize: true,
     minimizer: [new TerserPlugin({ sourceMap: true })],
   },
+})
+
+/**
+ * Remove unused CSS
+ */
+exports.purgeCSS = (path) => ({
+  plugins: [new PurgecssPlugin({ paths: glob.sync(path, { nodir: true }) })],
 })
 
 /**

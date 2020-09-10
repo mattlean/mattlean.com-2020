@@ -6,6 +6,7 @@ const {
   genSourceMaps,
   loadMedia,
   minifyJS,
+  purgeCSS,
   setFreeVariable,
   setMode,
 } = require('../parts')
@@ -67,6 +68,8 @@ let productionConfig = merge([
   }),
 
   minifyJS(),
+
+  purgeCSS(`${FRONT.BUILD_PROD}/**/*`),
 
   setFreeVariable('__IS_DEVELOPMENT__', false),
 ])

@@ -47,7 +47,7 @@ export const POSTS = {
   'hello-world': {
     id: 'hello-world',
     title: 'Hello world!',
-    subtitle: 'Another few years, another blog...',
+    subtitle: 'Welcome to yet another blog.',
     published: {
       dateStr: '2015-08-31',
       txt: 'August 31, 2015',
