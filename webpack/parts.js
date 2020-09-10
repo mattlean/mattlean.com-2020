@@ -1,6 +1,5 @@
 const AssetListWebpackPlugin = require('asset-list-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
-const glob = require('glob')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const nodeExternals = require('webpack-node-externals')
@@ -234,8 +233,8 @@ exports.minifyJS = () => ({
 /**
  * Remove unused CSS
  */
-exports.purgeCSS = (path) => ({
-  plugins: [new PurgecssPlugin({ paths: glob.sync(path, { nodir: true }) })],
+exports.purgeCSS = (options) => ({
+  plugins: [new PurgecssPlugin(options)],
 })
 
 /**

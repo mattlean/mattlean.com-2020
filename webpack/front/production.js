@@ -1,4 +1,5 @@
 const merge = require('webpack-merge')
+// const { sync } = require('glob')
 const {
   buildStyles,
   compileJS,
@@ -6,7 +7,7 @@ const {
   genSourceMaps,
   loadMedia,
   minifyJS,
-  purgeCSS,
+  // purgeCSS,
   setFreeVariable,
   setMode,
 } = require('../parts')
@@ -69,7 +70,10 @@ let productionConfig = merge([
 
   minifyJS(),
 
-  purgeCSS(`${FRONT.SRC}/**/*`),
+  // purgeCSS({
+  //   paths: sync(`${FRONT.SRC}/**/*`, { nodir: true }),
+  //   whitelistPatterns: [/badge/, /logo/, /modal/, /sun-moon/],
+  // }),
 
   setFreeVariable('__IS_DEVELOPMENT__', false),
 ])
