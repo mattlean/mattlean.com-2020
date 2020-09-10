@@ -38,7 +38,7 @@
     "css-loader": "^3.6.0",
     "cssnano": "^4.1.10",
     "ejs": "^3.1.3",
-    "eswiss": "^0.0.30",
+    "eswiss": "^0.0.31",
     "express": "^4.17.1",
     "file-loader": "^6.0.0",
     "framer-motion": "^2.6.5",
