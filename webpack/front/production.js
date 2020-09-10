@@ -69,7 +69,7 @@ let productionConfig = merge([
 
   minifyJS(),
 
-  purgeCSS(`${FRONT.BUILD_PROD}/**/*`),
+  purgeCSS(`${FRONT.SRC}/**/*`),
 
   setFreeVariable('__IS_DEVELOPMENT__', false),
 ])
