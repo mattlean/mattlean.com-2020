@@ -14,8 +14,17 @@ if (process.env.NODE_ENV === 'production') {
   FRONT_ASSETS = require('../../build/front/production/assets.json')
 }
 
+let vendorFilename = ''
 let jsFilename = '/'
 let cssFilename = '/'
+
+if (FRONT_ASSETS.vendor) {
+  if (Array.isArray(FRONT_ASSETS.vendor) && FRONT_ASSETS.vendor.length > 0) {
+    vendorFilename += `/${FRONT_ASSETS.vendor[0].filename}`
+  } else {
+    vendorFilename += `/${FRONT_ASSETS.vendor.filename}`
+  }
+}
 
 if (FRONT_ASSETS.main) {
   if (Array.isArray(FRONT_ASSETS.main) && FRONT_ASSETS.main.length > 0) {
@@ -92,6 +101,7 @@ export const createTemplateString = (location, params, context = {}) => {
     twitter_card,
     twitter_img,
     twitter_img_alt,
+    vendor: vendorFilename,
     NODE_ENV: process.env.NODE_ENV,
   })
 }
@@ -132,6 +142,7 @@ export const createNoMatchTemplateString = (location, params, context = {}) => {
     twitter_card: '',
     twitter_img: '',
     twitter_img_alt: '',
+    vendor: vendorFilename,
     NODE_ENV: process.env.NODE_ENV,
   })
 }

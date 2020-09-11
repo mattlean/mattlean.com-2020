@@ -271,3 +271,20 @@ exports.setupDevServer = (options) => ({
 exports.setupHTML = (options) => ({
   plugins: [new HtmlWebpackPlugin({ ...options })],
 })
+
+/**
+ * Split vendor dependencies from main bundle
+ */
+exports.splitVendor = () => ({
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        commons: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendor',
+          chunks: 'initial',
+        },
+      },
+    },
+  },
+})

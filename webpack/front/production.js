@@ -10,6 +10,7 @@ const {
   // purgeCSS,
   setFreeVariable,
   setMode,
+  splitVendor,
 } = require('../parts')
 const { COMMON, FRONT, NODE_MODULES } = require('../../PATHS')
 
@@ -76,6 +77,8 @@ let productionConfig = merge([
   // }),
 
   setFreeVariable('__IS_DEVELOPMENT__', false),
+
+  splitVendor(),
 ])
 
 if (process.env.GA) {

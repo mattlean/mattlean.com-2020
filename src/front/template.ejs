@@ -32,6 +32,6 @@
   <body>
     <noscript>JavaScript must be enabled to run this website properly.</noscript>
     <div id="root"><% if (app) { %><%- app %><% } %></div>
-    <script src="<%= js %>"></script><% if (NODE_ENV === 'development') { %><script src="/dev.js"></script><% } %>
+    <% if (vendor) { %><script src="<%= vendor %>"></script><% } %><script src="<%= js %>"></script><% if (NODE_ENV === 'development') { %><script src="/dev.js"></script><% } %>
   </body>
 </html>
