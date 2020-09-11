@@ -31,7 +31,24 @@ if (process.env.NODE_ENV === 'development') {
   // app.use(helmet())
 
   app.use(morgan('common'))
-  app.use('/', express.static(FRONT.BUILD_PROD))
+  app.use(
+    '/',
+    express.static(FRONT.BUILD_PROD, {
+      setHeaders: (res, path) => {
+        const codeRegExp = /\.[0-9a-f]{4}\.(css|js)/i
+        const mediaRegExp = /\.(gif|ico|jpe?g|mov|mp4|png)$/
+
+        if (codeRegExp.test(path)) {
+          // Set cache age for code files to 1 year because
+          // they will be invalidated when they are updated and deployed
+          res.setHeader('Cache-Control', 'public, max-age=31536000')
+        } else if (mediaRegExp.test(path)) {
+          // Set cache age for media files to 1 day
+          res.setHeader('Cache-Control', 'public, max-age=86400')
+        }
+      },
+    })
+  )
 } else {
   throw new ServerErr('SE001')
 }

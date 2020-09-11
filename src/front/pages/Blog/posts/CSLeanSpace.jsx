@@ -260,8 +260,16 @@ const CSLeanSpace = () => {
               single-page applications
             </a>
             . However, a common trade-off with this approach at the time was
-            that it could make it difficult for search engine spiders to parse
-            your page, negatively impacting{' '}
+            that it could make it difficult for{' '}
+            <a
+              href="https://en.wikipedia.org/wiki/Web_crawler"
+              rel="noreferrer"
+              target="_blank"
+              className="a-grey-1"
+            >
+              web crawlers
+            </a>{' '}
+            to parse your page, negatively impacting{' '}
             <a
               href="https://en.wikipedia.org/wiki/Search_engine_optimization"
               rel="noreferrer"
@@ -294,9 +302,9 @@ const CSLeanSpace = () => {
             JavaScript, the page is still completely rendered, but the event
             handlers will never be applied, letting the navigation experience
             fallback to the standard link behavior. This ensures the
-            SEO-friendliness of the website, as search engine spiders will be
-            able to easily read an identical page that humans see without
-            needing to execute any&nbsp;JavaScript.
+            SEO-friendliness of the website, as web crawlers will be able to
+            easily read an identical page that humans see without needing to
+            execute any&nbsp;JavaScript.
           </p>
           <p className="c-grey-1">
             This solution also does not require any backend code, hence the
