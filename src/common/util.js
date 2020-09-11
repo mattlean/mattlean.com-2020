@@ -3,7 +3,7 @@ import { TITLE_SUFFIX } from './data/route/const'
 
 /**
  * Generate path array
- * @param {string} pathname URL from Express req object or pathname from React Router location object
+ * @param {string} pathname Path from Express req object or pathname from React Router location object
  * @return {Array} Path array
  */
 export const genPathArr = (pathname) => {
@@ -15,7 +15,7 @@ export const genPathArr = (pathname) => {
 
 /**
  * Generate formatted path from pathname
- * @param {string} pathname URL from Express req object or pathname from React Router location object
+ * @param {string} pathname Path from Express req object or pathname from React Router location object
  * @return {string} Formatted path
  */
 export const genFormattedPath = (pathname) => {
@@ -31,7 +31,7 @@ export const genFormattedPath = (pathname) => {
 
 /**
  * Attempt to retrieve data used in head element
- * @param {string} pathname URL from Express req object or pathname from React Router location object
+ * @param {string} pathname Path from Express req object or pathname from React Router location object
  * @return {Object} Object with head data
  */
 export const genHeadData = (pathname) => {

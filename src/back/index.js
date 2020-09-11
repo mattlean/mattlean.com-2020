@@ -41,7 +41,7 @@ app.use('/', route)
 
 /* No Match Handler */
 app.use((req, res) =>
-  res.status(404).send(createNoMatchTemplateString(req.url))
+  res.status(404).send(createNoMatchTemplateString(req.path))
 )
 
 /* Error Handler */

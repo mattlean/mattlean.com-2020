@@ -38,7 +38,7 @@ if (FRONT_ASSETS.style) {
 
 /**
  * Create template string from template and App React component
- * @param {string} location URL from Express req object
+ * @param {string} location Path from Express req object
  * @param {Object} params Params from Express req object
  * @param {Object} [context={}] Information about a specific route render
  */
@@ -90,7 +90,7 @@ export const createTemplateString = (location, params, context = {}) => {
 
 /**
  * Create no match template string from template and App React component
- * @param {string} location URL from Express req object
+ * @param {string} location Path from Express req object
  * @param {Object} [params] Params from Express req object
  * @param {Object} [context={}] Information about a specific route render
  */
