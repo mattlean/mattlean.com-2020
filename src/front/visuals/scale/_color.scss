@@ -15,8 +15,8 @@ $w: #fff;
 }
 
 body.dark {
-  --c-primary: #{color.$w};
-  --c-secondary: #{color.$k};
-  --grey-1: #{color.$grey-c};
-  --grey-3: #{color.$grey-a};
+  --c-primary: #{$w};
+  --c-secondary: #{$k};
+  --grey-1: #{$grey-c};
+  --grey-3: #{$grey-a};
 }
