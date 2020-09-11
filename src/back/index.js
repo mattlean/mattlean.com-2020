@@ -36,7 +36,7 @@ if (process.env.NODE_ENV === 'development') {
     express.static(FRONT.BUILD_PROD, {
       setHeaders: (res, path) => {
         const codeRegExp = /\.[0-9a-f]{4}\.(css|js)/i
-        const mediaRegExp = /\.(gif|ico|jpe?g|mov|mp4|png)$/
+        const mediaRegExp = /\.(gif|ico|jpe?g|mov|mp4|png)$/i
 
         if (codeRegExp.test(path)) {
           // Set cache age for code files to 1 year because
