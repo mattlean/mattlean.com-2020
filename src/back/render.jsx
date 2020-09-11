@@ -4,6 +4,7 @@ import { renderToString } from 'react-dom/server'
 import { StaticRouter } from 'react-router-dom'
 import App from '../front/components/App'
 import ERR_TEMPLATE from './err/err_template.ejs'
+import PageCache from './PageCache'
 import TEMPLATE from '../front/template.ejs'
 import { genHeadData } from '../common/util'
 import { NO_MATCH_TITLE } from '../common/data/route/const'
@@ -36,6 +37,8 @@ if (FRONT_ASSETS.style) {
   cssFilename += 'style.css'
 }
 
+const cache = new PageCache()
+
 /**
  * Create template string from template and App React component
  * @param {string} location Path from Express req object
@@ -43,11 +46,16 @@ if (FRONT_ASSETS.style) {
  * @param {Object} [context={}] Information about a specific route render
  */
 export const createTemplateString = (location, params, context = {}) => {
-  const app = renderToString(
-    <StaticRouter location={location} context={context}>
-      <App />
-    </StaticRouter>
-  )
+  let app = cache.get(location)
+
+  if (!app) {
+    app = renderToString(
+      <StaticRouter location={location} context={context}>
+        <App />
+      </StaticRouter>
+    )
+    cache.set(location, app)
+  }
 
   const {
     canon,
@@ -95,11 +103,16 @@ export const createTemplateString = (location, params, context = {}) => {
  * @param {Object} [context={}] Information about a specific route render
  */
 export const createNoMatchTemplateString = (location, params, context = {}) => {
-  const app = renderToString(
-    <StaticRouter location={location} context={context}>
-      <App />
-    </StaticRouter>
-  )
+  let app = cache.get('404')
+
+  if (!app) {
+    app = renderToString(
+      <StaticRouter location={location} context={context}>
+        <App />
+      </StaticRouter>
+    )
+    cache.set('404', app)
+  }
 
   return render(TEMPLATE, {
     app,
