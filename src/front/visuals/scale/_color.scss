@@ -13,3 +13,10 @@ $w: #fff;
   --grey-3: #{$grey-c};
   --grey-4: #{$grey-d};
 }
+
+body.dark {
+  --c-primary: #{color.$w};
+  --c-secondary: #{color.$k};
+  --grey-1: #{color.$grey-c};
+  --grey-3: #{color.$grey-a};
+}

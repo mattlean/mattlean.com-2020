@@ -19,13 +19,6 @@ body {
   margin-right: size.$size-27;
 }
 
-body.dark {
-  --c-primary: #{color.$w};
-  --c-secondary: #{color.$k};
-  --grey-1: #{color.$grey-c};
-  --grey-3: #{color.$grey-a};
-}
-
 h1,
 h2,
 h3,

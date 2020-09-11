@@ -351,6 +351,7 @@ const About = () => {
                 <li>GitHub</li>
                 <li>Gulp</li>
                 <li>Git</li>
+                <li>Flow</li>
                 <li>CircleCI</li>
                 <li>Grunt</li>
                 <li>Subversion</li>
