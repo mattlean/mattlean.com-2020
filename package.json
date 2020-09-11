@@ -5,6 +5,10 @@
   "repository": "https://github.com/mattlean/mattlean.com-2020.git",
   "author": "Matthew Lean <matt@mattlean.com>",
   "private": true,
+  "engines": {
+    "node": "12.x",
+    "yarn": "1.x"
+  },
   "scripts": {
     "back:build": "webpack --config webpack/back/config.js --env.type development",
     "back:build:production": "webpack --config webpack/back/config.js --env.type production",
