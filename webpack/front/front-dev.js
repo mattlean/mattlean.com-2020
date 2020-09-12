@@ -63,6 +63,7 @@ module.exports = merge([
       twitter_card: '',
       twitter_img: '',
       twitter_img_alt: '',
+      vendor: '',
       NODE_ENV: 'development',
     },
   }),
