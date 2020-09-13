@@ -24,7 +24,7 @@ exports.buildStyles = ({
   module: {
     rules: [
       {
-        test: /\.s[ac]ss$/i,
+        test: /\.(s[ac]ss|css)$/i,
         use: [
           MiniCssExtractPlugin.loader,
           {
@@ -121,7 +121,7 @@ exports.injectStyles = ({
   module: {
     rules: [
       {
-        test: /\.s[ac]ss$/i,
+        test: /\.(s[ac]ss|css)$/i,
         use: [
           {
             loader: 'style-loader',

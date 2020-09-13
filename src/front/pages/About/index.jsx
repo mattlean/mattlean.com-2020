@@ -110,7 +110,7 @@ const About = () => {
           <p>
             After I quit Neopets, I continued to learn web development through
             free online tutorials and books I couldn’t buy during visits to
-            bookstores. These learnings would then manifest on free web hosting
+            bookstores. These studies would then manifest on free web hosting
             platforms like GeoCities and Freewebs in the form of fan websites
             about other video games that intrigued&nbsp;me.
           </p>

@@ -22,7 +22,7 @@ import VidLanding from '../../../assets/posts/cs-lean-space/landing.mp4'
 import VidPageTransitions from '../../../assets/posts/cs-lean-space/page-transitions.mp4'
 import VidWork from '../../../assets/posts/cs-lean-space/work.mp4'
 
-const { live } = getProjectData('lean-space')
+const { live, name } = getProjectData('lean-space')
 const { published, readtime, subtitle, tags } = getPostData('cs-lean-space')
 
 /**
@@ -75,7 +75,7 @@ const CSLeanSpace = () => {
           <span className="title-prefix h-4 sm:h-6 c-grey-4">
             Case Study<span>:</span>
           </span>
-          <span className="title h-1 md:h-2 sm:h-3">Lean Space</span>
+          <span className="title h-1 md:h-2 sm:h-3">{name}</span>
         </h1>
         <p className="subtitle txt-8 sm:txt-6 c-grey-1">{subtitle}</p>
         <p className="time c-grey-2">

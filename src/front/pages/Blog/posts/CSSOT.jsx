@@ -21,7 +21,7 @@ import SSPrototype from '../../../assets/posts/cs-sot/prototype.jpg'
 import SSTablet from '../../../assets/posts/cs-sot/2015-tablet.jpg'
 import SSWireframe from '../../../assets/posts/cs-sot/wireframe-a.jpg'
 
-const { live } = getProjectData('sot')
+const { live, name } = getProjectData('sot')
 const { published, readtime, subtitle, tags } = getPostData('cs-sot')
 
 /**
@@ -74,7 +74,7 @@ const CSSOT = () => {
           <span className="title-prefix h-4 sm:h-6 c-grey-4">
             Case Study<span>:</span>
           </span>
-          <span className="title h-1 md:h-2 sm:h-3">Spectral Overlay Tool</span>
+          <span className="title h-1 md:h-2 sm:h-3">{name}</span>
         </h1>
         <p className="subtitle txt-8 sm:txt-6 c-grey-1">{subtitle}</p>
         <p className="time c-grey-2">
@@ -324,7 +324,7 @@ const CSSOT = () => {
               .
             </p>
             <p className="c-grey-1">
-              Because I received all of the visualizations’ data points in an
+              Because I received all of the visualizations’ data points in an{' '}
               <a
                 href="https://microsoft.com/en-us/microsoft-365/excel"
                 rel="noreferrer"
