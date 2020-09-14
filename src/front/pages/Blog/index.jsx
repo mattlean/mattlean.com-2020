@@ -27,7 +27,7 @@ const Blog = () => {
     initAnimComplete,
     observerData,
     runInitAnim,
-  } = useInitAnim(4)
+  } = useInitAnim(5)
 
   // Setup effect which is only run once
   useEffect(() => {
@@ -35,7 +35,7 @@ const Blog = () => {
     if (observerData[0].ref.current) observerData[0].ref.current.focus()
 
     const observers = setupBlindObservers(
-      [0.5, 0.1, 0.1, 0.1],
+      [0.5, 0.1, 0.1, 0.1, 0.1],
       observerData,
       blindVisibleStates
     )

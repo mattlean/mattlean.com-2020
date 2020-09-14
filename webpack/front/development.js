@@ -25,6 +25,14 @@ let developmentConfig = merge([
   compileJS({
     include: [FRONT.SRC, COMMON, `${NODE_MODULES}/eswiss`],
     options: {
+      plugins: [
+        [
+          'prismjs',
+          {
+            languages: ['css', 'ejs', 'jsx', 'scss'],
+          },
+        ],
+      ],
       presets: [['@babel/preset-react', { development: true }]],
     },
   }),

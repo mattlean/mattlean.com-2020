@@ -257,7 +257,7 @@ const CSLeanSpace = () => {
               target="_blank"
               className="a-grey-1"
             >
-              single-page applications
+              single-page applications (SPAs)
             </a>
             . However, a common trade-off with this approach at the time was
             that it could make it difficult for{' '}
@@ -276,7 +276,7 @@ const CSLeanSpace = () => {
               target="_blank"
               className="a-grey-1"
             >
-              search engine optimization
+              search engine optimization (SEO)
             </a>
             . To address this issue, I structured the server with a standard
             setup: every page would have a corresponding HTML document that
@@ -298,13 +298,12 @@ const CSLeanSpace = () => {
           <p className="c-grey-1">
             This also allows the website to still be fully functional when
             JavaScript is disabled, avoiding the JavaScript requirement problem
-            for most single-page applications. When browsing the site without
-            JavaScript, the page is still completely rendered, but the event
-            handlers will never be applied, letting the navigation experience
-            fallback to the standard link behavior. This ensures the
-            SEO-friendliness of the website, as web crawlers will be able to
-            easily read an identical page that humans see without needing to
-            execute any&nbsp;JavaScript.
+            for most SPAs. When browsing the site without JavaScript, the page
+            is still completely rendered, but the event handlers will never be
+            applied, letting the navigation experience fallback to the standard
+            link behavior. This ensures the SEO-friendliness of the website, as
+            web crawlers will be able to easily read an identical page that
+            humans see without needing to execute any&nbsp;JavaScript.
           </p>
           <p className="c-grey-1">
             This solution also does not require any backend code, hence the

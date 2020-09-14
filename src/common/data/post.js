@@ -2,8 +2,7 @@ import FeaturedCSLeanSpace from '../../front/assets/featured/lean-space-featured
 import FeaturedCSSOT from '../../front/assets/featured/sot-featured.jpg'
 import { genTagIDNameArray } from './tag'
 
-//'cs-ml2020',
-const ORDER = ['cs-sot', 'cs-lean-space', 'hello-world']
+const ORDER = ['cs-ml2020', 'cs-sot', 'cs-lean-space', 'hello-world']
 export const POSTS = {
   'cs-lean-space': {
     id: 'cs-lean-space',
@@ -23,8 +22,11 @@ export const POSTS = {
   'cs-ml2020': {
     id: 'cs-ml2020',
     title: 'Case Study: MattLean.com',
-    subtitle: 'How I designed my 2020 personal brand and developed my website.',
-    published: 'June 30, 2020',
+    subtitle: 'The development process behind my personal website in 2020.',
+    published: {
+      dateStr: '2020-09-12',
+      txt: 'September 12, 2020',
+    },
     readtime: 5,
     tags: ['cs', 'backend', 'design', 'frontend'],
   },

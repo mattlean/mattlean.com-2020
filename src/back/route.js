@@ -99,7 +99,7 @@ router.get(/^(\/work\/xuehua\/?|^\/work\/xuehua\/index.html)$/, (req, res) =>
 /* Page Handler */
 router.get(/^\/(about|blog|contact|projects)\/?|^\/$/, (req, res, next) => {
   const path = getRouteData(genFormattedPath(req.path))
-  if (!path) return next() // Project not found, call no match handler
+  if (!path) return next() // Path not found, call no match handler
 
   return res.send(createTemplateString(req.path, req.params))
 })

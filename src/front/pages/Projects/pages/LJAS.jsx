@@ -382,6 +382,26 @@ const LJAS = () => {
                   Asset List Webpack&nbsp;Plugin
                 </Link>
               </li>
+              <li>
+                <a
+                  href="https://gaearon.github.io/react-hot-loader"
+                  rel="noreferrer"
+                  target="_blank"
+                  className="a-grey-1"
+                >
+                  React Hot&nbsp;Loader
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://webpack.js.org/configuration/dev-server"
+                  rel="noreferrer"
+                  target="_blank"
+                  className="a-grey-1"
+                >
+                  webpack-dev-server
+                </a>
+              </li>
             </ul>
           </section>
         </section>

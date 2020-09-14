@@ -94,6 +94,14 @@
       grid-column: 4/-1;
     }
 
+    .full {
+      grid-column: 1/-1;
+    }
+
+    .wide {
+      grid-column: 2/6;
+    }
+
     > h2,
     > h3 {
       display: inline-block;

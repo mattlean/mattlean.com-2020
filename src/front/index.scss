@@ -1,4 +1,5 @@
 /* Typekit */
+@use './visuals/prism';
 @use './visuals/typekit';
 
 /* eswiss */
@@ -49,4 +50,5 @@
 @use './pages/Blog/posts/general';
 @use './pages/Blog/posts/cs';
 @use './pages/Blog/posts/CSLeanSpace';
+@use './pages/Blog/posts/CSML2020';
 @use './pages/Blog/posts/CSSOT';

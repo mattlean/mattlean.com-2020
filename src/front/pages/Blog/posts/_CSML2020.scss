@@ -1,0 +1,11 @@
+.grid-blog-cs-ml2020 {
+  > .cover {
+    grid-column: 2/6;
+  }
+
+  > .subgrid-content {
+    > .long-h {
+      grid-column: span 4;
+    }
+  }
+}

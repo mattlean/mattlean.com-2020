@@ -2,6 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { Route, Switch, useLocation, useParams } from 'react-router-dom'
 import CSLeanSpace from './CSLeanSpace'
+import CSML2020 from './CSML2020'
 import CSSOT from './CSSOT'
 import HelloWorld from './HelloWorld'
 import MainFooter from '../../../components/MainFooter'
@@ -53,6 +54,7 @@ const Post = () => {
             path={`${ROUTE_PREFIX}cs-lean-space`}
             component={CSLeanSpace}
           />
+          <Route path={`${ROUTE_PREFIX}cs-ml2020`} component={CSML2020} />
           <Route path={`${ROUTE_PREFIX}cs-sot`} component={CSSOT} />
           <Route path={`${ROUTE_PREFIX}hello-world`} component={HelloWorld} />
           <Route path="*" component={NoMatchContent} />
