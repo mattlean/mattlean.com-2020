@@ -33,6 +33,14 @@ let productionConfig = merge([
   compileJS({
     include: [FRONT.SRC, COMMON, `${NODE_MODULES}/eswiss`],
     options: {
+      plugins: [
+        [
+          'prismjs',
+          {
+            languages: ['ejs', 'jsx', 'scss'],
+          },
+        ],
+      ],
       presets: [
         [
           '@babel/preset-env',
