@@ -100,7 +100,7 @@ const CSML2020 = () => {
       >
         <section className="wide mb-6 c-grey-1">
           <p>
-            My website was in serious need of a redesign as it wasn't updated in
+            My website was in serious need of a redesign as it wasn’t updated in
             almost 5 years. Because of this, I took the opportunity to explore
             some things I had been meaning to try out for some time. This post
             overviews some of the thoughts, opinions, and solutions I had for
@@ -137,7 +137,7 @@ const CSML2020 = () => {
               React
             </a>{' '}
             because there were a few features with the library and packages in
-            the ecosystem that I hadn't had the chance to play around with yet.
+            the ecosystem that I hadn’t had the chance to play around with yet.
             The use of JavaScript on both the backend and frontend emerged from
             this decision, and as a result of that, I decided to use{' '}
             <a
@@ -175,7 +175,7 @@ const CSML2020 = () => {
             <Link to={`${PROJECT_PREFIX}eswiss`} className="a-grey-1">
               eswiss
             </Link>
-            's component library as I see the design system potentially
+            ’s component library as I see the design system potentially
             intertwining with some other future projects where types will be
             useful. For a smaller project like this one, I think JavaScript does
             the job fine. Incompatibility between the two languages is not an
@@ -361,6 +361,7 @@ const CSML2020 = () => {
             backend. Here is a very near standard configuration for a frontend
             React project that we’ll be using:
           </p>
+          {/* eslint-disable no-useless-escape */}
           {/* prettier-ignore */}
           <pre className="language-jsx mb-1.5rem"><code>{`const AssetListWebpackPlugin = require("asset-list-webpack-plugin");
 const path = require("path");
@@ -405,6 +406,7 @@ module.exports = {
     extensions: [".js", ".jsx"],
   },
 };`}</code></pre>
+          {/* eslint-enable no-useless-escape */}
           <p className="c-grey-1">The few unstandard changes are:</p>
           <ol className="mb-1.5 c-grey-1">
             <li>
@@ -473,7 +475,7 @@ module.exports = {
  </body>
 </html>`}</code></pre>
           <p className="c-grey-1">
-            Now here's a simple{' '}
+            Now here’s a simple{' '}
             <a
               href="https://reactrouter.com"
               rel="noreferrer"
@@ -574,7 +576,9 @@ hydrate(
             Here is the very barebones server application that we’ll be using:
           </p>
           {/* prettier-ignore */}
-          <pre className="language-jsx mb-1.5rem"><code>{`import express from "express";
+          {/* eslint-disable no-useless-escape */}
+          <pre className="language-jsx mb-1.5rem">
+            <code>{`import express from "express";
 import React from "react";
 import { render as renderEJS } from "ejs";
 import { renderToString } from "react-dom/server";
@@ -614,7 +618,9 @@ app.get(/^\/(lipsum)?$/, (req, res) => {
 
 app.listen(port, () => {
   console.log(\`Example app listening at http://localhost:\${port}\`);
-});`}</code></pre>
+});`}</code>
+          </pre>
+          {/* eslint-enable no-useless-escape */}
           <p className="c-grey-1">
             <code>express.static</code> sets the static file directory to the
             location of the frontend build which is how it serves the frontend
@@ -730,7 +736,7 @@ app.listen(port, () => {
             things simple.
           </p>
           <p className="c-grey-1">
-            The first involves reducing the frontend build's size through
+            The first involves reducing the frontend build’s size through
             various techniques. webpack automates removal of unused code through{' '}
             <a
               href="https://webpack.js.org/guides/tree-shaking"
@@ -797,7 +803,7 @@ app.listen(port, () => {
             alone is the only file that becomes invalidated. For example, if the
             application is changed but the dependencies were never upgraded, the
             deployment would only change the main file’s chunkhash, but the
-            vendor file's chunkhash will remain the same. This means that when a
+            vendor file’s chunkhash will remain the same. This means that when a
             returning user loads the website, only the new main file will be
             downloaded and the vendor file will be loaded from the cache.
           </p>
@@ -807,10 +813,10 @@ app.listen(port, () => {
             single-threaded, many calls to it can negatively impact performance.
             By caching all of the renders, we can effectively reduce the amount
             of calls to the function to one per page. For a small site like this
-            one, the performance improvements of this aren't really perceivable,
+            one, the performance improvements of this aren’t really perceivable,
             but because there are only 25 pages on the site at the time of this
             writing, the cache implementation would be extremely simple so I
-            figured it wouldn't hurt to have. If there were significantly more
+            figured it wouldn’t hurt to have. If there were significantly more
             pages on the site, I would probably implement a{' '}
             <a
               href="https://en.wikipedia.org/wiki/Cache_replacement_policies#Least_recently_used_(LRU)"
@@ -1129,7 +1135,7 @@ app.listen(port, () => {
               design methodology. As an ethos, the International Style stepped
               away from some other art movements where the driving mantra was
               “beauty for beauty’s sake” and instead followed the modernist
-              ideology of “form follows function." As a design methodology, the
+              ideology of “form follows function.” As a design methodology, the
               process is driven by logic and rationality which naturally aligns
               with the engineering thought process and workflow. Because of
               this, the style resonates with many developers.
@@ -1325,7 +1331,7 @@ app.listen(port, () => {
             was how it was too reliant on imagery. For example, the work page
             focused on an image representing each project. Because of that, I
             needed a logo or appealing screenshot for each project I wanted to
-            showcase. I realized that as an engineer a lot of my projects aren't
+            showcase. I realized that as an engineer a lot of my projects aren’t
             going to naturally produce an interesting image unless some time is
             taken to contrive something like a logo. To address this issue this
             time around, I made sure that the core of the design would instead
@@ -1411,7 +1417,7 @@ app.listen(port, () => {
           <p className="c-grey-1">
             While the utility paradigm is certainly more compact, the regular
             paradigm is much easier to read and maintain in this case. Writing
-            utility classes doesn't feel bad, but going back over it, making
+            utility classes doesn’t feel bad, but going back over it, making
             sure there aren’t any conflicts or redundancies, and making changes
             can be a hassle since everything is on one line.
           </p>
@@ -1424,9 +1430,9 @@ app.listen(port, () => {
             to apply a few utility classes.
           </p>
           <p className="c-grey-1">
-            Mixing the two paradigms can get tricky though. If you aren't
+            Mixing the two paradigms can get tricky though. If you aren’t
             careful it can get confusing on where you should be actually
-            looking. Is the style applied in the CSS? Or the HTML? Or maybe it's
+            looking. Is the style applied in the CSS? Or the HTML? Or maybe it’s
             split across both...
           </p>
           <p className="c-grey-1">
@@ -1445,8 +1451,8 @@ app.listen(port, () => {
           </ol>
           <p className="mb-4 c-grey-1">
             People can have a different interpretation of what exactly a
-            template or page is, so to clear things up here, I'm using Brad
-            Frost's definition from{' '}
+            template or page is, so to clear things up here, I’m using Brad
+            Frost’s definition from{' '}
             <a
               href="https://atomicdesign.bradfrost.com/chapter-2"
               rel="noreferrer"
@@ -1459,12 +1465,12 @@ app.listen(port, () => {
           </p>
           <blockquote className="mb-4">
             <p>
-              "Templates are page-level objects that place components into a
-              layout and articulate the design’s underlying content structure"
+              “Templates are page-level objects that place components into a
+              layout and articulate the design’s underlying content structure”
             </p>
             <p>
-              "Pages are specific instances of templates that show what a UI
-              looks like with real representative content in place."
+              “Pages are specific instances of templates that show what a UI
+              looks like with real representative content in place.”
             </p>
           </blockquote>
           <p className="c-grey-1">
@@ -1477,9 +1483,9 @@ app.listen(port, () => {
             >
               content management system
             </a>
-            . Templates are edited by a developer, and it's this case where the
+            . Templates are edited by a developer, and it’s this case where the
             regular paradigm is used. Pages are instances of these templates and
-            are edited by a content writer, and it's this case where the utility
+            are edited by a content writer, and it’s this case where the utility
             paradigm is used.
           </p>
           <p className="c-grey-1">
@@ -1510,9 +1516,9 @@ app.listen(port, () => {
             >
               WYSIWYG
             </a>
-            . When you're writing content, generally the template code is stable
-            and you won't be doing many changes to it, if at all. Instead you
-            just want to focus on the content, and you don't need all of all of
+            . When you’re writing content, generally the template code is stable
+            and you won’t be doing many changes to it, if at all. Instead you
+            just want to focus on the content, and you don’t need all of all of
             the possibilities the regular paradigm offers. You really only need
             to make minor adjustments like setting a particular color, font
             size, or margin—a perfect fit for utility classes.
@@ -1735,7 +1741,7 @@ for (const utilLabel in utilDataMap) {
             >
               CSS custom properties
             </a>{' '}
-            (also referred to as CSS variables), I didn't pay much attention to
+            (also referred to as CSS variables), I didn’t pay much attention to
             them since I figured that Sass already covered it. After trying them
             out for the first time on this project, I now realize that I had
             been missing out on quite a lot.
@@ -2135,7 +2141,7 @@ a {
             >
               react-transition-group
             </a>{' '}
-            for React animations, but a bit too much to work with since it's not
+            for React animations, but a bit too much to work with since it’s not
             actually an animation library. That’s why it was important for me to
             find a declarative animation library that worked well with React and
             React Router. I eventually settled on{' '}
@@ -2257,7 +2263,7 @@ export default BlindFrame;`}</code></pre>
             you in your own work. All of the examples in this post are quite
             simplified when compared to the actual implementations, so if you
             want to see the exact implementation details used for this project,
-            you can check out MattLean.com's GitHub repository.
+            you can check out MattLean.com’s GitHub repository.
           </p>
         </section>
         <section className="btn-area">
