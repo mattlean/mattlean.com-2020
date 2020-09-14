@@ -130,7 +130,7 @@ const LJAS = () => {
             </a>
             , and browsers. The build process is all handled through&nbsp;
             <a
-              href="https://webpack.js.org/"
+              href="https://webpack.js.org"
               rel="noreferrer"
               target="_blank"
               className="a-grey-1"

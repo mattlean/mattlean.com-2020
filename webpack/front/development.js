@@ -29,7 +29,7 @@ let developmentConfig = merge([
         [
           'prismjs',
           {
-            languages: ['css', 'ejs', 'jsx', 'scss'],
+            languages: ['ejs', 'jsx', 'scss'],
           },
         ],
       ],

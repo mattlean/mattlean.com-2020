@@ -288,6 +288,16 @@ const ML2020 = () => {
                   Framer Motion
                 </a>
               </li>
+              <li>
+                <a
+                  href="https://prismjs.com"
+                  rel="noreferrer"
+                  target="_blank"
+                  className="a-grey-1"
+                >
+                  Prism
+                </a>
+              </li>
             </ul>
           </section>
           <section>

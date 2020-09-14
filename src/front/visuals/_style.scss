@@ -1,4 +1,5 @@
 @use './scale/bp';
+@use './scale/color';
 @use './scale/size';
 @use './scale/typography';
 
@@ -36,6 +37,15 @@ p {
   line-height: 1.5em;
 
   margin-bottom: 1.5em;
+}
+
+blockquote {
+  background-color: color.$grey-e;
+  color: #555;
+  font-style: italic;
+
+  margin: 0;
+  padding: 1.5em;
 }
 
 a,

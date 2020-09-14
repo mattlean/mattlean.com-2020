@@ -4,6 +4,10 @@
   }
 
   > .subgrid-content {
+    .wide {
+      grid-column: 2/6;
+    }
+
     > .long-h {
       grid-column: span 4;
     }
