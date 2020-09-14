@@ -1,15 +1,23 @@
+@use '../../../visuals/scale/size';
+
 .grid-blog-cs-ml2020 {
-  > .cover {
+  .wide {
     grid-column: 2/6;
   }
+}
 
-  > .subgrid-content {
+@media (max-width: size.$size-956) {
+  .grid-blog-cs-ml2020 {
     .wide {
-      grid-column: 2/6;
+      grid-column: 1/4;
     }
+  }
+}
 
-    > .long-h {
-      grid-column: span 4;
+@media (max-width: size.$size-780) {
+  .grid-blog-cs-ml2020 {
+    .wide {
+      grid-column: 1/-1;
     }
   }
 }

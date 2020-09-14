@@ -1079,44 +1079,46 @@ app.listen(port, () => {
             </figcaption>
           </figure>
         </section>
-        <figure className="ss ss-sm">
-          <img src={SSAA} alt="Logo for American Airlines" />
-          <figcaption className="c-grey-2">
-            Logo for{' '}
-            <a
-              href="https://aa.com"
-              rel="noreferrer"
-              target="_blank"
-              className="a-grey-2"
-            >
-              American Airlines
-            </a>
-            , 1967,{' '}
-            <a
-              href="https://en.wikipedia.org/wiki/Massimo_Vignelli"
-              rel="noreferrer"
-              target="_blank"
-              className="a-grey-2"
-            >
-              Massimo Vignelli
-            </a>
-          </figcaption>
-        </figure>
-        <figure className="ss ss-sm mb-4">
-          <img src={SSKnoll} alt="Logo for Knoll" />
-          <figcaption className="c-grey-2">
-            Logo for{' '}
-            <a
-              href="https://knoll.com"
-              rel="noreferrer"
-              target="_blank"
-              className="a-grey-2"
-            >
-              Knoll
-            </a>
-            , 1967, Massimo Vignelli
-          </figcaption>
-        </figure>
+        <section className="multicol-ss mb-4">
+          <figure className="ss ss-sm">
+            <img src={SSAA} alt="Logo for American Airlines" />
+            <figcaption className="c-grey-2">
+              Logo for{' '}
+              <a
+                href="https://aa.com"
+                rel="noreferrer"
+                target="_blank"
+                className="a-grey-2"
+              >
+                American Airlines
+              </a>
+              , 1967,{' '}
+              <a
+                href="https://en.wikipedia.org/wiki/Massimo_Vignelli"
+                rel="noreferrer"
+                target="_blank"
+                className="a-grey-2"
+              >
+                Massimo Vignelli
+              </a>
+            </figcaption>
+          </figure>
+          <figure className="ss ss-sm">
+            <img src={SSKnoll} alt="Logo for Knoll" />
+            <figcaption className="c-grey-2">
+              Logo for{' '}
+              <a
+                href="https://knoll.com"
+                rel="noreferrer"
+                target="_blank"
+                className="a-grey-2"
+              >
+                Knoll
+              </a>
+              , 1967, Massimo Vignelli
+            </figcaption>
+          </figure>
+        </section>
         <h3 className="h-7">Benefits of Working with the Style</h3>
         <section className="subgrid-subcontent grid mb-4">
           <section className="left-half-priority c-grey-1">
