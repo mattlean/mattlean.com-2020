@@ -3,13 +3,14 @@ import { Badge, Btn } from 'eswiss'
 import { Link } from 'react-router-dom'
 import BlindFrame from '../../../components/Blind/BlindFrame'
 import { getProjectData } from '../../../../common/data/project'
-import { ROUTE_PREFIX } from '../../../../common/data/route/project'
+import { ROUTE_PREFIX as BLOG_PREFIX } from '../../../../common/data/route/blog'
+import { ROUTE_PREFIX as PROJECT_PREFIX } from '../../../../common/data/route/project'
 import {
   setupBlindObservers,
   useInitAnim,
 } from '../../../components/Blind/initAnimUtil'
 import { usePageLoadEffect } from '../../../util'
-import { MarkGithubIcon } from '@primer/octicons-react'
+import { BookIcon, MarkGithubIcon } from '@primer/octicons-react'
 
 const { company, tags } = getProjectData('ml2020')
 
@@ -109,29 +110,23 @@ const ML2020 = () => {
           <p>
             The project acts as a proof-of-concept for my other project, a
             design system called&nbsp;
-            <Link to={`${ROUTE_PREFIX}eswiss`} className="a-grey-1 txtw-bold">
+            <Link to={`${PROJECT_PREFIX}eswiss`} className="a-grey-1 txtw-bold">
               eswiss
             </Link>
             .
-            {/* If you’re interested in the design and development process behind
-            this website and its design system, read the{' '}
-            <Link to="/" className="a-grey-1">
-              case study
-            </Link>
-            . */}
           </p>
         </section>
-        {/* <Link to="/">
+        <Link to={`${BLOG_PREFIX}cs-ml2020`}>
           <Btn className="btn-case-study">
             <BookIcon className="btn-icon" /> Case Study
           </Btn>
-        </Link> */}
+        </Link>
         <a
           href="https://github.com/mattlean/mattlean.com-2020"
           rel="noreferrer"
           target="_blank"
         >
-          <Btn className="btn-gh">
+          <Btn outline={true} className="btn-gh">
             <MarkGithubIcon className="btn-icon" /> GitHub
           </Btn>
         </a>
@@ -226,7 +221,7 @@ const ML2020 = () => {
             <h4>Tooling</h4>
             <ul>
               <li>
-                <Link to={`${ROUTE_PREFIX}alwp`} className="a-grey-1">
+                <Link to={`${PROJECT_PREFIX}alwp`} className="a-grey-1">
                   Asset List Webpack&nbsp;Plugin
                 </Link>
               </li>
@@ -254,7 +249,7 @@ const ML2020 = () => {
             <h4>Frontend</h4>
             <ul>
               <li>
-                <Link to={`${ROUTE_PREFIX}eswiss`} className="a-grey-1">
+                <Link to={`${PROJECT_PREFIX}eswiss`} className="a-grey-1">
                   eswiss
                 </Link>
               </li>
