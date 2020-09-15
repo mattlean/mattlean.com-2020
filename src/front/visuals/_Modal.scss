@@ -1,3 +1,4 @@
+@use './scale/color';
 @use './scale/size';
 
 .ats {
@@ -17,10 +18,30 @@
     max-width: 600px;
     z-index: 4;
 
+    > .modal-content {
+      > .modal-h {
+        color: color.$k;
+      }
+
+      > p {
+        color: color.$grey-a;
+
+        > a {
+          color: color.$grey-a;
+
+          &:hover {
+            color: color.$k;
+          }
+        }
+      }
+    }
+
     > .modal-close {
       --top: 2.5em;
 
       > svg {
+        fill: color.$k;
+
         height: 21px;
       }
     }

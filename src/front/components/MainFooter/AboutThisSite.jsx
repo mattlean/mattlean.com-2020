@@ -24,7 +24,7 @@ const AboutThisSite = ({ focusEleOnClose, isOpen, setIsOpen }) => {
     />
   )
 
-  const closeContent = <X className="svg-primary" />
+  const closeContent = <X />
 
   return (
     <Modal
@@ -47,37 +47,32 @@ const AboutThisSite = ({ focusEleOnClose, isOpen, setIsOpen }) => {
       <h1 ref={modalH} className="modal-h h-4 sm:h-6" tabIndex="-1">
         About MattLean.com
       </h1>
-      <p className="c-grey-1">
+      <p>
         MattLean.com is designed to be responsive, meaning it works on all
         screen sizes, from large desktop monitors to small mobile
         device&nbsp;screens.
       </p>
-      <p className="c-grey-1">
+      <p>
         This site is also built with accessibility in mind, so it supports
         keyboard and screen reader&nbsp;interactions.
       </p>
-      <p className="c-grey-1">
+      <p>
         Light and dark modes can be controlled in the main navigation to
         accommodate for different viewing scenarios and preferences. Light mode
         will automatically activate at 6:00 AM and dark mode will automatically
         activate at 6:00 PM in the visitor’s time zone. When manually selecting
         a mode, your selection will be remembered for 24&nbsp;hours.
       </p>
-      <p className="c-grey-1">
+      <p>
         If you’re interested in learning about some details behind this website,
         you can get an overview on the{' '}
-        <Link to={`${PROJECT_PREFIX}ml2020`} className="a-grey-1">
-          project page
-        </Link>{' '}
-        that goes over technology stack used, GitHub repository,&nbsp;etc.
+        <Link to={`${PROJECT_PREFIX}ml2020`}>project page</Link> that goes over
+        technology stack used, GitHub repository,&nbsp;etc.
       </p>
-      <p className="c-grey-1">
+      <p>
         If would like to get a more in-depth look at the development process for
         this site, consider reading the{' '}
-        <Link to={`${BLOG_PREFIX}cs-ml2020`} className="a-grey-1">
-          case&nbsp;study
-        </Link>
-        .
+        <Link to={`${BLOG_PREFIX}cs-ml2020`}>case&nbsp;study</Link>.
       </p>
     </Modal>
   )
