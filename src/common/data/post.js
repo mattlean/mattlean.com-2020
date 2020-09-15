@@ -24,10 +24,10 @@ export const POSTS = {
     title: 'Case Study: MattLean.com',
     subtitle: 'The development process behind my personal website in 2020.',
     published: {
-      dateStr: '2020-09-12',
-      txt: 'September 12, 2020',
+      dateStr: '2020-09-14',
+      txt: 'September 14, 2020',
     },
-    readtime: 5,
+    readtime: 30,
     tags: ['cs', 'backend', 'design', 'frontend'],
   },
   'cs-sot': {

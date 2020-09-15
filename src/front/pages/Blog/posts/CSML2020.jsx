@@ -154,7 +154,7 @@ const CSML2020 = () => {
             <Link to={`${PROJECT_PREFIX}ljas`} className="a-grey-1">
               Lean JavaScript Application Starter
             </Link>
-            , but one that I hadn't released for a production environment yet.
+            , but one that I hadn’t released for a production environment yet.
             Even though my preferred language for the backend was{' '}
             <a
               href="https://python.org"
@@ -230,10 +230,10 @@ const CSML2020 = () => {
             were previously necessary, and it’s great that it allows related
             code to be grouped together instead of being scattered across a
             class component. However, it does come its own new challenges.{' '}
-            <code>useEffect</code>'s role is deceptively straightforward—all it
+            <code>useEffect</code>’s role is deceptively straightforward—all it
             does is run a function after a component renders, but there are a
-            few of nuances behind it that I didn't know to look out for, causing
-            issues where it ran too frequently, didn't run enough, or read stale
+            few of nuances behind it that I didn’t know to look out for, causing
+            issues where it ran too frequently, didn’t run enough, or read stale
             state. Luckily, the React docs have a great{' '}
             <a
               href="https://reactjs.org/docs/hooks-faq.html#what-can-i-do-if-my-effect-dependencies-change-too-often"
@@ -800,7 +800,7 @@ app.listen(port, () => {
           </ol>
           <p className="c-grey-1 mb-4">
             To test if server-side rendering is working, you can use your
-            browser's developer tools to see that the server is sending all of
+            browser’s developer tools to see that the server is sending all of
             the initial markup for the React application in the network
             response. The page load will also log a message on the server. After
             the initial load, navigating through pages should be done without
@@ -1998,8 +1998,8 @@ a {
             >
               plugin API
             </a>{' '}
-            didn't have access to everything XD could do. The resulting UX is
-            far from identical, but it's still similar enough to the point where
+            didn’t have access to everything XD could do. The resulting UX is
+            far from identical, but it’s still similar enough to the point where
             and any user familiar with layout grid should be able to transition
             to Gridnik&nbsp;easily.
           </p>
@@ -2011,7 +2011,7 @@ a {
           </p>
         </section>
         <figure className="ss ss-lg mb-4">
-          <img src={SSGridnik} alt="Cover of 'New Graphic Design' journal" />
+          <img src={SSGridnik} alt="Screenshot of Gridnik open in Adobe XD" />
           <figcaption className="c-grey-2">
             Gridnik being used to draw a gridlines and track fills over a
             green&nbsp;rectangle
@@ -2050,7 +2050,7 @@ a {
         <figure className="wide ss mb-4">
           <img
             src={SSML2020Grids}
-            alt="Cover of 'New Graphic Design' journal"
+            alt="Gridnik being used to build grids for MattLean.com"
           />
           <figcaption className="c-grey-2">
             Gridnik being used to build grid-based compositions
@@ -2221,7 +2221,10 @@ a {
             float-based layouts, but after learning CSS grid I now wonder how
             we’ve been building layouts without a true grid solution for so
             long. (I guess tables were the closest thing, but they don’t count!
-            🤮) I look forward to another CSS grid project, as next time I’ll be
+            <span role="img" aria-label="Face vomiting emoji">
+              🤮
+            </span>
+            ) I look forward to another CSS grid project, as next time I’ll be
             able to go into it with a solid understanding of the CSS grid
             specification and grid design theory from the get-go.
           </p>
@@ -2319,7 +2322,7 @@ a {
               target="_blank"
               className="a-grey-1"
             >
-              eswiss's component&nbsp;library
+              eswiss’s component&nbsp;library
             </a>
             .
           </p>
