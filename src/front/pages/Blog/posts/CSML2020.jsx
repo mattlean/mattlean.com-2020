@@ -166,8 +166,8 @@ const CSML2020 = () => {
             >
               Python
             </a>
-            , admittedly was it was really nice only dealing with only one
-            language when working with both ends of the&nbsp;stack.
+            , admittedly was it was nice only dealing with only one language
+            when working with both ends of the&nbsp;stack.
           </p>
           <p className="mb-4 c-grey-1">
             <a
@@ -211,7 +211,7 @@ const CSML2020 = () => {
               hooks
             </a>
             . Admittedly it did take a bit getting used to, but after giving it
-            some time, I have to say that it really did end up producing tidier
+            some time, I have to say that it did end up producing tidier
             components through a cleaner development process. Not dealing with
             some of the more cumbersome aspects of class components, like
             binding <code>this</code> to class methods or worrying about
@@ -230,8 +230,8 @@ const CSML2020 = () => {
               class lifecycle methods
             </a>{' '}
             were previously necessary, and it’s great that it allows related
-            code to be grouped together instead of being scattered across a
-            class component. However, it does come its own new challenges.{' '}
+            code to be grouped instead of being scattered across a class
+            component. However, it does come with its own new challenges.{' '}
             <code>useEffect</code>’s role is deceptively straightforward—all it
             does is run a function after a component renders, but there are a
             few of nuances behind it that I didn’t know to look out for, causing
@@ -327,7 +327,7 @@ const CSML2020 = () => {
             on&nbsp;it.)
           </p>
           <p className="c-grey-1">
-            Nowadays there are some{' '}
+            Nowadays there are{' '}
             <a
               href="https://en.wikipedia.org/wiki/Web_crawler"
               rel="noreferrer"
@@ -381,7 +381,7 @@ const CSML2020 = () => {
             </a>{' '}
             build process has two separate configurations for frontend and
             backend. For the backend, a standard one will suffice, so showing it
-            is unnecessary. The frontend on the otherhand is close to standard,
+            is unnecessary. The frontend on the other hand is close to standard,
             but does have some changes to get our full-stack setup working that
             are worth pointing&nbsp;out:
           </p>
@@ -692,8 +692,8 @@ app.listen(port, () => {
             which makes all the served static files remain in the cache for a
             year. Because the chunkhashes in the file names change when code is
             changed, we will never need to worry about users receiving a stale
-            build. So instead of being potentially problematic, a year long max
-            age actually becomes a good thing to have, just in case if the
+            build. So instead of being potentially problematic, a year-long
+            max-age actually becomes a good thing to have, just in case if the
             application is not updated for a&nbsp;while.
           </p>
           <p className="c-grey-1">
@@ -1439,9 +1439,8 @@ app.listen(port, () => {
             system. I established the two fundamental values as 16 pixels, the
             default type size for small screens, and 18 pixels, the default for
             the remainder of the screen size range. By building the rest of the
-            scale around these two values, I would ensure that every thing in
-            the composition had some logical relationship with
-            the&nbsp;typography.
+            scale around these two values, I would ensure that everything in the
+            composition had some logical relationship with the&nbsp;typography.
           </p>
           <p className="c-grey-1">
             One thing to note about this sizing system is that it only has one
@@ -1463,7 +1462,7 @@ app.listen(port, () => {
           </p>
           <p className="c-grey-1">
             This methodology was fine until I started working on the responsive
-            layout. I thought it would make sense to add responsive breakpoints
+            layouts. I thought it would make sense to add responsive breakpoints
             to the scale, but eventually, I found that this made the scale too
             large and difficult to manage. For my particular layout, breakpoints
             were extremely dependent on the content of the page and the grid,
@@ -1620,10 +1619,10 @@ app.listen(port, () => {
             </a>
             . When you’re writing content, generally the template code is stable
             and you won’t be doing many changes to it, if at all. Instead you
-            just want to focus on the content, and you don’t need all of all of
-            the complexity the regular paradigm offers. You really only need to
-            make minor adjustments like setting a particular color, font size,
-            or margin—a perfect fit for utility&nbsp;classes.
+            just want to focus on the content, and you don’t need all of the
+            complexity the regular paradigm offers. You really only need to make
+            minor adjustments like setting a particular color, font size, or
+            margin—a perfect fit for utility&nbsp;classes.
           </p>
           <p className="mb-4 c-grey-1">
             Overall I think this coding style isn’t bad, although it’s obvious
@@ -1647,8 +1646,8 @@ app.listen(port, () => {
             deeper into some of the more advanced features&nbsp;though.
           </p>
           <p className="c-grey-1">
-            Manually writing utility classes one-by-one is too time consuming
-            and error prone. Luckily the language allows generation of utility
+            Manually writing utility classes one-by-one is too time-consuming
+            and error-prone. Luckily the language allows generation of utility
             classes easily with{' '}
             <a
               href="https://sass-lang.com/documentation/values/maps"
@@ -2058,7 +2057,7 @@ a {
         <section className="wide mb-4 c-grey-1">
           <p>
             Gridnik was the main tool I used to produce the initial grid
-            compositions. Overall I think it’s a great for prototyping grid
+            compositions. Overall I think it’s great for prototyping grid
             compositions quickly, and I hope you try it once it releases on the
             XD Plugin&nbsp;Manager!
           </p>
@@ -2164,9 +2163,9 @@ a {
             concept. The entire Swiss grid philosophy relies on knowing that the
             grid will handle a set amount of content with a set amount of
             content type variations. However, the expectations for the content
-            have heightened drastically through the complexity of modern day
+            have heightened drastically through the complexity of modern-day
             applications, so while some Swiss designers would’ve seen use of{' '}
-            <code>auto</code> cells as poor and lazy design, in the modern day{' '}
+            <code>auto</code> cells as poor and lazy design, today{' '}
             <code>auto</code> cells are absolutely necessary to handle the
             incredible lengths and diversity in&nbsp;content.
           </p>
