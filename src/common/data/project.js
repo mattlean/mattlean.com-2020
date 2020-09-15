@@ -114,7 +114,7 @@ const PROJECTS = {
     name: 'MattLean.com',
     short: 'Current personal website built in 2020',
     long: 'The latest iteration of my personal website.',
-    tags: ['website', 'backend', 'design', 'design-system', 'frontend'],
+    tags: ['website', 'backend', 'design', 'frontend'],
   },
   owl: {
     id: 'owl',
