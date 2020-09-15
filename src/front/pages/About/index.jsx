@@ -363,6 +363,7 @@ const About = () => {
                 <li>XD</li>
                 <li>Photoshop</li>
                 <li>Illustrator</li>
+                <li>InDesign</li>
                 <li>Premiere</li>
                 <li>After Effects</li>
                 <li>Audition</li>

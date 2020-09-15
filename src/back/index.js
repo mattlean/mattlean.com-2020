@@ -19,7 +19,11 @@ if (process.env.NODE_ENV === 'development') {
   if (!process.env.GA) logger.warn('Google Analytics tracking ID was not set')
   if (!PORT) PORT = 9001
 
-  app.use(morgan('dev'))
+  app.use(
+    morgan(
+      '[:date[iso]] :method :url :status :response-time ms - :res[content-length]'
+    )
+  )
   app.use('/', express.static(FRONT.BUILD_DEV))
 } else if (process.env.NODE_ENV === 'production') {
   logger.info('🤖🛫 INITIATING PRODUCTION SERVER 🛫🤖')

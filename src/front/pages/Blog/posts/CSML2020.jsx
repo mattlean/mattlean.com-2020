@@ -14,8 +14,10 @@ import {
 import { usePageLoadEffect } from '../../../util'
 import { FileIcon, MarkGithubIcon } from '@primer/octicons-react'
 import SSAA from '../../../assets/posts/cs-ml2020/american-airlines.png'
-import SSKnoll from '../../../assets/posts/cs-ml2020/knoll.png'
+import SSGridnik from '../../../assets/posts/cs-ml2020/gridnik-ss.png'
 import SSGridSystems from '../../../assets/posts/cs-ml2020/grid-systems.jpg'
+import SSKnoll from '../../../assets/posts/cs-ml2020/knoll.png'
+import SSML2020Grids from '../../../assets/posts/cs-ml2020/ml2020-grids.png'
 import SSNewGraphicDesign from '../../../assets/posts/cs-ml2020/new-graphic-design.jpg'
 
 import { highlightAll } from 'prismjs'
@@ -100,16 +102,17 @@ const CSML2020 = () => {
       >
         <section className="wide mb-6 c-grey-1">
           <p>
-            My website was in serious need of a redesign as it wasn’t updated in
-            almost 5 years. Because of this, I took the opportunity to explore
-            some things I had been meaning to try out for some time. This post
-            overviews some of the thoughts, opinions, and solutions I had for
-            the more significant challenges of the project.
+            My website was in serious need of a redesign since it wasn’t updated
+            in almost 5 years. Because of this, I took the opportunity to
+            explore some things that I had been meaning to try out for some
+            time. This post overviews some of the thoughts, opinions, and
+            solutions I had for the more significant challenges of
+            the&nbsp;project.
           </p>
           <p>
             Note that this case study focused more on the technical side of
             things. If you want to learn more about the visual designs, another
-            post on that is coming soon!
+            post on that is coming&nbsp;soon!
           </p>
         </section>
         <section className="wide mb-6">
@@ -138,8 +141,7 @@ const CSML2020 = () => {
             </a>{' '}
             because there were a few features with the library and packages in
             the ecosystem that I hadn’t had the chance to play around with yet.
-            The use of JavaScript on both the backend and frontend emerged from
-            this decision, and as a result of that, I decided to use{' '}
+            I was also interested in using React and{' '}
             <a
               href="https://expressjs.com"
               rel="noreferrer"
@@ -148,9 +150,12 @@ const CSML2020 = () => {
             >
               Express
             </a>{' '}
-            since that was the backend JavaScript framework I was most
-            comfortable with. Even though my preferred language for the backend
-            is{' '}
+            together on the backend, a setup that I had experimented with for{' '}
+            <Link to={`${PROJECT_PREFIX}ljas`} className="a-grey-1">
+              Lean JavaScript Application Starter
+            </Link>
+            , but one that I hadn't released for a production environment yet.
+            Even though my preferred language for the backend was{' '}
             <a
               href="https://python.org"
               rel="noreferrer"
@@ -159,8 +164,8 @@ const CSML2020 = () => {
             >
               Python
             </a>
-            , admittedly it is really nice only dealing with one language when
-            working with both ends of the stack.
+            , admittedly was it was really nice only dealing with only one
+            language when working with both ends of the&nbsp;stack.
           </p>
           <p className="mb-4 c-grey-1">
             <a
@@ -176,12 +181,12 @@ const CSML2020 = () => {
               eswiss
             </Link>
             ’s component library as I see the design system potentially
-            intertwining with some other future projects where types will be
+            intertwining with some other future projects where types could be
             useful. For a smaller project like this one, I think JavaScript does
             the job fine. Incompatibility between the two languages is not an
             issue since TypeScript can be compiled into JavaScript with separate
             declaration files, so the eswiss components can be used on
-            MattLean.com without any hiccups.
+            MattLean.com without any&nbsp;hiccups.
           </p>
           <h3 className="h-7 mb-1.5">Abandoning Classes for Hooks</h3>
           <p className="c-grey-1">
@@ -204,33 +209,41 @@ const CSML2020 = () => {
               hooks
             </a>
             . Admittedly it did take a bit getting used to, but after giving it
-            some time, I have to say that it really did end up producing cleaner
-            components through a cleaner development process. Not worrying about
-            some of the more cumbersome aspects of JavaScript classes, like
-            binding <code>this</code> to class methods, was really nice. Also,
-            not worrying about needing to convert a function component to a
-            class component was also a welcome change, as I would do this fairly
-            often since I started most of my components as functions and
-            converted them later on when access to the lifecycle was necessary.
+            some time, I have to say that it really did end up producing tidier
+            components through a cleaner development process. Not dealing with
+            some of the more cumbersome aspects of class components, like
+            binding <code>this</code> to class methods or worrying about
+            possibly needing to convert a function component in the future, was
+            a greatly welcome&nbsp;change.
           </p>
           <p className="c-grey-1">
             <code>useEffect</code> caused the most problems for me at first. The
-            hook is usually utilized in scenarios where class lifecycle methods
-            were previously necessary. It’s great that it allows related code to
-            be grouped together instead of being scattered across a class
-            component. However, it does come with some new problems. I would
-            often run into issues with <code>useEffect</code> running too
-            frequently, not running enough, or reading stale state. Luckily, the{' '}
+            hook is usually utilized in scenarios where{' '}
+            <a
+              href="https://reactjs.org/docs/state-and-lifecycle.html"
+              rel="noreferrer"
+              target="_blank"
+              className="a-grey-1"
+            >
+              class lifecycle methods
+            </a>{' '}
+            were previously necessary, and it’s great that it allows related
+            code to be grouped together instead of being scattered across a
+            class component. However, it does come its own new challenges.{' '}
+            <code>useEffect</code>'s role is deceptively straightforward—all it
+            does is run a function after a component renders, but there are a
+            few of nuances behind it that I didn't know to look out for, causing
+            issues where it ran too frequently, didn't run enough, or read stale
+            state. Luckily, the React docs have a great{' '}
             <a
               href="https://reactjs.org/docs/hooks-faq.html#what-can-i-do-if-my-effect-dependencies-change-too-often"
               rel="noreferrer"
               target="_blank"
               className="a-grey-1"
             >
-              React docs have provided solutions that covered every problem case
-              I encountered
-            </a>
-            .
+              explanation on the potential roadblocks
+            </a>{' '}
+            for hook newbies like myself.
           </p>
           <p className="c-grey-1">
             One downside to using hooks was that I could no longer use{' '}
@@ -270,7 +283,7 @@ const CSML2020 = () => {
             >
               webpack-dev-server
             </a>
-            ’s default live reload.
+            ’s default live&nbsp;reload.
           </p>
         </section>
         <section className="wide mb-6">
@@ -302,14 +315,14 @@ const CSML2020 = () => {
               search engine optimization (SEO)
             </a>
             . I opted for an architecture that served static files for every
-            page route and transitioned to a SPA-paradigm after the initial page
-            load. The result was a persistent, refreshless experience that is
-            also SEO-friendly. (
+            page route and transitioned to an SPA-paradigm after the initial
+            page load. The result was a persistent, refreshless experience that
+            is also SEO-friendly. (If you’re interested in learning more about
+            Lean Space, you can read the{' '}
             <Link to={`${BLOG_PREFIX}cs-lean-space`} className="a-grey-1">
-              If you’re interested in learning more about Lean Space, you can
-              read the case study on it.
-            </Link>
-            )
+              case study
+            </Link>{' '}
+            on&nbsp;it.)
           </p>
           <p className="c-grey-1">
             Nowadays there are some{' '}
@@ -323,7 +336,7 @@ const CSML2020 = () => {
             </a>{' '}
             that are much better at processing JavaScript. However, there are
             still many others that rely on the initially served markup, so I
-            figured it would be good to use a similar architecture for
+            figured it would still be good to use a similar architecture for
             MattLean.com. The only problem is that this type of approach in
             combination with React does add a nontrivial amount of complexity,
             but it’s not too bad to handle since the amount of content for this
@@ -339,11 +352,16 @@ const CSML2020 = () => {
             >
               Node.js
             </a>
-            , Express , and server-side rendered React starter project I built
+            , Express, and server-side rendered React starter project I built
             for{' '}
-            <Link to={`${PROJECT_PREFIX}ljas`} className="a-grey-1">
-              Lean JavaScript Application Starter
-            </Link>
+            <a
+              href="https://github.com/mattlean/lean-js-app-starter/tree/nodejs-ssr"
+              rel="noreferrer"
+              target="_blank"
+              className="a-grey-1"
+            >
+              Lean JS App&nbsp;Starter
+            </a>
             .
           </p>
           <h3 className="h-7 mb-1.5">Building the Frontend with webpack</h3>
@@ -358,8 +376,10 @@ const CSML2020 = () => {
               webpack
             </a>{' '}
             build process has two separate configurations for frontend and
-            backend. Here is a very near standard configuration for a frontend
-            React project that we’ll be using:
+            backend. For the backend, a standard one will suffice, so showing it
+            is unnecessary. The frontend on the otherhand is close to standard,
+            but does have some changes to get our full-stack setup working that
+            are worth pointing&nbsp;out:
           </p>
           {/* eslint-disable no-useless-escape */}
           {/* prettier-ignore */}
@@ -407,7 +427,7 @@ module.exports = {
   },
 };`}</code></pre>
           {/* eslint-enable no-useless-escape */}
-          <p className="c-grey-1">The few unstandard changes are:</p>
+          <p className="c-grey-1">The few unstandard changes&nbsp;are:</p>
           <ol className="mb-1.5 c-grey-1">
             <li>
               Chunkhashes are added to the file names. This is so that when
@@ -421,14 +441,16 @@ module.exports = {
               >
                 HTTP cache
               </a>{' '}
-              invalidation. This ensures that users never receive a stale build.
+              invalidation. This ensures that users never receive a
+              stale&nbsp;build.
             </li>
             <li>
               <Link to={`${PROJECT_PREFIX}alwp`} className="a-grey-1">
                 Asset List Webpack Plugin
               </Link>{' '}
-              is used to generate an assets map of the file names. This will be
-              used for the backend side of things, so we’ll get to that later.
+              is used to generate an assets map of the file information. This
+              has to do with the chunkhashes we added and will be used for the
+              backend, so we’ll get to this&nbsp;later.
             </li>
             <li>
               <a
@@ -459,8 +481,8 @@ module.exports = {
                 webpack-dev-server
               </a>{' '}
               when you develop for the frontend. The template parameters are set
-              to undefined as they are only used when the template is utilized
-              for the backend.
+              to <code>undefined</code> as they are only used when the template
+              is utilized for the&nbsp;backend.
             </li>
           </ol>
           {/* prettier-ignore */}
@@ -483,8 +505,8 @@ module.exports = {
               className="a-grey-1"
             >
               React Router
-            </a>{' '}
-            application:
+            </a>
+            &nbsp;application:
           </p>
           {/* prettier-ignore */}
           <pre className="language-jsx mb-1.5rem"><code>{`import React from "react";
@@ -548,6 +570,7 @@ hydrate(
               href="https://reactjs.org/docs/react-dom.html#hydrate"
               rel="noreferrer"
               target="_blank"
+              className="a-grey-1"
             >
               <code>hydrate</code>
             </a>{' '}
@@ -556,24 +579,26 @@ hydrate(
               href="https://reactjs.org/docs/react-dom.html#render"
               rel="noreferrer"
               target="_blank"
+              className="a-grey-1"
             >
               <code>render</code>
             </a>{' '}
-            is normally used.
+            is normally&nbsp;used.
           </p>
           <p className="mb-4 c-grey-1">
             <code>hydrate</code> is similar to <code>render</code> except
             instead of using an empty container and rendering everything from
-            scratch, it utilizes a container that already has server-side
+            scratch, it utilizes a container that already has the server-side
             rendered HTML of the React application. It is important that the
             rendered content from the server is identical to the client,
-            otherwise problems can occur.
+            otherwise problems can&nbsp;occur.
           </p>
           <h3 className="h-7 mb-1.5">
             Rendering & Serving the Frontend from the Backend
           </h3>
           <p className="c-grey-1">
-            Here is the very barebones server application that we’ll be using:
+            Here is the very barebones server application that we’ll
+            be&nbsp;using:
           </p>
           {/* prettier-ignore */}
           {/* eslint-disable no-useless-escape */}
@@ -622,20 +647,36 @@ app.listen(port, () => {
           </pre>
           {/* eslint-enable no-useless-escape */}
           <p className="c-grey-1">
-            <code>express.static</code> sets the static file directory to the
-            location of the frontend build which is how it serves the frontend
-            assets. Because of this, the frontend build process must
-            successfully complete before the backend build process can begin.
+            <a
+              href="https://expressjs.com/en/starter/static-files.html"
+              rel="noreferrer"
+              target="_blank"
+              className="a-grey-1"
+            >
+              <code>express.static</code>
+            </a>{' '}
+            sets the static file directory to the location of the frontend build
+            which is how it serves the frontend assets. Because of this, the
+            frontend build process must successfully complete before the backend
+            build process can&nbsp;begin.
           </p>
           <p className="c-grey-1">
             Note that this means that in order to test the server, you need to
             wait for the frontend and backend builds to finish before you can
             try your changes. That’s why if you’re only working on frontend, you
-            should rely on webpack-dev-server since it only relies on the
-            frontend build.
+            should rely on webpack-dev-server since it only depends on the
+            frontend&nbsp;build.
           </p>
           <p className="c-grey-1">
-            <code>express.static</code> also sets the <code>Cache-Control</code>{' '}
+            <code>express.static</code> also sets the{' '}
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control"
+              rel="noreferrer"
+              target="_blank"
+              className="a-grey-1"
+            >
+              <code>Cache-Control</code>
+            </a>{' '}
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers"
               rel="noreferrer"
@@ -647,23 +688,58 @@ app.listen(port, () => {
             which makes all the served static files remain in the cache for a
             year. Because the chunkhashes in the file names change when code is
             changed, we will never need to worry about users receiving a stale
-            build. A year long max age actually becomes a good thing to have,
-            just in case if the application is not updated for a while.
+            build. So instead of being potentially problematic, a year long max
+            age actually becomes a good thing to have, just in case if the
+            application is not updated for a&nbsp;while.
           </p>
           <p className="c-grey-1">
             Now when dealing with the page routes, the <code>App</code>{' '}
             component from the frontend is imported and wrapped with a{' '}
-            <code>StaticRouter</code> instead of <code>BrowserRouter</code>.
-            This is because the router is only rendered once for every page
-            load, meaning it never needs to change to a different location,
-            making <code>StaticRouter</code> ideal on the server.
+            <a
+              href="https://reactrouter.com/web/api/StaticRouter"
+              rel="noreferrer"
+              target="_blank"
+              className="a-grey-1"
+            >
+              <code>StaticRouter</code>
+            </a>{' '}
+            instead of{' '}
+            <a
+              href="https://reactrouter.com/web/api/BrowserRouter"
+              rel="noreferrer"
+              target="_blank"
+              className="a-grey-1"
+            >
+              <code>BrowserRouter</code>
+            </a>
+            . This is because the server is stateless, so the router is only
+            rendered once for every request, meaning it never needs to change to
+            a different location. This makes <code>StaticRouter</code> ideal on
+            the server and is the reason why a router is not included in the{' '}
+            <code>App</code> component&nbsp;itself.
           </p>
           <p className="c-grey-1">
-            <code>req.path</code> is passed as the <code>location</code> prop in
-            the <code>StaticRouter</code> which determines which page is
-            rendered. This gets put into <code>renderToString</code> which then
-            gets inserted into the same EJS template we used in the frontend
-            build using the template parameters.
+            <a
+              href="https://expressjs.com/en/api.html#req.path"
+              rel="noreferrer"
+              target="_blank"
+              className="a-grey-1"
+            >
+              <code>req.path</code>
+            </a>{' '}
+            is passed as the <code>location</code> prop in the{' '}
+            <code>StaticRouter</code> which determines which page is rendered.
+            This gets put into{' '}
+            <a
+              href="https://reactjs.org/docs/react-dom-server.html#rendertostring"
+              rel="noreferrer"
+              target="_blank"
+              className="a-grey-1"
+            >
+              <code>renderToString</code>
+            </a>{' '}
+            which then gets inserted into the same EJS template we used in the
+            frontend build as the <code>app</code> template&nbsp;parameter.
           </p>
           <p className="c-grey-1 mb-4">
             Here is also where that asset map generated by Asset List Webpack
@@ -676,58 +752,62 @@ app.listen(port, () => {
             build, which would be inconvenient. By using the plugin, this work
             is now automatically handled.
           </p>
-          <h3 className="h-7 mb-1.5">Walking Through the Process</h3>
+          <h3 className="h-7 mb-1.5">Walking Through the Whole Process</h3>
           <p className="c-grey-1">
             Now that everything is finally in place, let’s walk through the
-            process from beginning to end and see how everything comes together.
+            process from beginning to end and see how everything
+            comes&nbsp;together.
           </p>
           <ol className="mb-1.5 c-grey-1">
-            <li>webpack runs and builds the frontend.</li>
+            <li>webpack runs and builds the frontend on the&nbsp;server.</li>
             <li>
-              webpack runs again and builds the backend which relies on the
-              frontend build.
+              webpack runs again and builds the backend on the server which
+              relies on the frontend&nbsp;build.
             </li>
-            <li>The Express server goes online.</li>
+            <li>
+              The backend build is run and the Express server goes&nbsp;online.
+            </li>
             <li>
               A user attempts to visit a page on the site and sends an HTTP
-              request to the server.
+              request to the&nbsp;server.
             </li>
             <li>
               The server receives the request, determines the location that
               should be rendered, calls <code>renderToString</code> to render
               the React application, and inserts it into the EJS template to
-              form an HTML document as a string which is then returned to the
-              user in an HTTP response.
+              form an HTML document as a string. This is then returned to the
+              user in an HTTP&nbsp;response.
             </li>
             <li>
               The user receives the HTML document in the HTTP response and their
               browser begins to render it on screen. When the browser encounters
-              the script element, it sends another HTTP request to the server
-              requesting the JavaScript file.
+              the <code>script</code> element, it sends another HTTP request to
+              the server requesting the <code>main</code> JavaScript&nbsp;file.
             </li>
             <li>
-              The server receives the HTTP request and sends the JavaScript file
-              from the static directory that’s set to the server’s frontend
-              build.
+              The server receives the HTTP request and sends the{' '}
+              <code>main</code> JavaScript file from the static directory which
+              is set to the server’s own frontend&nbsp;build.
             </li>
             <li>
-              The user receives the JavaScript file in the HTTP response and the
-              browser executes it.
+              The user receives the <code>main</code> JavaScript file in the
+              HTTP response and the browser executes&nbsp;it.
             </li>
             <li>
               React calls <code>hydrate</code> which utilizes the existing HTML
-              from #6 to transition the static page to a SPA.
+              from step 6 to transition the static page to an&nbsp;SPA.
             </li>
           </ol>
           <p className="c-grey-1 mb-4">
-            To test if server-side rendering is working, you can use the browser
-            developer tools to see that the server is sending all of the markup
-            for the React application in the network response. The initial page
-            load will also log a message on the server. After the initial load,
-            navigating through pages should be done without reloading. You
-            should see that the server is not logging any messages when
-            navigating to a new page, proving that the application has
-            transitioned to the SPA paradigm.
+            To test if server-side rendering is working, you can use your
+            browser's developer tools to see that the server is sending all of
+            the initial markup for the React application in the network
+            response. The page load will also log a message on the server. After
+            the initial load, navigating through pages should be done without
+            reloading. You should see that the server reflects this since it is
+            not logging any messages, meaning it is no longer receiving requests
+            as you navigate through the application, confirming that the
+            application has transitioned to the SPA&nbsp;paradigm.
           </p>
           <h3 className="h-7 mb-1.5">Performance Improvements</h3>
           <p className="c-grey-1">
@@ -793,31 +873,33 @@ app.listen(port, () => {
               gzip
             </a>{' '}
             by Express when it is sent down to the user. All of this reduces the
-            total build size by about 43%.
+            total build size by about&nbsp;43%.
           </p>
           <p className="c-grey-1">
-            The second improvement splits the frontend JavaScript into two
-            files: a main file which holds all of the application code and a
+            The second improvement splits the frontend JavaScript bundle into
+            two files: a main file which holds all of the application code and a
             vendor file which holds all of the dependencies. By splitting them
             up, we can keep them separate in the cache so if one is updated, it
             alone is the only file that becomes invalidated. For example, if the
             application is changed but the dependencies were never upgraded, the
             deployment would only change the main file’s chunkhash, but the
-            vendor file’s chunkhash will remain the same. This means that when a
-            returning user loads the website, only the new main file will be
-            downloaded and the vendor file will be loaded from the cache.
+            vendor file’s chunkhash will remain the same. This means that a user
+            who has cached an old build will only need to download the new main
+            file during the next visit and can still retrieve the vendor file
+            from the&nbsp;cache.
           </p>
           <p className="c-grey-1">
             The third is use of an in-memory cache that stores server-side
-            rendered HTML. Because renderToString is synchronous and
-            single-threaded, many calls to it can negatively impact performance.
-            By caching all of the renders, we can effectively reduce the amount
-            of calls to the function to one per page. For a small site like this
-            one, the performance improvements of this aren’t really perceivable,
-            but because there are only 25 pages on the site at the time of this
-            writing, the cache implementation would be extremely simple so I
-            figured it wouldn’t hurt to have. If there were significantly more
-            pages on the site, I would probably implement a{' '}
+            rendered HTML. Because <code>renderToString</code> is synchronous
+            and single-threaded, many calls to it can negatively impact
+            performance. By caching all of the renders, we can effectively
+            reduce the amount of calls to the function to one per page. For a
+            small site like this one, the performance improvements of this
+            aren’t really perceivable, but because there are only 25 pages on
+            the site at the time of this writing, the cache implementation would
+            be extremely simple so I figured it wouldn’t hurt to have. If there
+            were significantly more pages on the site, I would probably
+            implement a{' '}
             <a
               href="https://en.wikipedia.org/wiki/Cache_replacement_policies#Least_recently_used_(LRU)"
               rel="noreferrer"
@@ -826,25 +908,26 @@ app.listen(port, () => {
             >
               least recently used (LRU) algorithm
             </a>{' '}
-            to deal with potential capacity problems.
+            to deal with potential capacity&nbsp;issues.
           </p>
           <p className="c-grey-1">
             While the architecture that was gone over is fine for a website of
             this size, if it was applied to a much larger site with a lot of
-            traffic, performance issues would likely appear, so here are some
-            other solutions that could be worth implementing:
+            traffic, performance issues would likely appear. Here are a few
+            solutions I would consider for this&nbsp;case:
           </p>
           <ol className="c-grey-1">
             <li>
-              Split the bundle so each page only loads the JavaScript it needs.
+              Split the bundle so each page only loads the JavaScript
+              it&nbsp;needs.
             </li>
             <li>
               Optimize the CSS by inlining critical styles and deferring the
               rest while splitting the deferred styles so the page only loads
-              what it needs.
+              what it&nbsp;needs.
             </li>
             <li>
-              Move gzip compression away from the application level to the
+              Move gzip compression from the application level to the{' '}
               <a
                 href="https://en.wikipedia.org/wiki/Reverse_proxy"
                 rel="noreferrer"
@@ -852,8 +935,8 @@ app.listen(port, () => {
                 className="a-grey-1"
               >
                 reverse proxy
-              </a>{' '}
-              level.
+              </a>
+              &nbsp;level.
             </li>
             <li>
               Use a{' '}
@@ -863,7 +946,7 @@ app.listen(port, () => {
                 target="_blank"
                 className="a-grey-1"
               >
-                content delivery network (CDN)
+                content delivery network&nbsp;(CDN)
               </a>
               .
             </li>
@@ -877,7 +960,7 @@ app.listen(port, () => {
               >
                 Redis
               </a>{' '}
-              or{' '}
+              or&nbsp;
               <a
                 href="https://memcached.org"
                 rel="noreferrer"
@@ -894,9 +977,9 @@ app.listen(port, () => {
           <h2 className="h-2 md:h-4 mb-3rem">Starting a Design System</h2>
           <p className="c-grey-1">
             Over the past few years, I had been growing a personal library of
-            custom components, but each component was designed for different
-            projects, and together they didn’t really share a coherent
-            direction. After reading{' '}
+            custom components, but each component was designed for a different
+            project, and together they didn’t really share a coherent direction.
+            After reading{' '}
             <a
               href="https://atomicdesign.bradfrost.com"
               rel="noreferrer"
@@ -907,15 +990,15 @@ app.listen(port, () => {
             </a>
             , I was inspired to take my components and develop them further into
             a design system. MattLean.com would act as the initial testing
-            ground for them.
+            ground for&nbsp;them.
           </p>
           <p className="c-grey-1">
-            Currently, all of the components are in React, but eventually, I
-            would like to support other frameworks as well. The design system is
-            far from done, but you can still check out the project’s development
-            on{' '}
+            Currently all of the components are in React, but eventually I would
+            like to support other frameworks as well. The design system is far
+            from done, but you can still check out the project’s development
+            on&nbsp;
             <a
-              href="https://github.com/mattlean/mattlean.com-2020"
+              href="https://github.com/mattlean/eswiss"
               rel="noreferrer"
               target="_blank"
               className="a-grey-1"
@@ -989,7 +1072,7 @@ app.listen(port, () => {
               </a>
               . While there’s nothing wrong with that, I wanted an option that
               didn’t feel like it was committed to any specific brand, something
-              that had a more objective expression.
+              that had a more objective&nbsp;expression.
             </p>
             <p className="c-grey-1">
               To accomplish this, I decided to root the brand of this design
@@ -1009,8 +1092,8 @@ app.listen(port, () => {
               designers of the movement attempted to create a rational design
               process that produced a visual vocabulary that could represent
               information free from the influence of associated meaning,
-              something that could be understood by different nations and
-              cultures.
+              something that could be understood by different nations
+              and&nbsp;cultures.
             </p>
             <p className="c-grey-1">
               The style’s visual language precedes all of the large
@@ -1027,7 +1110,7 @@ app.listen(port, () => {
                 Helvetica
               </a>
               , one of the world’s most popular typefaces, came to fruition
-              during this movement.
+              during this&nbsp;movement.
             </p>
             <p className="c-grey-1">
               It is a bit ironic that this design system is trying to be unique
@@ -1039,10 +1122,10 @@ app.listen(port, () => {
               itself. By adopting the foundations of a mainstream graphic design
               movement that emphasizes neutral expression, the design system is
               able to be familiar to any viewer without committing to any
-              particular identity of a company, product, or service.
+              particular identity of a company, product, or&nbsp;service.
             </p>
             <p className="c-grey-1">
-              This is why I named the design system{' '}
+              This is why I named the design system&nbsp;
               <Link
                 to={`${PROJECT_PREFIX}eswiss`}
                 className="txtw-bold a-grey-1"
@@ -1074,7 +1157,7 @@ app.listen(port, () => {
                 target="_blank"
                 className="a-grey-2"
               >
-                Carlo Vivarelli
+                Carlo&nbsp;Vivarelli
               </a>
             </figcaption>
           </figure>
@@ -1099,7 +1182,7 @@ app.listen(port, () => {
                 target="_blank"
                 className="a-grey-2"
               >
-                Massimo Vignelli
+                Massimo&nbsp;Vignelli
               </a>
             </figcaption>
           </figure>
@@ -1115,7 +1198,7 @@ app.listen(port, () => {
               >
                 Knoll
               </a>
-              , 1967, Massimo Vignelli
+              , 1967, Massimo&nbsp;Vignelli
             </figcaption>
           </figure>
         </section>
@@ -1128,7 +1211,7 @@ app.listen(port, () => {
               beginning of projects since each side does not have a strong
               understanding of how their work comes together with the other.
               This often stems from a lack of design direction or from a lack of
-              an established development procedure to deal with the design.
+              an established development procedure to deal with the&nbsp;design.
             </p>
             <p>
               eswiss closes this initial gap between the groups, as designers
@@ -1140,7 +1223,7 @@ app.listen(port, () => {
               ideology of “form follows function.” As a design methodology, the
               process is driven by logic and rationality which naturally aligns
               with the engineering thought process and workflow. Because of
-              this, the style resonates with many developers.
+              this, the style resonates with many&nbsp;developers.
             </p>
             <p>
               A notable benefit emerges when developing with the minimalist
@@ -1148,16 +1231,16 @@ app.listen(port, () => {
               understand and customize. There are no complex styles to deal
               with, so there isn’t a whole lot of complicated destyling and
               restyling necessary. All default styles have a clear logic behind
-              them, so it is easy to understand and make changes.
+              them, so it is easy to understand and make&nbsp;changes.
             </p>
             <p>
               This is what will make eswiss an excellent design system to use
               for any project. Its visual style and design/development process
-              fit well into anywhere. Even if the project isn’t committed to the
+              fit well anywhere. Even if the project isn’t committed to the
               International Style, it’s still a great starting point for
               prototyping, as it is quick to generate logical,
               professional-looking compositions, all while leaving the door open
-              for any level of customization later.
+              for any level of customization&nbsp;later.
             </p>
           </section>
           <figure className="ss right-half sticky-media">
@@ -1199,8 +1282,8 @@ app.listen(port, () => {
             which allowed me to work with each component in isolation and
             quickly test them in different states and scenarios. It really beats
             creating new workspaces for each component, and on top of all of
-            this, the tool offers a lot of great addons that make debugging and
-            documentation easy.
+            this, the tool offers plenty of great addons that make debugging and
+            documentation&nbsp;easy.
           </p>
           <h3 className="h-7 mb-1.5">Jest, Chromatic, and GitHub Actions</h3>
           <p className="c-grey-1">
@@ -1250,7 +1333,7 @@ app.listen(port, () => {
             >
               GitHub Actions
             </a>{' '}
-            to keep things in one ecosystem.
+            to keep things in one&nbsp;ecosystem.
           </p>
           <p className="c-grey-1">
             The Storybook maintainers also created a visual testing tool called{' '}
@@ -1264,9 +1347,9 @@ app.listen(port, () => {
             </a>
             . This performs visual diffs on the components and is great at
             catching every little visual change, even if it is by just a pixel.
-            This was also integrated into a GitHub Actions workflow, so whenever
-            a change is pushed, a workflow triggers and deploys the new code to
-            Chromatic.
+            This was also integrated through GitHub Actions, so whenever a
+            change is pushed, a workflow triggers and deploys the new code
+            to&nbsp;Chromatic.
           </p>
         </section>
         <section className="wide mb-6">
@@ -1275,7 +1358,7 @@ app.listen(port, () => {
             Recently I have been trying to find a better way to handle my
             stylesheets. I found it was often difficult to return to some old
             style codebases in previous projects, as I wasn’t holding my style
-            code to the same standard as my JavaScript.
+            code to the same standard as my&nbsp;JavaScript.
           </p>
           <p className="c-grey-1">
             During my recent search, I refactored{' '}
@@ -1292,8 +1375,8 @@ app.listen(port, () => {
               Block Element Modifier (BEM)
             </a>{' '}
             methodology, and while it did succeed in making the code easier to
-            follow, I found that it made the actual writing process much more
-            tedious.
+            follow, I found that it made the actual writing process much
+            more&nbsp;tedious.
           </p>
           <p className="c-grey-1">
             For this project, I was looking into the utility-first paradigm,
@@ -1306,8 +1389,8 @@ app.listen(port, () => {
             >
               Tailwind
             </a>
-            , and some CSS-in-JS solutions, which are quite popular in the React
-            community.
+            , and some CSS-in-JS solutions, which are quite popular in the
+            React&nbsp;community.
           </p>
           <p className="c-grey-1 mb-4">
             In the end, I decided that I wanted to use some{' '}
@@ -1322,7 +1405,7 @@ app.listen(port, () => {
             features I hadn’t tried before and explore using a combination of
             utility classes, which I will refer to as the{' '}
             <em>utility paradigm</em>, and “regular” Sass, which I will refer to
-            as the <em>regular paradigm</em>.
+            as the <em>regular&nbsp;paradigm</em>.
           </p>
           <h3 className="h-7 mb-1.5">Building a Sizing System</h3>
           <p className="c-grey-1">
@@ -1337,7 +1420,7 @@ app.listen(port, () => {
             going to naturally produce an interesting image unless some time is
             taken to contrive something like a logo. To address this issue this
             time around, I made sure that the core of the design would instead
-            revolve around the typography.
+            revolve around the&nbsp;typography.
           </p>
           <p className="c-grey-1">
             I started things off by making the typography the core of the sizing
@@ -1345,16 +1428,17 @@ app.listen(port, () => {
             default type size for small screens, and 18 pixels, the default for
             the remainder of the screen size range. By building the rest of the
             scale around these two values, I would ensure that every thing in
-            the composition had some logical relationship with the typography.
+            the composition had some logical relationship with
+            the&nbsp;typography.
           </p>
           <p className="c-grey-1">
             One thing to note about this sizing system is that it only has one
             scale. Most of the time other design systems have two different
-            scales, one for type and one for object sizes and spacing, and I
-            noticed that these scales would often share a lot of the same
-            values. Because of this, I thought it might be a good idea to try
-            and combine them into one large monoscale that accommodates
-            everything.
+            scales for their sizing system: one for type and one for object
+            sizes and spacing. Because I noticed that these scales would often
+            share many of the same values, I thought it might be a good idea to
+            try and combine them into one large monoscale that
+            accommodates&nbsp;everything.
           </p>
           <p className="c-grey-1">
             These scales are particularly useful for maintaining consistency in
@@ -1363,7 +1447,7 @@ app.listen(port, () => {
             design, possibly creating visual irregularities. To ensure
             consistency, I would do my best to use values that already existed
             on the scale, only adding new increments to it if a new value was
-            absolutely necessary.
+            absolutely&nbsp;necessary.
           </p>
           <p className="c-grey-1">
             This methodology was fine until I started working on the responsive
@@ -1374,18 +1458,19 @@ app.listen(port, () => {
             and the combination of the two ended up producing way too many
             values that convoluted the scale, some of those values being only
             used once throughout the entire codebase—a sign that the scale
-            building process was unraveling.
+            building process was&nbsp;unraveling.
           </p>
           <p className="mb-4 c-grey-1">
             If I had to do the project again, I would probably keep the
             typography and sizing scales separately, and perhaps split off
-            breakpoints into their own scale too.
+            breakpoints into their own scale&nbsp;too.
           </p>
           <h3 className="h-7 mb-1.5">Combining Regular & Utility Paradigms</h3>
           <p className="mb-1.5 c-grey-1">
             One potential problem with utility classes appears when you start
-            applying too many classes onto one element. For example, in the
-            regular paradigm the code for a button could look like:
+            applying too many classes onto one element. For example, the code
+            for a simple button written in the regular paradigm could
+            look&nbsp;like:
           </p>
           {/* prettier-ignore */}
           <pre className="language-css"><code>{`.btn {
@@ -1410,7 +1495,7 @@ app.listen(port, () => {
           {/* prettier-ignore */}
           <pre className="language-html mb-1.5rem"><code>{`<button class="txt">Foo Bar Baz</button>`}</code></pre>
           <p className="wide c-grey-1 mb-1.5">
-            In the utility paradigm the code could look like:
+            In the utility paradigm the equivalent code could look&nbsp;like:
           </p>
           {/* prettier-ignore */}
           <pre className="language-html mb-1.5rem"><code>{`<button class="bg-blue color-white bw-2 bs-solid bc-white br-20 fw-bold py-1 px-2 ls-0.2 m-1 sm:bw-1 sm:br-20 sm:fs-0.5 sm:m-0.5">
@@ -1421,7 +1506,7 @@ app.listen(port, () => {
             paradigm is much easier to read and maintain in this case. Writing
             utility classes doesn’t feel bad, but going back over it, making
             sure there aren’t any conflicts or redundancies, and making changes
-            can be a hassle since everything is on one line.
+            can be a hassle since everything is on one&nbsp;line.
           </p>
           <p className="c-grey-1">
             The benefit to utility classes is that you don’t need to open a
@@ -1429,50 +1514,51 @@ app.listen(port, () => {
             read and apply styles. You know exactly where it is and what it’s
             applying, and you can make changes without moving anywhere and
             growing your CSS. The paradigm seems justifiable when you only need
-            to apply a few utility classes.
+            to apply a few utility&nbsp;classes.
           </p>
           <p className="c-grey-1">
             Mixing the two paradigms can get tricky though. If you aren’t
             careful it can get confusing on where you should be actually
             looking. Is the style applied in the CSS? Or the HTML? Or maybe it’s
-            split across both...
+            split across&nbsp;both...
           </p>
           <p className="c-grey-1">
             To get these two paradigms working together in a consistent and
-            reasonable way, I created this rule to guide me:
+            reasonable way, I created this rule to guide&nbsp;me:
           </p>
           <ol className="mb-1.5 c-grey-1">
             <li>
-              When working at the template level or lower, use the regular
-              paradigm.
+              When working at the template level or lower, use the
+              regular&nbsp;paradigm.
             </li>
             <li>
-              When working with content at the page level, use the utility
-              paradigm.
+              When working with content at the page level, use the
+              utility&nbsp;paradigm.
             </li>
           </ol>
           <p className="mb-4 c-grey-1">
             People can have a different interpretation of what exactly a
-            template or page is, so to clear things up here, I’m using Brad
-            Frost’s definition from{' '}
+            template or page is, so to clear things up here I used Brad Frost’s
+            definition from{' '}
             <a
               href="https://atomicdesign.bradfrost.com/chapter-2"
               rel="noreferrer"
               target="_blank"
               className="a-grey-1"
             >
-              Atomic Design
+              Atomic&nbsp;Design
             </a>
             :
           </p>
           <blockquote className="mb-4">
             <p>
               “Templates are page-level objects that place components into a
-              layout and articulate the design’s underlying content structure”
+              layout and articulate the design’s underlying
+              content&nbsp;structure.”
             </p>
             <p>
               “Pages are specific instances of templates that show what a UI
-              looks like with real representative content in place.”
+              looks like with real representative content in&nbsp;place.”
             </p>
           </blockquote>
           <p className="c-grey-1">
@@ -1488,12 +1574,12 @@ app.listen(port, () => {
             . Templates are edited by a developer, and it’s this case where the
             regular paradigm is used. Pages are instances of these templates and
             are edited by a content writer, and it’s this case where the utility
-            paradigm is used.
+            paradigm is&nbsp;used.
           </p>
           <p className="c-grey-1">
             A good parallel to utility classes here is something like{' '}
             <a
-              href="https://en.wikipedia.org/wiki/Content_management_system"
+              href="https://en.wikipedia.org/wiki/Markdown"
               rel="noreferrer"
               target="_blank"
               className="a-grey-1"
@@ -1521,14 +1607,14 @@ app.listen(port, () => {
             . When you’re writing content, generally the template code is stable
             and you won’t be doing many changes to it, if at all. Instead you
             just want to focus on the content, and you don’t need all of all of
-            the possibilities the regular paradigm offers. You really only need
-            to make minor adjustments like setting a particular color, font
-            size, or margin—a perfect fit for utility classes.
+            the complexity the regular paradigm offers. You really only need to
+            make minor adjustments like setting a particular color, font size,
+            or margin—a perfect fit for utility&nbsp;classes.
           </p>
           <p className="mb-4 c-grey-1">
             Overall I think this coding style isn’t bad, although it’s obvious
             it’s not perfect. I’m still looking to find more improvements for
-            eswiss as development of it continues.
+            eswiss as development of it&nbsp;continues.
           </p>
           <h3 className="h-7 mb-1.5">Generating Utility Classes</h3>
           <p className="c-grey-1">
@@ -1541,11 +1627,10 @@ app.listen(port, () => {
             >
               cool features
             </a>
-            . Most of the time, nesting, variables, operators, partials,
-            modules, and mixins are the furthest I’ll go with the language.
-            Creating utility classes in a reasonable manner gives us the
-            opportunity to delve deeper into some of the more advanced features
-            though.
+            . Most of the time, nesting, variables, operators, partials, and
+            modules are the furthest I’ll go with the language. Creating utility
+            classes in a reasonable manner gives us the opportunity to delve
+            deeper into some of the more advanced features&nbsp;though.
           </p>
           <p className="c-grey-1">
             Manually writing utility classes one-by-one is too time consuming
@@ -1587,10 +1672,10 @@ app.listen(port, () => {
             >
               <code>@while</code>
             </a>{' '}
-            rules to iterate over it to generate the utility classes.
+            rules to iterate over it to generate the utility&nbsp;classes.
           </p>
           <p className="mb-1.5 c-grey-1">
-            For example, we can create a data map like this:
+            For example, we can create a data map like&nbsp;this:
           </p>
           {/* prettier-ignore */}
           <pre className="language-scss mb-1.5rem"><code>{`$util-data-map: (
@@ -1619,7 +1704,8 @@ app.listen(port, () => {
   ),
 );`}</code></pre>
           <p className="mb-1.5 c-grey-1">
-            Then we can iterate over the map with <code>@each</code> like so:
+            Then we can iterate over the map with <code>@each</code>{' '}
+            like&nbsp;so:
           </p>
           {/* prettier-ignore */}
           <pre className="language-scss mb-1.5rem"><code>{`@use 'sass:map';
@@ -1631,7 +1717,9 @@ app.listen(port, () => {
     }
   }
 }`}</code></pre>
-          <p className="mb-1.5 c-grey-1">This produces the following CSS:</p>
+          <p className="mb-1.5 c-grey-1">
+            This produces the following&nbsp;CSS:
+          </p>
           {/* prettier-ignore */}
           <pre className="language-css mb-1.5rem"><code>{`.d-block {
   display: block !important;
@@ -1685,7 +1773,8 @@ app.listen(port, () => {
   font-size: auto !important;
 }`}</code></pre>
           <p className="c-grey-1">
-            For those newer to Sass, a close JavaScript equivalent would be:
+            For those newer to Sass, a close JavaScript equivalent
+            would&nbsp;be:
           </p>
           {/* prettier-ignore */}
           <pre className="language-javascript mb-1.5rem"><code>{`const utilDataMap = {
@@ -1726,7 +1815,7 @@ for (const utilLabel in utilDataMap) {
 }`}</code></pre>
           <p className="mb-4 c-grey-1">
             Now whenever you need to add or edit utility class, you only need to
-            update the map. It sure beats writing out every class manually
+            update the map. It sure beats writing out every complete class
             one-by-one!
           </p>
           <h2 className="h-2 md:h-4 mb-1.5rem">
@@ -1746,20 +1835,20 @@ for (const utilLabel in utilDataMap) {
             (also referred to as CSS variables), I didn’t pay much attention to
             them since I figured that Sass already covered it. After trying them
             out for the first time on this project, I now realize that I had
-            been missing out on quite a lot.
+            been missing out on quite a great&nbsp;deal.
           </p>
           <p className="c-grey-1">
             The critical limitation with Sass variables stems from the fact that
             Sass is preprocessed. This means that Sass variables can never be
             interfaced with directly during runtime. Custom properties solve
             this problem merely by being native to CSS, and in doing so
-            significantly improves the way styles are written.
+            significantly improves the way styles are&nbsp;written.
           </p>
           <p className="c-grey-1">
             For example, when implementing light and dark mode with only Sass
             variables, one solution that relies on dynamically adding or
             removing a <code>dark</code> class on the <code>body</code> tag
-            could look similar to this:
+            could look similar to&nbsp;this:
           </p>
           {/* prettier-ignore */}
           <pre className="language-scss mb-1.5rem"><code>{`$black: #000;
@@ -1787,20 +1876,22 @@ a {
   color: $white;
 }`}</code></pre>
           <p className="c-grey-1">
-            The problem here is that every element affected by light switching
-            needs to have additional declaration blocks that explicitly define
-            the dark mode changes in the many cases where inheritance won’t
-            work.
+            The complication here is that every element affected by light
+            switching needs to have additional declaration blocks that
+            explicitly define the dark mode changes in the many cases where
+            inheritance won’t&nbsp;work.
           </p>
           <p className="c-grey-1">
             You could simply define a generic <code>dark</code> class that is
             meant to be directly added to or removed from affected elements—and
             it would make the Sass code shorter—but then you need to dynamically
             update all the affected elements every time a switch occurs, making
-            the JavaScript more complicated which obviously is not ideal either.
+            the JavaScript more complicated which obviously is not
+            ideal&nbsp;either.
           </p>
           <p className="c-grey-1">
-            When implemented with CSS properties, the solution becomes elegant:
+            When implemented with CSS custom properties, the solution
+            becomes&nbsp;elegant:
           </p>
           {/* prettier-ignore */}
           <pre className="wide language-css mb-1.5rem"><code>{`:root {
@@ -1831,35 +1922,143 @@ a {
             Whenever the <code>dark</code> class is applied to the{' '}
             <code>body</code> tag, the custom properties are updated, and
             because the elements are referencing the custom properties, no
-            additional declaration blocks are necessary.
+            additional declaration blocks are&nbsp;necessary.
           </p>
           <p className="c-grey-1">
             Now it seems like custom properties have blown Sass variables out of
             the water, but I still find Sass variables quite useful when I treat
-            them like <code>const</code> variables and custom properties as like{' '}
+            them like <code>const</code> variables and custom properties like{' '}
             <code>let</code> variables in JavaScript. By defining the two
             features in this way, it makes it easier to understand at a glance
-            what the code could be used for. If there is a custom property,
-            chances are it can change at some point during runtime, whereas if
+            what the code could be used for. If you see a custom property,
+            chances are it will change at some point during runtime, whereas if
             you see a Sass variable, you will definitely know that the value
             will never change. Sass variables are also easier to trace and
-            handle thanks to Sass modules and namespacing, whereas with custom
-            properties sometimes it’s easy to get lost since the custom property
-            can be anywhere in multiple places on the{' '}
+            handle thanks to Sass modules and namespacing, whereas custom
+            properties can easily get you lost since they can be defined
+            anywhere in multiple places at the same time in the{' '}
             <a
               href="https://developer.mozilla.org/en-US/docs/Glossary/CSSOM"
               rel="noreferrer"
               target="_blank"
               className="a-grey-1"
             >
-              CSS Object Model
+              CSS Object&nbsp;Model
             </a>
             .
           </p>
         </section>
-        <section className="wide mb-6">
+        <section className="wide mb-4">
           <h2 className="h-2 md:h-4 mb-3rem">Developing with Swiss Grids</h2>
           <h3 className="h-7 mb-1.5">Creating a Grid Generation Tool</h3>
+          <p className="c-grey-1">
+            My current UI/UX design tool of choice is{' '}
+            <a
+              href="https://adobe.com/products/xd.html"
+              rel="noreferrer"
+              target="_blank"
+              className="a-grey-1"
+            >
+              Adobe XD
+            </a>
+            , and while it does almost everything I need out-of-the-box, one
+            feature I thought could be improved upon was its{' '}
+            <a
+              href="https://helpx.adobe.com/xd/how-to/layout-grids.html"
+              rel="noreferrer"
+              target="_blank"
+              className="a-grey-1"
+            >
+              layout grid
+            </a>{' '}
+            feature. I looked into some existing plugins, but none of them
+            created grids in a way that I wanted. Unsatisfied, I decided to
+            branch off into a side-project and make a plugin&nbsp;myself.
+          </p>
+          <p className="c-grey-1">
+            I was inspired by{' '}
+            <a
+              href="https://www.adobe.com/products/indesign.html"
+              rel="noreferrer"
+              target="_blank"
+              className="a-grey-1"
+            >
+              Adobe InDesign
+            </a>
+            ’s grid features since it allowed you to subdivide the page into
+            columns and rows, although UI and UX-wise I wanted the plugin to
+            feel like it could be a native feature to XD. I tried to match it as
+            closely as possible with layout grid, but this proved to be
+            challenging as the{' '}
+            <a
+              href="https://adobexdplatform.com/plugin-docs"
+              rel="noreferrer"
+              target="_blank"
+              className="a-grey-1"
+            >
+              plugin API
+            </a>{' '}
+            didn't have access to everything XD could do. The resulting UX is
+            far from identical, but it's still similar enough to the point where
+            and any user familiar with layout grid should be able to transition
+            to Gridnik&nbsp;easily.
+          </p>
+          <p className="c-grey-1">
+            Aside from being able to create rows, another main feature Gridnik
+            is its ability to generate grids over any object. This solves XD’s
+            limitation of only being able to generate a layout grid over
+            an&nbsp;artboard.
+          </p>
+        </section>
+        <figure className="ss ss-lg mb-4">
+          <img src={SSGridnik} alt="Cover of 'New Graphic Design' journal" />
+          <figcaption className="c-grey-2">
+            Gridnik being used to draw a gridlines and track fills over a
+            green&nbsp;rectangle
+          </figcaption>
+        </figure>
+        <section className="wide mb-4 c-grey-1">
+          <p>
+            XD offers a pretty neat API that lets you develop plugins with a web
+            stack. So I built the project with JavaScript, React, CSS, and
+            webpack. I ended up naming the plugin
+            <Link
+              to={`${PROJECT_PREFIX}gridnik`}
+              rel="noreferrer"
+              target="_blank"
+              className="a-grey-1"
+            >
+              Gridnik
+            </Link>{' '}
+            which was the nickname of{' '}
+            <a
+              href="https://en.wikipedia.org/wiki/Wim_Crouwel"
+              rel="noreferrer"
+              target="_blank"
+              className="a-grey-1"
+            >
+              Wim Crouwel
+            </a>
+            , a famous graphic designer of the International&nbsp;Style.
+          </p>
+          <p>
+            This plugin was the main tool I used to produce the initial grid
+            compositions. Gridnik will soon be available on the XD
+            Plugin&nbsp;Manager!
+          </p>
+        </section>
+        <figure className="wide ss mb-4">
+          <img
+            src={SSML2020Grids}
+            alt="Cover of 'New Graphic Design' journal"
+          />
+          <figcaption className="c-grey-2">
+            Gridnik being used to build grid-based compositions
+            for&nbsp;MattLean.com
+          </figcaption>
+        </figure>
+        <section className="wide mb-6">
+          <h3 className="h-7 mb-1.5">Developing Layouts with CSS Grid</h3>
           <p className="c-grey-1">
             After reading{' '}
             <a
@@ -1889,19 +2088,19 @@ a {
               CSS grid
             </a>
             . Unfortunately the implementation process was difficult for me due
-            to my previous experience and expectations with grids.
+            to my previous experience and expectations with&nbsp;grids.
           </p>
           <p className="c-grey-1">
             First of all, this was my first time learning something technical
             coming from an existing design background. (Usually it’s the other
             way around.) My previous experience with building Swiss grids in
             some ways worked against me initially, as my idea of what a grid
-            should be conflicted with a lot of the CSS grid specification.
+            should be conflicted with a lot of the CSS grid&nbsp;specification.
           </p>
           <p className="c-grey-1">
-            Another problem was that I hadn’t learned CSS grid yet, and I didn’t
-            realize that significant portions of my layout composition would
-            rely on solutions best solved with{' '}
+            Another issue was that I hadn’t learned CSS grid yet, and I didn’t
+            realize beforehand that significant portions of my layout
+            composition would rely on solutions best solved with{' '}
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid"
               rel="noreferrer"
@@ -1913,11 +2112,11 @@ a {
             , a feature that is currently unsupported by the majority of
             browsers. To work around this, I ended up using nested grids to
             align elements that weren’t direct children of the parent grid, but
-            it came at the cost of dirtier code.
+            it came at the cost of much dirtier&nbsp;code.
           </p>
           <p className="c-grey-1">
-            Aside from those issues, most of the Swiss grid methodology has
-            managed to age extremely well and still holds up to most modern
+            Aside from those complications, most of the Swiss grid methodology
+            has managed to age extremely well and still holds up to most modern
             challenges today. With this practice, field widths are determined by
             the ideal balance between type size and line length. Line height is
             used to determine the gutter size. Cap height, baseline, and line
@@ -1925,7 +2124,7 @@ a {
             margin proportions are set around the grid to produce tension
             between the edge of the screen and the page content. Following all
             of this in the digital space still produces a grid with fantastic
-            visual harmony.
+            visual&nbsp;harmony.
           </p>
           <p className="c-grey-1">
             However, I learned the hard way that the methodology still needs
@@ -1937,7 +2136,7 @@ a {
             a reasonably simple website can easily fall into this advanced case,
             and it would be a nightmare to create a grid using only the tools
             and techniques the Swiss designers had during their time. CSS grid,
-            luckily, was built to solve the problems of the modern day.
+            luckily, was built to solve the problems of the present-day.
           </p>
           <p className="c-grey-1">
             The first modern solution CSS grid provides is an <code>auto</code>{' '}
@@ -1948,10 +2147,10 @@ a {
             grid will handle a set amount of content with a set amount of
             content type variations. However, the expectations for the content
             have heightened drastically through the complexity of modern day
-            applications, so while some Swiss designers would’ve seen use of
+            applications, so while some Swiss designers would’ve seen use of{' '}
             <code>auto</code> cells as poor and lazy design, in the modern day{' '}
             <code>auto</code> cells are absolutely necessary to handle the
-            incredible lengths and diversity in content.
+            incredible lengths and diversity in&nbsp;content.
           </p>
           <p className="c-grey-1">
             As I was porting over the grids I designed in XD to code, I would
@@ -1965,18 +2164,18 @@ a {
             because the grid composition was rooted in the typography, all I
             needed to do was make sure the rules of typography (font size, line
             height, alignment, words per line, etc.) were preserved to make it
-            feel like everything fit together.
+            feel like everything fit&nbsp;together.
           </p>
           <p className="c-grey-1">
-            Another nightmare for Swiss grids is responsive design. Swiss
-            designers did experiment with the grid a lot, even applying it to a
-            3D space, but they never thought about a grid that allowed its
-            viewer to stretch or squeeze it as they pleased while keeping
-            content on it legible.
+            One nightmare for Swiss grids is responsive design. Swiss designers
+            did experiment with the grid a lot, even applying it to a 3D space,
+            but they never thought about a grid that allowed its viewer to
+            stretch or squeeze it as they pleased while keeping content on
+            it&nbsp;legible.
           </p>
           <p className="c-grey-1 mb-1.5">
-            There are a lot of ways CSS grid can handle this, but one common
-            pattern I ended up using involved use of the{' '}
+            There are a few CSS grid can handle this, but one common pattern I
+            ended up using involved use of the{' '}
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/CSS/repeat"
               rel="noreferrer"
@@ -1994,7 +2193,7 @@ a {
             >
               <code>minmax</code>
             </a>{' '}
-            function, and <code>fr</code> unit:
+            function, and <code>fr</code>&nbsp;unit:
           </p>
           {/* prettier-ignore */}
           <pre className="language-css mb-1.5rem"><code>{`.grid {
@@ -2010,20 +2209,21 @@ a {
             example if there are 6 columns of the grid, <code>1fr</code> would
             be the equivalent of ⅙ of the grid, <code>3fr</code> would be ½ of
             the grid, etc. This allows the grid to adjust the column widths and
-            column amount as the screen resizes, and the same can be done for
-            rows.
+            column amount as the screen resizes. Of course, the same can be done
+            for&nbsp;rows.
           </p>
           <p className="c-grey-1">
             Overall I am satisfied with the final composition, but I can see a
             lot of room for improvement in both design and technical
-            implementation. Despite all the problems, CSS grid will definitely
-            be my layout solution of choice from now on. It was quite the change
-            transitioning from float-based layouts, but after learning CSS grid
-            I now wonder how we’ve been building layouts without a true grid
-            solution. (I guess tables were the closest thing, but they don’t
-            count!) I look forward to another CSS grid project, as next time
-            I’ll be able to go into it with a solid understanding of the CSS
-            grid specification and grid design.
+            implementation. Despite all the problems I had with it during this
+            project, CSS grid will definitely be my layout solution of choice
+            from now on. It took quite the shift in mindset transitioning from
+            float-based layouts, but after learning CSS grid I now wonder how
+            we’ve been building layouts without a true grid solution for so
+            long. (I guess tables were the closest thing, but they don’t count!
+            🤮) I look forward to another CSS grid project, as next time I’ll be
+            able to go into it with a solid understanding of the CSS grid
+            specification and grid design theory from the get-go.
           </p>
         </section>
         <section className="wide mb-6">
@@ -2044,8 +2244,8 @@ a {
             </a>{' '}
             before, and I wish I had done it earlier. Researching about the
             different options, experiences, and preferences people have when
-            navigating the web has completely changed the way I think about user
-            experience.
+            navigating the web has completely changed the way I think about
+            user&nbsp;experience.
           </p>
           <p className="c-grey-1">
             A significant amount of a11y can be covered just by using HTML
@@ -2069,7 +2269,7 @@ a {
             >
               <code>aria-labelledby</code>
             </a>{' '}
-            values when necessary.
+            values when&nbsp;beneficial.
           </p>
           <p className="c-grey-1">
             After reading the results of{' '}
@@ -2086,20 +2286,21 @@ a {
             made sure every important landmark had a heading associated with it.
             Visually though, some landmarks do not have a visible heading, like
             the main navigation, as adding one would clutter the visual
-            composition too much. To address this problem, the headings for
-            these cases are positioned offscreen so that they are still
-            accessible by screen readers but are not a visual part of the UI.
+            composition too much. To address this issue, the headings for these
+            cases are positioned offscreen so that they are still accessible by
+            screen readers but are not a visual part of the&nbsp;UI.
           </p>
           <p className="c-grey-1">
-            One challenge arises from the SPA nature of the website. Because
-            page navigation is done without page reloads, screen readers have no
-            way of knowing when a new page is actually loaded. To fix this issue
-            whenever navigation occurs, the main page heading is focused on.
+            One problem arises from the SPA nature of the website. Because page
+            navigation is done without page reloads, screen readers have no way
+            of knowing when a new page is actually loaded. To correct this, the
+            main page heading is focused automatically whenever
+            navigation&nbsp;occurs.
           </p>
           <p className="c-grey-1">
             Another problem deals with the modal component being used in the
             footer of the site. Because there isn’t a widely supported native
-            solution for modals, I implemented one on my own, following
+            solution for modals, I implemented one while following{' '}
             <a
               href="https://www.w3.org/TR/wai-aria-practices-1.1/#dialog_modal"
               rel="noreferrer"
@@ -2108,33 +2309,34 @@ a {
             >
               WAI-ARIA Authoring Practices
             </a>
-            along the way. Despite using many modals, it never occurred to me
-            how it was possible to tab through elements behind an open one
-            before. The solution to this is to build a keyboard trap that
-            prevents this from happening.{' '}
+            . Despite using many modals, it never occurred to me how it was
+            possible to tab through elements behind an open one before. The
+            solution is to build a keyboard trap that prevents this from
+            happening. The modal now is available as a component in{' '}
             <a
               href="http://mattlean.github.io/eswiss/?path=/story/modal--body-text"
               rel="noreferrer"
               target="_blank"
               className="a-grey-1"
             >
-              The modal is available as a component through eswiss.
+              eswiss's component&nbsp;library
             </a>
-            <p className="c-grey-1">
-              There are definitely more a11y improvements I could do such as
-              adding a skip navigation link, increasing touch target sizes, and
-              improving color contrast ratio, but I’ll try to implement them in
-              an update later on. They will definitely be design aspects I will
-              consider from the start of my next projects from now on.
-            </p>
+            .
+          </p>
+          <p className="c-grey-1">
+            There are definitely more a11y improvements I could add such as
+            including a skip navigation link, increasing touch target sizes, and
+            improving color contrast ratio, but I’ll try to implement them in an
+            update later on. They will definitely be design aspects I will
+            consider from the start of my next projects from now&nbsp;on.
           </p>
         </section>
         <section className="wide mb-6">
           <h2 className="h-2 md:h-4 mb-3rem">Animations with Framer Motion</h2>
           <p className="c-grey-1">
             Because the overall style of the website is minimal, animations play
-            a very significant role in polishing the user experience and making
-            the website feel sleek. My previous projects relied on
+            a very significant role in polishing the UX and making the website
+            feel sleek. My previous React projects relied on{' '}
             <a
               href="https://reactcommunity.org/react-transition-group"
               rel="noreferrer"
@@ -2143,20 +2345,27 @@ a {
             >
               react-transition-group
             </a>{' '}
-            for React animations, but a bit too much to work with since it’s not
-            actually an animation library. That’s why it was important for me to
-            find a declarative animation library that worked well with React and
-            React Router. I eventually settled on{' '}
-            <a href="https://framer.com/motion">Framer Motion</a>, and I have to
-            say it really made animations a cinch!
+            for animations, but the package is a bit too much to work with since
+            it’s not actually an animation library. That’s why it was important
+            for me to find a declarative animation library that worked well with
+            React and React Router. I eventually settled on{' '}
+            <a
+              href="https://framer.com/motion"
+              rel="noreferrer"
+              target="_blank"
+              className="a-grey-1"
+            >
+              Framer Motion
+            </a>
+            , and I have to say it really made animations a&nbsp;cinch!
           </p>
-          <p>
+          <p className="c-grey-1">
             The hallmark animation of the project is what I call a blind
             animation, like a window blind you pull up. The content initially
             starts hidden behind a closed blind. When the blind opens, it moves
             upward and uncovers the content. It’s a very simple animation, but
             it’s a classic one that is common in a lot of motion design work
-            that is inspired by modernist typography.
+            that is inspired by modernist&nbsp;typography.
           </p>
           {/* prettier-ignore */}
           <pre className="language-javascript mb-1.5rem"><code>{`import React from "react";
@@ -2244,17 +2453,25 @@ export default BlindFrame;`}</code></pre>
   transition: background-color 1s ease-out;
 }`}</code></pre>
           <p className="c-grey-1">
-            The <code>BlindFrame</code> component holds the content and the{' '}
-            <code>Blind</code>
-            component and is positioned relative so the <code>Blind</code>{' '}
-            inside of it can be positioned absolute and fill the entire space.
-            All that needs to be done to get the animation to play is to set the{' '}
-            <code>play</code> prop to <code>true</code>. Once the animation
-            plays, it transitions the height of the <code>Blind</code> from 100%
-            to 0%, thus revealing the content underneath it. To make sure that
-            the animation is only played when a user can see it, the blinds are
-            attached with intersection observers that set <code>play</code> prop
-            to <code>true</code> when the blind is visible in the viewport.
+            The <code>BlindFrame</code> component holds the <code>Blind</code>{' '}
+            component and the content. The <code>BlindFrame</code> is positioned
+            relative so the <code>Blind</code> inside of it can be positioned
+            absolute and fill the entire space of the <code>BlindFrame</code>.
+            To get the animation to play, the <code>play</code> prop needs to be
+            set to <code>true</code>. Once the animation starts, it transitions
+            the height of the <code>Blind</code> from 100% to 0%, thus revealing
+            the content underneath it. To make sure that the animation is only
+            played when a user can see it, the blinds are attached with{' '}
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API"
+              rel="noreferrer"
+              target="_blank"
+              className="a-grey-1"
+            >
+              intersection observers
+            </a>{' '}
+            that set <code>play</code> prop to <code>true</code> when the blind
+            is visible in the&nbsp;viewport.
           </p>
         </section>
         <section className="wide mb-6">
@@ -2265,7 +2482,7 @@ export default BlindFrame;`}</code></pre>
             you in your own work. All of the examples in this post are quite
             simplified when compared to the actual implementations, so if you
             want to see the exact implementation details used for this project,
-            you can check out MattLean.com’s GitHub repository.
+            you can check out the GitHub&nbsp;repository.
           </p>
         </section>
         <section className="btn-area">
