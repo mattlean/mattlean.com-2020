@@ -10,7 +10,7 @@ import { usePageLoadEffect } from '../../../util'
 import NPMIcon from '../../../assets/icons/npm.svg'
 import { MarkGithubIcon } from '@primer/octicons-react'
 
-const { tags } = getProjectData('checkpoint')
+const { name, tags } = getProjectData('checkpoint')
 
 /**
  * Checkpoint.js Project Page
@@ -58,10 +58,8 @@ const Checkpoint = () => {
         }
         className="cover"
       >
-        <h1 ref={srStartRef} tabIndex="-1" className="h-1 md:h-2 sm:h-3">
-          Checkpoint
-          <br className="title-br" aria-hidden="true" />
-          .js
+        <h1 ref={srStartRef} tabIndex="-1" className="long-h h-1 md:h-2 sm:h-3">
+          {name}
         </h1>
         <ul aria-label="Categories" className="badge-list">
           {tags.map((t) => (

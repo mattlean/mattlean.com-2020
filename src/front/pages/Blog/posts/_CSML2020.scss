@@ -4,10 +4,6 @@
   .wide {
     grid-column: 2/6;
   }
-
-  > .cover > h1 > .title > .title-br {
-    display: none;
-  }
 }
 
 @media (max-width: size.$size-956) {
@@ -27,7 +23,7 @@
 }
 
 @media (max-width: size.$size-400) {
-  .grid-blog-cs-ml2020 > .cover > h1 > .title > .title-br {
-    display: inline;
+  .grid-blog-cs-ml2020 > .cover > h1 > .title.long-h {
+    font-size: 54px !important;
   }
 }

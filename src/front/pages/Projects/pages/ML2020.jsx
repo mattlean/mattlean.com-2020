@@ -12,7 +12,7 @@ import {
 import { usePageLoadEffect } from '../../../util'
 import { BookIcon, MarkGithubIcon } from '@primer/octicons-react'
 
-const { company, tags } = getProjectData('ml2020')
+const { company, name, tags } = getProjectData('ml2020')
 
 /**
  * MattLean.com (2020) Project Page
@@ -60,10 +60,8 @@ const ML2020 = () => {
         }
         className="cover"
       >
-        <h1 ref={srStartRef} tabIndex="-1" className="h-1 md:h-2 sm:h-3">
-          MattLean
-          <br className="title-br" aria-hidden="true" />
-          .com
+        <h1 ref={srStartRef} tabIndex="-1" className="long-h h-1 md:h-2 sm:h-3">
+          {name}
         </h1>
         {company && (
           <h2 className="h-4 sm:h-6 c-grey-2 dispw-roman">{company}</h2>

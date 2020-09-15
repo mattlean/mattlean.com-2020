@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import BlindFrame from '../../../components/Blind/BlindFrame'
 import { getPostData } from '../../../../common/data/post'
+import { getProjectData } from '../../../../common/data/project'
 import { ROUTE_PREFIX as BLOG_PREFIX } from '../../../../common/data/route/blog'
 import { ROUTE_PREFIX as PROJECT_PREFIX } from '../../../../common/data/route/project'
 import {
@@ -21,6 +22,7 @@ import SSNewGraphicDesign from '../../../assets/posts/cs-ml2020/new-graphic-desi
 
 import { highlightAll } from 'prismjs'
 
+const { name } = getProjectData('ml2020')
 const { published, readtime, subtitle, tags } = getPostData('cs-ml2020')
 
 /**
@@ -75,11 +77,7 @@ const CSML2020 = () => {
           <span className="title-prefix h-4 sm:h-6 c-grey-4">
             Case Study<span>:</span>
           </span>
-          <span className="title h-1 md:h-2 sm:h-3">
-            MattLean
-            <br className="title-br" aria-hidden="true" />
-            .com
-          </span>
+          <span className="long-h title h-1 md:h-2 sm:h-3">{name}</span>
         </h1>
         <p className="subtitle txt-8 sm:txt-6 c-grey-1">{subtitle}</p>
         <p className="time c-grey-2">

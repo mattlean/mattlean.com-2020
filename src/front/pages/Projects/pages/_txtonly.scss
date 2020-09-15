@@ -1,9 +1,5 @@
 @use '../../../visuals/scale/size';
 
-.grid-project-txtonly > .cover > h1 > .title-br {
-  display: none;
-}
-
 @media (max-width: size.$size-1150) {
   .grid-project-txtonly {
     > .subgrid-project-details {
@@ -31,7 +27,7 @@
 }
 
 @media (max-width: size.$size-400) {
-  .grid-project-txtonly > .cover > h1 > .title-br {
-    display: inline;
+  .grid-project-txtonly > .cover > .long-h {
+    font-size: 54px !important;
   }
 }
