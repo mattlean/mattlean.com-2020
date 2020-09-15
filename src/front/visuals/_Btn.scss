@@ -48,8 +48,14 @@
   }
 
   &:hover {
-    > .btn-icon > .npm_svg__n {
-      fill: var(--grey-1);
+    > .btn-icon {
+      > .npm_svg__bg {
+        fill: color.$w;
+      }
+
+      > .npm_svg__n {
+        fill: var(--grey-1);
+      }
     }
   }
 }
