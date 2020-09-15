@@ -1,7 +1,11 @@
 import React, { useRef } from 'react'
+import { Link } from 'react-router-dom'
 import { Modal } from 'eswiss'
 import { motion } from 'framer-motion'
+import { ROUTE_PREFIX as BLOG_PREFIX } from '../../../common/data/route/blog'
+import { ROUTE_PREFIX as PROJECT_PREFIX } from '../../../common/data/route/project'
 import VARIANTS from '../modal_variants'
+import X from '../../assets/icons/x.svg'
 
 const AboutThisSite = ({ focusEleOnClose, isOpen, setIsOpen }) => {
   const animateModal = isOpen ? 'animate' : 'initial'
@@ -20,11 +24,14 @@ const AboutThisSite = ({ focusEleOnClose, isOpen, setIsOpen }) => {
     />
   )
 
+  const closeContent = <X className="svg-primary" />
+
   return (
     <Modal
       __IS_SERVER__={__IS_SERVER__}
       autoCenterH={true}
       autoCenterV={true}
+      closeContent={closeContent}
       closeOnOverlayClick={true}
       focusEleOnClose={focusEleOnClose}
       isOpen={isOpen}
@@ -40,54 +47,38 @@ const AboutThisSite = ({ focusEleOnClose, isOpen, setIsOpen }) => {
       <h1 ref={modalH} className="modal-h h-4 sm:h-6" tabIndex="-1">
         About MattLean.com
       </h1>
-      <p>
-        <strong>MattLean.com</strong> is designed to be responsive, meaning it
-        works on all screen sizes, from large desktop monitors to small
-        mobile&nbsp;devices.
+      <p className="c-grey-1">
+        MattLean.com is designed to be responsive, meaning it works on all
+        screen sizes, from large desktop monitors to small mobile
+        device&nbsp;screens.
       </p>
-      <p>
+      <p className="c-grey-1">
         This site is also built with accessibility in mind, so it supports
         keyboard and screen reader&nbsp;interactions.
       </p>
-      <p>
-        Light and dark modes are supported to accomodate different viewing
-        scenarios and preferences. Light mode will automatically activate at
-        6:00 AM and dark mode will automatically activate at 6:00 PM in the
-        visitor’s time zone. Mode switching can also be controlled manually by
-        selecting the mode switch icon at the end of the main navigation. Your
-        manual selection will be remembered for 24&nbsp;hours.
+      <p className="c-grey-1">
+        Light and dark modes can be controlled in the main navigation to
+        accommodate for different viewing scenarios and preferences. Light mode
+        will automatically activate at 6:00 AM and dark mode will automatically
+        activate at 6:00 PM in the visitor’s time zone. When manually selecting
+        a mode, your selection will be remembered for 24&nbsp;hours.
       </p>
-      <p>
-        The codebase was programmed with{' '}
-        <a href="https://reactjs.org" rel="noreferrer" target="_blank">
-          React
-        </a>
-        ,{' '}
-        <a href="https://expressjs.com" rel="noreferrer" target="_blank">
-          Express
-        </a>
-        , and{' '}
-        <a
-          href="https://github.com/mattlean/eswiss"
-          rel="noreferrer"
-          target="_blank"
-        >
-          eswiss
-        </a>
-        . You can find the source code online on{' '}
-        <a
-          href="https://github.com/mattlean/mattlean.com-2020"
-          rel="noreferrer"
-          target="_blank"
-        >
-          the project’s GitHub&nbsp;repository
-        </a>
+      <p className="c-grey-1">
+        If you’re interested in learning about some details behind this website,
+        you can get an overview on the{' '}
+        <Link to={`${PROJECT_PREFIX}ml2020`} className="a-grey-1">
+          project page
+        </Link>{' '}
+        that goes over technology stack used, GitHub repository,&nbsp;etc.
+      </p>
+      <p className="c-grey-1">
+        If would like to get a more in-depth look at the development process for
+        this site, consider reading the{' '}
+        <Link to={`${BLOG_PREFIX}cs-ml2020`} className="a-grey-1">
+          case&nbsp;study
+        </Link>
         .
       </p>
-      {/* <p>
-        If would like to learn more about the design and development process
-        that went into building this website, you can read the case&nbsp;study.
-      </p> */}
     </Modal>
   )
 }

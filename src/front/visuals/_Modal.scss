@@ -1,4 +1,3 @@
-@use './scale/color';
 @use './scale/size';
 
 .ats {
@@ -15,13 +14,15 @@
   z-index: 4;
 
   > .modal {
-    color: color.$k;
-
     max-width: 600px;
     z-index: 4;
 
-    > .modal-content > p > a {
-      color: color.$k;
+    > .modal-close {
+      --top: 2.5em;
+
+      > svg {
+        height: 21px;
+      }
     }
   }
 }
@@ -34,5 +35,13 @@
     min-height: 100vh;
     top: 0;
     transform: none !important;
+
+    > .modal-close {
+      --top: 2.4em;
+
+      > svg {
+        height: 14px;
+      }
+    }
   }
 }
