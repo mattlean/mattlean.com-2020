@@ -46,4 +46,10 @@
       fill: var(--c-secondary);
     }
   }
+
+  &:hover {
+    > .btn-icon > .npm_svg__n {
+      fill: var(--grey-1);
+    }
+  }
 }
