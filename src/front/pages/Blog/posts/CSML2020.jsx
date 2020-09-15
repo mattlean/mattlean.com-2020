@@ -2030,7 +2030,7 @@ a {
           <p>
             XD offers a pretty neat API that lets you develop plugins with a web
             stack. So I built the project with JavaScript, React, CSS, and
-            webpack. I ended up naming the plugin
+            webpack. I ended up naming the plugin{' '}
             <Link
               to={`${PROJECT_PREFIX}gridnik`}
               rel="noreferrer"
