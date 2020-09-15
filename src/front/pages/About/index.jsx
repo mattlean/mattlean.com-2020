@@ -99,7 +99,7 @@ const About = () => {
             your virtual creature, but the most impactful feature was that it
             allowed users to personalize and share webpages in-game with HTML,
             CSS, and JavaScript. I ended up building sinful pages with lots of
-            blue Comic Sans, absurdly loud autoplaying MIDI music, flashing
+            blue Comic Sans, absurdly loud auto-playing MIDI music, flashing
             background GIFs that probably triggered epileptic seizures, and
             seemingly endless stacks of alert dialog boxes that would “freeze”
             your computer and make your mom think you got a virus. (I apologize
@@ -121,8 +121,8 @@ const About = () => {
             local businesses for several years.
           </p>
           <p>
-            For college I moved to northern California to study computer science
-            at the{' '}
+            For college, I moved to northern California to study computer
+            science at the{' '}
             <a
               href="https://ucsc.edu"
               rel="noreferrer"
@@ -139,7 +139,7 @@ const About = () => {
             algorithm analysis, assembly, computer architecture, and more. I
             also tried to step away from web programming to explore other
             specializations like graphics programming, network programming, game
-            programming, virtual reality, and more. At the end of my studies I
+            programming, virtual reality, and more. At the end of my studies, I
             realized that it made the most sense to come full circle and combine
             my formal computer science education with my previous “street” web
             coding experiences to find a job in Silicon Valley as a specialist
@@ -149,7 +149,7 @@ const About = () => {
             Since graduating and receiving my Bachelor of Science degree in
             Computer Science in 2015, I’ve been professionally building web
             applications for Silicon Valley. My education hasn’t stopped here
-            though. Outside of work I continue to learn and play with new
+            though. Outside of work, I continue to learn and play with new
             technologies that often come up as{' '}
             <a
               href="https://github.com/mattlean"
