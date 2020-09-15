@@ -6,7 +6,15 @@
 
 ---
 
-## About
+## About This Project
 
 Details about this project can be found here:  
 https://mattlean.com/projects/ml2020
+
+Learn more about the project's development & design process by reading the case study here:  
+https://mattlean.com/blog/cs-ml2020
+
+## View Live
+
+You can view the website here:  
+https://mattlean.com
