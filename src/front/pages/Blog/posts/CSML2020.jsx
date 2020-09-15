@@ -22,7 +22,6 @@ import SSNewGraphicDesign from '../../../assets/posts/cs-ml2020/new-graphic-desi
 
 import { highlightAll } from 'prismjs'
 
-const { name } = getProjectData('ml2020')
 const { published, readtime, subtitle, tags } = getPostData('cs-ml2020')
 
 /**
@@ -77,7 +76,11 @@ const CSML2020 = () => {
           <span className="title-prefix h-4 sm:h-6 c-grey-4">
             Case Study<span>:</span>
           </span>
-          <span className="title h-1 md:h-2 sm:h-3">{name}</span>
+          <span className="title h-1 md:h-2 sm:h-3">
+            MattLean
+            <br className="title-br" aria-hidden="true" />
+            .com
+          </span>
         </h1>
         <p className="subtitle txt-8 sm:txt-6 c-grey-1">{subtitle}</p>
         <p className="time c-grey-2">
@@ -117,7 +120,7 @@ const CSML2020 = () => {
         </section>
         <section className="wide mb-6">
           <h2 className="h-2 md:h-4 mb-3rem">
-            Full-Stack React, Express, and JavaScript
+            Full-Stack React, Express,&nbsp;and&nbsp;JavaScript
           </h2>
           <h3 className="h-7 mb-1.5">Choosing a Language & Library</h3>
           <p className="c-grey-1">
@@ -288,7 +291,7 @@ const CSML2020 = () => {
         </section>
         <section className="wide mb-6">
           <h2 className="h-2 md:h-4 mb-3rem">
-            SSR & Hydration with Express & React Router
+            SSR & Hydration with Express&nbsp;&&nbsp;React&nbsp;Router
           </h2>
           <p className="c-grey-1">
             Back on{' '}
@@ -352,8 +355,8 @@ const CSML2020 = () => {
             >
               Node.js
             </a>
-            , Express, and server-side rendered React starter project I built
-            for{' '}
+            , Express, and server-side rendered (SSR) React starter project I
+            built for{' '}
             <a
               href="https://github.com/mattlean/lean-js-app-starter/tree/nodejs-ssr"
               rel="noreferrer"
@@ -594,7 +597,7 @@ hydrate(
             otherwise problems can&nbsp;occur.
           </p>
           <h3 className="h-7 mb-1.5">
-            Rendering & Serving the Frontend from the Backend
+            Rendering & Serving the Frontend&nbsp;from&nbsp;the&nbsp;Backend
           </h3>
           <p className="c-grey-1">
             Here is the very barebones server application that we’ll
@@ -974,7 +977,7 @@ app.listen(port, () => {
           </ol>
         </section>
         <section className="wide mb-4">
-          <h2 className="h-2 md:h-4 mb-3rem">Starting a Design System</h2>
+          <h2 className="h-2 md:h-4 mb-3rem">Starting a Design&nbsp;System</h2>
           <p className="c-grey-1">
             Over the past few years, I had been growing a personal library of
             custom components, but each component was designed for a different
@@ -1009,7 +1012,7 @@ app.listen(port, () => {
           </p>
         </section>
         <h3 className="h-7">
-          Influence from Swiss & International Typographic Styles
+          Influence from Swiss & International&nbsp;Typographic&nbsp;Styles
         </h3>
         <section className="subgrid-subcontent grid mb-4">
           <section className="left-half-priority">
@@ -1268,7 +1271,9 @@ app.listen(port, () => {
           </figure>
         </section>
         <section className="wide mb-6">
-          <h3 className="h-7 mb-1.5">Developing Components with Storybook</h3>
+          <h3 className="h-7 mb-1.5">
+            Developing Components with&nbsp;Storybook
+          </h3>
           <p className="mb-4 c-grey-1">
             To develop the components, I used{' '}
             <a
@@ -1285,7 +1290,9 @@ app.listen(port, () => {
             this, the tool offers plenty of great addons that make debugging and
             documentation&nbsp;easy.
           </p>
-          <h3 className="h-7 mb-1.5">Jest, Chromatic, and GitHub Actions</h3>
+          <h3 className="h-7 mb-1.5">
+            Jest, Chromatic, and GitHub&nbsp;Actions
+          </h3>
           <p className="c-grey-1">
             For testing, I used{' '}
             <a
@@ -1353,7 +1360,9 @@ app.listen(port, () => {
           </p>
         </section>
         <section className="wide mb-6">
-          <h2 className="h-2 md:h-4 mb-1.5rem">Sass Style & Generation</h2>
+          <h2 className="h-2 md:h-4 mb-1.5rem">
+            Sass Style&nbsp;&&nbsp;Generation
+          </h2>
           <p className="c-grey-1">
             Recently I have been trying to find a better way to handle my
             stylesheets. I found it was often difficult to return to some old
@@ -1818,9 +1827,9 @@ for (const utilLabel in utilDataMap) {
             update the map. It sure beats writing out every complete class
             one-by-one!
           </p>
-          <h2 className="h-2 md:h-4 mb-1.5rem">
-            Custom Properties vs. Sass Variables
-          </h2>
+          <h3 className="h-7 mb-1.5">
+            Custom Properties vs. Sass&nbsp;Variables
+          </h3>
           <p className="c-grey-1">
             Sass variables were actually what originally piqued my interest
             about the language, so when I first heard about{' '}
@@ -1949,7 +1958,7 @@ a {
           </p>
         </section>
         <section className="wide mb-4">
-          <h2 className="h-2 md:h-4 mb-3rem">Developing with Swiss Grids</h2>
+          <h2 className="h-2 md:h-4 mb-3rem">Developing Swiss&nbsp;Grids</h2>
           <h3 className="h-7 mb-1.5">Creating a Grid Generation Tool</h3>
           <p className="c-grey-1">
             My current UI/UX design tool of choice is{' '}
@@ -2231,7 +2240,7 @@ a {
         </section>
         <section className="wide mb-6">
           <h2 className="h-2 md:h-4 mb-3rem">
-            Designing Inclusive & Accessible Experiences
+            Designing Inclusive & Accessible&nbsp;Experiences
           </h2>
           <p className="c-grey-1">
             Making the project accessible through keyboard and screen reader
@@ -2335,7 +2344,9 @@ a {
           </p>
         </section>
         <section className="wide mb-6">
-          <h2 className="h-2 md:h-4 mb-3rem">Animations with Framer Motion</h2>
+          <h2 className="h-2 md:h-4 mb-3rem">
+            Animating with&nbsp;Framer&nbsp;Motion
+          </h2>
           <p className="c-grey-1">
             Because the overall style of the website is minimal, animations play
             a very significant role in polishing the UX and making the website
