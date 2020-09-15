@@ -15,6 +15,7 @@ import Blind from '.'
  * @prop {Object} [observer] Used to disconnect observer after animation is complete
  * @prop {boolean} [play] Flag that controls if animation is played
  * @prop {string} [rel] rel attribute value used if nodeType is "a"
+ * @prop {number} [startHeight] Starting height value
  * @prop {tabIndex} [tabIndex] tabindex attribute value
  * @prop {string} [target] target attribute value used if nodeType is "a"
  * @prop {string} [to] to prop value used if nodeType is "Link"
@@ -31,6 +32,7 @@ const BlindFrame = (
     observer,
     play,
     rel,
+    startHeight,
     tabIndex,
     target,
     to,
@@ -47,6 +49,7 @@ const BlindFrame = (
         duration={duration}
         observer={observer}
         play={play}
+        startHeight={startHeight}
       />
       {children}
     </>

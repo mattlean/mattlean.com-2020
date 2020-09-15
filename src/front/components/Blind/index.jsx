@@ -8,9 +8,12 @@ import { motion } from 'framer-motion'
  * @prop {number} [duration=0.4] Duration in seconds
  * @prop {Object} [observer] Used to disconnect observer after animation is complete
  * @prop {boolean} [play] Flag that controls if animation is played
+ * @prop {number} [startHeight] Starting height value
  */
-const Blind = ({ delay, duration, observer, play }) => {
+const Blind = ({ delay, duration, observer, play, startHeight }) => {
   if (!duration && duration !== 0) duration = 0.4
+
+  const height = startHeight || '100%'
 
   const VARIANTS = {
     animate: (custom) => ({
@@ -21,7 +24,7 @@ const Blind = ({ delay, duration, observer, play }) => {
         ease: 'easeOut',
       },
     }),
-    initial: { height: '100%' },
+    initial: { height },
   }
 
   const animate = play ? 'animate' : 'initial'

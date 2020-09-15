@@ -98,7 +98,7 @@ const CSSOT = () => {
         className="subgrid-content grid"
       >
         <h2 className="h-2 md:h-4 mb-1.5rem">
-          Modernizing a Visualization Tool
+          Modernizing a Visualization&nbsp;Tool
         </h2>
         <section className="intro mb-6 c-grey-1">
           <p>

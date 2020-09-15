@@ -292,6 +292,9 @@
       columns: auto;
     }
 
+    > .sbs-header {
+      transform: none;
+    }
     > .subgrid-subcontent > .sticky-media {
       margin-top: size.$size-72;
     }

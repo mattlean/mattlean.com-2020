@@ -98,7 +98,9 @@ const CSLeanSpace = () => {
         }}
         className="subgrid-content grid"
       >
-        <h2 className="h-2 md:h-4 mb-1.5rem">My Brand as a College Grad</h2>
+        <h2 className="h-2 md:h-4 mb-1.5rem">
+          My Brand as a&nbsp;College&nbsp;Grad
+        </h2>
         <section className="intro mb-6 c-grey-1">
           <p>
             I created <strong>Lean Space</strong> right after I graduated from
@@ -245,7 +247,7 @@ const CSLeanSpace = () => {
           </figure>
         </section>
         <h3 className="h-7">
-          Backendless with SEO-Friendly Seamless Page Transitions
+          Backendless with SEO-Friendly Seamless&nbsp;Page&nbsp;Transitions
         </h3>
         <section className="multicol-txt mb-4">
           <p className="c-grey-1">

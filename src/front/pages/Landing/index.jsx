@@ -87,6 +87,7 @@ const Landing = () => {
               ? blindVisibleStates[0].isVisible
               : blindStates[0].play
           }
+          startHeight="105%"
           tabIndex="-1"
           className="h-1 md:h-2 sm:h-3 lh-1"
         >
