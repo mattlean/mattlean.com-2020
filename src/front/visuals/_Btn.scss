@@ -1,3 +1,4 @@
+@use '../visuals/scale/color';
 @use '../visuals/scale/size';
 
 .btn {
@@ -5,6 +6,15 @@
   --pt: #{size.$size-12};
 
   font-size: size.$size-16;
+
+  transition: background-color 1s ease-out;
+
+  &:hover {
+    --bg: var(--grey-1);
+    --border: 0.2rem solid var(--grey-1);
+
+    color: color.$w;
+  }
 
   > .btn-icon {
     margin-right: 1em;
