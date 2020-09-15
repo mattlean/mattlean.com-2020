@@ -104,10 +104,6 @@ export const createTemplateString = (location, params, context = {}) => {
     })
 
     cache.set(location, doc)
-
-    console.log('Cache miss', location)
-  } else {
-    console.log('Cache hit', location)
   }
 
   // TODO: render minified HTML for production

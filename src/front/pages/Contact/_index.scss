@@ -39,6 +39,10 @@
         align-items: center;
         display: flex;
 
+        &:hover {
+          text-decoration: underline;
+        }
+
         > img {
           height: size.$size-30;
           margin-right: size.$size-36;

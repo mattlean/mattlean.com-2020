@@ -64,6 +64,10 @@
       grid-row: 1/-1;
       grid-template-rows: repeat(3, size.$size-157);
 
+      &:hover > .subgrid-featured-item-content > figcaption > h3 {
+        text-decoration: underline;
+      }
+
       > .subgrid-featured-item-content {
         grid-column: 1/-1;
         grid-row: 1/-1;

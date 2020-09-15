@@ -11,32 +11,57 @@
   .cta-arrow {
     margin-left: 0.5em;
   }
+
+  &:hover {
+    text-shadow: 1px 0 0 var(--c-secondary), 0 1px 0 var(--c-secondary),
+      -1px 0 0 var(--c-secondary);
+  }
 }
 
 .cta-lg {
   font-size: size.$size-36;
   font-weight: typography.$disp-medium;
+  line-height: 30px;
 
   .cta-arrow {
     width: 34.74px;
   }
+
+  &.a-primary:hover {
+    border-bottom: 3px solid var(--c-primary);
+  }
 }
 
 .cta-sm {
+  border-bottom: 1px solid var(--c-secondary);
   font-size: 1rem;
   font-weight: typography.$bold !important;
+  line-height: 1.2em;
 
   .cta-arrow {
     width: 17.3px;
+  }
+
+  &.a-primary:hover {
+    border-bottom: 1px solid var(--c-primary);
+  }
+
+  &.a-grey-3:hover {
+    border-bottom: 1px solid var(--grey-3);
   }
 }
 
 @media (max-width: bp.$sm) {
   .cta-lg {
     font-size: size.$size-24;
+    line-height: 22px;
 
     .cta-arrow {
       width: 23.22px;
+    }
+
+    &.a-primary:hover {
+      border-bottom: 2px solid var(--c-primary);
     }
   }
 }
