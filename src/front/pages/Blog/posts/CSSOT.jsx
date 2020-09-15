@@ -158,7 +158,7 @@ const CSSOT = () => {
         <h2 className="h-2 md:h-4 mb-1rem">Initial 2014&nbsp;Version</h2>
         <section className="early-work subgrid-subcontent grid mb-4">
           <section className="left-half-priority">
-            <h3 className="h-7 mb-1.5">Early Design Progression</h3>
+            <h3 className="h-7 sm:h-8 mb-1.5">Early Design Progression</h3>
             <p className="c-grey-1">
               Biosearch Technology’s marketing team and I designed the initial
               wireframes and wireflows together. This design supported both
@@ -180,7 +180,9 @@ const CSSOT = () => {
               design updates that incorporated their new
               branding&nbsp;guidelines.
             </p>
-            <h3 className="h-7 mb-1.5">Settling on a Technology Stack</h3>
+            <h3 className="h-7 sm:h-8 mb-1.5">
+              Settling on a Technology Stack
+            </h3>
             <p className="mb-4 c-grey-1">
               I chose to use{' '}
               <a
@@ -225,7 +227,9 @@ const CSSOT = () => {
               because of its support for area charts and
               clear&nbsp;documentation.
             </p>
-            <h3 className="h-7 mb-1.5">Custom Layout vs. Bootstrap Grid</h3>
+            <h3 className="h-7 sm:h-8 mb-1.5">
+              Custom Layout vs. Bootstrap Grid
+            </h3>
             <p className="c-grey-1 mb-4">
               At first I built the layout with Bootstrap’s grid system to
               quickly iterate through the first few prototypes, but we realized
@@ -252,7 +256,7 @@ const CSSOT = () => {
               </a>{' '}
               in order to have complete&nbsp;control.
             </p>
-            <h3 className="h-7 mb-1.5">Project Tooling</h3>
+            <h3 className="h-7 sm:h-8 mb-1.5">Project Tooling</h3>
             <p className="c-grey-1">
               As I wanted to try out some new things in my workflow, I took the
               opportunity to use{' '}
@@ -425,7 +429,7 @@ const CSSOT = () => {
             Main screen for the latest version of spectral overlay&nbsp;tool
           </figcaption>
         </figure>
-        <h3 className="h-7 left-half">Application Updates</h3>
+        <h3 className="h-7 sm:h-8 left-half">Application Updates</h3>
         <section className="right-half-priority mb-4 c-grey-1">
           <p>
             I considered porting the whole application over to a new library
@@ -512,7 +516,7 @@ const CSSOT = () => {
             -based&nbsp;one.
           </p>
         </section>
-        <h3 className="h-7 left-half">Project Tooling Updates</h3>
+        <h3 className="h-7 sm:h-8 left-half">Project Tooling Updates</h3>
         <section className="right-half-priority mb-4 c-grey-1">
           <p>
             I replaced the old project tooling setup in favor of my own custom{' '}

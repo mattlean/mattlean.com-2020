@@ -121,7 +121,7 @@ const CSML2020 = () => {
           <h2 className="h-2 md:h-4 mb-3rem">
             Full-Stack React, Express,&nbsp;and&nbsp;JavaScript
           </h2>
-          <h3 className="h-7 mb-1.5">Choosing a Language & Library</h3>
+          <h3 className="h-7 sm:h-8 mb-1.5">Choosing a Language & Library</h3>
           <p className="c-grey-1">
             I was debating on taking this opportunity to learn{' '}
             <a
@@ -190,7 +190,7 @@ const CSML2020 = () => {
             declaration files, so the eswiss components can be used on
             MattLean.com without any&nbsp;hiccups.
           </p>
-          <h3 className="h-7 mb-1.5">Abandoning Classes for Hooks</h3>
+          <h3 className="h-7 sm:h-8 mb-1.5">Abandoning Classes for Hooks</h3>
           <p className="c-grey-1">
             This project was written exclusively with{' '}
             <a
@@ -366,7 +366,9 @@ const CSML2020 = () => {
             </a>
             .
           </p>
-          <h3 className="h-7 mb-1.5">Building the Frontend with webpack</h3>
+          <h3 className="h-7 sm:h-8 mb-1.5">
+            Building the Frontend with webpack
+          </h3>
           <p className="c-grey-1">
             The{' '}
             <a
@@ -595,7 +597,7 @@ hydrate(
             rendered content from the server is identical to the client,
             otherwise problems can&nbsp;occur.
           </p>
-          <h3 className="h-7 mb-1.5">
+          <h3 className="h-7 sm:h-8 mb-1.5">
             Rendering & Serving the Frontend&nbsp;from&nbsp;the&nbsp;Backend
           </h3>
           <p className="c-grey-1">
@@ -754,7 +756,9 @@ app.listen(port, () => {
             build, which would be inconvenient. By using the plugin, this work
             is now automatically handled.
           </p>
-          <h3 className="h-7 mb-1.5">Walking Through the Whole Process</h3>
+          <h3 className="h-7 sm:h-8 mb-1.5">
+            Walking Through the Whole Process
+          </h3>
           <p className="c-grey-1">
             Now that everything is finally in place, let’s walk through the
             process from beginning to end and see how everything
@@ -811,7 +815,7 @@ app.listen(port, () => {
             as you navigate through the application, confirming that the
             application has transitioned to the SPA&nbsp;paradigm.
           </p>
-          <h3 className="h-7 mb-1.5">Performance Improvements</h3>
+          <h3 className="h-7 sm:h-8 mb-1.5">Performance Improvements</h3>
           <p className="c-grey-1">
             Currently there are three performance improvements on the project
             that were not covered during the overview for the sake of keeping
@@ -1010,7 +1014,7 @@ app.listen(port, () => {
             .
           </p>
         </section>
-        <h3 className="h-7">
+        <h3 className="h-7 sm:h-8">
           Influence from Swiss & International&nbsp;Typographic&nbsp;Styles
         </h3>
         <section className="subgrid-subcontent grid mb-4">
@@ -1204,7 +1208,7 @@ app.listen(port, () => {
             </figcaption>
           </figure>
         </section>
-        <h3 className="h-7">Benefits of Working with the Style</h3>
+        <h3 className="h-7 sm:h-8">Benefits of Working with the Style</h3>
         <section className="subgrid-subcontent grid mb-4">
           <section className="left-half-priority c-grey-1">
             <p>
@@ -1270,7 +1274,7 @@ app.listen(port, () => {
           </figure>
         </section>
         <section className="wide mb-6">
-          <h3 className="h-7 mb-1.5">
+          <h3 className="h-7 sm:h-8 mb-1.5">
             Developing Components with&nbsp;Storybook
           </h3>
           <p className="mb-4 c-grey-1">
@@ -1289,7 +1293,7 @@ app.listen(port, () => {
             this, the tool offers plenty of great addons that make debugging and
             documentation&nbsp;easy.
           </p>
-          <h3 className="h-7 mb-1.5">
+          <h3 className="h-7 sm:h-8 mb-1.5">
             Jest, Chromatic, and GitHub&nbsp;Actions
           </h3>
           <p className="c-grey-1">
@@ -1415,7 +1419,7 @@ app.listen(port, () => {
             <em>utility paradigm</em>, and “regular” Sass, which I will refer to
             as the <em>regular&nbsp;paradigm</em>.
           </p>
-          <h3 className="h-7 mb-1.5">Building a Sizing System</h3>
+          <h3 className="h-7 sm:h-8 mb-1.5">Building a Sizing System</h3>
           <p className="c-grey-1">
             One problem with{' '}
             <Link to={`${PROJECT_PREFIX}lean-space`} className="a-grey-1">
@@ -1473,7 +1477,9 @@ app.listen(port, () => {
             typography and sizing scales separately, and perhaps split off
             breakpoints into their own scale&nbsp;too.
           </p>
-          <h3 className="h-7 mb-1.5">Combining Regular & Utility Paradigms</h3>
+          <h3 className="h-7 sm:h-8 mb-1.5">
+            Combining Regular & Utility Paradigms
+          </h3>
           <p className="mb-1.5 c-grey-1">
             One potential problem with utility classes appears when you start
             applying too many classes onto one element. For example, the code
@@ -1624,7 +1630,7 @@ app.listen(port, () => {
             it’s not perfect. I’m still looking to find more improvements for
             eswiss as development of it&nbsp;continues.
           </p>
-          <h3 className="h-7 mb-1.5">Generating Utility Classes</h3>
+          <h3 className="h-7 sm:h-8 mb-1.5">Generating Utility Classes</h3>
           <p className="c-grey-1">
             Sass offers a lot of{' '}
             <a
@@ -1826,7 +1832,7 @@ for (const utilLabel in utilDataMap) {
             update the map. It sure beats writing out every complete class
             one-by-one!
           </p>
-          <h3 className="h-7 mb-1.5">
+          <h3 className="h-7 sm:h-8 mb-1.5">
             Custom Properties vs. Sass&nbsp;Variables
           </h3>
           <p className="c-grey-1">
@@ -1958,7 +1964,7 @@ a {
         </section>
         <section className="wide mb-4">
           <h2 className="h-2 md:h-4 mb-3rem">Developing Swiss&nbsp;Grids</h2>
-          <h3 className="h-7 mb-1.5">Creating a Grid Generation Tool</h3>
+          <h3 className="h-7 sm:h-8 mb-1.5">Creating a Grid Generation Tool</h3>
           <p className="c-grey-1">
             My current UI/UX design tool of choice is{' '}
             <a
@@ -2068,7 +2074,9 @@ a {
           </figcaption>
         </figure>
         <section className="wide mb-6">
-          <h3 className="h-7 mb-1.5">Developing Layouts with CSS Grid</h3>
+          <h3 className="h-7 sm:h-8 mb-1.5">
+            Developing Layouts with CSS Grid
+          </h3>
           <p className="c-grey-1">
             After reading{' '}
             <a

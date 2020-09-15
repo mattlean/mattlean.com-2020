@@ -246,7 +246,7 @@ const CSLeanSpace = () => {
             </figcaption>
           </figure>
         </section>
-        <h3 className="h-7">
+        <h3 className="h-7 sm:h-8">
           Backendless with SEO-Friendly Seamless&nbsp;Page&nbsp;Transitions
         </h3>
         <section className="multicol-txt mb-4">
@@ -330,7 +330,7 @@ const CSLeanSpace = () => {
             page&nbsp;transitions
           </figcaption>
         </figure>
-        <h3 className="h-7 left-half">Custom Lightbox Library</h3>
+        <h3 className="h-7 sm:h-8 left-half">Custom Lightbox Library</h3>
         <p className="right-half-priority mb-4 c-grey-1">
           A significant part of the website experience involves looking at
           screenshots of my portfolio work, so I wrote a{' '}
@@ -374,7 +374,7 @@ const CSLeanSpace = () => {
             portfolio&nbsp;pieces
           </figcaption>
         </figure>
-        <h3 className="h-7 left-half">Work Filtering</h3>
+        <h3 className="h-7 sm:h-8 left-half">Work Filtering</h3>
         <p className="right-half-priority mb-4 c-grey-1">
           This was where the main exception to the “no 3rd party dependency
           rule” was made: the work page. As this would likely be one of the main
@@ -405,7 +405,7 @@ const CSLeanSpace = () => {
           Nothing too extravagant, but still unique enough to show that I have
           some experience with&nbsp;design.
         </p>
-        <h3 className="h-7 left-half">Colors</h3>
+        <h3 className="h-7 sm:h-8 left-half">Colors</h3>
         <p className="right-half-priority mb-4 c-grey-1">
           I decided on a blueish-green as my primary color because it was a
           fairly bright, calming, and inoffensive color. Grey became my
@@ -420,7 +420,7 @@ const CSLeanSpace = () => {
           <li>#333333</li>
           <li>#292C31</li>
         </ul>
-        <h3 className="h-7 left-half">Typography</h3>
+        <h3 className="h-7 sm:h-8 left-half">Typography</h3>
         <section className="subgrid-subcontent grid mb-4">
           <section className="left-half-priority c-grey-1">
             <p>
@@ -486,7 +486,7 @@ const CSLeanSpace = () => {
             className="right-half sticky-media"
           />
         </section>
-        <h3 className="h-7 left-half">Animations & Transitions</h3>
+        <h3 className="h-7 sm:h-8 left-half">Animations & Transitions</h3>
         <p className="right-half-priority mb-4 c-grey-1">
           I used animations and transitions wherever I could throughout the site
           to have it give off a sleek and polished experience. This contributed
@@ -502,7 +502,7 @@ const CSLeanSpace = () => {
             Initial load animation shown on the landing&nbsp;page
           </figcaption>
         </figure>
-        <h3 className="h-7 left-half">Custom Responsive Layout</h3>
+        <h3 className="h-7 sm:h-8 left-half">Custom Responsive Layout</h3>
         <p className="right-half-priority mb-4 c-grey-1">
           Without the luxury of a framework like{' '}
           <a
