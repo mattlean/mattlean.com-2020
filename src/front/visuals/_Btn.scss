@@ -7,8 +7,6 @@
 
   font-size: size.$size-16;
 
-  transition: all 1s ease-out;
-
   &:hover {
     --bg: var(--grey-1);
     --border: 0.2rem solid var(--grey-1);

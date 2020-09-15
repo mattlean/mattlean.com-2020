@@ -3,7 +3,7 @@ $trans-timing-fn: ease-out;
 
 body {
   transition-duration: $trans-duration;
-  transition-property: background-color, color, fill, opacity;
+  transition-property: background, background-color, color, fill, opacity;
   transition-timing-function: $trans-timing-fn;
 }
 
@@ -12,10 +12,12 @@ a {
 }
 
 button {
-  transition: background-color, color $trans-duration $trans-timing-fn;
+  transition-duration: $trans-duration;
+  transition-property: background, background-color, color, fill;
+  transition-timing-function: $trans-timing-fn;
 }
 
-ul {
+.main-nav > ul {
   transition: background-color $trans-duration $trans-timing-fn;
 }
 
