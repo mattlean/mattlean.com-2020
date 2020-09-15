@@ -5,28 +5,31 @@
 }
 
 .a-grey-1,
-.a-grey-1:hover,
 .a-grey-1:visited {
   color: var(--grey-1);
 }
 
 .a-grey-2,
-.a-grey-2:hover,
 .a-grey-2:visited {
   color: var(--grey-2);
 }
 
 .a-grey-3,
-.a-grey-3:hover,
 .a-grey-3:visited {
   color: var(--grey-3);
 }
 
-.a-grey-4,
-.a-grey-4:hover,
-.a-grey-4:visited {
-  color: var(--grey-4);
+.a-grey-1:hover,
+.a-grey-2:hover,
+.a-grey-3:hover {
+  color: var(--c-primary);
 }
+
+// .a-grey-4,
+// .a-grey-4:hover,
+// .a-grey-4:visited {
+//   color: var(--grey-4);
+// }
 
 .c-primary {
   color: var(--c-primary);
@@ -52,18 +55,18 @@
   fill: var(--c-primary);
 }
 
-.svg-grey-1 {
-  fill: var(--grey-1);
-}
+// .svg-grey-1 {
+//   fill: var(--grey-1);
+// }
 
-.svg-grey-2 {
-  fill: var(--grey-2);
-}
+// .svg-grey-2 {
+//   fill: var(--grey-2);
+// }
 
 .svg-grey-3 {
   fill: var(--grey-3);
 }
 
-.svg-grey-4 {
-  fill: var(--grey-4);
-}
+// .svg-grey-4 {
+//   fill: var(--grey-4);
+// }
