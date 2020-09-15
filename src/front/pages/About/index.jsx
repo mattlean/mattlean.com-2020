@@ -150,14 +150,14 @@ const About = () => {
             Computer Science in 2015, I’ve been professionally building web
             applications for Silicon Valley. My education hasn’t stopped here
             though. Outside of work, I continue to learn and play with new
-            technologies that often come up as{' '}
+            technologies that often come up as open source experiments on my{' '}
             <a
               href="https://github.com/mattlean"
               rel="noreferrer"
               target="_blank"
               className="a-grey-1"
             >
-              open source experiments on my GitHub
+              GitHub
             </a>
             . As I currently live in South Bay, occasionally when I have extra
             time, I take an online or night class at{' '}
