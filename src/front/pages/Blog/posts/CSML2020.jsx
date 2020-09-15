@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import BlindFrame from '../../../components/Blind/BlindFrame'
 import { getPostData } from '../../../../common/data/post'
-import { getProjectData } from '../../../../common/data/project'
 import { ROUTE_PREFIX as BLOG_PREFIX } from '../../../../common/data/route/blog'
 import { ROUTE_PREFIX as PROJECT_PREFIX } from '../../../../common/data/route/project'
 import {
@@ -183,7 +182,7 @@ const CSML2020 = () => {
             <Link to={`${PROJECT_PREFIX}eswiss`} className="a-grey-1">
               eswiss
             </Link>
-            ’s component library as I see the design system potentially
+            , the design system used for this project, as I see it potentially
             intertwining with some other future projects where types could be
             useful. For a smaller project like this one, I think JavaScript does
             the job fine. Incompatibility between the two languages is not an
@@ -1979,10 +1978,43 @@ a {
               className="a-grey-1"
             >
               layout grid
+            </a>
+            . I looked into some existing plugins, but none of them created
+            grids in a way that I wanted. Unsatisfied, I decided to branch off
+            into a side-project and make a plugin called{' '}
+            <Link
+              to={`${PROJECT_PREFIX}gridnik`}
+              rel="noreferrer"
+              target="_blank"
+              className="a-grey-1 txtw-bold"
+            >
+              Gridnik
+            </Link>
+            .
+          </p>
+          <p className="c-grey-1">
+            The plugin was named after a prominent graphic designer of the
+            International Style,{' '}
+            <a
+              href="https://en.wikipedia.org/wiki/Wim_Crouwel"
+              rel="noreferrer"
+              target="_blank"
+              className="a-grey-1"
+            >
+              Wim Crouwel
+            </a>
+            , who had the nickname of Gridnik due to his obsessive use of grids.
+            Thanks to{' '}
+            <a
+              href="https://adobexdplatform.com/plugin-docs"
+              rel="noreferrer"
+              target="_blank"
+              className="a-grey-1"
+            >
+              XD’s plugin API
             </a>{' '}
-            feature. I looked into some existing plugins, but none of them
-            created grids in a way that I wanted. Unsatisfied, I decided to
-            branch off into a side-project and make a plugin&nbsp;myself.
+            support for web technologies, I was able to keep the JavaScript
+            train going with React, CSS, and&nbsp;webpack.
           </p>
           <p className="c-grey-1">
             I was inspired by{' '}
@@ -1998,19 +2030,10 @@ a {
             columns and rows, although UI and UX-wise I wanted the plugin to
             feel like it could be a native feature to XD. I tried to match it as
             closely as possible with layout grid, but this proved to be
-            challenging as the{' '}
-            <a
-              href="https://adobexdplatform.com/plugin-docs"
-              rel="noreferrer"
-              target="_blank"
-              className="a-grey-1"
-            >
-              plugin API
-            </a>{' '}
-            didn’t have access to everything XD could do. The resulting UX is
-            far from identical, but it’s still similar enough to the point where
-            and any user familiar with layout grid should be able to transition
-            to Gridnik&nbsp;easily.
+            challenging as the plugin API didn’t have access to everything XD
+            could do. The resulting UX is far from identical, but it’s still
+            similar enough to the point where and any user familiar with layout
+            grid should be able to transition to Gridnik&nbsp;easily.
           </p>
           <p className="c-grey-1">
             Aside from being able to create rows, another main feature Gridnik
@@ -2028,32 +2051,10 @@ a {
         </figure>
         <section className="wide mb-4 c-grey-1">
           <p>
-            XD offers a pretty neat API that lets you develop plugins with a web
-            stack. So I built the project with JavaScript, React, CSS, and
-            webpack. I ended up naming the plugin{' '}
-            <Link
-              to={`${PROJECT_PREFIX}gridnik`}
-              rel="noreferrer"
-              target="_blank"
-              className="a-grey-1"
-            >
-              Gridnik
-            </Link>{' '}
-            which was the nickname of{' '}
-            <a
-              href="https://en.wikipedia.org/wiki/Wim_Crouwel"
-              rel="noreferrer"
-              target="_blank"
-              className="a-grey-1"
-            >
-              Wim Crouwel
-            </a>
-            , a famous graphic designer of the International&nbsp;Style.
-          </p>
-          <p>
-            This plugin was the main tool I used to produce the initial grid
-            compositions. Gridnik will soon be available on the XD
-            Plugin&nbsp;Manager!
+            Gridnik was the main tool I used to produce the initial grid
+            compositions. Overall I think it’s a great for prototyping grid
+            compositions quickly, and I hope you try it once it releases on the
+            XD Plugin&nbsp;Manager!
           </p>
         </section>
         <figure className="wide ss mb-4">

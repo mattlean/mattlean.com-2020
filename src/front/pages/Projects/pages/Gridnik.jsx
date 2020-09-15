@@ -136,8 +136,8 @@ const Gridnik = () => {
             >
               Swiss and International Typographic Styles
             </a>
-            . He was also known as Mr. Gridnik&mdash;a nickname his friends gave
-            to him due to his obsession with&nbsp;grids.
+            . He was also known as Gridnik&mdash;a nickname his friends gave to
+            him due to his obsession with&nbsp;grids.
           </p>
           <p>
             <em>

@@ -53,57 +53,65 @@ const cache = new PageCache()
  * @param {string} location Path from Express req object
  * @param {Object} params Params from Express req object
  * @param {Object} [context={}] Information about a specific route render
+ * @return {string} Template string for page
  */
 export const createTemplateString = (location, params, context = {}) => {
-  let app = cache.get(location)
+  let doc = cache.get(location)
 
-  if (!app) {
-    app = renderToString(
+  if (!doc) {
+    const app = renderToString(
       <StaticRouter location={location} context={context}>
         <App />
       </StaticRouter>
     )
-    cache.set(location, app)
+
+    const {
+      canon,
+      desc,
+      keywords,
+      og_img,
+      og_img_alt,
+      og_img_secure,
+      og_img_height,
+      og_img_width,
+      og_type,
+      title,
+      twitter_card,
+      twitter_img,
+      twitter_img_alt,
+    } = genHeadData(location)
+
+    doc = render(TEMPLATE, {
+      app,
+      canon,
+      css: cssFilename,
+      desc,
+      ga: process.env.GA,
+      js: jsFilename,
+      keywords,
+      og_img,
+      og_img_secure,
+      og_img_alt,
+      og_img_height,
+      og_img_width,
+      og_type,
+      title,
+      twitter_card,
+      twitter_img,
+      twitter_img_alt,
+      vendor: vendorFilename,
+      NODE_ENV: process.env.NODE_ENV,
+    })
+
+    cache.set(location, doc)
+
+    console.log('Cache miss', location)
+  } else {
+    console.log('Cache hit', location)
   }
 
-  const {
-    canon,
-    desc,
-    keywords,
-    og_img,
-    og_img_alt,
-    og_img_secure,
-    og_img_height,
-    og_img_width,
-    og_type,
-    title,
-    twitter_card,
-    twitter_img,
-    twitter_img_alt,
-  } = genHeadData(location)
-
   // TODO: render minified HTML for production
-  return render(TEMPLATE, {
-    app,
-    canon,
-    css: cssFilename,
-    desc,
-    ga: process.env.GA,
-    js: jsFilename,
-    keywords,
-    og_img,
-    og_img_secure,
-    og_img_alt,
-    og_img_height,
-    og_img_width,
-    og_type,
-    title,
-    twitter_card,
-    twitter_img,
-    twitter_img_alt,
-    vendor: vendorFilename,
-    NODE_ENV: process.env.NODE_ENV,
-  })
+  return doc
 }
 
 /**
@@ -111,44 +119,50 @@ export const createTemplateString = (location, params, context = {}) => {
  * @param {string} location Path from Express req object
  * @param {Object} [params] Params from Express req object
  * @param {Object} [context={}] Information about a specific route render
+ * @return {string} Template string for no match page
  */
 export const createNoMatchTemplateString = (location, params, context = {}) => {
-  let app = cache.get('404')
+  let doc = cache.get('404')
 
-  if (!app) {
-    app = renderToString(
+  if (!doc) {
+    const app = renderToString(
       <StaticRouter location={location} context={context}>
         <App />
       </StaticRouter>
     )
-    cache.set('404', app)
+
+    doc = render(TEMPLATE, {
+      app,
+      canon: '',
+      css: cssFilename,
+      desc: '',
+      ga: process.env.GA,
+      js: jsFilename,
+      keywords: '',
+      og_img: '',
+      og_img_secure: '',
+      og_img_alt: '',
+      og_img_height: '',
+      og_img_width: '',
+      og_type: '',
+      title: NO_MATCH_TITLE,
+      twitter_card: '',
+      twitter_img: '',
+      twitter_img_alt: '',
+      vendor: vendorFilename,
+      NODE_ENV: process.env.NODE_ENV,
+    })
+
+    cache.set('404', doc)
   }
 
-  return render(TEMPLATE, {
-    app,
-    canon: '',
-    css: cssFilename,
-    desc: '',
-    ga: process.env.GA,
-    js: jsFilename,
-    keywords: '',
-    og_img: '',
-    og_img_secure: '',
-    og_img_alt: '',
-    og_img_height: '',
-    og_img_width: '',
-    og_type: '',
-    title: NO_MATCH_TITLE,
-    twitter_card: '',
-    twitter_img: '',
-    twitter_img_alt: '',
-    vendor: vendorFilename,
-    NODE_ENV: process.env.NODE_ENV,
-  })
+  return doc
 }
 
 /**
  * Create error template string
+ * @param {string} title Title for error page
+ * @return {string} Template string for error page
  */
 export const createErrTemplateString = (title) =>
   render(ERR_TEMPLATE, { ga: process.env.GA, title })
