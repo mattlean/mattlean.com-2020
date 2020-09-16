@@ -248,7 +248,7 @@ const LJAS = () => {
           <section>
             <h4>Released</h4>
             <ul>
-              <li>January 13, 2019</li>
+              <li>Jan 13, 2019</li>
             </ul>
           </section>
           <section>
@@ -408,7 +408,7 @@ const LJAS = () => {
         <section>
           <section>
             <h4>Updated</h4>
-            <p>February 27, 2019</p>
+            <p>Feb 27, 2019</p>
           </section>
           <section>
             <h4>Backend</h4>

@@ -165,7 +165,7 @@ const ALWP = () => {
           <section>
             <h4>Released</h4>
             <ul>
-              <li>October 16, 2018</li>
+              <li>Oct 16, 2018</li>
             </ul>
           </section>
           <section>
@@ -194,7 +194,7 @@ const ALWP = () => {
           <section>
             <h4>Updated</h4>
             <ul>
-              <li>January 14, 2019</li>
+              <li>Jan 14, 2019</li>
             </ul>
           </section>
           <section>

@@ -182,7 +182,7 @@ const Lantern = () => {
           <section>
             <h4>Released</h4>
             <ul>
-              <li>August 25, 2015</li>
+              <li>Aug 25, 2015</li>
             </ul>
           </section>
           <section>
@@ -212,7 +212,7 @@ const Lantern = () => {
           <section>
             <h4>Updated</h4>
             <ul>
-              <li>September 11, 2015</li>
+              <li>Sept 11, 2015</li>
             </ul>
           </section>
           <section>

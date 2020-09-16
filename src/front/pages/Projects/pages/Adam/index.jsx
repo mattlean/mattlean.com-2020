@@ -188,7 +188,7 @@ const Adam = () => {
           <section>
             <h4>Released</h4>
             <ul>
-              <li>August 18, 2014</li>
+              <li>Aug 18, 2014</li>
             </ul>
           </section>
           <section>
@@ -237,7 +237,7 @@ const Adam = () => {
           <section>
             <h4>Updated</h4>
             <ul>
-              <li>January 9, 2016</li>
+              <li>Jan 9, 2016</li>
             </ul>
           </section>
           <section>

@@ -177,7 +177,7 @@ const Owl = () => {
           <section>
             <h4>Released</h4>
             <ul>
-              <li>June 9, 2014</li>
+              <li>Jun 9, 2014</li>
             </ul>
           </section>
           <section>
@@ -264,7 +264,7 @@ const Owl = () => {
           <section>
             <h4>Updated</h4>
             <ul>
-              <li>October 3, 2015</li>
+              <li>Oct 3, 2015</li>
             </ul>
           </section>
           <section>

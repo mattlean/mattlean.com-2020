@@ -254,7 +254,7 @@ const SOT = () => {
           <section>
             <h4>Released</h4>
             <ul>
-              <li>October 23, 2014</li>
+              <li>Oct 23, 2014</li>
             </ul>
           </section>
           <section>
@@ -349,7 +349,7 @@ const SOT = () => {
         <section>
           <section>
             <h4>Updated</h4>
-            <p>September 1, 2020</p>
+            <p>Sept 1, 2020</p>
           </section>
           <section>
             <h4>Responsibilities</h4>

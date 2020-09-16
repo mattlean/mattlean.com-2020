@@ -159,7 +159,7 @@ const ML2020 = () => {
           <section>
             <h4>Released</h4>
             <ul>
-              <li>August 19, 2020</li>
+              <li>Aug 31, 2020</li>
             </ul>
           </section>
           <section>
@@ -240,7 +240,7 @@ const ML2020 = () => {
           <section>
             <h4>Updated</h4>
             <ul>
-              <li>August 19, 2020</li>
+              <li>Sept 16, 2020</li>
             </ul>
           </section>
           <section>

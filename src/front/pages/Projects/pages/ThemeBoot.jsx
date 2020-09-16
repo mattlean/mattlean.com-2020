@@ -240,7 +240,7 @@ const ThemeBoot = () => {
           <section>
             <h4>Released</h4>
             <ul>
-              <li>October 29, 2014</li>
+              <li>Oct 29, 2014</li>
             </ul>
           </section>
           <section>

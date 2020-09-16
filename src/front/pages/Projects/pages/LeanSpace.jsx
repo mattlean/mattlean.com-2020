@@ -272,7 +272,7 @@ const LeanSpace = () => {
           <section>
             <h4>Released</h4>
             <ul>
-              <li>August 31, 2015</li>
+              <li>Aug 31, 2015</li>
             </ul>
           </section>
           <section>
@@ -321,7 +321,7 @@ const LeanSpace = () => {
           <section>
             <h4>Updated</h4>
             <ul>
-              <li>September 14, 2015</li>
+              <li>Sept 14, 2015</li>
             </ul>
           </section>
           <section>
