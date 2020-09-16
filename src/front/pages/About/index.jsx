@@ -289,7 +289,7 @@ const About = () => {
                 <li>React Router</li>
                 <li>Redux</li>
                 <li>Fetch, Axios, XMLHttpRequest</li>
-                <li>CSS Grid, Flexbox, Float</li>
+                <li>CSS Grid, Flexbox, Multicol, Float</li>
                 <li>Media Queries</li>
                 <li>Framer Motion</li>
                 <li>Anime.js</li>

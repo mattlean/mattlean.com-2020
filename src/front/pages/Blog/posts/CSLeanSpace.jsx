@@ -106,7 +106,7 @@ const CSLeanSpace = () => {
             I created <strong>Lean Space</strong> right after I graduated from
             college in 2015. The goal of the project was to create a personal
             brand that would help me land my first full-time engineering job in
-            Silicon Valley. This brand would be applied on my website, resume,
+            Silicon Valley. This brand would be applied to my website, resume,
             and cover&nbsp;letters.
           </p>
           <p>The two key factors directing my project were the following:</p>
@@ -117,9 +117,9 @@ const CSLeanSpace = () => {
               developing my own&nbsp;solutions.
             </li>
             <li>
-              Showcase a unique visual style to distinguish myself from
-              engineers who don’t consider design practices, blindly rip
-              templates, or design resumes in&nbsp;
+              Showcase a unique visual style to distinguish me from engineers
+              who don’t consider design practices, blindly rip templates, or
+              design resumes in&nbsp;
               <a
                 href="https://latex-project.org"
                 rel="noreferrer"
@@ -199,10 +199,10 @@ const CSLeanSpace = () => {
               since I wanted to learn the framework due to its popularity at the
               time. As the projects progressed, my interest in Xuehua CMS waned
               as I felt that it was unlikely I would ever use it anywhere
-              besides my own site due to my focus on full-time opportunities
-              rather than freelance. If I was only going to use it for my own
-              site, the trouble of maintaining it wouldn’t be worth it, so after
-              I felt I had some good exposure to{' '}
+              besides my site due to my focus on full-time opportunities rather
+              than freelance. If I was only going to use it for my site, the
+              trouble of maintaining it wouldn’t be worth it, so after I felt I
+              had some good exposure to{' '}
               <a
                 href="https://www.ruby-lang.org/en"
                 rel="noreferrer"
@@ -284,7 +284,7 @@ const CSLeanSpace = () => {
             setup: every page would have a corresponding HTML document that
             would be distributed by the server. Once a page is downloaded by a
             user, JavaScript is executed and adds an event handler on all
-            internal links that performs an{' '}
+            internal links that perform an{' '}
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX"
               rel="noreferrer"
@@ -438,7 +438,7 @@ const CSLeanSpace = () => {
               to give a subtly different look to the&nbsp;text.
             </p>
             <p>
-              For monospaced text I chose{' '}
+              For the monospaced text I chose{' '}
               <a
                 href="https://fonts.google.com/specimen/Inconsolata"
                 rel="noreferrer"
@@ -448,8 +448,8 @@ const CSLeanSpace = () => {
                 Inconsolata
               </a>
               . This would be used for body and heading text that would benefit
-              from monospacing or would need to be distinguished from text in
-              Open&nbsp;Sans.
+              from monospacing or would need to be distinguished from the text
+              in Open&nbsp;Sans.
             </p>
             <p>
               For the logo, I settled with{' '}
@@ -491,8 +491,8 @@ const CSLeanSpace = () => {
           I used animations and transitions wherever I could throughout the site
           to have it give off a sleek and polished experience. This contributed
           particularly to the navigation experience, making the changing of
-          pages feel smooth and seamless. By only CSS, the animations can be
-          experienced by users even when they have JavaScript&nbsp;disabled.
+          pages feel smooth and seamless. By only using CSS, the animations can
+          be experienced by users even when they have JavaScript&nbsp;disabled.
         </p>
         <figure className="vid mb-4">
           <video autoPlay controls loop muted>
@@ -513,9 +513,8 @@ const CSLeanSpace = () => {
           >
             Bootstrap
           </a>
-          , I would need to create my own custom layout code that would support
-          both desktop and mobile devices. I ended up implementing the layout
-          with{' '}
+          , I would need to create my custom layout code that would support both
+          desktop and mobile devices. I ended up implementing the layout with{' '}
           <a
             href="https://developer.mozilla.org/en-US/docs/Web/CSS/float"
             rel="noreferrer"

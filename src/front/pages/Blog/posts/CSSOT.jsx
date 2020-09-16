@@ -120,7 +120,7 @@ const CSSOT = () => {
             >
               Flash
             </a>{' '}
-            which was already seeing decline in support at the time, and the
+            which was already seeing a decline in support at the time, and the
             company recognized that they would need to port the tool to work
             natively in the browser to ensure its&nbsp;longevity.
           </p>
@@ -141,7 +141,7 @@ const CSSOT = () => {
           </p>
           <p>
             The tool has received periodic updates after its initial release.
-            Unfortunately the microsite it was originally found on is no longer
+            Unfortunately, the microsite it was originally found on is no longer
             online, but{' '}
             <a
               href={live}
@@ -176,7 +176,7 @@ const CSSOT = () => {
               >
                 LGC
               </a>
-              . Because of this they reapproached me to perform some visual
+              . Because of this, they reapproached me to perform some visual
               design updates that incorporated their new
               branding&nbsp;guidelines.
             </p>
@@ -215,7 +215,7 @@ const CSSOT = () => {
                 Sass
               </a>{' '}
               to utilize its powerful features to improve the maintainability of
-              the style codebase. For the charts I ended up choosing{' '}
+              the style codebase. For the charts, I ended up choosing{' '}
               <a
                 href="https://developers.google.com/chart"
                 rel="noreferrer"
@@ -224,14 +224,13 @@ const CSSOT = () => {
               >
                 Google Charts
               </a>{' '}
-              because of its support for area charts and
-              clear&nbsp;documentation.
+              because it supported area charts and clear&nbsp;documentation.
             </p>
             <h3 className="h-7 sm:h-8 mb-1.5">
               Custom Layout vs. Bootstrap Grid
             </h3>
             <p className="c-grey-1 mb-4">
-              At first I built the layout with Bootstrap’s grid system to
+              At first, I built the layout with Bootstrap’s grid system to
               quickly iterate through the first few prototypes, but we realized
               that it was important to maximize the amount of space the data
               visualizations took, especially on mobile devices. This wouldn’t
@@ -254,7 +253,7 @@ const CSSOT = () => {
               >
                 media queries
               </a>{' '}
-              in order to have complete&nbsp;control.
+              to have complete&nbsp;control.
             </p>
             <h3 className="h-7 sm:h-8 mb-1.5">Project Tooling</h3>
             <p className="c-grey-1">
@@ -337,7 +336,16 @@ const CSSOT = () => {
               >
                 Excel
               </a>{' '}
-              spreadsheet, I wrote a custom command line tool in{' '}
+              spreadsheet, I wrote a custom{' '}
+              <a
+                href="https://en.wikipedia.org/wiki/Command-line_interface"
+                rel="noreferrer"
+                target="_blank"
+                className="a-grey-1"
+              >
+                command-line interface (CLI)
+              </a>{' '}
+              tool in{' '}
               <a
                 href="https://python.org"
                 rel="noreferrer"
@@ -451,7 +459,7 @@ const CSSOT = () => {
             >
               Vue
             </a>
-            , but in the end the application had been holding up well over the
+            , but in the end, the application had been holding up well over the
             years, so I decided to try to maintain the technology stack and just
             upgrade and migrate most dependencies to their latest versions.
             Besides upgrades for dependencies, there were a few new features
@@ -528,7 +536,7 @@ const CSSOT = () => {
             >
               webpack
             </a>{' '}
-            configuration based off of{' '}
+            configuration based on{' '}
             <Link to={`${ROUTE_PREFIX}ljas`} className="a-grey-1">
               Lean JavaScript Application Starter
             </Link>
@@ -546,7 +554,7 @@ const CSSOT = () => {
             >
               Babel
             </a>
-            . Code is now linted with{' '}
+            . The code is now linted with{' '}
             <a
               href="https://eslint.org"
               rel="noreferrer"
@@ -626,8 +634,8 @@ const CSSOT = () => {
             versions are&nbsp;deployed.
           </p>
           <p>
-            The custom spreadsheet conversion command line tool was also
-            rewritten in JavaScript and{' '}
+            The custom spreadsheet conversion CLI tool was also rewritten in
+            JavaScript and{' '}
             <a
               href="https://nodejs.org"
               rel="noreferrer"
