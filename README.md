@@ -8,13 +8,19 @@
 
 <h2 align="center">About This Project</h2>
 
-<p align="center">Details about this project can be found here:  
-https://mattlean.com/projects/ml2020</p>
+<p align="center">
+  Details about this project can be found here:<br>
+  https://mattlean.com/projects/ml2020
+</p>
 
-<p align="center">Learn more about the project's development process by reading the case study:  
-https://mattlean.com/blog/cs-ml2020</p>
+<p align="center">
+  Learn more about the project's development process by reading the case study:<br>
+  https://mattlean.com/blog/cs-ml2020
+</p>
 
 <h2 align="center">View Live</h2>
 
-<p align="center">You can view the website here:  
-https://mattlean.com</p>
+<p align="center">
+  You can view the website here:<br>
+  https://mattlean.com
+</p>
