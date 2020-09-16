@@ -129,6 +129,16 @@ ROUTES[path] = {
 path = `${ROUTE_PREFIX}crush`
 ROUTES[path] = {
   path,
+  canon: `${CANON_ROOT}${path}`,
+  og_img: 'http://mattlean.com/media/crush-social.png',
+  og_img_secure: 'https://mattlean.com/media/crush-social.png',
+  og_img_alt: 'Game board from qPCR Crush',
+  og_img_width: '1200',
+  og_img_height: '1200',
+  og_type: 'article',
+  twitter_card: 'summary',
+  twitter_img: 'http://mattlean.com/media/crush-social.png',
+  twitter_img_alt: 'Game board from qPCR Crush',
   keywords: [
     'matt lean',
     'matthew lean',
@@ -531,6 +541,16 @@ ROUTES[path] = {
 path = `${ROUTE_PREFIX}sot`
 ROUTES[path] = {
   path,
+  canon: `${CANON_ROOT}${path}`,
+  og_img: 'http://mattlean.com/media/sot-social.png',
+  og_img_secure: 'https://mattlean.com/media/sot-social.png',
+  og_img_alt: 'Chart from spectral overlay tool',
+  og_img_width: '1200',
+  og_img_height: '1200',
+  og_type: 'article',
+  twitter_card: 'summary',
+  twitter_img: 'http://mattlean.com/media/sot-social.png',
+  twitter_img_alt: 'Chart from spectral overlay tool',
   keywords: [
     'matt lean',
     'matthew lean',
@@ -642,16 +662,19 @@ ORDER.forEach((id) => {
   if (routeData) {
     routeData.title = `Project: ${name}`
     routeData.desc = `Information about Matt Lean's project: ${name}`
-    routeData.canon = `${CANON_ROOT}${routeData.path}`
-    routeData.og_img = 'http://mattlean.com/media/social.png'
-    routeData.og_img_secure = 'https://mattlean.com/media/social.png'
-    routeData.og_img_alt = 'Logo for MattLean.com'
-    routeData.og_img_width = '1200'
-    routeData.og_img_height = '1200'
-    routeData.og_type = 'website'
-    routeData.twitter_card = 'summary'
-    routeData.twitter_img = 'http://mattlean.com/media/social.png'
-    routeData.twitter_img_alt = 'Logo for MattLean.com'
+
+    if (!routeData.og_img) {
+      routeData.canon = `${CANON_ROOT}${routeData.path}`
+      routeData.og_img = 'http://mattlean.com/media/social.png'
+      routeData.og_img_secure = 'https://mattlean.com/media/social.png'
+      routeData.og_img_alt = 'Logo for MattLean.com'
+      routeData.og_img_width = '1200'
+      routeData.og_img_height = '1200'
+      routeData.og_type = 'website'
+      routeData.twitter_card = 'summary'
+      routeData.twitter_img = 'http://mattlean.com/media/social.png'
+      routeData.twitter_img_alt = 'Logo for MattLean.com'
+    }
   }
 })
 

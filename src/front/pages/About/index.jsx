@@ -260,12 +260,13 @@ const About = () => {
               <h2 className="h-9 dispw-bold tt-uppercase">Languages</h2>
               <ul>
                 <li>JavaScript</li>
-                <li>Python</li>
                 <li>TypeScript</li>
+                <li>Python</li>
                 <li>Java</li>
-                <li>CSS</li>
                 <li>Sass</li>
+                <li>CSS</li>
                 <li>HTML</li>
+                <li>SQL</li>
                 <li>PHP</li>
                 <li>C, C++</li>
               </ul>
@@ -297,7 +298,6 @@ const About = () => {
                 <li>Google Charts</li>
                 <li>Canvas</li>
                 <li>Web Storage</li>
-                <li>Sass</li>
                 <li>Intersection Observer</li>
                 <li>Material Design</li>
                 <li>Bootstrap</li>

@@ -27,6 +27,10 @@ module.exports = merge([
       from: 'src/front/assets/posts/cs-sot/sot-social.png',
       to: 'media',
     },
+    {
+      from: 'src/front/assets/projects/crush/crush-social.png',
+      to: 'media',
+    },
   ]),
 
   loadSVGs(),

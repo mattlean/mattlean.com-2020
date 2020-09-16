@@ -975,6 +975,10 @@ app.listen(port, () => {
               </a>
               .
             </li>
+            <li>
+              Precalculate all renders for static pages during the build process
+              so the cache isn’t needed for&nbsp;them.
+            </li>
           </ol>
         </section>
         <section className="wide mb-4">
