@@ -96,7 +96,7 @@ const FFUH = () => {
       >
         <section className="c-grey-1">
           <p>
-            <strong>express-ffuh</strong> is an open source{' '}
+            <strong>express-ffuh</strong> is an{' '}
             <a
               href="https://expressjs.com"
               rel="noreferrer"

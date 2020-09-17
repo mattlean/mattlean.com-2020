@@ -98,9 +98,9 @@ const Adam = () => {
       >
         <section className="c-grey-1">
           <p>
-            <strong>Adam Engine</strong> is an open source HTML5 2D game engine
-            used to power games and graphical web applications. It supports
-            interaction through both mouse and keyboard and&nbsp;touchscreens.
+            <strong>Adam Engine</strong> is an HTML5 2D game engine used to
+            power games and graphical web applications. It supports interaction
+            through both mouse and keyboard and&nbsp;touchscreens.
           </p>
           <p>
             The project was used to build{' '}

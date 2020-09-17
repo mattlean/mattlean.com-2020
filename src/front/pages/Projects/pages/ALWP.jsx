@@ -97,7 +97,7 @@ const ALWP = () => {
       >
         <section className="c-grey-1">
           <p>
-            <strong>Asset List Webpack Plugin</strong> is an open source{' '}
+            <strong>Asset List Webpack Plugin</strong> is a{' '}
             <a
               href="https://webpack.js.org"
               rel="noreferrer"

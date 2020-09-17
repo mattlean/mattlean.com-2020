@@ -97,7 +97,7 @@ const Checkpoint = () => {
       >
         <section className="c-grey-1">
           <p>
-            <strong>Checkpoint.js</strong> is an open source data validation and
+            <strong>Checkpoint.js</strong> is a data validation and
             transformation&nbsp;library.
           </p>
           <p>
