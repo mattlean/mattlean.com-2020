@@ -99,8 +99,18 @@ const Adam = () => {
         <section className="c-grey-1">
           <p>
             <strong>Adam Engine</strong> is an HTML5 2D game engine used to
-            power games and graphical web applications. It supports interaction
-            through both mouse and keyboard and&nbsp;touchscreens.
+            power games and graphical web applications. It runs projects at 60
+            frames per second and supports various media such as{' '}
+            <a
+              href="https://en.wikipedia.org/wiki/Texture_atlas"
+              rel="noreferrer"
+              target="_blank"
+              className="a-grey-1"
+            >
+              texture atlases
+            </a>{' '}
+            and audio. It also supports interaction through mouse, keyboard,
+            and&nbsp;touchscreens.
           </p>
           <p>
             The project was used to build{' '}

@@ -218,7 +218,7 @@ const About = () => {
                 <br />
                 2016 &ndash; 2018
               </dd>
-              <dt>Miles & Company</dt>
+              <dt>Miles & Company Services</dt>
               <dd>
                 Frontend Engineer
                 <br />
