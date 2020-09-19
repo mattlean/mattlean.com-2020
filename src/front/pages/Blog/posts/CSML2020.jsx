@@ -110,7 +110,7 @@ const CSML2020 = () => {
             the&nbsp;project.
           </p>
           <p>
-            Note that this case study focused more on the technical side of
+            Note that this case study is focused on the technical side of
             things. If you want to learn more about the visual designs, another
             post on that is coming&nbsp;soon!
           </p>
@@ -785,8 +785,9 @@ app.listen(port, () => {
             <li>
               The user receives the HTML document in the HTTP response and their
               browser begins to render it on screen. When the browser encounters
-              the <code>script</code> element, it sends another HTTP request to
-              the server requesting the <code>main</code> JavaScript&nbsp;file.
+              the <code>main</code> JavaScript file in a <code>script</code>{' '}
+              element, it sends another HTTP request to get the file from
+              the&nbsp;server.
             </li>
             <li>
               The server receives the HTTP request and sends the{' '}

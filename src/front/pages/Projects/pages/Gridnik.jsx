@@ -202,7 +202,7 @@ const Gridnik = () => {
         <figcaption className="c-grey-2">
           A Gridnik-generated grid being used to compose the{' '}
           <Link to="/about" className="a-grey-2">
-            ”About” page
+            “About” page
           </Link>{' '}
           on&nbsp;
           <Link to={`${ROUTE_PREFIX}ml2020`} className="a-grey-2">
