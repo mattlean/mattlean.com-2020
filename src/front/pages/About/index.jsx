@@ -300,6 +300,8 @@ const About = () => {
                 <li>Web Storage</li>
                 <li>Intersection Observer</li>
                 <li>Material Design</li>
+                <li>Google Maps API</li>
+                <li>Mapbox & Leaflet</li>
                 <li>Bootstrap</li>
                 <li>jQuery</li>
                 <li>react-intl</li>

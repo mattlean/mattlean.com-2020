@@ -811,8 +811,8 @@ app.listen(port, () => {
             the initial load, navigating through pages should be done without
             reloading. You should see that the server reflects this since it is
             not logging any messages, meaning it is no longer receiving requests
-            as you navigate through the application, confirming that the
-            application has transitioned to the SPA&nbsp;paradigm.
+            as you navigate, confirming that the application has transitioned to
+            the SPA&nbsp;paradigm.
           </p>
           <h3 className="h-7 sm:h-8 mb-1.5">Performance Improvements</h3>
           <p className="c-grey-1">
