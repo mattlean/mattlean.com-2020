@@ -288,7 +288,12 @@ const Landing = () => {
                 }
               >
                 <h3 className="h-4 sm:h-6 c-primary">{csSOTData.title}</h3>
-                <p className="c-grey-1">{csSOTData.subtitle}</p>
+                <p
+                  dangerouslySetInnerHTML={createDangerousHTML(
+                    csSOTData.subtitle
+                  )}
+                  className="c-grey-1"
+                />
               </BlindFrame>
             </figure>
           </Link>
@@ -325,7 +330,12 @@ const Landing = () => {
                 }
               >
                 <h3 className="h-4 sm:h-6 c-primary">{csLeanSpace.title}</h3>
-                <p className="c-grey-1">{csLeanSpace.subtitle}</p>
+                <p
+                  dangerouslySetInnerHTML={createDangerousHTML(
+                    csLeanSpace.subtitle
+                  )}
+                  className="c-grey-1"
+                />
               </BlindFrame>
             </figure>
           </Link>
