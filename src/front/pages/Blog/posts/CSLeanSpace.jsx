@@ -281,10 +281,10 @@ const CSLeanSpace = () => {
               search engine optimization (SEO)
             </a>
             . To address this issue, I structured the server with a standard
-            setup: every page would have a corresponding HTML document that
-            would be distributed by the server. Once a page is downloaded by a
-            user, JavaScript is executed and adds an event handler on all
-            internal links that perform an{' '}
+            setup: every page would have a corresponding static HTML document
+            that would be distributed by the server. Once a page is downloaded
+            by a user, JavaScript is executed and adds a click event handler on
+            all internal links that retrieves the next page through an{' '}
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX"
               rel="noreferrer"
@@ -292,16 +292,15 @@ const CSLeanSpace = () => {
               className="a-grey-1"
             >
               AJAX request
-            </a>{' '}
-            when they are clicked, downloading the next page and using it to
-            dynamically update the DOM of the current page to transform it into
-            the new one, thus allowing navigation without page&nbsp;reloads.
+            </a>
+            , updating the DOM of the current page with its content and thus
+            allowing navigation without a page&nbsp;reload.
           </p>
           <p className="c-grey-1">
             This also allows the website to still be fully functional when
             JavaScript is disabled, avoiding the JavaScript requirement problem
             for most SPAs. When browsing the site without JavaScript, the page
-            is still completely rendered, but the event handlers will never be
+            is still completely rendered but the event handler will never be
             applied, letting the navigation experience fallback to the standard
             link behavior. This ensures the SEO-friendliness of the website, as
             web crawlers will be able to easily read an identical page that

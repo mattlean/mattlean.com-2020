@@ -26,6 +26,18 @@
   > .content {
     grid-column: 1/4;
     grid-row: 3/4;
+
+    > p {
+      > .alert {
+        cursor: pointer;
+      }
+
+      > .blue-comic-sans:hover {
+        color: blue;
+        // stylelint-disable-next-line font-family-no-missing-generic-family-keyword
+        font-family: 'Comic Sans MS', 'Comic Sans', typography.$txt-font-family;
+      }
+    }
   }
 
   > .closing {

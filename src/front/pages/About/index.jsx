@@ -10,6 +10,8 @@ import {
 } from '../../components/Blind/initAnimUtil'
 import { usePageLoadEffect } from '../../util'
 
+const extraAlert = () => alert("I'm sorry!")
+
 /**
  * About Page
  */
@@ -96,29 +98,43 @@ const About = () => {
           <p>
             In elementary school, my sister introduced me to a browser game
             called Neopets. The main objective of the game was to take care of
-            your virtual creature, but the most impactful feature was that it
+            virtual creatures, but the most impactful feature was that it
             allowed users to personalize and share webpages in-game with HTML,
-            CSS, and JavaScript. I ended up building sinful pages with lots of
-            blue Comic Sans, absurdly loud auto-playing MIDI music, flashing
-            background GIFs that probably triggered epileptic seizures, and
-            seemingly endless stacks of alert dialog boxes that would “freeze”
-            your computer and make your mom think you got a virus. (I apologize
-            if you ever fell victim to my heinous pranks!) Despite the fact I
-            was creating foolish webpages about my Neopets, the reality was that
-            the game was introducing me to the very fabric of the&nbsp;web.
+            CSS, and JavaScript. I ended up building sinful pages with lots of{' '}
+            <span className="blue-comic-sans">blue Comic Sans</span>, absurdly
+            loud auto-playing MIDI music, flashing background GIFs that probably
+            triggered epileptic seizures, and seemingly endless stacks of{' '}
+            <span
+              onClick={extraAlert}
+              onKeyPress={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') extraAlert()
+              }}
+              role="button"
+              tabIndex={0}
+              className="alert
+            "
+            >
+              alert
+            </span>{' '}
+            dialog boxes that would “freeze” your computer and make your mom
+            think you got a virus. (I apologize if you ever fell victim to my
+            heinous pranks!) Despite the fact I was creating foolish webpages
+            about my Neopets, the reality was that the game was introducing me
+            to the very fabric of the&nbsp;web.
           </p>
           <p>
             After I quit Neopets, I continued to learn web development through
             free online tutorials and books I couldn’t buy during visits to
-            bookstores. These studies would then manifest on free web hosting
-            platforms like GeoCities and Freewebs in the form of fan websites
-            about other video games that intrigued&nbsp;me.
+            bookstores. These studies would then manifest as fan websites about
+            other video games that intrigued me on free web hosting platforms
+            like&nbsp;GeoCities.
           </p>
           <p>
             In high school, my sister started her own neighborhood business as a
-            dog walker and inspired me to try to start my own business as a
-            freelance web design and developer. I built websites for small,
-            local businesses for several years.
+            dog walker and inspired me try something similar. I ended up taking
+            my web development hobby to the next step and established my own
+            business as a freelance web designer and developer where I built
+            websites for small, local businesses for several&nbsp;years.
           </p>
           <p>
             For college, I moved to northern California to study computer
@@ -141,16 +157,18 @@ const About = () => {
             specializations like graphics programming, network programming, game
             programming, virtual reality, and more. At the end of my studies, I
             realized that it made the most sense to come full circle and combine
-            my formal computer science education with my previous “street” web
-            coding experiences to find a job in Silicon Valley as a specialist
-            in web&nbsp;technologies.
+            my formal education with my previous “street” coding experiences to
+            find a job in Silicon Valley as a specialist in
+            web&nbsp;technologies.
           </p>
           <p>
             Since graduating and receiving my Bachelor of Science degree in
             Computer Science in 2015, I’ve been professionally building web
-            applications for Silicon Valley. My education hasn’t stopped here
-            though. Outside of work, I continue to learn and play with new
-            technologies that often come up as open source experiments on my{' '}
+            applications for the Bay Area in a variety of industries including
+            biotech, medical, on-demand services, and more. My education hasn’t
+            stopped here though. Outside of work, I continue to learn and play
+            with new technologies that often come up as open source experiments
+            on my{' '}
             <a
               href="https://github.com/mattlean"
               rel="noreferrer"
@@ -159,8 +177,8 @@ const About = () => {
             >
               GitHub
             </a>
-            . As I currently live in South Bay, occasionally when I have extra
-            time, I take an online or night class at{' '}
+            . Because I currently reside in South Bay, I occasionally take
+            online or night classes at{' '}
             <a
               href="http://deanza.edu"
               rel="noreferrer"
@@ -169,8 +187,8 @@ const About = () => {
             >
               De Anza College
             </a>{' '}
-            where I am sluggishly working towards an associate degree in Graphic
-            & Interactive&nbsp;Design.
+            where I study graphic and interactive design when I find
+            extra&nbsp;time.
           </p>
         </motion.section>
         <section className="closing">
