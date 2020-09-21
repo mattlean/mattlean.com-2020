@@ -5,13 +5,13 @@ import { motion } from 'framer-motion'
 import BlindFrame from '../../components/Blind/BlindFrame'
 import VARIANTS from '../page_variants'
 import MainFooter from '../../components/MainFooter'
+import { createDangerousHTML, usePageLoadEffect } from '../../util'
 import { getAllProjectData } from '../../../common/data/project'
 import { ROUTE_PREFIX } from '../../../common/data/route/project'
 import {
   setupBlindObservers,
   useInitAnim,
 } from '../../components/Blind/initAnimUtil'
-import { usePageLoadEffect } from '../../util'
 
 const allProjectData = getAllProjectData()
 
@@ -82,7 +82,10 @@ const ProjectFeed = () => {
       >
         <Link to={`${ROUTE_PREFIX}${p.id}`}>
           <h2 className="h-4 sm:h-6 a-primary">{p.name}</h2>
-          <p className="c-grey-1">{p.long}</p>
+          <p
+            dangerouslySetInnerHTML={createDangerousHTML(p.long)}
+            className="c-grey-1"
+          />
           <ul aria-label="Categories" className="badge-list">
             {p.tags.map((t) => (
               <Badge key={t.id} nodeType="li" wide={true}>

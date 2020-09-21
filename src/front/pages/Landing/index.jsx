@@ -5,6 +5,7 @@ import BlindFrame from '../../components/Blind/BlindFrame'
 import CTA from '../../components/CTA'
 import MainFooter from '../../components/MainFooter'
 import VARIANTS from '../page_variants'
+import { createDangerousHTML, usePageLoadEffect } from '../../util'
 import { getPostData } from '../../../common/data/post'
 import { getProjectData } from '../../../common/data/project'
 import { ROUTE_PREFIX as BLOG_PREFIX } from '../../../common/data/route/blog'
@@ -13,7 +14,6 @@ import {
   setupBlindObservers,
   useInitAnim,
 } from '../../components/Blind/initAnimUtil'
-import { usePageLoadEffect } from '../../util'
 
 const eswissData = getProjectData('eswiss')
 const gridnikData = getProjectData('gridnik')
@@ -173,7 +173,12 @@ const Landing = () => {
                 }
               >
                 <h3 className="h-4 sm:h-6 c-primary">{gridnikData.name}</h3>
-                <p className="c-grey-1">{gridnikData.short}</p>
+                <p
+                  dangerouslySetInnerHTML={createDangerousHTML(
+                    gridnikData.short
+                  )}
+                  className="c-grey-1"
+                ></p>
               </BlindFrame>
             </figure>
           </Link>
@@ -210,7 +215,12 @@ const Landing = () => {
                 }
               >
                 <h3 className="h-4 sm:h-6 c-primary">{eswissData.name}</h3>
-                <p className="c-grey-1">{eswissData.short}</p>
+                <p
+                  dangerouslySetInnerHTML={createDangerousHTML(
+                    eswissData.short
+                  )}
+                  className="c-grey-1"
+                />
               </BlindFrame>
             </figure>
           </Link>

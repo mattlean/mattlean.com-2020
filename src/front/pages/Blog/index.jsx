@@ -5,13 +5,13 @@ import { motion } from 'framer-motion'
 import BlindFrame from '../../components/Blind/BlindFrame'
 import MainFooter from '../../components/MainFooter'
 import VARIANTS from '../page_variants'
+import { createDangerousHTML, usePageLoadEffect } from '../../util'
 import { getAllPostData } from '../../../common/data/post'
 import { ROUTE_PREFIX } from '../../../common/data/route/blog'
 import {
   setupBlindObservers,
   useInitAnim,
 } from '../../components/Blind/initAnimUtil'
-import { usePageLoadEffect } from '../../util'
 
 const allPostData = getAllPostData()
 
@@ -65,7 +65,10 @@ const Blog = () => {
       >
         <Link to={`${ROUTE_PREFIX}${p.id}`}>
           <h2 className="h-4 sm:h-6 a-primary">{p.title}</h2>
-          <p className="c-grey-1">{p.subtitle}</p>
+          <p
+            dangerouslySetInnerHTML={createDangerousHTML(p.subtitle)}
+            className="c-grey-1"
+          />
           <p className="txt-2 c-grey-1">
             <time dateTime={p.published.dateStr}>{p.published.txt}</time>{' '}
             &middot; {p.readtime} min read

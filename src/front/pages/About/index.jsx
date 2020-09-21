@@ -302,9 +302,10 @@ const About = () => {
                 <li>Material Design</li>
                 <li>Google Maps API</li>
                 <li>Mapbox & Leaflet</li>
+                <li>react-intl</li>
+                <li>Open Graph Protocol</li>
                 <li>Bootstrap</li>
                 <li>jQuery</li>
-                <li>react-intl</li>
                 <li>A11y</li>
                 <li>Design Systems</li>
                 <li>SEO</li>

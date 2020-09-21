@@ -3,6 +3,13 @@ import { useLocation } from 'react-router-dom'
 import { genHeadData } from '../../common/util'
 
 /**
+ * Create data format used for React's dangerouslySetInnerHTML
+ * @param {string} html HTML string
+ * @return {Object} Data format compatible with dangerouslySetInnerHTML
+ */
+export const createDangerousHTML = (html) => ({ __html: html })
+
+/**
  * Create intersection observer
  * @param {Object} ref React ref
  * @param {Object} options Intersection observer options

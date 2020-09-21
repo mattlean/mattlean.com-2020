@@ -7,7 +7,7 @@ export const POSTS = {
   'cs-lean-space': {
     id: 'cs-lean-space',
     title: 'Case Study: Lean Space',
-    subtitle: 'Designing & developing my personal website in 2015.',
+    subtitle: 'Designing & developing my personal website in&nbsp;2015.',
     published: {
       dateStr: '2020-08-31',
       txt: 'August 31, 2020',
@@ -22,7 +22,8 @@ export const POSTS = {
   'cs-ml2020': {
     id: 'cs-ml2020',
     title: 'Case Study: MattLean.com',
-    subtitle: 'The development process behind my personal website in 2020.',
+    subtitle:
+      'The development process behind my personal website in&nbsp;2020.',
     published: {
       dateStr: '2020-09-14',
       txt: 'September 14, 2020',
@@ -33,7 +34,7 @@ export const POSTS = {
   'cs-sot': {
     id: 'cs-sot',
     title: 'Case Study: Spectral Overlay Tool',
-    subtitle: 'Building a biotech data visualization tool.',
+    subtitle: 'Building a biotech data visualization&nbsp;tool.',
     published: {
       dateStr: '2020-09-03',
       txt: 'September 3, 2020',
@@ -49,7 +50,7 @@ export const POSTS = {
   'hello-world': {
     id: 'hello-world',
     title: 'Hello world!',
-    subtitle: 'Welcome to yet another blog.',
+    subtitle: 'Welcome to yet another&nbsp;blog.',
     published: {
       dateStr: '2015-08-31',
       txt: 'August 31, 2015',
