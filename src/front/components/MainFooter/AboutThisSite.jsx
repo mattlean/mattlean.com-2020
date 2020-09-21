@@ -66,13 +66,18 @@ const AboutThisSite = ({ focusEleOnClose, isOpen, setIsOpen }) => {
       <p>
         If you’re interested in learning about some details behind this website,
         you can get an overview on the{' '}
-        <Link to={`${PROJECT_PREFIX}ml2020`}>project page</Link> that goes over
-        technology stack used, GitHub repository,&nbsp;etc.
+        <Link to={`${PROJECT_PREFIX}ml2020`} onClick={() => setIsOpen(false)}>
+          project page
+        </Link>{' '}
+        that goes over technology stack used, GitHub repository,&nbsp;etc.
       </p>
       <p>
         If would like to get a more in-depth look at the development process for
         this site, consider reading the{' '}
-        <Link to={`${BLOG_PREFIX}cs-ml2020`}>case&nbsp;study</Link>.
+        <Link to={`${BLOG_PREFIX}cs-ml2020`} onClick={() => setIsOpen(false)}>
+          case&nbsp;study
+        </Link>
+        .
       </p>
     </Modal>
   )
