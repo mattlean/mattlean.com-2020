@@ -110,8 +110,23 @@ const CSSOT = () => {
             >
               Biosearch Technologies
             </a>{' '}
-            approached me to redesign and develop their spectral overlay tool in
-            2014. The original tool used{' '}
+            approached me to redesign and develop their{' '}
+            <strong>spectral overlay tool</strong> in 2014. The tool helped
+            scientists select the right parameters needed to design an assay for
+            a common molecular biology method known as{' '}
+            <a
+              href="https://en.wikipedia.org/wiki/Real-time_polymerase_chain_reaction"
+              rel="noreferrer"
+              target="_blank"
+              className="a-grey-1"
+            >
+              quantitative Polymerase Chain Reaction (qPCR)
+            </a>
+            . For the company, this was a critical buyer enablement tool used to
+            streamline conversions into&nbsp;sales.
+          </p>
+          <p>
+            The original tool was in need of a user experience overhaul and used{' '}
             <a
               href="https://en.wikipedia.org/wiki/Adobe_Flash"
               rel="noreferrer"
@@ -119,10 +134,10 @@ const CSSOT = () => {
               className="a-grey-1"
             >
               Flash
-            </a>{' '}
-            which was already seeing a decline in support at the time, and the
-            company recognized that they would need to port the tool to work
-            natively in the browser to ensure its&nbsp;longevity.
+            </a>
+            , so to improve its usability and longevity, Biosearch Technologies
+            recognized that they would need the tool updated and ported to work
+            natively in the&nbsp;browser.
           </p>
           <p>
             They also had plans to launch the{' '}
@@ -134,23 +149,22 @@ const CSSOT = () => {
             >
               qPCR Design Lab
             </a>
-            , a microsite that offered various resources and tools about
-            quantitative polymerase chain reaction targeted to both new and
-            experienced users. The spectral overlay tool would be one of the
-            primary tools to be featured on the&nbsp;site.
+            , a microsite that offered various resources and tools about qPCR
+            targeted to both new and experienced users. The spectral overlay
+            tool would be one of the primary tools to be featured on
+            the&nbsp;site.
           </p>
           <p>
             The tool has received periodic updates after its initial release.
             Unfortunately, the microsite it was originally found on is no longer
-            online, but{' '}
+            online, but the tool can still be found on the{' '}
             <a
               href={live}
               rel="noreferrer"
               target="_blank"
               className="a-grey-1"
             >
-              the tool can still be found live on the LGC
-              Biosearch&nbsp;Technologies&nbsp;website
+              LGC Biosearch&nbsp;Technologies&nbsp;website
             </a>
             .
           </p>
@@ -688,14 +702,14 @@ const CSSOT = () => {
             .
           </p>
           <p>
+            The 2020 version of the tool went live on the{' '}
             <a
               href={live}
               rel="noreferrer"
               target="_blank"
               className="a-grey-1"
             >
-              The 2020 version of the tool went live on the Biosearch
-              Technologies website
+              LGC Biosearch Technologies website
             </a>{' '}
             on September&nbsp;1,&nbsp;2020.
           </p>

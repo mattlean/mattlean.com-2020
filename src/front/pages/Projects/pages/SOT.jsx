@@ -121,8 +121,17 @@ const SOT = () => {
             <strong>spectral overlay tool</strong>, a web application that
             visualizes the absorption and emission spectra for common
             fluorescent dyes and quenchers, allowing users to overlay them as
-            multiplexed sets according to recommended combinations for each
-            qPCR&nbsp;device.
+            multiplexed sets according to recommended combinations for each{' '}
+            <a
+              href="https://en.wikipedia.org/wiki/Real-time_polymerase_chain_reaction"
+              rel="noreferrer"
+              target="_blank"
+              className="a-grey-1"
+            >
+              quantitative Polymerase Chain Reaction (qPCR)
+            </a>{' '}
+            device. This helps scientists select the right parameters needed to
+            design an assay for&nbsp;qPCR.
           </p>
         </section>
         <a href={live} rel="noreferrer" target="_blank">
