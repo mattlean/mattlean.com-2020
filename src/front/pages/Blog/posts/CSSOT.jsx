@@ -3,6 +3,7 @@ import { Badge, Btn } from 'eswiss'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import BlindFrame from '../../../components/Blind/BlindFrame'
+import { createDangerousHTML, usePageLoadEffect } from '../../../util'
 import { getPostData } from '../../../../common/data/post'
 import { getProjectData } from '../../../../common/data/project'
 import { ROUTE_PREFIX } from '../../../../common/data/route/project'
@@ -10,7 +11,6 @@ import {
   setupBlindObservers,
   useInitAnim,
 } from '../../../components/Blind/initAnimUtil'
-import { usePageLoadEffect } from '../../../util'
 import { FileIcon, PlayIcon } from '@primer/octicons-react'
 import SSCharts from '../../../assets/projects/sot/charts.jpg'
 import SSDrawn from '../../../assets/posts/cs-sot/2015-drawn.jpg'
@@ -76,7 +76,10 @@ const CSSOT = () => {
           </span>
           <span className="title h-1 md:h-2 sm:h-3">{name}</span>
         </h1>
-        <p className="subtitle txt-8 sm:txt-6 c-grey-1">{subtitle}</p>
+        <p
+          dangerouslySetInnerHTML={createDangerousHTML(subtitle)}
+          className="subtitle txt-8 sm:txt-6 c-grey-1"
+        />
         <p className="time c-grey-2">
           <time dateTime={published.dateStr}>{published.txt}</time> &middot;{' '}
           {readtime} min read
