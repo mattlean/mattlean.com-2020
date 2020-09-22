@@ -224,7 +224,7 @@ const About = () => {
           <section className="work">
             <h2 className="h-9 dispw-bold tt-uppercase">Work</h2>
             <dl>
-              <dt>LGC Biosearch Technologies</dt>
+              <dt>LGC, Biosearch Technologies</dt>
               <dd>
                 Web Developer Consultant
                 <br />

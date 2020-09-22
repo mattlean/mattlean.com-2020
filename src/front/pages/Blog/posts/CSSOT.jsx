@@ -105,6 +105,7 @@ const CSSOT = () => {
         </h2>
         <section className="intro mb-6 c-grey-1">
           <p>
+            In 2014,{' '}
             <a
               href="https://biosearchtech.com"
               rel="noreferrer"
@@ -113,10 +114,10 @@ const CSSOT = () => {
             >
               Biosearch Technologies
             </a>{' '}
-            approached me to redesign and develop their{' '}
-            <strong>spectral overlay tool</strong> in 2014. The tool helped
-            scientists select the right parameters needed to design an assay for
-            a common molecular biology method known as{' '}
+            approached me to redesign and develop their interactive selection
+            tool called <strong>spectral overlay tool</strong>. This application
+            helped scientists select the right parameters needed to design an
+            assay for a common molecular biology method known as{' '}
             <a
               href="https://en.wikipedia.org/wiki/Real-time_polymerase_chain_reaction"
               rel="noreferrer"
