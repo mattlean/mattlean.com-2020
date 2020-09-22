@@ -327,7 +327,7 @@ const CSLeanSpace = () => {
           <video autoPlay controls loop muted>
             <source src={VidPageTransitions} />
           </video>
-          <figcaption className="a-grey-2">
+          <figcaption className="c-grey-2">
             Example of persistent, refreshless experience with seamless
             page&nbsp;transitions
           </figcaption>
@@ -371,7 +371,7 @@ const CSLeanSpace = () => {
         </p>
         <figure className="ss ss-lg mb-4">
           <img src={SSLantern} alt="Lantern.js being used for Lean Space" />
-          <figcaption className="a-grey-2">
+          <figcaption className="c-grey-2">
             Lantern.js being used to display a screenshot of one of my
             portfolio&nbsp;pieces
           </figcaption>
@@ -397,7 +397,7 @@ const CSLeanSpace = () => {
           <video autoPlay controls loop muted>
             <source src={VidWork} />
           </video>
-          <figcaption className="a-grey-2">
+          <figcaption className="c-grey-2">
             A demonstration of the work page’s filter&nbsp;feature
           </figcaption>
         </figure>
@@ -440,7 +440,7 @@ const CSLeanSpace = () => {
               to give a subtly different look to the&nbsp;text.
             </p>
             <p>
-              For the monospaced text I chose{' '}
+              For the monospaced text, I chose{' '}
               <a
                 href="https://fonts.google.com/specimen/Inconsolata"
                 rel="noreferrer"
@@ -500,7 +500,7 @@ const CSLeanSpace = () => {
           <video autoPlay controls loop muted>
             <source src={VidLanding} />
           </video>
-          <figcaption className="a-grey-2">
+          <figcaption className="c-grey-2">
             Initial load animation shown on the landing&nbsp;page
           </figcaption>
         </figure>

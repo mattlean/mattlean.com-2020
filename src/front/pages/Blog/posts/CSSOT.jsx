@@ -129,7 +129,7 @@ const CSSOT = () => {
             streamline conversions into&nbsp;sales.
           </p>
           <p>
-            The original tool was in need of a user experience overhaul and used{' '}
+            The original tool needed a user experience overhaul and used{' '}
             <a
               href="https://en.wikipedia.org/wiki/Adobe_Flash"
               rel="noreferrer"
@@ -241,7 +241,7 @@ const CSSOT = () => {
               >
                 Google Charts
               </a>{' '}
-              because it supported area charts and clear&nbsp;documentation.
+              because it supported area charts and had clear&nbsp;documentation.
             </p>
             <h3 className="h-7 sm:h-8 mb-1.5">
               Custom Layout vs. Bootstrap Grid
@@ -424,7 +424,7 @@ const CSSOT = () => {
         </h2>
         <p className="right-half-priority mb-4 c-grey-1">
           In 2019, the company asked me to perform a complete visual redesign
-          alongside a few new features. During this design process iteration, we
+          alongside a few new features. During this design iteration, we
           collaborated with{' '}
           <a
             href="https://www.columnfivemedia.com"
@@ -450,7 +450,7 @@ const CSSOT = () => {
             src={SSCharts}
             alt="Main screen for the 2020 version of the spectral overlay tool"
           />
-          <figcaption className="a-grey-2">
+          <figcaption className="c-grey-2">
             Main screen for the latest version of spectral overlay&nbsp;tool
           </figcaption>
         </figure>

@@ -244,7 +244,7 @@ const CSML2020 = () => {
               target="_blank"
               className="a-grey-1"
             >
-              explanation on the potential roadblocks
+              explanation of the potential roadblocks
             </a>{' '}
             for hook newbies like myself.
           </p>
@@ -596,7 +596,7 @@ hydrate(
             scratch, it utilizes a container that already has the server-side
             rendered HTML of the React application. It is important that the
             rendered content from the server is identical to the client,
-            otherwise problems can&nbsp;occur.
+            otherwise, problems can&nbsp;occur.
           </p>
           <h3 className="h-7 sm:h-8 mb-1.5">
             Rendering & Serving the Frontend&nbsp;from&nbsp;the&nbsp;Backend
@@ -819,13 +819,14 @@ app.listen(port, () => {
           </p>
           <h3 className="h-7 sm:h-8 mb-1.5">Performance Improvements</h3>
           <p className="c-grey-1">
-            Currently there are three performance improvements on the project
+            Currently, there are three performance improvements on the project
             that were not covered during the overview for the sake of keeping
             things simple.
           </p>
           <p className="c-grey-1">
             The first involves reducing the frontend build’s size through
-            various techniques. webpack automates removal of unused code through{' '}
+            various techniques. webpack automates the removal of unused code
+            through{' '}
             <a
               href="https://webpack.js.org/guides/tree-shaking"
               rel="noreferrer"
@@ -870,8 +871,8 @@ app.listen(port, () => {
             >
               imagemin
             </a>{' '}
-            to reach a balance between acceptable visual quality and reasonable
-            size. This is then all compressed with{' '}
+            to reach a balance between acceptable visual quality and a
+            reasonable size. This is then all compressed with{' '}
             <a
               href="https://gzip.org"
               rel="noreferrer"
@@ -885,8 +886,8 @@ app.listen(port, () => {
           </p>
           <p className="c-grey-1">
             The second improvement splits the frontend JavaScript bundle into
-            two files: a main file which holds all of the application code and a
-            vendor file which holds all of the dependencies. By splitting them
+            two files: a main file that holds all of the application code and a
+            vendor file that holds all of the dependencies. By splitting them
             up, we can keep them separate in the cache so if one is updated, it
             alone is the only file that becomes invalidated. For example, if the
             application is changed but the dependencies were never upgraded, the
@@ -897,11 +898,11 @@ app.listen(port, () => {
             from the&nbsp;cache.
           </p>
           <p className="c-grey-1">
-            The third is use of an in-memory cache that stores server-side
+            The third is the use of an in-memory cache that stores server-side
             rendered HTML. Because <code>renderToString</code> is synchronous
             and single-threaded, many calls to it can negatively impact
             performance. By caching all of the renders, we can effectively
-            reduce the amount of calls to the function to one per page. For a
+            reduce the number of calls to the function to one per page. For a
             small site like this one, the performance improvements of this
             aren’t really perceivable, but because there are only 25 pages on
             the site at the time of this writing, the cache implementation would
@@ -1005,9 +1006,9 @@ app.listen(port, () => {
             ground for&nbsp;them.
           </p>
           <p className="c-grey-1">
-            Currently all of the components are in React, but eventually I would
-            like to support other frameworks as well. The design system is far
-            from done, but you can still check out the project’s development
+            Currently, all of the components are in React, but eventually, I
+            would like to support other frameworks as well. The design system is
+            far from done, but you can still check out the project’s development
             on&nbsp;
             <a
               href="https://github.com/mattlean/eswiss"
@@ -1331,7 +1332,7 @@ app.listen(port, () => {
               CI/CD pipeline
             </a>{' '}
             that runs all the tests when a commit is pushed to the repository.
-            Initially this was done with{' '}
+            Initially, this was done with{' '}
             <a
               href="https://circleci.com"
               rel="noreferrer"
@@ -1398,7 +1399,7 @@ app.listen(port, () => {
           </p>
           <p className="c-grey-1">
             For this project, I was looking into the utility-first paradigm,
-            which has seen a significant growth in popularity due to the rise of{' '}
+            which has seen significant growth in popularity due to the rise of{' '}
             <a
               href="https://tailwindcss.com"
               rel="noreferrer"
@@ -1624,7 +1625,7 @@ app.listen(port, () => {
               WYSIWYG
             </a>
             . When you’re writing content, generally the template code is stable
-            and you won’t be doing many changes to it, if at all. Instead you
+            and you won’t be doing many changes to it, if at all. Instead, you
             just want to focus on the content, and you don’t need all of the
             complexity the regular paradigm offers. You really only need to make
             minor adjustments like setting a particular color, font size, or
@@ -1633,7 +1634,7 @@ app.listen(port, () => {
           <p className="mb-4 c-grey-1">
             Overall I think this coding style isn’t bad, although it’s obvious
             it’s not perfect. I’m still looking to find more improvements for
-            eswiss as development of it&nbsp;continues.
+            eswiss as the development of it&nbsp;continues.
           </p>
           <h3 className="h-7 sm:h-8 mb-1.5">Generating Utility Classes</h3>
           <p className="c-grey-1">
@@ -1653,8 +1654,8 @@ app.listen(port, () => {
           </p>
           <p className="c-grey-1">
             Manually writing utility classes one-by-one is too time-consuming
-            and error-prone. Luckily the language allows generation of utility
-            classes easily with{' '}
+            and error-prone. Luckily the language allows the generation of
+            utility classes easily with{' '}
             <a
               href="https://sass-lang.com/documentation/values/maps"
               rel="noreferrer"
@@ -1841,8 +1842,8 @@ for (const utilLabel in utilDataMap) {
             Custom Properties vs. Sass&nbsp;Variables
           </h3>
           <p className="c-grey-1">
-            Sass variables were actually what originally piqued my interest
-            about the language, so when I first heard about{' '}
+            Sass variables were actually what originally piqued my interest in
+            the language, so when I first heard about{' '}
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/CSS/--*"
               rel="noreferrer"
@@ -2056,7 +2057,7 @@ a {
         <figure className="ss ss-lg mb-4">
           <img src={SSGridnik} alt="Screenshot of Gridnik open in Adobe XD" />
           <figcaption className="c-grey-2">
-            Gridnik being used to draw a gridlines and track fills over a
+            Gridnik being used to draw gridlines and track fills over a
             green&nbsp;rectangle
           </figcaption>
         </figure>
@@ -2110,7 +2111,7 @@ a {
             >
               CSS grid
             </a>
-            . Unfortunately the implementation process was difficult for me due
+            . Unfortunately, the implementation process was difficult for me due
             to my previous experience and expectations with&nbsp;grids.
           </p>
           <p className="c-grey-1">
@@ -2143,7 +2144,7 @@ a {
             challenges today. With this practice, field widths are determined by
             the ideal balance between type size and line length. Line height is
             used to determine the gutter size. Cap height, baseline, and line
-            height is used to align text and media of adjacent fields. Proper
+            height are used to align text and media of adjacent fields. Proper
             margin proportions are set around the grid to produce tension
             between the edge of the screen and the page content. Following all
             of this in the digital space still produces a grid with fantastic
@@ -2170,7 +2171,7 @@ a {
             grid will handle a set amount of content with a set amount of
             content type variations. However, the expectations for the content
             have heightened drastically through the complexity of modern-day
-            applications, so while some Swiss designers would’ve seen use of{' '}
+            applications, so while some Swiss designers would’ve seen the use of{' '}
             <code>auto</code> cells as poor and lazy design, today{' '}
             <code>auto</code> cells are absolutely necessary to handle the
             incredible lengths and diversity in&nbsp;content.
@@ -2197,8 +2198,8 @@ a {
             it&nbsp;legible.
           </p>
           <p className="c-grey-1 mb-1.5">
-            There are a few CSS grid can handle this, but one common pattern I
-            ended up using involved use of the{' '}
+            There are a few ways CSS grid can handle this, but one common
+            pattern I ended up using involved use of the{' '}
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/CSS/repeat"
               rel="noreferrer"
@@ -2229,7 +2230,7 @@ a {
             each column width greater than or equal to 200 pixels or less than
             or equal to 1 <code>fr</code> unit. 1 <code>fr</code> unit is the
             equivalent to one subdivision of the total space of the grid, so for
-            example if there are 6 columns of the grid, <code>1fr</code> would
+            example, if there are 6 columns of the grid, <code>1fr</code> would
             be the equivalent of ⅙ of the grid, <code>3fr</code> would be ½ of
             the grid, etc. This allows the grid to adjust the column widths and
             column amount as the screen resizes. Of course, the same can be done
@@ -2268,9 +2269,9 @@ a {
             >
               accessibility (a11y)
             </a>{' '}
-            before, and I wish I had done it earlier. Researching about the
-            different options, experiences, and preferences people have when
-            navigating the web has completely changed the way I think about
+            before, and I wish I had done it earlier. Researching the different
+            options, experiences, and preferences people have when navigating
+            the web has completely changed the way I think about
             user&nbsp;experience.
           </p>
           <p className="c-grey-1">

@@ -131,9 +131,9 @@ const About = () => {
           </p>
           <p>
             In high school, my sister started her own neighborhood business as a
-            dog walker and inspired me try something similar. I ended up taking
-            my web development hobby to the next step and established my own
-            business as a freelance web designer and developer where I built
+            dog walker and inspired me to try something similar. I ended up
+            taking my web development hobby to the next step and established my
+            own business as a freelance web designer and developer where I built
             websites for small, local businesses for several&nbsp;years.
           </p>
           <p>
@@ -204,7 +204,7 @@ const About = () => {
             }
             className="txt-8 sm:txt-6 c-grey-1"
           >
-            Thanks for reading my story.
+            Thanks for reading my story,
             <br />
             I&apos;d love to hear yours!
             <br />
