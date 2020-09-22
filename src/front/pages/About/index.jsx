@@ -385,10 +385,14 @@ const About = () => {
                 <li>Photoshop</li>
                 <li>Illustrator</li>
                 <li>InDesign</li>
+                <li>Lightroom</li>
                 <li>Premiere</li>
                 <li>After Effects</li>
                 <li>Audition</li>
+                <li>Audacity</li>
                 <li>Blender</li>
+                <li>Unity</li>
+                <li>Vegas Pro</li>
                 <li>Flash</li>
               </ul>
             </section>

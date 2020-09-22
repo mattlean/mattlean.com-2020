@@ -287,7 +287,7 @@ const Owl = () => {
                   target="_blank"
                   className="a-grey-1"
                 >
-                  Datastore
+                  Google Cloud Datastore
                 </a>
               </li>
               <li>
