@@ -1,5 +1,5 @@
-import { getRouteData } from './data/route'
-import { TITLE_SUFFIX } from './data/route/const'
+import { getRouteData } from '../data/route'
+import { TITLE_SUFFIX } from '../data/route/const'
 
 /**
  * Generate path array

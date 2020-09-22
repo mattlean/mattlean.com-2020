@@ -1,5 +1,6 @@
 import { CANON_ROOT } from './const'
 import { POSTS } from '../post'
+import { removeNBSP } from '../../util/str'
 
 export const ROUTE_PREFIX = '/blog/'
 
@@ -10,7 +11,7 @@ const ROUTES = {}
 
 ROUTES[`${ROUTE_PREFIX}cs-lean-space`] = {
   title: `${CS_PREFIX}Lean Space${BLOG_SUFFIX}`,
-  desc: POSTS['cs-lean-space'].subtitle,
+  desc: removeNBSP(POSTS['cs-lean-space'].subtitle),
   path: `${ROUTE_PREFIX}cs-lean-space`,
   canon: `${CANON_ROOT}${ROUTE_PREFIX}cs-lean-space`,
   og_img: 'http://mattlean.com/media/lean-space-social.png',
@@ -105,7 +106,7 @@ ROUTES[`${ROUTE_PREFIX}cs-lean-space`] = {
 
 ROUTES[`${ROUTE_PREFIX}cs-ml2020`] = {
   title: `${CS_PREFIX}MattLean.com${BLOG_SUFFIX}`,
-  desc: POSTS['cs-ml2020'].subtitle,
+  desc: removeNBSP(POSTS['cs-ml2020'].subtitle),
   path: `${ROUTE_PREFIX}cs-ml2020`,
   canon: `${CANON_ROOT}${ROUTE_PREFIX}cs-ml2020`,
   og_img: 'http://mattlean.com/media/social.png',
@@ -201,7 +202,7 @@ ROUTES[`${ROUTE_PREFIX}cs-ml2020`] = {
 
 ROUTES[`${ROUTE_PREFIX}cs-sot`] = {
   title: `${CS_PREFIX}Spectral Overlay Tool${BLOG_SUFFIX}`,
-  desc: POSTS['cs-sot'].subtitle,
+  desc: removeNBSP(POSTS['cs-sot'].subtitle),
   path: `${ROUTE_PREFIX}cs-sot`,
   canon: `${CANON_ROOT}${ROUTE_PREFIX}cs-sot`,
   og_img: 'http://mattlean.com/media/sot-social.png',
@@ -298,7 +299,7 @@ ROUTES[`${ROUTE_PREFIX}cs-sot`] = {
 
 ROUTES[`${ROUTE_PREFIX}hello-world`] = {
   title: `Hello world!${BLOG_SUFFIX}`,
-  desc: POSTS['hello-world'].subtitle,
+  desc: removeNBSP(POSTS['hello-world'].subtitle),
   path: `${ROUTE_PREFIX}hello-world`,
   canon: `${CANON_ROOT}${ROUTE_PREFIX}hello-world`,
   og_img: 'http://mattlean.com/media/social.png',
