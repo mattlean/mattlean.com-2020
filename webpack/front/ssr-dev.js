@@ -1,5 +1,6 @@
 const merge = require('webpack-merge')
-const { buildStyles, loadMedia } = require('../parts')
+const { buildStyles } = require('../parts/style')
+const { emitMedia } = require('../parts/media')
 
 module.exports = merge([
   buildStyles({
@@ -17,8 +18,10 @@ module.exports = merge([
     },
   }),
 
-  loadMedia(undefined, undefined, {
-    name: '[name].[ext]',
-    outputPath: 'media',
+  emitMedia({
+    options: {
+      name: '[name].[ext]',
+      outputPath: 'media',
+    },
   }),
 ])

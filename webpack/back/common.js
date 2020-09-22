@@ -1,13 +1,9 @@
 const merge = require('webpack-merge')
 const { BACK } = require('../../PATHS')
-const {
-  cleanBuild,
-  ignoreNodeModules,
-  loadHTMLAsString,
-  loadMedia,
-  loadSVGs,
-  setFreeVariable,
-} = require('../parts')
+const { cleanOutput, ignoreNodeModules, setFreeVariable } = require('../parts')
+const { emitMedia } = require('../parts/media')
+const { inlineReactSVGs } = require('../parts/react')
+const { loadHTMLAsString } = require('../parts/html')
 
 module.exports = merge([
   {
@@ -29,18 +25,20 @@ module.exports = merge([
     target: 'node',
   },
 
-  cleanBuild(),
+  cleanOutput(),
+
+  emitMedia({
+    options: {
+      name: '[name].[ext]',
+      outputPath: 'media',
+    },
+  }),
 
   ignoreNodeModules({ allowlist: [/^eswiss/] }),
 
-  loadHTMLAsString({ attributes: false }),
+  inlineReactSVGs(),
 
-  loadMedia(undefined, undefined, {
-    name: '[name].[ext]',
-    outputPath: 'media',
-  }),
-
-  loadSVGs(),
+  loadHTMLAsString({ options: { attributes: false } }),
 
   setFreeVariable('__IS_SERVER__', true),
 ])

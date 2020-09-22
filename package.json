@@ -78,7 +78,7 @@
     "eslint-plugin-react-hooks": "^4.0.4",
     "nodemon": "^2.0.4",
     "prettier": "^2.0.5",
-    "stylelint": "^13.6.1",
+    "stylelint": "^13.7.1",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-order": "^4.1.0",

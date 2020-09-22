@@ -1,17 +1,17 @@
 const merge = require('webpack-merge')
 // const { sync } = require('glob')
+const { buildStyles } = require('../parts/style')
 const {
-  buildStyles,
   compileJS,
   genAssetList,
   genSourceMaps,
-  loadMedia,
   minifyJS,
   // purgeCSS,
   setFreeVariable,
   setMode,
   splitVendor,
 } = require('../parts')
+const { emitMedia } = require('../parts/media')
 const { COMMON, FRONT, NODE_MODULES } = require('../../PATHS')
 
 // eslint-disable-next-line no-console
@@ -29,6 +29,21 @@ let productionConfig = merge([
   },
 
   setMode('production'),
+
+  buildStyles({
+    cssLoaderOptions: { sourceMap: true },
+    miniCssExtractPluginOptions: { filename: 'style.[contenthash:4].css' },
+    postCSSLoaderOptions: {
+      config: { path: 'webpack/front/prod' },
+      sourceMap: true,
+    },
+    sassLoaderOptions: {
+      sassOptions: {
+        includePaths: ['node_modules/eswiss/dist'],
+      },
+      sourceMap: true,
+    },
+  }),
 
   compileJS({
     include: [FRONT.SRC, COMMON, `${NODE_MODULES}/eswiss`],
@@ -53,31 +68,18 @@ let productionConfig = merge([
     },
   }),
 
-  buildStyles({
-    cssLoaderOptions: { sourceMap: true },
-    miniCssExtractPluginOptions: { filename: 'style.[contenthash:4].css' },
-    postCSSLoaderOptions: {
-      config: { path: 'webpack/front/prod' },
-      sourceMap: true,
-    },
-    sassLoaderOptions: {
-      sassOptions: {
-        includePaths: ['node_modules/eswiss/dist'],
-      },
-      sourceMap: true,
-    },
-  }),
-
   genAssetList({ format: 'object', key: 'name' }),
 
   genSourceMaps('source-map'),
 
-  loadMedia(undefined, undefined, {
-    name: '[name].[ext]',
-    outputPath: 'media',
+  emitMedia({
+    options: {
+      name: '[name].[ext]',
+      outputPath: 'media',
+    },
   }),
 
-  minifyJS(),
+  minifyJS({ sourceMap: true }),
 
   // purgeCSS({
   //   paths: sync(`${FRONT.SRC}/**/*`, { nodir: true }),

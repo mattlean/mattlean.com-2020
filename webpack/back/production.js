@@ -29,7 +29,7 @@ module.exports = merge([
 
   genSourceMaps('source-map'),
 
-  minifyJS(),
+  minifyJS({ sourceMap: true }),
 
   setFreeVariable('__IS_DEVELOPMENT__', false),
 ])

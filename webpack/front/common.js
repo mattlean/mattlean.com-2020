@@ -1,5 +1,6 @@
 const merge = require('webpack-merge')
-const { cleanBuild, copyFiles, loadSVGs, setFreeVariable } = require('../parts')
+const { cleanOutput, copyFiles, setFreeVariable } = require('../parts')
+const { inlineReactSVGs } = require('../parts/react')
 
 module.exports = merge([
   {
@@ -13,7 +14,7 @@ module.exports = merge([
     },
   },
 
-  cleanBuild(),
+  cleanOutput(),
 
   copyFiles([
     { from: 'src/front/assets/favicon.ico' },
@@ -33,7 +34,7 @@ module.exports = merge([
     },
   ]),
 
-  loadSVGs(),
+  inlineReactSVGs(),
 
   setFreeVariable('__IS_SERVER__', false),
 ])
