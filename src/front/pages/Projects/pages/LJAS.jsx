@@ -105,8 +105,8 @@ const LJAS = () => {
         <section className="c-grey-1">
           <p>
             <strong>Lean JavaScript Application Starter</strong> allows
-            developers to skip boilerplate configuration to kick-start their
-            next JavaScript&nbsp;project.
+            developers to skip boilerplate configuration to kickoff their next
+            JavaScript&nbsp;project.
           </p>
           <p>
             The starter handles three different target environments:{' '}

@@ -110,7 +110,7 @@ const PROJECTS = {
     short:
       'Starter JavaScript project to kickoff development for your next web, Node.js, or native desktop&nbsp;app.',
     long:
-      'A starter project to kickoff development for your next web, Node.js, or native desktop&nbsp;application.',
+      'A starter JavaScript project to kickoff development for your next web, Node.js, or native desktop&nbsp;application.',
     tags: ['tooling', 'backend', 'desktop-app', 'frontend', 'web-app'],
   },
   ml2020: {
