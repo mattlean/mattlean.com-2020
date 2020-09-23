@@ -307,6 +307,7 @@ const About = () => {
                 <li>React Router</li>
                 <li>Redux</li>
                 <li>Fetch, Axios, XMLHttpRequest</li>
+                <li>Promise</li>
                 <li>CSS Grid, Flexbox, Multicol, Float</li>
                 <li>Media Queries</li>
                 <li>Framer Motion</li>
@@ -317,13 +318,16 @@ const About = () => {
                 <li>Canvas</li>
                 <li>Web Storage</li>
                 <li>Intersection Observer</li>
+                <li>Moment.js</li>
                 <li>Material Design</li>
+                <li>Materialize</li>
                 <li>Google Maps API</li>
                 <li>Mapbox & Leaflet</li>
                 <li>react-intl</li>
                 <li>Open Graph Protocol</li>
                 <li>Bootstrap</li>
                 <li>jQuery</li>
+                <li>RequireJS</li>
                 <li>A11y</li>
                 <li>Design Systems</li>
                 <li>SEO</li>
@@ -338,6 +342,9 @@ const About = () => {
                 <li>Express</li>
                 <li>webapp2</li>
                 <li>Memcached</li>
+                <li>node-postgres, pg-promise</li>
+                <li>Mongoose</li>
+                <li>Google NDB/DB Client Library</li>
                 <li>bcrypt</li>
                 <li>web2py</li>
                 <li>REST</li>
