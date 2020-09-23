@@ -342,9 +342,10 @@ const About = () => {
                 <li>Express</li>
                 <li>webapp2</li>
                 <li>Memcached</li>
-                <li>node-postgres, pg-promise</li>
+                <li>node-postgres</li>
+                <li>pg-promise</li>
                 <li>Mongoose</li>
-                <li>Google NDB/DB Client Library</li>
+                <li>Google NDB/DB Client&nbsp;Library</li>
                 <li>bcrypt</li>
                 <li>web2py</li>
                 <li>REST</li>
