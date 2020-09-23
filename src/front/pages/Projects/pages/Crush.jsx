@@ -10,6 +10,7 @@ import {
 } from '../../../components/Blind/initAnimUtil'
 import { usePageLoadEffect } from '../../../util'
 import SSBoard from '../../../assets/projects/crush/board.jpg'
+import SSBooth from '../../../assets/projects/crush/booth.jpg'
 import SSBrowser from '../../../assets/projects/crush/browser.jpg'
 import SSStart from '../../../assets/projects/crush/start.jpg'
 
@@ -28,7 +29,7 @@ const Crush = () => {
     initAnimComplete,
     observerData,
     runInitAnim,
-  } = useInitAnim(8)
+  } = useInitAnim(9)
 
   // Setup effect which is only run once
   useEffect(() => {
@@ -36,7 +37,7 @@ const Crush = () => {
     if (srStartRef.current) srStartRef.current.focus()
 
     const observers = setupBlindObservers(
-      [0.5, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1],
+      [0.5, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1],
       observerData,
       blindVisibleStates
     )
@@ -179,7 +180,7 @@ const Crush = () => {
             ? blindVisibleStates[5].isVisible
             : blindStates[5].play
         }
-        className="ss ss-lg project-details-gap"
+        className="ss ss-lg"
       >
         <img src={SSBrowser} alt="qPCR Crush on qPCR Design Lab" />
         <figcaption className="c-grey-2">
@@ -189,28 +190,50 @@ const Crush = () => {
       </BlindFrame>
       <BlindFrame
         ref={observerData[6].ref}
-        nodeType="h3"
+        nodeType="figure"
         delay={blindStates[6].delay}
+        duration={0.2}
         observer={observerData[6].observer}
         play={
           initAnimComplete
             ? blindVisibleStates[6].isVisible
             : blindStates[6].play
         }
-        className="project-details-header"
+        className="ss ss-lg project-details-gap"
       >
-        Project Details
+        <img
+          src={SSBooth}
+          alt="qPCR Crush being played on iPads at a convention"
+        />
+        <figcaption className="c-grey-2">
+          Specialized iPad version of qPCR Crush running at a
+          convention&nbsp;booth
+        </figcaption>
       </BlindFrame>
       <BlindFrame
         ref={observerData[7].ref}
-        nodeType="section"
-        className="subgrid-project-details grid mb-0 c-grey-1"
+        nodeType="h3"
         delay={blindStates[7].delay}
         observer={observerData[7].observer}
         play={
           initAnimComplete
             ? blindVisibleStates[7].isVisible
             : blindStates[7].play
+        }
+        className="project-details-header"
+      >
+        Project Details
+      </BlindFrame>
+      <BlindFrame
+        ref={observerData[8].ref}
+        nodeType="section"
+        className="subgrid-project-details grid mb-0 c-grey-1"
+        delay={blindStates[8].delay}
+        observer={observerData[8].observer}
+        play={
+          initAnimComplete
+            ? blindVisibleStates[8].isVisible
+            : blindStates[8].play
         }
       >
         <section>
