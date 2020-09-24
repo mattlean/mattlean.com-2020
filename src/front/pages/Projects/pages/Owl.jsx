@@ -292,6 +292,16 @@ const Owl = () => {
               </li>
               <li>
                 <a
+                  href="https://cloud.google.com/appengine/docs/standard/python/datastore/api-overview"
+                  rel="noreferrer"
+                  target="_blank"
+                  className="a-grey-1"
+                >
+                  Google DB Client&nbsp;Library
+                </a>
+              </li>
+              <li>
+                <a
                   href="https://palletsprojects.com/p/jinja/"
                   rel="noreferrer"
                   target="_blank"
