@@ -214,6 +214,33 @@ const Eswiss = () => {
             </ul>
           </section>
           <section>
+            <h4>Peer Dependencies</h4>
+            <ul>
+              <li>
+                <a
+                  href="https://reactjs.org"
+                  rel="noreferrer"
+                  target="_blank"
+                  className="a-grey-1"
+                >
+                  React
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://sass-lang.com"
+                  rel="noreferrer"
+                  target="_blank"
+                  className="a-grey-1"
+                >
+                  Sass
+                </a>
+              </li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <section>
             <h4>Tooling</h4>
             <ul>
               <li>
@@ -264,43 +291,6 @@ const Eswiss = () => {
                   className="a-grey-1"
                 >
                   Gulp
-                </a>
-              </li>
-            </ul>
-          </section>
-        </section>
-        <section>
-          <section>
-            <h4>Peer Dependencies</h4>
-            <ul>
-              <li>
-                <a
-                  href="https://reactjs.org"
-                  rel="noreferrer"
-                  target="_blank"
-                  className="a-grey-1"
-                >
-                  React
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://reactrouter.com"
-                  rel="noreferrer"
-                  target="_blank"
-                  className="a-grey-1"
-                >
-                  React Router
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://sass-lang.com"
-                  rel="noreferrer"
-                  target="_blank"
-                  className="a-grey-1"
-                >
-                  Sass
                 </a>
               </li>
             </ul>

@@ -222,6 +222,16 @@ const Adam = () => {
               </li>
               <li>
                 <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame"
+                  rel="noreferrer"
+                  target="_blank"
+                  className="a-grey-1 txtw-roman"
+                >
+                  requestAnimationFrame
+                </a>
+              </li>
+              <li>
+                <a
                   href="https://developer.mozilla.org/en-US/docs/Web/API/Touch_events"
                   rel="noreferrer"
                   target="_blank"

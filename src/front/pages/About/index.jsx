@@ -282,11 +282,14 @@ const About = () => {
                 <li>Python</li>
                 <li>Java</li>
                 <li>Sass</li>
+                <li>Less</li>
                 <li>CSS</li>
                 <li>HTML</li>
                 <li>SQL</li>
                 <li>PHP</li>
+                <li>C#</li>
                 <li>C, C++</li>
+                <li>Ruby</li>
               </ul>
             </section>
             <section>
@@ -296,8 +299,10 @@ const About = () => {
                 <li>SuperTest</li>
                 <li>Cypress</li>
                 <li>Chromatic</li>
-                <li>Enzyme, React Test Renderer</li>
-                <li>Mocha, Chai</li>
+                <li>Enzyme</li>
+                <li>React Test Renderer</li>
+                <li>Mocha</li>
+                <li>Chai</li>
               </ul>
             </section>
             <section className="frontend">
@@ -306,9 +311,14 @@ const About = () => {
                 <li>React</li>
                 <li>React Router</li>
                 <li>Redux</li>
-                <li>Fetch, Axios, XMLHttpRequest</li>
+                <li>Fetch</li>
+                <li>Axios</li>
+                <li>XMLHttpRequest</li>
                 <li>Promise</li>
-                <li>CSS Grid, Flexbox, Multicol, Float</li>
+                <li>CSS Grid</li>
+                <li>Flexbox</li>
+                <li>Multicol</li>
+                <li>Floats</li>
                 <li>Media Queries</li>
                 <li>Framer Motion</li>
                 <li>Anime.js</li>
@@ -324,16 +334,21 @@ const About = () => {
                 <li>Google Maps API</li>
                 <li>Mapbox & Leaflet</li>
                 <li>react-intl</li>
+                <li>gtag.js</li>
+                <li>Segment</li>
                 <li>Open Graph Protocol</li>
                 <li>Bootstrap</li>
                 <li>jQuery</li>
                 <li>RequireJS</li>
+                <li>Modernizr</li>
+                <li>Webshim</li>
                 <li>A11y</li>
                 <li>Design Systems</li>
                 <li>SEO</li>
                 <li>BEM</li>
                 <li>Backbone.js</li>
                 <li>Knockout</li>
+                <li>AngularJS</li>
               </ul>
             </section>
             <section>
@@ -346,8 +361,15 @@ const About = () => {
                 <li>pg-promise</li>
                 <li>Mongoose</li>
                 <li>Google NDB/DB Client&nbsp;Library</li>
+                <li>Google Blobstore API</li>
                 <li>bcrypt</li>
+                <li>Jinja</li>
+                <li>Pug</li>
+                <li>EJS</li>
                 <li>web2py</li>
+                <li>Django</li>
+                <li>Flask</li>
+                <li>Ruby on Rails</li>
                 <li>REST</li>
                 <li>Cookies</li>
                 <li>HTTP</li>
@@ -368,8 +390,10 @@ const About = () => {
               <ul>
                 <li>AWS Elastic Beanstalk</li>
                 <li>Amazon S3</li>
+                <li>Amazon CloudFront</li>
                 <li>Heroku</li>
                 <li>Google App Engine</li>
+                <li>Firebase</li>
                 <li>Apache</li>
               </ul>
             </section>

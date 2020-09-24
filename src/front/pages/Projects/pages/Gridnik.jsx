@@ -244,6 +244,19 @@ const Gridnik = () => {
               <li>CSS</li>
             </ul>
           </section>
+          <section>
+            <h4>Dependencies</h4>
+            <ul>
+              <a
+                href="https://reactjs.org"
+                rel="noreferrer"
+                target="_blank"
+                className="a-grey-1"
+              >
+                React
+              </a>
+            </ul>
+          </section>
         </section>
         <section>
           <section>
