@@ -334,7 +334,7 @@ const About = () => {
                 <li>Google Maps API</li>
                 <li>Mapbox & Leaflet</li>
                 <li>react-intl</li>
-                <li>gtag.js</li>
+                <li>Google Analytics</li>
                 <li>Segment</li>
                 <li>Open Graph Protocol</li>
                 <li>Bootstrap</li>
@@ -366,6 +366,7 @@ const About = () => {
                 <li>Jinja</li>
                 <li>Pug</li>
                 <li>EJS</li>
+                <li>Node.js</li>
                 <li>web2py</li>
                 <li>Django</li>
                 <li>Flask</li>
@@ -404,6 +405,7 @@ const About = () => {
                 <li>GitHub</li>
                 <li>Gulp</li>
                 <li>Git</li>
+                <li>Electron</li>
                 <li>Flow</li>
                 <li>CircleCI</li>
                 <li>Grunt</li>
