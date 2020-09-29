@@ -32,6 +32,10 @@ module.exports = merge([
       from: 'src/front/assets/projects/crush/crush-social.png',
       to: 'media',
     },
+    {
+      from: 'src/front/assets/udacity-web-development-cs253.pdf',
+      to: 'media',
+    },
   ]),
 
   inlineReactSVGs(),
