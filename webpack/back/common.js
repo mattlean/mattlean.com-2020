@@ -1,9 +1,13 @@
 const merge = require('webpack-merge')
+const {
+  cleanOutput,
+  ignoreNodeModules,
+  setFreeVariable,
+} = require('ljas-webpack')
+const { emitMedia } = require('ljas-webpack/media')
+const { inlineReactSVGs } = require('ljas-webpack/react')
+const { loadHTMLAsString } = require('ljas-webpack/html')
 const { BACK } = require('../../PATHS')
-const { cleanOutput, ignoreNodeModules, setFreeVariable } = require('../parts')
-const { emitMedia } = require('../parts/media')
-const { inlineReactSVGs } = require('../parts/react')
-const { loadHTMLAsString } = require('../parts/html')
 
 module.exports = merge([
   {

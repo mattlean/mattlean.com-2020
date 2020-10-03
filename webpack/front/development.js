@@ -5,7 +5,7 @@ const {
   genSourceMaps,
   setFreeVariable,
   setMode,
-} = require('../parts')
+} = require('ljas-webpack')
 const { COMMON, FRONT, NODE_MODULES } = require('../../PATHS')
 
 // eslint-disable-next-line no-console

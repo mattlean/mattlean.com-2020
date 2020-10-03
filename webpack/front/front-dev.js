@@ -1,9 +1,9 @@
 const merge = require('webpack-merge')
+const { injectStyles } = require('ljas-webpack/style')
+const { inlineMedia } = require('ljas-webpack/media')
+const { setupDevServer } = require('ljas-webpack')
+const { setupHTML } = require('ljas-webpack/html')
 const { FRONT } = require('../../PATHS')
-const { injectStyles } = require('../parts/style')
-const { inlineMedia } = require('../parts/media')
-const { setupDevServer } = require('../parts')
-const { setupHTML } = require('../parts/html')
 
 const {
   keywords,
@@ -21,7 +21,9 @@ module.exports = merge([
   injectStyles({
     cssLoaderOptions: { sourceMap: true },
     postCSSLoaderOptions: {
-      config: { path: 'webpack/front/dev' },
+      postcssOptions: {
+        plugins: [require('autoprefixer')],
+      },
       sourceMap: true,
     },
     sassLoaderOptions: {

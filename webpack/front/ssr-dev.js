@@ -1,13 +1,15 @@
 const merge = require('webpack-merge')
-const { buildStyles } = require('../parts/style')
-const { emitMedia } = require('../parts/media')
+const { buildStyles } = require('ljas-webpack/style')
+const { emitMedia } = require('ljas-webpack/media')
 
 module.exports = merge([
   buildStyles({
     cssLoaderOptions: { sourceMap: true },
     miniCssExtractPluginOptions: { filename: 'style.css' },
     postCSSLoaderOptions: {
-      config: { path: 'webpack/front/dev' },
+      postcssOptions: {
+        plugins: [require('autoprefixer')],
+      },
       sourceMap: true,
     },
     sassLoaderOptions: {

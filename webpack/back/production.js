@@ -1,12 +1,12 @@
 const merge = require('webpack-merge')
-const { BACK, NODE_MODULES, SRC } = require('../../PATHS')
 const {
   compileJS,
   genSourceMaps,
   minifyJS,
   setFreeVariable,
   setMode,
-} = require('../parts')
+} = require('ljas-webpack')
+const { BACK, NODE_MODULES, SRC } = require('../../PATHS')
 
 // eslint-disable-next-line no-console
 console.log('🤖🎁 STARTING BACKEND PRODUCTION BUILD PROCESS 🎁🤖')

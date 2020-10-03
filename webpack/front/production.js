@@ -1,6 +1,5 @@
 const merge = require('webpack-merge')
-// const { sync } = require('glob')
-const { buildStyles } = require('../parts/style')
+const { buildStyles } = require('ljas-webpack/style')
 const {
   compileJS,
   genAssetList,
@@ -10,8 +9,9 @@ const {
   setFreeVariable,
   setMode,
   splitVendor,
-} = require('../parts')
-const { emitMedia } = require('../parts/media')
+} = require('ljas-webpack')
+const { emitMedia } = require('ljas-webpack/media')
+// const { sync } = require('glob')
 const { COMMON, FRONT, NODE_MODULES } = require('../../PATHS')
 
 // eslint-disable-next-line no-console
@@ -34,7 +34,12 @@ let productionConfig = merge([
     cssLoaderOptions: { sourceMap: true },
     miniCssExtractPluginOptions: { filename: 'style.[contenthash:4].css' },
     postCSSLoaderOptions: {
-      config: { path: 'webpack/front/prod' },
+      postcssOptions: {
+        plugins: [
+          require('autoprefixer'),
+          require('cssnano')({ preset: 'default' }),
+        ],
+      },
       sourceMap: true,
     },
     sassLoaderOptions: {

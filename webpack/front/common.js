@@ -1,6 +1,6 @@
 const merge = require('webpack-merge')
-const { cleanOutput, copyFiles, setFreeVariable } = require('../parts')
-const { inlineReactSVGs } = require('../parts/react')
+const { cleanOutput, copyFiles, setFreeVariable } = require('ljas-webpack')
+const { inlineReactSVGs } = require('ljas-webpack/react')
 
 module.exports = merge([
   {
