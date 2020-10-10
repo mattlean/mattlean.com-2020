@@ -124,7 +124,7 @@ const HelloWorld = () => {
           In the past 2 months I’ve been leisurely programming{' '}
           <a
             href="https://github.com/mattlean/xuehuacms"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             target="_blank"
             className="a-grey-1"
           >
@@ -144,7 +144,7 @@ const HelloWorld = () => {
           finishing up for the last contract work I have with{' '}
           <a
             href="https://biosearchtech.com"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             target="_blank"
             className="a-grey-1"
           >

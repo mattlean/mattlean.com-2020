@@ -112,7 +112,7 @@ const LJAS = () => {
             The starter handles three different target environments:{' '}
             <a
               href="https://nodejs.org"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -122,7 +122,7 @@ const LJAS = () => {
             is built with{' '}
             <a
               href="https://electronjs.org"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -131,7 +131,7 @@ const LJAS = () => {
             , and browsers. The build process is all handled through&nbsp;
             <a
               href="https://webpack.js.org"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -147,7 +147,7 @@ const LJAS = () => {
         </section>
         <a
           href="https://github.com/mattlean/lean-js-app-starter"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           target="_blank"
         >
           <Btn className="btn-github">
@@ -258,7 +258,7 @@ const LJAS = () => {
               <li>
                 <a
                   href="https://sass-lang.com"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -275,7 +275,7 @@ const LJAS = () => {
               <li>
                 <a
                   href="https://reactjs.org"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -285,7 +285,7 @@ const LJAS = () => {
               <li>
                 <a
                   href="https://redux.js.org"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -295,7 +295,7 @@ const LJAS = () => {
               <li>
                 <a
                   href="https://reactrouter.com"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -305,7 +305,7 @@ const LJAS = () => {
               <li>
                 <a
                   href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -320,7 +320,7 @@ const LJAS = () => {
               <li>
                 <a
                   href="https://electronjs.org"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -330,7 +330,7 @@ const LJAS = () => {
               <li>
                 <a
                   href="https://webpack.js.org"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -340,7 +340,7 @@ const LJAS = () => {
               <li>
                 <a
                   href="https://babeljs.io"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -350,7 +350,7 @@ const LJAS = () => {
               <li>
                 <a
                   href="https://flow.org"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -360,7 +360,7 @@ const LJAS = () => {
               <li>
                 <a
                   href="https://eslint.org"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -370,7 +370,7 @@ const LJAS = () => {
               <li>
                 <a
                   href="https://stylelint.io"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -385,7 +385,7 @@ const LJAS = () => {
               <li>
                 <a
                   href="https://gaearon.github.io/react-hot-loader"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -395,7 +395,7 @@ const LJAS = () => {
               <li>
                 <a
                   href="https://webpack.js.org/configuration/dev-server"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -416,7 +416,7 @@ const LJAS = () => {
               <li>
                 <a
                   href="https://nodejs.org"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -426,7 +426,7 @@ const LJAS = () => {
               <li>
                 <a
                   href="https://expressjs.com"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -436,7 +436,7 @@ const LJAS = () => {
               <li>
                 <a
                   href="https://mongodb.com"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -446,7 +446,7 @@ const LJAS = () => {
               <li>
                 <a
                   href="https://mongoosejs.com"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -461,7 +461,7 @@ const LJAS = () => {
               <li>
                 <a
                   href="https://jestjs.io"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -471,7 +471,7 @@ const LJAS = () => {
               <li>
                 <a
                   href="https://enzymejs.github.io/enzyme"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -481,7 +481,7 @@ const LJAS = () => {
               <li>
                 <a
                   href="https://reactjs.org/docs/test-renderer.html"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -491,7 +491,7 @@ const LJAS = () => {
               <li>
                 <a
                   href="https://github.com/visionmedia/supertest"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -506,7 +506,7 @@ const LJAS = () => {
               <li>
                 <a
                   href="https://github.com/mattlean/lean-js-app-starter/blob/master/LICENSE"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -521,7 +521,7 @@ const LJAS = () => {
         ref={observerData[8].ref}
         nodeType="a"
         href="https://github.com/mattlean/lean-js-app-starter"
-        rel="noreferrer"
+        rel="noopener noreferrer"
         target="_blank"
         delay={blindStates[8].delay}
         observer={observerData[8].observer}

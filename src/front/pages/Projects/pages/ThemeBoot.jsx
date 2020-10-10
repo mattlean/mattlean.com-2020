@@ -106,7 +106,7 @@ const ThemeBoot = () => {
             <strong>ThemeBoot</strong> is a{' '}
             <a
               href="https://getbootstrap.com"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -115,7 +115,7 @@ const ThemeBoot = () => {
             -powered website layout built for use as a{' '}
             <a
               href="https://wordpress.org"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -126,7 +126,7 @@ const ThemeBoot = () => {
         </section>
         <a
           href="https://github.com/mattlean/themeboot"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           target="_blank"
         >
           <Btn className="btn-github">
@@ -249,7 +249,7 @@ const ThemeBoot = () => {
               <li>
                 <a
                   href="https://php.net"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -273,7 +273,7 @@ const ThemeBoot = () => {
               <li>
                 <a
                   href="https://wordpress.org"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -283,7 +283,7 @@ const ThemeBoot = () => {
               <li>
                 <a
                   href="https://getbootstrap.com"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -293,7 +293,7 @@ const ThemeBoot = () => {
               <li>
                 <a
                   href="https://mysql.com"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -308,7 +308,7 @@ const ThemeBoot = () => {
               <li>
                 <a
                   href="https://github.com/mattlean/themeboot/blob/master/LICENSE"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -323,7 +323,7 @@ const ThemeBoot = () => {
         ref={observerData[9].ref}
         nodeType="a"
         href="https://github.com/mattlean/themeboot"
-        rel="noreferrer"
+        rel="noopener noreferrer"
         target="_blank"
         delay={blindStates[9].delay}
         observer={observerData[9].observer}

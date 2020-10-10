@@ -141,7 +141,7 @@ const About = () => {
             science at the{' '}
             <a
               href="https://ucsc.edu"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -171,7 +171,7 @@ const About = () => {
             on my{' '}
             <a
               href="https://github.com/mattlean"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -181,7 +181,7 @@ const About = () => {
             online or night classes at{' '}
             <a
               href="http://deanza.edu"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >

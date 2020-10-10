@@ -121,7 +121,7 @@ const ML2020 = () => {
         </Link>
         <a
           href="https://github.com/mattlean/mattlean.com-2020"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           target="_blank"
         >
           <Btn outline={true} className="btn-gh">
@@ -169,7 +169,7 @@ const ML2020 = () => {
               <li>
                 <a
                   href="https://sass-lang.com"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -186,7 +186,7 @@ const ML2020 = () => {
               <li>
                 <a
                   href="https://nodejs.org"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -196,7 +196,7 @@ const ML2020 = () => {
               <li>
                 <a
                   href="https://expressjs.com"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -206,7 +206,7 @@ const ML2020 = () => {
               <li>
                 <a
                   href="https://ejs.co"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -226,7 +226,7 @@ const ML2020 = () => {
               <li>
                 <a
                   href="https://webpack.js.org"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -254,7 +254,7 @@ const ML2020 = () => {
               <li>
                 <a
                   href="https://reactjs.org"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -264,7 +264,7 @@ const ML2020 = () => {
               <li>
                 <a
                   href="https://reactrouter.com"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -274,7 +274,7 @@ const ML2020 = () => {
               <li>
                 <a
                   href="https://framer.com/motion"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -284,7 +284,7 @@ const ML2020 = () => {
               <li>
                 <a
                   href="https://prismjs.com"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -299,7 +299,7 @@ const ML2020 = () => {
               <li>
                 <a
                   href="https://adobe.com/products/xd.html"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -309,7 +309,7 @@ const ML2020 = () => {
               <li>
                 <a
                   href="https://adobe.com/products/photoshop.html"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -319,7 +319,7 @@ const ML2020 = () => {
               <li>
                 <a
                   href="https://adobe.com/products/illustrator.html"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >

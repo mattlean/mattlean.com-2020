@@ -106,7 +106,7 @@ const Gridnik = () => {
             <strong>Gridnik</strong> is an{' '}
             <a
               href="https://adobe.com/products/xd.html"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -122,7 +122,7 @@ const Gridnik = () => {
             The project is named after{' '}
             <a
               href="https://en.wikipedia.org/wiki/Wim_Crouwel"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -131,7 +131,7 @@ const Gridnik = () => {
             , a Dutch graphic designer whose work is rooted in the{' '}
             <a
               href="https://en.wikipedia.org/wiki/International_Typographic_Style"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -149,7 +149,7 @@ const Gridnik = () => {
         </section>
         <a
           href="https://github.com/mattlean/gridnik"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           target="_blank"
         >
           <Btn className="btn-gh">
@@ -176,7 +176,7 @@ const Gridnik = () => {
           Inspired by{' '}
           <a
             href="https://sfmoma.org/artwork/2015.658"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             target="_blank"
             className="a-grey-2"
           >
@@ -249,7 +249,7 @@ const Gridnik = () => {
             <ul>
               <a
                 href="https://reactjs.org"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 target="_blank"
                 className="a-grey-1"
               >
@@ -265,7 +265,7 @@ const Gridnik = () => {
               <li>
                 <a
                   href="https://jestjs.io"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -275,7 +275,7 @@ const Gridnik = () => {
               <li>
                 <a
                   href="https://webpack.js.org"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -290,7 +290,7 @@ const Gridnik = () => {
         ref={observerData[7].ref}
         nodeType="a"
         href="https://github.com/mattlean/gridnik"
-        rel="noreferrer"
+        rel="noopener noreferrer"
         target="_blank"
         className="btn-option-a"
         delay={blindStates[7].delay}

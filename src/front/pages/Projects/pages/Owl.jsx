@@ -102,7 +102,7 @@ const Owl = () => {
             management application. It has an{' '}
             <a
               href="https://android.com"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -111,7 +111,7 @@ const Owl = () => {
             mobile app and web app that connects to a server in the{' '}
             <a
               href="https://cloud.google.com"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -130,7 +130,7 @@ const Owl = () => {
         </section>
         <a
           href="https://github.com/mattlean/project-owl"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           target="_blank"
         >
           <Btn className="btn-gh">
@@ -139,7 +139,7 @@ const Owl = () => {
         </a>
         <a
           href="https://github.com/mattlean/project-owl_android"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           target="_blank"
         >
           <Btn outline={true} className="btn-gh">
@@ -186,7 +186,7 @@ const Owl = () => {
               <li>
                 <a
                   href="https://java.com"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -196,7 +196,7 @@ const Owl = () => {
               <li>
                 <a
                   href="https://python.org"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -215,7 +215,7 @@ const Owl = () => {
               <li>
                 <a
                   href="https://android.com"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -230,7 +230,7 @@ const Owl = () => {
               <li>
                 <a
                   href="http://browserify.org"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -240,7 +240,7 @@ const Owl = () => {
               <li>
                 <a
                   href="https://github.com/andreypopp/reactify"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -250,7 +250,7 @@ const Owl = () => {
               <li>
                 <a
                   href="https://gulpjs.com"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -273,7 +273,7 @@ const Owl = () => {
               <li>
                 <a
                   href="https://github.com/GoogleCloudPlatform/webapp2"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -283,7 +283,7 @@ const Owl = () => {
               <li>
                 <a
                   href="https://cloud.google.com/datastore"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -293,7 +293,7 @@ const Owl = () => {
               <li>
                 <a
                   href="https://cloud.google.com/appengine/docs/standard/python/datastore/api-overview"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -303,7 +303,7 @@ const Owl = () => {
               <li>
                 <a
                   href="https://palletsprojects.com/p/jinja/"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -318,7 +318,7 @@ const Owl = () => {
               <li>
                 <a
                   href="https://reactjs.org"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -328,7 +328,7 @@ const Owl = () => {
               <li>
                 <a
                   href="https://facebook.github.io/flux"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -338,7 +338,7 @@ const Owl = () => {
               <li>
                 <a
                   href="https://github.com/strml/react-router-component"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -348,7 +348,7 @@ const Owl = () => {
               <li>
                 <a
                   href="https://github.com/async-library/react-async"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -358,7 +358,7 @@ const Owl = () => {
               <li>
                 <a
                   href="https://getbootstrap.com"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -373,7 +373,7 @@ const Owl = () => {
               <li>
                 <a
                   href="https://github.com/mattlean/project-owl/blob/master/LICENSE"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >

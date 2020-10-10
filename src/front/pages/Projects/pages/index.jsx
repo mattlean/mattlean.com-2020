@@ -19,6 +19,7 @@ import MainFooter from '../../../components/MainFooter'
 import NoMatchContent from '../../NoMatch/NoMatchContent'
 import ThemeBoot from './ThemeBoot'
 import VARIANTS from '../../page_variants'
+import YAAS from './YAAS'
 import { genFormattedPath } from '../../../../common/util'
 import { getRouteData } from '../../../../common/data/route'
 import { isTxtOnly } from './layout'
@@ -72,6 +73,7 @@ const ProjectPage = () => {
           <Route path={`${ROUTE_PREFIX}recha`} component={Recha} />
           <Route path={`${ROUTE_PREFIX}sot`} component={SOT} />
           <Route path={`${ROUTE_PREFIX}themeboot`} component={ThemeBoot} />
+          <Route path={`${ROUTE_PREFIX}yaas`} component={YAAS} />
           <Route path="*" component={NoMatchContent} />
         </Switch>
       </main>

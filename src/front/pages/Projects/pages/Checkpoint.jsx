@@ -107,7 +107,7 @@ const Checkpoint = () => {
         </section>
         <a
           href="https://github.com/mattlean/checkpointjs"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           target="_blank"
         >
           <Btn className="btn-gh">
@@ -116,7 +116,7 @@ const Checkpoint = () => {
         </a>
         <a
           href="https://npmjs.com/package/checkpointjs"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           target="_blank"
         >
           <Btn outline={true} className="btn-npm">
@@ -157,7 +157,7 @@ const Checkpoint = () => {
               <li>
                 <a
                   href="https://www.typescriptlang.org"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -173,7 +173,7 @@ const Checkpoint = () => {
               <li>
                 <a
                   href="https://jestjs.io"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -190,7 +190,7 @@ const Checkpoint = () => {
               <li>
                 <a
                   href="https://lodash.com"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -200,7 +200,7 @@ const Checkpoint = () => {
               <li>
                 <a
                   href="https://npmjs.com/package/validator"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -215,7 +215,7 @@ const Checkpoint = () => {
               <li>
                 <a
                   href="https://github.com/mattlean/checkpointjs/blob/master/LICENSE"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >

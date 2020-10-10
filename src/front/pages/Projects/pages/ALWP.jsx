@@ -100,7 +100,7 @@ const ALWP = () => {
             <strong>Asset List Webpack Plugin</strong> is a{' '}
             <a
               href="https://webpack.js.org"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -118,7 +118,7 @@ const ALWP = () => {
         </section>
         <a
           href="https://github.com/mattlean/asset-list-webpack-plugin"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           target="_blank"
         >
           <Btn className="btn-gh">
@@ -127,7 +127,7 @@ const ALWP = () => {
         </a>
         <a
           href="https://npmjs.com/package/asset-list-webpack-plugin"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           target="_blank"
         >
           <Btn outline={true} className="btn-npm">
@@ -180,7 +180,7 @@ const ALWP = () => {
               <li>
                 <a
                   href="https://webpack.js.org"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -203,7 +203,7 @@ const ALWP = () => {
               <li>
                 <a
                   href="https://github.com/mattlean/asset-list-webpack-plugin/blob/master/LICENSE"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >

@@ -258,6 +258,43 @@ ROUTES[path] = {
   ],
 }
 
+path = `${ROUTE_PREFIX}yaas`
+ROUTES[path] = {
+  path,
+  keywords: [
+    'matt lean',
+    'matthew lean',
+    'matt',
+    'lean',
+    'express-yaas',
+    'express',
+    'yaas',
+    'authentication',
+    'session',
+    'middleware',
+    'open source',
+    'open',
+    'source',
+    'package',
+    'backend developer',
+    'backend',
+    'web developer',
+    'developer',
+    'web dev',
+    'dev',
+    'web engineer',
+    'software engineer',
+    'engineer',
+    'development',
+    'programmer',
+    'programming',
+    'software',
+    'application',
+    'web',
+    'project',
+  ],
+}
+
 path = `${ROUTE_PREFIX}gridnik`
 ROUTES[path] = {
   path,

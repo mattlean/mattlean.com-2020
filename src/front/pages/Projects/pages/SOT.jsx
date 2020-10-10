@@ -107,7 +107,7 @@ const SOT = () => {
           <p>
             <a
               href="https://biosearchtech.com"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -124,7 +124,7 @@ const SOT = () => {
             multiplexed sets according to recommended combinations for each{' '}
             <a
               href="https://en.wikipedia.org/wiki/Real-time_polymerase_chain_reaction"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -134,7 +134,7 @@ const SOT = () => {
             design an assay for&nbsp;qPCR.
           </p>
         </section>
-        <a href={live} rel="noreferrer" target="_blank">
+        <a href={live} rel="noopener noreferrer" target="_blank">
           <Btn className="btn-view-live">
             <PlayIcon className="btn-icon" /> View Live
           </Btn>
@@ -272,7 +272,7 @@ const SOT = () => {
               <li>
                 <a
                   href="https://www.columnfivemedia.com"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -282,7 +282,7 @@ const SOT = () => {
               <li>
                 <a
                   href="https://thespider.com"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -298,7 +298,7 @@ const SOT = () => {
               <li>
                 <a
                   href="https://python.org"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -308,7 +308,7 @@ const SOT = () => {
               <li>
                 <a
                   href="https://sass-lang.com"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -325,7 +325,7 @@ const SOT = () => {
               <li>
                 <a
                   href="https://webpack.js.org"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -335,7 +335,7 @@ const SOT = () => {
               <li>
                 <a
                   href="https://gruntjs.com"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -345,7 +345,7 @@ const SOT = () => {
               <li>
                 <a
                   href="https://nodejs.org"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -373,7 +373,7 @@ const SOT = () => {
               <li>
                 <a
                   href="https://developers.google.com/chart"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -383,7 +383,7 @@ const SOT = () => {
               <li>
                 <a
                   href="https://getbootstrap.com"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -393,7 +393,7 @@ const SOT = () => {
               <li>
                 <a
                   href="https://jquery.com"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -403,7 +403,7 @@ const SOT = () => {
               <li>
                 <a
                   href="https://lodash.com"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -413,7 +413,7 @@ const SOT = () => {
               <li>
                 <a
                   href="https://popper.js.org"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -428,7 +428,7 @@ const SOT = () => {
               <li>
                 <a
                   href="https://adobe.com/products/xd.html"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -438,7 +438,7 @@ const SOT = () => {
               <li>
                 <a
                   href="https://adobe.com/products/photoshop.html"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -448,7 +448,7 @@ const SOT = () => {
               <li>
                 <a
                   href="https://adobe.com/products/illustrator.html"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -463,7 +463,7 @@ const SOT = () => {
         ref={observerData[9].ref}
         nodeType="a"
         href={live}
-        rel="noreferrer"
+        rel="noopener noreferrer"
         target="_blank"
         delay={blindStates[9].delay}
         observer={observerData[9].observer}

@@ -125,7 +125,7 @@ const CSLeanSpace = () => {
               design resumes in&nbsp;
               <a
                 href="https://latex-project.org"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 target="_blank"
                 className="a-grey-1"
               >
@@ -142,7 +142,7 @@ const CSLeanSpace = () => {
               My previous website before this one ran off of{' '}
               <a
                 href="https://wordpress.org"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 target="_blank"
                 className="a-grey-1"
               >
@@ -151,7 +151,7 @@ const CSLeanSpace = () => {
               and{' '}
               <a
                 href="https://mysql.com"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 target="_blank"
                 className="a-grey-1"
               >
@@ -160,7 +160,7 @@ const CSLeanSpace = () => {
               with a custom theme I wrote in{' '}
               <a
                 href="https://php.net"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 target="_blank"
                 className="a-grey-1"
               >
@@ -175,7 +175,7 @@ const CSLeanSpace = () => {
               project I was working on,{' '}
               <a
                 href="https://github.com/mattlean/xuehuacms"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 target="_blank"
                 className="a-grey-1"
               >
@@ -184,7 +184,7 @@ const CSLeanSpace = () => {
               , a custom{' '}
               <a
                 href="https://en.wikipedia.org/wiki/Content_management_system"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 target="_blank"
                 className="a-grey-1"
               >
@@ -193,7 +193,7 @@ const CSLeanSpace = () => {
               built with{' '}
               <a
                 href="https://rubyonrails.org"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 target="_blank"
                 className="a-grey-1"
               >
@@ -208,7 +208,7 @@ const CSLeanSpace = () => {
               had some good exposure to{' '}
               <a
                 href="https://www.ruby-lang.org/en"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 target="_blank"
                 className="a-grey-1"
               >
@@ -223,7 +223,7 @@ const CSLeanSpace = () => {
               popularity of static site generators like{' '}
               <a
                 href="https://jekyllrb.com"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 target="_blank"
                 className="a-grey-1"
               >
@@ -258,7 +258,7 @@ const CSLeanSpace = () => {
             triggering a page reload, an inherent feature of{' '}
             <a
               href="https://en.wikipedia.org/wiki/Single-page_application"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -268,7 +268,7 @@ const CSLeanSpace = () => {
             that it could make it difficult for{' '}
             <a
               href="https://en.wikipedia.org/wiki/Web_crawler"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -277,7 +277,7 @@ const CSLeanSpace = () => {
             to parse your page, negatively impacting{' '}
             <a
               href="https://en.wikipedia.org/wiki/Search_engine_optimization"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -290,7 +290,7 @@ const CSLeanSpace = () => {
             all internal links that retrieves the next page through an{' '}
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -314,7 +314,7 @@ const CSLeanSpace = () => {
             “backendless” aspect. It just lets the server, in my case an{' '}
             <a
               href="https://httpd.apache.org"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -338,7 +338,7 @@ const CSLeanSpace = () => {
           screenshots of my portfolio work, so I wrote a{' '}
           <a
             href="https://en.wikipedia.org/wiki/Lightbox_(JavaScript)"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             target="_blank"
             className="a-grey-1"
           >
@@ -352,7 +352,7 @@ const CSLeanSpace = () => {
           can be found on{' '}
           <a
             href="https://github.com/mattlean/lanternjs"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             target="_blank"
             className="a-grey-1"
           >
@@ -361,7 +361,7 @@ const CSLeanSpace = () => {
           and&nbsp;
           <a
             href="https://npmjs.com/package/lanternjs"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             target="_blank"
             className="a-grey-1"
           >
@@ -385,7 +385,7 @@ const CSLeanSpace = () => {
           feature that faded each work piece in and out. I ended up using{' '}
           <a
             href="https://masonry.desandro.com"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             target="_blank"
             className="a-grey-1"
           >
@@ -429,7 +429,7 @@ const CSLeanSpace = () => {
               I chose{' '}
               <a
                 href="https://fonts.google.com/specimen/Open+Sans"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 target="_blank"
                 className="a-grey-1"
               >
@@ -443,7 +443,7 @@ const CSLeanSpace = () => {
               For the monospaced text, I chose{' '}
               <a
                 href="https://fonts.google.com/specimen/Inconsolata"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 target="_blank"
                 className="a-grey-1"
               >
@@ -457,7 +457,7 @@ const CSLeanSpace = () => {
               For the logo, I settled with{' '}
               <a
                 href="https://fonts.google.com/specimen/Exo"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 target="_blank"
                 className="a-grey-1"
               >
@@ -473,7 +473,7 @@ const CSLeanSpace = () => {
               them already installed, I imported them as web fonts through{' '}
               <a
                 href="https://fonts.google.com"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 target="_blank"
                 className="a-grey-1"
               >
@@ -509,7 +509,7 @@ const CSLeanSpace = () => {
           Without the luxury of a framework like{' '}
           <a
             href="https://getbootstrap.com"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             target="_blank"
             className="a-grey-1"
           >
@@ -519,7 +519,7 @@ const CSLeanSpace = () => {
           desktop and mobile devices. I ended up implementing the layout with{' '}
           <a
             href="https://developer.mozilla.org/en-US/docs/Web/CSS/float"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             target="_blank"
             className="a-grey-1"
           >
@@ -528,7 +528,7 @@ const CSLeanSpace = () => {
           and the{' '}
           <a
             href="https://en.wikipedia.org/wiki/Responsive_web_design"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             target="_blank"
             className="a-grey-1"
           >
@@ -537,7 +537,7 @@ const CSLeanSpace = () => {
           with{' '}
           <a
             href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             target="_blank"
             className="a-grey-1"
           >
@@ -574,7 +574,7 @@ const CSLeanSpace = () => {
         </figure>
         <section className="btn-area">
           <section className="btn-double-group">
-            <a href={live} rel="noreferrer" target="_blank">
+            <a href={live} rel="noopener noreferrer" target="_blank">
               <Btn className="btn-view-live">
                 <PlayIcon className="btn-icon" /> View Live
               </Btn>

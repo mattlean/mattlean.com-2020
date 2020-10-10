@@ -105,7 +105,7 @@ const Lantern = () => {
             customizable image{' '}
             <a
               href="https://en.wikipedia.org/wiki/Lightbox_(JavaScript)"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -117,7 +117,7 @@ const Lantern = () => {
         </section>
         <a
           href="https://github.com/mattlean/lanternjs"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           target="_blank"
         >
           <Btn className="btn-gh">
@@ -126,7 +126,7 @@ const Lantern = () => {
         </a>
         <a
           href="https://npmjs.com/package/lanternjs"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           target="_blank"
         >
           <Btn outline={true} className="btn-npm">
@@ -198,7 +198,7 @@ const Lantern = () => {
               <li>
                 <a
                   href="https://gruntjs.com"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -221,7 +221,7 @@ const Lantern = () => {
               <li>
                 <a
                   href="https://github.com/mattlean/lanternjs/blob/master/LICENSE"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -236,7 +236,7 @@ const Lantern = () => {
         ref={observerData[6].ref}
         nodeType="a"
         href="https://github.com/mattlean/lanternjs"
-        rel="noreferrer"
+        rel="noopener noreferrer"
         target="_blank"
         className="btn-option-a"
         delay={blindStates[6].delay}
@@ -255,7 +255,7 @@ const Lantern = () => {
         ref={observerData[7].ref}
         nodeType="a"
         href="https://npmjs.com/package/lanternjs"
-        rel="noreferrer"
+        rel="noopener noreferrer"
         target="_blank"
         className="btn-option-b"
         delay={blindStates[7].delay}

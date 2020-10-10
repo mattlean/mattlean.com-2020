@@ -108,7 +108,7 @@ const Crush = () => {
             promote the{' '}
             <a
               href="https://biosearchtech.com"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -249,7 +249,7 @@ const Crush = () => {
               <li>
                 <a
                   href="https://thespider.com"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -265,7 +265,7 @@ const Crush = () => {
               <li>
                 <a
                   href="https://python.org"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -282,7 +282,7 @@ const Crush = () => {
               <li>
                 <a
                   href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -292,7 +292,7 @@ const Crush = () => {
               <li>
                 <a
                   href="https://developer.mozilla.org/en-US/docs/Web/API/Touch_events"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -302,7 +302,7 @@ const Crush = () => {
               <li>
                 <a
                   href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -336,7 +336,7 @@ const Crush = () => {
               <li>
                 <a
                   href="https://github.com/GoogleCloudPlatform/webapp2"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -346,7 +346,7 @@ const Crush = () => {
               <li>
                 <a
                   href="https://cloud.google.com/datastore"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -356,7 +356,7 @@ const Crush = () => {
               <li>
                 <a
                   href="https://cloud.google.com/appengine/docs/standard/python/datastore/api-overview"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -366,7 +366,7 @@ const Crush = () => {
               <li>
                 <a
                   href="https://palletsprojects.com/p/jinja/"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -381,7 +381,7 @@ const Crush = () => {
               <li>
                 <a
                   href="https://getbootstrap.com"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -391,7 +391,7 @@ const Crush = () => {
               <li>
                 <a
                   href="https://jquery.com"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -406,7 +406,7 @@ const Crush = () => {
               <li>
                 <a
                   href="https://adobe.com/products/photoshop.html"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -416,7 +416,7 @@ const Crush = () => {
               <li>
                 <a
                   href="https://adobe.com/products/illustrator.html"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >

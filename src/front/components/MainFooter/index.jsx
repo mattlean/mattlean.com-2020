@@ -119,7 +119,7 @@ const MainFooter = () => {
             <li>
               <a
                 href="http://be.net/mattlean"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 target="_blank"
                 className="a-grey-2"
               >
@@ -129,7 +129,7 @@ const MainFooter = () => {
             <li>
               <a
                 href="https://github.com/mattlean"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 target="_blank"
                 className="a-grey-2"
               >
@@ -139,7 +139,7 @@ const MainFooter = () => {
             <li>
               <a
                 href="https://linkedin.com/in/mattlean"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 target="_blank"
                 className="a-grey-2"
               >

@@ -116,7 +116,7 @@ const Contact = () => {
           >
             <a
               href="https://linkedin.com/in/mattlean"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-primary"
             >

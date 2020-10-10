@@ -1,23 +1,20 @@
 import React, { useEffect, useRef } from 'react'
 import { Badge, Btn } from 'eswiss'
-import { Link } from 'react-router-dom'
 import BlindFrame from '../../../components/Blind/BlindFrame'
 import { getProjectData } from '../../../../common/data/project'
-import { ROUTE_PREFIX } from '../../../../common/data/route/project'
 import {
   setupBlindObservers,
   useInitAnim,
 } from '../../../components/Blind/initAnimUtil'
 import { usePageLoadEffect } from '../../../util'
-import NPMIcon from '../../../assets/icons/npm.svg'
-import { MarkGithubIcon, PlayIcon } from '@primer/octicons-react'
+import { MarkGithubIcon } from '@primer/octicons-react'
 
-const { live, name, tags } = getProjectData('eswiss')
+const { name, tags } = getProjectData('yaas')
 
 /**
- * eswiss Project Page
+ * express-yaas Project Page
  */
-const Eswiss = () => {
+const YAAS = () => {
   usePageLoadEffect()
 
   const srStartRef = useRef(null)
@@ -99,64 +96,44 @@ const Eswiss = () => {
       >
         <section className="c-grey-1">
           <p>
-            <strong>eswiss</strong> is a{' '}
+            <strong>express-yaas</strong> is an{' '}
             <a
-              href="https://en.wikipedia.org/wiki/Design_system"
+              href="https://expressjs.com"
               rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
-              design system
+              Express
             </a>{' '}
-            that uses principles popularized by the{' '}
+            middleware that handles authentication and sessions. It’s built
+            around{' '}
             <a
-              href="https://en.wikipedia.org/wiki/International_Typographic_Style"
+              href="https://npmjs.com/package/bcrypt"
               rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
-              Swiss and International Typographic Styles
+              bcrypt
             </a>{' '}
-            and adapts them to modern user interface development methodologies.
-            The system emphasizes practicality, maintainability,
-            and&nbsp;accessibility.
-          </p>
-          <p>
-            While the project is still in alpha,{' '}
-            <Link to={`${ROUTE_PREFIX}ml2020`} className="a-grey-1">
-              the website you’re looking at right now
-            </Link>{' '}
-            is using eswiss as a proof-of-concept.
+            and{' '}
+            <a
+              href="https://postgresql.org"
+              rel="noopener noreferrer"
+              target="_blank"
+              className="a-grey-1"
+            >
+              PostgreSQL
+            </a>
+            .
           </p>
         </section>
         <a
-          href={live}
+          href="https://github.com/mattlean/express-ffuh"
           rel="noopener noreferrer"
           target="_blank"
-          className="btn-option-a btn-triple-group"
         >
-          <Btn className="btn-view-live">
-            <PlayIcon className="btn-icon" /> View Live
-          </Btn>
-        </a>
-        <a
-          href="https://github.com/mattlean/eswiss"
-          rel="noopener noreferrer"
-          target="_blank"
-          className="btn-option-b btn-triple-group"
-        >
-          <Btn outline={true} className="btn-gh">
+          <Btn className="btn-gh">
             <MarkGithubIcon className="btn-icon" /> GitHub
-          </Btn>
-        </a>
-        <a
-          href="https://npmjs.com/package/eswiss"
-          rel="noopener noreferrer"
-          target="_blank"
-          className="btn-option-c btn-triple-group"
-        >
-          <Btn outline={true} className="btn-npm">
-            <NPMIcon className="btn-icon" /> npm
           </Btn>
         </a>
       </BlindFrame>
@@ -201,98 +178,6 @@ const Eswiss = () => {
                 </a>
               </li>
               <li>JavaScript</li>
-              <li>
-                <a
-                  href="https://sass-lang.com"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  className="a-grey-1"
-                >
-                  Sass
-                </a>
-              </li>
-            </ul>
-          </section>
-          <section>
-            <h4>Peer Dependencies</h4>
-            <ul>
-              <li>
-                <a
-                  href="https://reactjs.org"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  className="a-grey-1"
-                >
-                  React
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://sass-lang.com"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  className="a-grey-1"
-                >
-                  Sass
-                </a>
-              </li>
-            </ul>
-          </section>
-        </section>
-        <section>
-          <section>
-            <h4>Tooling</h4>
-            <ul>
-              <li>
-                <a
-                  href="https://storybook.js.org"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  className="a-grey-1"
-                >
-                  Storybook
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://jestjs.io"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  className="a-grey-1"
-                >
-                  Jest
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://reactjs.org/docs/test-renderer.html"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  className="a-grey-1"
-                >
-                  React Test&nbsp;Renderer
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://chromatic.com"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  className="a-grey-1"
-                >
-                  Chromatic
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://gulpjs.com"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  className="a-grey-1"
-                >
-                  Gulp
-                </a>
-              </li>
             </ul>
           </section>
           <section>
@@ -300,7 +185,7 @@ const Eswiss = () => {
             <ul>
               <li>
                 <a
-                  href="https://github.com/mattlean/eswiss/blob/master/LICENSE"
+                  href="https://github.com/mattlean/express-ffuh/blob/master/LICENSE"
                   rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
@@ -311,9 +196,76 @@ const Eswiss = () => {
             </ul>
           </section>
         </section>
+        <section>
+          <section>
+            <h4>Peer Dependencies</h4>
+            <ul>
+              <li>
+                <a
+                  href="https://npmjs.com/package/bcrypt"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  className="a-grey-1"
+                >
+                  bcrypt
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://npmjs.com/package/body-parser"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  className="a-grey-1"
+                >
+                  body-parser
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://npmjs.com/package/cookie-parser"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  className="a-grey-1"
+                >
+                  cookie-parser
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://expressjs.com"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  className="a-grey-1"
+                >
+                  Express
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.npmjs.com/package/pg-promise"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  className="a-grey-1"
+                >
+                  pg-promise
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://npmjs.com/package/uuid"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  className="a-grey-1"
+                >
+                  UUID
+                </a>
+              </li>
+            </ul>
+          </section>
+        </section>
       </BlindFrame>
     </>
   )
 }
 
-export default Eswiss
+export default YAAS

@@ -27,7 +27,7 @@ const ProjectFeed = () => {
     initAnimComplete,
     observerData,
     runInitAnim,
-  } = useInitAnim(16)
+  } = useInitAnim(17)
 
   // Setup effect which is only run once
   useEffect(() => {
@@ -37,6 +37,7 @@ const ProjectFeed = () => {
     const observers = setupBlindObservers(
       [
         0.5,
+        0.1,
         0.1,
         0.1,
         0.1,

@@ -9,6 +9,7 @@ export const ORDER = [
   'eswiss',
   'ljas',
   'recha',
+  'yaas',
   'ffuh',
   'checkpoint',
   'crush',
@@ -154,6 +155,14 @@ const PROJECTS = {
     long:
       'A Bootstrap-powered website layout available as a WordPress theme or static&nbsp;template.',
     tags: ['wp-theme', 'template', 'backend', 'frontend'],
+  },
+  yaas: {
+    id: 'yaas',
+    name: 'express-yaas',
+    short:
+      'Express middleware that handles authentication&nbsp;&&nbsp;sessions.',
+    long: 'Express middleware that handles authentication and sessions.',
+    tags: ['express-middleware', 'aws', 'backend'],
   },
 }
 

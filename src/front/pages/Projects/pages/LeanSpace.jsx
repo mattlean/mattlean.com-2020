@@ -122,7 +122,7 @@ const LeanSpace = () => {
         </Link>
         <a
           href={live}
-          rel="noreferrer"
+          rel="noopener noreferrer"
           target="_blank"
           className="btn-option-b btn-triple-group"
         >
@@ -132,7 +132,7 @@ const LeanSpace = () => {
         </a>
         <a
           href="https://github.com/mattlean/lean-space"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           target="_blank"
           className="btn-option-c btn-triple-group"
         >
@@ -282,7 +282,7 @@ const LeanSpace = () => {
               <li>
                 <a
                   href="https://sass-lang.com"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -294,7 +294,7 @@ const LeanSpace = () => {
               <li>
                 <a
                   href="https://www.ruby-lang.org/en"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -308,7 +308,7 @@ const LeanSpace = () => {
             <ul>
               <a
                 href="https://gruntjs.com"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 target="_blank"
                 className="a-grey-1"
               >
@@ -330,7 +330,7 @@ const LeanSpace = () => {
               <li>
                 <a
                   href="https://masonry.desandro.com"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -340,7 +340,7 @@ const LeanSpace = () => {
               <li>
                 <a
                   href="https://developer.mozilla.org/en-US/docs/Web/API/History"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -350,7 +350,7 @@ const LeanSpace = () => {
               <li>
                 <a
                   href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -365,7 +365,7 @@ const LeanSpace = () => {
               <li>
                 <a
                   href="https://modernizr.com"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -375,7 +375,7 @@ const LeanSpace = () => {
               <li>
                 <a
                   href="https://necolas.github.io/normalize.css"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -385,7 +385,7 @@ const LeanSpace = () => {
               <li>
                 <a
                   href="https://github.com/mattlean/xuehuacms"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -400,7 +400,7 @@ const LeanSpace = () => {
               <li>
                 <a
                   href="https://adobe.com/products/photoshop.html"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -432,7 +432,7 @@ const LeanSpace = () => {
         ref={observerData[11].ref}
         nodeType="a"
         href={live}
-        rel="noreferrer"
+        rel="noopener noreferrer"
         target="_blank"
         delay={blindStates[11].delay}
         observer={observerData[11].observer}
@@ -451,7 +451,7 @@ const LeanSpace = () => {
         ref={observerData[12].ref}
         nodeType="a"
         href="https://github.com/mattlean/lean-space"
-        rel="noreferrer"
+        rel="noopener noreferrer"
         target="_blank"
         delay={blindStates[12].delay}
         observer={observerData[12].observer}

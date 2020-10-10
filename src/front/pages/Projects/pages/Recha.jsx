@@ -108,7 +108,7 @@ const Recha = () => {
         </section>
         <a
           href="https://github.com/mattlean/recha"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           target="_blank"
         >
           <Btn className="btn-gh">
@@ -117,7 +117,7 @@ const Recha = () => {
         </a>
         <a
           href="https://github.com/mattlean/recha-server"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           target="_blank"
         >
           <Btn outline={true} className="btn-gh">
@@ -158,7 +158,7 @@ const Recha = () => {
               <li>
                 <a
                   href="https://www.typescriptlang.org"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -169,7 +169,7 @@ const Recha = () => {
               <li>
                 <a
                   href="https://sass-lang.com"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -186,7 +186,7 @@ const Recha = () => {
               <li>
                 <a
                   href="https://material.io"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -196,7 +196,7 @@ const Recha = () => {
               <li>
                 <a
                   href="https://reactjs.org"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -206,7 +206,7 @@ const Recha = () => {
               <li>
                 <a
                   href="https://redux.js.org"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -216,7 +216,7 @@ const Recha = () => {
               <li>
                 <a
                   href="https://github.com/reduxjs/redux-thunk"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -226,7 +226,7 @@ const Recha = () => {
               <li>
                 <a
                   href="https://github.com/reduxjs/reselect"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -236,7 +236,7 @@ const Recha = () => {
               <li>
                 <a
                   href="https://reactrouter.com"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -246,7 +246,7 @@ const Recha = () => {
               <li>
                 <a
                   href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -256,7 +256,7 @@ const Recha = () => {
               <li>
                 <a
                   href="https://github.com/atlassian/react-beautiful-dnd"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -266,7 +266,7 @@ const Recha = () => {
               <li>
                 <a
                   href="https://momentjs.com"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -276,7 +276,7 @@ const Recha = () => {
               <li>
                 <a
                   href="https://lodash.com"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -293,7 +293,7 @@ const Recha = () => {
               <li>
                 <a
                   href="https://nodejs.org"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -303,7 +303,7 @@ const Recha = () => {
               <li>
                 <a
                   href="https://expressjs.com"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -313,7 +313,7 @@ const Recha = () => {
               <li>
                 <a
                   href="https://postgresql.org/"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -323,7 +323,7 @@ const Recha = () => {
               <li>
                 <a
                   href="https://github.com/vitaly-t/pg-promise"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -343,7 +343,7 @@ const Recha = () => {
               <li>
                 <a
                   href="https://jestjs.io"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -353,7 +353,7 @@ const Recha = () => {
               <li>
                 <a
                   href="https://enzymejs.github.io/enzyme"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -363,7 +363,7 @@ const Recha = () => {
               <li>
                 <a
                   href="https://reactjs.org/docs/test-renderer.html"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -373,7 +373,7 @@ const Recha = () => {
               <li>
                 <a
                   href="https://github.com/visionmedia/supertest"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -388,7 +388,7 @@ const Recha = () => {
               <li>
                 <a
                   href="https://electronjs.org"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -398,7 +398,7 @@ const Recha = () => {
               <li>
                 <a
                   href="https://webpack.js.org"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -413,7 +413,7 @@ const Recha = () => {
               <li>
                 <a
                   href="https://github.com/mattlean/recha/blob/master/LICENSE"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >

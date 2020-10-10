@@ -108,7 +108,7 @@ const CSSOT = () => {
             In 2014,{' '}
             <a
               href="https://biosearchtech.com"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -120,7 +120,7 @@ const CSSOT = () => {
             assay for a common molecular biology method known as{' '}
             <a
               href="https://en.wikipedia.org/wiki/Real-time_polymerase_chain_reaction"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -133,7 +133,7 @@ const CSSOT = () => {
             The original tool needed a user experience overhaul and used{' '}
             <a
               href="https://en.wikipedia.org/wiki/Adobe_Flash"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -147,7 +147,7 @@ const CSSOT = () => {
             They also had plans to launch the{' '}
             <a
               href="http://blog.biosearchtech.com/check-out-our-new-website-qpcr-design-lab"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -164,7 +164,7 @@ const CSSOT = () => {
             online, but the tool can still be found on the{' '}
             <a
               href={live}
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -188,7 +188,7 @@ const CSSOT = () => {
               In 2015, Biosearch Technologies was acquired by{' '}
               <a
                 href="https://lgcgroup.com"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 target="_blank"
                 className="a-grey-1"
               >
@@ -205,7 +205,7 @@ const CSSOT = () => {
               I chose to use{' '}
               <a
                 href="https://getbootstrap.com"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 target="_blank"
                 className="a-grey-1"
               >
@@ -216,7 +216,7 @@ const CSSOT = () => {
               on{' '}
               <a
                 href="https://jquery.com"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 target="_blank"
                 className="a-grey-1"
               >
@@ -226,7 +226,7 @@ const CSSOT = () => {
               also used{' '}
               <a
                 href="https://sass-lang.com"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 target="_blank"
                 className="a-grey-1"
               >
@@ -236,7 +236,7 @@ const CSSOT = () => {
               the style codebase. For the charts, I ended up choosing{' '}
               <a
                 href="https://developers.google.com/chart"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 target="_blank"
                 className="a-grey-1"
               >
@@ -256,7 +256,7 @@ const CSSOT = () => {
               grids, so I implemented a custom{' '}
               <a
                 href="https://developer.mozilla.org/en-US/docs/Web/CSS/float"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 target="_blank"
                 className="a-grey-1"
               >
@@ -265,7 +265,7 @@ const CSSOT = () => {
               layout built with custom{' '}
               <a
                 href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 target="_blank"
                 className="a-grey-1"
               >
@@ -279,7 +279,7 @@ const CSSOT = () => {
               opportunity to use{' '}
               <a
                 href="https://yeoman.io"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 target="_blank"
                 className="a-grey-1"
               >
@@ -288,7 +288,7 @@ const CSSOT = () => {
               for the first time. This introduced me to{' '}
               <a
                 href="https://gruntjs.com"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 target="_blank"
                 className="a-grey-1"
               >
@@ -299,7 +299,7 @@ const CSSOT = () => {
               Sass to CSS, and linting JavaScript with{' '}
               <a
                 href="https://jshint.com"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 target="_blank"
                 className="a-grey-1"
               >
@@ -309,7 +309,7 @@ const CSSOT = () => {
               sizes through minification with{' '}
               <a
                 href="http://lisperator.net/uglifyjs"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 target="_blank"
                 className="a-grey-1"
               >
@@ -318,7 +318,7 @@ const CSSOT = () => {
               ,{' '}
               <a
                 href="https://github.com/jakubpawlowicz/clean-css"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 target="_blank"
                 className="a-grey-1"
               >
@@ -327,7 +327,7 @@ const CSSOT = () => {
               ,{' '}
               <a
                 href="https://github.com/kangax/html-minifier"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 target="_blank"
                 className="a-grey-1"
               >
@@ -336,7 +336,7 @@ const CSSOT = () => {
               , and&nbsp;
               <a
                 href="https://github.com/imagemin/imagemin"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 target="_blank"
                 className="a-grey-1"
               >
@@ -348,7 +348,7 @@ const CSSOT = () => {
               Because I received all of the visualizations’ data points in an{' '}
               <a
                 href="https://microsoft.com/en-us/microsoft-365/excel"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 target="_blank"
                 className="a-grey-1"
               >
@@ -357,7 +357,7 @@ const CSSOT = () => {
               spreadsheet, I wrote a custom{' '}
               <a
                 href="https://en.wikipedia.org/wiki/Command-line_interface"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 target="_blank"
                 className="a-grey-1"
               >
@@ -366,7 +366,7 @@ const CSSOT = () => {
               tool in{' '}
               <a
                 href="https://python.org"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 target="_blank"
                 className="a-grey-1"
               >
@@ -429,7 +429,7 @@ const CSSOT = () => {
           collaborated with{' '}
           <a
             href="https://www.columnfivemedia.com"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             target="_blank"
             className="a-grey-1"
           >
@@ -438,7 +438,7 @@ const CSSOT = () => {
           and built the mockups in&nbsp;
           <a
             href="https://www.adobe.com/products/xd.html"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             target="_blank"
             className="a-grey-1"
           >
@@ -462,7 +462,7 @@ const CSSOT = () => {
             like{' '}
             <a
               href="https://reactjs.org/docs/test-renderer.html"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -471,7 +471,7 @@ const CSSOT = () => {
             or{' '}
             <a
               href="https://vuejs.org"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -486,7 +486,7 @@ const CSSOT = () => {
             use the{' '}
             <a
               href="http://www.ecma-international.org/ecma-262/6.0/index.html"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -514,7 +514,7 @@ const CSSOT = () => {
             The styles were also completely rewritten to adopt the{' '}
             <a
               href="http://getbem.com"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -524,7 +524,7 @@ const CSSOT = () => {
             Sass codebase. Due to a requirement to continue support for{' '}
             <a
               href="https://en.wikipedia.org/wiki/Internet_Explorer_11"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -533,7 +533,7 @@ const CSSOT = () => {
             , a float-based layout solution was still used over a{' '}
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -548,7 +548,7 @@ const CSSOT = () => {
             I replaced the old project tooling setup in favor of my own custom{' '}
             <a
               href="https://webpack.js.org"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -566,7 +566,7 @@ const CSSOT = () => {
             with{' '}
             <a
               href="https://babeljs.io/"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -575,7 +575,7 @@ const CSSOT = () => {
             . The code is now linted with{' '}
             <a
               href="https://eslint.org"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -584,7 +584,7 @@ const CSSOT = () => {
             and{' '}
             <a
               href="https://stylelint.io"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -593,7 +593,7 @@ const CSSOT = () => {
             .{' '}
             <a
               href="https://prettier.io/"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -611,7 +611,7 @@ const CSSOT = () => {
             through{' '}
             <a
               href="https://webpack.js.org/guides/tree-shaking"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -620,7 +620,7 @@ const CSSOT = () => {
             and{' '}
             <a
               href="https://purgecss.com"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -629,7 +629,7 @@ const CSSOT = () => {
             and minifying with{' '}
             <a
               href="https://terser.org"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -638,7 +638,7 @@ const CSSOT = () => {
             and{' '}
             <a
               href="https://cssnano.co"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -656,7 +656,7 @@ const CSSOT = () => {
             JavaScript and{' '}
             <a
               href="https://nodejs.org"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -688,7 +688,7 @@ const CSSOT = () => {
             Lab on October 23, 2014.{' '}
             <a
               href="http://genengnews.com"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -697,7 +697,7 @@ const CSSOT = () => {
             awarded the project{' '}
             <a
               href="https://genengnews.com/resources/best-of-the-web/qpcr-design-lab/2933"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -709,7 +709,7 @@ const CSSOT = () => {
             The 2020 version of the tool went live on the{' '}
             <a
               href={live}
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -720,7 +720,7 @@ const CSSOT = () => {
         </section>
         <section className="btn-area">
           <section className="btn-double-group">
-            <a href={live} rel="noreferrer" target="_blank">
+            <a href={live} rel="noopener noreferrer" target="_blank">
               <Btn className="btn-view-live">
                 <PlayIcon className="btn-icon" /> View Live
               </Btn>

@@ -127,7 +127,7 @@ const CSML2020 = () => {
             I was debating on taking this opportunity to learn{' '}
             <a
               href="https://vuejs.org"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -136,7 +136,7 @@ const CSML2020 = () => {
             , but I decided to stick with{' '}
             <a
               href="https://reactjs.org"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -147,7 +147,7 @@ const CSML2020 = () => {
             I was also interested in using React and{' '}
             <a
               href="https://expressjs.com"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -161,7 +161,7 @@ const CSML2020 = () => {
             Even though my preferred language for the backend was{' '}
             <a
               href="https://python.org"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -173,7 +173,7 @@ const CSML2020 = () => {
           <p className="mb-4 c-grey-1">
             <a
               href="https://www.typescriptlang.org"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -196,7 +196,7 @@ const CSML2020 = () => {
             This project was written exclusively with{' '}
             <a
               href="https://reactjs.org/docs/components-and-props.html#function-and-class-components"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -205,7 +205,7 @@ const CSML2020 = () => {
             and{' '}
             <a
               href="https://reactjs.org/docs/hooks-intro.html"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -224,7 +224,7 @@ const CSML2020 = () => {
             hook is usually utilized in scenarios where{' '}
             <a
               href="https://reactjs.org/docs/state-and-lifecycle.html"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -240,7 +240,7 @@ const CSML2020 = () => {
             state. Luckily, the React docs have a great{' '}
             <a
               href="https://reactjs.org/docs/hooks-faq.html#what-can-i-do-if-my-effect-dependencies-change-too-often"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -252,7 +252,7 @@ const CSML2020 = () => {
             One downside to using hooks was that I could no longer use{' '}
             <a
               href="https://gaearon.github.io/react-hot-loader"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -262,7 +262,7 @@ const CSML2020 = () => {
             called{' '}
             <a
               href="https://reactnative.dev/docs/fast-refresh"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -271,7 +271,7 @@ const CSML2020 = () => {
             , but it is currently only stable for{' '}
             <a
               href="https://reactnative.dev"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -280,7 +280,7 @@ const CSML2020 = () => {
             , so I settled with{' '}
             <a
               href="https://webpack.js.org/configuration/dev-server"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -302,7 +302,7 @@ const CSML2020 = () => {
             reloads. This meant that I would likely need to develop a{' '}
             <a
               href="https://en.wikipedia.org/wiki/Single-page_application"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -311,7 +311,7 @@ const CSML2020 = () => {
             , but I was concerned about the negative impact it would have on{' '}
             <a
               href="https://en.wikipedia.org/wiki/Search_engine_optimization"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -331,7 +331,7 @@ const CSML2020 = () => {
             Nowadays there are{' '}
             <a
               href="https://en.wikipedia.org/wiki/Web_crawler"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -349,7 +349,7 @@ const CSML2020 = () => {
             The architecture for this solution is based on the{' '}
             <a
               href="https://nodejs.org"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -359,7 +359,7 @@ const CSML2020 = () => {
             built for{' '}
             <a
               href="https://github.com/mattlean/lean-js-app-starter/tree/nodejs-ssr"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -374,7 +374,7 @@ const CSML2020 = () => {
             The{' '}
             <a
               href="https://webpack.js.org"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -440,7 +440,7 @@ module.exports = {
               file names resulting in an{' '}
               <a
                 href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 target="_blank"
                 className="a-grey-1"
               >
@@ -460,7 +460,7 @@ module.exports = {
             <li>
               <a
                 href="https://webpack.js.org/plugins/html-webpack-plugin"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 target="_blank"
                 className="a-grey-1"
               >
@@ -469,7 +469,7 @@ module.exports = {
               is used to generate HTML from an{' '}
               <a
                 href="https://ejs.co"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 target="_blank"
                 className="a-grey-1"
               >
@@ -479,7 +479,7 @@ module.exports = {
               surrounding the React rendered HTML. This is used by{' '}
               <a
                 href="https://webpack.js.org/configuration/dev-server"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 target="_blank"
                 className="a-grey-1"
               >
@@ -505,7 +505,7 @@ module.exports = {
             Now here’s a simple{' '}
             <a
               href="https://reactrouter.com"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -573,7 +573,7 @@ hydrate(
             is that{' '}
             <a
               href="https://reactjs.org/docs/react-dom.html#hydrate"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -582,7 +582,7 @@ hydrate(
             is used in a place where{' '}
             <a
               href="https://reactjs.org/docs/react-dom.html#render"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -654,7 +654,7 @@ app.listen(port, () => {
           <p className="c-grey-1">
             <a
               href="https://expressjs.com/en/starter/static-files.html"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -676,7 +676,7 @@ app.listen(port, () => {
             <code>express.static</code> also sets the{' '}
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -684,7 +684,7 @@ app.listen(port, () => {
             </a>{' '}
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -702,7 +702,7 @@ app.listen(port, () => {
             component from the frontend is imported and wrapped with a{' '}
             <a
               href="https://reactrouter.com/web/api/StaticRouter"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -711,7 +711,7 @@ app.listen(port, () => {
             instead of{' '}
             <a
               href="https://reactrouter.com/web/api/BrowserRouter"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -726,7 +726,7 @@ app.listen(port, () => {
           <p className="c-grey-1">
             <a
               href="https://expressjs.com/en/api.html#req.path"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -737,7 +737,7 @@ app.listen(port, () => {
             This gets put into{' '}
             <a
               href="https://reactjs.org/docs/react-dom-server.html#rendertostring"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -829,7 +829,7 @@ app.listen(port, () => {
             through{' '}
             <a
               href="https://webpack.js.org/guides/tree-shaking"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -838,7 +838,7 @@ app.listen(port, () => {
             and{' '}
             <a
               href="https://purgecss.com"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -847,7 +847,7 @@ app.listen(port, () => {
             and minification with{' '}
             <a
               href="https://terser.org"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -856,7 +856,7 @@ app.listen(port, () => {
             and{' '}
             <a
               href="https://cssnano.co"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -865,7 +865,7 @@ app.listen(port, () => {
             . Image assets are compressed manually with{' '}
             <a
               href="https://github.com/imagemin/imagemin"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -875,7 +875,7 @@ app.listen(port, () => {
             reasonable size. This is then all compressed with{' '}
             <a
               href="https://gzip.org"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -911,7 +911,7 @@ app.listen(port, () => {
             implement a{' '}
             <a
               href="https://en.wikipedia.org/wiki/Cache_replacement_policies#Least_recently_used_(LRU)"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -939,7 +939,7 @@ app.listen(port, () => {
               Move gzip compression from the application level to the{' '}
               <a
                 href="https://en.wikipedia.org/wiki/Reverse_proxy"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 target="_blank"
                 className="a-grey-1"
               >
@@ -951,7 +951,7 @@ app.listen(port, () => {
               Use a{' '}
               <a
                 href="https://en.wikipedia.org/wiki/Content_delivery_network"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 target="_blank"
                 className="a-grey-1"
               >
@@ -963,7 +963,7 @@ app.listen(port, () => {
               Replace the current cache with a solution like{' '}
               <a
                 href="https://redis.io"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 target="_blank"
                 className="a-grey-1"
               >
@@ -972,7 +972,7 @@ app.listen(port, () => {
               or&nbsp;
               <a
                 href="https://memcached.org"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 target="_blank"
                 className="a-grey-1"
               >
@@ -995,7 +995,7 @@ app.listen(port, () => {
             After reading{' '}
             <a
               href="https://atomicdesign.bradfrost.com"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -1012,7 +1012,7 @@ app.listen(port, () => {
             on&nbsp;
             <a
               href="https://github.com/mattlean/eswiss"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -1032,7 +1032,7 @@ app.listen(port, () => {
               feels coupled with their authoring company:{' '}
               <a
                 href="https://material.io"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 target="_blank"
                 className="a-grey-1"
               >
@@ -1041,7 +1041,7 @@ app.listen(port, () => {
               feels like{' '}
               <a
                 href="https://google.com"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 target="_blank"
                 className="a-grey-1"
               >
@@ -1050,7 +1050,7 @@ app.listen(port, () => {
               ,{' '}
               <a
                 href="https://carbondesignsystem.com"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 target="_blank"
                 className="a-grey-1"
               >
@@ -1059,7 +1059,7 @@ app.listen(port, () => {
               feels like{' '}
               <a
                 href="https://ibm.com"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 target="_blank"
                 className="a-grey-1"
               >
@@ -1068,7 +1068,7 @@ app.listen(port, () => {
               ,{' '}
               <a
                 href="https://primer.style"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 target="_blank"
                 className="a-grey-1"
               >
@@ -1077,7 +1077,7 @@ app.listen(port, () => {
               feels like{' '}
               <a
                 href="https://github.com"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 target="_blank"
                 className="a-grey-1"
               >
@@ -1093,7 +1093,7 @@ app.listen(port, () => {
               movement known as{' '}
               <a
                 href="https://en.wikipedia.org/wiki/International_Typographic_Style"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 target="_blank"
                 className="a-grey-1"
               >
@@ -1116,7 +1116,7 @@ app.listen(port, () => {
               used to this day.{' '}
               <a
                 href="https://en.wikipedia.org/wiki/Helvetica"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 target="_blank"
                 className="a-grey-1"
               >
@@ -1157,7 +1157,7 @@ app.listen(port, () => {
               Cover of{' '}
               <a
                 href="https://en.wikipedia.org/wiki/Neue_Grafik"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 target="_blank"
                 className="a-grey-2"
               >
@@ -1166,7 +1166,7 @@ app.listen(port, () => {
               , 1963,{' '}
               <a
                 href="https://en.wikipedia.org/wiki/Carlo_Vivarelli"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 target="_blank"
                 className="a-grey-2"
               >
@@ -1182,7 +1182,7 @@ app.listen(port, () => {
               Logo for{' '}
               <a
                 href="https://aa.com"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 target="_blank"
                 className="a-grey-2"
               >
@@ -1191,7 +1191,7 @@ app.listen(port, () => {
               , 1967,{' '}
               <a
                 href="https://en.wikipedia.org/wiki/Massimo_Vignelli"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 target="_blank"
                 className="a-grey-2"
               >
@@ -1205,7 +1205,7 @@ app.listen(port, () => {
               Logo for{' '}
               <a
                 href="https://knoll.com"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 target="_blank"
                 className="a-grey-2"
               >
@@ -1262,7 +1262,7 @@ app.listen(port, () => {
               Cover of{' '}
               <a
                 href="https://www.niggli.ch/en/grid-systems-in-graphic-design.html"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 target="_blank"
                 className="a-grey-2"
               >
@@ -1271,7 +1271,7 @@ app.listen(port, () => {
               , 1981,{' '}
               <a
                 href="https://en.wikipedia.org/wiki/Josef_M%C3%BCller-Brockmann"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 target="_blank"
                 className="a-grey-2"
               >
@@ -1288,7 +1288,7 @@ app.listen(port, () => {
             To develop the components, I used{' '}
             <a
               href="https://storybook.js.org"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -1307,7 +1307,7 @@ app.listen(port, () => {
             For testing, I used{' '}
             <a
               href="https://jestjs.io"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -1316,7 +1316,7 @@ app.listen(port, () => {
             to run unit tests and{' '}
             <a
               href="https://reactjs.org/docs/test-renderer.html"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -1325,7 +1325,7 @@ app.listen(port, () => {
             to produce snapshots. This was integrated into a{' '}
             <a
               href="https://en.wikipedia.org/wiki/CI/CD"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -1335,7 +1335,7 @@ app.listen(port, () => {
             Initially, this was done with{' '}
             <a
               href="https://circleci.com"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -1344,7 +1344,7 @@ app.listen(port, () => {
             , but now it is done with{' '}
             <a
               href="https://github.com/features/actions"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -1356,7 +1356,7 @@ app.listen(port, () => {
             The Storybook maintainers also created a visual testing tool called{' '}
             <a
               href="https://chromatic.com"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -1387,7 +1387,7 @@ app.listen(port, () => {
             ’s stylesheets using the{' '}
             <a
               href="http://getbem.com"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -1402,7 +1402,7 @@ app.listen(port, () => {
             which has seen significant growth in popularity due to the rise of{' '}
             <a
               href="https://tailwindcss.com"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -1415,7 +1415,7 @@ app.listen(port, () => {
             In the end, I decided that I wanted to use some{' '}
             <a
               href="https://sass-lang.com"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -1562,7 +1562,7 @@ app.listen(port, () => {
             definition from{' '}
             <a
               href="https://atomicdesign.bradfrost.com/chapter-2"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -1585,7 +1585,7 @@ app.listen(port, () => {
             I like to think of this in the context of a{' '}
             <a
               href="https://en.wikipedia.org/wiki/Content_management_system"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -1600,7 +1600,7 @@ app.listen(port, () => {
             A good parallel to utility classes here is something like{' '}
             <a
               href="https://en.wikipedia.org/wiki/Markdown"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -1609,7 +1609,7 @@ app.listen(port, () => {
             ,{' '}
             <a
               href="https://en.wikipedia.org/wiki/BBCode"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -1618,7 +1618,7 @@ app.listen(port, () => {
             , or content edited with{' '}
             <a
               href="https://en.wikipedia.org/wiki/WYSIWYG"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -1641,7 +1641,7 @@ app.listen(port, () => {
             Sass offers a lot of{' '}
             <a
               href="https://sass-lang.com/guide"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -1658,7 +1658,7 @@ app.listen(port, () => {
             utility classes easily with{' '}
             <a
               href="https://sass-lang.com/documentation/values/maps"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -1668,7 +1668,7 @@ app.listen(port, () => {
             utility classes. Then use{' '}
             <a
               href="https://sass-lang.com/documentation/at-rules/control/for"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -1677,7 +1677,7 @@ app.listen(port, () => {
             ,{' '}
             <a
               href="https://sass-lang.com/documentation/at-rules/control/each"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -1686,7 +1686,7 @@ app.listen(port, () => {
             , or{' '}
             <a
               href="https://sass-lang.com/documentation/at-rules/control/while"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -1846,7 +1846,7 @@ for (const utilLabel in utilDataMap) {
             the language, so when I first heard about{' '}
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/CSS/--*"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -1959,7 +1959,7 @@ a {
             anywhere in multiple places at the same time in the{' '}
             <a
               href="https://developer.mozilla.org/en-US/docs/Glossary/CSSOM"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -1975,7 +1975,7 @@ a {
             My current UI/UX design tool of choice is{' '}
             <a
               href="https://adobe.com/products/xd.html"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -1985,7 +1985,7 @@ a {
             feature I thought could be improved upon was its{' '}
             <a
               href="https://helpx.adobe.com/xd/how-to/layout-grids.html"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -1996,7 +1996,7 @@ a {
             into a side-project and make a plugin called{' '}
             <Link
               to={`${PROJECT_PREFIX}gridnik`}
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1 txtw-bold"
             >
@@ -2009,7 +2009,7 @@ a {
             International Style,{' '}
             <a
               href="https://en.wikipedia.org/wiki/Wim_Crouwel"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -2019,7 +2019,7 @@ a {
             Thanks to{' '}
             <a
               href="https://adobexdplatform.com/plugin-docs"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -2032,7 +2032,7 @@ a {
             I was inspired by{' '}
             <a
               href="https://www.adobe.com/products/indesign.html"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -2087,7 +2087,7 @@ a {
             After reading{' '}
             <a
               href="https://www.niggli.ch/en/grid-systems-in-graphic-design.html"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -2096,7 +2096,7 @@ a {
             and the{' '}
             <a
               href="https://rationale-design.com/resources/vignelli-canon"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -2105,7 +2105,7 @@ a {
             , I was inspired to apply the Swiss grid methodology to the{' '}
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -2127,7 +2127,7 @@ a {
             composition would rely on solutions best solved with{' '}
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -2202,7 +2202,7 @@ a {
             pattern I ended up using involved use of the{' '}
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/CSS/repeat"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -2211,7 +2211,7 @@ a {
             function,{' '}
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/CSS/minmax"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -2263,7 +2263,7 @@ a {
             opportunity to really focus on{' '}
             <a
               href="https://www.a11yproject.com"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -2281,7 +2281,7 @@ a {
             everything into a <code>div</code>. I also made sure to set{' '}
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -2290,7 +2290,7 @@ a {
             and{' '}
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -2302,7 +2302,7 @@ a {
             After reading the results of{' '}
             <a
               href="https://heydonworks.com/article/responses-to-the-screen-reader-strategy-survey"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -2330,7 +2330,7 @@ a {
             solution for modals, I implemented one while following{' '}
             <a
               href="https://www.w3.org/TR/wai-aria-practices-1.1/#dialog_modal"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -2342,7 +2342,7 @@ a {
             happening. The modal now is available as a component in{' '}
             <a
               href="http://mattlean.github.io/eswiss/?path=/story/modal--body-text"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -2368,7 +2368,7 @@ a {
             feel sleek. My previous React projects relied on{' '}
             <a
               href="https://reactcommunity.org/react-transition-group"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -2380,7 +2380,7 @@ a {
             React and React Router. I eventually settled on{' '}
             <a
               href="https://framer.com/motion"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -2493,7 +2493,7 @@ export default BlindFrame;`}</code></pre>
             played when a user can see it, the blinds are attached with{' '}
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -2518,7 +2518,7 @@ export default BlindFrame;`}</code></pre>
           <section className="btn-double-group">
             <a
               href="https://github.com/mattlean/mattlean.com-2020"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
             >
               <Btn className="btn-gh">

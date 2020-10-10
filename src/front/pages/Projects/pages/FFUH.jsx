@@ -99,7 +99,7 @@ const FFUH = () => {
             <strong>express-ffuh</strong> is an{' '}
             <a
               href="https://expressjs.com"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -108,7 +108,7 @@ const FFUH = () => {
             middleware that handles file uploading to{' '}
             <a
               href="https://aws.amazon.com/s3"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -118,7 +118,7 @@ const FFUH = () => {
             <em>flexible file upload handler</em>. It’s pronounced like{' '}
             <a
               href="https://en.wikipedia.org/wiki/Pho"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -140,7 +140,7 @@ const FFUH = () => {
         </section>
         <a
           href="https://github.com/mattlean/express-ffuh"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           target="_blank"
         >
           <Btn className="btn-gh">
@@ -181,7 +181,7 @@ const FFUH = () => {
               <li>
                 <a
                   href="https://www.typescriptlang.org"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -197,7 +197,7 @@ const FFUH = () => {
               <li>
                 <a
                   href="https://aws.amazon.com/tools"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -206,8 +206,18 @@ const FFUH = () => {
               </li>
               <li>
                 <a
+                  href="https://expressjs.com"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  className="a-grey-1"
+                >
+                  Express
+                </a>
+              </li>
+              <li>
+                <a
                   href="https://npmjs.com/package/formidable"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -217,7 +227,7 @@ const FFUH = () => {
               <li>
                 <a
                   href="https://npmjs.com/package/uuid"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -234,7 +244,7 @@ const FFUH = () => {
               <li>
                 <a
                   href="https://jestjs.io"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >
@@ -249,7 +259,7 @@ const FFUH = () => {
               <li>
                 <a
                   href="https://github.com/mattlean/express-ffuh/blob/master/LICENSE"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
                 >

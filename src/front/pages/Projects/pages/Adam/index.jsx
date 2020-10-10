@@ -103,7 +103,7 @@ const Adam = () => {
             frames per second and supports various media such as{' '}
             <a
               href="https://en.wikipedia.org/wiki/Texture_atlas"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -120,7 +120,7 @@ const Adam = () => {
             , an{' '}
             <a
               href="https://biosearchtech.com"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               className="a-grey-1"
             >
@@ -131,7 +131,7 @@ const Adam = () => {
         </section>
         <a
           href="https://github.com/mattlean/adam-engine"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           target="_blank"
         >
           <Btn className="btn-gh">
@@ -159,7 +159,7 @@ const Adam = () => {
           Video of{' '}
           <a
             href="https://en.wikipedia.org/wiki/Snake_(video_game_genre)"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             target="_blank"
             className="txtw-roman"
           >
@@ -213,7 +213,7 @@ const Adam = () => {
               <li>
                 <a
                   href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1 txtw-roman"
                 >
@@ -223,7 +223,7 @@ const Adam = () => {
               <li>
                 <a
                   href="https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1 txtw-roman"
                 >
@@ -233,7 +233,7 @@ const Adam = () => {
               <li>
                 <a
                   href="https://developer.mozilla.org/en-US/docs/Web/API/Touch_events"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1 txtw-roman"
                 >
@@ -243,7 +243,7 @@ const Adam = () => {
               <li>
                 <a
                   href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1 txtw-roman"
                 >
@@ -266,7 +266,7 @@ const Adam = () => {
               <li>
                 <a
                   href="https://github.com/mattlean/adam-engine/blob/master/LICENSE"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1 txtw-roman"
                 >
@@ -281,7 +281,7 @@ const Adam = () => {
         ref={observerData[6].ref}
         nodeType="a"
         href="https://github.com/mattlean/adam-engine"
-        rel="noreferrer"
+        rel="noopener noreferrer"
         target="_blank"
         delay={blindStates[6].delay}
         observer={observerData[6].observer}
