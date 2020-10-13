@@ -128,7 +128,7 @@ const YAAS = () => {
           </p>
         </section>
         <a
-          href="https://github.com/mattlean/express-ffuh"
+          href="https://github.com/mattlean/express-yaas"
           rel="noopener noreferrer"
           target="_blank"
         >
@@ -185,7 +185,7 @@ const YAAS = () => {
             <ul>
               <li>
                 <a
-                  href="https://github.com/mattlean/express-ffuh/blob/master/LICENSE"
+                  href="https://github.com/mattlean/express-yaas/blob/master/LICENSE"
                   rel="noopener noreferrer"
                   target="_blank"
                   className="a-grey-1"
