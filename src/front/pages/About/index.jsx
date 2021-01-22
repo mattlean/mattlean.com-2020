@@ -83,8 +83,8 @@ const About = () => {
           >
             My name is Matt&nbsp;Lean and I’m a full-stack web&nbsp;developer &
             UI/UX&nbsp;designer. I was born in NY and raised in SoCal. Now I
-            live in the SF Bay Area and am looking for new
-            work&nbsp;opportunities!
+            live in the SF Bay Area and am currently building software
+            at&nbsp;Voltaiq.
           </BlindFrame>
         </section>
         <motion.section
@@ -224,6 +224,12 @@ const About = () => {
           <section className="work">
             <h2 className="h-9 dispw-bold tt-uppercase">Work</h2>
             <dl>
+              <dt>Voltaiq</dt>
+              <dd>
+                Frontend Engineer
+                <br />
+                2020 &ndash; Present
+              </dd>
               <dt>LGC, Biosearch Technologies</dt>
               <dd>
                 Web Developer Consultant

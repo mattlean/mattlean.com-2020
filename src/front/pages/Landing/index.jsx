@@ -107,8 +107,8 @@ const Landing = () => {
           className="txt-8 sm:txt-6 c-grey-1"
         >
           I’m a developer who works at the intersection of engineering and
-          design. I’ve been building web-based products for Silicon Valley since
-          2015 and am currently looking for new&nbsp;opportunities.
+          design. I’ve been building web-based technologies for Silicon Valley
+          since&nbsp;2015.
         </BlindFrame>
         <CTA
           blind={{
