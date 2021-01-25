@@ -226,7 +226,7 @@ const About = () => {
             <dl>
               <dt>Voltaiq</dt>
               <dd>
-                Frontend Engineer
+                Software Engineer
                 <br />
                 2020 &ndash; Present
               </dd>
